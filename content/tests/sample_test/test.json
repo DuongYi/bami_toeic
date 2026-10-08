@@ -1,0 +1,119 @@
+{
+  "title": "Mini Test 01 (mẫu)",
+  "source": "Bami TOEIC",
+  "description": "Đề mẫu ngắn để kiểm tra app: Part 5, 6, 7.",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "content": "All employees are required to submit their expense reports ------- the end of the month.",
+          "options": ["by", "until", "since", "during"],
+          "answer": "A",
+          "explanation": "\"by + mốc thời gian\" = trước/chậm nhất là. \"until\" diễn tả hành động kéo dài liên tục, không hợp với \"submit\"."
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "content": "The new software has made the billing process significantly more -------.",
+          "options": ["efficiency", "efficient", "efficiently", "efficiencies"],
+          "answer": "B",
+          "explanation": "Sau \"more\" (so sánh hơn) và sau \"made ... \" cần tính từ bổ nghĩa cho tân ngữ → efficient."
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "content": "Ms. Tanaka will be out of the office next week, so please direct any questions to ------- assistant.",
+          "options": ["she", "her", "hers", "herself"],
+          "answer": "B",
+          "explanation": "Trước danh từ \"assistant\" cần tính từ sở hữu → her."
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "content": "------- the heavy rain, the outdoor product launch went ahead as planned.",
+          "options": ["Although", "Despite", "Because", "However"],
+          "answer": "B",
+          "explanation": "Theo sau là cụm danh từ (the heavy rain) → dùng giới từ \"Despite\". \"Although\" cần mệnh đề."
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "content": "Applicants must have at least three years of ------- experience in project management.",
+          "options": ["relevant", "relevance", "relevantly", "relevancy"],
+          "answer": "A",
+          "explanation": "Trước danh từ \"experience\" cần tính từ → relevant (liên quan)."
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "To: All staff\nFrom: Facilities Department\nSubject: Parking lot repairs\n\nPlease be advised that the north parking lot will be closed from Monday, May 4, ---(131)--- Friday, May 8, for resurfacing. During this time, employees ---(132)--- to use the south lot or the public garage on Elm Street. ---(133)---. We apologize for any inconvenience and appreciate your ---(134)--- while this important work is completed.",
+      "questions": [
+        { "number": 131, "options": ["to", "at", "on", "for"], "answer": "A", "explanation": "from ... to ... : từ ... đến ..." },
+        { "number": 132, "options": ["encourage", "are encouraged", "encouraging", "have encouraged"], "answer": "B", "explanation": "Nhân viên ĐƯỢC khuyến khích → bị động \"are encouraged\"." },
+        {
+          "number": 133,
+          "options": [
+            "Parking fees at the garage will be reimbursed upon presentation of a receipt.",
+            "The north lot was built more than twenty years ago.",
+            "Our cafeteria will offer a new menu next month.",
+            "Please submit your vacation requests early."
+          ],
+          "answer": "A",
+          "explanation": "Câu A liên kết trực tiếp với việc gửi xe ở bãi công cộng vừa nhắc tới."
+        },
+        { "number": 134, "options": ["patient", "patiently", "patience", "patients"], "answer": "C", "explanation": "Sau tính từ sở hữu \"your\" cần danh từ → patience (sự kiên nhẫn)." }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "GREENLEAF CATERING\n\nNow booking for summer events!\n\nWhether you are planning a company picnic, a client reception, or a team lunch, Greenleaf Catering has a menu to suit your needs. All dishes are prepared with locally sourced ingredients.\n\n- Orders for 50 guests or more receive a 10% discount.\n- Free delivery within the city limits.\n- Orders must be placed at least five business days in advance.\n\nCall 555-0142 or visit www.greenleafcatering.com to view our full menu.",
+      "questions": [
+        {
+          "number": 147,
+          "content": "What is being advertised?",
+          "options": ["A restaurant opening", "A food service for events", "A cooking class", "A grocery delivery app"],
+          "answer": "B",
+          "explanation": "\"Greenleaf Catering ... company picnic, client reception\" → dịch vụ ăn uống cho sự kiện."
+        },
+        {
+          "number": 148,
+          "content": "How can customers receive a discount?",
+          "options": [
+            "By ordering online",
+            "By ordering five days in advance",
+            "By ordering for a large group",
+            "By picking up the order"
+          ],
+          "answer": "C",
+          "explanation": "\"Orders for 50 guests or more receive a 10% discount.\""
+        },
+        {
+          "number": 149,
+          "content": "What is indicated about the ingredients?",
+          "options": ["They are organic.", "They come from local suppliers.", "They are imported.", "They change every season."],
+          "answer": "B",
+          "explanation": "\"locally sourced ingredients\" = nguyên liệu từ nhà cung cấp địa phương."
+        }
+      ]
+    }
+  ]
+}
