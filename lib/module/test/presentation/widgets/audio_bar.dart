@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 
+import '../../../../core/design_system/design_system.dart';
+
 /// Thanh phát audio cho một nhóm câu hỏi (Part 1-4).
 class AudioBar extends StatefulWidget {
   const AudioBar({super.key, required this.url, this.autoPlay = false});
@@ -49,7 +51,7 @@ class _AudioBarState extends State<AudioBar> {
 
   @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
+    final scheme = context.colors;
     if (_error != null) {
       return Card(
         child: ListTile(
@@ -67,7 +69,12 @@ class _AudioBarState extends State<AudioBar> {
     }
     return Card(
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(4, 4, 12, 4),
+        padding: const EdgeInsets.fromLTRB(
+          AppSpacing.s4,
+          AppSpacing.s4,
+          AppSpacing.s12,
+          AppSpacing.s4,
+        ),
         child: Row(
           children: [
             StreamBuilder<PlayerState>(
@@ -81,22 +88,24 @@ class _AudioBarState extends State<AudioBar> {
                 final completed = state?.processingState == ProcessingState.completed;
                 if (loading) {
                   return const Padding(
-                    padding: EdgeInsets.all(12),
+                    padding: EdgeInsets.all(AppSpacing.s12),
                     child: SizedBox.square(
-                      dimension: 24,
-                      child: CircularProgressIndicator(strokeWidth: 2),
+                      dimension: AppSizes.iconMd,
+                      child: CircularProgressIndicator(strokeWidth: AppSizes.strokeThin),
                     ),
                   );
                 }
                 if (completed) {
                   return IconButton(
+                    tooltip: 'Nghe lại',
                     icon: const Icon(Icons.replay),
                     onPressed: () => _player.seek(Duration.zero).then((_) => _player.play()),
                   );
                 }
                 return IconButton(
+                  tooltip: state.playing ? 'Tạm dừng' : 'Phát',
                   icon: Icon(state.playing ? Icons.pause_rounded : Icons.play_arrow_rounded),
-                  iconSize: 32,
+                  iconSize: AppSizes.iconLg,
                   onPressed: state.playing ? _player.pause : _player.play,
                 );
               },
@@ -116,13 +125,11 @@ class _AudioBarState extends State<AudioBar> {
                           max: max <= 0 ? 1 : max,
                           onChanged: max <= 0
                               ? null
-                              : (v) => _player.seek(Duration(milliseconds: v.round())),
+                              // Vị trí tua, không phải animation.
+                              : (v) => _player.seek(Duration(microseconds: (v * 1000).round())),
                         ),
                       ),
-                      Text(
-                        '${_fmt(pos)} / ${_fmt(total)}',
-                        style: Theme.of(context).textTheme.labelSmall,
-                      ),
+                      Text('${_fmt(pos)} / ${_fmt(total)}', style: context.textStyles.labelSmall),
                     ],
                   );
                 },

@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../core/design_system/gallery/ds_gallery_page.dart';
 import '../module/auth/presentation/controllers/auth_controller.dart';
 import '../module/auth/presentation/pages/login_page.dart';
 import '../module/auth/presentation/pages/splash_page.dart';
@@ -22,6 +23,7 @@ abstract final class Routes {
   static const tests = '/tests';
   static const vocab = '/vocab';
   static const history = '/history';
+  static const designSystem = '/design-system';
 
   static String testDetail(String id) => '/tests/$id';
   static String take(String testId, {required String mode, required List<int> parts}) =>
@@ -92,6 +94,7 @@ GoRouter router(Ref ref) {
         path: '/result/:attemptId',
         builder: (_, s) => ResultPage(attemptId: s.pathParameters['attemptId']!),
       ),
+      if (kDebugMode) GoRoute(path: Routes.designSystem, builder: (_, _) => const DsGalleryPage()),
       GoRoute(
         path: '/flashcards',
         builder: (_, s) => FlashcardPage(topic: s.uri.queryParameters['topic']),

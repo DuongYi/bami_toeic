@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../core/widgets/async_view.dart';
+import '../../../../core/design_system/design_system.dart';
 import '../../../../routes/app_router.dart';
 import '../../data/models/vocab_models.dart';
 import '../controllers/vocab_controller.dart';
@@ -48,7 +48,6 @@ class _VocabBody extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final theme = Theme.of(context);
     final o = overview;
     final filter = ref.read(vocabFilterProvider.notifier);
     final now = DateTime.now();
@@ -56,34 +55,36 @@ class _VocabBody extends ConsumerWidget {
     return CustomScrollView(
       slivers: [
         SliverPadding(
-          padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+          padding: const EdgeInsets.fromLTRB(
+            AppSpacing.screen,
+            AppSpacing.s8,
+            AppSpacing.screen,
+            0,
+          ),
           sliver: SliverList.list(
             children: [
-              Card(
-                color: theme.colorScheme.primaryContainer,
-                child: Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Ôn tập hôm nay', style: theme.textTheme.titleMedium),
-                            const SizedBox(height: 4),
-                            Text('${o.dueCount} từ đến hạn · ${o.newCount} từ mới'),
-                          ],
-                        ),
+              AppCard(
+                tone: AppTone.info,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Ôn tập hôm nay', style: context.textStyles.titleMedium),
+                          Gaps.v4,
+                          Text('${o.dueCount} từ đến hạn · ${o.newCount} từ mới'),
+                        ],
                       ),
-                      FilledButton(
-                        onPressed: o.sessionSize == 0 ? null : () => _startSession(context, ref),
-                        child: Text(o.sessionSize == 0 ? 'Xong rồi 🎉' : 'Học ${o.sessionSize}'),
-                      ),
-                    ],
-                  ),
+                    ),
+                    FilledButton(
+                      onPressed: o.sessionSize == 0 ? null : () => _startSession(context, ref),
+                      child: Text(o.sessionSize == 0 ? 'Xong rồi 🎉' : 'Học ${o.sessionSize}'),
+                    ),
+                  ],
                 ),
               ),
-              const SizedBox(height: 12),
+              Gaps.v12,
               TextField(
                 decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.search),
@@ -92,15 +93,15 @@ class _VocabBody extends ConsumerWidget {
                 ),
                 onChanged: filter.setQuery,
               ),
-              const SizedBox(height: 8),
+              Gaps.v8,
               SizedBox(
-                height: 48,
+                height: AppSizes.touchTarget,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
                     for (final t in [null, ...o.topics])
                       Padding(
-                        padding: const EdgeInsets.only(right: 8),
+                        padding: const EdgeInsets.only(right: AppSpacing.s8),
                         child: ChoiceChip(
                           label: Text(t ?? 'Tất cả (${o.total})'),
                           selected: topic == t,
@@ -116,14 +117,14 @@ class _VocabBody extends ConsumerWidget {
         if (o.shown.isEmpty)
           const SliverFillRemaining(
             hasScrollBody: false,
-            child: EmptyView(
+            child: AppEmptyView(
               icon: Icons.style_outlined,
               message: 'Chưa có từ nào.\nBấm + để thêm, hoặc import CSV trên Supabase.',
             ),
           )
         else
           SliverPadding(
-            padding: const EdgeInsets.only(bottom: 88),
+            padding: AppInsets.listBottomForFab,
             sliver: SliverList.builder(
               itemCount: o.shown.length,
               itemBuilder: (context, i) {
@@ -139,7 +140,7 @@ class _VocabBody extends ConsumerWidget {
                         if (v.ipa != null)
                           TextSpan(
                             text: '  ${v.ipa}',
-                            style: TextStyle(color: theme.colorScheme.onSurfaceVariant),
+                            style: TextStyle(color: context.colors.onSurfaceVariant),
                           ),
                       ],
                     ),
@@ -168,19 +169,9 @@ class _StatusBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
-    final (String text, Color color) = item.isNew
-        ? ('Mới', scheme.tertiary)
-        : item.isDue(now)
-        ? ('Ôn', scheme.error)
-        : ('${item.review!.dueAt.difference(now).inDays + 1}d', scheme.outline);
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-      decoration: BoxDecoration(
-        border: Border.all(color: color),
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Text(text, style: TextStyle(color: color, fontSize: 12)),
-    );
+    if (item.isNew) return const StatusBadge(label: 'Mới', tone: AppTone.info);
+    if (item.isDue(now)) return const StatusBadge(label: 'Cần ôn', tone: AppTone.warning);
+    final days = item.review!.dueAt.difference(now).inDays + 1;
+    return StatusBadge(label: '$days ngày');
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'config/env.dart';
-import 'config/theme.dart';
+import 'core/design_system/design_system.dart';
 import 'routes/app_router.dart';
 
 void main() {
@@ -24,6 +24,8 @@ class BamiToeicApp extends ConsumerWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light(),
       darkTheme: AppTheme.dark(),
+      highContrastTheme: AppTheme.lightHighContrast(),
+      highContrastDarkTheme: AppTheme.darkHighContrast(),
       routerConfig: ref.watch(routerProvider),
     );
   }
@@ -34,11 +36,12 @@ class _MissingEnvApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
+    return MaterialApp(
+      theme: AppTheme.light(),
+      home: const Scaffold(
         body: Center(
           child: Padding(
-            padding: EdgeInsets.all(24),
+            padding: AppInsets.cardLarge,
             child: Text(
               'Thiếu cấu hình Supabase.\n\nChạy app với:\nflutter run --dart-define-from-file=env.json',
               textAlign: TextAlign.center,

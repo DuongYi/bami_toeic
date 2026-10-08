@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/design_system/design_system.dart';
 import '../../../../core/network/app_exception.dart';
 import '../controllers/login_controller.dart';
 
@@ -31,7 +32,6 @@ class _LoginPageState extends ConsumerState<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     final login = ref.watch(loginControllerProvider);
     final loading = login.isLoading;
 
@@ -39,21 +39,25 @@ class _LoginPageState extends ConsumerState<LoginPage> {
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.all(24),
+            padding: AppInsets.cardLarge,
             child: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 400),
+              constraints: const BoxConstraints(maxWidth: AppSizes.formMaxWidth),
               child: AutofillGroup(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Icon(Icons.school_rounded, size: 64, color: theme.colorScheme.primary),
-                    const SizedBox(height: 12),
+                    Icon(
+                      Icons.school_rounded,
+                      size: AppSizes.iconHero,
+                      color: context.colors.primary,
+                    ),
+                    Gaps.v12,
                     Text(
                       'Bami TOEIC',
                       textAlign: TextAlign.center,
-                      style: theme.textTheme.headlineMedium,
+                      style: context.textStyles.headlineMedium,
                     ),
-                    const SizedBox(height: 32),
+                    Gaps.v32,
                     TextField(
                       controller: _email,
                       decoration: const InputDecoration(labelText: 'Email'),
@@ -61,7 +65,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                       autofillHints: const [AutofillHints.email],
                       textInputAction: TextInputAction.next,
                     ),
-                    const SizedBox(height: 12),
+                    Gaps.v12,
                     TextField(
                       controller: _password,
                       decoration: const InputDecoration(labelText: 'Mật khẩu'),
@@ -70,22 +74,14 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                       onSubmitted: (_) => _submit(),
                     ),
                     if (login case AsyncError(:final error)) ...[
-                      const SizedBox(height: 12),
+                      Gaps.v12,
                       Text(
                         AppException.from(error).message,
-                        style: TextStyle(color: theme.colorScheme.error),
+                        style: TextStyle(color: context.colors.error),
                       ),
                     ],
-                    const SizedBox(height: 24),
-                    FilledButton(
-                      onPressed: loading ? null : _submit,
-                      child: loading
-                          ? const SizedBox.square(
-                              dimension: 20,
-                              child: CircularProgressIndicator(strokeWidth: 2),
-                            )
-                          : const Text('Đăng nhập'),
-                    ),
+                    Gaps.v24,
+                    AppPrimaryButton(label: 'Đăng nhập', loading: loading, onPressed: _submit),
                   ],
                 ),
               ),

@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 
-import '../../../../config/theme.dart';
+import '../../../../core/design_system/design_system.dart';
 import '../../../../core/network/app_exception.dart';
-import '../../../../core/widgets/async_view.dart';
 import '../../../../helper/srs.dart';
 import '../../data/models/vocab_models.dart';
 import '../controllers/flashcard_controller.dart';
@@ -20,8 +19,10 @@ class FlashcardPage extends ConsumerWidget {
 
     ref.listen(provider.select((s) => s.value?.saveError), (_, error) {
       if (error == null) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Không lưu được tiến độ: ${AppException.from(error).message}')),
+      showAppSnackBar(
+        context,
+        'Không lưu được tiến độ: ${AppException.from(error).message}',
+        tone: AppTone.danger,
       );
     });
 
@@ -34,7 +35,7 @@ class FlashcardPage extends ConsumerWidget {
         data: (s) {
           final card = s.current;
           if (card == null) {
-            return EmptyView(
+            return AppEmptyView(
               icon: Icons.celebration_outlined,
               message: s.done == 0 ? 'Không có từ nào cần ôn.' : 'Hoàn thành! Đã ôn ${s.done} từ.',
             );
@@ -42,18 +43,18 @@ class FlashcardPage extends ConsumerWidget {
           final notifier = ref.read(provider.notifier);
           return SafeArea(
             child: Padding(
-              padding: const EdgeInsets.all(16),
+              padding: AppInsets.screen,
               child: Column(
                 children: [
                   LinearProgressIndicator(value: s.total == 0 ? 0 : s.done / s.total),
-                  const SizedBox(height: 8),
-                  Text('${s.done} / ${s.total}', style: Theme.of(context).textTheme.labelMedium),
-                  const SizedBox(height: 16),
+                  Gaps.v8,
+                  Text('${s.done} / ${s.total}', style: context.textStyles.labelMedium),
+                  Gaps.v16,
                   Expanded(
                     child: GestureDetector(
                       onTap: notifier.flip,
                       child: AnimatedSwitcher(
-                        duration: const Duration(milliseconds: 200),
+                        duration: AppMotion.of(context, AppMotion.short),
                         child: _CardFace(
                           key: ValueKey('${card.id}-${s.flipped}'),
                           card: card,
@@ -62,13 +63,9 @@ class FlashcardPage extends ConsumerWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  Gaps.v16,
                   if (!s.flipped)
-                    FilledButton(
-                      style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(52)),
-                      onPressed: notifier.flip,
-                      child: const Text('Xem nghĩa'),
-                    )
+                    AppPrimaryButton(label: 'Xem nghĩa', onPressed: notifier.flip)
                   else
                     _GradeButtons(onGrade: notifier.grade),
                 ],
@@ -110,50 +107,45 @@ class _CardFaceState extends State<_CardFace> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     final card = widget.card;
     return Card(
       child: SizedBox.expand(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.all(24),
+          padding: AppInsets.cardLarge,
           child: Column(
             children: [
-              const SizedBox(height: 40),
-              Text(
-                card.word,
-                textAlign: TextAlign.center,
-                style: theme.textTheme.displaySmall?.copyWith(fontWeight: FontWeight.bold),
-              ),
-              if (card.ipa != null) Text(card.ipa!, style: theme.textTheme.titleMedium),
+              Gaps.v32,
+              Text(card.word, textAlign: TextAlign.center, style: context.textStyles.displaySmall),
+              if (card.ipa != null) Text(card.ipa!, style: context.textStyles.titleMedium),
               if (card.audioUrl != null)
                 IconButton(
                   icon: const Icon(Icons.volume_up),
                   onPressed: () => _play(card.audioUrl!),
                 ),
-              const SizedBox(height: 24),
+              Gaps.v24,
               if (!widget.flipped)
-                Text('Chạm để xem nghĩa', style: TextStyle(color: theme.colorScheme.outline))
+                Text('Chạm để xem nghĩa', style: TextStyle(color: context.colors.onSurfaceVariant))
               else ...[
-                if (card.pos != null) Text('(${card.pos})', style: theme.textTheme.labelLarge),
+                if (card.pos != null) Text('(${card.pos})', style: context.textStyles.labelLarge),
                 Text(
                   card.meaning,
                   textAlign: TextAlign.center,
-                  style: theme.textTheme.headlineSmall,
+                  style: context.textStyles.headlineSmall,
                 ),
                 if (card.example != null) ...[
-                  const SizedBox(height: 24),
+                  Gaps.v24,
                   Text(
                     card.example!,
                     textAlign: TextAlign.center,
-                    style: theme.textTheme.bodyLarge?.copyWith(fontStyle: FontStyle.italic),
+                    style: context.textStyles.bodyLarge?.copyWith(fontStyle: FontStyle.italic),
                   ),
                 ],
                 if (card.exampleMeaning != null)
                   Text(
                     card.exampleMeaning!,
                     textAlign: TextAlign.center,
-                    style: theme.textTheme.bodyMedium?.copyWith(
-                      color: theme.colorScheme.onSurfaceVariant,
+                    style: context.textStyles.bodyMedium?.copyWith(
+                      color: context.colors.onSurfaceVariant,
                     ),
                   ),
               ],
@@ -170,6 +162,13 @@ class _GradeButtons extends StatelessWidget {
 
   final ValueChanged<ReviewGrade> onGrade;
 
+  static AppTone _tone(ReviewGrade g) => switch (g) {
+    ReviewGrade.again => AppTone.danger,
+    ReviewGrade.hard => AppTone.warning,
+    ReviewGrade.good => AppTone.success,
+    ReviewGrade.easy => AppTone.info,
+  };
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -177,17 +176,13 @@ class _GradeButtons extends StatelessWidget {
         for (final g in ReviewGrade.values)
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 4),
+              padding: const EdgeInsets.symmetric(horizontal: AppSpacing.s4),
               child: FilledButton(
                 style: FilledButton.styleFrom(
-                  minimumSize: const Size.fromHeight(52),
+                  minimumSize: const Size.fromHeight(AppSizes.buttonLarge),
                   padding: EdgeInsets.zero,
-                  backgroundColor: switch (g) {
-                    ReviewGrade.again => AppTheme.wrong,
-                    ReviewGrade.hard => Colors.orange,
-                    ReviewGrade.good => AppTheme.correct,
-                    ReviewGrade.easy => Theme.of(context).colorScheme.primary,
-                  },
+                  backgroundColor: _tone(g).colorsOf(context).main,
+                  foregroundColor: _tone(g).colorsOf(context).onMain,
                 ),
                 onPressed: () => onGrade(g),
                 child: Text(g.label),

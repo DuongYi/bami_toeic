@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/design_system/design_system.dart';
 import '../../../../core/network/app_exception.dart';
 import '../../data/models/vocab_models.dart';
 import '../controllers/vocab_controller.dart';
 
 /// Bottom sheet thêm / sửa từ vựng.
 Future<void> showVocabForm(BuildContext context, {VocabItem? item, String? defaultTopic}) {
-  return showModalBottomSheet<void>(
-    context: context,
-    isScrollControlled: true,
-    showDragHandle: true,
+  return showAppBottomSheet<void>(
+    context,
     builder: (_) => _VocabForm(item: item, defaultTopic: defaultTopic),
   );
 }
@@ -69,112 +68,106 @@ class _VocabFormState extends ConsumerState<_VocabForm> {
     } catch (e) {
       if (!mounted) return;
       setState(() => _saving = false);
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text('Lưu thất bại: ${AppException.from(e).message}')));
+      showAppSnackBar(
+        context,
+        'Lưu thất bại: ${AppException.from(e).message}',
+        tone: AppTone.danger,
+      );
     }
   }
 
   Future<void> _delete() async {
-    final ok = await showDialog<bool>(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: Text('Xoá "${widget.item!.word}"?'),
-        actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Huỷ')),
-          TextButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Xoá')),
-        ],
-      ),
+    final ok = await showAppConfirmDialog(
+      context,
+      title: 'Xoá "${widget.item!.word}"?',
+      message: 'Lịch ôn của từ này cũng bị xoá.',
+      confirmLabel: 'Xoá',
+      destructive: true,
     );
-    if (ok != true) return;
+    if (!ok || !mounted) return;
     try {
       await ref.read(vocabListProvider.notifier).delete(widget.item!.id);
       if (mounted) Navigator.pop(context);
     } catch (e) {
       if (!mounted) return;
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text('Xoá thất bại: ${AppException.from(e).message}')));
+      showAppSnackBar(
+        context,
+        'Xoá thất bại: ${AppException.from(e).message}',
+        tone: AppTone.danger,
+      );
     }
   }
 
   @override
   Widget build(BuildContext context) {
     String? required(String? v) => (v == null || v.trim().isEmpty) ? 'Bắt buộc' : null;
-    const gap = SizedBox(height: 12);
-    return Padding(
-      padding: EdgeInsets.only(bottom: MediaQuery.viewInsetsOf(context).bottom),
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
-        child: Form(
-          key: _formKey,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Text(
-                widget.item == null ? 'Thêm từ' : 'Sửa từ',
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-              gap,
-              TextFormField(
-                controller: _word,
-                decoration: const InputDecoration(labelText: 'Từ *'),
-                validator: required,
-                textInputAction: TextInputAction.next,
-              ),
-              gap,
-              Row(
-                children: [
-                  Expanded(
-                    flex: 2,
-                    child: TextFormField(
-                      controller: _ipa,
-                      decoration: const InputDecoration(labelText: 'Phiên âm'),
-                    ),
+    const gap = Gaps.v12;
+    return SingleChildScrollView(
+      padding: const EdgeInsets.fromLTRB(AppSpacing.screen, 0, AppSpacing.screen, AppSpacing.s24),
+      child: Form(
+        key: _formKey,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(widget.item == null ? 'Thêm từ' : 'Sửa từ', style: context.textStyles.titleLarge),
+            gap,
+            TextFormField(
+              controller: _word,
+              decoration: const InputDecoration(labelText: 'Từ *'),
+              validator: required,
+              textInputAction: TextInputAction.next,
+            ),
+            gap,
+            Row(
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: TextFormField(
+                    controller: _ipa,
+                    decoration: const InputDecoration(labelText: 'Phiên âm'),
                   ),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: TextFormField(
-                      controller: _pos,
-                      decoration: const InputDecoration(labelText: 'Loại từ'),
-                    ),
-                  ),
-                ],
-              ),
-              gap,
-              TextFormField(
-                controller: _meaning,
-                decoration: const InputDecoration(labelText: 'Nghĩa *'),
-                validator: required,
-              ),
-              gap,
-              TextFormField(
-                controller: _example,
-                decoration: const InputDecoration(labelText: 'Ví dụ'),
-                maxLines: null,
-              ),
-              gap,
-              TextFormField(
-                controller: _exampleMeaning,
-                decoration: const InputDecoration(labelText: 'Nghĩa ví dụ'),
-                maxLines: null,
-              ),
-              gap,
-              TextFormField(
-                controller: _topic,
-                decoration: const InputDecoration(labelText: 'Chủ đề'),
-              ),
-              const SizedBox(height: 20),
-              FilledButton(
-                onPressed: _saving ? null : _save,
-                child: Text(_saving ? 'Đang lưu…' : 'Lưu'),
-              ),
-              if (widget.item != null)
-                TextButton(
-                  onPressed: _saving ? null : _delete,
-                  style: TextButton.styleFrom(foregroundColor: Theme.of(context).colorScheme.error),
-                  child: const Text('Xoá từ này'),
                 ),
-            ],
-          ),
+                Gaps.h12,
+                Expanded(
+                  child: TextFormField(
+                    controller: _pos,
+                    decoration: const InputDecoration(labelText: 'Loại từ'),
+                  ),
+                ),
+              ],
+            ),
+            gap,
+            TextFormField(
+              controller: _meaning,
+              decoration: const InputDecoration(labelText: 'Nghĩa *'),
+              validator: required,
+            ),
+            gap,
+            TextFormField(
+              controller: _example,
+              decoration: const InputDecoration(labelText: 'Ví dụ'),
+              maxLines: null,
+            ),
+            gap,
+            TextFormField(
+              controller: _exampleMeaning,
+              decoration: const InputDecoration(labelText: 'Nghĩa ví dụ'),
+              maxLines: null,
+            ),
+            gap,
+            TextFormField(
+              controller: _topic,
+              decoration: const InputDecoration(labelText: 'Chủ đề'),
+            ),
+            Gaps.v24,
+            AppPrimaryButton(label: 'Lưu', loading: _saving, onPressed: _save),
+            if (widget.item != null)
+              TextButton(
+                onPressed: _saving ? null : _delete,
+                style: TextButton.styleFrom(foregroundColor: context.colors.error),
+                child: const Text('Xoá từ này'),
+              ),
+          ],
         ),
       ),
     );

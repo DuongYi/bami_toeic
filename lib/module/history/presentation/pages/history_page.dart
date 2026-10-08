@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../config/theme.dart';
+import '../../../../core/design_system/design_system.dart';
 import '../../../../core/network/app_exception.dart';
-import '../../../../core/widgets/async_view.dart';
+import '../../../../helper/format.dart';
 import '../../../../helper/score.dart';
 import '../../../../routes/app_router.dart';
 import '../../../test/data/models/test_models.dart';
@@ -31,23 +32,22 @@ class HistoryPage extends ConsumerWidget {
           value: attempts,
           onRetry: () => _refresh(ref),
           data: (list) => list.isEmpty
-              ? ListView(
-                  children: const [
-                    SizedBox(height: 120),
-                    EmptyView(icon: Icons.insights_outlined, message: 'Chưa có bài làm nào.'),
-                  ],
+              ? const ScrollableFill(
+                  child: AppEmptyView(
+                    icon: Icons.insights_outlined,
+                    message: 'Chưa có bài làm nào.\nLàm một đề để bắt đầu theo dõi tiến độ.',
+                  ),
                 )
               : ListView(
-                  padding: const EdgeInsets.all(16),
+                  padding: AppInsets.screen,
                   children: [
                     _Overview(attempts: list),
-                    const SizedBox(height: 16),
+                    Gaps.v16,
                     if (stats.value case final s? when s.isNotEmpty) ...[
                       _PartAccuracy(stats: s),
-                      const SizedBox(height: 16),
+                      Gaps.v24,
                     ],
-                    Text('Lịch sử làm bài', style: Theme.of(context).textTheme.titleMedium),
-                    const SizedBox(height: 8),
+                    const SectionHeader(title: 'Lịch sử làm bài'),
                     for (final a in list) _AttemptTile(attempt: a),
                   ],
                 ),
@@ -64,7 +64,6 @@ class _Overview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     final full = attempts.where((a) => a.isFullTest).toList();
     final best = full.isEmpty
         ? null
@@ -77,26 +76,19 @@ class _Overview extends StatelessWidget {
     final totalQ = attempts.fold(0, (s, a) => s + a.totalQuestions);
     final totalC = attempts.fold(0, (s, a) => s + a.correct);
 
-    Widget stat(String value, String label) => Expanded(
-      child: Column(
+    return AppCard(
+      padding: const EdgeInsets.symmetric(vertical: AppSpacing.s24, horizontal: AppSpacing.s8),
+      child: Row(
         children: [
-          Text(value, style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold)),
-          Text(label, style: theme.textTheme.labelMedium, textAlign: TextAlign.center),
+          StatTile(value: '${attempts.length}', label: 'Lượt làm'),
+          StatTile(value: '$totalQ', label: 'Câu đã làm'),
+          StatTile(value: totalQ == 0 ? '-' : Fmt.percent(totalC / totalQ), label: 'Tỉ lệ đúng'),
+          StatTile(
+            value: best?.toString() ?? '-',
+            label: 'Điểm cao nhất\n(full test)',
+            highlight: true,
+          ),
         ],
-      ),
-    );
-
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 8),
-        child: Row(
-          children: [
-            stat('${attempts.length}', 'Lượt làm'),
-            stat('$totalQ', 'Câu đã làm'),
-            stat(totalQ == 0 ? '-' : '${(totalC * 100 / totalQ).round()}%', 'Tỉ lệ đúng'),
-            stat(best?.toString() ?? '-', 'Điểm cao nhất\n(full test)'),
-          ],
-        ),
       ),
     );
   }
@@ -109,50 +101,26 @@ class _PartAccuracy extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     final weakest = [...stats]..sort((a, b) => a.accuracy.compareTo(b.accuracy));
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('Độ chính xác theo Part', style: theme.textTheme.titleMedium),
-            const SizedBox(height: 4),
-            Text(
-              'Yếu nhất: ${partNames[weakest.first.part]}',
-              style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.error),
-            ),
-            const SizedBox(height: 12),
-            for (final s in stats)
-              Padding(
-                padding: const EdgeInsets.only(bottom: 8),
-                child: Row(
-                  children: [
-                    SizedBox(width: 56, child: Text('Part ${s.part}')),
-                    Expanded(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(4),
-                        child: LinearProgressIndicator(
-                          value: s.accuracy,
-                          minHeight: 10,
-                          color: s.accuracy >= 0.7
-                              ? AppTheme.correct
-                              : s.accuracy >= 0.5
-                              ? Colors.orange
-                              : AppTheme.wrong,
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 48,
-                      child: Text('${(s.accuracy * 100).round()}%', textAlign: TextAlign.end),
-                    ),
-                  ],
-                ),
+    return AppCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SectionHeader(
+            title: 'Độ chính xác theo Part',
+            subtitle: 'Yếu nhất: ${partNames[weakest.first.part]}',
+          ),
+          Gaps.v4,
+          for (final s in stats)
+            Padding(
+              padding: const EdgeInsets.only(bottom: AppSpacing.s12),
+              child: LabeledProgress(
+                label: partNames[s.part] ?? 'Part ${s.part}',
+                value: s.accuracy,
+                trailing: Fmt.percent(s.accuracy),
               ),
-          ],
-        ),
+            ),
+        ],
       ),
     );
   }
@@ -163,59 +131,69 @@ class _AttemptTile extends ConsumerWidget {
 
   final Attempt attempt;
 
+  Future<bool> _confirmDelete(BuildContext context) => showAppConfirmDialog(
+    context,
+    title: 'Xoá bài làm này?',
+    message: 'Kết quả và đáp án của lượt làm sẽ bị xoá vĩnh viễn.',
+    confirmLabel: 'Xoá',
+    destructive: true,
+  );
+
+  Future<void> _delete(BuildContext context, WidgetRef ref) async {
+    // Tile bị gỡ khỏi cây ngay (xoá lạc quan) nên lấy messenger trước khi await.
+    final messenger = ScaffoldMessenger.of(context);
+    try {
+      await ref.read(attemptsProvider.notifier).delete(attempt.id);
+    } catch (e) {
+      showAppSnackBarOn(
+        messenger,
+        'Xoá thất bại: ${AppException.from(e).message}',
+        tone: AppTone.danger,
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final a = attempt;
-    final d = a.finishedAt;
-    final date = '${d.day}/${d.month}/${d.year} ${d.hour}:${d.minute.toString().padLeft(2, '0')}';
     final score = a.isFullTest
         ? '${ToeicScore.listening(a.listeningCorrect) + ToeicScore.reading(a.readingCorrect)}'
         : '${a.correct}/${a.totalQuestions}';
 
-    return Dismissible(
-      key: ValueKey(a.id),
-      direction: DismissDirection.endToStart,
-      background: Container(
-        alignment: Alignment.centerRight,
-        padding: const EdgeInsets.only(right: 20),
-        color: Theme.of(context).colorScheme.errorContainer,
-        child: const Icon(Icons.delete_outline),
-      ),
-      confirmDismiss: (_) async =>
-          await showDialog<bool>(
-            context: context,
-            builder: (ctx) => AlertDialog(
-              title: const Text('Xoá bài làm này?'),
-              actions: [
-                TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Huỷ')),
-                TextButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Xoá')),
-              ],
-            ),
-          ) ??
-          false,
-      onDismissed: (_) async {
-        // Tile bị gỡ khỏi cây ngay (xoá lạc quan) nên lấy messenger trước khi await.
-        final messenger = ScaffoldMessenger.of(context);
-        try {
-          await ref.read(attemptsProvider.notifier).delete(a.id);
-        } catch (e) {
-          messenger.showSnackBar(
-            SnackBar(content: Text('Xoá thất bại: ${AppException.from(e).message}')),
-          );
-        }
+    return Semantics(
+      // Thay thế cho thao tác vuốt (WCAG 2.5.7).
+      customSemanticsActions: {
+        const CustomSemanticsAction(label: 'Xoá'): () async {
+          if (await _confirmDelete(context) && context.mounted) _delete(context, ref);
+        },
       },
-      child: ListTile(
-        contentPadding: EdgeInsets.zero,
-        leading: CircleAvatar(
-          child: Icon(a.isExam ? Icons.timer_outlined : Icons.lightbulb_outline),
+      child: Dismissible(
+        key: ValueKey(a.id),
+        direction: DismissDirection.endToStart,
+        background: Container(
+          alignment: Alignment.centerRight,
+          padding: const EdgeInsets.only(right: AppSpacing.s24),
+          color: context.colors.errorContainer,
+          child: Icon(Icons.delete_outline, color: context.colors.onErrorContainer),
         ),
-        title: Text(a.testTitle, maxLines: 1, overflow: TextOverflow.ellipsis),
-        subtitle: Text('$date · Part ${a.parts.join(',')} · ${a.duration.inMinutes} phút'),
-        trailing: Text(
-          score,
-          style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+        confirmDismiss: (_) => _confirmDelete(context),
+        onDismissed: (_) => _delete(context, ref),
+        child: ListTile(
+          contentPadding: EdgeInsets.zero,
+          leading: CircleAvatar(
+            child: Icon(a.isExam ? Icons.timer_outlined : Icons.lightbulb_outline),
+          ),
+          title: Text(a.testTitle, maxLines: 1, overflow: TextOverflow.ellipsis),
+          subtitle: Text(
+            '${Fmt.dateTime(a.finishedAt)} · Part ${a.parts.join(',')} · '
+            '${a.duration.inMinutes} phút',
+          ),
+          trailing: Text(score, style: context.textStyles.titleMedium),
+          onTap: () => context.push(Routes.result(a.id)),
+          onLongPress: () async {
+            if (await _confirmDelete(context) && context.mounted) _delete(context, ref);
+          },
         ),
-        onTap: () => context.push(Routes.result(a.id)),
       ),
     );
   }

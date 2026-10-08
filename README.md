@@ -72,10 +72,14 @@ lib/
 - **Từ vựng:** `VocabList` (CRUD), `VocabFilter` (chủ đề/từ khoá), `vocabOverview` (số liệu dẫn xuất), `FlashcardSession` (phiên ôn SRS).
 - Sửa model/API/controller xong thì chạy `dart run build_runner watch -d` trong lúc dev.
 
+## Design system
+
+`lib/core/design_system/` chứa token (màu M3 + success/warning, `AppTone`, spacing, radius, sizes, motion), theme light/dark/high-contrast và component dùng chung. UI chỉ import `design_system.dart`. Quy tắc chi tiết cho người và agent: `.claude/skills/bami-design-system/SKILL.md`. Xem trực quan mọi component ở route `/design-system` (bản debug, icon 🎨 trên màn Đề thi).
+
 ## Test
 
 ```bash
-flutter test   # SRS, quy đổi điểm, parse JSON, AuthInterceptor (refresh token, retry, map lỗi)
+flutter test   # SRS, điểm, JSON, AuthInterceptor, lint design system, tương phản WCAG, gallery
 ```
 
 ## Lưu ý gói Free

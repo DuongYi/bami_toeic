@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../config/theme.dart';
-import '../../../../core/widgets/async_view.dart';
+import '../../../../core/design_system/design_system.dart';
 import '../../../../helper/score.dart';
 import '../../../../routes/app_router.dart';
 import '../../data/models/test_models.dart';
@@ -63,7 +62,6 @@ class _ResultBodyState extends State<_ResultBody> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     final a = widget.data.attempt;
     final questions = widget.data.questions;
 
@@ -75,86 +73,66 @@ class _ResultBodyState extends State<_ResultBody> {
     final listeningTotal = questions.where((q) => ToeicScore.isListening(q.part)).length;
     final readingTotal = questions.length - listeningTotal;
     final pct = questions.isEmpty ? 0 : (a.correct * 100 / questions.length).round();
+    final listening = ToeicScore.listening(a.listeningCorrect);
+    final reading = ToeicScore.reading(a.readingCorrect);
 
     return ListView(
-      padding: const EdgeInsets.all(16),
+      padding: AppInsets.screen,
       children: [
-        Text(a.testTitle, style: theme.textTheme.titleMedium),
-        const SizedBox(height: 12),
-        Card(
-          child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              children: [
-                Text(
-                  '${a.correct}/${questions.length}',
-                  style: theme.textTheme.displaySmall?.copyWith(fontWeight: FontWeight.bold),
+        Text(a.testTitle, style: context.textStyles.titleMedium),
+        Gaps.v12,
+        AppCard(
+          padding: AppInsets.cardLarge,
+          child: Column(
+            children: [
+              Text('${a.correct}/${questions.length}', style: context.textStyles.displaySmall),
+              Text('câu đúng · $pct%'),
+              if (listeningTotal == 100 || readingTotal == 100) ...[
+                const Divider(),
+                Row(
+                  children: [
+                    if (listeningTotal == 100) StatTile(value: '$listening', label: 'Listening'),
+                    if (readingTotal == 100) StatTile(value: '$reading', label: 'Reading'),
+                    if (listeningTotal == 100 && readingTotal == 100)
+                      StatTile(value: '${listening + reading}', label: 'Tổng', highlight: true),
+                  ],
                 ),
-                Text('câu đúng · $pct%'),
-                if (listeningTotal == 100 || readingTotal == 100) ...[
-                  const Divider(height: 32),
-                  Row(
-                    children: [
-                      if (listeningTotal == 100)
-                        _ScoreBox(
-                          label: 'Listening',
-                          score: ToeicScore.listening(a.listeningCorrect),
-                        ),
-                      if (readingTotal == 100)
-                        _ScoreBox(label: 'Reading', score: ToeicScore.reading(a.readingCorrect)),
-                      if (listeningTotal == 100 && readingTotal == 100)
-                        _ScoreBox(
-                          label: 'Tổng',
-                          score:
-                              ToeicScore.listening(a.listeningCorrect) +
-                              ToeicScore.reading(a.readingCorrect),
-                          highlight: true,
-                        ),
-                    ],
-                  ),
-                  const SizedBox(height: 8),
-                  Text('Điểm quy đổi ước tính', style: theme.textTheme.bodySmall),
-                ],
+                Gaps.v8,
+                Text('Điểm quy đổi ước tính', style: context.textStyles.bodySmall),
               ],
-            ),
+            ],
           ),
         ),
-        const SizedBox(height: 16),
-        Text('Theo Part', style: theme.textTheme.titleMedium),
-        const SizedBox(height: 8),
+        Gaps.v24,
+        const SectionHeader(title: 'Theo Part'),
         for (final p in byPart.keys.toList()..sort())
           Padding(
-            padding: const EdgeInsets.only(bottom: 10),
-            child: _PartBar(part: p, correct: byPart[p]!.$1, total: byPart[p]!.$2),
-          ),
-        const SizedBox(height: 8),
-        Row(
-          children: [
-            Expanded(child: Text('Đáp án', style: theme.textTheme.titleMedium)),
-            FilterChip(
-              label: const Text('Chỉ câu sai'),
-              selected: _wrongOnly,
-              onSelected: (v) => setState(() => _wrongOnly = v),
+            padding: const EdgeInsets.only(bottom: AppSpacing.s12),
+            child: LabeledProgress(
+              label: partNames[p] ?? 'Part $p',
+              value: byPart[p]!.$2 == 0 ? 0 : byPart[p]!.$1 / byPart[p]!.$2,
+              trailing: '${byPart[p]!.$1}/${byPart[p]!.$2}',
             ),
-          ],
+          ),
+        Gaps.v12,
+        SectionHeader(
+          title: 'Đáp án',
+          trailing: FilterChip(
+            label: const Text('Chỉ câu sai'),
+            selected: _wrongOnly,
+            onSelected: (v) => setState(() => _wrongOnly = v),
+          ),
         ),
-        const SizedBox(height: 8),
         Wrap(
-          spacing: 8,
-          runSpacing: 8,
+          spacing: AppSpacing.s8,
+          runSpacing: AppSpacing.s8,
           children: [
             for (final (gi, g) in widget.data.groups.indexed)
               for (final q in g.questions)
-                if (!_wrongOnly || !_isCorrect(q))
-                  _AnswerChip(
-                    number: q.number,
-                    correct: _isCorrect(q),
-                    skipped: widget.data.answers[q.id] == null,
-                    onTap: () => _openReview(gi),
-                  ),
+                if (!_wrongOnly || !_isCorrect(q)) _answerCell(q, () => _openReview(gi)),
           ],
         ),
-        const SizedBox(height: 24),
+        Gaps.v24,
         FilledButton.tonalIcon(
           icon: const Icon(Icons.menu_book_outlined),
           label: const Text('Xem lại toàn bộ'),
@@ -163,109 +141,19 @@ class _ResultBodyState extends State<_ResultBody> {
       ],
     );
   }
-}
 
-class _ScoreBox extends StatelessWidget {
-  const _ScoreBox({required this.label, required this.score, this.highlight = false});
-
-  final String label;
-  final int score;
-  final bool highlight;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    return Expanded(
-      child: Column(
-        children: [
-          Text(
-            '$score',
-            style: theme.textTheme.headlineSmall?.copyWith(
-              fontWeight: FontWeight.bold,
-              color: highlight ? theme.colorScheme.primary : null,
-            ),
-          ),
-          Text(label, style: theme.textTheme.labelMedium),
-        ],
-      ),
-    );
-  }
-}
-
-class _PartBar extends StatelessWidget {
-  const _PartBar({required this.part, required this.correct, required this.total});
-
-  final int part;
-  final int correct;
-  final int total;
-
-  @override
-  Widget build(BuildContext context) {
-    final ratio = total == 0 ? 0.0 : correct / total;
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          children: [
-            Expanded(child: Text(partNames[part] ?? 'Part $part')),
-            Text('$correct/$total', style: const TextStyle(fontWeight: FontWeight.w600)),
-          ],
-        ),
-        const SizedBox(height: 4),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(4),
-          child: LinearProgressIndicator(
-            value: ratio,
-            minHeight: 8,
-            color: ratio >= 0.7
-                ? AppTheme.correct
-                : ratio >= 0.5
-                ? Colors.orange
-                : AppTheme.wrong,
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class _AnswerChip extends StatelessWidget {
-  const _AnswerChip({
-    required this.number,
-    required this.correct,
-    required this.skipped,
-    required this.onTap,
-  });
-
-  final int number;
-  final bool correct;
-  final bool skipped;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    final color = correct
-        ? AppTheme.correct
+  Widget _answerCell(Question q, VoidCallback onTap) {
+    final skipped = widget.data.answers[q.id] == null;
+    final (tone, status) = _isCorrect(q)
+        ? (AppTone.success, 'đúng')
         : skipped
-        ? Theme.of(context).colorScheme.outline
-        : AppTheme.wrong;
-    return InkWell(
-      borderRadius: BorderRadius.circular(10),
+        ? (AppTone.neutral, 'bỏ trống')
+        : (AppTone.danger, 'sai');
+    return NumberCell(
+      number: q.number,
+      tone: tone,
+      semanticLabel: 'Câu ${q.number}, $status',
       onTap: onTap,
-      child: Container(
-        width: 48,
-        height: 40,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          color: color.withValues(alpha: 0.15),
-          border: Border.all(color: color),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Text(
-          '$number',
-          style: TextStyle(color: color, fontWeight: FontWeight.bold),
-        ),
-      ),
     );
   }
 }
