@@ -1,6 +1,8 @@
 # Bami TOEIC
 
-App Flutter ôn luyện TOEIC cá nhân. Backend là Supabase (gói Free): Postgres + Storage + Auth.
+App Flutter ôn luyện TOEIC cá nhân. Backend là Supabase (gói Free): Postgres + Storage + Auth, gọi qua REST bằng Dio.
+
+**Stack:** Riverpod 3 (codegen `@riverpod`) · Dio + Retrofit · Freezed + json_serializable · go_router · flutter_secure_storage · just_audio
 
 ## Tính năng
 
@@ -22,6 +24,7 @@ App Flutter ôn luyện TOEIC cá nhân. Backend là Supabase (gói Free): Postg
 ```bash
 cp env.example.json env.json   # điền URL + publishable key vào env.json
 flutter pub get
+dart run build_runner build      # sinh *.g.dart / *.freezed.dart
 flutter run --dart-define-from-file=env.json
 ```
 Android Studio: *Run → Edit Configurations → Additional run args*: `--dart-define-from-file=env.json`.
@@ -36,22 +39,43 @@ Từ vựng mẫu: import `content/vocab_sample.csv` vào bảng `vocab` (xem `c
 - Android: `flutter build apk --release --dart-define-from-file=env.json`, rồi copy file `build/app/outputs/flutter-apk/app-release.apk` sang máy và cài.
 - iPhone: cắm cáp, `flutter run --release --dart-define-from-file=env.json`. Với Apple ID miễn phí, app hết hạn sau 7 ngày, chạy lại lệnh này để gia hạn.
 
-## Cấu trúc
+## Kiến trúc
 
 ```
-supabase/schema.sql          Bảng, RLS, storage bucket
-tool/import_test.dart        Script import đề (JSON + media → Supabase)
-content/                     Dữ liệu đề / từ vựng + hướng dẫn định dạng
 lib/
-  config/                    env, theme
-  core/                      Supabase client, widget dùng chung
-  helper/                    quy đổi điểm, thuật toán SRS
-  routes/app_router.dart     go_router + chặn khi chưa đăng nhập
-  module/
-    auth/                    đăng nhập
-    test/                    danh sách đề, làm bài, kết quả
-    vocab/                   từ vựng, flashcard
-    history/                 tiến độ
+  config/                       env (dart-define), theme
+  core/
+    network/
+      dio_client.dart           dioProvider: baseUrl, apikey, interceptors
+      auth_interceptor.dart     gắn Bearer token, tự refresh (QueuedInterceptor) khi sắp hết hạn / 401
+      error_interceptor.dart    DioException → AppException
+      app_exception.dart        lỗi chuẩn hoá: Network / Unauthorized / NotFound / Server / Unknown
+      postgrest.dart            hằng số header PostgREST, helper Pg.eq()
+    storage/token_storage.dart  lưu session trong Keychain/Keystore
+    widgets/                    AsyncView, EmptyView
+  helper/                       quy đổi điểm, thuật toán SRS (SM-2)
+  routes/app_router.dart        routerProvider: go_router + redirect theo AuthController
+  module/<feature>/
+    data/
+      models/                   DTO freezed (fromJson) + input (toJson)
+      <feature>_api.dart        Retrofit: khai báo endpoint /rest/v1, /auth/v1
+      <feature>_repository.dart query PostgREST, logic dữ liệu; provider của Api & Repository
+    presentation/
+      controllers/              @riverpod provider / Notifier (state + hành động)
+      pages/, widgets/          UI, chỉ watch controller
+```
+
+**Luồng dữ liệu:** `Page → Controller (Riverpod) → Repository → Api (Retrofit) → Dio (+interceptors) → Supabase`.
+
+- **Auth:** `AuthController` (keepAlive) là nguồn duy nhất về trạng thái đăng nhập. Router lắng nghe để chuyển Splash → Login → App. Khi refresh token hết hạn, interceptor gọi `onSessionExpired()` và app tự quay về màn Login.
+- **Làm bài:** `TestTaking` controller giữ đáp án, đồng hồ, chế độ, nộp bài. Các widget con dùng `select` để mỗi giây chỉ có đồng hồ rebuild.
+- **Từ vựng:** `VocabList` (CRUD), `VocabFilter` (chủ đề/từ khoá), `vocabOverview` (số liệu dẫn xuất), `FlashcardSession` (phiên ôn SRS).
+- Sửa model/API/controller xong thì chạy `dart run build_runner watch -d` trong lúc dev.
+
+## Test
+
+```bash
+flutter test   # SRS, quy đổi điểm, parse JSON, AuthInterceptor (refresh token, retry, map lỗi)
 ```
 
 ## Lưu ý gói Free

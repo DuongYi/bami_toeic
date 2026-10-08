@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'config/env.dart';
 import 'config/theme.dart';
 import 'routes/app_router.dart';
 
-Future<void> main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
   if (!Env.isConfigured) {
     runApp(const _MissingEnvApp());
     return;
   }
-  await Supabase.initialize(url: Env.supabaseUrl, publishableKey: Env.supabaseKey);
   runApp(const ProviderScope(child: BamiToeicApp()));
 }
 

@@ -1,21 +1,23 @@
-import 'dart:async';
-
 import 'package:flutter/foundation.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../core/supabase.dart';
-import '../module/auth/login_page.dart';
-import '../module/history/history_page.dart';
+import '../module/auth/presentation/controllers/auth_controller.dart';
+import '../module/auth/presentation/pages/login_page.dart';
+import '../module/auth/presentation/pages/splash_page.dart';
+import '../module/history/presentation/pages/history_page.dart';
 import '../module/shell/home_shell.dart';
-import '../module/test/pages/result_page.dart';
-import '../module/test/pages/test_detail_page.dart';
-import '../module/test/pages/test_list_page.dart';
-import '../module/test/pages/test_taking_page.dart';
-import '../module/vocab/pages/flashcard_page.dart';
-import '../module/vocab/pages/vocab_page.dart';
+import '../module/test/presentation/pages/result_page.dart';
+import '../module/test/presentation/pages/test_detail_page.dart';
+import '../module/test/presentation/pages/test_list_page.dart';
+import '../module/test/presentation/pages/test_taking_page.dart';
+import '../module/vocab/presentation/pages/flashcard_page.dart';
+import '../module/vocab/presentation/pages/vocab_page.dart';
 
-class Routes {
+part 'app_router.g.dart';
+
+abstract final class Routes {
+  static const splash = '/splash';
   static const login = '/login';
   static const tests = '/tests';
   static const vocab = '/vocab';
@@ -29,22 +31,29 @@ class Routes {
       topic == null ? '/flashcards' : '/flashcards?topic=${Uri.encodeQueryComponent(topic)}';
 }
 
-final routerProvider = Provider<GoRouter>((ref) {
-  final auth = ref.watch(supabaseProvider).auth;
-  final refresh = _StreamListenable(auth.onAuthStateChange);
-  ref.onDispose(refresh.dispose);
+@Riverpod(keepAlive: true)
+GoRouter router(Ref ref) {
+  // Báo go_router chạy lại redirect mỗi khi trạng thái đăng nhập đổi.
+  final authChanged = ValueNotifier(0);
+  ref
+    ..listen(authControllerProvider, (_, _) => authChanged.value++)
+    ..onDispose(authChanged.dispose);
 
-  return GoRouter(
-    initialLocation: Routes.tests,
-    refreshListenable: refresh,
+  final router = GoRouter(
+    initialLocation: Routes.splash,
+    refreshListenable: authChanged,
     redirect: (context, state) {
-      final loggedIn = auth.currentSession != null;
-      final atLogin = state.matchedLocation == Routes.login;
-      if (!loggedIn) return atLogin ? null : Routes.login;
-      if (atLogin) return Routes.tests;
+      final auth = ref.read(authControllerProvider);
+      final loc = state.matchedLocation;
+      // Đang khôi phục phiên từ secure storage
+      if (!auth.hasValue) return loc == Routes.splash ? null : Routes.splash;
+      final loggedIn = auth.value != null;
+      if (!loggedIn) return loc == Routes.login ? null : Routes.login;
+      if (loc == Routes.login || loc == Routes.splash) return Routes.tests;
       return null;
     },
     routes: [
+      GoRoute(path: Routes.splash, builder: (_, _) => const SplashPage()),
       GoRoute(path: Routes.login, builder: (_, _) => const LoginPage()),
       StatefulShellRoute.indexedStack(
         builder: (_, _, shell) => HomeShell(shell: shell),
@@ -76,10 +85,7 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (_, s) => TestTakingPage(
           testId: s.pathParameters['testId']!,
           mode: s.uri.queryParameters['mode'] ?? 'practice',
-          parts: (s.uri.queryParameters['parts'] ?? '1,2,3,4,5,6,7')
-              .split(',')
-              .map(int.parse)
-              .toList(),
+          parts: s.uri.queryParameters['parts'] ?? '1,2,3,4,5,6,7',
         ),
       ),
       GoRoute(
@@ -92,18 +98,6 @@ final routerProvider = Provider<GoRouter>((ref) {
       ),
     ],
   );
-});
-
-class _StreamListenable extends ChangeNotifier {
-  _StreamListenable(Stream<dynamic> stream) {
-    _sub = stream.listen((_) => notifyListeners());
-  }
-
-  late final StreamSubscription<dynamic> _sub;
-
-  @override
-  void dispose() {
-    _sub.cancel();
-    super.dispose();
-  }
+  ref.onDispose(router.dispose);
+  return router;
 }

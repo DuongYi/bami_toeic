@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../network/app_exception.dart';
+
 /// Hiển thị loading / lỗi (có nút thử lại) / dữ liệu cho một AsyncValue.
 class AsyncView<T> extends StatelessWidget {
   const AsyncView({super.key, required this.value, required this.data, this.onRetry});
@@ -22,7 +24,7 @@ class AsyncView<T> extends StatelessWidget {
             children: [
               Icon(Icons.cloud_off, size: 48, color: Theme.of(context).colorScheme.error),
               const SizedBox(height: 12),
-              Text('Có lỗi xảy ra:\n$e', textAlign: TextAlign.center),
+              Text(AppException.from(e).message, textAlign: TextAlign.center),
               if (onRetry != null) ...[
                 const SizedBox(height: 12),
                 FilledButton.tonal(onPressed: onRetry, child: const Text('Thử lại')),
