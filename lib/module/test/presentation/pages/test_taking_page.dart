@@ -130,10 +130,20 @@ class _TestTakingPageState extends ConsumerState<TestTakingPage> {
       },
       child: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            tooltip: 'Thoát',
+            icon: const Icon(Icons.close_rounded),
+            onPressed: () async {
+              if (await _confirmExit() && context.mounted) context.pop();
+            },
+          ),
+          titleSpacing: 0,
           title: _AnsweredCounter(provider: _provider),
           actions: [
             _ClockChip(provider: _provider),
+            Gaps.h8,
             _SubmitButton(provider: _provider, onPressed: _confirmSubmit),
+            Gaps.h12,
           ],
           bottom: PreferredSize(
             preferredSize: const Size.fromHeight(AppSizes.progressThin),
@@ -206,7 +216,7 @@ class _AnsweredCounter extends ConsumerWidget {
     final (answered, total) = ref.watch(
       provider.select((s) => (s.value!.answers.length, s.value!.totalQuestions)),
     );
-    return Text('$answered/$total câu');
+    return Text('Đã làm $answered/$total', style: context.textStyles.titleMedium);
   }
 }
 
@@ -219,18 +229,31 @@ class _ClockChip extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final (clock, isExam) = ref.watch(provider.select((s) => (s.value!.clock, s.value!.isExam)));
     final lowTime = isExam && clock.inMinutes < 5;
+    final c = (lowTime ? AppTone.danger : AppTone.info).colorsOf(context);
     return Center(
-      child: Padding(
-        padding: const EdgeInsets.only(right: AppSpacing.s8),
-        child: Chip(
-          avatar: Icon(isExam ? Icons.timer_outlined : Icons.schedule, size: AppSizes.iconSm),
-          label: Text(
-            Fmt.clock(clock),
-            style: TextStyle(
-              fontFeatures: const [FontFeature.tabularFigures()],
-              color: lowTime ? context.colors.error : null,
-              fontWeight: FontWeight.w600,
-            ),
+      child: Semantics(
+        label: isExam ? 'Thời gian còn lại ${Fmt.clock(clock)}' : 'Đã làm ${Fmt.clock(clock)}',
+        excludeSemantics: true,
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: AppSpacing.s12, vertical: AppSpacing.s4),
+          decoration: BoxDecoration(color: c.container, borderRadius: AppRadius.brFull),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(
+                isExam ? Icons.timer_outlined : Icons.schedule_rounded,
+                size: AppSizes.iconSm,
+                color: c.onContainer,
+              ),
+              Gaps.h4,
+              Text(
+                Fmt.clock(clock),
+                style: context.textStyles.labelLarge?.copyWith(
+                  color: c.onContainer,
+                  fontFeatures: const [FontFeature.tabularFigures()],
+                ),
+              ),
+            ],
           ),
         ),
       ),
@@ -247,7 +270,7 @@ class _SubmitButton extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final submitting = ref.watch(provider.select((s) => s.value!.submitting));
-    return TextButton(
+    return FilledButton.tonal(
       onPressed: submitting ? null : onPressed,
       child: submitting ? const AppInlineSpinner() : const Text('Nộp bài'),
     );
@@ -293,38 +316,36 @@ class _BottomNav extends ConsumerWidget {
         ? 'Câu ${qs.first.number}–${qs.last.number}'
         : 'Câu ${qs.first.number}';
 
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(
-          AppSpacing.s12,
-          AppSpacing.s4,
-          AppSpacing.s12,
-          AppSpacing.s8,
-        ),
-        child: Row(
-          children: [
-            IconButton.filledTonal(
-              tooltip: 'Câu trước',
-              icon: const Icon(Icons.chevron_left),
-              onPressed: index > 0 ? () => onPrev(index) : null,
+    return AppBottomBar(
+      child: Row(
+        children: [
+          IconButton.filledTonal(
+            tooltip: 'Câu trước',
+            icon: const Icon(Icons.chevron_left),
+            onPressed: index > 0 ? () => onPrev(index) : null,
+          ),
+          // Row co theo nội dung (Center sẽ giãn hết chiều cao trong bottomNavigationBar).
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                OutlinedButton.icon(
+                  icon: const Icon(Icons.grid_view_rounded),
+                  label: Text(label),
+                  onPressed: onPalette,
+                ),
+              ],
             ),
-            Expanded(
-              child: TextButton.icon(
-                icon: const Icon(Icons.grid_view_rounded),
-                label: Text(label),
-                onPressed: onPalette,
-              ),
-            ),
-            if (index < groups.length - 1)
-              IconButton.filled(
-                tooltip: 'Câu tiếp',
-                icon: const Icon(Icons.chevron_right),
-                onPressed: () => onNext(index),
-              )
-            else
-              FilledButton(onPressed: submitting ? null : onSubmit, child: const Text('Nộp bài')),
-          ],
-        ),
+          ),
+          if (index < groups.length - 1)
+            IconButton.filled(
+              tooltip: 'Câu tiếp',
+              icon: const Icon(Icons.chevron_right),
+              onPressed: () => onNext(index),
+            )
+          else
+            FilledButton(onPressed: submitting ? null : onSubmit, child: const Text('Nộp bài')),
+        ],
       ),
     );
   }

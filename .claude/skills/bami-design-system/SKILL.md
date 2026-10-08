@@ -11,7 +11,7 @@ Mọi UI dùng **một nguồn style duy nhất**: `lib/core/design_system/`. Kh
 import '../../../../core/design_system/design_system.dart'; // import duy nhất cho UI
 ```
 
-Nền tảng: Material 3 (seed `#1E5EFF`), WCAG 2.2 AA, lưới 4/8, tiếng Việt (line-height ≥ 1.4).
+Nền tảng: Material 3 (seed `#1E5EFF`, `DynamicSchemeVariant.vibrant`: primary rực, container dịu), font **Be Vietnam Pro**, WCAG 2.2 AA, lưới 4/8, tiếng Việt (line-height ≥ 1.4).
 Trang Gallery mọi component: route `/design-system` (chỉ bản debug), mở bằng icon 🎨 trên màn Đề thi.
 
 ## 1. Quy trình bắt buộc khi làm UI
@@ -33,7 +33,8 @@ Trang Gallery mọi component: route `/design-system` (chỉ bản debug), mở 
 |---|---|
 | Hành động chính, link, nhấn mạnh | `colors.primary` / `onPrimary` |
 | Nền khối nổi bật nhẹ | `colors.primaryContainer` / `onPrimaryContainer` |
-| Nền card | để `Card`/`AppCard` tự lo (`surfaceContainerLow`) |
+| Nền màn hình / khối nổi / viền mảnh | `context.surfaces.background` / `.raised` / `.hairline` (Card, ô nhập, sheet đã tự dùng) |
+| Thẻ nổi bật (hero) | `AppHeroCard` (gradient `surfaces.hero`, chữ `surfaces.onHero`); không tự vẽ gradient |
 | Chữ phụ, icon phụ | `colors.onSurfaceVariant` |
 | Viền, divider | `colors.outlineVariant` (nhạt), `colors.outline` |
 | Lỗi, phá huỷ | `colors.error`, `errorContainer` |
@@ -76,6 +77,10 @@ Trang Gallery mọi component: route `/design-system` (chỉ bản debug), mở 
 | `AppSizes.buttonLarge` | 52 | chiều cao CTA |
 | `AppSizes.iconSm/Md/Lg/Xl/Hero` | 18/24/32/56/64 | icon |
 | `AppSizes.formMaxWidth` | 400 | form trên màn rộng |
+| `AppSizes.brandMark` | 88 | khối logo màn chào / đăng nhập |
+| `AppSizes.badgeSm/Md/Lg` | 32/40/48 | IconBadge |
+| `AppSizes.ringSm/Md/Lg` + `ringStrokeSm/Md/Lg` | 64/96/168 | ScoreRing |
+| `AppSpacing.fabClearance` | 96 | khoảng trống cuối list có FAB |
 | `AppMotion.short/medium/long` | 150/250/450ms | animation, luôn bọc `AppMotion.of(context, d)` để tôn trọng Reduce Motion |
 | `AppMotion.standard/emphasized` | | curve |
 
@@ -92,10 +97,19 @@ Cần giá trị chưa có thì **thêm token**, không viết số trực tiế
 
 | Component | Khi nào dùng |
 |---|---|
-| `AppPrimaryButton(label, onPressed, icon?, loading?, expand=true)` | CTA chính, **tối đa 1/màn**, đặt cố định ở đáy (`SafeArea` + `AppInsets.screen`) nếu là hành động kết thúc màn |
+| `AppPageHeader(title, overline?, trailing?)` | tiêu đề lớn cho **màn gốc của tab** (không dùng AppBar); màn con dùng AppBar |
+| `AppBottomBar(child)` | thanh đáy cố định chứa CTA/điều hướng → `Scaffold.bottomNavigationBar` (tự co chiều cao) |
+| `AppPrimaryButton(label, onPressed, icon?, loading?, expand=true)` | CTA chính, **tối đa 1/màn**, đặt trong `AppBottomBar` nếu là hành động kết thúc màn |
+| `AppHeroCard(child)` | thông tin quan trọng nhất của màn (điểm, số từ cần ôn); **tối đa 1/màn**; chữ dùng `AppHeroCard.foreground(context)` |
+| `ScoreRing(value, child, size?, strokeWidth?, tone?, color?, trackColor?)` | vòng tiến độ/điểm có nội dung ở giữa, có animation |
+| `StatCard(icon, value, label, tone)` + `StatGrid(children)` | lưới 2 cột thẻ số liệu (thay hàng StatTile chật) |
+| `ChoiceCard(title, subtitle?, icon?, selected, onTap, multiSelect?)` | lựa chọn có mô tả (chế độ làm bài, chọn Part); thay RadioListTile/CheckboxListTile |
+| `IconBadge(icon, tone, size)` | icon trong ô màu; leading của item, card |
+| `AppListGroup(children, dividerIndent?)` | nhóm ListTile trong 1 card, có divider mảnh (inset-grouped) |
 | `FilledButton.tonal` / `OutlinedButton` / `TextButton` | hành động phụ (đã có theme, không tự style) |
 | `AppInlineSpinner()` | spinner nhỏ trong nút / AppBar |
 | `AppCard(child, padding?, onTap?, tone?)` | khối nội dung; `tone: AppTone.info` cho thẻ nổi bật |
+| `AppBanner(message, tone, icon?)` | thông báo nằm trong nội dung: lỗi form (danger), cảnh báo, gợi ý (info); tự đọc bởi screen reader |
 | `SectionHeader(title, subtitle?, trailing?)` | tiêu đề nhóm (đã gắn semantics heading) |
 | `StatusBadge(label, tone, icon?)` | nhãn trạng thái nhỏ |
 | `ToneIcon(tone, semanticLabel)` | icon đúng/sai/cảnh báo có nhãn đọc |
@@ -153,6 +167,15 @@ if (await showAppConfirmDialog(context, title: 'Xoá mục này?', confirmLabel:
   catch (e) { if (context.mounted) showAppSnackBar(context, AppException.from(e).message, tone: AppTone.danger); }
 }
 ```
+
+## 5b. Phong cách (giữ app hiện đại, nhất quán)
+
+- Nền màn hình xám nhạt, nội dung nằm trong **card trắng viền mảnh** (Card/AppCard/AppListGroup); không đặt list trần lên nền.
+- Màn gốc tab: `AppPageHeader` + (nếu có) 1 `AppHeroCard` + section. Màn con: `AppBar` + nội dung + `AppBottomBar` cho CTA.
+- Leading của item dùng `IconBadge`, không dùng CircleAvatar màu đặc.
+- Trạng thái nhỏ dùng `StatusBadge` (pill viền), không tô nền màu bão hoà diện rộng; nút nhiều lựa chọn có màu dùng **tonal** (container) thay vì màu đặc.
+- Tránh để trống > 1/3 màn: bổ sung tổng quan / lối tắt / gợi ý bước tiếp theo.
+- Golden screenshot: `flutter test --update-goldens test/goldens` rồi xem `test/goldens/screens/*.png` trước khi báo xong việc UI.
 
 ## 6. Accessibility (bắt buộc)
 

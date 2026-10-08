@@ -1,6 +1,8 @@
 // Import một đề TOEIC từ thư mục chứa test.json (+ file audio/ảnh) lên Supabase.
 //
-//   dart run tool/import_test.dart content/tests/sample_test [--replace]
+//   dart run tool/import_test.dart content/tests/sample_test [--replace] [--dry-run]
+//
+// --dry-run: chỉ kiểm tra test.json và file media, không đăng nhập / không ghi gì lên Supabase.
 //
 // Đăng nhập bằng tài khoản của bạn (biến môi trường TOEIC_EMAIL / TOEIC_PASSWORD,
 // hoặc nhập khi được hỏi). URL và key đọc từ env.json.
@@ -19,6 +21,7 @@ Future<void> main(List<String> args) async {
     exit(64);
   }
   final replace = args.contains('--replace');
+  final dryRun = args.contains('--dry-run');
   final dir = Directory(dirArg);
   final testFile = File('${dir.path}/test.json');
   if (!testFile.existsSync()) _fail('Không thấy ${testFile.path}');
@@ -26,6 +29,22 @@ Future<void> main(List<String> args) async {
   final data = jsonDecode(testFile.readAsStringSync()) as Map<String, dynamic>;
   final groups = (data['groups'] as List).cast<Map<String, dynamic>>();
   _validate(data, groups);
+  for (final g in groups) {
+    for (final key in ['audio', 'image']) {
+      final path = g[key] as String?;
+      if (path != null && !path.startsWith('http') && !File('${dir.path}/$path').existsSync()) {
+        _fail('Thiếu file media: ${dir.path}/$path');
+      }
+    }
+  }
+  if (dryRun) {
+    final count = groups.fold<int>(0, (s, g) => s + (g['questions'] as List).length);
+    final parts = groups.map((g) => g['part']).toSet().toList()..sort();
+    stdout.writeln(
+      '✅ Hợp lệ: "${data['title']}" · ${groups.length} nhóm · $count câu · Part $parts',
+    );
+    exit(0);
+  }
 
   final env = jsonDecode(File('env.json').readAsStringSync()) as Map<String, dynamic>;
   final db = SupabaseClient(env['SUPABASE_URL'] as String, env['SUPABASE_KEY'] as String);

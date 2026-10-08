@@ -16,18 +16,20 @@ class VocabPage extends ConsumerWidget {
     final overview = ref.watch(vocabOverviewProvider);
     final topic = ref.watch(vocabFilterProvider.select((f) => f.topic));
     return Scaffold(
-      appBar: AppBar(title: const Text('Từ vựng')),
       floatingActionButton: FloatingActionButton(
         tooltip: 'Thêm từ',
         onPressed: () => showVocabForm(context, defaultTopic: topic),
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.add_rounded),
       ),
-      body: RefreshIndicator(
-        onRefresh: () => ref.refresh(vocabListProvider.future),
-        child: AsyncView(
-          value: overview,
-          onRetry: () => ref.invalidate(vocabListProvider),
-          data: (o) => _VocabBody(overview: o, topic: topic),
+      body: SafeArea(
+        bottom: false,
+        child: RefreshIndicator(
+          onRefresh: () => ref.refresh(vocabListProvider.future),
+          child: AsyncView(
+            value: overview,
+            onRetry: () => ref.invalidate(vocabListProvider),
+            data: (o) => _VocabBody(overview: o, topic: topic),
+          ),
         ),
       ),
     );
@@ -51,67 +53,96 @@ class _VocabBody extends ConsumerWidget {
     final o = overview;
     final filter = ref.read(vocabFilterProvider.notifier);
     final now = DateTime.now();
+    final fg = AppHeroCard.foreground(context);
 
     return CustomScrollView(
       slivers: [
         SliverPadding(
-          padding: const EdgeInsets.fromLTRB(
-            AppSpacing.screen,
-            AppSpacing.s8,
-            AppSpacing.screen,
-            0,
-          ),
+          padding: const EdgeInsets.fromLTRB(AppSpacing.screen, 0, AppSpacing.screen, 0),
           sliver: SliverList.list(
             children: [
-              AppCard(
-                tone: AppTone.info,
-                child: Row(
+              const AppPageHeader(title: 'Từ vựng'),
+              AppHeroCard(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Ôn tập hôm nay', style: context.textStyles.titleMedium),
-                          Gaps.v4,
-                          Text('${o.dueCount} từ đến hạn · ${o.newCount} từ mới'),
-                        ],
-                      ),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Ôn tập hôm nay',
+                                style: context.textStyles.labelLarge?.copyWith(color: fg),
+                              ),
+                              Text(
+                                '${o.sessionSize} từ',
+                                style: context.textStyles.displaySmall?.copyWith(color: fg),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Icon(
+                          Icons.style_rounded,
+                          size: AppSizes.iconXl,
+                          color: fg.withValues(alpha: 0.4),
+                        ),
+                      ],
                     ),
-                    FilledButton(
+                    Gaps.v4,
+                    Text(
+                      '${o.dueCount} từ đến hạn · ${o.newCount} từ mới · ${o.total} từ trong kho',
+                      style: context.textStyles.bodySmall?.copyWith(color: fg),
+                    ),
+                    Gaps.v16,
+                    FilledButton.icon(
+                      style: FilledButton.styleFrom(
+                        backgroundColor: fg,
+                        foregroundColor: context.surfaces.hero.first,
+                        minimumSize: const Size.fromHeight(AppSizes.touchTarget),
+                      ),
                       onPressed: o.sessionSize == 0 ? null : () => _startSession(context, ref),
-                      child: Text(o.sessionSize == 0 ? 'Xong rồi 🎉' : 'Học ${o.sessionSize}'),
+                      icon: Icon(
+                        o.sessionSize == 0 ? Icons.check_rounded : Icons.play_arrow_rounded,
+                      ),
+                      label: Text(o.sessionSize == 0 ? 'Đã ôn xong hôm nay' : 'Bắt đầu học'),
                     ),
                   ],
                 ),
               ),
-              Gaps.v12,
+              Gaps.v16,
               TextField(
                 decoration: const InputDecoration(
-                  prefixIcon: Icon(Icons.search),
+                  prefixIcon: Icon(Icons.search_rounded),
                   hintText: 'Tìm từ hoặc nghĩa',
-                  isDense: true,
                 ),
                 onChanged: filter.setQuery,
               ),
-              Gaps.v8,
-              SizedBox(
-                height: AppSizes.touchTarget,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    for (final t in [null, ...o.topics])
-                      Padding(
-                        padding: const EdgeInsets.only(right: AppSpacing.s8),
-                        child: ChoiceChip(
-                          label: Text(t ?? 'Tất cả (${o.total})'),
-                          selected: topic == t,
-                          onSelected: (_) => filter.setTopic(t),
-                        ),
-                      ),
-                  ],
-                ),
-              ),
             ],
+          ),
+        ),
+        // Chip chủ đề tràn mép màn hình, padding nằm trong danh sách cuộn ngang.
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: AppSizes.touchTarget + AppSpacing.s24,
+            child: ListView.separated(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(
+                horizontal: AppSpacing.screen,
+                vertical: AppSpacing.s12,
+              ),
+              itemCount: o.topics.length + 1,
+              separatorBuilder: (_, _) => Gaps.h8,
+              itemBuilder: (context, i) {
+                final t = i == 0 ? null : o.topics[i - 1];
+                return ChoiceChip(
+                  label: Text(t ?? 'Tất cả · ${o.total}'),
+                  selected: topic == t,
+                  onSelected: (_) => filter.setTopic(t),
+                );
+              },
+            ),
           ),
         ),
         if (o.shown.isEmpty)
@@ -124,36 +155,41 @@ class _VocabBody extends ConsumerWidget {
           )
         else
           SliverPadding(
-            padding: AppInsets.listBottomForFab,
-            sliver: SliverList.builder(
-              itemCount: o.shown.length,
-              itemBuilder: (context, i) {
-                final v = o.shown[i];
-                return ListTile(
-                  title: Text.rich(
-                    TextSpan(
-                      children: [
+            padding: const EdgeInsets.fromLTRB(
+              AppSpacing.screen,
+              0,
+              AppSpacing.screen,
+              AppSpacing.fabClearance,
+            ),
+            sliver: SliverToBoxAdapter(
+              child: AppListGroup(
+                children: [
+                  for (final v in o.shown)
+                    ListTile(
+                      title: Text.rich(
                         TextSpan(
-                          text: v.word,
-                          style: const TextStyle(fontWeight: FontWeight.w600),
+                          children: [
+                            TextSpan(text: v.word),
+                            if (v.ipa != null)
+                              TextSpan(
+                                text: '  ${v.ipa}',
+                                style: context.textStyles.bodySmall?.copyWith(
+                                  color: context.colors.onSurfaceVariant,
+                                ),
+                              ),
+                          ],
                         ),
-                        if (v.ipa != null)
-                          TextSpan(
-                            text: '  ${v.ipa}',
-                            style: TextStyle(color: context.colors.onSurfaceVariant),
-                          ),
-                      ],
+                      ),
+                      subtitle: Text(
+                        [if (v.pos != null) '(${v.pos})', v.meaning].join(' '),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      trailing: _StatusBadge(item: v, now: now),
+                      onTap: () => showVocabForm(context, item: v),
                     ),
-                  ),
-                  subtitle: Text(
-                    [if (v.pos != null) '(${v.pos})', v.meaning].join(' '),
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  trailing: _StatusBadge(item: v, now: now),
-                  onTap: () => showVocabForm(context, item: v),
-                );
-              },
+                ],
+              ),
             ),
           ),
       ],

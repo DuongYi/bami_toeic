@@ -1,0 +1,345 @@
+{
+  "title": "Sample Full Test 01 (đủ 7 Part)",
+  "source": "Bami TOEIC",
+  "description": "Đề mẫu tự soạn, 24 câu, đủ Part 1–7, có audio (giọng đọc máy) và ảnh. Dùng để test chức năng, không phản ánh độ khó thật.",
+  "groups": [
+    {
+      "part": 1,
+      "image": "p1_q1.png",
+      "audio": "p1_q1.m4a",
+      "transcript": "(A) A woman is typing on a keyboard. (B) A laptop has been left open on a desk. (C) Some chairs are stacked in a corner. (D) A plant is being watered.",
+      "questions": [
+        {
+          "number": 1,
+          "answer": "B",
+          "explanation": "Tranh chỉ có đồ vật: laptop mở trên bàn → (B). Không có người nên loại (A), (D)."
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "image": "p1_q2.png",
+      "audio": "p1_q2.m4a",
+      "transcript": "(A) Some bicycles are parked along a fence. (B) A man is repairing a tire. (C) Cars are stopped at a traffic light. (D) A fence is being painted.",
+      "questions": [
+        {
+          "number": 2,
+          "answer": "A",
+          "explanation": "Ba chiếc xe đạp dựng dọc hàng rào → (A). \"is being painted\" cần có người đang sơn."
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q7.m4a",
+      "transcript": "M: Where is the quarterly report?\nW: (A) It's on your desk. (B) Every three months. (C) Yes, I reported it.",
+      "questions": [
+        {
+          "number": 7,
+          "answer": "A",
+          "explanation": "Hỏi \"Where\" → trả lời vị trí (A). (B) bẫy từ \"quarterly\"."
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q8.m4a",
+      "transcript": "M: When does the training session start?\nW: (A) In the main conference room. (B) At nine thirty tomorrow. (C) Mr. Lee is training.",
+      "questions": [
+        {
+          "number": 8,
+          "answer": "B",
+          "explanation": "Hỏi \"When\" → thời gian (B)."
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q9.m4a",
+      "transcript": "M: Would you like me to order lunch for the meeting?\nW: (A) That would be great, thanks. (B) The meeting room is booked. (C) I had a sandwich.",
+      "questions": [
+        {
+          "number": 9,
+          "answer": "A",
+          "explanation": "Lời đề nghị → nhận lời (A)."
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "audio": "p3_q32-34.m4a",
+      "transcript": "W: Hi Tom, the printer on the third floor is out of toner again. Do we have any replacements?\nM: I'm afraid we used the last cartridge yesterday. I'll place an order with our supplier this afternoon.\nW: Thanks. In the meantime, can I use the printer in your department? I need to print handouts for a client meeting at two.\nM: Of course. Just send the file to the printer near the reception desk.",
+      "questions": [
+        {
+          "number": 32,
+          "answer": "A",
+          "content": "What problem does the woman mention?",
+          "options": [
+            "A printer is out of toner.",
+            "A meeting was canceled.",
+            "A file is missing.",
+            "A client is late."
+          ],
+          "explanation": "\"the printer ... is out of toner again\"."
+        },
+        {
+          "number": 33,
+          "answer": "B",
+          "content": "What will the man do this afternoon?",
+          "options": [
+            "Repair a printer",
+            "Place an order",
+            "Meet a client",
+            "Print some handouts"
+          ],
+          "explanation": "\"I'll place an order with our supplier this afternoon\"."
+        },
+        {
+          "number": 34,
+          "answer": "C",
+          "content": "Why does the woman need to print documents?",
+          "options": [
+            "For a job interview",
+            "For a training session",
+            "For a client meeting",
+            "For a sales report"
+          ],
+          "explanation": "\"print handouts for a client meeting at two\"."
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "audio": "p4_q71-73.m4a",
+      "transcript": "Attention, shoppers. Thank you for visiting Greenfield Market. Starting this Saturday, our store will open at seven a.m. instead of eight to better serve our early customers. Also, this weekend only, all fresh fruit is twenty percent off. Don't forget to sign up for our rewards card at the customer service desk to receive a free reusable shopping bag.",
+      "questions": [
+        {
+          "number": 71,
+          "answer": "D",
+          "content": "Where is the announcement being made?",
+          "options": [
+            "At an airport",
+            "At a bank",
+            "At a library",
+            "At a supermarket"
+          ],
+          "explanation": "\"shoppers\", \"Greenfield Market\", \"fresh fruit\" → siêu thị."
+        },
+        {
+          "number": 72,
+          "answer": "A",
+          "content": "What will change starting on Saturday?",
+          "options": [
+            "The store's opening time",
+            "The store's location",
+            "Payment methods",
+            "Parking rules"
+          ],
+          "explanation": "\"will open at seven a.m. instead of eight\"."
+        },
+        {
+          "number": 73,
+          "answer": "B",
+          "content": "What can listeners receive at the customer service desk?",
+          "options": [
+            "A discount coupon",
+            "A shopping bag",
+            "A store map",
+            "A refund"
+          ],
+          "explanation": "\"sign up ... to receive a free reusable shopping bag\"."
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "B",
+          "content": "Ms. Park was ------- promoted to regional manager after only two years with the company.",
+          "options": [
+            "quick",
+            "quickly",
+            "quicker",
+            "quickness"
+          ],
+          "explanation": "Bổ nghĩa cho động từ \"promoted\" → trạng từ \"quickly\"."
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "A",
+          "content": "Please contact the front desk ------- you need additional towels.",
+          "options": [
+            "if",
+            "so",
+            "but",
+            "or"
+          ],
+          "explanation": "Câu điều kiện: liên hệ lễ tân NẾU cần thêm khăn → \"if\"."
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "A",
+          "content": "The board of directors will ------- the proposal at next week's meeting.",
+          "options": [
+            "discuss",
+            "discussion",
+            "discussed",
+            "discussing"
+          ],
+          "explanation": "Sau \"will\" là động từ nguyên mẫu → \"discuss\"."
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "C",
+          "content": "Neither the manager ------- her assistant was available to answer the call.",
+          "options": [
+            "or",
+            "and",
+            "nor",
+            "but"
+          ],
+          "explanation": "Cấu trúc \"neither ... nor\"."
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "Dear valued clients,\n\nWe are pleased to announce that Brightline Consulting ---(131)--- to a new office on March 1. Our new address is 250 Harbor Street, Suite 12. The new location offers more meeting space and is ---(132)--- accessible by public transportation. ---(133)--- Please update your records ---(134)---.\n\nSincerely,\nBrightline Consulting",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "B",
+          "options": [
+            "moved",
+            "will be moving",
+            "has been moved",
+            "moving"
+          ],
+          "explanation": "Thông báo trước ngày 1/3 → tương lai \"will be moving\"."
+        },
+        {
+          "number": 132,
+          "answer": "B",
+          "options": [
+            "easy",
+            "easily",
+            "easier",
+            "ease"
+          ],
+          "explanation": "Bổ nghĩa cho tính từ \"accessible\" → trạng từ \"easily\"."
+        },
+        {
+          "number": 133,
+          "answer": "A",
+          "options": [
+            "Our phone numbers and email addresses will remain the same.",
+            "The building was constructed in 1985.",
+            "Our staff enjoyed the holiday party.",
+            "Parking fees have recently increased."
+          ],
+          "explanation": "Câu (A) liền mạch: đổi địa chỉ nhưng liên lạc giữ nguyên, rồi \"update your records\"."
+        },
+        {
+          "number": 134,
+          "answer": "B",
+          "options": [
+            "according",
+            "accordingly",
+            "accordance",
+            "accord"
+          ],
+          "explanation": "Cuối câu cần trạng từ → \"accordingly\" (cho phù hợp)."
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "RIVERSIDE PUBLIC LIBRARY\nExtended Hours for Exam Season\n\nFrom May 1 to May 31, the library will stay open until 10 p.m. on weekdays. Study rooms can be reserved up to three days in advance at the information desk or on our website. Please note that food is not allowed in study rooms; drinks must be in covered containers.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "A",
+          "content": "What is the purpose of the notice?",
+          "options": [
+            "To announce longer opening hours",
+            "To introduce new staff",
+            "To advertise a book sale",
+            "To explain a temporary closure"
+          ],
+          "explanation": "\"Extended Hours ... stay open until 10 p.m.\"."
+        },
+        {
+          "number": 148,
+          "answer": "C",
+          "content": "What is indicated about the study rooms?",
+          "options": [
+            "They are free only on weekends.",
+            "Food may be eaten in them.",
+            "They can be reserved in advance.",
+            "They are closed in May."
+          ],
+          "explanation": "\"can be reserved up to three days in advance\"."
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "E-MAIL 1\nFrom: Laura Chen <lchen@sunrisehotel.com>\nTo: David Kim <dkim@apexsoft.com>\nSubject: Conference room booking\n\nDear Mr. Kim,\nThank you for choosing Sunrise Hotel for your company's workshop on June 12. As requested, we have reserved the Ocean Room, which seats 40 people. Lunch will be served at 12:30 p.m. Please confirm the final number of participants by June 5.\n\nBest regards,\nLaura Chen, Events Coordinator\n\n────────────\n\nE-MAIL 2\nFrom: David Kim\nTo: Laura Chen\nSubject: RE: Conference room booking\n\nDear Ms. Chen,\nThank you for the confirmation. We now expect 45 participants, so we will need a larger room. Also, could lunch be moved to 1:00 p.m.? Our morning session will run longer than planned.\n\nRegards,\nDavid Kim",
+      "questions": [
+        {
+          "number": 176,
+          "answer": "B",
+          "content": "Who most likely is Ms. Chen?",
+          "options": [
+            "A software developer",
+            "An events coordinator",
+            "A workshop speaker",
+            "A travel agent"
+          ],
+          "explanation": "Chữ ký: \"Laura Chen, Events Coordinator\"."
+        },
+        {
+          "number": 177,
+          "answer": "D",
+          "content": "Why does Mr. Kim need a different room?",
+          "options": [
+            "The Ocean Room is being renovated.",
+            "He wants a room with a view.",
+            "The workshop date has changed.",
+            "More people will attend than the room holds."
+          ],
+          "explanation": "Phòng Ocean chứa 40 người (e-mail 1) nhưng giờ có 45 người (e-mail 2) → kết hợp 2 đoạn."
+        },
+        {
+          "number": 178,
+          "answer": "A",
+          "content": "What does Mr. Kim ask Ms. Chen to do?",
+          "options": [
+            "Change the lunch time",
+            "Cancel the reservation",
+            "Send an invoice",
+            "Arrange transportation"
+          ],
+          "explanation": "\"could lunch be moved to 1:00 p.m.?\"."
+        }
+      ]
+    }
+  ]
+}

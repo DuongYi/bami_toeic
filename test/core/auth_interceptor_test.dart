@@ -132,4 +132,17 @@ void main() {
       expect(ex.message, 'duplicate key value');
     }
   });
+
+  test('thiếu bảng (PGRST205) → hướng dẫn chạy schema.sql', () async {
+    storage = MemoryTokenStorage(null);
+    setUpDio(
+      (_) => (404, {'code': 'PGRST205', 'message': "Could not find the table 'public.tests'"}),
+    );
+    try {
+      await dio.get<dynamic>('/rest/v1/tests');
+      fail('phải throw');
+    } on DioException catch (e) {
+      expect(AppException.from(e).message, contains('schema.sql'));
+    }
+  });
 }

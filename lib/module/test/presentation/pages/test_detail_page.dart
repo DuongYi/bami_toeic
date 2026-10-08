@@ -16,12 +16,13 @@ class TestDetailPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final detail = ref.watch(testDetailProvider(testId));
+    if (detail.value case final d?) return _DetailBody(detail: d);
     return Scaffold(
-      appBar: AppBar(title: Text(detail.value?.summary.title ?? '')),
+      appBar: AppBar(),
       body: AsyncView(
         value: detail,
         onRetry: () => ref.invalidate(testDetailProvider(testId)),
-        data: (d) => _DetailBody(detail: d),
+        data: (_) => const SizedBox.shrink(),
       ),
     );
   }
@@ -48,74 +49,90 @@ class _DetailBodyState extends State<_DetailBody> {
     final s = widget.detail.summary;
     final parts = _perPart.keys.toList()..sort();
     final allSelected = _selected.length == parts.length;
+    final muted = context.textStyles.bodySmall?.copyWith(color: context.colors.onSurfaceVariant);
 
-    return Column(
-      children: [
-        Expanded(
-          child: ListView(
-            padding: AppInsets.screen,
+    return Scaffold(
+      appBar: AppBar(),
+      body: ListView(
+        padding: const EdgeInsets.fromLTRB(AppSpacing.screen, 0, AppSpacing.screen, AppSpacing.s24),
+        children: [
+          // Thông tin đề
+          Row(
             children: [
-              if (s.description != null) ...[Text(s.description!), Gaps.v16],
-              const SectionHeader(title: 'Chế độ'),
-              SegmentedButton<String>(
-                segments: const [
-                  ButtonSegment(
-                    value: 'practice',
-                    icon: Icon(Icons.lightbulb_outline),
-                    label: Text('Luyện tập'),
-                  ),
-                  ButtonSegment(
-                    value: 'exam',
-                    icon: Icon(Icons.timer_outlined),
-                    label: Text('Thi thử'),
-                  ),
-                ],
-                selected: {_mode},
-                onSelectionChanged: (v) => setState(() => _mode = v.first),
-              ),
-              Gaps.v8,
-              Text(
-                _mode == 'practice'
-                    ? 'Hiện đáp án và giải thích ngay sau mỗi câu. Không giới hạn thời gian.'
-                    : 'Tính giờ như thi thật (120 phút / 200 câu). Chấm điểm khi nộp bài.',
-                style: context.textStyles.bodySmall,
-              ),
-              Gaps.v24,
-              SectionHeader(
-                title: 'Chọn Part',
-                trailing: TextButton(
-                  onPressed: () => setState(() => _selected = allSelected ? {} : parts.toSet()),
-                  child: Text(allSelected ? 'Bỏ chọn' : 'Chọn tất cả'),
+              const IconBadge(icon: Icons.menu_book_rounded, size: AppSizes.badgeLg),
+              Gaps.h16,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Semantics(
+                      header: true,
+                      child: Text(s.title, style: context.textStyles.headlineSmall),
+                    ),
+                    Text(
+                      [
+                        if (s.source != null) s.source!,
+                        '${s.questionCount} câu',
+                        '${parts.length} Part',
+                      ].join(' · '),
+                      style: muted,
+                    ),
+                  ],
                 ),
               ),
-              for (final p in parts)
-                CheckboxListTile(
-                  contentPadding: EdgeInsets.zero,
-                  value: _selected.contains(p),
-                  title: Text(partNames[p] ?? 'Part $p'),
-                  subtitle: Text('${_perPart[p]} câu'),
-                  onChanged: (v) => setState(() => v! ? _selected.add(p) : _selected.remove(p)),
-                ),
             ],
           ),
-        ),
-        // CTA cố định ở đáy (vùng ngón cái).
-        SafeArea(
-          top: false,
-          child: Padding(
-            padding: AppInsets.screen,
-            child: AppPrimaryButton(
-              icon: Icons.play_arrow_rounded,
-              label: _selected.isEmpty ? 'Chọn ít nhất 1 Part' : 'Bắt đầu · $_count câu',
-              onPressed: _selected.isEmpty
-                  ? null
-                  : () => context.push(
-                      Routes.take(s.id, mode: _mode, parts: _selected.toList()..sort()),
-                    ),
+          if (s.description != null) ...[Gaps.v12, Text(s.description!, style: muted)],
+          Gaps.v24,
+          const SectionHeader(title: 'Chế độ'),
+          ChoiceCard(
+            icon: Icons.lightbulb_outline_rounded,
+            title: 'Luyện tập',
+            subtitle: 'Hiện đáp án và giải thích ngay. Không giới hạn thời gian.',
+            selected: _mode == 'practice',
+            onTap: () => setState(() => _mode = 'practice'),
+          ),
+          Gaps.v8,
+          ChoiceCard(
+            icon: Icons.timer_outlined,
+            title: 'Thi thử',
+            subtitle: 'Tính giờ như thi thật (120 phút / 200 câu), chấm khi nộp.',
+            selected: _mode == 'exam',
+            onTap: () => setState(() => _mode = 'exam'),
+          ),
+          Gaps.v24,
+          SectionHeader(
+            title: 'Chọn Part',
+            subtitle: 'Đã chọn $_count câu',
+            trailing: TextButton(
+              onPressed: () => setState(() => _selected = allSelected ? {} : parts.toSet()),
+              child: Text(allSelected ? 'Bỏ chọn' : 'Chọn tất cả'),
             ),
           ),
+          for (final p in parts) ...[
+            ChoiceCard(
+              multiSelect: true,
+              icon: p <= 4 ? Icons.headphones_rounded : Icons.chrome_reader_mode_outlined,
+              title: partNames[p] ?? 'Part $p',
+              subtitle: '${_perPart[p]} câu · ${p <= 4 ? 'Listening' : 'Reading'}',
+              selected: _selected.contains(p),
+              onTap: () =>
+                  setState(() => _selected.contains(p) ? _selected.remove(p) : _selected.add(p)),
+            ),
+            Gaps.v8,
+          ],
+        ],
+      ),
+      bottomNavigationBar: AppBottomBar(
+        child: AppPrimaryButton(
+          icon: Icons.play_arrow_rounded,
+          label: _selected.isEmpty ? 'Chọn ít nhất 1 Part' : 'Bắt đầu · $_count câu',
+          onPressed: _selected.isEmpty
+              ? null
+              : () =>
+                    context.push(Routes.take(s.id, mode: _mode, parts: _selected.toList()..sort())),
         ),
-      ],
+      ),
     );
   }
 }

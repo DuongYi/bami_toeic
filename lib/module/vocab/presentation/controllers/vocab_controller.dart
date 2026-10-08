@@ -10,11 +10,15 @@ part 'vocab_controller.g.dart';
 /// Số từ mới tối đa mỗi phiên flashcard.
 const newPerSession = 20;
 
+/// Nguồn ngẫu nhiên để xáo thẻ (override bằng seed cố định trong test).
+@Riverpod(keepAlive: true)
+Random sessionRandom(Ref ref) => Random();
+
 /// Phiên học = các từ đến hạn + tối đa [newPerSession] từ mới, xáo trộn.
-List<VocabItem> buildSession(List<VocabItem> items, DateTime now) {
+List<VocabItem> buildSession(List<VocabItem> items, DateTime now, [Random? random]) {
   final due = items.where((v) => v.isDue(now)).toList();
   final fresh = items.where((v) => v.isNew).take(newPerSession).toList();
-  return [...due, ...fresh]..shuffle(Random());
+  return [...due, ...fresh]..shuffle(random ?? Random());
 }
 
 /// Toàn bộ từ vựng + thao tác thêm/sửa/xoá.

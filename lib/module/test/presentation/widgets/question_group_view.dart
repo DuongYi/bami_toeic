@@ -47,14 +47,18 @@ class QuestionGroupView extends StatelessWidget {
         AppSpacing.s32,
       ),
       children: [
-        Semantics(
-          header: true,
-          child: Text(
-            partNames[group.part] ?? 'Part ${group.part}',
-            style: context.textStyles.labelLarge?.copyWith(color: context.colors.primary),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: Semantics(
+            header: true,
+            child: StatusBadge(
+              label: partNames[group.part] ?? 'Part ${group.part}',
+              tone: AppTone.info,
+              icon: group.part <= 4 ? Icons.headphones_rounded : Icons.chrome_reader_mode_outlined,
+            ),
           ),
         ),
-        Gaps.v8,
+        Gaps.v12,
         if (group.audioUrl != null) ...[
           AudioBar(url: group.audioUrl!, autoPlay: autoPlayAudio),
           Gaps.v8,
@@ -204,7 +208,7 @@ class AnswerOption extends StatelessWidget {
     final tone = result?.colorsOf(context);
     final emphasized = selected || tone != null;
     final border = tone?.main ?? (selected ? cs.primary : cs.outlineVariant);
-    final fill = tone?.container ?? (selected ? cs.primaryContainer : cs.surface);
+    final fill = tone?.container ?? (selected ? cs.primaryContainer : context.surfaces.raised);
     final onFill = tone?.onContainer ?? (selected ? cs.onPrimaryContainer : cs.onSurface);
 
     final resultLabel = switch (result) {

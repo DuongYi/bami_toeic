@@ -50,7 +50,7 @@ final class FlashcardSessionProvider
   }
 }
 
-String _$flashcardSessionHash() => r'c2c73be2d37cb2973764aa7bbc043c989e94b6f9';
+String _$flashcardSessionHash() => r'c63ca7b715125befcad29dab6c1930fc680a2477';
 
 final class FlashcardSessionFamily extends $Family
     with

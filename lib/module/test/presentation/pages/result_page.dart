@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/design_system/design_system.dart';
+import '../../../../helper/format.dart';
 import '../../../../helper/score.dart';
 import '../../../../routes/app_router.dart';
 import '../../data/models/test_models.dart';
@@ -21,7 +22,8 @@ class ResultPage extends ConsumerWidget {
       appBar: AppBar(
         title: const Text('Kết quả'),
         leading: IconButton(
-          icon: const Icon(Icons.close),
+          tooltip: 'Đóng',
+          icon: const Icon(Icons.close_rounded),
           onPressed: () => context.canPop() ? context.pop() : context.go(Routes.tests),
         ),
       ),
@@ -60,6 +62,14 @@ class _ResultBodyState extends State<_ResultBody> {
     );
   }
 
+  static (String, String) _verdict(double ratio) => ratio >= 0.85
+      ? ('Xuất sắc! 🎉', 'Giữ phong độ này nhé.')
+      : ratio >= 0.7
+      ? ('Làm tốt lắm!', 'Xem lại vài câu sai để hoàn thiện.')
+      : ratio >= 0.5
+      ? ('Khá ổn', 'Tập trung ôn các Part còn yếu.')
+      : ('Cố lên nào', 'Xem lại giải thích từng câu sai nhé.');
+
   @override
   Widget build(BuildContext context) {
     final a = widget.data.attempt;
@@ -72,71 +82,149 @@ class _ResultBodyState extends State<_ResultBody> {
     }
     final listeningTotal = questions.where((q) => ToeicScore.isListening(q.part)).length;
     final readingTotal = questions.length - listeningTotal;
-    final pct = questions.isEmpty ? 0 : (a.correct * 100 / questions.length).round();
+    final ratio = questions.isEmpty ? 0.0 : a.correct / questions.length;
+    final wrong = questions
+        .where((q) => !_isCorrect(q) && widget.data.answers[q.id] != null)
+        .length;
+    final skipped = questions.where((q) => widget.data.answers[q.id] == null).length;
     final listening = ToeicScore.listening(a.listeningCorrect);
     final reading = ToeicScore.reading(a.readingCorrect);
+    final (title, hint) = _verdict(ratio);
+    final muted = context.textStyles.bodySmall?.copyWith(color: context.colors.onSurfaceVariant);
 
-    return ListView(
-      padding: AppInsets.screen,
+    return Column(
       children: [
-        Text(a.testTitle, style: context.textStyles.titleMedium),
-        Gaps.v12,
-        AppCard(
-          padding: AppInsets.cardLarge,
-          child: Column(
+        Expanded(
+          child: ListView(
+            padding: AppInsets.screen,
             children: [
-              Text('${a.correct}/${questions.length}', style: context.textStyles.displaySmall),
-              Text('câu đúng · $pct%'),
-              if (listeningTotal == 100 || readingTotal == 100) ...[
-                const Divider(),
-                Row(
+              // Hero kết quả
+              AppCard(
+                padding: AppInsets.cardLarge,
+                child: Column(
                   children: [
-                    if (listeningTotal == 100) StatTile(value: '$listening', label: 'Listening'),
-                    if (readingTotal == 100) StatTile(value: '$reading', label: 'Reading'),
-                    if (listeningTotal == 100 && readingTotal == 100)
-                      StatTile(value: '${listening + reading}', label: 'Tổng', highlight: true),
+                    ScoreRing(
+                      value: ratio,
+                      semanticLabel: 'Tỉ lệ đúng',
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(Fmt.percent(ratio), style: context.textStyles.displaySmall),
+                          Text('${a.correct}/${questions.length} câu', style: muted),
+                        ],
+                      ),
+                    ),
+                    Gaps.v16,
+                    Text(title, style: context.textStyles.headlineSmall),
+                    Gaps.v4,
+                    Text(hint, style: muted, textAlign: TextAlign.center),
+                    Gaps.v16,
+                    Wrap(
+                      alignment: WrapAlignment.center,
+                      spacing: AppSpacing.s8,
+                      runSpacing: AppSpacing.s8,
+                      children: [
+                        StatusBadge(
+                          label: '${a.correct} đúng',
+                          tone: AppTone.success,
+                          icon: Icons.check_rounded,
+                        ),
+                        StatusBadge(
+                          label: '$wrong sai',
+                          tone: AppTone.danger,
+                          icon: Icons.close_rounded,
+                        ),
+                        StatusBadge(label: '$skipped bỏ trống', icon: Icons.remove_rounded),
+                      ],
+                    ),
                   ],
                 ),
-                Gaps.v8,
-                Text('Điểm quy đổi ước tính', style: context.textStyles.bodySmall),
+              ),
+              Gaps.v8,
+              Padding(
+                padding: AppInsets.screenH,
+                child: Text(
+                  '${a.testTitle} · ${a.isExam ? 'Thi thử' : 'Luyện tập'} · ${a.duration.inMinutes} phút',
+                  style: muted,
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              if (listeningTotal == 100 || readingTotal == 100) ...[
+                Gaps.v24,
+                const SectionHeader(
+                  title: 'Điểm quy đổi',
+                  subtitle: 'Ước tính, chỉ mang tính tham khảo',
+                ),
+                StatGrid(
+                  children: [
+                    if (listeningTotal == 100)
+                      StatCard(
+                        icon: Icons.headphones_rounded,
+                        value: '$listening',
+                        label: 'Listening',
+                      ),
+                    if (readingTotal == 100)
+                      StatCard(
+                        icon: Icons.chrome_reader_mode_outlined,
+                        value: '$reading',
+                        label: 'Reading',
+                      ),
+                    if (listeningTotal == 100 && readingTotal == 100)
+                      StatCard(
+                        icon: Icons.emoji_events_outlined,
+                        value: '${listening + reading}',
+                        label: 'Tổng',
+                        tone: AppTone.warning,
+                      ),
+                  ],
+                ),
               ],
+              Gaps.v24,
+              const SectionHeader(title: 'Theo Part'),
+              AppCard(
+                child: Column(
+                  children: [
+                    for (final (i, p) in (byPart.keys.toList()..sort()).indexed) ...[
+                      if (i > 0) Gaps.v12,
+                      LabeledProgress(
+                        label: partNames[p] ?? 'Part $p',
+                        value: byPart[p]!.$2 == 0 ? 0 : byPart[p]!.$1 / byPart[p]!.$2,
+                        trailing: '${byPart[p]!.$1}/${byPart[p]!.$2}',
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+              Gaps.v24,
+              SectionHeader(
+                title: 'Đáp án',
+                subtitle: 'Chạm số câu để xem giải thích',
+                trailing: FilterChip(
+                  label: const Text('Chỉ câu sai'),
+                  selected: _wrongOnly,
+                  onSelected: (v) => setState(() => _wrongOnly = v),
+                ),
+              ),
+              AppCard(
+                child: Wrap(
+                  spacing: AppSpacing.s8,
+                  runSpacing: AppSpacing.s8,
+                  children: [
+                    for (final (gi, g) in widget.data.groups.indexed)
+                      for (final q in g.questions)
+                        if (!_wrongOnly || !_isCorrect(q)) _answerCell(q, () => _openReview(gi)),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
-        Gaps.v24,
-        const SectionHeader(title: 'Theo Part'),
-        for (final p in byPart.keys.toList()..sort())
-          Padding(
-            padding: const EdgeInsets.only(bottom: AppSpacing.s12),
-            child: LabeledProgress(
-              label: partNames[p] ?? 'Part $p',
-              value: byPart[p]!.$2 == 0 ? 0 : byPart[p]!.$1 / byPart[p]!.$2,
-              trailing: '${byPart[p]!.$1}/${byPart[p]!.$2}',
-            ),
+        AppBottomBar(
+          child: AppPrimaryButton(
+            icon: Icons.menu_book_outlined,
+            label: 'Xem lại đáp án',
+            onPressed: widget.data.groups.isEmpty ? null : () => _openReview(0),
           ),
-        Gaps.v12,
-        SectionHeader(
-          title: 'Đáp án',
-          trailing: FilterChip(
-            label: const Text('Chỉ câu sai'),
-            selected: _wrongOnly,
-            onSelected: (v) => setState(() => _wrongOnly = v),
-          ),
-        ),
-        Wrap(
-          spacing: AppSpacing.s8,
-          runSpacing: AppSpacing.s8,
-          children: [
-            for (final (gi, g) in widget.data.groups.indexed)
-              for (final q in g.questions)
-                if (!_wrongOnly || !_isCorrect(q)) _answerCell(q, () => _openReview(gi)),
-          ],
-        ),
-        Gaps.v24,
-        FilledButton.tonalIcon(
-          icon: const Icon(Icons.menu_book_outlined),
-          label: const Text('Xem lại toàn bộ'),
-          onPressed: widget.data.groups.isEmpty ? null : () => _openReview(0),
         ),
       ],
     );

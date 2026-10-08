@@ -13,6 +13,9 @@ abstract final class AppSpacing {
 
   /// Lề ngang màn hình (Compact). Dùng `AppInsets.screen`.
   static const double screen = s16;
+
+  /// Khoảng trống cuối danh sách để FAB không che item cuối.
+  static const double fabClearance = 96;
 }
 
 /// EdgeInsets dựng sẵn hay dùng.
@@ -23,7 +26,7 @@ abstract final class AppInsets {
   static const cardLarge = EdgeInsets.all(AppSpacing.s24);
 
   /// Chừa chỗ cho FAB ở cuối danh sách.
-  static const listBottomForFab = EdgeInsets.only(bottom: 88);
+  static const listBottomForFab = EdgeInsets.only(bottom: AppSpacing.fabClearance);
 }
 
 /// Khoảng trống giữa các phần tử trong Column (v) / Row (h).
@@ -57,6 +60,7 @@ abstract final class AppRadius {
   static const brMd = BorderRadius.all(Radius.circular(md));
   static const brLg = BorderRadius.all(Radius.circular(lg));
   static const brXl = BorderRadius.all(Radius.circular(xl));
+  static const brFull = BorderRadius.all(Radius.circular(full));
 }
 
 /// Kích thước cố định.
@@ -72,6 +76,24 @@ abstract final class AppSizes {
   static const double iconLg = 32;
   static const double iconXl = 56;
   static const double iconHero = 64;
+
+  /// Khối logo trên màn chào / đăng nhập.
+  static const double brandMark = 88;
+
+  /// Ô icon nền màu (IconBadge).
+  static const double badgeSm = 32;
+  static const double badgeMd = 40;
+  static const double badgeLg = 48;
+
+  /// Vòng điểm (ScoreRing).
+  static const double ringSm = 64;
+  static const double ringMd = 96;
+  static const double ringLg = 168;
+  static const double ringStrokeSm = 6;
+  static const double ringStrokeMd = 9;
+  static const double ringStrokeLg = 14;
+
+  static const double navBarHeight = 72;
 
   static const double avatarSm = 28;
   static const double spinnerSm = 20;

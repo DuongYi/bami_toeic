@@ -19,6 +19,8 @@ class DsGalleryPage extends StatelessWidget {
           _Section('Nút', _ButtonsDemo()),
           _Section('Card · Badge · Progress', _CardsDemo()),
           _Section('StatTile · NumberCell', _NumbersDemo()),
+          _Section('Hero · ScoreRing · StatCard', _HeroDemo()),
+          _Section('ChoiceCard · IconBadge · AppListGroup', _ChoiceDemo()),
           _Section('Trạng thái màn hình', _StatesDemo()),
           _Section('Phản hồi (dialog, snackbar, sheet)', _FeedbackDemo()),
         ],
@@ -146,6 +148,13 @@ class _CardsDemo extends StatelessWidget {
         const AppCard(child: Text('AppCard mặc định')),
         Gaps.v8,
         const AppCard(tone: AppTone.info, child: Text('AppCard tone: info')),
+        Gaps.v8,
+        const AppBanner(
+          message: 'AppBanner danger: Email hoặc mật khẩu không đúng.',
+          tone: AppTone.danger,
+        ),
+        Gaps.v8,
+        const AppBanner(message: 'AppBanner info: gợi ý / thông tin phụ.'),
         Gaps.v12,
         Wrap(
           spacing: AppSpacing.s8,
@@ -256,6 +265,107 @@ class _FeedbackDemo extends StatelessWidget {
                 const Padding(padding: AppInsets.cardLarge, child: Text('Nội dung bottom sheet')),
           ),
           child: const Text('Bottom sheet'),
+        ),
+      ],
+    );
+  }
+}
+
+class _HeroDemo extends StatelessWidget {
+  const _HeroDemo();
+
+  @override
+  Widget build(BuildContext context) {
+    final fg = AppHeroCard.foreground(context);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        AppHeroCard(
+          child: Row(
+            children: [
+              Expanded(
+                child: Text(
+                  'AppHeroCard',
+                  style: context.textStyles.titleLarge?.copyWith(color: fg),
+                ),
+              ),
+              ScoreRing(
+                value: 0.72,
+                size: AppSizes.ringSm,
+                strokeWidth: AppSizes.ringStrokeSm,
+                color: fg,
+                trackColor: fg.withValues(alpha: 0.25),
+                child: Text('72%', style: context.textStyles.labelLarge?.copyWith(color: fg)),
+              ),
+            ],
+          ),
+        ),
+        Gaps.v12,
+        Center(
+          child: ScoreRing(value: 0.75, child: Text('75%', style: context.textStyles.displaySmall)),
+        ),
+        Gaps.v12,
+        const StatGrid(
+          children: [
+            StatCard(icon: Icons.assignment_turned_in_outlined, value: '12', label: 'Lượt làm'),
+            StatCard(
+              icon: Icons.emoji_events_outlined,
+              value: '850',
+              label: 'Cao nhất',
+              tone: AppTone.warning,
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+class _ChoiceDemo extends StatefulWidget {
+  const _ChoiceDemo();
+
+  @override
+  State<_ChoiceDemo> createState() => _ChoiceDemoState();
+}
+
+class _ChoiceDemoState extends State<_ChoiceDemo> {
+  bool _a = true;
+  bool _b = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        ChoiceCard(
+          icon: Icons.lightbulb_outline_rounded,
+          title: 'ChoiceCard (radio)',
+          subtitle: 'Chọn một',
+          selected: _a,
+          onTap: () => setState(() => _a = !_a),
+        ),
+        Gaps.v8,
+        ChoiceCard(
+          multiSelect: true,
+          icon: Icons.headphones_rounded,
+          title: 'ChoiceCard (multi)',
+          subtitle: 'Chọn nhiều',
+          selected: _b,
+          onTap: () => setState(() => _b = !_b),
+        ),
+        Gaps.v12,
+        const AppListGroup(
+          children: [
+            ListTile(
+              leading: IconBadge(icon: Icons.menu_book_rounded),
+              title: Text('AppListGroup + IconBadge'),
+              subtitle: Text('Item 1'),
+            ),
+            ListTile(
+              leading: IconBadge(icon: Icons.timer_outlined, tone: AppTone.warning),
+              title: Text('Item 2'),
+            ),
+          ],
         ),
       ],
     );

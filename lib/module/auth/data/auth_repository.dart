@@ -1,5 +1,7 @@
+import 'package:dio/dio.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../../core/network/app_exception.dart';
 import '../../../core/network/dio_client.dart';
 import '../../../core/storage/token_storage.dart';
 import 'auth_api.dart';
@@ -23,9 +25,39 @@ class AuthRepository {
   Future<Session?> currentSession() => _storage.read();
 
   Future<Session> signIn({required String email, required String password}) async {
-    final session = await _api.signInWithPassword({'email': email, 'password': password});
-    await _storage.save(session);
-    return session;
+    try {
+      final session = await _api.signInWithPassword({'email': email, 'password': password});
+      await _storage.save(session);
+      return session;
+    } on DioException catch (e) {
+      throw mapSignInError(e);
+    }
+  }
+
+  /// Đổi lỗi của Supabase Auth sang thông báo tiếng Việt dễ hiểu.
+  static AppException mapSignInError(DioException e) {
+    final data = e.response?.data;
+    final code = data is Map ? (data['error_code'] ?? data['error']) as String? : null;
+    final msg = data is Map ? '${data['msg'] ?? data['error_description'] ?? ''}' : '';
+    final status = e.response?.statusCode;
+
+    if (code == 'invalid_credentials' ||
+        code == 'invalid_grant' ||
+        msg.contains('Invalid login credentials')) {
+      return const UnauthorizedException('Email hoặc mật khẩu không đúng.');
+    }
+    if (code == 'email_not_confirmed') {
+      return const UnauthorizedException(
+        'Email chưa được xác nhận. Vào Supabase → Authentication → Users để xác nhận tài khoản.',
+      );
+    }
+    if (status == 429 || code == 'over_request_rate_limit') {
+      return const ServerException(
+        'Thử đăng nhập quá nhiều lần. Đợi vài phút rồi thử lại.',
+        statusCode: 429,
+      );
+    }
+    return AppException.from(e);
   }
 
   Future<void> signOut() async {

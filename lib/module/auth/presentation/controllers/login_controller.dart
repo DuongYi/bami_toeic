@@ -17,4 +17,9 @@ class LoginController extends _$LoginController {
     );
     if (ref.mounted) state = result;
   }
+
+  /// Ẩn thông báo lỗi khi người dùng sửa lại thông tin.
+  void clearError() {
+    if (state.hasError) state = const AsyncData(null);
+  }
 }

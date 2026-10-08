@@ -8,6 +8,47 @@ part of 'vocab_controller.dart';
 
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, type=warning
+/// Nguồn ngẫu nhiên để xáo thẻ (override bằng seed cố định trong test).
+
+@ProviderFor(sessionRandom)
+final sessionRandomProvider = SessionRandomProvider._();
+
+/// Nguồn ngẫu nhiên để xáo thẻ (override bằng seed cố định trong test).
+
+final class SessionRandomProvider extends $FunctionalProvider<Random, Random, Random>
+    with $Provider<Random> {
+  /// Nguồn ngẫu nhiên để xáo thẻ (override bằng seed cố định trong test).
+  SessionRandomProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'sessionRandomProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$sessionRandomHash();
+
+  @$internal
+  @override
+  $ProviderElement<Random> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+
+  @override
+  Random create(Ref ref) {
+    return sessionRandom(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(Random value) {
+    return $ProviderOverride(origin: this, providerOverride: $SyncValueProvider<Random>(value));
+  }
+}
+
+String _$sessionRandomHash() => r'eede9748a6ed1a185db870d83fcff9b3381d023b';
+
 /// Toàn bộ từ vựng + thao tác thêm/sửa/xoá.
 
 @ProviderFor(VocabList)

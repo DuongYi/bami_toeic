@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../tokens/app_colors.dart';
+import '../tokens/app_surfaces.dart';
 
 /// Lối tắt truy cập token từ theme. Dùng thay cho `Theme.of(context)...`.
 extension DesignSystemContext on BuildContext {
@@ -8,4 +9,5 @@ extension DesignSystemContext on BuildContext {
   ColorScheme get colors => Theme.of(this).colorScheme;
   TextTheme get textStyles => Theme.of(this).textTheme;
   AppColors get appColors => Theme.of(this).extension<AppColors>()!;
+  AppSurfaces get surfaces => Theme.of(this).extension<AppSurfaces>()!;
 }

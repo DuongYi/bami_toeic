@@ -35,7 +35,7 @@ final class LoginControllerProvider extends $AsyncNotifierProvider<LoginControll
   LoginController create() => LoginController();
 }
 
-String _$loginControllerHash() => r'70811cd9cf1f9fbbb8fefc16c9608b8d30708db4';
+String _$loginControllerHash() => r'a1abf0aed6e50cdd4da8a1096c58397d6f81538f';
 
 /// Trạng thái gửi form đăng nhập (loading / lỗi).
 

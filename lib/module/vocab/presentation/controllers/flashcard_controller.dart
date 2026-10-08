@@ -34,7 +34,9 @@ class FlashcardSession extends _$FlashcardSession {
     // Lấy dữ liệu mới nhất 1 lần; không watch để phiên học không bị reset giữa chừng.
     final all = await ref.read(vocabRepositoryProvider).fetchAll();
     final items = topic == null ? all : all.where((v) => v.topic == topic).toList();
-    return FlashcardState(queue: buildSession(items, DateTime.now()));
+    return FlashcardState(
+      queue: buildSession(items, DateTime.now(), ref.read(sessionRandomProvider)),
+    );
   }
 
   void flip() {

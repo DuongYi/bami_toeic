@@ -41,9 +41,17 @@ Import:
 ```bash
 dart run tool/import_test.dart content/tests/ets2024_test1            # thêm mới
 dart run tool/import_test.dart content/tests/ets2024_test1 --replace  # ghi đè
+dart run tool/import_test.dart content/tests/ets2024_test1 --dry-run  # chỉ kiểm tra, không ghi
 ```
 
 Mẹo: chụp/scan đề, nhờ AI chuyển sang đúng định dạng JSON ở trên rồi tự soát lại đáp án.
+
+## Đề mẫu có sẵn
+
+| Thư mục | Nội dung |
+|---|---|
+| `content/tests/sample_test` | Mini Test 01: 12 câu Part 5–7, không audio |
+| `content/tests/sample_full_test` | Sample Full Test 01: 24 câu **đủ Part 1–7**, có audio (giọng đọc máy) và ảnh Part 1. Dựng lại bằng `python3 tool/build_sample_full_test.py` (macOS) |
 
 ## Từ vựng: CSV
 

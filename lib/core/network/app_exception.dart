@@ -30,6 +30,14 @@ sealed class AppException implements Exception {
         return UnknownException(e.message ?? 'Lỗi không xác định.');
       case DioExceptionType.badResponse:
         final status = e.response?.statusCode ?? 0;
+        final data = e.response?.data;
+        // PostgREST không tìm thấy bảng/view → chưa chạy supabase/schema.sql.
+        if (data is Map && data['code'] == 'PGRST205') {
+          return ServerException(
+            'Database chưa được khởi tạo. Mở Supabase → SQL Editor và chạy file supabase/schema.sql.',
+            statusCode: status,
+          );
+        }
         final message = _extractMessage(e.response?.data) ?? 'Lỗi máy chủ ($status).';
         if (status == 401) return UnauthorizedException(message);
         if (status == 404) return NotFoundException(message);
