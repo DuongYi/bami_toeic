@@ -6,6 +6,7 @@ import '../core/design_system/gallery/ds_gallery_page.dart';
 import '../module/auth/presentation/controllers/auth_controller.dart';
 import '../module/auth/presentation/pages/login_page.dart';
 import '../module/auth/presentation/pages/splash_page.dart';
+import '../module/debug/presentation/pages/log_viewer_page.dart';
 import '../module/history/presentation/pages/history_page.dart';
 import '../module/listening/presentation/pages/dictation_page.dart';
 import '../module/listening/presentation/pages/listening_home_page.dart';
@@ -30,6 +31,7 @@ abstract final class Routes {
   static const designSystem = '/design-system';
   static const mistakes = '/mistakes';
   static const listening = '/listening';
+  static const debugLogs = '/debug/logs';
 
   static String testDetail(String id) => '/tests/$id';
   static String take(String testId, {required String mode, required List<int> parts}) =>
@@ -58,6 +60,8 @@ GoRouter router(Ref ref) {
     redirect: (context, state) {
       final auth = ref.read(authControllerProvider);
       final loc = state.matchedLocation;
+      // Xem log được cả khi chưa đăng nhập (vd. lỗi đăng nhập)
+      if (loc == Routes.debugLogs) return null;
       // Đang khôi phục phiên từ secure storage
       if (!auth.hasValue) return loc == Routes.splash ? null : Routes.splash;
       final loggedIn = auth.value != null;
@@ -102,6 +106,8 @@ GoRouter router(Ref ref) {
         ),
       ),
       GoRoute(path: Routes.mistakes, builder: (_, _) => const MistakesPage()),
+      // Có cả ở bản release (không có nút nổi) để vẫn lấy được log khi cần.
+      GoRoute(path: Routes.debugLogs, builder: (_, _) => const LogViewerPage()),
       GoRoute(
         path: Routes.listening,
         builder: (_, _) => const ListeningHomePage(),
