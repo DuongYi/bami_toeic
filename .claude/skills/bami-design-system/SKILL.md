@@ -107,6 +107,7 @@ Cần giá trị chưa có thì **thêm token**, không viết số trực tiế
 | `ChoiceCard(title, subtitle?, icon?, selected, onTap, multiSelect?)` | lựa chọn có mô tả (chế độ làm bài, chọn Part); thay RadioListTile/CheckboxListTile |
 | `IconBadge(icon, tone, size)` | icon trong ô màu; leading của item, card |
 | `AppListGroup(children, dividerIndent?)` | nhóm ListTile trong 1 card, có divider mảnh (inset-grouped) |
+| `AppSliverListGroup(itemCount, itemBuilder, dividerIndent?)` | như `AppListGroup` nhưng là sliver **dựng lười**; BẮT BUỘC cho danh sách dài/không giới hạn (từ vựng, lịch sử…) trong `CustomScrollView` – không `for` hàng trăm item vào `AppListGroup` |
 | `FilledButton.tonal` / `OutlinedButton` / `TextButton` | hành động phụ (đã có theme, không tự style) |
 | `AppInlineSpinner()` | spinner nhỏ trong nút / AppBar |
 | `AppCard(child, padding?, onTap?, tone?)` | khối nội dung; `tone: AppTone.info` cho thẻ nổi bật |

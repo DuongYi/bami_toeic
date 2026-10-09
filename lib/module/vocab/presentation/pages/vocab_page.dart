@@ -171,35 +171,35 @@ class _VocabBody extends ConsumerWidget {
               AppSpacing.screen,
               AppSpacing.fabClearance,
             ),
-            sliver: SliverToBoxAdapter(
-              child: AppListGroup(
-                children: [
-                  for (final v in o.shown)
-                    ListTile(
-                      title: Text.rich(
-                        TextSpan(
-                          children: [
-                            TextSpan(text: v.word),
-                            if (v.ipa != null)
-                              TextSpan(
-                                text: '  ${v.ipa}',
-                                style: context.textStyles.bodySmall?.copyWith(
-                                  color: context.colors.onSurfaceVariant,
-                                ),
-                              ),
-                          ],
-                        ),
-                      ),
-                      subtitle: Text(
-                        [if (v.pos != null) '(${v.pos})', v.meaning].join(' '),
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      trailing: _StatusBadge(item: v, now: now),
-                      onTap: () => showVocabForm(context, item: v),
+            // Dựng lười: chỉ các dòng đang hiện (danh sách có thể > 1000 từ).
+            sliver: AppSliverListGroup(
+              itemCount: o.shown.length,
+              itemBuilder: (context, i) {
+                final v = o.shown[i];
+                return ListTile(
+                  title: Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(text: v.word),
+                        if (v.ipa != null)
+                          TextSpan(
+                            text: '  ${v.ipa}',
+                            style: context.textStyles.bodySmall?.copyWith(
+                              color: context.colors.onSurfaceVariant,
+                            ),
+                          ),
+                      ],
                     ),
-                ],
-              ),
+                  ),
+                  subtitle: Text(
+                    [if (v.pos != null) '(${v.pos})', v.meaning].join(' '),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  trailing: _StatusBadge(item: v, now: now),
+                  onTap: () => showVocabForm(context, item: v),
+                );
+              },
             ),
           ),
       ],
