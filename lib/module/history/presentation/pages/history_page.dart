@@ -43,7 +43,10 @@ class HistoryPage extends ConsumerWidget {
                     ),
                   )
                 : ListView(
-                    padding: AppInsets.screen,
+                    // Chừa chỗ cho thanh tab nổi
+                    padding: AppInsets.screen.copyWith(
+                      bottom: AppSpacing.screen + AppGlassTabBar.inset(context),
+                    ),
                     children: [
                       AppPageHeader(
                         title: 'Tiến độ học tập',

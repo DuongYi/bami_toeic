@@ -16,10 +16,14 @@ class VocabPage extends ConsumerWidget {
     final overview = ref.watch(vocabOverviewProvider);
     final topic = ref.watch(vocabFilterProvider.select((f) => f.topic));
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        tooltip: 'Thêm từ',
-        onPressed: () => showVocabForm(context, defaultTopic: topic),
-        child: const Icon(Icons.add_rounded),
+      // Scaffold lồng trong tab không tự tránh thanh tab nổi → nâng nút lên trên thanh.
+      floatingActionButton: Padding(
+        padding: EdgeInsets.only(bottom: AppGlassTabBar.inset(context)),
+        child: FloatingActionButton(
+          tooltip: 'Thêm từ',
+          onPressed: () => showVocabForm(context, defaultTopic: topic),
+          child: const Icon(Icons.add_rounded),
+        ),
       ),
       body: SafeArea(
         bottom: false,
@@ -165,11 +169,11 @@ class _VocabBody extends ConsumerWidget {
           )
         else
           SliverPadding(
-            padding: const EdgeInsets.fromLTRB(
+            padding: EdgeInsets.fromLTRB(
               AppSpacing.screen,
               0,
               AppSpacing.screen,
-              AppSpacing.fabClearance,
+              AppSpacing.fabClearance + AppGlassTabBar.inset(context),
             ),
             // Dựng lười: chỉ các dòng đang hiện (danh sách có thể > 1000 từ).
             sliver: AppSliverListGroup(

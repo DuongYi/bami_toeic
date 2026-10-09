@@ -10,6 +10,7 @@ export 'components/app_bottom_bar.dart';
 export 'components/app_button.dart';
 export 'components/app_card.dart';
 export 'components/app_feedback.dart';
+export 'components/app_glass_tab_bar.dart';
 export 'components/app_hero_card.dart';
 export 'components/app_list_group.dart';
 export 'components/app_page_header.dart';

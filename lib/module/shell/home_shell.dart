@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/design_system/design_system.dart';
+
+/// Khung 3 tab. Thanh tab nổi kiểu iOS 26 (kính mờ); nội dung cuộn chạy bên dưới thanh.
 class HomeShell extends StatelessWidget {
   const HomeShell({super.key, required this.shell});
 
@@ -9,26 +12,15 @@ class HomeShell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: shell,
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: shell.currentIndex,
-        onDestinationSelected: (i) => shell.goBranch(i, initialLocation: i == shell.currentIndex),
-        destinations: const [
-          NavigationDestination(
-            icon: Icon(Icons.quiz_outlined),
-            selectedIcon: Icon(Icons.quiz),
-            label: 'Đề thi',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.style_outlined),
-            selectedIcon: Icon(Icons.style),
-            label: 'Từ vựng',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.insights_outlined),
-            selectedIcon: Icon(Icons.insights),
-            label: 'Tiến độ',
-          ),
+      bottomNavigationBar: AppGlassTabBar(
+        currentIndex: shell.currentIndex,
+        onTap: (i) => shell.goBranch(i, initialLocation: i == shell.currentIndex),
+        items: const [
+          AppTabItem(icon: Icons.quiz_outlined, selectedIcon: Icons.quiz, label: 'Đề thi'),
+          AppTabItem(icon: Icons.style_outlined, selectedIcon: Icons.style, label: 'Từ vựng'),
+          AppTabItem(icon: Icons.insights_outlined, selectedIcon: Icons.insights, label: 'Tiến độ'),
         ],
       ),
     );

@@ -99,6 +99,7 @@ Cần giá trị chưa có thì **thêm token**, không viết số trực tiế
 | Component | Khi nào dùng |
 |---|---|
 | `AppPageHeader(title, overline?, trailing?)` | tiêu đề lớn cho **màn gốc của tab** (không dùng AppBar); màn con dùng AppBar |
+| `AppGlassTabBar(items, currentIndex, onTap)` | thanh tab nổi kiểu iOS 26 (kính mờ, như App Store) cho `HomeShell` với `Scaffold(extendBody: true)`. Trang gốc của tab PHẢI chừa `AppGlassTabBar.inset(context)` ở cuối danh sách; FAB của Scaffold lồng cần `Padding(bottom: inset)` |
 | `AppBottomBar(child)` | thanh đáy cố định chứa CTA/điều hướng → `Scaffold.bottomNavigationBar` (tự co chiều cao) |
 | `AppPrimaryButton(label, onPressed, icon?, loading?, expand=true)` | CTA chính, **tối đa 1/màn**, đặt trong `AppBottomBar` nếu là hành động kết thúc màn |
 | `AppHeroCard(child)` | thông tin quan trọng nhất của màn (điểm, số từ cần ôn); **tối đa 1/màn**; chữ dùng `AppHeroCard.foreground(context)` |

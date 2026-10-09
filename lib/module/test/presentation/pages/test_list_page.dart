@@ -43,7 +43,10 @@ class TestListPage extends ConsumerWidget {
             value: tests,
             onRetry: () => ref.invalidate(testListProvider),
             data: (list) => ListView(
-              padding: AppInsets.screen,
+              // Chừa chỗ cho thanh tab nổi (nội dung cuộn chạy dưới thanh kính)
+              padding: AppInsets.screen.copyWith(
+                bottom: AppSpacing.screen + AppGlassTabBar.inset(context),
+              ),
               children: [
                 const _Greeting(),
                 _OverviewHero(attempts: attempts),
