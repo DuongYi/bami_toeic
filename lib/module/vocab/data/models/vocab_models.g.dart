@@ -6,25 +6,27 @@ part of 'vocab_models.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Map<String, dynamic> _$VocabInputToJson(VocabInput instance) => <String, dynamic>{
-  'word': instance.word,
-  'ipa': instance.ipa,
-  'pos': instance.pos,
-  'meaning': instance.meaning,
-  'example': instance.example,
-  'example_meaning': instance.exampleMeaning,
-  'topic': instance.topic,
-};
+Map<String, dynamic> _$VocabInputToJson(VocabInput instance) =>
+    <String, dynamic>{
+      'word': instance.word,
+      'ipa': instance.ipa,
+      'pos': instance.pos,
+      'meaning': instance.meaning,
+      'example': instance.example,
+      'example_meaning': instance.exampleMeaning,
+      'topic': instance.topic,
+    };
 
-Map<String, dynamic> _$VocabReviewUpsertToJson(VocabReviewUpsert instance) => <String, dynamic>{
-  'user_id': instance.userId,
-  'vocab_id': instance.vocabId,
-  'ease': instance.ease,
-  'interval_days': instance.intervalDays,
-  'repetitions': instance.repetitions,
-  'due_at': instance.dueAt.toIso8601String(),
-  'last_reviewed_at': instance.lastReviewedAt.toIso8601String(),
-};
+Map<String, dynamic> _$VocabReviewUpsertToJson(VocabReviewUpsert instance) =>
+    <String, dynamic>{
+      'user_id': instance.userId,
+      'vocab_id': instance.vocabId,
+      'ease': instance.ease,
+      'interval_days': instance.intervalDays,
+      'repetitions': instance.repetitions,
+      'due_at': instance.dueAt.toIso8601String(),
+      'last_reviewed_at': instance.lastReviewedAt.toIso8601String(),
+    };
 
 _VocabReview _$VocabReviewFromJson(Map<String, dynamic> json) => _VocabReview(
   ease: (json['ease'] as num).toDouble(),
@@ -33,12 +35,13 @@ _VocabReview _$VocabReviewFromJson(Map<String, dynamic> json) => _VocabReview(
   dueAt: DateTime.parse(json['due_at'] as String),
 );
 
-Map<String, dynamic> _$VocabReviewToJson(_VocabReview instance) => <String, dynamic>{
-  'ease': instance.ease,
-  'interval_days': instance.intervalDays,
-  'repetitions': instance.repetitions,
-  'due_at': instance.dueAt.toIso8601String(),
-};
+Map<String, dynamic> _$VocabReviewToJson(_VocabReview instance) =>
+    <String, dynamic>{
+      'ease': instance.ease,
+      'interval_days': instance.intervalDays,
+      'repetitions': instance.repetitions,
+      'due_at': instance.dueAt.toIso8601String(),
+    };
 
 _VocabItem _$VocabItemFromJson(Map<String, dynamic> json) => _VocabItem(
   id: json['id'] as String,
@@ -58,15 +61,16 @@ _VocabItem _$VocabItemFromJson(Map<String, dynamic> json) => _VocabItem(
       const <VocabReview>[],
 );
 
-Map<String, dynamic> _$VocabItemToJson(_VocabItem instance) => <String, dynamic>{
-  'id': instance.id,
-  'word': instance.word,
-  'ipa': instance.ipa,
-  'pos': instance.pos,
-  'meaning': instance.meaning,
-  'example': instance.example,
-  'example_meaning': instance.exampleMeaning,
-  'topic': instance.topic,
-  'audio_url': instance.audioUrl,
-  'user_id': instance.userId,
-};
+Map<String, dynamic> _$VocabItemToJson(_VocabItem instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'word': instance.word,
+      'ipa': instance.ipa,
+      'pos': instance.pos,
+      'meaning': instance.meaning,
+      'example': instance.example,
+      'example_meaning': instance.exampleMeaning,
+      'topic': instance.topic,
+      'audio_url': instance.audioUrl,
+      'user_id': instance.userId,
+    };

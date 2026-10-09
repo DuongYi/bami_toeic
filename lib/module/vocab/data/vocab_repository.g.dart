@@ -12,7 +12,8 @@ part of 'vocab_repository.dart';
 @ProviderFor(vocabApi)
 final vocabApiProvider = VocabApiProvider._();
 
-final class VocabApiProvider extends $FunctionalProvider<VocabApi, VocabApi, VocabApi>
+final class VocabApiProvider
+    extends $FunctionalProvider<VocabApi, VocabApi, VocabApi>
     with $Provider<VocabApi> {
   VocabApiProvider._()
     : super(
@@ -30,7 +31,8 @@ final class VocabApiProvider extends $FunctionalProvider<VocabApi, VocabApi, Voc
 
   @$internal
   @override
-  $ProviderElement<VocabApi> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+  $ProviderElement<VocabApi> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
 
   @override
   VocabApi create(Ref ref) {
@@ -39,7 +41,10 @@ final class VocabApiProvider extends $FunctionalProvider<VocabApi, VocabApi, Voc
 
   /// {@macro riverpod.override_with_value}
   Override overrideWithValue(VocabApi value) {
-    return $ProviderOverride(origin: this, providerOverride: $SyncValueProvider<VocabApi>(value));
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<VocabApi>(value),
+    );
   }
 }
 
@@ -49,7 +54,8 @@ String _$vocabApiHash() => r'9b6b40bb987c8912230123cfba279c2420e48ec0';
 final vocabRepositoryProvider = VocabRepositoryProvider._();
 
 final class VocabRepositoryProvider
-    extends $FunctionalProvider<VocabRepository, VocabRepository, VocabRepository>
+    extends
+        $FunctionalProvider<VocabRepository, VocabRepository, VocabRepository>
     with $Provider<VocabRepository> {
   VocabRepositoryProvider._()
     : super(

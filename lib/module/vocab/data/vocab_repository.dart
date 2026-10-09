@@ -24,7 +24,13 @@ class VocabRepository {
   final MediaRepository _media;
 
   Future<List<VocabItem>> fetchAll() async {
-    final all = await _api.getVocab();
+    // Lấy hết các trang (mỗi trang ≤ 1000 dòng, giới hạn Max Rows của Supabase).
+    final all = <VocabItem>[];
+    while (true) {
+      final page = await _api.getVocab(offset: all.length);
+      all.addAll(page);
+      if (page.length < VocabApi.pageSize) break;
+    }
     // Từ riêng trùng (word, topic) với bộ chung → hiện bản riêng, ẩn bản chung.
     final own = {
       for (final v in all)

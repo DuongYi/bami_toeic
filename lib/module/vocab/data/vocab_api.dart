@@ -10,11 +10,16 @@ part 'vocab_api.g.dart';
 abstract class VocabApi {
   factory VocabApi(Dio dio) = _VocabApi;
 
+  /// Supabase trả tối đa 1000 dòng / request (Max Rows) → lấy theo trang bằng offset/limit.
   @GET('/rest/v1/vocab')
   Future<List<VocabItem>> getVocab({
     @Query('select') String select = '*,vocab_reviews(ease,interval_days,repetitions,due_at)',
-    @Query('order') String order = 'word',
+    @Query('order') String order = 'word,id',
+    @Query('offset') int offset = 0,
+    @Query('limit') int limit = VocabApi.pageSize,
   });
+
+  static const pageSize = 1000;
 
   @POST('/rest/v1/vocab')
   @Headers({'Prefer': Pg.returnMinimal})

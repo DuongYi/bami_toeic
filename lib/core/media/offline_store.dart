@@ -5,6 +5,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../module/test/data/in_progress_store.dart';
+import '../logging/app_log.dart';
 
 part 'offline_store.g.dart';
 
@@ -50,7 +51,15 @@ class OfflineStore {
 
   Future<Map<String, OfflineEntry>> index() async {
     if (_index != null) return _index!;
-    final raw = (await _ref.read(sharedPreferencesProvider.future)).getString(_indexKey);
+    String? raw;
+    try {
+      raw = (await _ref.read(sharedPreferencesProvider.future)).getString(_indexKey);
+    } catch (e, s) {
+      // Không đọc được bộ nhớ máy (vd. plugin native chưa cài) → coi như chưa tải đề nào,
+      // để không kéo theo lỗi ở màn đề / từ vựng.
+      AppLog.e('Không đọc được danh sách đề offline', error: e, stackTrace: s);
+      return {};
+    }
     try {
       _index = raw == null
           ? {}

@@ -23,12 +23,16 @@ class _VocabApi implements VocabApi {
   @override
   Future<List<VocabItem>> getVocab({
     String select = '*,vocab_reviews(ease,interval_days,repetitions,due_at)',
-    String order = 'word',
+    String order = 'word,id',
+    int offset = 0,
+    int limit = VocabApi.pageSize,
   }) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'select': select,
       r'order': order,
+      r'offset': offset,
+      r'limit': limit,
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
