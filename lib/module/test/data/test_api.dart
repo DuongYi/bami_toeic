@@ -64,4 +64,21 @@ abstract class TestApi {
 
   @GET('/rest/v1/part_stats')
   Future<List<PartStat>> getPartStats({@Query('order') String order = 'part'});
+
+  /// Lần trả lời gần nhất của mỗi câu; lọc `is_correct=eq.false` để lấy sổ câu sai.
+  @GET('/rest/v1/latest_answers')
+  Future<List<LatestAnswer>> getLatestAnswers({
+    @Query('is_correct') String? isCorrect,
+    @Query('order') String order = 'finished_at.desc',
+  });
+
+  /// Nhóm câu theo danh sách id: `id=in.(a,b,c)`.
+  @GET('/rest/v1/question_groups')
+  Future<List<QuestionGroup>> getGroupsByIds({
+    @Query('id') required String ids,
+    @Query('select') String select = '*,questions(*)',
+  });
+
+  @GET('/rest/v1/tag_stats')
+  Future<List<TagStat>> getTagStats();
 }

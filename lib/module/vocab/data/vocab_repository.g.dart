@@ -84,4 +84,4 @@ final class VocabRepositoryProvider
   }
 }
 
-String _$vocabRepositoryHash() => r'b7c370ec95b2ad2137fd24a5deba1058daf8094f';
+String _$vocabRepositoryHash() => r'0d4a4350b0383516db56985d95a396e2d50d2f55';

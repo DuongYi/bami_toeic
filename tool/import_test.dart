@@ -112,6 +112,7 @@ Future<void> main(List<String> args) async {
           'options': q['options'] ?? [],
           'answer': (q['answer'] as String).toUpperCase(),
           'explanation': q['explanation'],
+          if (q['tags'] != null) 'tags': q['tags'],
         });
       }
     }

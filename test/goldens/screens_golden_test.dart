@@ -11,6 +11,7 @@ import 'package:bami_toeic/routes/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'fake_data.dart';
 import 'golden_utils.dart';
@@ -65,6 +66,14 @@ Future<void> _teardown(WidgetTester tester) async {
 
 void main() {
   setUpAll(loadAppFonts);
+  setUp(() => SharedPreferences.setMockInitialValues({}));
+
+  testWidgets('Sổ câu sai', (tester) async {
+    final c = await _boot(tester);
+    await _go(tester, c, Routes.mistakes, push: true);
+    await _shot(tester, '09_mistakes');
+    await _teardown(tester);
+  });
 
   testWidgets('Danh sách đề', (tester) async {
     await _boot(tester);

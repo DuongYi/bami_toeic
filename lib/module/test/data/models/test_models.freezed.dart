@@ -300,7 +300,7 @@ as int,
 /// @nodoc
 mixin _$Question {
 
- String get id; int get part; int get number; String? get content; List<String> get options; String get answer; String? get explanation;
+ String get id; int get part; int get number; String? get content; List<String> get options; String get answer; String? get explanation; List<String> get tags;
 /// Create a copy of Question
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -314,20 +314,20 @@ $QuestionCopyWith<Question> get copyWith => _$QuestionCopyWithImpl<Question>(thi
 @override
 bool operator ==(Object other) {
   final _this = this as Question;
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Question&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.part, _this.part) || other.part == _this.part)&&(identical(other.number, _this.number) || other.number == _this.number)&&(identical(other.content, _this.content) || other.content == _this.content)&&const DeepCollectionEquality().equals(other.options, _this.options)&&(identical(other.answer, _this.answer) || other.answer == _this.answer)&&(identical(other.explanation, _this.explanation) || other.explanation == _this.explanation));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Question&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.part, _this.part) || other.part == _this.part)&&(identical(other.number, _this.number) || other.number == _this.number)&&(identical(other.content, _this.content) || other.content == _this.content)&&const DeepCollectionEquality().equals(other.options, _this.options)&&(identical(other.answer, _this.answer) || other.answer == _this.answer)&&(identical(other.explanation, _this.explanation) || other.explanation == _this.explanation)&&const DeepCollectionEquality().equals(other.tags, _this.tags));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
   final _this = this as Question;
-  return Object.hash(runtimeType,_this.id,_this.part,_this.number,_this.content,const DeepCollectionEquality().hash(_this.options),_this.answer,_this.explanation);
+  return Object.hash(runtimeType,_this.id,_this.part,_this.number,_this.content,const DeepCollectionEquality().hash(_this.options),_this.answer,_this.explanation,const DeepCollectionEquality().hash(_this.tags));
 }
 
 @override
 String toString() {
   final _this = this as Question;
-  return 'Question(id: ${_this.id}, part: ${_this.part}, number: ${_this.number}, content: ${_this.content}, options: ${_this.options}, answer: ${_this.answer}, explanation: ${_this.explanation})';
+  return 'Question(id: ${_this.id}, part: ${_this.part}, number: ${_this.number}, content: ${_this.content}, options: ${_this.options}, answer: ${_this.answer}, explanation: ${_this.explanation}, tags: ${_this.tags})';
 }
 
 
@@ -338,7 +338,7 @@ abstract mixin class $QuestionCopyWith<$Res>  {
   factory $QuestionCopyWith(Question value, $Res Function(Question) _then) = _$QuestionCopyWithImpl;
 @useResult
 $Res call({
- String id, int part, int number, String? content, List<String> options, String answer, String? explanation
+ String id, int part, int number, String? content, List<String> options, String answer, String? explanation, List<String> tags
 });
 
 
@@ -355,7 +355,7 @@ class _$QuestionCopyWithImpl<$Res>
 
 /// Create a copy of Question
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? part = null,Object? number = null,Object? content = freezed,Object? options = null,Object? answer = null,Object? explanation = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? part = null,Object? number = null,Object? content = freezed,Object? options = null,Object? answer = null,Object? explanation = freezed,Object? tags = null,}) {
   return _then(Question(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,part: null == part ? _self.part : part // ignore: cast_nullable_to_non_nullable
@@ -364,7 +364,8 @@ as int,content: freezed == content ? _self.content : content // ignore: cast_nul
 as String?,options: null == options ? _self.options : options // ignore: cast_nullable_to_non_nullable
 as List<String>,answer: null == answer ? _self.answer : answer // ignore: cast_nullable_to_non_nullable
 as String,explanation: freezed == explanation ? _self.explanation : explanation // ignore: cast_nullable_to_non_nullable
-as String?,
+as String?,tags: null == tags ? _self.tags : tags // ignore: cast_nullable_to_non_nullable
+as List<String>,
   ));
 }
 
@@ -449,10 +450,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  int part,  int number,  String? content,  List<String> options,  String answer,  String? explanation)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  int part,  int number,  String? content,  List<String> options,  String answer,  String? explanation,  List<String> tags)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Question() when $default != null:
-return $default(_that.id,_that.part,_that.number,_that.content,_that.options,_that.answer,_that.explanation);case _:
+return $default(_that.id,_that.part,_that.number,_that.content,_that.options,_that.answer,_that.explanation,_that.tags);case _:
   return orElse();
 
 }
@@ -470,10 +471,10 @@ return $default(_that.id,_that.part,_that.number,_that.content,_that.options,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  int part,  int number,  String? content,  List<String> options,  String answer,  String? explanation)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  int part,  int number,  String? content,  List<String> options,  String answer,  String? explanation,  List<String> tags)  $default,) {final _that = this;
 switch (_that) {
 case _Question():
-return $default(_that.id,_that.part,_that.number,_that.content,_that.options,_that.answer,_that.explanation);case _:
+return $default(_that.id,_that.part,_that.number,_that.content,_that.options,_that.answer,_that.explanation,_that.tags);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -490,10 +491,10 @@ return $default(_that.id,_that.part,_that.number,_that.content,_that.options,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  int part,  int number,  String? content,  List<String> options,  String answer,  String? explanation)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  int part,  int number,  String? content,  List<String> options,  String answer,  String? explanation,  List<String> tags)?  $default,) {final _that = this;
 switch (_that) {
 case _Question() when $default != null:
-return $default(_that.id,_that.part,_that.number,_that.content,_that.options,_that.answer,_that.explanation);case _:
+return $default(_that.id,_that.part,_that.number,_that.content,_that.options,_that.answer,_that.explanation,_that.tags);case _:
   return null;
 
 }
@@ -505,7 +506,7 @@ return $default(_that.id,_that.part,_that.number,_that.content,_that.options,_th
 @JsonSerializable()
 
 class _Question extends Question {
-  const _Question({required this.id, required this.part, required this.number, this.content,  List<String> options = const <String>[], required this.answer, this.explanation}): _options = options,super._();
+  const _Question({required this.id, required this.part, required this.number, this.content,  List<String> options = const <String>[], required this.answer, this.explanation,  List<String> tags = const <String>[]}): _options = options,_tags = tags,super._();
   factory _Question.fromJson(Map<String, dynamic> json) => _$QuestionFromJson(json);
 
 @override final  String id;
@@ -521,6 +522,13 @@ class _Question extends Question {
 
 @override final  String answer;
 @override final  String? explanation;
+ final  List<String> _tags;
+@override@JsonKey() List<String> get tags {
+  if (_tags is EqualUnmodifiableListView) return _tags;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_tags);
+}
+
 
 /// Create a copy of Question
 /// with the given fields replaced by the non-null parameter values.
@@ -535,18 +543,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Question&&(identical(other.id, id) || other.id == id)&&(identical(other.part, part) || other.part == part)&&(identical(other.number, number) || other.number == number)&&(identical(other.content, content) || other.content == content)&&const DeepCollectionEquality().equals(other.options, _options)&&(identical(other.answer, answer) || other.answer == answer)&&(identical(other.explanation, explanation) || other.explanation == explanation));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Question&&(identical(other.id, id) || other.id == id)&&(identical(other.part, part) || other.part == part)&&(identical(other.number, number) || other.number == number)&&(identical(other.content, content) || other.content == content)&&const DeepCollectionEquality().equals(other.options, _options)&&(identical(other.answer, answer) || other.answer == answer)&&(identical(other.explanation, explanation) || other.explanation == explanation)&&const DeepCollectionEquality().equals(other.tags, _tags));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
-    return Object.hash(runtimeType,id,part,number,content,const DeepCollectionEquality().hash(_options),answer,explanation);
+    return Object.hash(runtimeType,id,part,number,content,const DeepCollectionEquality().hash(_options),answer,explanation,const DeepCollectionEquality().hash(_tags));
 }
 
 @override
 String toString() {
-    return 'Question(id: $id, part: $part, number: $number, content: $content, options: $options, answer: $answer, explanation: $explanation)';
+    return 'Question(id: $id, part: $part, number: $number, content: $content, options: $options, answer: $answer, explanation: $explanation, tags: $tags)';
 }
 
 
@@ -557,7 +565,7 @@ abstract mixin class _$QuestionCopyWith<$Res> implements $QuestionCopyWith<$Res>
   factory _$QuestionCopyWith(_Question value, $Res Function(_Question) _then) = __$QuestionCopyWithImpl;
 @override @useResult
 $Res call({
- String id, int part, int number, String? content, List<String> options, String answer, String? explanation
+ String id, int part, int number, String? content, List<String> options, String answer, String? explanation, List<String> tags
 });
 
 
@@ -574,7 +582,7 @@ class __$QuestionCopyWithImpl<$Res>
 
 /// Create a copy of Question
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? part = null,Object? number = null,Object? content = freezed,Object? options = null,Object? answer = null,Object? explanation = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? part = null,Object? number = null,Object? content = freezed,Object? options = null,Object? answer = null,Object? explanation = freezed,Object? tags = null,}) {
   return _then(_Question(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,part: null == part ? _self.part : part // ignore: cast_nullable_to_non_nullable
@@ -583,7 +591,8 @@ as int,content: freezed == content ? _self.content : content // ignore: cast_nul
 as String?,options: null == options ? _self._options : options // ignore: cast_nullable_to_non_nullable
 as List<String>,answer: null == answer ? _self.answer : answer // ignore: cast_nullable_to_non_nullable
 as String,explanation: freezed == explanation ? _self.explanation : explanation // ignore: cast_nullable_to_non_nullable
-as String?,
+as String?,tags: null == tags ? _self._tags : tags // ignore: cast_nullable_to_non_nullable
+as List<String>,
   ));
 }
 
@@ -594,7 +603,7 @@ as String?,
 /// @nodoc
 mixin _$QuestionGroup {
 
- String get id; int get part; int get orderNo; String? get passage; String? get imageUrl; String? get audioUrl; String? get transcript; List<Question> get questions;
+ String get id; String? get testId; int get part; int get orderNo; String? get passage; String? get imageUrl; String? get audioUrl; String? get transcript; List<Question> get questions;
 /// Create a copy of QuestionGroup
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -608,20 +617,20 @@ $QuestionGroupCopyWith<QuestionGroup> get copyWith => _$QuestionGroupCopyWithImp
 @override
 bool operator ==(Object other) {
   final _this = this as QuestionGroup;
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is QuestionGroup&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.part, _this.part) || other.part == _this.part)&&(identical(other.orderNo, _this.orderNo) || other.orderNo == _this.orderNo)&&(identical(other.passage, _this.passage) || other.passage == _this.passage)&&(identical(other.imageUrl, _this.imageUrl) || other.imageUrl == _this.imageUrl)&&(identical(other.audioUrl, _this.audioUrl) || other.audioUrl == _this.audioUrl)&&(identical(other.transcript, _this.transcript) || other.transcript == _this.transcript)&&const DeepCollectionEquality().equals(other.questions, _this.questions));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is QuestionGroup&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.testId, _this.testId) || other.testId == _this.testId)&&(identical(other.part, _this.part) || other.part == _this.part)&&(identical(other.orderNo, _this.orderNo) || other.orderNo == _this.orderNo)&&(identical(other.passage, _this.passage) || other.passage == _this.passage)&&(identical(other.imageUrl, _this.imageUrl) || other.imageUrl == _this.imageUrl)&&(identical(other.audioUrl, _this.audioUrl) || other.audioUrl == _this.audioUrl)&&(identical(other.transcript, _this.transcript) || other.transcript == _this.transcript)&&const DeepCollectionEquality().equals(other.questions, _this.questions));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
   final _this = this as QuestionGroup;
-  return Object.hash(runtimeType,_this.id,_this.part,_this.orderNo,_this.passage,_this.imageUrl,_this.audioUrl,_this.transcript,const DeepCollectionEquality().hash(_this.questions));
+  return Object.hash(runtimeType,_this.id,_this.testId,_this.part,_this.orderNo,_this.passage,_this.imageUrl,_this.audioUrl,_this.transcript,const DeepCollectionEquality().hash(_this.questions));
 }
 
 @override
 String toString() {
   final _this = this as QuestionGroup;
-  return 'QuestionGroup(id: ${_this.id}, part: ${_this.part}, orderNo: ${_this.orderNo}, passage: ${_this.passage}, imageUrl: ${_this.imageUrl}, audioUrl: ${_this.audioUrl}, transcript: ${_this.transcript}, questions: ${_this.questions})';
+  return 'QuestionGroup(id: ${_this.id}, testId: ${_this.testId}, part: ${_this.part}, orderNo: ${_this.orderNo}, passage: ${_this.passage}, imageUrl: ${_this.imageUrl}, audioUrl: ${_this.audioUrl}, transcript: ${_this.transcript}, questions: ${_this.questions})';
 }
 
 
@@ -632,7 +641,7 @@ abstract mixin class $QuestionGroupCopyWith<$Res>  {
   factory $QuestionGroupCopyWith(QuestionGroup value, $Res Function(QuestionGroup) _then) = _$QuestionGroupCopyWithImpl;
 @useResult
 $Res call({
- String id, int part, int orderNo, String? passage, String? imageUrl, String? audioUrl, String? transcript, List<Question> questions
+ String id, String? testId, int part, int orderNo, String? passage, String? imageUrl, String? audioUrl, String? transcript, List<Question> questions
 });
 
 
@@ -649,10 +658,11 @@ class _$QuestionGroupCopyWithImpl<$Res>
 
 /// Create a copy of QuestionGroup
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? part = null,Object? orderNo = null,Object? passage = freezed,Object? imageUrl = freezed,Object? audioUrl = freezed,Object? transcript = freezed,Object? questions = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? testId = freezed,Object? part = null,Object? orderNo = null,Object? passage = freezed,Object? imageUrl = freezed,Object? audioUrl = freezed,Object? transcript = freezed,Object? questions = null,}) {
   return _then(QuestionGroup(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,part: null == part ? _self.part : part // ignore: cast_nullable_to_non_nullable
+as String,testId: freezed == testId ? _self.testId : testId // ignore: cast_nullable_to_non_nullable
+as String?,part: null == part ? _self.part : part // ignore: cast_nullable_to_non_nullable
 as int,orderNo: null == orderNo ? _self.orderNo : orderNo // ignore: cast_nullable_to_non_nullable
 as int,passage: freezed == passage ? _self.passage : passage // ignore: cast_nullable_to_non_nullable
 as String?,imageUrl: freezed == imageUrl ? _self.imageUrl : imageUrl // ignore: cast_nullable_to_non_nullable
@@ -744,10 +754,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  int part,  int orderNo,  String? passage,  String? imageUrl,  String? audioUrl,  String? transcript,  List<Question> questions)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String? testId,  int part,  int orderNo,  String? passage,  String? imageUrl,  String? audioUrl,  String? transcript,  List<Question> questions)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _QuestionGroup() when $default != null:
-return $default(_that.id,_that.part,_that.orderNo,_that.passage,_that.imageUrl,_that.audioUrl,_that.transcript,_that.questions);case _:
+return $default(_that.id,_that.testId,_that.part,_that.orderNo,_that.passage,_that.imageUrl,_that.audioUrl,_that.transcript,_that.questions);case _:
   return orElse();
 
 }
@@ -765,10 +775,10 @@ return $default(_that.id,_that.part,_that.orderNo,_that.passage,_that.imageUrl,_
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  int part,  int orderNo,  String? passage,  String? imageUrl,  String? audioUrl,  String? transcript,  List<Question> questions)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String? testId,  int part,  int orderNo,  String? passage,  String? imageUrl,  String? audioUrl,  String? transcript,  List<Question> questions)  $default,) {final _that = this;
 switch (_that) {
 case _QuestionGroup():
-return $default(_that.id,_that.part,_that.orderNo,_that.passage,_that.imageUrl,_that.audioUrl,_that.transcript,_that.questions);case _:
+return $default(_that.id,_that.testId,_that.part,_that.orderNo,_that.passage,_that.imageUrl,_that.audioUrl,_that.transcript,_that.questions);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -785,10 +795,10 @@ return $default(_that.id,_that.part,_that.orderNo,_that.passage,_that.imageUrl,_
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  int part,  int orderNo,  String? passage,  String? imageUrl,  String? audioUrl,  String? transcript,  List<Question> questions)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String? testId,  int part,  int orderNo,  String? passage,  String? imageUrl,  String? audioUrl,  String? transcript,  List<Question> questions)?  $default,) {final _that = this;
 switch (_that) {
 case _QuestionGroup() when $default != null:
-return $default(_that.id,_that.part,_that.orderNo,_that.passage,_that.imageUrl,_that.audioUrl,_that.transcript,_that.questions);case _:
+return $default(_that.id,_that.testId,_that.part,_that.orderNo,_that.passage,_that.imageUrl,_that.audioUrl,_that.transcript,_that.questions);case _:
   return null;
 
 }
@@ -800,10 +810,11 @@ return $default(_that.id,_that.part,_that.orderNo,_that.passage,_that.imageUrl,_
 @JsonSerializable()
 
 class _QuestionGroup implements QuestionGroup {
-  const _QuestionGroup({required this.id, required this.part, required this.orderNo, this.passage, this.imageUrl, this.audioUrl, this.transcript,  List<Question> questions = const <Question>[]}): _questions = questions;
+  const _QuestionGroup({required this.id, this.testId, required this.part, required this.orderNo, this.passage, this.imageUrl, this.audioUrl, this.transcript,  List<Question> questions = const <Question>[]}): _questions = questions;
   factory _QuestionGroup.fromJson(Map<String, dynamic> json) => _$QuestionGroupFromJson(json);
 
 @override final  String id;
+@override final  String? testId;
 @override final  int part;
 @override final  int orderNo;
 @override final  String? passage;
@@ -831,18 +842,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _QuestionGroup&&(identical(other.id, id) || other.id == id)&&(identical(other.part, part) || other.part == part)&&(identical(other.orderNo, orderNo) || other.orderNo == orderNo)&&(identical(other.passage, passage) || other.passage == passage)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.audioUrl, audioUrl) || other.audioUrl == audioUrl)&&(identical(other.transcript, transcript) || other.transcript == transcript)&&const DeepCollectionEquality().equals(other.questions, _questions));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _QuestionGroup&&(identical(other.id, id) || other.id == id)&&(identical(other.testId, testId) || other.testId == testId)&&(identical(other.part, part) || other.part == part)&&(identical(other.orderNo, orderNo) || other.orderNo == orderNo)&&(identical(other.passage, passage) || other.passage == passage)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.audioUrl, audioUrl) || other.audioUrl == audioUrl)&&(identical(other.transcript, transcript) || other.transcript == transcript)&&const DeepCollectionEquality().equals(other.questions, _questions));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
-    return Object.hash(runtimeType,id,part,orderNo,passage,imageUrl,audioUrl,transcript,const DeepCollectionEquality().hash(_questions));
+    return Object.hash(runtimeType,id,testId,part,orderNo,passage,imageUrl,audioUrl,transcript,const DeepCollectionEquality().hash(_questions));
 }
 
 @override
 String toString() {
-    return 'QuestionGroup(id: $id, part: $part, orderNo: $orderNo, passage: $passage, imageUrl: $imageUrl, audioUrl: $audioUrl, transcript: $transcript, questions: $questions)';
+    return 'QuestionGroup(id: $id, testId: $testId, part: $part, orderNo: $orderNo, passage: $passage, imageUrl: $imageUrl, audioUrl: $audioUrl, transcript: $transcript, questions: $questions)';
 }
 
 
@@ -853,7 +864,7 @@ abstract mixin class _$QuestionGroupCopyWith<$Res> implements $QuestionGroupCopy
   factory _$QuestionGroupCopyWith(_QuestionGroup value, $Res Function(_QuestionGroup) _then) = __$QuestionGroupCopyWithImpl;
 @override @useResult
 $Res call({
- String id, int part, int orderNo, String? passage, String? imageUrl, String? audioUrl, String? transcript, List<Question> questions
+ String id, String? testId, int part, int orderNo, String? passage, String? imageUrl, String? audioUrl, String? transcript, List<Question> questions
 });
 
 
@@ -870,10 +881,11 @@ class __$QuestionGroupCopyWithImpl<$Res>
 
 /// Create a copy of QuestionGroup
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? part = null,Object? orderNo = null,Object? passage = freezed,Object? imageUrl = freezed,Object? audioUrl = freezed,Object? transcript = freezed,Object? questions = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? testId = freezed,Object? part = null,Object? orderNo = null,Object? passage = freezed,Object? imageUrl = freezed,Object? audioUrl = freezed,Object? transcript = freezed,Object? questions = null,}) {
   return _then(_QuestionGroup(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,part: null == part ? _self.part : part // ignore: cast_nullable_to_non_nullable
+as String,testId: freezed == testId ? _self.testId : testId // ignore: cast_nullable_to_non_nullable
+as String?,part: null == part ? _self.part : part // ignore: cast_nullable_to_non_nullable
 as int,orderNo: null == orderNo ? _self.orderNo : orderNo // ignore: cast_nullable_to_non_nullable
 as int,passage: freezed == passage ? _self.passage : passage // ignore: cast_nullable_to_non_nullable
 as String?,imageUrl: freezed == imageUrl ? _self.imageUrl : imageUrl // ignore: cast_nullable_to_non_nullable
@@ -892,7 +904,8 @@ as List<Question>,
 mixin _$Attempt {
 
  String get id; String get testId;/// Từ `tests(title)` → `{"title": "..."}`
-@JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false) String get testTitle; String get mode; List<int> get parts; DateTime get startedAt; DateTime get finishedAt; int get totalQuestions; int get listeningCorrect; int get readingCorrect;
+@JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false) String get testTitle; String get mode; List<int> get parts; DateTime get startedAt; DateTime get finishedAt; int get totalQuestions; int get listeningCorrect; int get readingCorrect;/// 'test' = làm đề, 'mistakes' = luyện lại sổ câu sai
+ String get source;
 /// Create a copy of Attempt
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -906,20 +919,20 @@ $AttemptCopyWith<Attempt> get copyWith => _$AttemptCopyWithImpl<Attempt>(this as
 @override
 bool operator ==(Object other) {
   final _this = this as Attempt;
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Attempt&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.testId, _this.testId) || other.testId == _this.testId)&&(identical(other.testTitle, _this.testTitle) || other.testTitle == _this.testTitle)&&(identical(other.mode, _this.mode) || other.mode == _this.mode)&&const DeepCollectionEquality().equals(other.parts, _this.parts)&&(identical(other.startedAt, _this.startedAt) || other.startedAt == _this.startedAt)&&(identical(other.finishedAt, _this.finishedAt) || other.finishedAt == _this.finishedAt)&&(identical(other.totalQuestions, _this.totalQuestions) || other.totalQuestions == _this.totalQuestions)&&(identical(other.listeningCorrect, _this.listeningCorrect) || other.listeningCorrect == _this.listeningCorrect)&&(identical(other.readingCorrect, _this.readingCorrect) || other.readingCorrect == _this.readingCorrect));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Attempt&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.testId, _this.testId) || other.testId == _this.testId)&&(identical(other.testTitle, _this.testTitle) || other.testTitle == _this.testTitle)&&(identical(other.mode, _this.mode) || other.mode == _this.mode)&&const DeepCollectionEquality().equals(other.parts, _this.parts)&&(identical(other.startedAt, _this.startedAt) || other.startedAt == _this.startedAt)&&(identical(other.finishedAt, _this.finishedAt) || other.finishedAt == _this.finishedAt)&&(identical(other.totalQuestions, _this.totalQuestions) || other.totalQuestions == _this.totalQuestions)&&(identical(other.listeningCorrect, _this.listeningCorrect) || other.listeningCorrect == _this.listeningCorrect)&&(identical(other.readingCorrect, _this.readingCorrect) || other.readingCorrect == _this.readingCorrect)&&(identical(other.source, _this.source) || other.source == _this.source));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
   final _this = this as Attempt;
-  return Object.hash(runtimeType,_this.id,_this.testId,_this.testTitle,_this.mode,const DeepCollectionEquality().hash(_this.parts),_this.startedAt,_this.finishedAt,_this.totalQuestions,_this.listeningCorrect,_this.readingCorrect);
+  return Object.hash(runtimeType,_this.id,_this.testId,_this.testTitle,_this.mode,const DeepCollectionEquality().hash(_this.parts),_this.startedAt,_this.finishedAt,_this.totalQuestions,_this.listeningCorrect,_this.readingCorrect,_this.source);
 }
 
 @override
 String toString() {
   final _this = this as Attempt;
-  return 'Attempt(id: ${_this.id}, testId: ${_this.testId}, testTitle: ${_this.testTitle}, mode: ${_this.mode}, parts: ${_this.parts}, startedAt: ${_this.startedAt}, finishedAt: ${_this.finishedAt}, totalQuestions: ${_this.totalQuestions}, listeningCorrect: ${_this.listeningCorrect}, readingCorrect: ${_this.readingCorrect})';
+  return 'Attempt(id: ${_this.id}, testId: ${_this.testId}, testTitle: ${_this.testTitle}, mode: ${_this.mode}, parts: ${_this.parts}, startedAt: ${_this.startedAt}, finishedAt: ${_this.finishedAt}, totalQuestions: ${_this.totalQuestions}, listeningCorrect: ${_this.listeningCorrect}, readingCorrect: ${_this.readingCorrect}, source: ${_this.source})';
 }
 
 
@@ -930,7 +943,7 @@ abstract mixin class $AttemptCopyWith<$Res>  {
   factory $AttemptCopyWith(Attempt value, $Res Function(Attempt) _then) = _$AttemptCopyWithImpl;
 @useResult
 $Res call({
- String id, String testId,@JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false) String testTitle, String mode, List<int> parts, DateTime startedAt, DateTime finishedAt, int totalQuestions, int listeningCorrect, int readingCorrect
+ String id, String testId,@JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false) String testTitle, String mode, List<int> parts, DateTime startedAt, DateTime finishedAt, int totalQuestions, int listeningCorrect, int readingCorrect, String source
 });
 
 
@@ -947,7 +960,7 @@ class _$AttemptCopyWithImpl<$Res>
 
 /// Create a copy of Attempt
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? testId = null,Object? testTitle = null,Object? mode = null,Object? parts = null,Object? startedAt = null,Object? finishedAt = null,Object? totalQuestions = null,Object? listeningCorrect = null,Object? readingCorrect = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? testId = null,Object? testTitle = null,Object? mode = null,Object? parts = null,Object? startedAt = null,Object? finishedAt = null,Object? totalQuestions = null,Object? listeningCorrect = null,Object? readingCorrect = null,Object? source = null,}) {
   return _then(Attempt(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,testId: null == testId ? _self.testId : testId // ignore: cast_nullable_to_non_nullable
@@ -959,7 +972,8 @@ as DateTime,finishedAt: null == finishedAt ? _self.finishedAt : finishedAt // ig
 as DateTime,totalQuestions: null == totalQuestions ? _self.totalQuestions : totalQuestions // ignore: cast_nullable_to_non_nullable
 as int,listeningCorrect: null == listeningCorrect ? _self.listeningCorrect : listeningCorrect // ignore: cast_nullable_to_non_nullable
 as int,readingCorrect: null == readingCorrect ? _self.readingCorrect : readingCorrect // ignore: cast_nullable_to_non_nullable
-as int,
+as int,source: null == source ? _self.source : source // ignore: cast_nullable_to_non_nullable
+as String,
   ));
 }
 
@@ -1044,10 +1058,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String testId, @JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false)  String testTitle,  String mode,  List<int> parts,  DateTime startedAt,  DateTime finishedAt,  int totalQuestions,  int listeningCorrect,  int readingCorrect)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String testId, @JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false)  String testTitle,  String mode,  List<int> parts,  DateTime startedAt,  DateTime finishedAt,  int totalQuestions,  int listeningCorrect,  int readingCorrect,  String source)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Attempt() when $default != null:
-return $default(_that.id,_that.testId,_that.testTitle,_that.mode,_that.parts,_that.startedAt,_that.finishedAt,_that.totalQuestions,_that.listeningCorrect,_that.readingCorrect);case _:
+return $default(_that.id,_that.testId,_that.testTitle,_that.mode,_that.parts,_that.startedAt,_that.finishedAt,_that.totalQuestions,_that.listeningCorrect,_that.readingCorrect,_that.source);case _:
   return orElse();
 
 }
@@ -1065,10 +1079,10 @@ return $default(_that.id,_that.testId,_that.testTitle,_that.mode,_that.parts,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String testId, @JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false)  String testTitle,  String mode,  List<int> parts,  DateTime startedAt,  DateTime finishedAt,  int totalQuestions,  int listeningCorrect,  int readingCorrect)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String testId, @JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false)  String testTitle,  String mode,  List<int> parts,  DateTime startedAt,  DateTime finishedAt,  int totalQuestions,  int listeningCorrect,  int readingCorrect,  String source)  $default,) {final _that = this;
 switch (_that) {
 case _Attempt():
-return $default(_that.id,_that.testId,_that.testTitle,_that.mode,_that.parts,_that.startedAt,_that.finishedAt,_that.totalQuestions,_that.listeningCorrect,_that.readingCorrect);case _:
+return $default(_that.id,_that.testId,_that.testTitle,_that.mode,_that.parts,_that.startedAt,_that.finishedAt,_that.totalQuestions,_that.listeningCorrect,_that.readingCorrect,_that.source);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -1085,10 +1099,10 @@ return $default(_that.id,_that.testId,_that.testTitle,_that.mode,_that.parts,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String testId, @JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false)  String testTitle,  String mode,  List<int> parts,  DateTime startedAt,  DateTime finishedAt,  int totalQuestions,  int listeningCorrect,  int readingCorrect)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String testId, @JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false)  String testTitle,  String mode,  List<int> parts,  DateTime startedAt,  DateTime finishedAt,  int totalQuestions,  int listeningCorrect,  int readingCorrect,  String source)?  $default,) {final _that = this;
 switch (_that) {
 case _Attempt() when $default != null:
-return $default(_that.id,_that.testId,_that.testTitle,_that.mode,_that.parts,_that.startedAt,_that.finishedAt,_that.totalQuestions,_that.listeningCorrect,_that.readingCorrect);case _:
+return $default(_that.id,_that.testId,_that.testTitle,_that.mode,_that.parts,_that.startedAt,_that.finishedAt,_that.totalQuestions,_that.listeningCorrect,_that.readingCorrect,_that.source);case _:
   return null;
 
 }
@@ -1100,7 +1114,7 @@ return $default(_that.id,_that.testId,_that.testTitle,_that.mode,_that.parts,_th
 @JsonSerializable()
 
 class _Attempt extends Attempt {
-  const _Attempt({required this.id, required this.testId, @JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false) this.testTitle = '', required this.mode, required  List<int> parts, required this.startedAt, required this.finishedAt, required this.totalQuestions, required this.listeningCorrect, required this.readingCorrect}): _parts = parts,super._();
+  const _Attempt({required this.id, required this.testId, @JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false) this.testTitle = '', required this.mode, required  List<int> parts, required this.startedAt, required this.finishedAt, required this.totalQuestions, required this.listeningCorrect, required this.readingCorrect, this.source = 'test'}): _parts = parts,super._();
   factory _Attempt.fromJson(Map<String, dynamic> json) => _$AttemptFromJson(json);
 
 @override final  String id;
@@ -1120,6 +1134,8 @@ class _Attempt extends Attempt {
 @override final  int totalQuestions;
 @override final  int listeningCorrect;
 @override final  int readingCorrect;
+/// 'test' = làm đề, 'mistakes' = luyện lại sổ câu sai
+@override@JsonKey() final  String source;
 
 /// Create a copy of Attempt
 /// with the given fields replaced by the non-null parameter values.
@@ -1134,18 +1150,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Attempt&&(identical(other.id, id) || other.id == id)&&(identical(other.testId, testId) || other.testId == testId)&&(identical(other.testTitle, testTitle) || other.testTitle == testTitle)&&(identical(other.mode, mode) || other.mode == mode)&&const DeepCollectionEquality().equals(other.parts, _parts)&&(identical(other.startedAt, startedAt) || other.startedAt == startedAt)&&(identical(other.finishedAt, finishedAt) || other.finishedAt == finishedAt)&&(identical(other.totalQuestions, totalQuestions) || other.totalQuestions == totalQuestions)&&(identical(other.listeningCorrect, listeningCorrect) || other.listeningCorrect == listeningCorrect)&&(identical(other.readingCorrect, readingCorrect) || other.readingCorrect == readingCorrect));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Attempt&&(identical(other.id, id) || other.id == id)&&(identical(other.testId, testId) || other.testId == testId)&&(identical(other.testTitle, testTitle) || other.testTitle == testTitle)&&(identical(other.mode, mode) || other.mode == mode)&&const DeepCollectionEquality().equals(other.parts, _parts)&&(identical(other.startedAt, startedAt) || other.startedAt == startedAt)&&(identical(other.finishedAt, finishedAt) || other.finishedAt == finishedAt)&&(identical(other.totalQuestions, totalQuestions) || other.totalQuestions == totalQuestions)&&(identical(other.listeningCorrect, listeningCorrect) || other.listeningCorrect == listeningCorrect)&&(identical(other.readingCorrect, readingCorrect) || other.readingCorrect == readingCorrect)&&(identical(other.source, source) || other.source == source));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
-    return Object.hash(runtimeType,id,testId,testTitle,mode,const DeepCollectionEquality().hash(_parts),startedAt,finishedAt,totalQuestions,listeningCorrect,readingCorrect);
+    return Object.hash(runtimeType,id,testId,testTitle,mode,const DeepCollectionEquality().hash(_parts),startedAt,finishedAt,totalQuestions,listeningCorrect,readingCorrect,source);
 }
 
 @override
 String toString() {
-    return 'Attempt(id: $id, testId: $testId, testTitle: $testTitle, mode: $mode, parts: $parts, startedAt: $startedAt, finishedAt: $finishedAt, totalQuestions: $totalQuestions, listeningCorrect: $listeningCorrect, readingCorrect: $readingCorrect)';
+    return 'Attempt(id: $id, testId: $testId, testTitle: $testTitle, mode: $mode, parts: $parts, startedAt: $startedAt, finishedAt: $finishedAt, totalQuestions: $totalQuestions, listeningCorrect: $listeningCorrect, readingCorrect: $readingCorrect, source: $source)';
 }
 
 
@@ -1156,7 +1172,7 @@ abstract mixin class _$AttemptCopyWith<$Res> implements $AttemptCopyWith<$Res> {
   factory _$AttemptCopyWith(_Attempt value, $Res Function(_Attempt) _then) = __$AttemptCopyWithImpl;
 @override @useResult
 $Res call({
- String id, String testId,@JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false) String testTitle, String mode, List<int> parts, DateTime startedAt, DateTime finishedAt, int totalQuestions, int listeningCorrect, int readingCorrect
+ String id, String testId,@JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false) String testTitle, String mode, List<int> parts, DateTime startedAt, DateTime finishedAt, int totalQuestions, int listeningCorrect, int readingCorrect, String source
 });
 
 
@@ -1173,7 +1189,7 @@ class __$AttemptCopyWithImpl<$Res>
 
 /// Create a copy of Attempt
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? testId = null,Object? testTitle = null,Object? mode = null,Object? parts = null,Object? startedAt = null,Object? finishedAt = null,Object? totalQuestions = null,Object? listeningCorrect = null,Object? readingCorrect = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? testId = null,Object? testTitle = null,Object? mode = null,Object? parts = null,Object? startedAt = null,Object? finishedAt = null,Object? totalQuestions = null,Object? listeningCorrect = null,Object? readingCorrect = null,Object? source = null,}) {
   return _then(_Attempt(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,testId: null == testId ? _self.testId : testId // ignore: cast_nullable_to_non_nullable
@@ -1185,7 +1201,8 @@ as DateTime,finishedAt: null == finishedAt ? _self.finishedAt : finishedAt // ig
 as DateTime,totalQuestions: null == totalQuestions ? _self.totalQuestions : totalQuestions // ignore: cast_nullable_to_non_nullable
 as int,listeningCorrect: null == listeningCorrect ? _self.listeningCorrect : listeningCorrect // ignore: cast_nullable_to_non_nullable
 as int,readingCorrect: null == readingCorrect ? _self.readingCorrect : readingCorrect // ignore: cast_nullable_to_non_nullable
-as int,
+as int,source: null == source ? _self.source : source // ignore: cast_nullable_to_non_nullable
+as String,
   ));
 }
 
@@ -1733,6 +1750,582 @@ class __$PartStatCopyWithImpl<$Res>
   return _then(_PartStat(
 part: null == part ? _self.part : part // ignore: cast_nullable_to_non_nullable
 as int,total: null == total ? _self.total : total // ignore: cast_nullable_to_non_nullable
+as int,correct: null == correct ? _self.correct : correct // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+
+}
+
+
+/// @nodoc
+mixin _$LatestAnswer {
+
+ String get questionId; String get groupId; String get testId; int get part; int get number; String? get chosen; bool get isCorrect; DateTime get finishedAt; List<String> get tags;
+/// Create a copy of LatestAnswer
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$LatestAnswerCopyWith<LatestAnswer> get copyWith => _$LatestAnswerCopyWithImpl<LatestAnswer>(this as LatestAnswer, _$identity);
+
+  /// Serializes this LatestAnswer to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  final _this = this as LatestAnswer;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is LatestAnswer&&(identical(other.questionId, _this.questionId) || other.questionId == _this.questionId)&&(identical(other.groupId, _this.groupId) || other.groupId == _this.groupId)&&(identical(other.testId, _this.testId) || other.testId == _this.testId)&&(identical(other.part, _this.part) || other.part == _this.part)&&(identical(other.number, _this.number) || other.number == _this.number)&&(identical(other.chosen, _this.chosen) || other.chosen == _this.chosen)&&(identical(other.isCorrect, _this.isCorrect) || other.isCorrect == _this.isCorrect)&&(identical(other.finishedAt, _this.finishedAt) || other.finishedAt == _this.finishedAt)&&const DeepCollectionEquality().equals(other.tags, _this.tags));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+  final _this = this as LatestAnswer;
+  return Object.hash(runtimeType,_this.questionId,_this.groupId,_this.testId,_this.part,_this.number,_this.chosen,_this.isCorrect,_this.finishedAt,const DeepCollectionEquality().hash(_this.tags));
+}
+
+@override
+String toString() {
+  final _this = this as LatestAnswer;
+  return 'LatestAnswer(questionId: ${_this.questionId}, groupId: ${_this.groupId}, testId: ${_this.testId}, part: ${_this.part}, number: ${_this.number}, chosen: ${_this.chosen}, isCorrect: ${_this.isCorrect}, finishedAt: ${_this.finishedAt}, tags: ${_this.tags})';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $LatestAnswerCopyWith<$Res>  {
+  factory $LatestAnswerCopyWith(LatestAnswer value, $Res Function(LatestAnswer) _then) = _$LatestAnswerCopyWithImpl;
+@useResult
+$Res call({
+ String questionId, String groupId, String testId, int part, int number, String? chosen, bool isCorrect, DateTime finishedAt, List<String> tags
+});
+
+
+
+
+}
+/// @nodoc
+class _$LatestAnswerCopyWithImpl<$Res>
+    implements $LatestAnswerCopyWith<$Res> {
+  _$LatestAnswerCopyWithImpl(this._self, this._then);
+
+  final LatestAnswer _self;
+  final $Res Function(LatestAnswer) _then;
+
+/// Create a copy of LatestAnswer
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? questionId = null,Object? groupId = null,Object? testId = null,Object? part = null,Object? number = null,Object? chosen = freezed,Object? isCorrect = null,Object? finishedAt = null,Object? tags = null,}) {
+  return _then(LatestAnswer(
+questionId: null == questionId ? _self.questionId : questionId // ignore: cast_nullable_to_non_nullable
+as String,groupId: null == groupId ? _self.groupId : groupId // ignore: cast_nullable_to_non_nullable
+as String,testId: null == testId ? _self.testId : testId // ignore: cast_nullable_to_non_nullable
+as String,part: null == part ? _self.part : part // ignore: cast_nullable_to_non_nullable
+as int,number: null == number ? _self.number : number // ignore: cast_nullable_to_non_nullable
+as int,chosen: freezed == chosen ? _self.chosen : chosen // ignore: cast_nullable_to_non_nullable
+as String?,isCorrect: null == isCorrect ? _self.isCorrect : isCorrect // ignore: cast_nullable_to_non_nullable
+as bool,finishedAt: null == finishedAt ? _self.finishedAt : finishedAt // ignore: cast_nullable_to_non_nullable
+as DateTime,tags: null == tags ? _self.tags : tags // ignore: cast_nullable_to_non_nullable
+as List<String>,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [LatestAnswer].
+extension LatestAnswerPatterns on LatestAnswer {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _LatestAnswer value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _LatestAnswer() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _LatestAnswer value)  $default,){
+final _that = this;
+switch (_that) {
+case _LatestAnswer():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _LatestAnswer value)?  $default,){
+final _that = this;
+switch (_that) {
+case _LatestAnswer() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String questionId,  String groupId,  String testId,  int part,  int number,  String? chosen,  bool isCorrect,  DateTime finishedAt,  List<String> tags)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _LatestAnswer() when $default != null:
+return $default(_that.questionId,_that.groupId,_that.testId,_that.part,_that.number,_that.chosen,_that.isCorrect,_that.finishedAt,_that.tags);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String questionId,  String groupId,  String testId,  int part,  int number,  String? chosen,  bool isCorrect,  DateTime finishedAt,  List<String> tags)  $default,) {final _that = this;
+switch (_that) {
+case _LatestAnswer():
+return $default(_that.questionId,_that.groupId,_that.testId,_that.part,_that.number,_that.chosen,_that.isCorrect,_that.finishedAt,_that.tags);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String questionId,  String groupId,  String testId,  int part,  int number,  String? chosen,  bool isCorrect,  DateTime finishedAt,  List<String> tags)?  $default,) {final _that = this;
+switch (_that) {
+case _LatestAnswer() when $default != null:
+return $default(_that.questionId,_that.groupId,_that.testId,_that.part,_that.number,_that.chosen,_that.isCorrect,_that.finishedAt,_that.tags);case _:
+  return null;
+
+}
+}
+
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class _LatestAnswer implements LatestAnswer {
+  const _LatestAnswer({required this.questionId, required this.groupId, required this.testId, required this.part, required this.number, this.chosen, required this.isCorrect, required this.finishedAt,  List<String> tags = const <String>[]}): _tags = tags;
+  factory _LatestAnswer.fromJson(Map<String, dynamic> json) => _$LatestAnswerFromJson(json);
+
+@override final  String questionId;
+@override final  String groupId;
+@override final  String testId;
+@override final  int part;
+@override final  int number;
+@override final  String? chosen;
+@override final  bool isCorrect;
+@override final  DateTime finishedAt;
+ final  List<String> _tags;
+@override@JsonKey() List<String> get tags {
+  if (_tags is EqualUnmodifiableListView) return _tags;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_tags);
+}
+
+
+/// Create a copy of LatestAnswer
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$LatestAnswerCopyWith<_LatestAnswer> get copyWith => __$LatestAnswerCopyWithImpl<_LatestAnswer>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$LatestAnswerToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _LatestAnswer&&(identical(other.questionId, questionId) || other.questionId == questionId)&&(identical(other.groupId, groupId) || other.groupId == groupId)&&(identical(other.testId, testId) || other.testId == testId)&&(identical(other.part, part) || other.part == part)&&(identical(other.number, number) || other.number == number)&&(identical(other.chosen, chosen) || other.chosen == chosen)&&(identical(other.isCorrect, isCorrect) || other.isCorrect == isCorrect)&&(identical(other.finishedAt, finishedAt) || other.finishedAt == finishedAt)&&const DeepCollectionEquality().equals(other.tags, _tags));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,questionId,groupId,testId,part,number,chosen,isCorrect,finishedAt,const DeepCollectionEquality().hash(_tags));
+}
+
+@override
+String toString() {
+    return 'LatestAnswer(questionId: $questionId, groupId: $groupId, testId: $testId, part: $part, number: $number, chosen: $chosen, isCorrect: $isCorrect, finishedAt: $finishedAt, tags: $tags)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$LatestAnswerCopyWith<$Res> implements $LatestAnswerCopyWith<$Res> {
+  factory _$LatestAnswerCopyWith(_LatestAnswer value, $Res Function(_LatestAnswer) _then) = __$LatestAnswerCopyWithImpl;
+@override @useResult
+$Res call({
+ String questionId, String groupId, String testId, int part, int number, String? chosen, bool isCorrect, DateTime finishedAt, List<String> tags
+});
+
+
+
+
+}
+/// @nodoc
+class __$LatestAnswerCopyWithImpl<$Res>
+    implements _$LatestAnswerCopyWith<$Res> {
+  __$LatestAnswerCopyWithImpl(this._self, this._then);
+
+  final _LatestAnswer _self;
+  final $Res Function(_LatestAnswer) _then;
+
+/// Create a copy of LatestAnswer
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? questionId = null,Object? groupId = null,Object? testId = null,Object? part = null,Object? number = null,Object? chosen = freezed,Object? isCorrect = null,Object? finishedAt = null,Object? tags = null,}) {
+  return _then(_LatestAnswer(
+questionId: null == questionId ? _self.questionId : questionId // ignore: cast_nullable_to_non_nullable
+as String,groupId: null == groupId ? _self.groupId : groupId // ignore: cast_nullable_to_non_nullable
+as String,testId: null == testId ? _self.testId : testId // ignore: cast_nullable_to_non_nullable
+as String,part: null == part ? _self.part : part // ignore: cast_nullable_to_non_nullable
+as int,number: null == number ? _self.number : number // ignore: cast_nullable_to_non_nullable
+as int,chosen: freezed == chosen ? _self.chosen : chosen // ignore: cast_nullable_to_non_nullable
+as String?,isCorrect: null == isCorrect ? _self.isCorrect : isCorrect // ignore: cast_nullable_to_non_nullable
+as bool,finishedAt: null == finishedAt ? _self.finishedAt : finishedAt // ignore: cast_nullable_to_non_nullable
+as DateTime,tags: null == tags ? _self._tags : tags // ignore: cast_nullable_to_non_nullable
+as List<String>,
+  ));
+}
+
+
+}
+
+
+/// @nodoc
+mixin _$TagStat {
+
+ String get tag; int get total; int get correct;
+/// Create a copy of TagStat
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$TagStatCopyWith<TagStat> get copyWith => _$TagStatCopyWithImpl<TagStat>(this as TagStat, _$identity);
+
+  /// Serializes this TagStat to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  final _this = this as TagStat;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is TagStat&&(identical(other.tag, _this.tag) || other.tag == _this.tag)&&(identical(other.total, _this.total) || other.total == _this.total)&&(identical(other.correct, _this.correct) || other.correct == _this.correct));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+  final _this = this as TagStat;
+  return Object.hash(runtimeType,_this.tag,_this.total,_this.correct);
+}
+
+@override
+String toString() {
+  final _this = this as TagStat;
+  return 'TagStat(tag: ${_this.tag}, total: ${_this.total}, correct: ${_this.correct})';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $TagStatCopyWith<$Res>  {
+  factory $TagStatCopyWith(TagStat value, $Res Function(TagStat) _then) = _$TagStatCopyWithImpl;
+@useResult
+$Res call({
+ String tag, int total, int correct
+});
+
+
+
+
+}
+/// @nodoc
+class _$TagStatCopyWithImpl<$Res>
+    implements $TagStatCopyWith<$Res> {
+  _$TagStatCopyWithImpl(this._self, this._then);
+
+  final TagStat _self;
+  final $Res Function(TagStat) _then;
+
+/// Create a copy of TagStat
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? tag = null,Object? total = null,Object? correct = null,}) {
+  return _then(TagStat(
+tag: null == tag ? _self.tag : tag // ignore: cast_nullable_to_non_nullable
+as String,total: null == total ? _self.total : total // ignore: cast_nullable_to_non_nullable
+as int,correct: null == correct ? _self.correct : correct // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [TagStat].
+extension TagStatPatterns on TagStat {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _TagStat value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _TagStat() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _TagStat value)  $default,){
+final _that = this;
+switch (_that) {
+case _TagStat():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _TagStat value)?  $default,){
+final _that = this;
+switch (_that) {
+case _TagStat() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String tag,  int total,  int correct)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _TagStat() when $default != null:
+return $default(_that.tag,_that.total,_that.correct);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String tag,  int total,  int correct)  $default,) {final _that = this;
+switch (_that) {
+case _TagStat():
+return $default(_that.tag,_that.total,_that.correct);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String tag,  int total,  int correct)?  $default,) {final _that = this;
+switch (_that) {
+case _TagStat() when $default != null:
+return $default(_that.tag,_that.total,_that.correct);case _:
+  return null;
+
+}
+}
+
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class _TagStat extends TagStat {
+  const _TagStat({required this.tag, required this.total, required this.correct}): super._();
+  factory _TagStat.fromJson(Map<String, dynamic> json) => _$TagStatFromJson(json);
+
+@override final  String tag;
+@override final  int total;
+@override final  int correct;
+
+/// Create a copy of TagStat
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$TagStatCopyWith<_TagStat> get copyWith => __$TagStatCopyWithImpl<_TagStat>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$TagStatToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _TagStat&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.total, total) || other.total == total)&&(identical(other.correct, correct) || other.correct == correct));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,tag,total,correct);
+}
+
+@override
+String toString() {
+    return 'TagStat(tag: $tag, total: $total, correct: $correct)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$TagStatCopyWith<$Res> implements $TagStatCopyWith<$Res> {
+  factory _$TagStatCopyWith(_TagStat value, $Res Function(_TagStat) _then) = __$TagStatCopyWithImpl;
+@override @useResult
+$Res call({
+ String tag, int total, int correct
+});
+
+
+
+
+}
+/// @nodoc
+class __$TagStatCopyWithImpl<$Res>
+    implements _$TagStatCopyWith<$Res> {
+  __$TagStatCopyWithImpl(this._self, this._then);
+
+  final _TagStat _self;
+  final $Res Function(_TagStat) _then;
+
+/// Create a copy of TagStat
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? tag = null,Object? total = null,Object? correct = null,}) {
+  return _then(_TagStat(
+tag: null == tag ? _self.tag : tag // ignore: cast_nullable_to_non_nullable
+as String,total: null == total ? _self.total : total // ignore: cast_nullable_to_non_nullable
 as int,correct: null == correct ? _self.correct : correct // ignore: cast_nullable_to_non_nullable
 as int,
   ));

@@ -8,14 +8,14 @@ part of 'test_taking_controller.dart';
 
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, type=warning
-/// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" để làm khoá family ổn định.
+/// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" (hoặc bộ lọc sổ câu sai) để làm khoá family ổn định.
 
 @ProviderFor(TestTaking)
 final testTakingProvider = TestTakingFamily._();
 
-/// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" để làm khoá family ổn định.
+/// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" (hoặc bộ lọc sổ câu sai) để làm khoá family ổn định.
 final class TestTakingProvider extends $AsyncNotifierProvider<TestTaking, TakingState> {
-  /// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" để làm khoá family ổn định.
+  /// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" (hoặc bộ lọc sổ câu sai) để làm khoá family ổn định.
   TestTakingProvider._({
     required TestTakingFamily super.from,
     required (String, String, String) super.argument,
@@ -52,9 +52,9 @@ final class TestTakingProvider extends $AsyncNotifierProvider<TestTaking, Taking
   }
 }
 
-String _$testTakingHash() => r'64c211708b93e9bfd27fd7a76300833ccbbc47e3';
+String _$testTakingHash() => r'45ba8e92e6f75b5ca7e6e98379b7381252056809';
 
-/// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" để làm khoá family ổn định.
+/// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" (hoặc bộ lọc sổ câu sai) để làm khoá family ổn định.
 
 final class TestTakingFamily extends $Family
     with
@@ -74,7 +74,7 @@ final class TestTakingFamily extends $Family
         isAutoDispose: true,
       );
 
-  /// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" để làm khoá family ổn định.
+  /// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" (hoặc bộ lọc sổ câu sai) để làm khoá family ổn định.
 
   TestTakingProvider call(String testId, String mode, String parts) =>
       TestTakingProvider._(argument: (testId, mode, parts), from: this);
@@ -83,7 +83,7 @@ final class TestTakingFamily extends $Family
   String toString() => r'testTakingProvider';
 }
 
-/// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" để làm khoá family ổn định.
+/// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" (hoặc bộ lọc sổ câu sai) để làm khoá family ổn định.
 
 abstract class _$TestTaking extends $AsyncNotifier<TakingState> {
   late final _$args = ref.$arg as (String, String, String);

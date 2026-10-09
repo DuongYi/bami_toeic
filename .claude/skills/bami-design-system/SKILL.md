@@ -75,7 +75,7 @@ Trang Gallery mọi component: route `/design-system` (chỉ bản debug), mở 
 | `AppRadius.xs…xl` + `brXs…brXl` | 4,8,12,16,28 | bo góc (`brMd` cho ô/option, `brLg` card, `brXl` dialog) |
 | `AppSizes.touchTarget` | 48 | vùng chạm tối thiểu |
 | `AppSizes.buttonLarge` | 52 | chiều cao CTA |
-| `AppSizes.iconSm/Md/Lg/Xl/Hero` | 18/24/32/56/64 | icon |
+| `AppSizes.iconXs/Sm/Md/Lg/Xl/Hero` | 12/18/24/32/56/64 | icon (Xs: icon phụ trong ô nhỏ) |
 | `AppSizes.formMaxWidth` | 400 | form trên màn rộng |
 | `AppSizes.brandMark` | 88 | khối logo màn chào / đăng nhập |
 | `AppSizes.badgeSm/Md/Lg` | 32/40/48 | IconBadge |
@@ -116,7 +116,7 @@ Cần giá trị chưa có thì **thêm token**, không viết số trực tiế
 | `AppProgressBar(value, tone?)` | thanh tiến độ (tự tone theo `fromRatio`) |
 | `LabeledProgress(label, value, trailing)` | dòng "nhãn … 12/20" + thanh |
 | `StatTile(value, label, highlight?)` | ô số liệu trong `Row` (tự `Expanded`) |
-| `NumberCell(number, tone?/filled?/current?, onTap, semanticLabel)` | ô số câu (bảng chọn câu, bảng đáp án) |
+| `NumberCell(number, tone?/filled?/current?/flagged?, onTap, semanticLabel)` | ô số câu (bảng chọn câu, bảng đáp án) |
 | `AsyncView(value, data, onRetry)` | render `AsyncValue` (loading / lỗi + Thử lại / data) |
 | `AppLoadingView` / `AppErrorView` / `AppEmptyView(icon, message, action?)` | trạng thái màn hình |
 | `ScrollableFill(child)` | bọc Empty/Error trong `RefreshIndicator` để vẫn kéo-làm-mới |

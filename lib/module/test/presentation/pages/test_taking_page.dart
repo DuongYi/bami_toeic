@@ -15,7 +15,7 @@ class TestTakingPage extends ConsumerStatefulWidget {
   final String testId;
   final String mode;
 
-  /// Dạng "1,2,5"
+  /// Dạng "1,2,5"; với phiên sổ câu sai là bộ lọc ("all" | "part:5" | "tag:word-form")
   final String parts;
 
   @override
@@ -24,11 +24,25 @@ class TestTakingPage extends ConsumerStatefulWidget {
 
 class _TestTakingPageState extends ConsumerState<TestTakingPage> {
   final _pageController = PageController();
+  late final AppLifecycleListener _lifecycle;
+  bool _restoredPage = false;
 
   late final _provider = testTakingProvider(widget.testId, widget.mode, widget.parts);
+  bool get _isMistakes => widget.testId == kMistakesSession;
+
+  @override
+  void initState() {
+    super.initState();
+    // App bị đưa xuống nền / tắt → lưu bài làm dở ngay
+    _lifecycle = AppLifecycleListener(
+      onInactive: () => ref.read(_provider.notifier).saveProgress(),
+      onPause: () => ref.read(_provider.notifier).saveProgress(),
+    );
+  }
 
   @override
   void dispose() {
+    _lifecycle.dispose();
     _pageController.dispose();
     super.dispose();
   }
@@ -43,12 +57,16 @@ class _TestTakingPageState extends ConsumerState<TestTakingPage> {
     final s = ref.read(_provider).value;
     if (s == null) return;
     final unanswered = s.totalQuestions - s.answers.length;
+    final flagged = s.flagged.length;
     final ok = await showAppConfirmDialog(
       context,
       title: 'Nộp bài?',
-      message: unanswered > 0
-          ? 'Bạn còn $unanswered câu chưa làm.'
-          : 'Bạn đã làm hết ${s.totalQuestions} câu.',
+      message: [
+        unanswered > 0
+            ? 'Bạn còn $unanswered câu chưa làm.'
+            : 'Bạn đã làm hết ${s.totalQuestions} câu.',
+        if (flagged > 0) 'Có $flagged câu đang đánh dấu để xem lại.',
+      ].join('\n'),
       confirmLabel: 'Nộp bài',
       cancelLabel: 'Làm tiếp',
     );
@@ -58,14 +76,25 @@ class _TestTakingPageState extends ConsumerState<TestTakingPage> {
   Future<bool> _confirmExit() async {
     final answered = ref.read(_provider).value?.answers.length ?? 0;
     if (answered == 0) return true;
-    return showAppConfirmDialog(
+    if (_isMistakes) {
+      return showAppConfirmDialog(
+        context,
+        title: 'Dừng luyện?',
+        message: 'Kết quả lượt luyện này sẽ không được lưu.',
+        confirmLabel: 'Dừng',
+        cancelLabel: 'Ở lại',
+        destructive: true,
+      );
+    }
+    final ok = await showAppConfirmDialog(
       context,
-      title: 'Thoát bài làm?',
-      message: 'Các câu đã làm sẽ không được lưu.',
-      confirmLabel: 'Thoát',
-      cancelLabel: 'Ở lại',
-      destructive: true,
+      title: 'Tạm dừng bài làm?',
+      message: 'Bài làm được lưu lại, bạn có thể tiếp tục sau ở trang đề thi.',
+      confirmLabel: 'Tạm dừng',
+      cancelLabel: 'Làm tiếp',
     );
+    if (ok) await ref.read(_provider.notifier).saveProgress();
+    return ok;
   }
 
   void _showPalette() {
@@ -89,6 +118,28 @@ class _TestTakingPageState extends ConsumerState<TestTakingPage> {
       if (s == null) return;
       if (s.submitted != null && prev?.value?.submitted == null) {
         context.pushReplacement(Routes.result(s.submitted!.id));
+      }
+      if (s.mistakeResult case (final correct, final total)?
+          when prev?.value?.mistakeResult == null) {
+        final messenger = ScaffoldMessenger.of(context);
+        context.pop();
+        showAppSnackBarOn(
+          messenger,
+          'Đúng $correct/$total câu · $correct câu đã ra khỏi sổ câu sai',
+          tone: correct == total ? AppTone.success : AppTone.info,
+        );
+      }
+      // Khôi phục bài làm dở: nhảy tới câu đang làm + báo cho người dùng
+      if (s.resumed && !_restoredPage && prev?.value == null) {
+        _restoredPage = true;
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (_pageController.hasClients) _pageController.jumpToPage(s.index);
+        });
+        showAppSnackBar(
+          context,
+          'Đã khôi phục bài làm dở (${s.answers.length}/${s.totalQuestions} câu)',
+          tone: AppTone.info,
+        );
       }
       if (s.submitError != null && prev?.value?.submitError == null) {
         showAppSnackBar(
@@ -189,10 +240,10 @@ class _GroupPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final (group, answers, revealed) = ref.watch(
+    final (group, answers, revealed, flagged) = ref.watch(
       provider.select((s) {
         final v = s.value!;
-        return (v.groups[groupIndex], v.answers, v.revealed);
+        return (v.groups[groupIndex], v.answers, v.revealed, v.flagged);
       }),
     );
     return QuestionGroupView(
@@ -200,6 +251,8 @@ class _GroupPage extends ConsumerWidget {
       answers: answers,
       onSelect: ref.read(provider.notifier).select,
       isRevealed: (q) => revealed.contains(q.id),
+      isFlagged: (q) => flagged.contains(q.id),
+      onToggleFlag: ref.read(provider.notifier).toggleFlag,
       showTranscript: !isExam,
       autoPlayAudio: isExam,
     );
@@ -359,8 +412,8 @@ class _QuestionPalette extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final (groups, answers, index) = ref.watch(
-      provider.select((s) => (s.value!.groups, s.value!.answers, s.value!.index)),
+    final (groups, answers, index, flagged) = ref.watch(
+      provider.select((s) => (s.value!.groups, s.value!.answers, s.value!.index, s.value!.flagged)),
     );
     return DraggableScrollableSheet(
       expand: false,
@@ -378,8 +431,11 @@ class _QuestionPalette extends ConsumerWidget {
                   number: q.number,
                   filled: answers.containsKey(q.id),
                   current: gi == index,
+                  flagged: flagged.contains(q.id),
                   semanticLabel:
-                      'Câu ${q.number}, ${answers.containsKey(q.id) ? 'đã trả lời' : 'chưa trả lời'}',
+                      'Câu ${q.number}, '
+                      '${answers.containsKey(q.id) ? 'đã trả lời' : 'chưa trả lời'}'
+                      '${flagged.contains(q.id) ? ', đã đánh dấu' : ''}',
                   onTap: () => onJump(gi),
                 ),
           ],

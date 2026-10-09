@@ -8,6 +8,7 @@ import '../tokens/app_tone.dart';
 /// - [tone] != null: tô theo kết quả (đúng/sai/bỏ trống).
 /// - [filled]: đã trả lời (khi đang làm bài).
 /// - [current]: câu đang xem.
+/// - [flagged]: câu được đánh dấu để xem lại (icon cờ ở góc – không chỉ dựa vào màu).
 class NumberCell extends StatelessWidget {
   const NumberCell({
     super.key,
@@ -15,6 +16,7 @@ class NumberCell extends StatelessWidget {
     this.tone,
     this.filled = false,
     this.current = false,
+    this.flagged = false,
     this.onTap,
     this.semanticLabel,
   });
@@ -23,6 +25,7 @@ class NumberCell extends StatelessWidget {
   final AppTone? tone;
   final bool filled;
   final bool current;
+  final bool flagged;
   final VoidCallback? onTap;
   final String? semanticLabel;
 
@@ -58,14 +61,28 @@ class NumberCell extends StatelessWidget {
           child: SizedBox(
             width: AppSizes.numberCell,
             height: AppSizes.numberCellHeight,
-            child: Center(
-              child: Text(
-                '$number',
-                style: context.textStyles.labelLarge?.copyWith(
-                  color: fg,
-                  fontWeight: FontWeight.w700,
+            child: Stack(
+              children: [
+                Center(
+                  child: Text(
+                    '$number',
+                    style: context.textStyles.labelLarge?.copyWith(
+                      color: fg,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
                 ),
-              ),
+                if (flagged)
+                  Positioned(
+                    top: AppSpacing.s2,
+                    right: AppSpacing.s2,
+                    child: Icon(
+                      Icons.flag_rounded,
+                      size: AppSizes.iconXs,
+                      color: AppTone.warning.colorsOf(context).main,
+                    ),
+                  ),
+              ],
             ),
           ),
         ),

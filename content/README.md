@@ -58,6 +58,8 @@ Mẹo: chụp/scan đề, nhờ AI chuyển sang đúng định dạng JSON ở 
 Cột: `word,ipa,pos,meaning,example,example_meaning,topic` (xem `vocab_sample.csv`).
 
 Import: Supabase Dashboard → Table Editor → bảng `vocab` → **Insert → Import data from CSV**.
+Hoặc từ file JSON (mảng `{word, ipa, pos, meaning, example, example_meaning, topic}`), upsert theo (word, topic):
+`dart run tool/import_vocab.dart <file.json> [--dry-run]`.
 Hoặc thêm từng từ ngay trong app (nút +).
 
 ## Chuyển sách PDF scan (ETS 2026) thành đề
@@ -75,7 +77,14 @@ OCR_TSV=1 OCR_LANGS=en-US,ko-KR swift tool/pdf_tool.swift ocr "content/LISTENING
 # 3. Dựng đề → content/tests/ets2026_testNN/ (ảnh Part 1, biểu đồ, ảnh đoạn văn Part 7, audio AAC 48 kbps)
 python3 tool/ets/build_ets.py 1-10
 python3 tool/ets/audit.py 1-10          # soát lỗi OCR còn sót
+#    Đầu vào thêm (nếu có): $W/explanations/testNN_{lc,rc56,rc7}.json (giải thích, kiểm bằng check_explanations.py),
+#    $W/transcripts/testNN.json (transcript Part 3/4 sạch, kiểm bằng check_transcripts_p34.py).
+#    Thẻ dạng câu (tags) tự gắn bởi tool/ets/tagging.py.
 # 4. Sửa tay câu OCR hỏng: $W/overrides.json {"test": {"câu": {"content", "options"}}} rồi chạy lại bước 3
 # 5. Đẩy lên Supabase (hỏi email/mật khẩu 1 lần)
 bash tool/ets/import_all.sh
+# 6. Sửa nội dung sau khi đã import (giữ id, không mất lịch sử làm bài): chữ, giải thích, thẻ dạng câu, ảnh
+dart run tool/sync_text.dart content/tests/ets2026_test* --images
+# 7. Từ vựng: $W/vocab/testNN.json → gộp, bỏ trùng → import
+python3 tool/ets/merge_vocab.py && dart run tool/import_vocab.dart $W/vocab/ets2026_all.json
 ```

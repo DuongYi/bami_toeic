@@ -167,7 +167,52 @@ class FakeTestRepository implements TestRepository {
     required DateTime startedAt,
     required List<Question> questions,
     required Map<String, String> answers,
+    String source = 'test',
   }) async => _attempts.first;
+
+  @override
+  Future<List<TagStat>> fetchTagStats() async => const [
+    TagStat(tag: 'word-form', total: 40, correct: 31),
+    TagStat(tag: 'inference', total: 25, correct: 11),
+    TagStat(tag: 'graphic', total: 12, correct: 7),
+    TagStat(tag: 'vocabulary', total: 30, correct: 19),
+  ];
+
+  @override
+  Future<List<LatestAnswer>> fetchMistakes() async => [
+    LatestAnswer(
+      questionId: 'q102',
+      groupId: 'g2',
+      testId: 't1',
+      part: 5,
+      number: 102,
+      chosen: 'C',
+      isCorrect: false,
+      finishedAt: DateTime(2026, 10, 1),
+      tags: const ['word-form'],
+    ),
+    LatestAnswer(
+      questionId: 'q148',
+      groupId: 'g3',
+      testId: 't1',
+      part: 7,
+      number: 148,
+      isCorrect: false,
+      finishedAt: DateTime(2026, 10, 1),
+      tags: const ['inference'],
+    ),
+  ];
+
+  @override
+  Future<List<QuestionGroup>> fetchMistakeGroups(List<LatestAnswer> mistakes) async => _groups;
+
+  @override
+  Future<(int, int)> submitMistakePractice({
+    required String mode,
+    required DateTime startedAt,
+    required List<QuestionGroup> groups,
+    required Map<String, String> answers,
+  }) async => (1, 2);
 }
 
 VocabItem _v(

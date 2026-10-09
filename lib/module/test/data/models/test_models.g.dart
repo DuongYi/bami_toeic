@@ -14,6 +14,7 @@ Map<String, dynamic> _$AttemptInsertToJson(AttemptInsert instance) => <String, d
   'total_questions': instance.totalQuestions,
   'listening_correct': instance.listeningCorrect,
   'reading_correct': instance.readingCorrect,
+  'source': instance.source,
 };
 
 Map<String, dynamic> _$AttemptAnswerInsertToJson(AttemptAnswerInsert instance) => <String, dynamic>{
@@ -47,6 +48,7 @@ _Question _$QuestionFromJson(Map<String, dynamic> json) => _Question(
       (json['options'] as List<dynamic>?)?.map((e) => e as String).toList() ?? const <String>[],
   answer: json['answer'] as String,
   explanation: json['explanation'] as String?,
+  tags: (json['tags'] as List<dynamic>?)?.map((e) => e as String).toList() ?? const <String>[],
 );
 
 Map<String, dynamic> _$QuestionToJson(_Question instance) => <String, dynamic>{
@@ -57,10 +59,12 @@ Map<String, dynamic> _$QuestionToJson(_Question instance) => <String, dynamic>{
   'options': instance.options,
   'answer': instance.answer,
   'explanation': instance.explanation,
+  'tags': instance.tags,
 };
 
 _QuestionGroup _$QuestionGroupFromJson(Map<String, dynamic> json) => _QuestionGroup(
   id: json['id'] as String,
+  testId: json['test_id'] as String?,
   part: (json['part'] as num).toInt(),
   orderNo: (json['order_no'] as num).toInt(),
   passage: json['passage'] as String?,
@@ -76,6 +80,7 @@ _QuestionGroup _$QuestionGroupFromJson(Map<String, dynamic> json) => _QuestionGr
 
 Map<String, dynamic> _$QuestionGroupToJson(_QuestionGroup instance) => <String, dynamic>{
   'id': instance.id,
+  'test_id': instance.testId,
   'part': instance.part,
   'order_no': instance.orderNo,
   'passage': instance.passage,
@@ -96,6 +101,7 @@ _Attempt _$AttemptFromJson(Map<String, dynamic> json) => _Attempt(
   totalQuestions: (json['total_questions'] as num).toInt(),
   listeningCorrect: (json['listening_correct'] as num).toInt(),
   readingCorrect: (json['reading_correct'] as num).toInt(),
+  source: json['source'] as String? ?? 'test',
 );
 
 Map<String, dynamic> _$AttemptToJson(_Attempt instance) => <String, dynamic>{
@@ -108,6 +114,7 @@ Map<String, dynamic> _$AttemptToJson(_Attempt instance) => <String, dynamic>{
   'total_questions': instance.totalQuestions,
   'listening_correct': instance.listeningCorrect,
   'reading_correct': instance.readingCorrect,
+  'source': instance.source,
 };
 
 _AttemptAnswer _$AttemptAnswerFromJson(Map<String, dynamic> json) =>
@@ -126,6 +133,42 @@ _PartStat _$PartStatFromJson(Map<String, dynamic> json) => _PartStat(
 
 Map<String, dynamic> _$PartStatToJson(_PartStat instance) => <String, dynamic>{
   'part': instance.part,
+  'total': instance.total,
+  'correct': instance.correct,
+};
+
+_LatestAnswer _$LatestAnswerFromJson(Map<String, dynamic> json) => _LatestAnswer(
+  questionId: json['question_id'] as String,
+  groupId: json['group_id'] as String,
+  testId: json['test_id'] as String,
+  part: (json['part'] as num).toInt(),
+  number: (json['number'] as num).toInt(),
+  chosen: json['chosen'] as String?,
+  isCorrect: json['is_correct'] as bool,
+  finishedAt: DateTime.parse(json['finished_at'] as String),
+  tags: (json['tags'] as List<dynamic>?)?.map((e) => e as String).toList() ?? const <String>[],
+);
+
+Map<String, dynamic> _$LatestAnswerToJson(_LatestAnswer instance) => <String, dynamic>{
+  'question_id': instance.questionId,
+  'group_id': instance.groupId,
+  'test_id': instance.testId,
+  'part': instance.part,
+  'number': instance.number,
+  'chosen': instance.chosen,
+  'is_correct': instance.isCorrect,
+  'finished_at': instance.finishedAt.toIso8601String(),
+  'tags': instance.tags,
+};
+
+_TagStat _$TagStatFromJson(Map<String, dynamic> json) => _TagStat(
+  tag: json['tag'] as String,
+  total: (json['total'] as num).toInt(),
+  correct: (json['correct'] as num).toInt(),
+);
+
+Map<String, dynamic> _$TagStatToJson(_TagStat instance) => <String, dynamic>{
+  'tag': instance.tag,
   'total': instance.total,
   'correct': instance.correct,
 };

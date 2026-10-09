@@ -37,6 +37,7 @@ abstract class Question with _$Question {
     @Default(<String>[]) List<String> options,
     required String answer,
     String? explanation,
+    @Default(<String>[]) List<String> tags,
   }) = _Question;
 
   factory Question.fromJson(Map<String, dynamic> json) => _$QuestionFromJson(json);
@@ -54,6 +55,7 @@ abstract class Question with _$Question {
 abstract class QuestionGroup with _$QuestionGroup {
   const factory QuestionGroup({
     required String id,
+    String? testId,
     required int part,
     required int orderNo,
     String? passage,
@@ -85,13 +87,17 @@ abstract class Attempt with _$Attempt {
     required int totalQuestions,
     required int listeningCorrect,
     required int readingCorrect,
+
+    /// 'test' = làm đề, 'mistakes' = luyện lại sổ câu sai
+    @Default('test') String source,
   }) = _Attempt;
 
   factory Attempt.fromJson(Map<String, dynamic> json) => _$AttemptFromJson(json);
 
   int get correct => listeningCorrect + readingCorrect;
-  bool get isFullTest => parts.length == 7 && totalQuestions == 200;
+  bool get isFullTest => source != 'mistakes' && parts.length == 7 && totalQuestions == 200;
   bool get isExam => mode == 'exam';
+  bool get isMistakeReview => source == 'mistakes';
   Duration get duration => finishedAt.difference(startedAt);
 }
 
@@ -115,6 +121,35 @@ abstract class PartStat with _$PartStat {
   double get accuracy => total == 0 ? 0 : correct / total;
 }
 
+/// Lần trả lời gần nhất của 1 câu (view `latest_answers`) – nguồn của sổ câu sai.
+@freezed
+abstract class LatestAnswer with _$LatestAnswer {
+  const factory LatestAnswer({
+    required String questionId,
+    required String groupId,
+    required String testId,
+    required int part,
+    required int number,
+    String? chosen,
+    required bool isCorrect,
+    required DateTime finishedAt,
+    @Default(<String>[]) List<String> tags,
+  }) = _LatestAnswer;
+
+  factory LatestAnswer.fromJson(Map<String, dynamic> json) => _$LatestAnswerFromJson(json);
+}
+
+@freezed
+abstract class TagStat with _$TagStat {
+  const TagStat._();
+
+  const factory TagStat({required String tag, required int total, required int correct}) = _TagStat;
+
+  factory TagStat.fromJson(Map<String, dynamic> json) => _$TagStatFromJson(json);
+
+  double get accuracy => total == 0 ? 0 : correct / total;
+}
+
 // ---------- Gửi lên API ----------
 
 @JsonSerializable(createFactory: false)
@@ -127,6 +162,7 @@ class AttemptInsert {
     required this.totalQuestions,
     required this.listeningCorrect,
     required this.readingCorrect,
+    this.source = 'test',
   });
 
   final String testId;
@@ -138,6 +174,7 @@ class AttemptInsert {
   final int totalQuestions;
   final int listeningCorrect;
   final int readingCorrect;
+  final String source;
 
   Map<String, dynamic> toJson() => _$AttemptInsertToJson(this);
 }

@@ -3,7 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/design_system/design_system.dart';
+import '../../../../helper/format.dart';
 import '../../../../routes/app_router.dart';
+import '../../data/in_progress_store.dart';
 import '../../data/models/test_models.dart';
 import '../controllers/test_providers.dart';
 import '../widgets/question_group_view.dart';
@@ -28,16 +30,16 @@ class TestDetailPage extends ConsumerWidget {
   }
 }
 
-class _DetailBody extends StatefulWidget {
+class _DetailBody extends ConsumerStatefulWidget {
   const _DetailBody({required this.detail});
 
   final TestDetail detail;
 
   @override
-  State<_DetailBody> createState() => _DetailBodyState();
+  ConsumerState<_DetailBody> createState() => _DetailBodyState();
 }
 
-class _DetailBodyState extends State<_DetailBody> {
+class _DetailBodyState extends ConsumerState<_DetailBody> {
   late final Map<int, int> _perPart = widget.detail.questionsPerPart;
   late Set<int> _selected = _perPart.keys.toSet();
   String _mode = 'practice';
@@ -83,6 +85,10 @@ class _DetailBodyState extends State<_DetailBody> {
             ],
           ),
           if (s.description != null) ...[Gaps.v12, Text(s.description!, style: muted)],
+          if (ref.watch(inProgressProvider(s.id)).value case final snap?) ...[
+            Gaps.v16,
+            _ResumeCard(snapshot: snap),
+          ],
           Gaps.v24,
           const SectionHeader(title: 'Chế độ'),
           ChoiceCard(
@@ -132,6 +138,91 @@ class _DetailBodyState extends State<_DetailBody> {
               : () =>
                     context.push(Routes.take(s.id, mode: _mode, parts: _selected.toList()..sort())),
         ),
+      ),
+    );
+  }
+}
+
+/// Bài làm dở của đề: tiếp tục đúng chế độ/Part đã chọn, hoặc bỏ để làm lại.
+class _ResumeCard extends ConsumerWidget {
+  const _ResumeCard({required this.snapshot});
+
+  final TakingSnapshot snapshot;
+
+  Future<void> _discard(BuildContext context, WidgetRef ref) async {
+    final ok = await showAppConfirmDialog(
+      context,
+      title: 'Bỏ bài làm dở?',
+      message: 'Các câu đã làm trong lượt này sẽ bị xoá.',
+      confirmLabel: 'Bỏ bài',
+      cancelLabel: 'Giữ lại',
+      destructive: true,
+    );
+    if (ok) await ref.read(inProgressStoreProvider).discard(snapshot.testId);
+  }
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final snap = snapshot;
+    final muted = context.textStyles.bodySmall?.copyWith(color: context.colors.onSurfaceVariant);
+    final clock = Fmt.clock(Duration(seconds: snap.clockSeconds));
+    return AppCard(
+      tone: AppTone.info,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              IconBadge(
+                icon: snap.isExam ? Icons.timer_outlined : Icons.lightbulb_outline_rounded,
+                size: AppSizes.badgeMd,
+              ),
+              Gaps.h12,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Đang làm dở', style: context.textStyles.titleMedium),
+                    Text(
+                      [
+                        snap.isExam ? 'Thi thử · còn $clock' : 'Luyện tập · $clock',
+                        'Part ${snap.parts.join(', ')}',
+                        'Lưu ${Fmt.dateTime(snap.savedAt.toLocal())}',
+                      ].join(' · '),
+                      style: muted,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          Gaps.v12,
+          LabeledProgress(
+            label: 'Đã làm',
+            value: snap.totalQuestions == 0 ? 0 : snap.answers.length / snap.totalQuestions,
+            trailing: '${snap.answers.length}/${snap.totalQuestions}',
+          ),
+          Gaps.v12,
+          Row(
+            children: [
+              Expanded(
+                child: OutlinedButton(
+                  onPressed: () => _discard(context, ref),
+                  child: const Text('Làm lại từ đầu'),
+                ),
+              ),
+              Gaps.h8,
+              Expanded(
+                child: FilledButton.tonalIcon(
+                  icon: const Icon(Icons.play_arrow_rounded),
+                  onPressed: () =>
+                      context.push(Routes.take(snap.testId, mode: snap.mode, parts: snap.parts)),
+                  label: const Text('Tiếp tục'),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

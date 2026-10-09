@@ -24,6 +24,8 @@ class QuestionGroupView extends StatelessWidget {
     this.isRevealed,
     this.showTranscript = false,
     this.autoPlayAudio = false,
+    this.isFlagged,
+    this.onToggleFlag,
   });
 
   final QuestionGroup group;
@@ -36,6 +38,10 @@ class QuestionGroupView extends StatelessWidget {
   final bool Function(Question q)? isRevealed;
   final bool showTranscript;
   final bool autoPlayAudio;
+
+  /// Đánh dấu câu (null = không hiện nút cờ, vd. màn xem lại)
+  final bool Function(Question q)? isFlagged;
+  final void Function(Question q)? onToggleFlag;
 
   @override
   Widget build(BuildContext context) {
@@ -81,6 +87,8 @@ class QuestionGroupView extends StatelessWidget {
             chosen: answers[q.id],
             onSelect: onSelect,
             revealed: isRevealed?.call(q) ?? false,
+            flagged: isFlagged?.call(q) ?? false,
+            onToggleFlag: onToggleFlag,
           ),
       ],
     );
@@ -93,33 +101,58 @@ class _QuestionTile extends StatelessWidget {
     required this.chosen,
     required this.onSelect,
     required this.revealed,
+    this.flagged = false,
+    this.onToggleFlag,
   });
 
   final Question question;
   final String? chosen;
   final void Function(Question q, String letter)? onSelect;
   final bool revealed;
+  final bool flagged;
+  final void Function(Question q)? onToggleFlag;
 
   @override
   Widget build(BuildContext context) {
     final q = question;
 
     return Padding(
-      padding: const EdgeInsets.only(top: AppSpacing.s12),
+      padding: EdgeInsets.zero,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text.rich(
-            TextSpan(
-              children: [
-                TextSpan(
-                  text: '${q.number}. ',
-                  style: const TextStyle(fontWeight: FontWeight.bold),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: AppSpacing.s12),
+                  child: Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: '${q.number}. ',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        if (q.content != null) TextSpan(text: q.content),
+                      ],
+                    ),
+                    style: context.textStyles.titleMedium?.copyWith(fontWeight: FontWeight.w400),
+                  ),
                 ),
-                if (q.content != null) TextSpan(text: q.content),
-              ],
-            ),
-            style: context.textStyles.titleMedium?.copyWith(fontWeight: FontWeight.w400),
+              ),
+              if (onToggleFlag != null)
+                IconButton(
+                  tooltip: flagged ? 'Bỏ đánh dấu câu ${q.number}' : 'Đánh dấu câu ${q.number}',
+                  isSelected: flagged,
+                  icon: const Icon(Icons.outlined_flag_rounded),
+                  selectedIcon: Icon(
+                    Icons.flag_rounded,
+                    color: AppTone.warning.colorsOf(context).main,
+                  ),
+                  onPressed: () => onToggleFlag!(q),
+                ),
+            ],
           ),
           Gaps.v8,
           for (final (i, letter) in q.letters.indexed)

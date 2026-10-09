@@ -19,6 +19,8 @@ import os
 import re
 import subprocess
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from collections import defaultdict
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..')
@@ -567,6 +569,8 @@ def build(test, keys):
     # ----- Part 3/4 (32–100): câu hỏi từ sách LC, lời thoại từ transcript
     lc = load_tsv('lc.tsv', lc_pages)
     lq = parse_questions(lc, 32, 100)
+    tr_path = os.path.join(WORK, 'transcripts', f'test{test:02d}.json')
+    clean_tr = json.load(open(tr_path)) if os.path.exists(tr_path) else {}
     for start in range(32, 101, 3):
         nums = [start, start + 1, start + 2]
         part = 3 if start < 71 else 4
@@ -578,7 +582,9 @@ def build(test, keys):
             qs.append({'number': n, 'answer': key.get(n, '?'), 'content': q and q['content'],
                        'options': q['options'] if q else []})
         g = {'part': part, 'questions': qs, 'audio': audio(test, f'{start}-{start + 2}', out_dir)}
-        if convo.get(start):
+        if clean_tr.get(str(start)):  # transcript dựng lại tay/agent (content/raw/ets2026/transcripts/)
+            g['transcript'] = clean_tr[str(start)]
+        elif convo.get(start):
             g['transcript'] = convo[start]
         else:
             warn.append(f'Nhóm {start}-{start + 2}: chưa lấy được transcript')
@@ -651,6 +657,18 @@ def build(test, keys):
             if explanations.get(str(q['number'])):
                 q['explanation'] = explanations[str(q['number'])]
 
+    # ----- thẻ dạng câu hỏi (tool/ets/tagging.py)
+    from tagging import tag_question
+    for g in groups:
+        first_line = (g.get('transcript') or '').split('\n')[0] if g['part'] == 2 else None
+        if g['part'] == 7 and g['questions'][-1]['number'] >= 176:
+            pass  # 176–200 luôn là nhóm nhiều văn bản
+        for q in g['questions']:
+            q['tags'] = tag_question(g['part'], q.get('content'), q.get('options'),
+                                     g.get('passage'), first_line)
+            if g['part'] == 7 and q['number'] >= 176 and 'multi-passage' not in q['tags']:
+                q['tags'].append('multi-passage')
+
     # ----- kiểm tra
     numbers = [q['number'] for g in groups for q in g['questions']]
     missing = sorted(set(range(1, 201)) - set(numbers))
@@ -704,7 +722,15 @@ def graphic(lines, first_q, pdf, out_dir, name, warn):
         if ln.used or ln.page != first_q.page:
             break
         region.append(ln)
+    col_x = {'L': (0.06, 0.47), 'R': (0.50, 0.45), 'F': (0.06, 0.88)}[first_q.col]
     if not region:
+        # Biểu đồ toàn hình (không chữ): lấy khoảng trống phía trên câu đầu, cùng cột.
+        above = [l.y for l in lines[:idx] if l.used and l.page == first_q.page and l.col == first_q.col]
+        top = (max(above) + 0.02) if above else 0.03
+        if first_q.y - top > 0.05:
+            crop(pdf, first_q.page, col_x[0], top, col_x[1], first_q.y - top - 0.004,
+                 os.path.join(out_dir, name), 170)
+            return name
         crop(pdf, first_q.page, 0.05, 0.03, 0.9, 0.94, os.path.join(out_dir, name), 130)
         warn.append(f'{name}: không định vị được biểu đồ, dùng cả trang')
         return name
@@ -714,7 +740,6 @@ def graphic(lines, first_q, pdf, out_dir, name, warn):
              and l.y < min(r.y for r in region)]
     floor = (max(above) + 0.02) if above else 0.03
     top = max(floor, min(l.y for l in region) - 0.12)
-    col_x = {'L': (0.06, 0.47), 'R': (0.50, 0.45), 'F': (0.06, 0.88)}[first_q.col]
     crop(pdf, first_q.page, col_x[0], top, col_x[1], first_q.y - top - 0.004, os.path.join(out_dir, name), 170)
     return name
 

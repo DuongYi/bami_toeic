@@ -9,13 +9,17 @@ App Flutter ôn luyện TOEIC cá nhân. Backend là Supabase (gói Free): Postg
 - **Đề thi**: làm theo Part hoặc full test. Chế độ *Luyện tập* (hiện đáp án và giải thích ngay) hoặc *Thi thử* (tính giờ, chấm khi nộp). Có audio (tua, đổi tốc độ), ảnh phóng to, transcript.
 - **Kết quả**: số câu đúng, điểm quy đổi ước tính (khi làm đủ 100 câu L/R), thống kê theo Part, xem lại từng câu.
 - **Từ vựng**: danh sách theo chủ đề, tìm kiếm, thêm/sửa/xoá. Flashcard lặp lại ngắt quãng (SM-2): Quên / Khó / Nhớ / Dễ.
-- **Tiến độ**: lịch sử làm bài, tỉ lệ đúng theo Part, Part yếu nhất.
+- **Bài làm dở**: tự lưu trên máy (mỗi 10 giây, khi chọn đáp án, khi thoát/đưa app xuống nền). Mở lại đề → *Tiếp tục* hoặc *Làm lại từ đầu*. Đánh dấu câu (cờ) để xem lại trước khi nộp.
+- **Sổ câu sai**: câu sai/bỏ trống ở lần làm gần nhất, gom theo Part và dạng câu; luyện lại, làm đúng thì câu tự ra khỏi sổ.
+- **Tiến độ**: lịch sử làm bài, tỉ lệ đúng theo Part, Part yếu nhất, dạng câu yếu nhất (từ loại, suy luận, đọc biểu đồ…).
+- **Media riêng tư**: bucket `media` không public, app dùng URL ký tạm (12 giờ).
 
 ## Cài đặt (khoảng 15 phút, làm một lần)
 
 ### 1. Tạo Supabase project
 1. Đăng ký tại https://supabase.com → **New project** (chọn region Singapore cho gần VN).
 2. **SQL Editor → New query** → dán toàn bộ `supabase/schema.sql` → **Run**.
+   Project tạo trước 10/2026: chạy thêm `supabase/migrations/002_learning_features.sql` (thẻ dạng câu, sổ câu sai, bucket riêng tư).
 3. **Authentication → Users → Add user → Create new user**: nhập email và mật khẩu, tick *Auto Confirm User*.
 4. **Authentication → Sign In / Providers**: tắt **Allow new users to sign up**. Chỉ bạn đăng nhập được.
 5. **Project Settings → API Keys**: copy *Project URL* và *Publishable key*.
@@ -34,6 +38,7 @@ Android Studio: *Run → Edit Configurations → Additional run args*: `--dart-d
 dart run tool/import_test.dart content/tests/sample_test   # đề mẫu
 ```
 Từ vựng mẫu: import `content/vocab_sample.csv` vào bảng `vocab` (xem `content/README.md`).
+Bộ từ vựng ETS 2026: `python3 tool/ets/merge_vocab.py && dart run tool/import_vocab.dart content/raw/ets2026/vocab/ets2026_all.json`.
 
 ### 4. Cài lên điện thoại
 - Android: `flutter build apk --release --dart-define-from-file=env.json`, rồi copy file `build/app/outputs/flutter-apk/app-release.apk` sang máy và cài.

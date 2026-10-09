@@ -9,6 +9,7 @@ import '../../../../helper/score.dart';
 import '../../../../routes/app_router.dart';
 import '../../../auth/presentation/controllers/auth_controller.dart';
 import '../../../vocab/presentation/controllers/vocab_controller.dart';
+import '../../data/in_progress_store.dart';
 import '../../data/models/test_models.dart';
 import '../controllers/test_providers.dart';
 
@@ -19,6 +20,8 @@ class TestListPage extends ConsumerWidget {
   Future<void> _refresh(WidgetRef ref) {
     ref
       ..invalidate(attemptsProvider)
+      ..invalidate(mistakesProvider)
+      ..invalidate(inProgressAllProvider)
       ..invalidate(vocabListProvider);
     return ref.refresh(testListProvider.future);
   }
@@ -27,6 +30,7 @@ class TestListPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final tests = ref.watch(testListProvider);
     final attempts = ref.watch(attemptsProvider).value ?? const <Attempt>[];
+    final inProgress = ref.watch(inProgressAllProvider).value ?? const {};
 
     return Scaffold(
       body: SafeArea(
@@ -64,7 +68,10 @@ class TestListPage extends ConsumerWidget {
                   for (final t in list) ...[
                     _TestCard(
                       test: t,
-                      lastAttempt: attempts.where((a) => a.testId == t.id).firstOrNull,
+                      lastAttempt: attempts
+                          .where((a) => a.testId == t.id && !a.isMistakeReview)
+                          .firstOrNull,
+                      inProgress: inProgress[t.id],
                     ),
                     Gaps.v12,
                   ],
@@ -236,6 +243,7 @@ class _QuickActions extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final vocab = ref.watch(vocabOverviewProvider).value;
+    final mistakes = ref.watch(mistakesProvider).value;
     return IntrinsicHeight(
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -252,11 +260,15 @@ class _QuickActions extends ConsumerWidget {
           Gaps.h12,
           Expanded(
             child: _QuickAction(
-              icon: Icons.insights_rounded,
-              tone: AppTone.success,
-              title: 'Tiến độ',
-              subtitle: 'Xem Part yếu',
-              onTap: () => context.go(Routes.history),
+              icon: Icons.assignment_late_outlined,
+              tone: AppTone.danger,
+              title: 'Sổ câu sai',
+              subtitle: mistakes == null
+                  ? 'Ôn câu làm sai'
+                  : mistakes.isEmpty
+                  ? 'Chưa có câu sai'
+                  : '${mistakes.length} câu cần ôn',
+              onTap: () => context.push(Routes.mistakes),
             ),
           ),
         ],
@@ -312,10 +324,11 @@ class _QuickAction extends StatelessWidget {
 }
 
 class _TestCard extends StatelessWidget {
-  const _TestCard({required this.test, this.lastAttempt});
+  const _TestCard({required this.test, this.lastAttempt, this.inProgress});
 
   final TestSummary test;
   final Attempt? lastAttempt;
+  final TakingSnapshot? inProgress;
 
   @override
   Widget build(BuildContext context) {
@@ -344,12 +357,25 @@ class _TestCard extends StatelessWidget {
                     color: context.colors.onSurfaceVariant,
                   ),
                 ),
-                if (done != null) ...[
+                if (done != null || inProgress != null) ...[
                   Gaps.v8,
-                  StatusBadge(
-                    label: 'Đã làm · $done',
-                    tone: AppTone.success,
-                    icon: Icons.check_rounded,
+                  Wrap(
+                    spacing: AppSpacing.s8,
+                    runSpacing: AppSpacing.s4,
+                    children: [
+                      if (inProgress case final p?)
+                        StatusBadge(
+                          label: 'Đang làm dở · ${p.answers.length}/${p.totalQuestions}',
+                          tone: AppTone.info,
+                          icon: Icons.pause_circle_outline_rounded,
+                        ),
+                      if (done != null)
+                        StatusBadge(
+                          label: 'Đã làm · $done',
+                          tone: AppTone.success,
+                          icon: Icons.check_rounded,
+                        ),
+                    ],
                   ),
                 ],
               ],

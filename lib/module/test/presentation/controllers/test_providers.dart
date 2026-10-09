@@ -41,3 +41,10 @@ class Attempts extends _$Attempts {
     }
   }
 }
+
+/// Sổ câu sai: câu sai/bỏ trống ở lần trả lời gần nhất.
+@riverpod
+Future<List<LatestAnswer>> mistakes(Ref ref) => ref.watch(testRepositoryProvider).fetchMistakes();
+
+@riverpod
+Future<List<TagStat>> tagStats(Ref ref) => ref.watch(testRepositoryProvider).fetchTagStats();

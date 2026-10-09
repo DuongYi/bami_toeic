@@ -47,7 +47,7 @@ Future<void> _sync(SupabaseClient db, String dir, bool dryRun) async {
   final testId = test['id'] as String;
   final rows = await db
       .from('questions')
-      .select('id, number, group_id, content, options, explanation')
+      .select('id, number, group_id, content, options, explanation, tags')
       .eq('test_id', testId);
   final byNumber = {for (final r in rows) r['number'] as int: r};
   final groupRows = await db
@@ -81,6 +81,9 @@ Future<void> _sync(SupabaseClient db, String dir, bool dryRun) async {
         patch['options'] = q['options'] ?? [];
       }
       if (q['explanation'] != remote['explanation']) patch['explanation'] = q['explanation'];
+      if (q['tags'] != null && jsonEncode(q['tags']) != jsonEncode(remote['tags'] ?? [])) {
+        patch['tags'] = q['tags'];
+      }
       if (patch.isEmpty) continue;
       qChanged++;
       if (!dryRun) await db.from('questions').update(patch).eq('id', remote['id'] as String);

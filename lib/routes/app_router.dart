@@ -8,6 +8,8 @@ import '../module/auth/presentation/pages/login_page.dart';
 import '../module/auth/presentation/pages/splash_page.dart';
 import '../module/history/presentation/pages/history_page.dart';
 import '../module/shell/home_shell.dart';
+import '../module/test/presentation/controllers/test_taking_controller.dart';
+import '../module/test/presentation/pages/mistakes_page.dart';
 import '../module/test/presentation/pages/result_page.dart';
 import '../module/test/presentation/pages/test_detail_page.dart';
 import '../module/test/presentation/pages/test_list_page.dart';
@@ -24,10 +26,15 @@ abstract final class Routes {
   static const vocab = '/vocab';
   static const history = '/history';
   static const designSystem = '/design-system';
+  static const mistakes = '/mistakes';
 
   static String testDetail(String id) => '/tests/$id';
   static String take(String testId, {required String mode, required List<int> parts}) =>
       '/take/$testId?mode=$mode&parts=${parts.join(',')}';
+
+  /// Luyện sổ câu sai; [filter]: "all" | "part:5" | "tag:word-form".
+  static String takeMistakes({String filter = 'all'}) =>
+      '/take/$kMistakesSession?mode=practice&parts=${Uri.encodeQueryComponent(filter)}';
   static String result(String attemptId) => '/result/$attemptId';
   static String flashcards({String? topic}) =>
       topic == null ? '/flashcards' : '/flashcards?topic=${Uri.encodeQueryComponent(topic)}';
@@ -90,6 +97,7 @@ GoRouter router(Ref ref) {
           parts: s.uri.queryParameters['parts'] ?? '1,2,3,4,5,6,7',
         ),
       ),
+      GoRoute(path: Routes.mistakes, builder: (_, _) => const MistakesPage()),
       GoRoute(
         path: '/result/:attemptId',
         builder: (_, s) => ResultPage(attemptId: s.pathParameters['attemptId']!),

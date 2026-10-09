@@ -71,6 +71,7 @@ abstract final class AppSizes {
   /// Chiều cao nút hành động chính (CTA).
   static const double buttonLarge = 52;
 
+  static const double iconXs = 12;
   static const double iconSm = 18;
   static const double iconMd = 24;
   static const double iconLg = 32;

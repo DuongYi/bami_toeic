@@ -198,6 +198,7 @@ class _NumbersDemo extends StatelessWidget {
             const NumberCell(number: 1),
             const NumberCell(number: 2, filled: true),
             const NumberCell(number: 3, current: true),
+            const NumberCell(number: 7, filled: true, flagged: true),
             const NumberCell(number: 4, tone: AppTone.success),
             const NumberCell(number: 5, tone: AppTone.danger),
             const NumberCell(number: 6, tone: AppTone.neutral),

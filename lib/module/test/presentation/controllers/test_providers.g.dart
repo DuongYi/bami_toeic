@@ -262,3 +262,79 @@ abstract class _$Attempts extends $AsyncNotifier<List<Attempt>> {
     return element.handleCreate(ref, build);
   }
 }
+
+/// Sổ câu sai: câu sai/bỏ trống ở lần trả lời gần nhất.
+
+@ProviderFor(mistakes)
+final mistakesProvider = MistakesProvider._();
+
+/// Sổ câu sai: câu sai/bỏ trống ở lần trả lời gần nhất.
+
+final class MistakesProvider
+    extends
+        $FunctionalProvider<
+          AsyncValue<List<LatestAnswer>>,
+          List<LatestAnswer>,
+          FutureOr<List<LatestAnswer>>
+        >
+    with $FutureModifier<List<LatestAnswer>>, $FutureProvider<List<LatestAnswer>> {
+  /// Sổ câu sai: câu sai/bỏ trống ở lần trả lời gần nhất.
+  MistakesProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'mistakesProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$mistakesHash();
+
+  @$internal
+  @override
+  $FutureProviderElement<List<LatestAnswer>> $createElement($ProviderPointer pointer) =>
+      $FutureProviderElement(pointer);
+
+  @override
+  FutureOr<List<LatestAnswer>> create(Ref ref) {
+    return mistakes(ref);
+  }
+}
+
+String _$mistakesHash() => r'63dd4e000d91753c4fa354a5f55e409db2ab925d';
+
+@ProviderFor(tagStats)
+final tagStatsProvider = TagStatsProvider._();
+
+final class TagStatsProvider
+    extends $FunctionalProvider<AsyncValue<List<TagStat>>, List<TagStat>, FutureOr<List<TagStat>>>
+    with $FutureModifier<List<TagStat>>, $FutureProvider<List<TagStat>> {
+  TagStatsProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'tagStatsProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$tagStatsHash();
+
+  @$internal
+  @override
+  $FutureProviderElement<List<TagStat>> $createElement($ProviderPointer pointer) =>
+      $FutureProviderElement(pointer);
+
+  @override
+  FutureOr<List<TagStat>> create(Ref ref) {
+    return tagStats(ref);
+  }
+}
+
+String _$tagStatsHash() => r'2e3d7b7351fb80fafef116679ea1f3e70cb09015';

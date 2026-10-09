@@ -9,6 +9,7 @@ import '../../../../helper/format.dart';
 import '../../../../helper/score.dart';
 import '../../../../routes/app_router.dart';
 import '../../../test/data/models/test_models.dart';
+import '../../../test/data/question_tags.dart';
 import '../../../test/presentation/controllers/test_providers.dart';
 import '../../../test/presentation/widgets/question_group_view.dart';
 
@@ -16,7 +17,9 @@ class HistoryPage extends ConsumerWidget {
   const HistoryPage({super.key});
 
   Future<void> _refresh(WidgetRef ref) {
-    ref.invalidate(partStatsProvider);
+    ref
+      ..invalidate(partStatsProvider)
+      ..invalidate(tagStatsProvider);
     return ref.refresh(attemptsProvider.future);
   }
 
@@ -24,6 +27,7 @@ class HistoryPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final attempts = ref.watch(attemptsProvider);
     final stats = ref.watch(partStatsProvider);
+    final tagStats = ref.watch(tagStatsProvider);
     return Scaffold(
       body: SafeArea(
         bottom: false,
@@ -47,8 +51,13 @@ class HistoryPage extends ConsumerWidget {
                       Gaps.v16,
                       if (stats.value case final s? when s.isNotEmpty) ...[
                         _PartAccuracy(stats: s),
-                        Gaps.v24,
+                        Gaps.v16,
                       ],
+                      if (tagStats.value case final t? when t.isNotEmpty) ...[
+                        _TagAccuracy(stats: t),
+                        Gaps.v16,
+                      ],
+                      Gaps.v8,
                       SectionHeader(
                         title: 'Lịch sử làm bài',
                         subtitle: 'Vuốt trái hoặc nhấn giữ để xoá',
@@ -148,6 +157,48 @@ class _PartAccuracy extends StatelessWidget {
   }
 }
 
+/// Dạng câu yếu nhất (chỉ tính dạng đã làm ≥ 5 câu để tránh nhiễu).
+class _TagAccuracy extends StatelessWidget {
+  const _TagAccuracy({required this.stats});
+
+  final List<TagStat> stats;
+
+  static const _minAnswered = 5;
+  static const _shown = 6;
+
+  @override
+  Widget build(BuildContext context) {
+    final enough = stats.where((s) => s.total >= _minAnswered).toList()
+      ..sort((a, b) => a.accuracy.compareTo(b.accuracy));
+    if (enough.isEmpty) return const SizedBox.shrink();
+    return AppCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SectionHeader(
+            title: 'Dạng câu cần cải thiện',
+            subtitle: 'Thấp nhất: ${tagLabel(enough.first.tag)}',
+            trailing: TextButton(
+              onPressed: () => context.push(Routes.mistakes),
+              child: const Text('Sổ câu sai'),
+            ),
+          ),
+          Gaps.v4,
+          for (final s in enough.take(_shown))
+            Padding(
+              padding: const EdgeInsets.only(bottom: AppSpacing.s12),
+              child: LabeledProgress(
+                label: tagLabel(s.tag),
+                value: s.accuracy,
+                trailing: '${s.correct}/${s.total} · ${Fmt.percent(s.accuracy)}',
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+}
+
 class _AttemptTile extends ConsumerWidget {
   const _AttemptTile({required this.attempt});
 
@@ -202,12 +253,25 @@ class _AttemptTile extends ConsumerWidget {
         onDismissed: (_) => _delete(context, ref),
         child: ListTile(
           leading: IconBadge(
-            icon: a.isExam ? Icons.timer_outlined : Icons.lightbulb_outline_rounded,
-            tone: a.isExam ? AppTone.info : AppTone.warning,
+            icon: a.isMistakeReview
+                ? Icons.assignment_late_outlined
+                : a.isExam
+                ? Icons.timer_outlined
+                : Icons.lightbulb_outline_rounded,
+            tone: a.isMistakeReview
+                ? AppTone.danger
+                : a.isExam
+                ? AppTone.info
+                : AppTone.warning,
           ),
           title: Text(a.testTitle, maxLines: 1, overflow: TextOverflow.ellipsis),
           subtitle: Text(
-            '${Fmt.dateTime(a.finishedAt)} · ${a.isExam ? 'Thi thử' : 'Luyện tập'}\n'
+            '${Fmt.dateTime(a.finishedAt)} · '
+            '${a.isMistakeReview
+                ? 'Ôn câu sai'
+                : a.isExam
+                ? 'Thi thử'
+                : 'Luyện tập'}\n'
             'Part ${a.parts.join(', ')} · ${a.duration.inMinutes} phút',
           ),
           isThreeLine: true,
