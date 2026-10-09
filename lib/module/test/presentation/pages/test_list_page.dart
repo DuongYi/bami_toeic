@@ -592,7 +592,11 @@ class _QuickActions extends ConsumerWidget {
                   icon: Icons.style_rounded,
                   tone: AppTone.warning,
                   title: 'Ôn từ vựng',
-                  subtitle: vocab == null ? 'Flashcard SRS' : '${vocab.sessionSize} từ hôm nay',
+                  subtitle: switch (vocab) {
+                    null => 'Flashcard SRS',
+                    final v when v.doneToday => 'Xong hôm nay',
+                    final v => '${v.todayCount} thẻ hôm nay',
+                  },
                   onTap: () => context.go(Routes.vocab),
                 ),
               ),

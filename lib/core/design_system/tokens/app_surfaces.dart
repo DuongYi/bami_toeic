@@ -81,7 +81,8 @@ class AppSurfaces extends ThemeExtension<AppSurfaces> {
   }
 }
 
-/// Font chữ của app: Be Vietnam Pro (thiết kế cho tiếng Việt, SIL OFL).
+/// Font chữ của app: Manrope (đủ dấu tiếng Việt, độ đậm 200–800, SIL OFL).
+/// Ký tự phiên âm IPA thiếu trong font → máy tự lấy font hệ thống để hiển thị.
 abstract final class AppTypography {
-  static const fontFamily = 'BeVietnamPro';
+  static const fontFamily = 'Manrope';
 }

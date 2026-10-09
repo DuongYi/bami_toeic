@@ -4,6 +4,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../core/design_system/gallery/ds_gallery_page.dart';
 import '../module/auth/presentation/controllers/auth_controller.dart';
+import '../module/auth/presentation/pages/forgot_password_page.dart';
 import '../module/auth/presentation/pages/login_page.dart';
 import '../module/auth/presentation/pages/splash_page.dart';
 import '../module/debug/presentation/pages/log_viewer_page.dart';
@@ -19,7 +20,10 @@ import '../module/test/presentation/pages/result_page.dart';
 import '../module/test/presentation/pages/test_detail_page.dart';
 import '../module/test/presentation/pages/test_list_page.dart';
 import '../module/test/presentation/pages/test_taking_page.dart';
+import '../module/vocab/data/practice.dart';
 import '../module/vocab/presentation/pages/flashcard_page.dart';
+import '../module/vocab/presentation/pages/practice_page.dart';
+import '../module/vocab/presentation/pages/vocab_words_page.dart';
 import '../module/vocab/presentation/pages/vocab_page.dart';
 
 part 'app_router.g.dart';
@@ -27,6 +31,7 @@ part 'app_router.g.dart';
 abstract final class Routes {
   static const splash = '/splash';
   static const login = '/login';
+  static const forgotPasswordPath = '/forgot-password';
   static const tests = '/tests';
   static const vocab = '/vocab';
   static const history = '/history';
@@ -37,6 +42,9 @@ abstract final class Routes {
   static const listening = '/listening';
   static const debugLogs = '/debug/logs';
 
+  static String forgotPassword({String? email}) => email == null || email.isEmpty
+      ? forgotPasswordPath
+      : '$forgotPasswordPath?email=${Uri.encodeQueryComponent(email)}';
   static String testDetail(String id) => '/tests/$id';
   static String take(String testId, {required String mode, required List<int> parts}) =>
       '/take/$testId?mode=$mode&parts=${parts.join(',')}';
@@ -46,8 +54,19 @@ abstract final class Routes {
       '/take/$kMistakesSession?mode=practice&parts=${Uri.encodeQueryComponent(filter)}';
   static String dictation(String testId, {required int part}) => '/listening/$testId?part=$part';
   static String result(String attemptId) => '/result/$attemptId';
-  static String flashcards({String? topic}) =>
-      topic == null ? '/flashcards' : '/flashcards?topic=${Uri.encodeQueryComponent(topic)}';
+  /// Bỏ "?" thừa khi không có tham số.
+  static String _path(String path, Map<String, String> query) =>
+      Uri(path: path, queryParameters: query.isEmpty ? null : query).toString();
+
+  static String flashcards({String? deck, int extra = 0}) =>
+      _path('/flashcards', {'deck': ?deck, if (extra > 0) 'extra': '$extra'});
+
+  /// Danh sách từ của bộ [deck] ("topic:Office" / "test:3"); null = cả kho.
+  static String vocabWords({String? deck}) => _path('/vocab-words', {'deck': ?deck});
+
+  /// Luyện chủ động; [retry]: id các từ sai cần luyện lại (cách nhau dấu phẩy).
+  static String vocabPractice(String mode, {String? retry}) =>
+      _path('/vocab-practice', {'mode': mode, 'retry': ?retry});
 }
 
 @Riverpod(keepAlive: true)
@@ -69,13 +88,19 @@ GoRouter router(Ref ref) {
       // Đang khôi phục phiên từ secure storage
       if (!auth.hasValue) return loc == Routes.splash ? null : Routes.splash;
       final loggedIn = auth.value != null;
-      if (!loggedIn) return loc == Routes.login ? null : Routes.login;
-      if (loc == Routes.login || loc == Routes.splash) return Routes.tests;
+      final authPage = loc == Routes.login || loc == Routes.forgotPasswordPath;
+      if (!loggedIn) return authPage ? null : Routes.login;
+      // Đăng nhập / đặt lại mật khẩu xong → vào app
+      if (authPage || loc == Routes.splash) return Routes.tests;
       return null;
     },
     routes: [
       GoRoute(path: Routes.splash, builder: (_, _) => const SplashPage()),
       GoRoute(path: Routes.login, builder: (_, _) => const LoginPage()),
+      GoRoute(
+        path: Routes.forgotPasswordPath,
+        builder: (_, s) => ForgotPasswordPage(initialEmail: s.uri.queryParameters['email']),
+      ),
       StatefulShellRoute.indexedStack(
         builder: (_, _, shell) => HomeShell(shell: shell),
         branches: [
@@ -136,7 +161,22 @@ GoRouter router(Ref ref) {
       if (kDebugMode) GoRoute(path: Routes.designSystem, builder: (_, _) => const DsGalleryPage()),
       GoRoute(
         path: '/flashcards',
-        builder: (_, s) => FlashcardPage(topic: s.uri.queryParameters['topic']),
+        builder: (_, s) => FlashcardPage(
+          deckKey: s.uri.queryParameters['deck'],
+          extraNew: int.tryParse(s.uri.queryParameters['extra'] ?? '') ?? 0,
+        ),
+      ),
+      GoRoute(
+        path: '/vocab-words',
+        builder: (_, s) => VocabWordsPage(deckKey: s.uri.queryParameters['deck']),
+      ),
+      GoRoute(
+        path: '/vocab-practice',
+        builder: (_, s) => PracticePage(
+          mode: PracticeMode.values.asNameMap()[s.uri.queryParameters['mode']] ??
+              PracticeMode.meaning,
+          retryIds: s.uri.queryParameters['retry'] ?? '',
+        ),
       ),
     ],
   );

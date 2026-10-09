@@ -54,22 +54,22 @@ final class SessionRandomProvider
 
 String _$sessionRandomHash() => r'eede9748a6ed1a185db870d83fcff9b3381d023b';
 
-/// Toàn bộ từ vựng + thao tác thêm/sửa/xoá.
+/// Toàn bộ kho từ + lịch ôn của user. Giữ trong bộ nhớ (hơn 1000 từ) – làm mới khi cần.
 
 @ProviderFor(VocabList)
 final vocabListProvider = VocabListProvider._();
 
-/// Toàn bộ từ vựng + thao tác thêm/sửa/xoá.
+/// Toàn bộ kho từ + lịch ôn của user. Giữ trong bộ nhớ (hơn 1000 từ) – làm mới khi cần.
 final class VocabListProvider
     extends $AsyncNotifierProvider<VocabList, List<VocabItem>> {
-  /// Toàn bộ từ vựng + thao tác thêm/sửa/xoá.
+  /// Toàn bộ kho từ + lịch ôn của user. Giữ trong bộ nhớ (hơn 1000 từ) – làm mới khi cần.
   VocabListProvider._()
     : super(
         from: null,
         argument: null,
         retry: null,
         name: r'vocabListProvider',
-        isAutoDispose: true,
+        isAutoDispose: false,
         dependencies: null,
         $allTransitiveDependencies: null,
       );
@@ -82,9 +82,9 @@ final class VocabListProvider
   VocabList create() => VocabList();
 }
 
-String _$vocabListHash() => r'fe84cdadc0058f0605568d0626a84a5f6752fe73';
+String _$vocabListHash() => r'4f195d84853ef21e1eff540defdd4925656cb618';
 
-/// Toàn bộ từ vựng + thao tác thêm/sửa/xoá.
+/// Toàn bộ kho từ + lịch ôn của user. Giữ trong bộ nhớ (hơn 1000 từ) – làm mới khi cần.
 
 abstract class _$VocabList extends $AsyncNotifier<List<VocabItem>> {
   FutureOr<List<VocabItem>> build();
@@ -104,51 +104,49 @@ abstract class _$VocabList extends $AsyncNotifier<List<VocabItem>> {
   }
 }
 
-@ProviderFor(VocabFilter)
-final vocabFilterProvider = VocabFilterProvider._();
+/// Bộ từ đang học (lưu trên máy). null = học từ mọi bộ theo thứ tự đề.
 
-final class VocabFilterProvider
-    extends $NotifierProvider<VocabFilter, VocabFilterState> {
-  VocabFilterProvider._()
+@ProviderFor(CurrentDeck)
+final currentDeckProvider = CurrentDeckProvider._();
+
+/// Bộ từ đang học (lưu trên máy). null = học từ mọi bộ theo thứ tự đề.
+final class CurrentDeckProvider
+    extends $AsyncNotifierProvider<CurrentDeck, VocabDeck?> {
+  /// Bộ từ đang học (lưu trên máy). null = học từ mọi bộ theo thứ tự đề.
+  CurrentDeckProvider._()
     : super(
         from: null,
         argument: null,
         retry: null,
-        name: r'vocabFilterProvider',
-        isAutoDispose: true,
+        name: r'currentDeckProvider',
+        isAutoDispose: false,
         dependencies: null,
         $allTransitiveDependencies: null,
       );
 
   @override
-  String debugGetCreateSourceHash() => _$vocabFilterHash();
+  String debugGetCreateSourceHash() => _$currentDeckHash();
 
   @$internal
   @override
-  VocabFilter create() => VocabFilter();
-
-  /// {@macro riverpod.override_with_value}
-  Override overrideWithValue(VocabFilterState value) {
-    return $ProviderOverride(
-      origin: this,
-      providerOverride: $SyncValueProvider<VocabFilterState>(value),
-    );
-  }
+  CurrentDeck create() => CurrentDeck();
 }
 
-String _$vocabFilterHash() => r'cbcfdee1a952c56c62468e294baddb8f5b3198cf';
+String _$currentDeckHash() => r'1bff546dcba5135b26e8100cd4618dec6ce00c39';
 
-abstract class _$VocabFilter extends $Notifier<VocabFilterState> {
-  VocabFilterState build();
+/// Bộ từ đang học (lưu trên máy). null = học từ mọi bộ theo thứ tự đề.
+
+abstract class _$CurrentDeck extends $AsyncNotifier<VocabDeck?> {
+  FutureOr<VocabDeck?> build();
   @$mustCallSuper
   @override
   WhenComplete runBuild() {
-    final ref = this.ref as $Ref<VocabFilterState, VocabFilterState>;
+    final ref = this.ref as $Ref<AsyncValue<VocabDeck?>, VocabDeck?>;
     final element =
         ref.element
             as $ClassProviderElement<
-              AnyNotifier<VocabFilterState, VocabFilterState>,
-              VocabFilterState,
+              AnyNotifier<AsyncValue<VocabDeck?>, VocabDeck?>,
+              AsyncValue<VocabDeck?>,
               Object?,
               Object?
             >;
@@ -156,22 +154,17 @@ abstract class _$VocabFilter extends $Notifier<VocabFilterState> {
   }
 }
 
-/// Dữ liệu dẫn xuất cho màn danh sách; tự tính lại khi list hoặc bộ lọc đổi.
-
 @ProviderFor(vocabOverview)
 final vocabOverviewProvider = VocabOverviewProvider._();
-
-/// Dữ liệu dẫn xuất cho màn danh sách; tự tính lại khi list hoặc bộ lọc đổi.
 
 final class VocabOverviewProvider
     extends
         $FunctionalProvider<
           AsyncValue<VocabOverview>,
-          AsyncValue<VocabOverview>,
-          AsyncValue<VocabOverview>
+          VocabOverview,
+          FutureOr<VocabOverview>
         >
-    with $Provider<AsyncValue<VocabOverview>> {
-  /// Dữ liệu dẫn xuất cho màn danh sách; tự tính lại khi list hoặc bộ lọc đổi.
+    with $FutureModifier<VocabOverview>, $FutureProvider<VocabOverview> {
   VocabOverviewProvider._()
     : super(
         from: null,
@@ -188,22 +181,14 @@ final class VocabOverviewProvider
 
   @$internal
   @override
-  $ProviderElement<AsyncValue<VocabOverview>> $createElement(
+  $FutureProviderElement<VocabOverview> $createElement(
     $ProviderPointer pointer,
-  ) => $ProviderElement(pointer);
+  ) => $FutureProviderElement(pointer);
 
   @override
-  AsyncValue<VocabOverview> create(Ref ref) {
+  FutureOr<VocabOverview> create(Ref ref) {
     return vocabOverview(ref);
-  }
-
-  /// {@macro riverpod.override_with_value}
-  Override overrideWithValue(AsyncValue<VocabOverview> value) {
-    return $ProviderOverride(
-      origin: this,
-      providerOverride: $SyncValueProvider<AsyncValue<VocabOverview>>(value),
-    );
   }
 }
 
-String _$vocabOverviewHash() => r'2d6e4310f42a2faf2babc0394ddac165d1df5fe9';
+String _$vocabOverviewHash() => r'820cda17276bfff110f1442a1eebb9e98a4712fc';

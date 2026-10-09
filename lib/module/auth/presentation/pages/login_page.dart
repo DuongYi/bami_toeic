@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../core/design_system/design_system.dart';
 import '../../../../core/network/app_exception.dart';
+import '../../../../routes/app_router.dart';
 import '../controllers/login_controller.dart';
 
 final _emailPattern = RegExp(r'^[^@\s]+@[^@\s]+\.[^@\s]+$');
@@ -198,13 +200,11 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                               Align(
                                 alignment: Alignment.centerRight,
                                 child: TextButton(
-                                  onPressed: () {
-                                    showAppSnackBar(
-                                      context,
-                                      'Vui lòng liên hệ ban quản trị để cấp lại mật khẩu.',
-                                      tone: AppTone.info,
-                                    );
-                                  },
+                                  onPressed: loading
+                                      ? null
+                                      : () => context.push(
+                                          Routes.forgotPassword(email: _email.text.trim()),
+                                        ),
                                   child: const Text('Quên mật khẩu?'),
                                 ),
                               ),

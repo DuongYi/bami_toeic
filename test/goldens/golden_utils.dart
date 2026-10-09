@@ -13,10 +13,12 @@ Future<void> loadAppFonts() async {
     roboto.addFont(read(f));
   }
   await roboto.load();
-  final bvp = FontLoader('BeVietnamPro');
-  for (final w in ['Regular', 'Medium', 'SemiBold', 'Bold']) {
-    bvp.addFont(File('assets/fonts/BeVietnamPro-$w.ttf').readAsBytes().then(ByteData.sublistView));
+  final manrope = FontLoader('Manrope');
+  for (final w in ['ExtraLight', 'Light', 'Regular', 'Medium', 'SemiBold', 'Bold', 'ExtraBold']) {
+    manrope.addFont(
+      File('assets/fonts/manrope/Manrope-$w.ttf').readAsBytes().then(ByteData.sublistView),
+    );
   }
-  await bvp.load();
+  await manrope.load();
   await (FontLoader('MaterialIcons')..addFont(read('MaterialIcons-Regular.otf'))).load();
 }

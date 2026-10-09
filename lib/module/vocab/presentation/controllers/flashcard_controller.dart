@@ -5,6 +5,7 @@ import '../../../../helper/srs.dart';
 import '../../../auth/presentation/controllers/auth_controller.dart';
 import '../../../goals/data/study_store.dart';
 import '../../data/models/vocab_models.dart';
+import '../../data/vocab_decks.dart';
 import '../../data/vocab_repository.dart';
 import 'vocab_controller.dart';
 
@@ -28,16 +29,31 @@ abstract class FlashcardState with _$FlashcardState {
   int get total => done + queue.length;
 }
 
+/// Phiên flashcard. [deckKey]: bộ lấy từ mới (null = bộ đang học);
+/// [extraNew] > 0: "Học thêm" đúng chừng ấy từ mới, bỏ qua chỉ tiêu ngày.
 @riverpod
 class FlashcardSession extends _$FlashcardSession {
   @override
-  Future<FlashcardState> build(String? topic) async {
-    // Lấy dữ liệu mới nhất 1 lần; không watch để phiên học không bị reset giữa chừng.
-    final all = await ref.read(vocabRepositoryProvider).fetchAll();
-    final items = topic == null ? all : all.where((v) => v.topic == topic).toList();
-    return FlashcardState(
-      queue: buildSession(items, DateTime.now(), ref.read(sessionRandomProvider)),
+  Future<FlashcardState> build(String? deckKey, int extraNew) async {
+    // Đọc 1 lần, không watch: phiên học không bị dựng lại giữa chừng khi lưu tiến độ.
+    final items = await ref.read(vocabListProvider.future);
+    final deck = deckKey == null
+        ? await ref.read(currentDeckProvider.future)
+        : VocabDeck.parse(deckKey);
+    final now = DateTime.now();
+    // watch (không read): goalSettings là autoDispose – read `.future` thì provider bị huỷ
+    // ngay và future không bao giờ xong. Màn Từ vựng thường đã tải sẵn nên không tốn thêm.
+    final dailyNew = (await ref.watch(goalSettingsProvider.future)).dailyWords;
+    final newLimit = extraNew > 0 ? extraNew : newQuotaLeft(items, now, dailyNew);
+    final queue = buildSession(
+      items,
+      now,
+      deck: deck,
+      newLimit: newLimit,
+      random: ref.read(sessionRandomProvider),
     );
+    // Học thêm: chỉ từ mới, không lặp lại phần ôn đã làm.
+    return FlashcardState(queue: extraNew > 0 ? queue.where((v) => v.isNew).toList() : queue);
   }
 
   void flip() {

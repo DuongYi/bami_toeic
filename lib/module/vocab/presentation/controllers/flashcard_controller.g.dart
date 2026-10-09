@@ -8,15 +8,21 @@ part of 'flashcard_controller.dart';
 
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, type=warning
+/// Phiên flashcard. [deckKey]: bộ lấy từ mới (null = bộ đang học);
+/// [extraNew] > 0: "Học thêm" đúng chừng ấy từ mới, bỏ qua chỉ tiêu ngày.
 
 @ProviderFor(FlashcardSession)
 final flashcardSessionProvider = FlashcardSessionFamily._();
 
+/// Phiên flashcard. [deckKey]: bộ lấy từ mới (null = bộ đang học);
+/// [extraNew] > 0: "Học thêm" đúng chừng ấy từ mới, bỏ qua chỉ tiêu ngày.
 final class FlashcardSessionProvider
     extends $AsyncNotifierProvider<FlashcardSession, FlashcardState> {
+  /// Phiên flashcard. [deckKey]: bộ lấy từ mới (null = bộ đang học);
+  /// [extraNew] > 0: "Học thêm" đúng chừng ấy từ mới, bỏ qua chỉ tiêu ngày.
   FlashcardSessionProvider._({
     required FlashcardSessionFamily super.from,
-    required String? super.argument,
+    required (String?, int) super.argument,
   }) : super(
          retry: null,
          name: r'flashcardSessionProvider',
@@ -32,7 +38,7 @@ final class FlashcardSessionProvider
   String toString() {
     return r'flashcardSessionProvider'
         ''
-        '($argument)';
+        '$argument';
   }
 
   @$internal
@@ -50,7 +56,10 @@ final class FlashcardSessionProvider
   }
 }
 
-String _$flashcardSessionHash() => r'5d3145baa57c2f0ccd1383032bb0d21365a1d359';
+String _$flashcardSessionHash() => r'b074120ded6c343b6c01f14238d65f4fcc11ade5';
+
+/// Phiên flashcard. [deckKey]: bộ lấy từ mới (null = bộ đang học);
+/// [extraNew] > 0: "Học thêm" đúng chừng ấy từ mới, bỏ qua chỉ tiêu ngày.
 
 final class FlashcardSessionFamily extends $Family
     with
@@ -59,7 +68,7 @@ final class FlashcardSessionFamily extends $Family
           AsyncValue<FlashcardState>,
           FlashcardState,
           FutureOr<FlashcardState>,
-          String?
+          (String?, int)
         > {
   FlashcardSessionFamily._()
     : super(
@@ -70,18 +79,25 @@ final class FlashcardSessionFamily extends $Family
         isAutoDispose: true,
       );
 
-  FlashcardSessionProvider call(String? topic) =>
-      FlashcardSessionProvider._(argument: topic, from: this);
+  /// Phiên flashcard. [deckKey]: bộ lấy từ mới (null = bộ đang học);
+  /// [extraNew] > 0: "Học thêm" đúng chừng ấy từ mới, bỏ qua chỉ tiêu ngày.
+
+  FlashcardSessionProvider call(String? deckKey, int extraNew) =>
+      FlashcardSessionProvider._(argument: (deckKey, extraNew), from: this);
 
   @override
   String toString() => r'flashcardSessionProvider';
 }
 
-abstract class _$FlashcardSession extends $AsyncNotifier<FlashcardState> {
-  late final _$args = ref.$arg as String?;
-  String? get topic => _$args;
+/// Phiên flashcard. [deckKey]: bộ lấy từ mới (null = bộ đang học);
+/// [extraNew] > 0: "Học thêm" đúng chừng ấy từ mới, bỏ qua chỉ tiêu ngày.
 
-  FutureOr<FlashcardState> build(String? topic);
+abstract class _$FlashcardSession extends $AsyncNotifier<FlashcardState> {
+  late final _$args = ref.$arg as (String?, int);
+  String? get deckKey => _$args.$1;
+  int get extraNew => _$args.$2;
+
+  FutureOr<FlashcardState> build(String? deckKey, int extraNew);
   @$mustCallSuper
   @override
   WhenComplete runBuild() {
@@ -94,6 +110,6 @@ abstract class _$FlashcardSession extends $AsyncNotifier<FlashcardState> {
               Object?,
               Object?
             >;
-    return element.handleCreate(ref, () => build(_$args));
+    return element.handleCreate(ref, () => build(_$args.$1, _$args.$2));
   }
 }

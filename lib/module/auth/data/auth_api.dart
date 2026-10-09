@@ -23,6 +23,25 @@ abstract class AuthApi {
   @Extra({AuthInterceptor.skipAuth: true})
   Future<dynamic> signUp(@Body() Map<String, dynamic> body);
 
+  /// Gửi email đặt lại mật khẩu (template "Reset Password" cần có {{ .Token }} để hiện mã).
+  /// Email không tồn tại vẫn trả 200 – không lộ ai đã đăng ký.
+  @POST('/auth/v1/recover')
+  @Extra({AuthInterceptor.skipAuth: true})
+  Future<void> recover(@Body() Map<String, dynamic> body);
+
+  /// Đổi mã OTP lấy phiên (type = 'recovery').
+  @POST('/auth/v1/verify')
+  @Extra({AuthInterceptor.skipAuth: true})
+  Future<Session> verifyOtp(@Body() Map<String, dynamic> body);
+
+  /// Đổi mật khẩu bằng token truyền tay: phiên chỉ được lưu sau khi đổi xong.
+  @PUT('/auth/v1/user')
+  @Extra({AuthInterceptor.skipAuth: true})
+  Future<void> updatePassword(
+    @Header('Authorization') String bearer,
+    @Body() Map<String, dynamic> body,
+  );
+
   /// Xoá vĩnh viễn tài khoản hiện tại và toàn bộ dữ liệu học (hàm SQL delete_my_account).
   @POST('/rest/v1/rpc/delete_my_account')
   Future<void> deleteAccount();

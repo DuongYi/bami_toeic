@@ -31,6 +31,17 @@ class AuthController extends _$AuthController {
     return true;
   }
 
+  Future<void> resetPassword({
+    required String email,
+    required String code,
+    required String password,
+  }) async {
+    final session = await ref
+        .read(authRepositoryProvider)
+        .resetPassword(email: email, code: code, password: password);
+    state = AsyncData(session);
+  }
+
   Future<void> deleteAccount() async {
     await ref.read(authRepositoryProvider).deleteAccount();
     await ref.read(studyStoreProvider).onSignOut();

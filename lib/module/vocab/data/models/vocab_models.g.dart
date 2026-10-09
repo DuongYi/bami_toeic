@@ -15,6 +15,7 @@ Map<String, dynamic> _$VocabInputToJson(VocabInput instance) =>
       'example': instance.example,
       'example_meaning': instance.exampleMeaning,
       'topic': instance.topic,
+      'source': instance.source,
     };
 
 Map<String, dynamic> _$VocabReviewUpsertToJson(VocabReviewUpsert instance) =>
@@ -26,6 +27,7 @@ Map<String, dynamic> _$VocabReviewUpsertToJson(VocabReviewUpsert instance) =>
       'repetitions': instance.repetitions,
       'due_at': instance.dueAt.toIso8601String(),
       'last_reviewed_at': instance.lastReviewedAt.toIso8601String(),
+      'known': instance.known,
     };
 
 _VocabReview _$VocabReviewFromJson(Map<String, dynamic> json) => _VocabReview(
@@ -33,6 +35,10 @@ _VocabReview _$VocabReviewFromJson(Map<String, dynamic> json) => _VocabReview(
   intervalDays: (json['interval_days'] as num).toInt(),
   repetitions: (json['repetitions'] as num).toInt(),
   dueAt: DateTime.parse(json['due_at'] as String),
+  known: json['known'] as bool? ?? false,
+  learnedAt: json['learned_at'] == null
+      ? null
+      : DateTime.parse(json['learned_at'] as String),
 );
 
 Map<String, dynamic> _$VocabReviewToJson(_VocabReview instance) =>
@@ -41,6 +47,8 @@ Map<String, dynamic> _$VocabReviewToJson(_VocabReview instance) =>
       'interval_days': instance.intervalDays,
       'repetitions': instance.repetitions,
       'due_at': instance.dueAt.toIso8601String(),
+      'known': instance.known,
+      'learned_at': instance.learnedAt?.toIso8601String(),
     };
 
 _VocabItem _$VocabItemFromJson(Map<String, dynamic> json) => _VocabItem(
@@ -53,6 +61,7 @@ _VocabItem _$VocabItemFromJson(Map<String, dynamic> json) => _VocabItem(
   exampleMeaning: json['example_meaning'] as String?,
   topic: json['topic'] as String,
   audioUrl: json['audio_url'] as String?,
+  source: json['source'] as String?,
   userId: json['user_id'] as String?,
   reviews:
       (json['vocab_reviews'] as List<dynamic>?)
@@ -72,5 +81,6 @@ Map<String, dynamic> _$VocabItemToJson(_VocabItem instance) =>
       'example_meaning': instance.exampleMeaning,
       'topic': instance.topic,
       'audio_url': instance.audioUrl,
+      'source': instance.source,
       'user_id': instance.userId,
     };

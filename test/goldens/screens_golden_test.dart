@@ -5,6 +5,7 @@ import 'dart:math';
 import 'package:bami_toeic/main.dart';
 import 'package:bami_toeic/module/auth/presentation/controllers/auth_controller.dart';
 import 'package:bami_toeic/module/goals/data/goals_repository.dart';
+import 'package:bami_toeic/module/goals/data/study_store.dart';
 import 'package:bami_toeic/module/leaderboard/data/leaderboard_repository.dart';
 import 'package:bami_toeic/module/plan/data/plan_repository.dart';
 import 'package:bami_toeic/module/test/data/test_repository.dart';
@@ -38,6 +39,8 @@ Future<ProviderContainer> _boot(
         testRepositoryProvider.overrideWithValue(FakeTestRepository()),
         vocabRepositoryProvider.overrideWithValue(FakeVocabRepository()),
         goalsRepositoryProvider.overrideWithValue(FakeGoalsRepository()),
+        // readGoals còn đặt lịch nhắc học (plugin) – treo trong widget test.
+        goalSettingsProvider.overrideWith((ref) async => const GoalSettings(targetScore: 800)),
         leaderboardRepositoryProvider.overrideWithValue(FakeLeaderboardRepository()),
         planRepositoryProvider.overrideWithValue(FakePlanRepository()),
         sessionRandomProvider.overrideWithValue(Random(1)),
@@ -130,6 +133,22 @@ void main() {
     await tester.tap(find.text('Xem nghĩa'));
     await tester.pumpAndSettle();
     await _shot(tester, '06_flashcard');
+    await _teardown(tester);
+  });
+
+  testWidgets('Danh sách từ theo đề', (tester) async {
+    final c = await _boot(tester);
+    await _go(tester, c, Routes.vocabWords(deck: 'test:2'), push: true);
+    await _shot(tester, '12_vocab_words');
+    await _teardown(tester);
+  });
+
+  testWidgets('Luyện chọn nghĩa – đã trả lời', (tester) async {
+    final c = await _boot(tester);
+    await _go(tester, c, Routes.vocabPractice('meaning'), push: true);
+    await tester.tap(find.byType(InkWell).at(1));
+    await tester.pumpAndSettle();
+    await _shot(tester, '13_practice');
     await _teardown(tester);
   });
 

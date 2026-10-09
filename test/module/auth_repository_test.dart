@@ -64,4 +64,26 @@ void main() {
       expect(e, isA<NetworkException>());
     });
   });
+
+  group('AuthRepository.mapPasswordResetError', () {
+    test('mã sai / hết hạn', () {
+      final e = AuthRepository.mapPasswordResetError(
+        _err(403, {'error_code': 'otp_expired', 'msg': 'Token has expired or is invalid'}),
+      );
+      expect(e.message, contains('hết hạn'));
+    });
+
+    test('mật khẩu mới trùng mật khẩu cũ', () {
+      final e = AuthRepository.mapPasswordResetError(_err(422, {'error_code': 'same_password'}));
+      expect(e.message, 'Mật khẩu mới phải khác mật khẩu cũ.');
+    });
+
+    test('gửi mã quá nhanh (429)', () {
+      final e = AuthRepository.mapPasswordResetError(
+        _err(429, {'error_code': 'over_email_send_rate_limit'}),
+      );
+      expect(e, isA<ServerException>());
+      expect(e.message, contains('1 phút'));
+    });
+  });
 }

@@ -3,29 +3,36 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/design_system/design_system.dart';
+import '../../../../helper/format.dart';
 import '../../../../routes/app_router.dart';
+import '../../../plan/presentation/controllers/plan_controller.dart';
 import '../../../plan/presentation/widgets/header_badges.dart';
-import '../../data/models/vocab_models.dart';
+import '../../data/practice.dart';
+import '../../data/vocab_decks.dart';
 import '../controllers/vocab_controller.dart';
+import '../widgets/deck_picker_sheet.dart';
 import 'vocab_form_sheet.dart';
 
+/// Tab Từ vựng: việc hôm nay (ôn + từ mới theo chỉ tiêu) → bộ từ đang học → luyện chủ động → tra cứu.
 class VocabPage extends ConsumerWidget {
   const VocabPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final overview = ref.watch(vocabOverviewProvider);
-    final topic = ref.watch(vocabFilterProvider.select((f) => f.topic));
+    final isAdmin = ref.watch(myPlanProvider).value?.isAdmin ?? false;
     return Scaffold(
       // Scaffold lồng trong tab không tự tránh thanh tab nổi → nâng nút lên trên thanh.
-      floatingActionButton: Padding(
-        padding: EdgeInsets.only(bottom: AppGlassTabBar.inset(context)),
-        child: FloatingActionButton(
-          tooltip: 'Thêm từ',
-          onPressed: () => showVocabForm(context, defaultTopic: topic),
-          child: const Icon(Icons.add_rounded),
-        ),
-      ),
+      floatingActionButton: isAdmin
+          ? Padding(
+              padding: EdgeInsets.only(bottom: AppGlassTabBar.inset(context)),
+              child: FloatingActionButton(
+                tooltip: 'Thêm từ (admin)',
+                onPressed: () => showVocabForm(context),
+                child: const Icon(Icons.add_rounded),
+              ),
+            )
+          : null,
       body: SafeArea(
         bottom: false,
         child: RefreshIndicator(
@@ -34,7 +41,7 @@ class VocabPage extends ConsumerWidget {
             value: overview,
             loading: (_) => const VocabSkeleton(),
             onRetry: () => ref.invalidate(vocabListProvider),
-            data: (o) => _VocabBody(overview: o, topic: topic),
+            data: (o) => _VocabBody(o: o),
           ),
         ),
       ),
@@ -43,244 +50,246 @@ class VocabPage extends ConsumerWidget {
 }
 
 class _VocabBody extends ConsumerWidget {
-  const _VocabBody({required this.overview, required this.topic});
+  const _VocabBody({required this.o});
 
-  final VocabOverview overview;
-  final String? topic;
+  final VocabOverview o;
 
-  Future<void> _startSession(BuildContext context, WidgetRef ref) async {
-    await context.push(Routes.flashcards(topic: topic));
-    // Cập nhật số từ đến hạn sau phiên học.
+  Future<void> _study(BuildContext context, WidgetRef ref, {int extra = 0}) async {
+    await context.push(Routes.flashcards(extra: extra));
+    // Cập nhật số từ đến hạn / tiến độ sau phiên học.
     ref.invalidate(vocabListProvider);
   }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final o = overview;
-    final filter = ref.read(vocabFilterProvider.notifier);
-    final now = DateTime.now();
-    final fg = AppHeroCard.foreground(context);
-
-    return CustomScrollView(
-      slivers: [
-        SliverPadding(
-          padding: const EdgeInsets.fromLTRB(AppSpacing.screen, 0, AppSpacing.screen, 0),
-          sliver: SliverList.list(
+    return ListView(
+      padding: EdgeInsets.fromLTRB(
+        AppSpacing.screen,
+        0,
+        AppSpacing.screen,
+        AppSpacing.fabClearance + AppGlassTabBar.inset(context),
+      ),
+      children: [
+        const AppPageHeader(
+          overline: 'HỌC TỪ THEO ĐỀ ETS',
+          title: 'Từ vựng',
+          subtitle: 'Mỗi ngày một ít, ôn đúng lúc sắp quên',
+          topBar: HeaderBadges(),
+        ),
+        _TodayCard(
+          o: o,
+          onStudy: () => _study(context, ref),
+          onExtra: () => _study(context, ref, extra: extraNewWords),
+        ),
+        Gaps.v16,
+        AppCard(
+          child: Row(
             children: [
-              AppPageHeader(
-                overline: 'HỌC TỪ THÔNG MINH',
-                title: 'Từ vựng SRS',
-                subtitle: 'Ghi nhớ dài hạn với thuật toán lặp lại ngắt quãng',
-                topBar: const HeaderBadges(),
+              StatTile(value: '${o.bank.mastered}', label: 'Đã thuộc', highlight: true),
+              StatTile(value: '${o.bank.learning}', label: 'Đang học'),
+              StatTile(value: '${o.bank.fresh}', label: 'Chưa học'),
+            ],
+          ),
+        ),
+        Gaps.v24,
+        SectionHeader(
+          title: 'Bộ từ đang học',
+          subtitle: 'Từ mới mỗi ngày lấy từ bộ này, theo thứ tự xuất hiện trong đề',
+          trailing: TextButton(
+            onPressed: () => showDeckPicker(context),
+            child: const Text('Đổi bộ'),
+          ),
+        ),
+        _DeckCard(stats: o.deckStats),
+        Gaps.v24,
+        const SectionHeader(
+          title: 'Luyện chủ động',
+          subtitle: 'Tự nhớ lại thay vì chỉ lật thẻ – nhớ lâu hơn',
+        ),
+        AppListGroup(
+          dividerIndent: AppSpacing.s16 + AppSizes.badgeMd + AppSpacing.s16,
+          children: [
+            for (final m in PracticeMode.values)
+              ListTile(
+                leading: IconBadge(icon: _modeIcon(m), tone: _modeTone(m)),
+                title: Text(m.label),
+                subtitle: Text(m.description),
+                trailing: const Icon(Icons.chevron_right_rounded),
+                onTap: () => context.push(Routes.vocabPractice(m.name)),
               ),
-              AppHeroCard(
+          ],
+        ),
+        Gaps.v24,
+        const SectionHeader(title: 'Tra cứu'),
+        AppListGroup(
+          children: [
+            ListTile(
+              leading: const IconBadge(icon: Icons.menu_book_rounded, tone: AppTone.neutral),
+              title: const Text('Tất cả từ vựng'),
+              subtitle: Text('${o.bank.total} từ · tìm theo từ hoặc nghĩa'),
+              trailing: const Icon(Icons.chevron_right_rounded),
+              onTap: () => context.push(Routes.vocabWords()),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  static IconData _modeIcon(PracticeMode m) => switch (m) {
+    PracticeMode.meaning => Icons.translate_rounded,
+    PracticeMode.listen => Icons.hearing_rounded,
+    PracticeMode.cloze => Icons.short_text_rounded,
+    PracticeMode.spell => Icons.keyboard_rounded,
+  };
+
+  static AppTone _modeTone(PracticeMode m) => switch (m) {
+    PracticeMode.meaning => AppTone.info,
+    PracticeMode.listen => AppTone.success,
+    PracticeMode.cloze => AppTone.warning,
+    PracticeMode.spell => AppTone.neutral,
+  };
+}
+
+/// Việc hôm nay: số thẻ cần ôn + từ mới còn trong chỉ tiêu; hết thì "Xong hôm nay".
+class _TodayCard extends StatelessWidget {
+  const _TodayCard({required this.o, required this.onStudy, required this.onExtra});
+
+  final VocabOverview o;
+  final VoidCallback onStudy;
+  final VoidCallback onExtra;
+
+  @override
+  Widget build(BuildContext context) {
+    final fg = AppHeroCard.foreground(context);
+    final muted = fg.withValues(alpha: 0.85);
+    final newRatio = o.dailyNew == 0 ? 1.0 : (o.newToday / o.dailyNew).clamp(0.0, 1.0);
+    final button = FilledButton.styleFrom(
+      backgroundColor: fg,
+      foregroundColor: context.surfaces.hero.first,
+      minimumSize: const Size.fromHeight(AppSizes.touchTarget),
+    );
+
+    return AppHeroCard(
+      child: Row(
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  o.doneToday ? 'Xong hôm nay' : 'Hôm nay',
+                  style: context.textStyles.labelLarge?.copyWith(
+                    color: fg,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                Text(
+                  o.doneToday ? 'Tuyệt vời!' : '${o.todayCount} thẻ',
+                  style: context.textStyles.displaySmall?.copyWith(
+                    color: fg,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+                Gaps.v4,
+                Text(
+                  o.doneToday
+                      ? (o.deckFreshLeft == 0
+                            ? 'Đã học hết bộ này. Đổi bộ khác để học tiếp.'
+                            : 'Đã ôn hết và đủ ${o.dailyNew} từ mới. Quay lại ngày mai nhé.')
+                      : '${o.dueCount} thẻ cần ôn · ${o.newLeft} từ mới',
+                  style: context.textStyles.bodySmall?.copyWith(color: muted),
+                ),
+                Gaps.v16,
+                if (!o.doneToday)
+                  FilledButton.icon(
+                    style: button,
+                    onPressed: onStudy,
+                    icon: const Icon(Icons.play_arrow_rounded),
+                    label: const Text('Bắt đầu học'),
+                  )
+                else if (o.deckFreshLeft > 0)
+                  FilledButton.icon(
+                    style: button,
+                    onPressed: onExtra,
+                    icon: const Icon(Icons.add_rounded),
+                    label: const Text('Học thêm $extraNewWords từ mới'),
+                  ),
+              ],
+            ),
+          ),
+          Gaps.h16,
+          ScoreRing(
+            value: newRatio,
+            size: AppSizes.ringMd,
+            strokeWidth: AppSizes.ringStrokeMd,
+            color: fg,
+            trackColor: fg.withValues(alpha: 0.25),
+            semanticLabel: 'Từ mới hôm nay ${o.newToday} trên ${o.dailyNew}',
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  '${o.newToday}/${o.dailyNew}',
+                  style: context.textStyles.titleMedium?.copyWith(
+                    color: fg,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                Text('từ mới', style: context.textStyles.labelSmall?.copyWith(color: muted)),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _DeckCard extends StatelessWidget {
+  const _DeckCard({required this.stats});
+
+  final DeckStats stats;
+
+  @override
+  Widget build(BuildContext context) {
+    final deck = stats.deck;
+    return AppCard(
+      onTap: () => context.push(Routes.vocabWords(deck: deck?.key)),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              IconBadge(
+                icon: deck?.kind == DeckKind.topic ? Icons.category_outlined : Icons.quiz_outlined,
+              ),
+              Gaps.h12,
+              Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Ôn tập hôm nay',
-                                style: context.textStyles.labelLarge?.copyWith(
-                                  color: fg,
-                                  fontWeight: FontWeight.w700,
-                                ),
-                              ),
-                              Text(
-                                '${o.sessionSize} từ',
-                                style: context.textStyles.displaySmall?.copyWith(
-                                  color: fg,
-                                  fontWeight: FontWeight.w800,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Icon(
-                          Icons.style_rounded,
-                          size: AppSizes.iconXl,
-                          color: fg.withValues(alpha: 0.4),
-                        ),
-                      ],
-                    ),
-                    Gaps.v8,
-                    Wrap(
-                      spacing: AppSpacing.s8,
-                      runSpacing: AppSpacing.s4,
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: AppSpacing.s8,
-                            vertical: AppSpacing.s2,
-                          ),
-                          decoration: BoxDecoration(
-                            color: fg.withValues(alpha: 0.2),
-                            borderRadius: AppRadius.brFull,
-                          ),
-                          child: Text(
-                            '⚡️ ${o.dueCount} đến hạn',
-                            style: context.textStyles.labelSmall?.copyWith(
-                              color: fg,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: AppSpacing.s8,
-                            vertical: AppSpacing.s2,
-                          ),
-                          decoration: BoxDecoration(
-                            color: fg.withValues(alpha: 0.15),
-                            borderRadius: AppRadius.brFull,
-                          ),
-                          child: Text(
-                            '🌱 ${o.newCount} từ mới',
-                            style: context.textStyles.labelSmall?.copyWith(
-                              color: fg,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: AppSpacing.s8,
-                            vertical: AppSpacing.s2,
-                          ),
-                          decoration: BoxDecoration(
-                            color: fg.withValues(alpha: 0.15),
-                            borderRadius: AppRadius.brFull,
-                          ),
-                          child: Text(
-                            '📚 ${o.total} trong kho',
-                            style: context.textStyles.labelSmall?.copyWith(
-                              color: fg,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Gaps.v16,
-                    FilledButton.icon(
-                      style: FilledButton.styleFrom(
-                        backgroundColor: fg,
-                        foregroundColor: context.surfaces.hero.first,
-                        minimumSize: const Size.fromHeight(AppSizes.touchTarget),
-                      ),
-                      onPressed: o.sessionSize == 0 ? null : () => _startSession(context, ref),
-                      icon: Icon(
-                        o.sessionSize == 0 ? Icons.check_rounded : Icons.play_arrow_rounded,
-                      ),
-                      label: Text(
-                        o.sessionSize == 0 ? 'Đã ôn xong hôm nay' : 'Bắt đầu học ngay',
-                        style: const TextStyle(fontWeight: FontWeight.w700),
+                    Text(deck?.label ?? 'Tất cả đề ETS 2026', style: context.textStyles.titleMedium),
+                    Text(
+                      '${stats.mastered}/${stats.total} đã thuộc · ${stats.fresh} chưa học',
+                      style: context.textStyles.bodySmall?.copyWith(
+                        color: context.colors.onSurfaceVariant,
                       ),
                     ),
                   ],
                 ),
               ),
-              Gaps.v16,
-              TextField(
-                decoration: const InputDecoration(
-                  prefixIcon: Icon(Icons.search_rounded),
-                  hintText: 'Tìm từ hoặc nghĩa',
-                ),
-                onChanged: filter.setQuery,
-              ),
+              const Icon(Icons.chevron_right_rounded),
             ],
           ),
-        ),
-        // Chip chủ đề tràn mép màn hình, padding nằm trong danh sách cuộn ngang.
-        SliverToBoxAdapter(
-          child: SizedBox(
-            height: AppSizes.touchTarget + AppSpacing.s24,
-            child: ListView.separated(
-              scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.symmetric(
-                horizontal: AppSpacing.screen,
-                vertical: AppSpacing.s12,
-              ),
-              itemCount: o.topics.length + 1,
-              separatorBuilder: (_, _) => Gaps.h8,
-              itemBuilder: (context, i) {
-                final t = i == 0 ? null : o.topics[i - 1];
-                return ChoiceChip(
-                  label: Text(t ?? 'Tất cả · ${o.total}'),
-                  selected: topic == t,
-                  onSelected: (_) => filter.setTopic(t),
-                );
-              },
-            ),
+          Gaps.v12,
+          LabeledProgress(
+            label: 'Tiến độ',
+            value: stats.progress,
+            trailing: Fmt.percent(stats.progress),
           ),
-        ),
-        if (o.shown.isEmpty)
-          const SliverFillRemaining(
-            hasScrollBody: false,
-            child: AppEmptyView(
-              icon: Icons.style_outlined,
-              message: 'Chưa có từ nào.\nBấm + để thêm, hoặc import CSV trên Supabase.',
-            ),
-          )
-        else
-          SliverPadding(
-            padding: EdgeInsets.fromLTRB(
-              AppSpacing.screen,
-              0,
-              AppSpacing.screen,
-              AppSpacing.fabClearance + AppGlassTabBar.inset(context),
-            ),
-            // Dựng lười: chỉ các dòng đang hiện (danh sách có thể > 1000 từ).
-            sliver: AppSliverListGroup(
-              itemCount: o.shown.length,
-              itemBuilder: (context, i) {
-                final v = o.shown[i];
-                return ListTile(
-                  title: Text.rich(
-                    TextSpan(
-                      children: [
-                        TextSpan(text: v.word),
-                        if (v.ipa != null)
-                          TextSpan(
-                            text: '  ${v.ipa}',
-                            style: context.textStyles.bodySmall?.copyWith(
-                              color: context.colors.onSurfaceVariant,
-                            ),
-                          ),
-                      ],
-                    ),
-                  ),
-                  subtitle: Text(
-                    [if (v.pos != null) '(${v.pos})', v.meaning].join(' '),
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  trailing: _StatusBadge(item: v, now: now),
-                  onTap: () => showVocabForm(context, item: v),
-                );
-              },
-            ),
-          ),
-      ],
+        ],
+      ),
     );
-  }
-}
-
-class _StatusBadge extends StatelessWidget {
-  const _StatusBadge({required this.item, required this.now});
-
-  final VocabItem item;
-  final DateTime now;
-
-  @override
-  Widget build(BuildContext context) {
-    if (item.isNew) return const StatusBadge(label: 'Mới', tone: AppTone.info);
-    if (item.isDue(now)) return const StatusBadge(label: 'Cần ôn', tone: AppTone.warning);
-    final days = item.review!.dueAt.difference(now).inDays + 1;
-    return StatusBadge(label: '$days ngày');
   }
 }

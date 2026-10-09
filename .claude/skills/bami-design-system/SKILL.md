@@ -11,7 +11,7 @@ Mọi UI dùng **một nguồn style duy nhất**: `lib/core/design_system/`. Kh
 import '../../../../core/design_system/design_system.dart'; // import duy nhất cho UI
 ```
 
-Nền tảng: Material 3 (seed `#1E5EFF`, `DynamicSchemeVariant.vibrant`: primary rực, container dịu), font **Be Vietnam Pro**, WCAG 2.2 AA, lưới 4/8, tiếng Việt (line-height ≥ 1.4).
+Nền tảng: Material 3 (seed `#1E5EFF`, `DynamicSchemeVariant.vibrant`: primary rực, container dịu), font **Manrope** (đủ dấu tiếng Việt, 200–800), WCAG 2.2 AA, lưới 4/8, tiếng Việt (line-height ≥ 1.4).
 Trang Gallery mọi component: route `/design-system` (chỉ bản debug), mở bằng icon 🎨 trên màn Đề thi.
 
 ## 1. Quy trình bắt buộc khi làm UI

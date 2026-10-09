@@ -6,7 +6,7 @@ import '../../../../core/network/app_exception.dart';
 import '../../data/models/vocab_models.dart';
 import '../controllers/vocab_controller.dart';
 
-/// Bottom sheet thêm / sửa từ vựng.
+/// Bottom sheet thêm / sửa từ trong bộ chung – chỉ admin (RLS chặn người khác).
 Future<void> showVocabForm(
   BuildContext context, {
   VocabItem? item,
@@ -50,11 +50,12 @@ class _VocabFormState extends ConsumerState<_VocabForm> {
   late final _topic = TextEditingController(
     text: widget.item?.topic ?? widget.defaultTopic ?? 'General',
   );
+  late final _source = TextEditingController(text: widget.item?.source);
   bool _saving = false;
 
   @override
   void dispose() {
-    for (final c in [_word, _ipa, _pos, _meaning, _example, _exampleMeaning, _topic]) {
+    for (final c in [_word, _ipa, _pos, _meaning, _example, _exampleMeaning, _topic, _source]) {
       c.dispose();
     }
     super.dispose();
@@ -76,6 +77,7 @@ class _VocabFormState extends ConsumerState<_VocabForm> {
               example: clean(_example.text),
               exampleMeaning: clean(_exampleMeaning.text),
               topic: clean(_topic.text) ?? 'General',
+              source: clean(_source.text),
             ),
             id: widget.item?.id,
           );
@@ -172,7 +174,19 @@ class _VocabFormState extends ConsumerState<_VocabForm> {
             gap,
             TextFormField(
               controller: _topic,
-              decoration: const InputDecoration(labelText: 'Chủ đề'),
+              decoration: const InputDecoration(
+                labelText: 'Chủ đề',
+                helperText: 'Khoá tiếng Anh: Office, Finance, Hiring, Travel…',
+              ),
+            ),
+            gap,
+            TextFormField(
+              controller: _source,
+              decoration: const InputDecoration(
+                labelText: 'Nguồn trong đề',
+                hintText: 'ETS 2026 Test 3 · câu 147',
+                helperText: 'Có "Test N" thì từ vào bộ của đề đó',
+              ),
             ),
             Gaps.v24,
             AppPrimaryButton(label: 'Lưu', loading: _saving, onPressed: _save),

@@ -27,6 +27,13 @@ void main() {
       expect(s.intervalDays, 15);
     });
 
+    test('khó → chỉ giãn nhẹ, ngắn hơn nhớ', () {
+      const s = SrsState(repetitions: 2, intervalDays: 6);
+      expect(s.review(ReviewGrade.hard, now: now).intervalDays, 7);
+      expect(s.review(ReviewGrade.good, now: now).intervalDays, 15);
+      expect(const SrsState().review(ReviewGrade.hard, now: now).intervalDays, 1);
+    });
+
     test('ease không xuống dưới 1.3', () {
       var s = const SrsState();
       for (var i = 0; i < 10; i++) {

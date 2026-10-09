@@ -72,6 +72,55 @@ class AuthRepository {
     };
   }
 
+  Future<void> requestPasswordReset(String email) async {
+    try {
+      await _api.recover({'email': email});
+    } on DioException catch (e) {
+      throw mapPasswordResetError(e);
+    }
+  }
+
+  /// Xác nhận mã trong email rồi đặt mật khẩu mới; thành công thì đăng nhập luôn.
+  Future<Session> resetPassword({
+    required String email,
+    required String code,
+    required String password,
+  }) async {
+    try {
+      final session = await _api.verifyOtp({'type': 'recovery', 'email': email, 'token': code});
+      await _api.updatePassword('Bearer ${session.accessToken}', {'password': password});
+      await _storage.save(session);
+      return session;
+    } on DioException catch (e) {
+      throw mapPasswordResetError(e);
+    }
+  }
+
+  static AppException mapPasswordResetError(DioException e) {
+    final data = e.response?.data;
+    final rawCode = data is Map ? (data['error_code'] ?? data['code']) : null;
+    final code = rawCode is String ? rawCode : null;
+    final msg = data is Map ? '${data['msg'] ?? data['message'] ?? ''}' : '';
+    if (code == 'otp_expired' || msg.contains('expired or is invalid')) {
+      return const UnauthorizedException('Mã không đúng hoặc đã hết hạn. Gửi lại mã mới.');
+    }
+    if (code == 'same_password') {
+      return const UnauthorizedException('Mật khẩu mới phải khác mật khẩu cũ.');
+    }
+    if (code == 'weak_password') {
+      return const UnauthorizedException('Mật khẩu quá yếu. Dùng ít nhất 8 ký tự, có chữ và số.');
+    }
+    if (e.response?.statusCode == 429 ||
+        code == 'over_email_send_rate_limit' ||
+        code == 'over_request_rate_limit') {
+      return const ServerException(
+        'Vừa gửi mã gần đây. Đợi khoảng 1 phút rồi gửi lại.',
+        statusCode: 429,
+      );
+    }
+    return AppException.from(e);
+  }
+
   Future<void> deleteAccount() async {
     await _api.deleteAccount();
     await _storage.clear();

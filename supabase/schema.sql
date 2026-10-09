@@ -705,3 +705,23 @@ language sql stable security definer set search_path = '' as $$
 $$;
 revoke all on function public.leaderboard(text, int) from public, anon;
 grant execute on function public.leaderboard(text, int) to authenticated;
+
+-- ---------- 007: Từ vựng – chỉ admin ghi, nguồn đề ETS, "đã biết", ngày bắt đầu học ----------
+-- • vocab: chỉ admin thêm/sửa/xoá (bộ chung). Từ riêng cũ (nếu có) vẫn đọc được, không tạo mới.
+-- • vocab.source: "ETS 2026 Test 3 · câu 147" → bộ từ theo đề + thứ tự học theo đề.
+-- • vocab_reviews.known: người học đánh dấu "đã biết" → bỏ khỏi phiên học.
+-- • vocab_reviews.learned_at: lần đầu học từ (giới hạn số từ mới mỗi ngày).
+-- Chạy lại nhiều lần vẫn an toàn.
+
+alter table public.vocab add column if not exists source text;
+alter table public.vocab alter column user_id drop default;
+
+drop policy if exists "write own or admin shared" on public.vocab;
+drop policy if exists "admin write vocab" on public.vocab;
+create policy "admin write vocab" on public.vocab for all to authenticated
+  using ((select public.is_admin())) with check ((select public.is_admin()) and user_id is null);
+
+alter table public.vocab_reviews add column if not exists known boolean not null default false;
+alter table public.vocab_reviews add column if not exists learned_at timestamptz not null default now();
+create index if not exists vocab_reviews_vocab_idx on public.vocab_reviews (vocab_id);
+-- Nguồn của bộ từ ETS 2026 được ghi bằng tool/import_vocab.dart (cột source).

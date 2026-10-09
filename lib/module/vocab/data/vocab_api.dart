@@ -13,7 +13,8 @@ abstract class VocabApi {
   /// Supabase trả tối đa 1000 dòng / request (Max Rows) → lấy theo trang bằng offset/limit.
   @GET('/rest/v1/vocab')
   Future<List<VocabItem>> getVocab({
-    @Query('select') String select = '*,vocab_reviews(ease,interval_days,repetitions,due_at)',
+    @Query('select')
+    String select = '*,vocab_reviews(ease,interval_days,repetitions,due_at,known,learned_at)',
     @Query('order') String order = 'word,id',
     @Query('offset') int offset = 0,
     @Query('limit') int limit = VocabApi.pageSize,
@@ -33,6 +34,10 @@ abstract class VocabApi {
   @DELETE('/rest/v1/vocab')
   @Headers({'Prefer': Pg.returnRepresentation})
   Future<List<VocabItem>> deleteVocab({@Query('id') required String id});
+
+  /// Xoá lịch ôn của user hiện tại cho 1 từ (RLS) → từ quay về trạng thái "mới".
+  @DELETE('/rest/v1/vocab_reviews')
+  Future<void> deleteReview({@Query('vocab_id') required String vocabId});
 
   @POST('/rest/v1/vocab_reviews')
   @Headers({'Prefer': Pg.upsert})

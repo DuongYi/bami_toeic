@@ -90,22 +90,25 @@ final class LeaderboardFamily extends $Family
   String toString() => r'leaderboardProvider';
 }
 
-/// Tên hiển thị + tuỳ chọn ẩn khỏi bảng của user hiện tại.
+/// Tên hiển thị + tuỳ chọn ẩn khỏi bảng của user hiện tại. keepAlive: sheet hồ sơ đọc `.future`
+/// từ nhiều nơi; tự tải lại khi đổi tài khoản.
 
 @ProviderFor(MyLeaderboardProfile)
 final myLeaderboardProfileProvider = MyLeaderboardProfileProvider._();
 
-/// Tên hiển thị + tuỳ chọn ẩn khỏi bảng của user hiện tại.
+/// Tên hiển thị + tuỳ chọn ẩn khỏi bảng của user hiện tại. keepAlive: sheet hồ sơ đọc `.future`
+/// từ nhiều nơi; tự tải lại khi đổi tài khoản.
 final class MyLeaderboardProfileProvider
     extends $AsyncNotifierProvider<MyLeaderboardProfile, LeaderboardProfile> {
-  /// Tên hiển thị + tuỳ chọn ẩn khỏi bảng của user hiện tại.
+  /// Tên hiển thị + tuỳ chọn ẩn khỏi bảng của user hiện tại. keepAlive: sheet hồ sơ đọc `.future`
+  /// từ nhiều nơi; tự tải lại khi đổi tài khoản.
   MyLeaderboardProfileProvider._()
     : super(
         from: null,
         argument: null,
         retry: null,
         name: r'myLeaderboardProfileProvider',
-        isAutoDispose: true,
+        isAutoDispose: false,
         dependencies: null,
         $allTransitiveDependencies: null,
       );
@@ -119,9 +122,10 @@ final class MyLeaderboardProfileProvider
 }
 
 String _$myLeaderboardProfileHash() =>
-    r'88f1d90029ebcc170269d93334edcc13190b902f';
+    r'd6fdd17a49e3674767a8c1e7a74a031eaa1fe1b8';
 
-/// Tên hiển thị + tuỳ chọn ẩn khỏi bảng của user hiện tại.
+/// Tên hiển thị + tuỳ chọn ẩn khỏi bảng của user hiện tại. keepAlive: sheet hồ sơ đọc `.future`
+/// từ nhiều nơi; tự tải lại khi đổi tài khoản.
 
 abstract class _$MyLeaderboardProfile
     extends $AsyncNotifier<LeaderboardProfile> {

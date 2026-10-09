@@ -3,14 +3,15 @@
 //
 //   dart run tool/import_vocab.dart content/raw/ets2026/vocab/ets2026_all.json [--dry-run]
 //
-// Mỗi phần tử: {word, ipa?, pos?, meaning, example?, example_meaning?, topic?}; trường khác bị bỏ qua.
+// Mỗi phần tử: {word, ipa?, pos?, meaning, example?, example_meaning?, topic?, source?}
+// (source dạng "ETS 2026 Test 3 · câu 147" → bộ từ theo đề); trường khác bị bỏ qua.
 // Đăng nhập như import_test.dart (TOEIC_EMAIL / TOEIC_PASSWORD hoặc hỏi khi chạy).
 import 'dart:convert';
 import 'dart:io';
 
 import 'package:supabase/supabase.dart';
 
-const _columns = ['word', 'ipa', 'pos', 'meaning', 'example', 'example_meaning', 'topic'];
+const _columns = ['word', 'ipa', 'pos', 'meaning', 'example', 'example_meaning', 'topic', 'source'];
 
 Future<void> main(List<String> args) async {
   final path = args.where((a) => !a.startsWith('--')).firstOrNull;

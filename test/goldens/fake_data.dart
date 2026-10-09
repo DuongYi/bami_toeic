@@ -258,6 +258,7 @@ VocabItem _v(
   String topic, {
   String? ex,
   String? exVi,
+  String? src,
   VocabReview? r,
 }) => VocabItem(
   id: id,
@@ -268,6 +269,7 @@ VocabItem _v(
   topic: topic,
   example: ex,
   exampleMeaning: exVi,
+  source: src,
   reviews: r == null ? const [] : [r],
 );
 
@@ -295,6 +297,7 @@ final _vocab = [
     'Finance',
     ex: 'Please send the invoice to the accounting department.',
     exVi: 'Vui lòng gửi hoá đơn tới phòng kế toán.',
+    src: 'ETS 2026 Test 2 · câu 178',
   ),
   _v(
     'v3',
@@ -310,9 +313,26 @@ final _vocab = [
       dueAt: _today.subtract(const Duration(hours: 2)),
     ),
   ),
-  _v('v4', 'postpone', '/poʊstˈpoʊn/', 'v', 'hoãn lại', 'Office'),
-  _v('v5', 'reimburse', '/ˌriːɪmˈbɜːrs/', 'v', 'hoàn trả (chi phí)', 'Finance'),
-  _v('v6', 'qualified', '/ˈkwɑːlɪfaɪd/', 'adj', 'đủ năng lực, trình độ', 'Hiring'),
+  _v('v4', 'postpone', '/poʊstˈpoʊn/', 'v', 'hoãn lại', 'Office', src: 'ETS 2026 Test 2 · câu 12'),
+  _v(
+    'v5',
+    'reimburse',
+    '/ˌriːɪmˈbɜːrs/',
+    'v',
+    'hoàn trả (chi phí)',
+    'Finance',
+    ex: 'The company will reimburse your travel expenses.',
+    src: 'ETS 2026 Test 3 · câu 68-70',
+  ),
+  _v(
+    'v6',
+    'qualified',
+    '/ˈkwɑːlɪfaɪd/',
+    'adj',
+    'đủ năng lực, trình độ',
+    'Hiring',
+    src: 'ETS 2026 Test 1 · câu 120',
+  ),
 ];
 
 class FakeVocabRepository implements VocabRepository {
@@ -324,6 +344,12 @@ class FakeVocabRepository implements VocabRepository {
 
   @override
   Future<void> delete(String id) async {}
+
+  @override
+  Future<void> markKnown({required String userId, required VocabItem item}) async {}
+
+  @override
+  Future<void> resetWord(String vocabId) async {}
 
   @override
   Future<void> saveReview({

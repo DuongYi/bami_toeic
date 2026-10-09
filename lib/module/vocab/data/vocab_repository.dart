@@ -47,20 +47,37 @@ class VocabRepository {
     ];
   }
 
-  /// Thêm từ (thành từ riêng của user). Sửa từ bộ chung mà không có quyền
-  /// → tạo bản riêng thay thế (bộ chung giữ nguyên cho người khác).
+  /// Admin thêm / sửa từ trong bộ chung (RLS chặn người khác).
   Future<void> save(VocabInput input, {String? id}) async {
     if (id == null) return _api.createVocab(input);
     final updated = await _api.updateVocab(input, id: Pg.eq(id));
-    if (updated.isEmpty) await _api.createVocab(input);
+    if (updated.isEmpty) throw const ForbiddenException('Chỉ admin mới sửa được từ vựng.');
   }
 
   Future<void> delete(String id) async {
     final deleted = await _api.deleteVocab(id: Pg.eq(id));
-    if (deleted.isEmpty) {
-      throw const ForbiddenException('Từ này thuộc bộ từ chung, chỉ admin mới xoá được.');
-    }
+    if (deleted.isEmpty) throw const ForbiddenException('Chỉ admin mới xoá được từ vựng.');
   }
+
+  /// "Đã biết từ này": bỏ khỏi phiên học, tính là đã thuộc.
+  Future<void> markKnown({required String userId, required VocabItem item}) {
+    final srs = item.srs ?? const SrsState();
+    return _api.upsertReview(
+      VocabReviewUpsert(
+        userId: userId,
+        vocabId: item.id,
+        ease: srs.ease,
+        intervalDays: srs.intervalDays,
+        repetitions: srs.repetitions,
+        dueAt: srs.dueAt.toUtc(),
+        lastReviewedAt: DateTime.now().toUtc(),
+        known: true,
+      ),
+    );
+  }
+
+  /// Học lại từ đầu: xoá lịch ôn (cả cờ "đã biết").
+  Future<void> resetWord(String vocabId) => _api.deleteReview(vocabId: Pg.eq(vocabId));
 
   Future<void> saveReview({
     required String userId,

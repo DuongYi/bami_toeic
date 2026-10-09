@@ -1,3 +1,5 @@
+import 'dart:math';
+
 /// Thuật toán SM-2 rút gọn cho flashcard.
 enum ReviewGrade {
   again(0, 'Quên'),
@@ -37,9 +39,12 @@ class SrsState {
       );
     }
     final reps = repetitions + 1;
-    final interval = switch (reps) {
-      1 => q == 5 ? 3 : 1,
-      2 => 6,
+    final interval = switch ((reps, grade)) {
+      (1, ReviewGrade.easy) => 3,
+      (1, _) => 1,
+      // "Khó": chỉ giãn nhẹ (×1.2) thay vì nhân ease như "Nhớ".
+      (_, ReviewGrade.hard) => max(intervalDays + 1, (intervalDays * 1.2).round()),
+      (2, _) => 6,
       _ => (intervalDays * newEase).round(),
     };
     return SrsState(
