@@ -7,6 +7,7 @@ import '../../../../core/design_system/design_system.dart';
 import '../../../../core/network/app_exception.dart';
 import '../../../../helper/format.dart';
 import '../../../../routes/app_router.dart';
+import '../../../plan/presentation/widgets/header_badges.dart';
 import '../../../test/data/models/test_models.dart';
 import '../../../test/data/question_tags.dart';
 import '../../../test/presentation/controllers/test_providers.dart';
@@ -53,14 +54,7 @@ class HistoryPage extends ConsumerWidget {
                         overline: 'THEO DÕI NĂNG LỰC',
                         title: 'Tiến độ học tập',
                         subtitle: 'Phân tích điểm số dự đoán và lịch sử làm bài',
-                        topBar: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: const [
-                            StreakBadge(count: 3),
-                            Gaps.h8,
-                            ProBadge(label: 'PRO', mini: true),
-                          ],
-                        ),
+                        topBar: const HeaderBadges(),
                       ),
                       _Overview(attempts: list),
                       Gaps.v16,

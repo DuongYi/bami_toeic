@@ -446,3 +446,262 @@ $$;
 
 revoke all on function public.leaderboard(text, int) from public, anon;
 grant execute on function public.leaderboard(text, int) to authenticated;
+
+-- ---------- 006: Gói Free / PRO, công cụ admin, xoá tài khoản, mùa giải tuần ----------
+-- • Free: đề có tests.is_free + từ vựng. PRO (hoặc admin): mọi đề.
+-- • Quyền PRO nằm ở user_plans (user chỉ được ĐỌC dòng của mình); chỉ admin cấp qua admin_grant_pro().
+-- • Danh sách đề (tests) ai đăng nhập cũng xem được để hiện đề bị khoá; câu hỏi / nhóm câu thì RLS chặn.
+-- Chạy lại nhiều lần vẫn an toàn.
+
+-- Vá bảo mật: cố định search_path, không cho anon gọi hàm security definer.
+create or replace function public.is_admin() returns boolean
+language sql stable security definer set search_path = '' as $$
+  select exists (select 1 from public.app_admins where user_id = (select auth.uid()));
+$$;
+revoke all on function public.is_admin() from public, anon;
+grant execute on function public.is_admin() to authenticated;
+
+alter function public.bump_study_day(date, int, int, int, int) set search_path = '';
+
+-- ---------- Đề miễn phí ----------
+alter table public.tests add column if not exists is_free boolean not null default false;
+update public.tests set is_free = true where title = 'Sample Full Test 01 (đủ 7 Part)';
+
+-- Số câu của đề: đếm được cả khi đề bị khoá (RLS ẩn câu hỏi). PostgREST: select=question_total
+create or replace function public.question_total(t public.tests) returns int
+language sql stable security definer set search_path = '' as $$
+  select count(*)::int from public.questions q where q.test_id = t.id;
+$$;
+revoke all on function public.question_total(public.tests) from public, anon;
+grant execute on function public.question_total(public.tests) to authenticated;
+
+-- ---------- Gói ----------
+create table if not exists public.user_plans (
+  user_id    uuid primary key references auth.users(id) on delete cascade,
+  pro_until  timestamptz,
+  updated_at timestamptz not null default now(),
+  updated_by uuid references auth.users(id) on delete set null
+);
+alter table public.user_plans enable row level security;
+drop policy if exists "read own plan" on public.user_plans;
+create policy "read own plan" on public.user_plans for select to authenticated
+  using (user_id = (select auth.uid()));
+-- Không có policy ghi: chỉ đổi qua admin_grant_pro().
+
+create or replace function public.is_pro() returns boolean
+language sql stable security definer set search_path = '' as $$
+  select public.is_admin() or exists (
+    select 1 from public.user_plans
+    where user_id = (select auth.uid()) and pro_until > now()
+  );
+$$;
+revoke all on function public.is_pro() from public, anon;
+grant execute on function public.is_pro() to authenticated;
+
+create or replace function public.my_plan()
+returns table (is_pro boolean, is_admin boolean, pro_until timestamptz)
+language sql stable security definer set search_path = '' as $$
+  select public.is_pro(), public.is_admin(),
+         (select p.pro_until from public.user_plans p where p.user_id = (select auth.uid()));
+$$;
+revoke all on function public.my_plan() from public, anon;
+grant execute on function public.my_plan() to authenticated;
+
+-- Câu hỏi / nhóm câu: đề miễn phí hoặc PRO mới đọc được (admin vẫn ghi qua "admin write").
+do $$
+declare t text;
+begin
+  foreach t in array array['question_groups','questions'] loop
+    execute format('drop policy if exists "auth read" on public.%I', t);
+    execute format('drop policy if exists "read free or pro" on public.%I', t);
+    execute format($p$create policy "read free or pro" on public.%I for select to authenticated
+      using ((select public.is_pro()) or test_id in (select x.id from public.tests x where x.is_free))$p$, t);
+  end loop;
+end $$;
+
+-- ---------- Công cụ admin ----------
+create or replace function public.admin_list_users(p_query text default null)
+returns table (
+  user_id         uuid,
+  email           text,
+  created_at      timestamptz,
+  last_sign_in_at timestamptz,
+  is_admin        boolean,
+  pro_until       timestamptz
+)
+language plpgsql stable security definer set search_path = '' as $$
+#variable_conflict use_column
+begin
+  if not public.is_admin() then
+    raise exception 'Chỉ admin được dùng chức năng này' using errcode = '42501';
+  end if;
+  return query
+    select u.id, u.email::text, u.created_at, u.last_sign_in_at,
+           exists (select 1 from public.app_admins a where a.user_id = u.id),
+           p.pro_until
+    from auth.users u
+    left join public.user_plans p on p.user_id = u.id
+    where coalesce(trim(p_query), '') = ''
+       or strpos(lower(u.email), lower(trim(p_query))) > 0
+    order by u.created_at desc
+    limit 200;
+end $$;
+revoke all on function public.admin_list_users(text) from public, anon;
+grant execute on function public.admin_list_users(text) to authenticated;
+
+-- Cộng thêm p_days ngày PRO (tính từ hạn hiện tại nếu còn hạn); p_days <= 0 → thu hồi ngay.
+create or replace function public.admin_grant_pro(p_user_id uuid, p_days int)
+returns timestamptz
+language plpgsql security definer set search_path = '' as $$
+declare v_until timestamptz;
+begin
+  if not public.is_admin() then
+    raise exception 'Chỉ admin được dùng chức năng này' using errcode = '42501';
+  end if;
+  insert into public.user_plans as up (user_id, pro_until, updated_at, updated_by)
+  values (p_user_id,
+          case when p_days > 0 then now() + make_interval(days => p_days) end,
+          now(), (select auth.uid()))
+  on conflict (user_id) do update set
+    pro_until  = case when p_days > 0
+                      then greatest(now(), coalesce(up.pro_until, now())) + make_interval(days => p_days)
+                 end,
+    updated_at = now(),
+    updated_by = (select auth.uid())
+  returning up.pro_until into v_until;
+  return v_until;
+end $$;
+revoke all on function public.admin_grant_pro(uuid, int) from public, anon;
+grant execute on function public.admin_grant_pro(uuid, int) to authenticated;
+
+-- ---------- Xoá tài khoản (Apple yêu cầu với app có đăng ký) ----------
+-- Dữ liệu học có on delete cascade theo auth.users nên bị xoá theo.
+create or replace function public.delete_my_account() returns void
+language sql security definer set search_path = '' as $$
+  delete from auth.users where id = (select auth.uid());
+$$;
+revoke all on function public.delete_my_account() from public, anon;
+grant execute on function public.delete_my_account() to authenticated;
+
+-- ---------- Thương Khung Bảng v2 ----------
+-- p_board: 'score' (điểm full test cao nhất) | 'week' (số câu tuần này, tính từ thứ Hai giờ VN)
+--        | 'streak' (chuỗi ngày học hiện tại).
+-- last_week_rank: hạng 1–3 của mùa tuần trước (bảng 'week'), null nếu ngoài top 3.
+drop function if exists public.leaderboard(text, int);
+create or replace function public.leaderboard(p_board text default 'score', p_limit int default 100)
+returns table (
+  rank           int,
+  user_id        uuid,
+  display_name   text,
+  is_me          boolean,
+  best_score     int,
+  best_listening int,
+  best_reading   int,
+  full_tests     int,
+  week_questions int,
+  week_correct   int,
+  streak         int,
+  last_week_rank int
+)
+language sql stable security definer set search_path = '' as $$
+  with me as (select auth.uid() as id),
+  clock as (
+    select (now() at time zone 'Asia/Ho_Chi_Minh')::date as today,
+           date_trunc('week', now() at time zone 'Asia/Ho_Chi_Minh') at time zone 'Asia/Ho_Chi_Minh' as week_start
+  ),
+  players as (
+    select a.user_id from public.attempts a
+    union
+    select d.user_id from public.study_days d
+    union
+    select id from me where id is not null
+  ),
+  visible as (
+    select pl.user_id,
+           coalesce(nullif(trim(p.display_name), ''),
+                    'Học viên ' || upper(left(pl.user_id::text, 4))) as display_name
+    from players pl
+    left join public.profiles p on p.user_id = pl.user_id
+    where coalesce(p.show_on_leaderboard, true) or pl.user_id = (select id from me)
+  ),
+  full_scores as (
+    select a.user_id,
+           public.toeic_section_score(t.score_table, 'listening', a.listening_correct) as l,
+           public.toeic_section_score(t.score_table, 'reading', a.reading_correct)     as r
+    from public.attempts a
+    join public.tests t on t.id = a.test_id
+    where a.source <> 'mistakes' and cardinality(a.parts) = 7 and a.total_questions = 200
+  ),
+  best as (
+    select distinct on (user_id) user_id, l, r, l + r as total,
+           count(*) over (partition by user_id)::int as n
+    from full_scores
+    order by user_id, l + r desc
+  ),
+  week as (
+    select a.user_id,
+           sum(a.total_questions) filter (where a.finished_at >= c.week_start)::int as q,
+           sum(a.listening_correct + a.reading_correct)
+             filter (where a.finished_at >= c.week_start)::int as c,
+           sum(a.total_questions) filter (where a.finished_at < c.week_start)::int as pq,
+           sum(a.listening_correct + a.reading_correct)
+             filter (where a.finished_at < c.week_start)::int as pc
+    from public.attempts a, clock c
+    where a.finished_at >= c.week_start - interval '7 days'
+    group by a.user_id
+  ),
+  last_week as (
+    select w.user_id, rank() over (order by w.pq desc, w.pc desc)::int as rk
+    from week w
+    join visible v on v.user_id = w.user_id
+    where w.pq > 0
+  ),
+  -- Ngày liên tiếp: trong 1 chuỗi, day + số thứ tự (giảm dần) là hằng số.
+  active as (
+    select d.user_id, d.day,
+           d.day + (row_number() over (partition by d.user_id order by d.day desc))::int as grp
+    from public.study_days d
+    where d.questions + d.mistakes + d.words + d.dictations > 0
+  ),
+  streaks as (
+    select s.user_id, count(*)::int as n
+    from active s, clock c
+    group by s.user_id, s.grp, c.today
+    having max(s.day) >= c.today - 1
+  ),
+  board as (
+    select v.user_id, v.display_name, v.user_id = (select id from me) as is_me,
+           b.total, b.l, b.r, coalesce(b.n, 0) as n,
+           coalesce(w.q, 0) as q, coalesce(w.c, 0) as c,
+           coalesce(s.n, 0) as st,
+           case when lw.rk <= 3 then lw.rk end as lwr,
+           case p_board
+             when 'week'   then coalesce(w.q, 0)
+             when 'streak' then coalesce(s.n, 0)
+             else coalesce(b.total, 0)
+           end as metric,
+           case p_board
+             when 'week'   then coalesce(w.c, 0)
+             when 'streak' then coalesce(w.q, 0)
+             else coalesce(b.n, 0)
+           end as tiebreak
+    from visible v
+    left join best b       on b.user_id = v.user_id
+    left join week w       on w.user_id = v.user_id
+    left join streaks s    on s.user_id = v.user_id
+    left join last_week lw on lw.user_id = v.user_id
+  ),
+  ranked as (
+    select *, case when metric > 0
+                   then rank() over (order by metric > 0 desc, metric desc, tiebreak desc)::int
+              end as rk
+    from board
+  )
+  select rk, user_id, display_name, is_me, total, l, r, n, q, c, st, lwr
+  from ranked
+  where (select id from me) is not null
+    and ((rk is not null and rk <= least(greatest(p_limit, 1), 200)) or is_me)
+  order by rk nulls last, display_name;
+$$;
+revoke all on function public.leaderboard(text, int) from public, anon;
+grant execute on function public.leaderboard(text, int) to authenticated;

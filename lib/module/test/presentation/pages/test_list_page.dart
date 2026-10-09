@@ -4,11 +4,15 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/design_system/design_system.dart';
+import '../../../../core/network/app_exception.dart';
 import '../../../../helper/format.dart';
 import '../../../../routes/app_router.dart';
 import '../../../auth/presentation/controllers/auth_controller.dart';
 import '../../../goals/presentation/controllers/study_progress.dart';
 import '../../../goals/presentation/widgets/goal_sheet.dart';
+import '../../../plan/data/models/plan_models.dart';
+import '../../../plan/presentation/controllers/plan_controller.dart';
+import '../../../plan/presentation/widgets/pro_sheet.dart';
 import '../../../vocab/presentation/controllers/vocab_controller.dart';
 import '../../data/in_progress_store.dart';
 import '../../data/models/test_models.dart';
@@ -31,7 +35,8 @@ class _TestListPageState extends ConsumerState<TestListPage> {
       ..invalidate(attemptsProvider)
       ..invalidate(mistakesProvider)
       ..invalidate(inProgressAllProvider)
-      ..invalidate(vocabListProvider);
+      ..invalidate(vocabListProvider)
+      ..invalidate(myPlanProvider);
     return ref.refresh(testListProvider.future);
   }
 
@@ -40,6 +45,7 @@ class _TestListPageState extends ConsumerState<TestListPage> {
     final tests = ref.watch(testListProvider);
     final attempts = ref.watch(attemptsProvider).value ?? const <Attempt>[];
     final inProgress = ref.watch(inProgressAllProvider).value ?? const {};
+    final plan = ref.watch(myPlanProvider).value;
 
     return Scaffold(
       body: SafeArea(
@@ -70,8 +76,8 @@ class _TestListPageState extends ConsumerState<TestListPage> {
                   Gaps.v16,
                   const _QuickActions(),
                   Gaps.v16,
-                  _CommercialUpgradeBanner(),
-                  Gaps.v24,
+                  if (plan != null && !plan.isPro) ...[const _CommercialUpgradeBanner(), Gaps.v8],
+                  Gaps.v16,
                   SectionHeader(
                     title: 'Đề thi ETS & Luyện tập',
                     subtitle: 'Được biên soạn chuẩn theo format đề thi thật',
@@ -122,6 +128,7 @@ class _TestListPageState extends ConsumerState<TestListPage> {
                             .where((a) => a.testId == t.id && !a.isMistakeReview)
                             .firstOrNull,
                         inProgress: inProgress[t.id],
+                        locked: isTestLocked(t, plan),
                       ),
                       Gaps.v12,
                     ],
@@ -138,7 +145,36 @@ class _TestListPageState extends ConsumerState<TestListPage> {
 class _Greeting extends ConsumerWidget {
   const _Greeting();
 
+  static String _planLabel(MyPlan? plan) => switch (plan) {
+    null => 'Đang tải gói…',
+    MyPlan(isAdmin: true) => 'Quản trị viên · Toàn quyền',
+    MyPlan(isPro: true, :final proUntil?) => 'Bami PRO · đến ${Fmt.date(proUntil.toLocal())}',
+    MyPlan(isPro: true) => 'Bami PRO',
+    _ => 'Gói miễn phí · Xem quyền lợi PRO',
+  };
+
+  Future<void> _deleteAccount(BuildContext ctx, WidgetRef ref) async {
+    final ok = await showAppConfirmDialog(
+      ctx,
+      title: 'Xoá tài khoản?',
+      message:
+          'Toàn bộ bài làm, từ vựng riêng, mục tiêu và hạng của bạn sẽ bị xoá vĩnh viễn. '
+          'Không thể hoàn tác.',
+      confirmLabel: 'Xoá vĩnh viễn',
+      destructive: true,
+    );
+    if (!ok || !ctx.mounted) return;
+    final messenger = ScaffoldMessenger.of(ctx);
+    Navigator.pop(ctx);
+    try {
+      await ref.read(authControllerProvider.notifier).deleteAccount();
+    } catch (e) {
+      showAppSnackBarOn(messenger, AppException.from(e).message, tone: AppTone.danger);
+    }
+  }
+
   void _openAccount(BuildContext context, WidgetRef ref, String? email, int streak) {
+    final plan = ref.read(myPlanProvider).value;
     showAppBottomSheet<void>(
       context,
       builder: (ctx) => SafeArea(
@@ -157,7 +193,7 @@ class _Greeting extends ConsumerWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text('Tài khoản học viên', style: ctx.textStyles.titleLarge),
-                  const ProBadge(),
+                  if (plan?.isPro ?? false) const ProBadge(),
                 ],
               ),
               Gaps.v12,
@@ -166,8 +202,27 @@ class _Greeting extends ConsumerWidget {
                   ListTile(
                     leading: const IconBadge(icon: Icons.person_rounded),
                     title: Text(email ?? 'Học viên Bami'),
-                    subtitle: const Text('Gói Bami PRO · Không giới hạn'),
+                    subtitle: Text(_planLabel(plan)),
+                    trailing: plan?.isPro ?? false ? null : const Icon(Icons.chevron_right_rounded),
+                    onTap: () {
+                      Navigator.pop(ctx);
+                      showProSheet(context);
+                    },
                   ),
+                  if (plan?.isAdmin ?? false)
+                    ListTile(
+                      leading: const IconBadge(
+                        icon: Icons.admin_panel_settings_outlined,
+                        tone: AppTone.info,
+                      ),
+                      title: const Text('Quản lý học viên'),
+                      subtitle: const Text('Cấp, gia hạn hoặc thu hồi PRO'),
+                      trailing: const Icon(Icons.chevron_right_rounded),
+                      onTap: () {
+                        Navigator.pop(ctx);
+                        context.push(Routes.adminUsers);
+                      },
+                    ),
                   ListTile(
                     leading: const IconBadge(
                       icon: Icons.local_fire_department_rounded,
@@ -210,6 +265,12 @@ class _Greeting extends ConsumerWidget {
                     },
                   ),
                 ],
+              ),
+              Gaps.v8,
+              TextButton(
+                onPressed: () => _deleteAccount(ctx, ref),
+                style: TextButton.styleFrom(foregroundColor: ctx.colors.error),
+                child: const Text('Xoá tài khoản'),
               ),
             ],
           ),
@@ -280,9 +341,7 @@ class _Greeting extends ConsumerWidget {
                         _displayName(email),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
-                        style: context.textStyles.labelLarge?.copyWith(
-                          fontWeight: FontWeight.w700,
-                        ),
+                        style: context.textStyles.labelLarge?.copyWith(fontWeight: FontWeight.w700),
                       ),
                     ),
                     Gaps.h4,
@@ -299,11 +358,10 @@ class _Greeting extends ConsumerWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              CoinBadge(
-                amount: 150,
-                onTap: () => _openAccount(context, ref, email, streak),
-              ),
-              Gaps.h8,
+              if (ref.watch(myPlanProvider).value?.isPro ?? false) ...[
+                const ProBadge(mini: true),
+                Gaps.h8,
+              ],
               StreakBadge(
                 count: streak,
                 active: isStreakActive,
@@ -635,29 +693,28 @@ class _QuickAction extends StatelessWidget {
 
 /// Banner thương mại hoá Bami PRO.
 class _CommercialUpgradeBanner extends StatelessWidget {
+  const _CommercialUpgradeBanner();
+
   @override
   Widget build(BuildContext context) {
     return UpgradeBanner(
       title: 'Mở khoá đặc quyền Bami PRO',
-      description: 'Ngân hàng 20+ đề ETS 2024 mới nhất & AI phân tích giải thích bẫy đề.',
+      description: 'Làm mọi đề ETS full 200 câu, chép chính tả mọi đề và ghi danh Cảnh giới.',
       actionLabel: 'Xem chi tiết',
-      onUpgrade: () {
-        showAppSnackBar(
-          context,
-          'Bạn đang sử dụng phiên bản Bami PRO đầy đủ!',
-          tone: AppTone.success,
-        );
-      },
+      onUpgrade: () => showProSheet(context),
     );
   }
 }
 
 class _TestCard extends StatelessWidget {
-  const _TestCard({required this.test, this.lastAttempt, this.inProgress});
+  const _TestCard({required this.test, this.lastAttempt, this.inProgress, this.locked = false});
 
   final TestSummary test;
   final Attempt? lastAttempt;
   final TakingSnapshot? inProgress;
+
+  /// Đề PRO, user chưa có PRO → chạm mở giới thiệu PRO.
+  final bool locked;
 
   @override
   Widget build(BuildContext context) {
@@ -670,8 +727,10 @@ class _TestCard extends StatelessWidget {
 
     final isFullTest = test.questionCount >= 100;
 
+    void open() => locked ? showProSheet(context) : context.go(Routes.testDetail(test.id));
+
     return AppCard(
-      onTap: () => context.go(Routes.testDetail(test.id)),
+      onTap: open,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -713,8 +772,7 @@ class _TestCard extends StatelessWidget {
                             ),
                           ),
                         ),
-                        if (isFullTest)
-                          const ProBadge(label: 'PRO', mini: true),
+                        if (locked) const ProBadge(label: 'PRO', mini: true),
                       ],
                     ),
                     Gaps.v4,
@@ -734,13 +792,6 @@ class _TestCard extends StatelessWidget {
                           style: context.textStyles.bodySmall?.copyWith(
                             color: context.colors.onSurfaceVariant,
                             fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Text(
-                          '⭐️ 4.9',
-                          style: context.textStyles.bodySmall?.copyWith(
-                            color: AppTone.warning.colorsOf(context).main,
-                            fontWeight: FontWeight.w700,
                           ),
                         ),
                       ],
@@ -763,6 +814,12 @@ class _TestCard extends StatelessWidget {
                       label: isFullTest ? 'Chuẩn ETS' : 'Mini Test',
                       tone: isFullTest ? TestTagTone.success : TestTagTone.neutral,
                     ),
+                    if (test.isFree)
+                      const StatusBadge(
+                        label: 'Miễn phí',
+                        tone: AppTone.success,
+                        icon: Icons.lock_open_rounded,
+                      ),
                     if (inProgress case final p?)
                       StatusBadge(
                         label: 'Làm dở · ${p.answers.length}/${p.totalQuestions}',
@@ -780,17 +837,20 @@ class _TestCard extends StatelessWidget {
               ),
               Gaps.h8,
               FilledButton.tonal(
-                onPressed: () => context.go(Routes.testDetail(test.id)),
+                onPressed: open,
                 style: FilledButton.styleFrom(
                   visualDensity: VisualDensity.compact,
                   padding: const EdgeInsets.symmetric(horizontal: AppSpacing.s12),
                 ),
-                child: const Row(
+                child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text('Làm bài'),
+                    Text(locked ? 'Mở khoá' : 'Làm bài'),
                     Gaps.h4,
-                    Icon(Icons.arrow_forward_rounded, size: AppSizes.iconXs),
+                    Icon(
+                      locked ? Icons.lock_outline_rounded : Icons.arrow_forward_rounded,
+                      size: AppSizes.iconXs,
+                    ),
                   ],
                 ),
               ),

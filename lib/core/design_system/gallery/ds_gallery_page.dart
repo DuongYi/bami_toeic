@@ -409,6 +409,8 @@ class _CommercialDemo extends StatelessWidget {
         ),
         Gaps.v12,
         UpgradeBanner(
+          badge: '-50%',
+          caption: 'Mở khoá ngay hôm nay',
           title: 'Nâng cấp Bami PRO',
           description: 'Mở khoá đầy đủ đề thi ETS và giải thích chi tiết AI',
           onUpgrade: () {},

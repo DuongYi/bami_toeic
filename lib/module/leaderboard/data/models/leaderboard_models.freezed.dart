@@ -17,7 +17,9 @@ T _$identity<T>(T value) => value;
 mixin _$LeaderboardEntry {
 
 /// null = chưa đủ dữ liệu để xếp hạng (chỉ xảy ra với dòng của chính mình).
- int? get rank; String get userId; String get displayName; bool get isMe; int? get bestScore; int? get bestListening; int? get bestReading; int get fullTests; int get weekQuestions; int get weekCorrect;
+ int? get rank; String get userId; String get displayName; bool get isMe; int? get bestScore; int? get bestListening; int? get bestReading; int get fullTests; int get weekQuestions; int get weekCorrect;/// Số ngày học liên tiếp tính tới hôm nay / hôm qua.
+ int get streak;/// Hạng 1–3 của mùa tuần trước; null nếu ngoài top 3.
+ int? get lastWeekRank;
 /// Create a copy of LeaderboardEntry
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -31,20 +33,20 @@ $LeaderboardEntryCopyWith<LeaderboardEntry> get copyWith => _$LeaderboardEntryCo
 @override
 bool operator ==(Object other) {
   final _this = this as LeaderboardEntry;
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LeaderboardEntry&&(identical(other.rank, _this.rank) || other.rank == _this.rank)&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.displayName, _this.displayName) || other.displayName == _this.displayName)&&(identical(other.isMe, _this.isMe) || other.isMe == _this.isMe)&&(identical(other.bestScore, _this.bestScore) || other.bestScore == _this.bestScore)&&(identical(other.bestListening, _this.bestListening) || other.bestListening == _this.bestListening)&&(identical(other.bestReading, _this.bestReading) || other.bestReading == _this.bestReading)&&(identical(other.fullTests, _this.fullTests) || other.fullTests == _this.fullTests)&&(identical(other.weekQuestions, _this.weekQuestions) || other.weekQuestions == _this.weekQuestions)&&(identical(other.weekCorrect, _this.weekCorrect) || other.weekCorrect == _this.weekCorrect));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is LeaderboardEntry&&(identical(other.rank, _this.rank) || other.rank == _this.rank)&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.displayName, _this.displayName) || other.displayName == _this.displayName)&&(identical(other.isMe, _this.isMe) || other.isMe == _this.isMe)&&(identical(other.bestScore, _this.bestScore) || other.bestScore == _this.bestScore)&&(identical(other.bestListening, _this.bestListening) || other.bestListening == _this.bestListening)&&(identical(other.bestReading, _this.bestReading) || other.bestReading == _this.bestReading)&&(identical(other.fullTests, _this.fullTests) || other.fullTests == _this.fullTests)&&(identical(other.weekQuestions, _this.weekQuestions) || other.weekQuestions == _this.weekQuestions)&&(identical(other.weekCorrect, _this.weekCorrect) || other.weekCorrect == _this.weekCorrect)&&(identical(other.streak, _this.streak) || other.streak == _this.streak)&&(identical(other.lastWeekRank, _this.lastWeekRank) || other.lastWeekRank == _this.lastWeekRank));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
   final _this = this as LeaderboardEntry;
-  return Object.hash(runtimeType,_this.rank,_this.userId,_this.displayName,_this.isMe,_this.bestScore,_this.bestListening,_this.bestReading,_this.fullTests,_this.weekQuestions,_this.weekCorrect);
+  return Object.hash(runtimeType,_this.rank,_this.userId,_this.displayName,_this.isMe,_this.bestScore,_this.bestListening,_this.bestReading,_this.fullTests,_this.weekQuestions,_this.weekCorrect,_this.streak,_this.lastWeekRank);
 }
 
 @override
 String toString() {
   final _this = this as LeaderboardEntry;
-  return 'LeaderboardEntry(rank: ${_this.rank}, userId: ${_this.userId}, displayName: ${_this.displayName}, isMe: ${_this.isMe}, bestScore: ${_this.bestScore}, bestListening: ${_this.bestListening}, bestReading: ${_this.bestReading}, fullTests: ${_this.fullTests}, weekQuestions: ${_this.weekQuestions}, weekCorrect: ${_this.weekCorrect})';
+  return 'LeaderboardEntry(rank: ${_this.rank}, userId: ${_this.userId}, displayName: ${_this.displayName}, isMe: ${_this.isMe}, bestScore: ${_this.bestScore}, bestListening: ${_this.bestListening}, bestReading: ${_this.bestReading}, fullTests: ${_this.fullTests}, weekQuestions: ${_this.weekQuestions}, weekCorrect: ${_this.weekCorrect}, streak: ${_this.streak}, lastWeekRank: ${_this.lastWeekRank})';
 }
 
 
@@ -55,7 +57,7 @@ abstract mixin class $LeaderboardEntryCopyWith<$Res>  {
   factory $LeaderboardEntryCopyWith(LeaderboardEntry value, $Res Function(LeaderboardEntry) _then) = _$LeaderboardEntryCopyWithImpl;
 @useResult
 $Res call({
- int? rank, String userId, String displayName, bool isMe, int? bestScore, int? bestListening, int? bestReading, int fullTests, int weekQuestions, int weekCorrect
+ int? rank, String userId, String displayName, bool isMe, int? bestScore, int? bestListening, int? bestReading, int fullTests, int weekQuestions, int weekCorrect, int streak, int? lastWeekRank
 });
 
 
@@ -72,7 +74,7 @@ class _$LeaderboardEntryCopyWithImpl<$Res>
 
 /// Create a copy of LeaderboardEntry
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? rank = freezed,Object? userId = null,Object? displayName = null,Object? isMe = null,Object? bestScore = freezed,Object? bestListening = freezed,Object? bestReading = freezed,Object? fullTests = null,Object? weekQuestions = null,Object? weekCorrect = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? rank = freezed,Object? userId = null,Object? displayName = null,Object? isMe = null,Object? bestScore = freezed,Object? bestListening = freezed,Object? bestReading = freezed,Object? fullTests = null,Object? weekQuestions = null,Object? weekCorrect = null,Object? streak = null,Object? lastWeekRank = freezed,}) {
   return _then(LeaderboardEntry(
 rank: freezed == rank ? _self.rank : rank // ignore: cast_nullable_to_non_nullable
 as int?,userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
@@ -84,7 +86,9 @@ as int?,bestReading: freezed == bestReading ? _self.bestReading : bestReading //
 as int?,fullTests: null == fullTests ? _self.fullTests : fullTests // ignore: cast_nullable_to_non_nullable
 as int,weekQuestions: null == weekQuestions ? _self.weekQuestions : weekQuestions // ignore: cast_nullable_to_non_nullable
 as int,weekCorrect: null == weekCorrect ? _self.weekCorrect : weekCorrect // ignore: cast_nullable_to_non_nullable
-as int,
+as int,streak: null == streak ? _self.streak : streak // ignore: cast_nullable_to_non_nullable
+as int,lastWeekRank: freezed == lastWeekRank ? _self.lastWeekRank : lastWeekRank // ignore: cast_nullable_to_non_nullable
+as int?,
   ));
 }
 
@@ -169,10 +173,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? rank,  String userId,  String displayName,  bool isMe,  int? bestScore,  int? bestListening,  int? bestReading,  int fullTests,  int weekQuestions,  int weekCorrect)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? rank,  String userId,  String displayName,  bool isMe,  int? bestScore,  int? bestListening,  int? bestReading,  int fullTests,  int weekQuestions,  int weekCorrect,  int streak,  int? lastWeekRank)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _LeaderboardEntry() when $default != null:
-return $default(_that.rank,_that.userId,_that.displayName,_that.isMe,_that.bestScore,_that.bestListening,_that.bestReading,_that.fullTests,_that.weekQuestions,_that.weekCorrect);case _:
+return $default(_that.rank,_that.userId,_that.displayName,_that.isMe,_that.bestScore,_that.bestListening,_that.bestReading,_that.fullTests,_that.weekQuestions,_that.weekCorrect,_that.streak,_that.lastWeekRank);case _:
   return orElse();
 
 }
@@ -190,10 +194,10 @@ return $default(_that.rank,_that.userId,_that.displayName,_that.isMe,_that.bestS
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? rank,  String userId,  String displayName,  bool isMe,  int? bestScore,  int? bestListening,  int? bestReading,  int fullTests,  int weekQuestions,  int weekCorrect)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? rank,  String userId,  String displayName,  bool isMe,  int? bestScore,  int? bestListening,  int? bestReading,  int fullTests,  int weekQuestions,  int weekCorrect,  int streak,  int? lastWeekRank)  $default,) {final _that = this;
 switch (_that) {
 case _LeaderboardEntry():
-return $default(_that.rank,_that.userId,_that.displayName,_that.isMe,_that.bestScore,_that.bestListening,_that.bestReading,_that.fullTests,_that.weekQuestions,_that.weekCorrect);case _:
+return $default(_that.rank,_that.userId,_that.displayName,_that.isMe,_that.bestScore,_that.bestListening,_that.bestReading,_that.fullTests,_that.weekQuestions,_that.weekCorrect,_that.streak,_that.lastWeekRank);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -210,10 +214,10 @@ return $default(_that.rank,_that.userId,_that.displayName,_that.isMe,_that.bestS
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? rank,  String userId,  String displayName,  bool isMe,  int? bestScore,  int? bestListening,  int? bestReading,  int fullTests,  int weekQuestions,  int weekCorrect)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? rank,  String userId,  String displayName,  bool isMe,  int? bestScore,  int? bestListening,  int? bestReading,  int fullTests,  int weekQuestions,  int weekCorrect,  int streak,  int? lastWeekRank)?  $default,) {final _that = this;
 switch (_that) {
 case _LeaderboardEntry() when $default != null:
-return $default(_that.rank,_that.userId,_that.displayName,_that.isMe,_that.bestScore,_that.bestListening,_that.bestReading,_that.fullTests,_that.weekQuestions,_that.weekCorrect);case _:
+return $default(_that.rank,_that.userId,_that.displayName,_that.isMe,_that.bestScore,_that.bestListening,_that.bestReading,_that.fullTests,_that.weekQuestions,_that.weekCorrect,_that.streak,_that.lastWeekRank);case _:
   return null;
 
 }
@@ -225,7 +229,7 @@ return $default(_that.rank,_that.userId,_that.displayName,_that.isMe,_that.bestS
 @JsonSerializable()
 
 class _LeaderboardEntry extends LeaderboardEntry {
-  const _LeaderboardEntry({this.rank, required this.userId, required this.displayName, this.isMe = false, this.bestScore, this.bestListening, this.bestReading, this.fullTests = 0, this.weekQuestions = 0, this.weekCorrect = 0}): super._();
+  const _LeaderboardEntry({this.rank, required this.userId, required this.displayName, this.isMe = false, this.bestScore, this.bestListening, this.bestReading, this.fullTests = 0, this.weekQuestions = 0, this.weekCorrect = 0, this.streak = 0, this.lastWeekRank}): super._();
   factory _LeaderboardEntry.fromJson(Map<String, dynamic> json) => _$LeaderboardEntryFromJson(json);
 
 /// null = chưa đủ dữ liệu để xếp hạng (chỉ xảy ra với dòng của chính mình).
@@ -239,6 +243,10 @@ class _LeaderboardEntry extends LeaderboardEntry {
 @override@JsonKey() final  int fullTests;
 @override@JsonKey() final  int weekQuestions;
 @override@JsonKey() final  int weekCorrect;
+/// Số ngày học liên tiếp tính tới hôm nay / hôm qua.
+@override@JsonKey() final  int streak;
+/// Hạng 1–3 của mùa tuần trước; null nếu ngoài top 3.
+@override final  int? lastWeekRank;
 
 /// Create a copy of LeaderboardEntry
 /// with the given fields replaced by the non-null parameter values.
@@ -253,18 +261,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _LeaderboardEntry&&(identical(other.rank, rank) || other.rank == rank)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.displayName, displayName) || other.displayName == displayName)&&(identical(other.isMe, isMe) || other.isMe == isMe)&&(identical(other.bestScore, bestScore) || other.bestScore == bestScore)&&(identical(other.bestListening, bestListening) || other.bestListening == bestListening)&&(identical(other.bestReading, bestReading) || other.bestReading == bestReading)&&(identical(other.fullTests, fullTests) || other.fullTests == fullTests)&&(identical(other.weekQuestions, weekQuestions) || other.weekQuestions == weekQuestions)&&(identical(other.weekCorrect, weekCorrect) || other.weekCorrect == weekCorrect));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _LeaderboardEntry&&(identical(other.rank, rank) || other.rank == rank)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.displayName, displayName) || other.displayName == displayName)&&(identical(other.isMe, isMe) || other.isMe == isMe)&&(identical(other.bestScore, bestScore) || other.bestScore == bestScore)&&(identical(other.bestListening, bestListening) || other.bestListening == bestListening)&&(identical(other.bestReading, bestReading) || other.bestReading == bestReading)&&(identical(other.fullTests, fullTests) || other.fullTests == fullTests)&&(identical(other.weekQuestions, weekQuestions) || other.weekQuestions == weekQuestions)&&(identical(other.weekCorrect, weekCorrect) || other.weekCorrect == weekCorrect)&&(identical(other.streak, streak) || other.streak == streak)&&(identical(other.lastWeekRank, lastWeekRank) || other.lastWeekRank == lastWeekRank));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
-    return Object.hash(runtimeType,rank,userId,displayName,isMe,bestScore,bestListening,bestReading,fullTests,weekQuestions,weekCorrect);
+    return Object.hash(runtimeType,rank,userId,displayName,isMe,bestScore,bestListening,bestReading,fullTests,weekQuestions,weekCorrect,streak,lastWeekRank);
 }
 
 @override
 String toString() {
-    return 'LeaderboardEntry(rank: $rank, userId: $userId, displayName: $displayName, isMe: $isMe, bestScore: $bestScore, bestListening: $bestListening, bestReading: $bestReading, fullTests: $fullTests, weekQuestions: $weekQuestions, weekCorrect: $weekCorrect)';
+    return 'LeaderboardEntry(rank: $rank, userId: $userId, displayName: $displayName, isMe: $isMe, bestScore: $bestScore, bestListening: $bestListening, bestReading: $bestReading, fullTests: $fullTests, weekQuestions: $weekQuestions, weekCorrect: $weekCorrect, streak: $streak, lastWeekRank: $lastWeekRank)';
 }
 
 
@@ -275,7 +283,7 @@ abstract mixin class _$LeaderboardEntryCopyWith<$Res> implements $LeaderboardEnt
   factory _$LeaderboardEntryCopyWith(_LeaderboardEntry value, $Res Function(_LeaderboardEntry) _then) = __$LeaderboardEntryCopyWithImpl;
 @override @useResult
 $Res call({
- int? rank, String userId, String displayName, bool isMe, int? bestScore, int? bestListening, int? bestReading, int fullTests, int weekQuestions, int weekCorrect
+ int? rank, String userId, String displayName, bool isMe, int? bestScore, int? bestListening, int? bestReading, int fullTests, int weekQuestions, int weekCorrect, int streak, int? lastWeekRank
 });
 
 
@@ -292,7 +300,7 @@ class __$LeaderboardEntryCopyWithImpl<$Res>
 
 /// Create a copy of LeaderboardEntry
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? rank = freezed,Object? userId = null,Object? displayName = null,Object? isMe = null,Object? bestScore = freezed,Object? bestListening = freezed,Object? bestReading = freezed,Object? fullTests = null,Object? weekQuestions = null,Object? weekCorrect = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? rank = freezed,Object? userId = null,Object? displayName = null,Object? isMe = null,Object? bestScore = freezed,Object? bestListening = freezed,Object? bestReading = freezed,Object? fullTests = null,Object? weekQuestions = null,Object? weekCorrect = null,Object? streak = null,Object? lastWeekRank = freezed,}) {
   return _then(_LeaderboardEntry(
 rank: freezed == rank ? _self.rank : rank // ignore: cast_nullable_to_non_nullable
 as int?,userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
@@ -304,7 +312,9 @@ as int?,bestReading: freezed == bestReading ? _self.bestReading : bestReading //
 as int?,fullTests: null == fullTests ? _self.fullTests : fullTests // ignore: cast_nullable_to_non_nullable
 as int,weekQuestions: null == weekQuestions ? _self.weekQuestions : weekQuestions // ignore: cast_nullable_to_non_nullable
 as int,weekCorrect: null == weekCorrect ? _self.weekCorrect : weekCorrect // ignore: cast_nullable_to_non_nullable
-as int,
+as int,streak: null == streak ? _self.streak : streak // ignore: cast_nullable_to_non_nullable
+as int,lastWeekRank: freezed == lastWeekRank ? _self.lastWeekRank : lastWeekRank // ignore: cast_nullable_to_non_nullable
+as int?,
   ));
 }
 

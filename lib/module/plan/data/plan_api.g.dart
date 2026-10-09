@@ -1,6 +1,16 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'auth_api.dart';
+part of 'plan_api.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+Map<String, dynamic> _$AdminUserQueryToJson(AdminUserQuery instance) =>
+    <String, dynamic>{'p_query': instance.query};
+
+Map<String, dynamic> _$GrantProBodyToJson(GrantProBody instance) =>
+    <String, dynamic>{'p_user_id': instance.userId, 'p_days': instance.days};
 
 // dart format off
 
@@ -11,8 +21,8 @@ part of 'auth_api.dart';
 // ignore_for_file: type=lint
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations,unused_element_parameter,avoid_unused_constructor_parameters,unreachable_from_main,avoid_redundant_argument_values
 
-class _AuthApi implements AuthApi {
-  _AuthApi(this._dio, {this.baseUrl, this.errorLogger});
+class _PlanApi implements PlanApi {
+  _PlanApi(this._dio, {this.baseUrl, this.errorLogger});
 
   final Dio _dio;
 
@@ -21,29 +31,27 @@ class _AuthApi implements AuthApi {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<Session> signInWithPassword(
-    Map<String, dynamic> body, {
-    String grantType = 'password',
-  }) async {
-    final _extra = <String, dynamic>{'skipAuth': true};
-    final queryParameters = <String, dynamic>{r'grant_type': grantType};
+  Future<List<MyPlan>> getMyPlan() async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(body);
-    final _options = _setStreamType<Session>(
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<List<MyPlan>>(
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            '/auth/v1/token',
+            '/rest/v1/rpc/my_plan',
             queryParameters: queryParameters,
             data: _data,
           )
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
-    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
-    late Session _value;
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<MyPlan> _value;
     try {
-      _value = Session.fromJson(_result.data!);
+      _value = _result.data!
+          .map((dynamic i) => MyPlan.fromJson(i as Map<String, dynamic>))
+          .toList();
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options, response: _result);
       rethrow;
@@ -52,63 +60,61 @@ class _AuthApi implements AuthApi {
   }
 
   @override
-  Future<dynamic> signUp(Map<String, dynamic> body) async {
-    final _extra = <String, dynamic>{'skipAuth': true};
+  Future<List<AdminUser>> listUsers(AdminUserQuery body) async {
+    final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    _data.addAll(body);
-    final _options = _setStreamType<dynamic>(
+    _data.addAll(body.toJson());
+    final _options = _setStreamType<List<AdminUser>>(
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            '/auth/v1/signup',
+            '/rest/v1/rpc/admin_list_users',
             queryParameters: queryParameters,
             data: _data,
           )
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
-    final _result = await _dio.fetch(_options);
-    final _value = _result.data;
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<AdminUser> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => AdminUser.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options, response: _result);
+      rethrow;
+    }
     return _value;
   }
 
   @override
-  Future<void> deleteAccount() async {
+  Future<String?> grantPro(GrantProBody body) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<void>(
+    final _data = <String, dynamic>{};
+    _data.addAll(body.toJson());
+    final _options = _setStreamType<String?>(
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            '/rest/v1/rpc/delete_my_account',
+            '/rest/v1/rpc/admin_grant_pro',
             queryParameters: queryParameters,
             data: _data,
           )
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
-    await _dio.fetch<void>(_options);
-  }
-
-  @override
-  Future<void> signOut() async {
-    final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{};
-    const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<void>(
-      Options(method: 'POST', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/auth/v1/logout',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
-    await _dio.fetch<void>(_options);
+    final _result = await _dio.fetch<String>(_options);
+    late String? _value;
+    try {
+      _value = _result.data;
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options, response: _result);
+      rethrow;
+    }
+    return _value;
   }
 
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {

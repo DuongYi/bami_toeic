@@ -3,15 +3,16 @@ import 'package:bami_toeic/module/vocab/data/models/vocab_models.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  test('TestSummary đọc questions(count)', () {
+  test('TestSummary đọc question_total và is_free', () {
     final t = TestSummary.fromJson({
       'id': 't1',
       'title': 'Test 1',
-      'questions': [
-        {'count': 200},
-      ],
+      'question_total': 200,
+      'is_free': true,
     });
     expect(t.questionCount, 200);
+    expect(t.isFree, isTrue);
+    expect(TestSummary.fromJson({'id': 't2', 'title': 'Test 2'}).isFree, isFalse);
   });
 
   test('Attempt đọc tests(title) và ngày giờ', () {

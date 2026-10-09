@@ -7,6 +7,8 @@ import 'package:bami_toeic/module/auth/data/models/session.dart';
 import 'package:bami_toeic/module/auth/presentation/controllers/auth_controller.dart';
 import 'package:bami_toeic/module/leaderboard/data/leaderboard_repository.dart';
 import 'package:bami_toeic/module/leaderboard/data/models/leaderboard_models.dart';
+import 'package:bami_toeic/module/plan/data/models/plan_models.dart';
+import 'package:bami_toeic/module/plan/data/plan_repository.dart';
 import 'package:bami_toeic/module/test/data/models/test_models.dart';
 import 'package:bami_toeic/module/test/data/test_repository.dart';
 import 'package:bami_toeic/module/vocab/data/models/vocab_models.dart';
@@ -28,7 +30,13 @@ class FakeAuth extends AuthController {
 }
 
 final _tests = [
-  const TestSummary(id: 't1', title: 'ETS 2024 – Test 1', source: 'ETS 2024', questionCount: 200),
+  const TestSummary(
+    id: 't1',
+    title: 'ETS 2024 – Test 1',
+    source: 'ETS 2024',
+    questionCount: 200,
+    isFree: true,
+  ),
   const TestSummary(id: 't2', title: 'ETS 2024 – Test 2', source: 'ETS 2024', questionCount: 200),
   const TestSummary(
     id: 't3',
@@ -36,6 +44,7 @@ final _tests = [
     source: 'Bami TOEIC',
     description: 'Đề mẫu ngắn để kiểm tra app: Part 5, 6, 7.',
     questionCount: 12,
+    isFree: true,
   ),
 ];
 
@@ -353,6 +362,8 @@ class FakeLeaderboardRepository implements LeaderboardRepository {
       fullTests: 6,
       weekQuestions: 420,
       weekCorrect: 371,
+      streak: 21,
+      lastWeekRank: 1,
     ),
     LeaderboardEntry(
       rank: 2,
@@ -376,6 +387,8 @@ class FakeLeaderboardRepository implements LeaderboardRepository {
       fullTests: 2,
       weekQuestions: 180,
       weekCorrect: 129,
+      streak: 5,
+      lastWeekRank: 3,
     ),
     LeaderboardEntry(
       rank: 4,
@@ -391,9 +404,20 @@ class FakeLeaderboardRepository implements LeaderboardRepository {
   ];
 
   @override
-  Future<LeaderboardProfile> fetchProfile() async =>
-      const LeaderboardProfile(displayName: 'Bami');
+  Future<LeaderboardProfile> fetchProfile() async => const LeaderboardProfile(displayName: 'Bami');
 
   @override
   Future<void> saveProfile(LeaderboardProfile p) async {}
+}
+
+/// Tài khoản miễn phí: thấy đề PRO bị khoá + banner nâng cấp.
+class FakePlanRepository implements PlanRepository {
+  @override
+  Future<MyPlan> fetchMyPlan() async => const MyPlan();
+
+  @override
+  Future<List<AdminUser>> listUsers(String query) async => const [];
+
+  @override
+  Future<DateTime?> grantPro(String userId, int days) async => null;
 }

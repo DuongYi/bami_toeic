@@ -6,6 +6,7 @@ import 'package:bami_toeic/main.dart';
 import 'package:bami_toeic/module/auth/presentation/controllers/auth_controller.dart';
 import 'package:bami_toeic/module/goals/data/goals_repository.dart';
 import 'package:bami_toeic/module/leaderboard/data/leaderboard_repository.dart';
+import 'package:bami_toeic/module/plan/data/plan_repository.dart';
 import 'package:bami_toeic/module/test/data/test_repository.dart';
 import 'package:bami_toeic/module/vocab/data/vocab_repository.dart';
 import 'package:bami_toeic/module/vocab/presentation/controllers/vocab_controller.dart';
@@ -38,6 +39,7 @@ Future<ProviderContainer> _boot(
         vocabRepositoryProvider.overrideWithValue(FakeVocabRepository()),
         goalsRepositoryProvider.overrideWithValue(FakeGoalsRepository()),
         leaderboardRepositoryProvider.overrideWithValue(FakeLeaderboardRepository()),
+        planRepositoryProvider.overrideWithValue(FakePlanRepository()),
         sessionRandomProvider.overrideWithValue(Random(1)),
       ],
       child: const BamiToeicApp(),

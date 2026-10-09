@@ -6,6 +6,7 @@ import '../../../../core/design_system/design_system.dart';
 import '../../../../helper/format.dart';
 import '../../../../helper/score.dart';
 import '../../../../routes/app_router.dart';
+import '../../../leaderboard/data/realm.dart';
 import '../../data/models/test_models.dart';
 import '../../../vocab/presentation/widgets/word_lookup_sheet.dart';
 import '../controllers/test_providers.dart';
@@ -126,7 +127,6 @@ class _ResultBodyState extends State<_ResultBody> {
                             ),
                           ],
                         ),
-                        const ProBadge(label: 'CERTIFIED', mini: true),
                       ],
                     ),
                     Gaps.v16,
@@ -178,6 +178,7 @@ class _ResultBodyState extends State<_ResultBody> {
                 ),
               ),
               Gaps.v8,
+              if (a.isFullTest) _Breakthrough(attempt: a),
               if (wrong > 0) ...[
                 AppCard(
                   tone: AppTone.warning,
@@ -355,6 +356,78 @@ class _ReviewPagerState extends State<_ReviewPager> {
           isRevealed: (_) => true,
           showTranscript: true,
           contextMenuBuilder: lookupContextMenu(context),
+        ),
+      ),
+    );
+  }
+}
+
+/// Sau full test: báo đột phá cảnh giới / kỷ lục mới so với các full test trước đó.
+class _Breakthrough extends ConsumerWidget {
+  const _Breakthrough({required this.attempt});
+
+  final Attempt attempt;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final attempts = ref.watch(attemptsProvider).value;
+    if (attempts == null) return const SizedBox.shrink();
+    final score = attempt.totalScore;
+    final previous = [
+      for (final x in attempts)
+        if (x.id != attempt.id && x.isFullTest && x.finishedAt.isBefore(attempt.finishedAt))
+          x.totalScore,
+    ];
+    final best = previous.isEmpty ? null : previous.reduce((x, y) => x > y ? x : y);
+    final realm = Realm.of(score);
+
+    final String title;
+    final String message;
+    if (best == null) {
+      title = 'Ghi danh Thương Khung Bảng';
+      message = 'Cảnh giới khởi đầu: ${realm.label}. Xem bạn đứng hạng mấy.';
+    } else if (realm.index > Realm.of(best).index) {
+      title = 'Đột phá ${realm.label}!';
+      message = 'Vượt cảnh giới ${Realm.of(best).label} với $score điểm.';
+    } else if (score > best) {
+      title = 'Kỷ lục mới: $score điểm';
+      message = 'Hơn kỷ lục cũ ${score - best} điểm.';
+    } else {
+      return const SizedBox.shrink();
+    }
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: AppSpacing.s8),
+      child: AppCard(
+        tone: AppTone.success,
+        onTap: () => context.go(Routes.leaderboard),
+        child: Row(
+          children: [
+            const IconBadge(
+              icon: Icons.workspace_premium_rounded,
+              tone: AppTone.warning,
+              size: AppSizes.badgeMd,
+            ),
+            Gaps.h12,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: context.textStyles.titleSmall?.copyWith(fontWeight: FontWeight.w600),
+                  ),
+                  Text(
+                    message,
+                    style: context.textStyles.bodySmall?.copyWith(
+                      color: context.colors.onSurfaceVariant,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Icon(Icons.chevron_right_rounded),
+          ],
         ),
       ),
     );

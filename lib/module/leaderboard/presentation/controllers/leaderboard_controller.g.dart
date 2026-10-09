@@ -19,7 +19,9 @@ final class LeaderboardProvider
           List<LeaderboardEntry>,
           FutureOr<List<LeaderboardEntry>>
         >
-    with $FutureModifier<List<LeaderboardEntry>>, $FutureProvider<List<LeaderboardEntry>> {
+    with
+        $FutureModifier<List<LeaderboardEntry>>,
+        $FutureProvider<List<LeaderboardEntry>> {
   LeaderboardProvider._({
     required LeaderboardFamily super.from,
     required LeaderboardBoard super.argument,
@@ -43,8 +45,9 @@ final class LeaderboardProvider
 
   @$internal
   @override
-  $FutureProviderElement<List<LeaderboardEntry>> $createElement($ProviderPointer pointer) =>
-      $FutureProviderElement(pointer);
+  $FutureProviderElement<List<LeaderboardEntry>> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
   FutureOr<List<LeaderboardEntry>> create(Ref ref) {
@@ -66,7 +69,11 @@ final class LeaderboardProvider
 String _$leaderboardHash() => r'310f18103dc0f7d118475f38c319466dee287a98';
 
 final class LeaderboardFamily extends $Family
-    with $FunctionalFamilyOverride<FutureOr<List<LeaderboardEntry>>, LeaderboardBoard> {
+    with
+        $FunctionalFamilyOverride<
+          FutureOr<List<LeaderboardEntry>>,
+          LeaderboardBoard
+        > {
   LeaderboardFamily._()
     : super(
         retry: null,
@@ -111,16 +118,19 @@ final class MyLeaderboardProfileProvider
   MyLeaderboardProfile create() => MyLeaderboardProfile();
 }
 
-String _$myLeaderboardProfileHash() => r'88f1d90029ebcc170269d93334edcc13190b902f';
+String _$myLeaderboardProfileHash() =>
+    r'88f1d90029ebcc170269d93334edcc13190b902f';
 
 /// Tên hiển thị + tuỳ chọn ẩn khỏi bảng của user hiện tại.
 
-abstract class _$MyLeaderboardProfile extends $AsyncNotifier<LeaderboardProfile> {
+abstract class _$MyLeaderboardProfile
+    extends $AsyncNotifier<LeaderboardProfile> {
   FutureOr<LeaderboardProfile> build();
   @$mustCallSuper
   @override
   WhenComplete runBuild() {
-    final ref = this.ref as $Ref<AsyncValue<LeaderboardProfile>, LeaderboardProfile>;
+    final ref =
+        this.ref as $Ref<AsyncValue<LeaderboardProfile>, LeaderboardProfile>;
     final element =
         ref.element
             as $ClassProviderElement<

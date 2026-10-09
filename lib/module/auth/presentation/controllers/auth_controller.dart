@@ -23,6 +23,20 @@ class AuthController extends _$AuthController {
     state = AsyncData(session);
   }
 
+  /// true = đã đăng nhập luôn; false = cần xác nhận email rồi đăng nhập.
+  Future<bool> signUp({required String email, required String password}) async {
+    final session = await ref.read(authRepositoryProvider).signUp(email: email, password: password);
+    if (session == null) return false;
+    state = AsyncData(session);
+    return true;
+  }
+
+  Future<void> deleteAccount() async {
+    await ref.read(authRepositoryProvider).deleteAccount();
+    await ref.read(studyStoreProvider).onSignOut();
+    state = const AsyncData(null);
+  }
+
   Future<void> signOut() async {
     await ref.read(studyStoreProvider).onSignOut();
     await ref.read(authRepositoryProvider).signOut();

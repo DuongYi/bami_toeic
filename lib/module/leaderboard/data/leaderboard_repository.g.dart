@@ -54,7 +54,12 @@ String _$leaderboardApiHash() => r'ba68520adaed628b87dd1ca532fcee0c75bd4b90';
 final leaderboardRepositoryProvider = LeaderboardRepositoryProvider._();
 
 final class LeaderboardRepositoryProvider
-    extends $FunctionalProvider<LeaderboardRepository, LeaderboardRepository, LeaderboardRepository>
+    extends
+        $FunctionalProvider<
+          LeaderboardRepository,
+          LeaderboardRepository,
+          LeaderboardRepository
+        >
     with $Provider<LeaderboardRepository> {
   LeaderboardRepositoryProvider._()
     : super(
@@ -72,8 +77,9 @@ final class LeaderboardRepositoryProvider
 
   @$internal
   @override
-  $ProviderElement<LeaderboardRepository> $createElement($ProviderPointer pointer) =>
-      $ProviderElement(pointer);
+  $ProviderElement<LeaderboardRepository> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
 
   @override
   LeaderboardRepository create(Ref ref) {
@@ -89,4 +95,5 @@ final class LeaderboardRepositoryProvider
   }
 }
 
-String _$leaderboardRepositoryHash() => r'd6f5a07311bae5b38a8e5c03084100e9045d8591';
+String _$leaderboardRepositoryHash() =>
+    r'd6f5a07311bae5b38a8e5c03084100e9045d8591';

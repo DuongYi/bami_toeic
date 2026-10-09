@@ -6,16 +6,15 @@ part of 'leaderboard_api.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Map<String, dynamic> _$LeaderboardQueryToJson(LeaderboardQuery instance) => <String, dynamic>{
-  'p_board': instance.board,
-  'p_limit': instance.limit,
-};
+Map<String, dynamic> _$LeaderboardQueryToJson(LeaderboardQuery instance) =>
+    <String, dynamic>{'p_board': instance.board, 'p_limit': instance.limit};
 
-Map<String, dynamic> _$ProfileUpsertToJson(ProfileUpsert instance) => <String, dynamic>{
-  'display_name': instance.displayName,
-  'show_on_leaderboard': instance.showOnLeaderboard,
-  'updated_at': instance.updatedAt.toIso8601String(),
-};
+Map<String, dynamic> _$ProfileUpsertToJson(ProfileUpsert instance) =>
+    <String, dynamic>{
+      'display_name': instance.displayName,
+      'show_on_leaderboard': instance.showOnLeaderboard,
+      'updated_at': instance.updatedAt.toIso8601String(),
+    };
 
 // dart format off
 

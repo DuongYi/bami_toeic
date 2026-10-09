@@ -13,6 +13,8 @@ class UpgradeBanner extends StatelessWidget {
     required this.onUpgrade,
     this.actionLabel = 'Nâng cấp ngay',
     this.onDismiss,
+    this.badge,
+    this.caption,
   });
 
   final String title;
@@ -20,6 +22,12 @@ class UpgradeBanner extends StatelessWidget {
   final VoidCallback onUpgrade;
   final String actionLabel;
   final VoidCallback? onDismiss;
+
+  /// Nhãn nhỏ cạnh tiêu đề (vd. ưu đãi có thật). null = không hiện.
+  final String? badge;
+
+  /// Dòng nhỏ cạnh nút. null = không hiện.
+  final String? caption;
 
   @override
   Widget build(BuildContext context) {
@@ -77,31 +85,35 @@ class UpgradeBanner extends StatelessWidget {
                         children: [
                           Row(
                             children: [
-                              Text(
-                                title,
-                                style: context.textStyles.titleSmall?.copyWith(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w800,
-                                ),
-                              ),
-                              Gaps.h8,
-                              Container(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: AppSpacing.s4,
-                                  vertical: AppSpacing.s2,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: Colors.white.withValues(alpha: 0.3),
-                                  borderRadius: AppRadius.brXs,
-                                ),
+                              Flexible(
                                 child: Text(
-                                  '-50%',
-                                  style: context.textStyles.labelSmall?.copyWith(
+                                  title,
+                                  style: context.textStyles.titleSmall?.copyWith(
                                     color: Colors.white,
-                                    fontWeight: FontWeight.w900,
+                                    fontWeight: FontWeight.w800,
                                   ),
                                 ),
                               ),
+                              if (badge != null) ...[
+                                Gaps.h8,
+                                Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: AppSpacing.s4,
+                                    vertical: AppSpacing.s2,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withValues(alpha: 0.3),
+                                    borderRadius: AppRadius.brXs,
+                                  ),
+                                  child: Text(
+                                    badge!,
+                                    style: context.textStyles.labelSmall?.copyWith(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w900,
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ],
                           ),
                           Gaps.v4,
@@ -125,15 +137,18 @@ class UpgradeBanner extends StatelessWidget {
                 ),
                 Gaps.v12,
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: caption == null
+                      ? MainAxisAlignment.end
+                      : MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      '⚡️ Mở khoá ngay hôm nay',
-                      style: context.textStyles.labelSmall?.copyWith(
-                        color: Colors.white.withValues(alpha: 0.9),
-                        fontWeight: FontWeight.w600,
+                    if (caption != null)
+                      Text(
+                        caption!,
+                        style: context.textStyles.labelSmall?.copyWith(
+                          color: Colors.white.withValues(alpha: 0.9),
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
-                    ),
                     FilledButton(
                       onPressed: onUpgrade,
                       style: FilledButton.styleFrom(
@@ -148,10 +163,7 @@ class UpgradeBanner extends StatelessWidget {
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Text(
-                            actionLabel,
-                            style: const TextStyle(fontWeight: FontWeight.w700),
-                          ),
+                          Text(actionLabel, style: const TextStyle(fontWeight: FontWeight.w700)),
                           Gaps.h4,
                           const Icon(Icons.arrow_forward_rounded, size: AppSizes.iconSm),
                         ],

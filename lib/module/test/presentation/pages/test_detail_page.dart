@@ -8,6 +8,8 @@ import '../../../../routes/app_router.dart';
 import '../../data/in_progress_store.dart';
 import '../../data/models/test_models.dart';
 import '../../../../core/network/app_exception.dart';
+import '../../../plan/presentation/controllers/plan_controller.dart';
+import '../../../plan/presentation/widgets/pro_sheet.dart';
 import '../controllers/offline_controller.dart';
 import '../controllers/test_providers.dart';
 import '../widgets/question_group_view.dart';
@@ -20,6 +22,10 @@ class TestDetailPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final detail = ref.watch(testDetailProvider(testId));
+    final plan = ref.watch(myPlanProvider).value;
+    if (detail.value case final d? when isTestLocked(d.summary, plan)) {
+      return _LockedBody(title: d.summary.title);
+    }
     if (detail.value case final d?) return _DetailBody(detail: d);
     return Scaffold(
       appBar: AppBar(),
@@ -28,6 +34,29 @@ class TestDetailPage extends ConsumerWidget {
         loading: (_) => const TestDetailSkeleton(),
         onRetry: () => ref.invalidate(testDetailProvider(testId)),
         data: (_) => const SizedBox.shrink(),
+      ),
+    );
+  }
+}
+
+/// Đề PRO với tài khoản miễn phí (RLS không trả câu hỏi).
+class _LockedBody extends StatelessWidget {
+  const _LockedBody({required this.title});
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text(title)),
+      body: AppEmptyView(
+        icon: Icons.lock_outline_rounded,
+        message:
+            'Đề này dành cho Bami PRO.\nTài khoản miễn phí làm được đề mẫu và học toàn bộ từ vựng.',
+        action: FilledButton.tonal(
+          onPressed: () => showProSheet(context),
+          child: const Text('Xem quyền lợi PRO'),
+        ),
       ),
     );
   }
@@ -79,7 +108,7 @@ class _DetailBodyState extends ConsumerState<_DetailBody> {
                         borderRadius: AppRadius.brFull,
                       ),
                       child: Text(
-                        '★ CHUẨN ĐỀ THI ETS 2024',
+                        '★ ${(s.source ?? 'Bami TOEIC').toUpperCase()}',
                         style: context.textStyles.labelSmall?.copyWith(
                           color: context.surfaces.onHero,
                           fontWeight: FontWeight.w800,
@@ -87,7 +116,7 @@ class _DetailBodyState extends ConsumerState<_DetailBody> {
                         ),
                       ),
                     ),
-                    const ProBadge(label: 'PRO VIP', mini: true),
+                    if (!s.isFree) const ProBadge(mini: true),
                   ],
                 ),
                 Gaps.v12,

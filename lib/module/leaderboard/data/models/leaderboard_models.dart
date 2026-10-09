@@ -3,10 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'leaderboard_models.freezed.dart';
 part 'leaderboard_models.g.dart';
 
-/// Loại bảng: điểm full test cao nhất / số câu đã làm 7 ngày qua.
+/// Loại bảng: điểm full test cao nhất / số câu tuần này (mùa giải, từ thứ Hai giờ VN) /
+/// chuỗi ngày học hiện tại.
 enum LeaderboardBoard {
   score('score'),
-  week('week');
+  week('week'),
+  streak('streak');
 
   const LeaderboardBoard(this.key);
 
@@ -31,6 +33,12 @@ abstract class LeaderboardEntry with _$LeaderboardEntry {
     @Default(0) int fullTests,
     @Default(0) int weekQuestions,
     @Default(0) int weekCorrect,
+
+    /// Số ngày học liên tiếp tính tới hôm nay / hôm qua.
+    @Default(0) int streak,
+
+    /// Hạng 1–3 của mùa tuần trước; null nếu ngoài top 3.
+    int? lastWeekRank,
   }) = _LeaderboardEntry;
 
   factory LeaderboardEntry.fromJson(Map<String, dynamic> json) => _$LeaderboardEntryFromJson(json);

@@ -23,6 +23,14 @@ class _LoginPageState extends ConsumerState<LoginPage> {
   bool _obscure = true;
   bool _submitted = false;
 
+  /// false = đăng nhập, true = tạo tài khoản.
+  bool _register = false;
+
+  /// Email vừa đăng ký, đang chờ xác nhận qua email.
+  String? _pendingConfirm;
+
+  static const _minPassword = 8;
+
   @override
   void dispose() {
     _email.dispose();
@@ -31,21 +39,34 @@ class _LoginPageState extends ConsumerState<LoginPage> {
     super.dispose();
   }
 
-  void _submit() {
+  Future<void> _submit() async {
     setState(() => _submitted = true);
     if (!_formKey.currentState!.validate()) return;
     FocusScope.of(context).unfocus();
-    ref
-        .read(loginControllerProvider.notifier)
-        .submit(email: _email.text.trim(), password: _password.text);
+    final email = _email.text.trim();
+    final controller = ref.read(loginControllerProvider.notifier);
+    if (!_register) {
+      setState(() => _pendingConfirm = null);
+      return controller.submit(email: email, password: _password.text);
+    }
+    final needsConfirm = await controller.register(email: email, password: _password.text);
+    if (needsConfirm && mounted) {
+      setState(() {
+        _pendingConfirm = email;
+        _register = false;
+        _password.clear();
+        _submitted = false;
+      });
+    }
   }
 
-  void _fillDemoAccount() {
+  void _toggleMode() {
+    ref.read(loginControllerProvider.notifier).clearError();
     setState(() {
-      _email.text = 'me@example.com';
-      _password.text = '123456';
+      _register = !_register;
+      _submitted = false;
+      _pendingConfirm = null;
     });
-    _submit();
   }
 
   String? _validateEmail(String? v) {
@@ -55,7 +76,12 @@ class _LoginPageState extends ConsumerState<LoginPage> {
     return null;
   }
 
-  String? _validatePassword(String? v) => (v ?? '').isEmpty ? 'Nhập mật khẩu' : null;
+  String? _validatePassword(String? v) {
+    final value = v ?? '';
+    if (value.isEmpty) return 'Nhập mật khẩu';
+    if (_register && value.length < _minPassword) return 'Mật khẩu cần ít nhất $_minPassword ký tự';
+    return null;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -86,47 +112,45 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Expanded(
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Semantics(
-                                        header: true,
-                                        child: Text(
-                                          'Đăng nhập học viên',
-                                          style: context.textStyles.headlineSmall?.copyWith(
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        ),
-                                      ),
-                                      Gaps.v4,
-                                      Text(
-                                        'Mở khoá toàn bộ 100+ đề ETS & giải thích AI',
-                                        style: context.textStyles.bodySmall?.copyWith(
-                                          color: context.colors.onSurfaceVariant,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
+                            Semantics(
+                              header: true,
+                              child: Text(
+                                _register ? 'Tạo tài khoản' : 'Đăng nhập học viên',
+                                style: context.textStyles.headlineSmall?.copyWith(
+                                  fontWeight: FontWeight.w700,
                                 ),
-                                Gaps.h8,
-                                const ProBadge(label: 'VIP', mini: true),
-                              ],
+                              ),
+                            ),
+                            Gaps.v4,
+                            Text(
+                              _register
+                                  ? 'Miễn phí: đề mẫu đủ 7 Part và toàn bộ từ vựng'
+                                  : 'Tiếp tục luyện đề, ôn từ và giữ chuỗi ngày học',
+                              style: context.textStyles.bodySmall?.copyWith(
+                                color: context.colors.onSurfaceVariant,
+                              ),
                             ),
                             Gaps.v24,
                             AnimatedSize(
                               duration: AppMotion.of(context, AppMotion.medium),
                               curve: AppMotion.standard,
-                              child: error == null
-                                  ? const SizedBox(width: double.infinity)
-                                  : Padding(
-                                      padding: const EdgeInsets.only(bottom: AppSpacing.s16),
-                                      child: AppBanner(message: error, tone: AppTone.danger),
-                                    ),
+                              child: switch ((error, _pendingConfirm)) {
+                                (final e?, _) => Padding(
+                                  padding: const EdgeInsets.only(bottom: AppSpacing.s16),
+                                  child: AppBanner(message: e, tone: AppTone.danger),
+                                ),
+                                (null, final email?) => Padding(
+                                  padding: const EdgeInsets.only(bottom: AppSpacing.s16),
+                                  child: AppBanner(
+                                    message:
+                                        'Đã gửi email xác nhận tới $email. Mở email, bấm liên kết '
+                                        'xác nhận rồi quay lại đăng nhập.',
+                                    tone: AppTone.success,
+                                    icon: Icons.mark_email_read_outlined,
+                                  ),
+                                ),
+                                _ => const SizedBox(width: double.infinity),
+                              },
                             ),
                             TextFormField(
                               controller: _email,
@@ -138,10 +162,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                               ),
                               keyboardType: TextInputType.emailAddress,
                               autocorrect: false,
-                              autofillHints: const [
-                                AutofillHints.email,
-                                AutofillHints.username,
-                              ],
+                              autofillHints: const [AutofillHints.email, AutofillHints.username],
                               textInputAction: TextInputAction.next,
                               onFieldSubmitted: (_) => _passwordFocus.requestFocus(),
                               validator: _validateEmail,
@@ -165,58 +186,40 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                                   onPressed: () => setState(() => _obscure = !_obscure),
                                 ),
                               ),
-                              autofillHints: const [AutofillHints.password],
+                              autofillHints: [
+                                _register ? AutofillHints.newPassword : AutofillHints.password,
+                              ],
                               textInputAction: TextInputAction.done,
                               onFieldSubmitted: (_) => _submit(),
                               validator: _validatePassword,
                             ),
                             Gaps.v8,
-                            Align(
-                              alignment: Alignment.centerRight,
-                              child: TextButton(
-                                onPressed: () {
-                                  showAppSnackBar(
-                                    context,
-                                    'Vui lòng liên hệ ban quản trị để cấp lại mật khẩu.',
-                                    tone: AppTone.info,
-                                  );
-                                },
-                                child: const Text('Quên mật khẩu?'),
+                            if (!_register)
+                              Align(
+                                alignment: Alignment.centerRight,
+                                child: TextButton(
+                                  onPressed: () {
+                                    showAppSnackBar(
+                                      context,
+                                      'Vui lòng liên hệ ban quản trị để cấp lại mật khẩu.',
+                                      tone: AppTone.info,
+                                    );
+                                  },
+                                  child: const Text('Quên mật khẩu?'),
+                                ),
                               ),
-                            ),
                             Gaps.v12,
                             AppPrimaryButton(
-                              label: 'Đăng nhập',
+                              label: _register ? 'Tạo tài khoản' : 'Đăng nhập',
                               icon: Icons.arrow_forward_rounded,
                               loading: loading,
                               onPressed: _submit,
                             ),
-                            Gaps.v24,
-                            Row(
-                              children: [
-                                const Expanded(child: Divider()),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: AppSpacing.s12),
-                                  child: Text(
-                                    'Hoặc học thử nhanh',
-                                    style: context.textStyles.bodySmall?.copyWith(
-                                      color: context.colors.onSurfaceVariant,
-                                    ),
-                                  ),
-                                ),
-                                const Expanded(child: Divider()),
-                              ],
-                            ),
                             Gaps.v16,
-                            FilledButton.tonal(
-                              onPressed: loading ? null : _fillDemoAccount,
-                              child: const Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(Icons.bolt_rounded, size: AppSizes.iconSm),
-                                  Gaps.h8,
-                                  Text('Trải nghiệm tài khoản mẫu (1-Click)'),
-                                ],
+                            OutlinedButton(
+                              onPressed: loading ? null : _toggleMode,
+                              child: Text(
+                                _register ? 'Đã có tài khoản? Đăng nhập' : 'Tạo tài khoản miễn phí',
                               ),
                             ),
                           ],
@@ -310,7 +313,7 @@ class _BrandHeader extends StatelessWidget {
                             Icon(Icons.workspace_premium_rounded, size: AppSizes.iconSm, color: fg),
                             Gaps.h4,
                             Text(
-                              'ỨNG DỤNG LUYỆN THI TOEIC SỐ 1',
+                              'LUYỆN THI TOEIC',
                               style: context.textStyles.labelSmall?.copyWith(
                                 color: fg,
                                 fontWeight: FontWeight.w800,
@@ -353,7 +356,7 @@ class _BrandHeader extends StatelessWidget {
                       ),
                       Gaps.v4,
                       Text(
-                        'Chinh phục 800+ TOEIC cùng Trí tuệ Nhân tạo',
+                        'Luyện đề, học từ và so tài cùng bạn học',
                         textAlign: TextAlign.center,
                         style: context.textStyles.bodyMedium?.copyWith(
                           color: fg.withValues(alpha: 0.95),
@@ -366,9 +369,9 @@ class _BrandHeader extends StatelessWidget {
                         spacing: AppSpacing.s8,
                         runSpacing: AppSpacing.s8,
                         children: const [
-                          _FeaturePill(icon: Icons.quiz_outlined, label: 'Đề ETS 2024'),
-                          _FeaturePill(icon: Icons.auto_awesome_rounded, label: 'Giải thích AI'),
+                          _FeaturePill(icon: Icons.quiz_outlined, label: 'Đề ETS 2026'),
                           _FeaturePill(icon: Icons.psychology_rounded, label: 'Flashcard SRS'),
+                          _FeaturePill(icon: Icons.leaderboard_outlined, label: 'Xếp hạng'),
                         ],
                       ),
                     ],
@@ -445,7 +448,7 @@ class _CommercialTrustNote extends StatelessWidget {
         Gaps.h8,
         Flexible(
           child: Text(
-            'Hơn 50,000 học viên tin dùng · Dữ liệu chuẩn hoá theo format ETS',
+            'Dữ liệu học được đồng bộ an toàn giữa các thiết bị',
             textAlign: TextAlign.center,
             style: context.textStyles.bodySmall?.copyWith(color: color),
           ),

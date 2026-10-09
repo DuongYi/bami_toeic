@@ -4,6 +4,8 @@ import 'package:go_router/go_router.dart';
 
 import '../../../../core/design_system/design_system.dart';
 import '../../../../routes/app_router.dart';
+import '../../../plan/presentation/controllers/plan_controller.dart';
+import '../../../plan/presentation/widgets/pro_sheet.dart';
 import '../../../test/presentation/controllers/test_providers.dart';
 import '../../../test/presentation/widgets/question_group_view.dart';
 
@@ -28,6 +30,7 @@ class _ListeningHomePageState extends ConsumerState<ListeningHomePage> {
   @override
   Widget build(BuildContext context) {
     final tests = ref.watch(testListProvider);
+    final plan = ref.watch(myPlanProvider).value;
     return Scaffold(
       appBar: AppBar(title: const Text('Luyện nghe')),
       body: AsyncView(
@@ -62,15 +65,26 @@ class _ListeningHomePageState extends ConsumerState<ListeningHomePage> {
                 dividerIndent: AppSpacing.s16 + AppSizes.badgeMd + AppSpacing.s16,
                 children: [
                   for (final t in list)
-                    ListTile(
-                      leading: const IconBadge(icon: Icons.graphic_eq_rounded),
-                      title: Text(t.title),
-                      trailing: Icon(
-                        Icons.chevron_right_rounded,
-                        color: context.colors.onSurfaceVariant,
+                    if (isTestLocked(t, plan))
+                      ListTile(
+                        leading: const IconBadge(
+                          icon: Icons.lock_outline_rounded,
+                          tone: AppTone.neutral,
+                        ),
+                        title: Text(t.title),
+                        trailing: const ProBadge(mini: true),
+                        onTap: () => showProSheet(context),
+                      )
+                    else
+                      ListTile(
+                        leading: const IconBadge(icon: Icons.graphic_eq_rounded),
+                        title: Text(t.title),
+                        trailing: Icon(
+                          Icons.chevron_right_rounded,
+                          color: context.colors.onSurfaceVariant,
+                        ),
+                        onTap: () => context.push(Routes.dictation(t.id, part: _part)),
                       ),
-                      onTap: () => context.push(Routes.dictation(t.id, part: _part)),
-                    ),
                 ],
               ),
           ],

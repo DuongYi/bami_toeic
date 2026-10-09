@@ -34,6 +34,49 @@ class AuthRepository {
     }
   }
 
+  /// null = đã tạo tài khoản nhưng cần mở email xác nhận trước khi đăng nhập.
+  Future<Session?> signUp({required String email, required String password}) async {
+    try {
+      final json = await _api.signUp({'email': email, 'password': password});
+      if (json is! Map<String, dynamic> || json['access_token'] == null) return null;
+      final session = Session.fromJson(json);
+      await _storage.save(session);
+      return session;
+    } on DioException catch (e) {
+      throw mapSignUpError(e);
+    }
+  }
+
+  static AppException mapSignUpError(DioException e) {
+    final data = e.response?.data;
+    final rawCode = data is Map ? (data['error_code'] ?? data['code']) : null;
+    final code = rawCode is String ? rawCode : null;
+    final msg = data is Map ? '${data['msg'] ?? data['message'] ?? ''}' : '';
+    return switch (code) {
+      'user_already_exists' || 'email_exists' => const UnauthorizedException(
+        'Email này đã có tài khoản. Chuyển sang Đăng nhập.',
+      ),
+      'weak_password' => const UnauthorizedException(
+        'Mật khẩu quá yếu. Dùng ít nhất 8 ký tự, có chữ và số.',
+      ),
+      'signup_disabled' => const ForbiddenException('Hiện chưa mở đăng ký tài khoản mới.'),
+      'email_address_invalid' => const UnauthorizedException('Email không hợp lệ.'),
+      'over_email_send_rate_limit' || 'over_request_rate_limit' => const ServerException(
+        'Gửi quá nhiều yêu cầu. Đợi vài phút rồi thử lại.',
+        statusCode: 429,
+      ),
+      _ when msg.contains('Signups not allowed') => const ForbiddenException(
+        'Hiện chưa mở đăng ký tài khoản mới.',
+      ),
+      _ => AppException.from(e),
+    };
+  }
+
+  Future<void> deleteAccount() async {
+    await _api.deleteAccount();
+    await _storage.clear();
+  }
+
   /// Đổi lỗi của Supabase Auth sang thông báo tiếng Việt dễ hiểu.
   static AppException mapSignInError(DioException e) {
     final data = e.response?.data;
@@ -50,7 +93,7 @@ class AuthRepository {
     }
     if (code == 'email_not_confirmed') {
       return const UnauthorizedException(
-        'Email chưa được xác nhận. Vào Supabase → Authentication → Users để xác nhận tài khoản.',
+        'Email chưa được xác nhận. Mở email xác nhận Bami TOEIC đã gửi rồi đăng nhập lại.',
       );
     }
     if (status == 429 || code == 'over_request_rate_limit') {

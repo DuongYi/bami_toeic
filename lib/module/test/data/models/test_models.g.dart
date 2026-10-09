@@ -39,7 +39,10 @@ _TestSummary _$TestSummaryFromJson(Map<String, dynamic> json) => _TestSummary(
   title: json['title'] as String,
   source: json['source'] as String?,
   description: json['description'] as String?,
-  questionCount: json['questions'] == null ? 0 : _readCount(json['questions']),
+  questionCount: json['question_total'] == null
+      ? 0
+      : _readCount(json['question_total']),
+  isFree: json['is_free'] as bool? ?? false,
 );
 
 Map<String, dynamic> _$TestSummaryToJson(_TestSummary instance) =>
@@ -48,6 +51,7 @@ Map<String, dynamic> _$TestSummaryToJson(_TestSummary instance) =>
       'title': instance.title,
       'source': instance.source,
       'description': instance.description,
+      'is_free': instance.isFree,
     };
 
 _Question _$QuestionFromJson(Map<String, dynamic> json) => _Question(

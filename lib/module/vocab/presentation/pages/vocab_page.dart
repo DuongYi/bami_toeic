@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../../../core/design_system/design_system.dart';
 import '../../../../routes/app_router.dart';
+import '../../../plan/presentation/widgets/header_badges.dart';
 import '../../data/models/vocab_models.dart';
 import '../controllers/vocab_controller.dart';
 import 'vocab_form_sheet.dart';
@@ -70,16 +71,7 @@ class _VocabBody extends ConsumerWidget {
                 overline: 'HỌC TỪ THÔNG MINH',
                 title: 'Từ vựng SRS',
                 subtitle: 'Ghi nhớ dài hạn với thuật toán lặp lại ngắt quãng',
-                topBar: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: const [
-                    CoinBadge(amount: 150),
-                    Gaps.h8,
-                    StreakBadge(count: 3),
-                    Gaps.h8,
-                    ProBadge(label: 'PRO', mini: true),
-                  ],
-                ),
+                topBar: const HeaderBadges(),
               ),
               AppHeroCard(
                 child: Column(

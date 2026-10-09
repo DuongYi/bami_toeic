@@ -11,7 +11,7 @@ import '../../data/realm.dart';
 import '../controllers/leaderboard_controller.dart';
 import '../widgets/leaderboard_profile_sheet.dart';
 
-/// Thương Khung Bảng: xếp hạng theo điểm full test cao nhất hoặc số câu đã làm 7 ngày qua.
+/// Thương Khung Bảng: xếp hạng theo điểm full test cao nhất, số câu tuần này hoặc chuỗi ngày học.
 class LeaderboardPage extends ConsumerStatefulWidget {
   const LeaderboardPage({super.key});
 
@@ -49,16 +49,9 @@ class _LeaderboardPageState extends ConsumerState<LeaderboardPage> {
           ),
           SegmentedButton<LeaderboardBoard>(
             segments: const [
-              ButtonSegment(
-                value: LeaderboardBoard.score,
-                icon: Icon(Icons.workspace_premium_outlined),
-                label: Text('Cảnh giới'),
-              ),
-              ButtonSegment(
-                value: LeaderboardBoard.week,
-                icon: Icon(Icons.local_fire_department_outlined),
-                label: Text('Chăm chỉ 7 ngày'),
-              ),
+              ButtonSegment(value: LeaderboardBoard.score, label: Text('Cảnh giới')),
+              ButtonSegment(value: LeaderboardBoard.week, label: Text('Tuần này')),
+              ButtonSegment(value: LeaderboardBoard.streak, label: Text('Chuỗi ngày')),
             ],
             selected: {_board},
             showSelectedIcon: false,
@@ -117,9 +110,14 @@ class _LeaderboardPageState extends ConsumerState<LeaderboardPage> {
             padding: EdgeInsets.only(bottom: bottom),
             child: AppEmptyView(
               icon: Icons.leaderboard_outlined,
-              message: _board == LeaderboardBoard.score
-                  ? 'Chưa ai có điểm full test.\nLàm trọn 1 đề 200 câu để ghi danh lên bảng.'
-                  : 'Chưa ai làm bài trong 7 ngày qua.\nLàm vài câu để mở màn bảng tuần này.',
+              message: switch (_board) {
+                LeaderboardBoard.score =>
+                  'Chưa ai có điểm full test.\nLàm trọn 1 đề 200 câu để ghi danh lên bảng.',
+                LeaderboardBoard.week =>
+                  'Mùa giải tuần này chưa ai làm bài.\nLàm vài câu để mở màn tuần mới.',
+                LeaderboardBoard.streak =>
+                  'Chưa ai có chuỗi ngày học.\nHọc hôm nay để bắt đầu chuỗi.',
+              },
               action: FilledButton.tonal(
                 onPressed: () => context.go(Routes.tests),
                 child: const Text('Làm đề'),
@@ -137,10 +135,17 @@ class _LeaderboardPageState extends ConsumerState<LeaderboardPage> {
           children: [
             if (me != null) ...[_MyStanding(me: me, board: _board, total: ranked.length), Gaps.v24],
             SectionHeader(
-              title: _board == LeaderboardBoard.score ? 'Điểm full test cao nhất' : '7 ngày qua',
-              subtitle: _board == LeaderboardBoard.score
-                  ? 'Chỉ tính đề làm trọn 200 câu'
-                  : 'Xếp theo số câu đã làm, bằng nhau thì xét số câu đúng',
+              title: switch (_board) {
+                LeaderboardBoard.score => 'Điểm full test cao nhất',
+                LeaderboardBoard.week => 'Mùa giải tuần này',
+                LeaderboardBoard.streak => 'Chuỗi ngày học',
+              },
+              subtitle: switch (_board) {
+                LeaderboardBoard.score => 'Chỉ tính đề làm trọn 200 câu',
+                LeaderboardBoard.week =>
+                  'Tính từ 0h thứ Hai. Xếp theo số câu đã làm, bằng nhau thì xét số câu đúng',
+                LeaderboardBoard.streak => 'Số ngày học liên tiếp tới hôm nay',
+              },
             ),
           ],
         ),
@@ -179,7 +184,15 @@ class _MyStanding extends StatelessWidget {
     final String caption;
     final double? ring;
     final String ringLabel;
-    if (isScore) {
+    if (board == LeaderboardBoard.streak) {
+      value = '${me.streak}';
+      unit = 'ngày';
+      caption = me.streak == 0
+          ? 'Làm câu hỏi, ôn thẻ hoặc chép chính tả hôm nay để bắt đầu chuỗi.'
+          : 'Học mỗi ngày để giữ chuỗi. Bỏ 1 ngày là chuỗi về 0.';
+      ring = null;
+      ringLabel = '';
+    } else if (isScore) {
       value = score?.toString() ?? '—';
       unit = '/ 990';
       caption = switch ((realm, next)) {
@@ -198,8 +211,8 @@ class _MyStanding extends StatelessWidget {
       value = '${me.weekQuestions}';
       unit = 'câu';
       caption = me.weekQuestions == 0
-          ? 'Chưa làm câu nào trong 7 ngày qua.'
-          : 'Đúng ${me.weekCorrect}/${me.weekQuestions} câu trong 7 ngày qua';
+          ? 'Tuần này chưa làm câu nào. Mùa giải mới bắt đầu từ 0h thứ Hai.'
+          : 'Đúng ${me.weekCorrect}/${me.weekQuestions} câu trong mùa giải tuần này';
       ring = me.weekQuestions == 0 ? null : me.weekAccuracy;
       ringLabel = 'đúng';
     }
@@ -217,7 +230,11 @@ class _MyStanding extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      [rankText, if (isScore && realm != null) realm.label].join(' · '),
+                      [
+                        rankText,
+                        if (isScore && realm != null) realm.label,
+                        if (me.lastWeekRank case final r?) 'Top $r tuần trước',
+                      ].join(' · '),
                       style: context.textStyles.labelLarge?.copyWith(
                         color: fg,
                         fontWeight: FontWeight.w600,
@@ -283,16 +300,22 @@ class _EntryTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isScore = board == LeaderboardBoard.score;
     final score = entry.bestScore;
-    final subtitle = isScore
-        ? [
-            if (score != null) Realm.of(score).label,
-            'L ${entry.bestListening ?? '—'} · R ${entry.bestReading ?? '—'}',
-            '${entry.fullTests} đề',
-          ].join(' · ')
-        : 'Đúng ${Fmt.percent(entry.weekAccuracy)}';
-    final metric = isScore ? '${score ?? '—'}' : '${entry.weekQuestions} câu';
+    final (subtitle, metric) = switch (board) {
+      LeaderboardBoard.score => (
+        [
+          if (score != null) Realm.of(score).label,
+          'L ${entry.bestListening ?? '—'} · R ${entry.bestReading ?? '—'}',
+          '${entry.fullTests} đề',
+        ].join(' · '),
+        '${score ?? '—'}',
+      ),
+      LeaderboardBoard.week => (
+        'Đúng ${Fmt.percent(entry.weekAccuracy)}',
+        '${entry.weekQuestions} câu',
+      ),
+      LeaderboardBoard.streak => ('${entry.weekQuestions} câu tuần này', '${entry.streak} ngày'),
+    };
 
     return ListTile(
       selected: entry.isMe,
@@ -301,6 +324,17 @@ class _EntryTile extends StatelessWidget {
         children: [
           Flexible(child: Text(entry.displayName, overflow: TextOverflow.ellipsis)),
           if (entry.isMe) ...[Gaps.h8, const StatusBadge(label: 'Bạn', tone: AppTone.info)],
+          if (entry.lastWeekRank case final r?) ...[
+            Gaps.h8,
+            Tooltip(
+              message: 'Top $r mùa giải tuần trước',
+              child: StatusBadge(
+                label: 'Top $r',
+                tone: AppTone.warning,
+                icon: Icons.emoji_events_rounded,
+              ),
+            ),
+          ],
         ],
       ),
       subtitle: Text(subtitle),

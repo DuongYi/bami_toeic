@@ -15,17 +15,24 @@ abstract class TestSummary with _$TestSummary {
     String? source,
     String? description,
 
-    /// Từ `questions(count)` → `[{"count": n}]`
-    @JsonKey(name: 'questions', fromJson: _readCount, includeToJson: false)
+    /// Cột tính toán `question_total` (đếm được cả khi đề bị khoá với user free).
+    @JsonKey(name: 'question_total', fromJson: _readCount, includeToJson: false)
     @Default(0)
     int questionCount,
+
+    /// Đề miễn phí: user chưa có PRO vẫn làm được.
+    @Default(false) bool isFree,
   }) = _TestSummary;
 
   factory TestSummary.fromJson(Map<String, dynamic> json) => _$TestSummaryFromJson(json);
 }
 
-int _readCount(Object? v) =>
-    v is List && v.isNotEmpty ? ((v.first as Map)['count'] as num).toInt() : 0;
+int _readCount(Object? v) => switch (v) {
+  num n => n.toInt(),
+  // Dạng cũ `questions(count)` → `[{"count": n}]`
+  [Map m, ...] => (m['count'] as num?)?.toInt() ?? 0,
+  _ => 0,
+};
 
 @freezed
 abstract class Question with _$Question {
