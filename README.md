@@ -12,14 +12,20 @@ App Flutter ôn luyện TOEIC cá nhân. Backend là Supabase (gói Free): Postg
 - **Bài làm dở**: tự lưu trên máy (mỗi 10 giây, khi chọn đáp án, khi thoát/đưa app xuống nền). Mở lại đề → *Tiếp tục* hoặc *Làm lại từ đầu*. Đánh dấu câu (cờ) để xem lại trước khi nộp.
 - **Sổ câu sai**: câu sai/bỏ trống ở lần làm gần nhất, gom theo Part và dạng câu; luyện lại, làm đúng thì câu tự ra khỏi sổ.
 - **Tiến độ**: lịch sử làm bài, tỉ lệ đúng theo Part, Part yếu nhất, dạng câu yếu nhất (từ loại, suy luận, đọc biểu đồ…).
+- **Thi thử như thật**: phần nghe phát liền mạch Part 1–4 (không tua), tự chuyển câu theo audio; phiếu tô đáp án kiểu OMR trong bảng chọn câu.
+- **Tra từ trong đề**: bôi đen từ trong câu hỏi/đoạn văn/transcript → *Tra từ* (tìm cả dạng biến đổi) hoặc thêm vào sổ từ.
+- **Luyện nghe**: chép chính tả từng đoạn Part 1–4, chấm theo từ, xem transcript để nói theo.
+- **Mục tiêu & chuỗi ngày học**: điểm mục tiêu, ngày thi, chỉ tiêu mỗi ngày, nhắc học bằng thông báo; điểm dự đoán từ full test hoặc tỉ lệ đúng.
+- **Offline**: tải đề (nội dung + audio + ảnh) về máy ở trang chi tiết đề.
 - **Media riêng tư**: bucket `media` không public, app dùng URL ký tạm (12 giờ).
+- **Bảng quy đổi điểm theo đề**: cột `tests.score_table` (để trống thì dùng công thức ước tính).
 
 ## Cài đặt (khoảng 15 phút, làm một lần)
 
 ### 1. Tạo Supabase project
 1. Đăng ký tại https://supabase.com → **New project** (chọn region Singapore cho gần VN).
 2. **SQL Editor → New query** → dán toàn bộ `supabase/schema.sql` → **Run**.
-   Project tạo trước 10/2026: chạy thêm `supabase/migrations/002_learning_features.sql` (thẻ dạng câu, sổ câu sai, bucket riêng tư).
+   Project tạo trước 10/2026: chạy thêm `supabase/migrations/002_learning_features.sql` (thẻ dạng câu, sổ câu sai, bucket riêng tư) và `003_score_table.sql`.
 3. **Authentication → Users → Add user → Create new user**: nhập email và mật khẩu, tick *Auto Confirm User*.
 4. **Authentication → Sign In / Providers**: tắt **Allow new users to sign up**. Chỉ bạn đăng nhập được.
 5. **Project Settings → API Keys**: copy *Project URL* và *Publishable key*.

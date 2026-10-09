@@ -639,7 +639,8 @@ def build(test, keys):
         if (a, b) not in found:
             warn.append(f'Không tìm thấy tiêu đề nhóm Part 6 {a}-{b}')
 
-    # ----- sửa tay (content/raw/ets2026/overrides.json): {"test": {"câu": {"content", "options", "passage"}}}
+    # ----- sửa tay (content/raw/ets2026/overrides.json): {"test": {"câu": {"content", "options", "passage", "transcript"}}}
+    # "transcript" (Part 1/2, chép tay từ TRANSCRIPT.pdf) thắng transcript OCR.
     ov_path = os.path.join(WORK, 'overrides.json')
     overrides = json.load(open(ov_path)).get(str(test), {}) if os.path.exists(ov_path) else {}
     for g in groups:
@@ -649,6 +650,8 @@ def build(test, keys):
                 q.update({k: v for k, v in fix.items() if k in ('content', 'options')})
                 if 'passage' in fix:
                     g['passage'] = fix['passage']
+                if 'transcript' in fix:
+                    g['transcript'] = fix['transcript']
                 warn[:] = [w for w in warn if not w.startswith(f'Câu {q["number"]}:')]
 
     # ----- giải thích tiếng Việt: content/raw/ets2026/explanations/testNN.json {"câu": "…"}
@@ -668,6 +671,21 @@ def build(test, keys):
                                      g.get('passage'), first_line)
             if g['part'] == 7 and q['number'] >= 176 and 'multi-passage' not in q['tags']:
                 q['tags'].append('multi-passage')
+
+    # ----- OCR đọc "I" thành "l": l've / l'm / "l agree" → I've / I'm / "I agree"
+    def fix_i(text):
+        if not text:
+            return text
+        text = re.sub(r"(?<![A-Za-z])l'(ve|m|d|ll)\b", r"I'\1", text)
+        text = re.sub(r"'Il\b", "'ll", text)  # I'Il → I'll
+        return re.sub(r"(?<![A-Za-z'’])l (?=[a-z])", 'I ', text)
+    for g in groups:
+        for k in ('passage', 'transcript'):
+            g[k] = fix_i(g.get(k))
+        for q in g['questions']:
+            q['content'] = fix_i(q.get('content'))
+            if q.get('options'):
+                q['options'] = [fix_i(o) for o in q['options']]
 
     # ----- kiểm tra
     numbers = [q['number'] for g in groups for q in g['questions']]

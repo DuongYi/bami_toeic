@@ -23,6 +23,7 @@ class DsGalleryPage extends StatelessWidget {
           _Section('ChoiceCard · IconBadge · AppListGroup', _ChoiceDemo()),
           _Section('Trạng thái màn hình', _StatesDemo()),
           _Section('Phản hồi (dialog, snackbar, sheet)', _FeedbackDemo()),
+          _Section('Thương mại hoá (Commercial · PRO · Streaks)', _CommercialDemo()),
         ],
       ),
     );
@@ -367,6 +368,49 @@ class _ChoiceDemoState extends State<_ChoiceDemo> {
               title: Text('Item 2'),
             ),
           ],
+        ),
+      ],
+    );
+  }
+}
+
+class _CommercialDemo extends StatelessWidget {
+  const _CommercialDemo();
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        const Wrap(
+          spacing: AppSpacing.s8,
+          runSpacing: AppSpacing.s8,
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: [
+            ProBadge(),
+            ProBadge(label: 'VIP', mini: true),
+            StreakBadge(count: 7),
+            TestTag(label: 'ETS 2024', tone: TestTagTone.info),
+            TestTag(label: 'Chuẩn đề thi', tone: TestTagTone.success),
+            TestTag(label: 'Nâng cao', tone: TestTagTone.danger),
+          ],
+        ),
+        Gaps.v12,
+        DailyMissionCard(
+          completed: 2,
+          total: 3,
+          items: const [
+            DailyMissionItem(title: 'Luyện 1 Part đề thi', isDone: true, trailing: 'Part 5'),
+            DailyMissionItem(title: 'Ôn 10 từ vựng SRS', isDone: true, trailing: '10/10'),
+            DailyMissionItem(title: 'Giải quyết 5 câu làm sai', isDone: false, trailing: '0/5'),
+          ],
+          onTap: () {},
+        ),
+        Gaps.v12,
+        UpgradeBanner(
+          title: 'Nâng cấp Bami PRO',
+          description: 'Mở khoá đầy đủ đề thi ETS và giải thích chi tiết AI',
+          onUpgrade: () {},
         ),
       ],
     );

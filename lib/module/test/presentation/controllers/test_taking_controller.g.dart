@@ -52,7 +52,7 @@ final class TestTakingProvider extends $AsyncNotifierProvider<TestTaking, Taking
   }
 }
 
-String _$testTakingHash() => r'45ba8e92e6f75b5ca7e6e98379b7381252056809';
+String _$testTakingHash() => r'126e013e86aafca877219c22b8316c347ae09f2b';
 
 /// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" (hoặc bộ lọc sổ câu sai) để làm khoá family ổn định.
 

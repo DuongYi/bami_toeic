@@ -202,3 +202,6 @@ group by t.tag;
 -- Media riêng tư: tắt truy cập công khai; chỉ user đăng nhập đọc được
 -- (policy "auth read media" cho authenticated đã có trong schema.sql).
 update storage.buckets set public = false where id = 'media';
+
+-- ---------- 003: bảng quy đổi điểm riêng từng đề ----------
+alter table public.tests add column if not exists score_table jsonb;

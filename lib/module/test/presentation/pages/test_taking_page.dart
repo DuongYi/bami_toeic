@@ -6,7 +6,10 @@ import '../../../../core/design_system/design_system.dart';
 import '../../../../core/network/app_exception.dart';
 import '../../../../helper/format.dart';
 import '../../../../routes/app_router.dart';
+import '../../data/models/test_models.dart';
+import '../../../vocab/presentation/widgets/word_lookup_sheet.dart';
 import '../controllers/test_taking_controller.dart';
+import '../widgets/exam_listening_bar.dart';
 import '../widgets/question_group_view.dart';
 
 class TestTakingPage extends ConsumerStatefulWidget {
@@ -26,6 +29,10 @@ class _TestTakingPageState extends ConsumerState<TestTakingPage> {
   final _pageController = PageController();
   late final AppLifecycleListener _lifecycle;
   bool _restoredPage = false;
+
+  /// Thi thử: nhóm bắt đầu phát audio liền mạch (chốt 1 lần khi tải xong), null = không phát.
+  int? _listeningStart;
+  bool _listeningDone = false;
 
   late final _provider = testTakingProvider(widget.testId, widget.mode, widget.parts);
   bool get _isMistakes => widget.testId == kMistakesSession;
@@ -52,6 +59,21 @@ class _TestTakingPageState extends ConsumerState<TestTakingPage> {
     duration: AppMotion.of(context, AppMotion.medium),
     curve: AppMotion.standard,
   );
+
+  void _onListeningFinished(List<QuestionGroup> groups) {
+    setState(() => _listeningDone = true);
+    final reading = groups.indexWhere((g) => g.part >= 5);
+    if (reading < 0) {
+      showAppSnackBar(
+        context,
+        'Đã hết phần nghe. Kiểm tra lại đáp án rồi nộp bài.',
+        tone: AppTone.info,
+      );
+      return;
+    }
+    _goTo(reading);
+    showAppSnackBar(context, 'Đã hết phần nghe · chuyển sang Reading', tone: AppTone.info);
+  }
 
   Future<void> _confirmSubmit() async {
     final s = ref.read(_provider).value;
@@ -172,6 +194,11 @@ class _TestTakingPageState extends ConsumerState<TestTakingPage> {
       );
     }
     final isExam = widget.mode == 'exam';
+    if (isExam && !_isMistakes) _listeningStart ??= ref.read(_provider).value!.index;
+    final listening =
+        _listeningStart != null &&
+        !_listeningDone &&
+        ExamListeningBar.playableFrom(groups, _listeningStart!).isNotEmpty;
 
     return PopScope(
       canPop: false,
@@ -201,16 +228,31 @@ class _TestTakingPageState extends ConsumerState<TestTakingPage> {
             child: _ProgressBar(provider: _provider),
           ),
         ),
-        body: PageView.builder(
-          controller: _pageController,
-          itemCount: groups.length,
-          onPageChanged: ref.read(_provider.notifier).setIndex,
-          itemBuilder: (context, i) => _GroupPage(
-            key: ValueKey(groups[i].id),
-            provider: _provider,
-            groupIndex: i,
-            isExam: isExam,
-          ),
+        body: Column(
+          children: [
+            if (listening)
+              ExamListeningBar(
+                groups: groups,
+                startIndex: _listeningStart!,
+                onGroupStarted: (i) {
+                  if (_pageController.hasClients && _pageController.page?.round() != i) _goTo(i);
+                },
+                onFinished: () => _onListeningFinished(groups),
+              ),
+            Expanded(
+              child: PageView.builder(
+                controller: _pageController,
+                itemCount: groups.length,
+                onPageChanged: ref.read(_provider.notifier).setIndex,
+                itemBuilder: (context, i) => _GroupPage(
+                  key: ValueKey(groups[i].id),
+                  provider: _provider,
+                  groupIndex: i,
+                  isExam: isExam,
+                ),
+              ),
+            ),
+          ],
         ),
         bottomNavigationBar: _BottomNav(
           provider: _provider,
@@ -254,7 +296,9 @@ class _GroupPage extends ConsumerWidget {
       isFlagged: (q) => flagged.contains(q.id),
       onToggleFlag: ref.read(provider.notifier).toggleFlag,
       showTranscript: !isExam,
-      autoPlayAudio: isExam,
+      // Thi thử: audio phát liền mạch ở ExamListeningBar
+      showAudio: !isExam,
+      contextMenuBuilder: lookupContextMenu(context),
     );
   }
 }
@@ -404,43 +448,204 @@ class _BottomNav extends ConsumerWidget {
   }
 }
 
-class _QuestionPalette extends ConsumerWidget {
+/// Bảng chọn câu: lưới số câu (nhảy nhanh) hoặc phiếu tô kiểu OMR (tô thẳng đáp án).
+class _QuestionPalette extends ConsumerStatefulWidget {
   const _QuestionPalette({required this.provider, required this.onJump});
 
   final TestTakingProvider provider;
   final ValueChanged<int> onJump;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final (groups, answers, index, flagged) = ref.watch(
-      provider.select((s) => (s.value!.groups, s.value!.answers, s.value!.index, s.value!.flagged)),
+  ConsumerState<_QuestionPalette> createState() => _QuestionPaletteState();
+}
+
+class _QuestionPaletteState extends ConsumerState<_QuestionPalette> {
+  bool _omr = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final (groups, answers, index, flagged, revealed) = ref.watch(
+      widget.provider.select(
+        (s) => (
+          s.value!.groups,
+          s.value!.answers,
+          s.value!.index,
+          s.value!.flagged,
+          s.value!.revealed,
+        ),
+      ),
     );
+    final entries = [
+      for (final (gi, g) in groups.indexed)
+        for (final q in g.questions) (gi, q),
+    ];
     return DraggableScrollableSheet(
       expand: false,
       initialChildSize: 0.6,
-      builder: (context, scroll) => SingleChildScrollView(
-        controller: scroll,
-        padding: const EdgeInsets.fromLTRB(AppSpacing.screen, 0, AppSpacing.screen, AppSpacing.s24),
-        child: Wrap(
-          spacing: AppSpacing.s8,
-          runSpacing: AppSpacing.s8,
-          children: [
-            for (final (gi, g) in groups.indexed)
-              for (final q in g.questions)
-                NumberCell(
-                  number: q.number,
-                  filled: answers.containsKey(q.id),
-                  current: gi == index,
-                  flagged: flagged.contains(q.id),
-                  semanticLabel:
-                      'Câu ${q.number}, '
-                      '${answers.containsKey(q.id) ? 'đã trả lời' : 'chưa trả lời'}'
-                      '${flagged.contains(q.id) ? ', đã đánh dấu' : ''}',
-                  onTap: () => onJump(gi),
+      maxChildSize: 0.95,
+      builder: (context, scroll) => Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(
+              AppSpacing.screen,
+              0,
+              AppSpacing.screen,
+              AppSpacing.s12,
+            ),
+            child: SegmentedButton<bool>(
+              segments: const [
+                ButtonSegment(
+                  value: false,
+                  icon: Icon(Icons.grid_view_rounded),
+                  label: Text('Bảng câu'),
                 ),
-          ],
-        ),
+                ButtonSegment(
+                  value: true,
+                  icon: Icon(Icons.radio_button_checked_rounded),
+                  label: Text('Phiếu tô'),
+                ),
+              ],
+              selected: {_omr},
+              onSelectionChanged: (v) => setState(() => _omr = v.first),
+            ),
+          ),
+          Expanded(
+            child: _omr
+                ? ListView.builder(
+                    controller: scroll,
+                    padding: const EdgeInsets.fromLTRB(
+                      AppSpacing.screen,
+                      0,
+                      AppSpacing.screen,
+                      AppSpacing.s24,
+                    ),
+                    itemCount: entries.length,
+                    itemBuilder: (context, i) {
+                      final (gi, q) = entries[i];
+                      return _OmrRow(
+                        question: q,
+                        chosen: answers[q.id],
+                        locked: revealed.contains(q.id),
+                        flagged: flagged.contains(q.id),
+                        onJump: () => widget.onJump(gi),
+                        onSelect: (letter) => ref.read(widget.provider.notifier).select(q, letter),
+                      );
+                    },
+                  )
+                : SingleChildScrollView(
+                    controller: scroll,
+                    padding: const EdgeInsets.fromLTRB(
+                      AppSpacing.screen,
+                      0,
+                      AppSpacing.screen,
+                      AppSpacing.s24,
+                    ),
+                    child: Wrap(
+                      spacing: AppSpacing.s8,
+                      runSpacing: AppSpacing.s8,
+                      children: [
+                        for (final (gi, q) in entries)
+                          NumberCell(
+                            number: q.number,
+                            filled: answers.containsKey(q.id),
+                            current: gi == index,
+                            flagged: flagged.contains(q.id),
+                            semanticLabel:
+                                'Câu ${q.number}, '
+                                '${answers.containsKey(q.id) ? 'đã trả lời' : 'chưa trả lời'}'
+                                '${flagged.contains(q.id) ? ', đã đánh dấu' : ''}',
+                            onTap: () => widget.onJump(gi),
+                          ),
+                      ],
+                    ),
+                  ),
+          ),
+        ],
       ),
+    );
+  }
+}
+
+/// Một dòng phiếu tô: số câu (chạm để mở câu) + các ô A–D.
+class _OmrRow extends StatelessWidget {
+  const _OmrRow({
+    required this.question,
+    required this.chosen,
+    required this.locked,
+    required this.flagged,
+    required this.onJump,
+    required this.onSelect,
+  });
+
+  final Question question;
+  final String? chosen;
+
+  /// Luyện tập: câu đã hiện đáp án thì không đổi được nữa.
+  final bool locked;
+  final bool flagged;
+  final VoidCallback onJump;
+  final ValueChanged<String> onSelect;
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = context.colors;
+    return Row(
+      children: [
+        SizedBox(
+          width: AppSizes.touchTarget + AppSpacing.s16,
+          child: TextButton(
+            onPressed: onJump,
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text('${question.number}', style: context.textStyles.labelLarge),
+                if (flagged) ...[
+                  Gaps.h4,
+                  Icon(
+                    Icons.flag_rounded,
+                    size: AppSizes.iconXs,
+                    color: AppTone.warning.colorsOf(context).main,
+                    semanticLabel: 'đã đánh dấu',
+                  ),
+                ],
+              ],
+            ),
+          ),
+        ),
+        for (final letter in question.letters)
+          Semantics(
+            button: true,
+            selected: chosen == letter,
+            label: 'Câu ${question.number} đáp án $letter',
+            excludeSemantics: true,
+            child: InkResponse(
+              onTap: locked ? null : () => onSelect(letter),
+              radius: AppSizes.touchTarget / 2,
+              child: SizedBox.square(
+                dimension: AppSizes.touchTarget,
+                child: Center(
+                  child: AnimatedContainer(
+                    duration: AppMotion.of(context, AppMotion.short),
+                    width: AppSizes.badgeSm,
+                    height: AppSizes.badgeSm,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: chosen == letter ? colors.primary : null,
+                      border: Border.all(color: chosen == letter ? colors.primary : colors.outline),
+                    ),
+                    child: Text(
+                      letter,
+                      style: context.textStyles.labelLarge?.copyWith(
+                        color: chosen == letter ? colors.onPrimary : colors.onSurfaceVariant,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+      ],
     );
   }
 }

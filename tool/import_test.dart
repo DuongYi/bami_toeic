@@ -81,7 +81,12 @@ Future<void> main(List<String> args) async {
 
   final test = await db
       .from('tests')
-      .insert({'title': title, 'source': data['source'], 'description': data['description']})
+      .insert({
+        'title': title,
+        'source': data['source'],
+        'description': data['description'],
+        if (data['score_table'] != null) 'score_table': data['score_table'],
+      })
       .select('id')
       .single();
   final testId = test['id'] as String;

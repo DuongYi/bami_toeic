@@ -7,6 +7,8 @@ import '../module/auth/presentation/controllers/auth_controller.dart';
 import '../module/auth/presentation/pages/login_page.dart';
 import '../module/auth/presentation/pages/splash_page.dart';
 import '../module/history/presentation/pages/history_page.dart';
+import '../module/listening/presentation/pages/dictation_page.dart';
+import '../module/listening/presentation/pages/listening_home_page.dart';
 import '../module/shell/home_shell.dart';
 import '../module/test/presentation/controllers/test_taking_controller.dart';
 import '../module/test/presentation/pages/mistakes_page.dart';
@@ -27,6 +29,7 @@ abstract final class Routes {
   static const history = '/history';
   static const designSystem = '/design-system';
   static const mistakes = '/mistakes';
+  static const listening = '/listening';
 
   static String testDetail(String id) => '/tests/$id';
   static String take(String testId, {required String mode, required List<int> parts}) =>
@@ -35,6 +38,7 @@ abstract final class Routes {
   /// Luyện sổ câu sai; [filter]: "all" | "part:5" | "tag:word-form".
   static String takeMistakes({String filter = 'all'}) =>
       '/take/$kMistakesSession?mode=practice&parts=${Uri.encodeQueryComponent(filter)}';
+  static String dictation(String testId, {required int part}) => '/listening/$testId?part=$part';
   static String result(String attemptId) => '/result/$attemptId';
   static String flashcards({String? topic}) =>
       topic == null ? '/flashcards' : '/flashcards?topic=${Uri.encodeQueryComponent(topic)}';
@@ -98,6 +102,19 @@ GoRouter router(Ref ref) {
         ),
       ),
       GoRoute(path: Routes.mistakes, builder: (_, _) => const MistakesPage()),
+      GoRoute(
+        path: Routes.listening,
+        builder: (_, _) => const ListeningHomePage(),
+        routes: [
+          GoRoute(
+            path: ':testId',
+            builder: (_, s) => DictationPage(
+              testId: s.pathParameters['testId']!,
+              part: int.tryParse(s.uri.queryParameters['part'] ?? '') ?? 2,
+            ),
+          ),
+        ],
+      ),
       GoRoute(
         path: '/result/:attemptId',
         builder: (_, s) => ResultPage(attemptId: s.pathParameters['attemptId']!),

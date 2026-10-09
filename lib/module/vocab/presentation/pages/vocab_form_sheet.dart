@@ -7,18 +7,33 @@ import '../../data/models/vocab_models.dart';
 import '../controllers/vocab_controller.dart';
 
 /// Bottom sheet thêm / sửa từ vựng.
-Future<void> showVocabForm(BuildContext context, {VocabItem? item, String? defaultTopic}) {
+Future<void> showVocabForm(
+  BuildContext context, {
+  VocabItem? item,
+  String? defaultTopic,
+  String? initialWord,
+  String? initialExample,
+}) {
   return showAppBottomSheet<void>(
     context,
-    builder: (_) => _VocabForm(item: item, defaultTopic: defaultTopic),
+    builder: (_) => _VocabForm(
+      item: item,
+      defaultTopic: defaultTopic,
+      initialWord: initialWord,
+      initialExample: initialExample,
+    ),
   );
 }
 
 class _VocabForm extends ConsumerStatefulWidget {
-  const _VocabForm({this.item, this.defaultTopic});
+  const _VocabForm({this.item, this.defaultTopic, this.initialWord, this.initialExample});
 
   final VocabItem? item;
   final String? defaultTopic;
+
+  /// Điền sẵn khi thêm từ lúc tra trong đề.
+  final String? initialWord;
+  final String? initialExample;
 
   @override
   ConsumerState<_VocabForm> createState() => _VocabFormState();
@@ -26,11 +41,11 @@ class _VocabForm extends ConsumerStatefulWidget {
 
 class _VocabFormState extends ConsumerState<_VocabForm> {
   final _formKey = GlobalKey<FormState>();
-  late final _word = TextEditingController(text: widget.item?.word);
+  late final _word = TextEditingController(text: widget.item?.word ?? widget.initialWord);
   late final _ipa = TextEditingController(text: widget.item?.ipa);
   late final _pos = TextEditingController(text: widget.item?.pos);
   late final _meaning = TextEditingController(text: widget.item?.meaning);
-  late final _example = TextEditingController(text: widget.item?.example);
+  late final _example = TextEditingController(text: widget.item?.example ?? widget.initialExample);
   late final _exampleMeaning = TextEditingController(text: widget.item?.exampleMeaning);
   late final _topic = TextEditingController(
     text: widget.item?.topic ?? widget.defaultTopic ?? 'General',

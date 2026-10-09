@@ -1,8 +1,12 @@
+import 'dart:io';
+
+import 'package:dio/dio.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../config/env.dart';
 import '../network/dio_client.dart';
 import 'media_api.dart';
+import 'offline_store.dart';
 
 part 'media_repository.g.dart';
 
@@ -10,14 +14,20 @@ part 'media_repository.g.dart';
 MediaApi mediaApi(Ref ref) => MediaApi(ref.watch(dioProvider));
 
 @Riverpod(keepAlive: true)
-MediaRepository mediaRepository(Ref ref) => MediaRepository(ref.watch(mediaApiProvider));
+MediaRepository mediaRepository(Ref ref) => MediaRepository(
+  ref.watch(mediaApiProvider),
+  ref.watch(offlineStoreProvider),
+  ref.watch(dioProvider),
+);
 
 /// Bucket `media` là riêng tư: DB vẫn lưu URL dạng public (`…/object/public/media/<path>`),
 /// app đổi sang URL ký tạm (không cần header → dùng được cho just_audio, Image.network).
 class MediaRepository {
-  MediaRepository(this._api);
+  MediaRepository(this._api, this._offline, this._dio);
 
   final MediaApi _api;
+  final OfflineStore _offline;
+  final Dio _dio;
 
   static const bucket = 'media';
   static const _ttl = Duration(hours: 12);
@@ -34,14 +44,19 @@ class MediaRepository {
       : null;
 
   /// Ký hàng loạt; trả map URL gốc → URL đã ký (URL không thuộc bucket giữ nguyên).
-  Future<Map<String, String>> signAll(Iterable<String> urls) async {
+  /// File đã tải offline → `file://…` (không cần mạng).
+  Future<Map<String, String>> signAll(Iterable<String> urls, {bool preferLocal = true}) async {
     final now = DateTime.now();
     final out = <String, String>{};
     final pending = <String, String>{}; // path → url gốc
+    final local = preferLocal ? await _offline.localFiles() : const <String, String>{};
     for (final url in urls.toSet()) {
       final cached = _cache[url];
       final path = objectPath(url);
-      if (path == null) {
+      final file = path == null ? null : local[path];
+      if (file != null && File(file).existsSync()) {
+        out[url] = Uri.file(file).toString();
+      } else if (path == null) {
         out[url] = url;
       } else if (cached != null && cached.expiresAt.difference(now) > _minRemaining) {
         out[url] = cached.url;
@@ -70,5 +85,11 @@ class MediaRepository {
       out.putIfAbsent(url, () => url);
     }
     return out;
+  }
+
+  /// Tải 1 file (URL đã ký) về [savePath]; trả về số byte.
+  Future<int> download(String signedUrl, String savePath) async {
+    await _dio.download(signedUrl, savePath);
+    return File(savePath).lengthSync();
   }
 }

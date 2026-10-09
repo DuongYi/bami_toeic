@@ -92,7 +92,27 @@ class _MistakesBody extends StatelessWidget {
             ],
           ),
         ),
-        Gaps.v24,
+        Gaps.v12,
+        AppCard(
+          tone: AppTone.info,
+          child: Row(
+            children: [
+              Icon(
+                Icons.tips_and_updates_outlined,
+                color: context.colors.primary,
+                size: AppSizes.iconMd,
+              ),
+              Gaps.h12,
+              Expanded(
+                child: Text(
+                  'Luyện lại sổ câu sai thường xuyên giúp tăng ngay 50–100 điểm bằng cách triệt tiêu các bẫy đề thi lặp lại.',
+                  style: context.textStyles.bodySmall,
+                ),
+              ),
+            ],
+          ),
+        ),
+        Gaps.v16,
         const SectionHeader(title: 'Theo Part'),
         AppListGroup(
           dividerIndent: AppSpacing.s16 + AppSizes.badgeMd + AppSpacing.s16,

@@ -68,6 +68,13 @@ void main() {
   setUpAll(loadAppFonts);
   setUp(() => SharedPreferences.setMockInitialValues({}));
 
+  testWidgets('Luyện nghe', (tester) async {
+    final c = await _boot(tester);
+    await _go(tester, c, Routes.listening, push: true);
+    await _shot(tester, '10_listening');
+    await _teardown(tester);
+  });
+
   testWidgets('Sổ câu sai', (tester) async {
     final c = await _boot(tester);
     await _go(tester, c, Routes.mistakes, push: true);

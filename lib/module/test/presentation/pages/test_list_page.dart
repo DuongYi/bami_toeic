@@ -5,15 +5,17 @@ import 'package:go_router/go_router.dart';
 
 import '../../../../core/design_system/design_system.dart';
 import '../../../../helper/format.dart';
-import '../../../../helper/score.dart';
 import '../../../../routes/app_router.dart';
 import '../../../auth/presentation/controllers/auth_controller.dart';
+import '../../../goals/presentation/controllers/study_progress.dart';
+import '../../../goals/presentation/widgets/goal_sheet.dart';
 import '../../../vocab/presentation/controllers/vocab_controller.dart';
 import '../../data/in_progress_store.dart';
 import '../../data/models/test_models.dart';
 import '../controllers/test_providers.dart';
 
-/// Màn chủ: lời chào, thẻ tổng quan, lối tắt, danh sách đề.
+/// Màn chủ: lời chào kèm chuỗi học tập, thẻ dự đoán điểm TOEIC, nhiệm vụ ngày,
+/// bento lối tắt luyện tập và danh sách đề thi chuẩn hóa ETS.
 class TestListPage extends ConsumerWidget {
   const TestListPage({super.key});
 
@@ -45,11 +47,16 @@ class TestListPage extends ConsumerWidget {
               children: [
                 const _Greeting(),
                 _OverviewHero(attempts: attempts),
-                Gaps.v12,
+                Gaps.v16,
+                const _DailyMission(),
+                Gaps.v16,
                 const _QuickActions(),
+                Gaps.v16,
+                _CommercialUpgradeBanner(),
                 Gaps.v24,
                 SectionHeader(
-                  title: 'Đề thi',
+                  title: 'Đề thi ETS & Luyện tập',
+                  subtitle: 'Được biên soạn chuẩn theo format đề thi thật',
                   trailing: Text(
                     '${list.length} đề',
                     style: context.textStyles.labelLarge?.copyWith(
@@ -87,7 +94,7 @@ class TestListPage extends ConsumerWidget {
 class _Greeting extends ConsumerWidget {
   const _Greeting();
 
-  void _openAccount(BuildContext context, WidgetRef ref, String? email) {
+  void _openAccount(BuildContext context, WidgetRef ref, String? email, int streak) {
     showAppBottomSheet<void>(
       context,
       builder: (ctx) => SafeArea(
@@ -102,14 +109,35 @@ class _Greeting extends ConsumerWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text('Tài khoản', style: ctx.textStyles.titleLarge),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Tài khoản học viên', style: ctx.textStyles.titleLarge),
+                  const ProBadge(),
+                ],
+              ),
               Gaps.v12,
               AppListGroup(
                 children: [
                   ListTile(
                     leading: const IconBadge(icon: Icons.person_rounded),
-                    title: Text(email ?? 'Không rõ email'),
-                    subtitle: const Text('Đang đăng nhập'),
+                    title: Text(email ?? 'Học viên Bami'),
+                    subtitle: const Text('Gói Bami PRO · Không giới hạn'),
+                  ),
+                  ListTile(
+                    leading: const IconBadge(
+                      icon: Icons.local_fire_department_rounded,
+                      tone: AppTone.warning,
+                    ),
+                    title: const Text('Mục tiêu & nhắc học'),
+                    subtitle: Text(
+                      streak == 0 ? 'Bắt đầu chuỗi ngày học hôm nay' : '$streak ngày học liên tiếp',
+                    ),
+                    trailing: StreakBadge(count: streak, active: streak > 0),
+                    onTap: () {
+                      Navigator.pop(ctx);
+                      showGoalSheet(context);
+                    },
                   ),
                   if (kDebugMode)
                     ListTile(
@@ -149,20 +177,174 @@ class _Greeting extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final email = ref.watch(authControllerProvider).value?.user.email;
-    final initial = (email == null || email.isEmpty) ? '?' : email[0].toUpperCase();
+    final progress = ref.watch(studyProgressProvider).value;
+    final initial = (email == null || email.isEmpty) ? 'B' : email[0].toUpperCase();
     return AppPageHeader(
-      overline: 'Xin chào 👋',
+      overline: 'Xin chào',
       title: 'Hôm nay luyện gì nhỉ?',
-      trailing: Tooltip(
-        message: 'Tài khoản',
-        child: InkResponse(
-          onTap: () => _openAccount(context, ref, email),
-          radius: AppSizes.touchTarget / 2,
-          child: CircleAvatar(
-            radius: AppSizes.touchTarget / 2,
-            backgroundColor: context.colors.primaryContainer,
-            foregroundColor: context.colors.onPrimaryContainer,
-            child: Text(initial, style: context.textStyles.titleMedium),
+      trailing: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          StreakBadge(
+            count: progress?.streak ?? 0,
+            active: progress?.activeToday ?? false,
+            onTap: () => showGoalSheet(context),
+          ),
+          Gaps.h8,
+          Tooltip(
+            message: 'Tài khoản',
+            child: InkResponse(
+              onTap: () => _openAccount(context, ref, email, progress?.streak ?? 0),
+              radius: AppSizes.touchTarget / 2,
+              child: CircleAvatar(
+                radius: AppSizes.touchTarget / 2,
+                backgroundColor: context.colors.primaryContainer,
+                foregroundColor: context.colors.onPrimaryContainer,
+                child: Text(initial, style: context.textStyles.titleMedium),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Thẻ tổng quan: điểm dự đoán (dữ liệu thật) so với mục tiêu, ngày thi. Chạm để đặt mục tiêu.
+class _OverviewHero extends ConsumerWidget {
+  const _OverviewHero({required this.attempts});
+
+  final List<Attempt> attempts;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final fg = AppHeroCard.foreground(context);
+    final progress = ref.watch(studyProgressProvider).value;
+    final prediction = progress?.prediction;
+    final target = progress?.goals.targetScore;
+    final daysLeft = progress?.daysToExam(DateTime.now());
+    final last = attempts.firstOrNull;
+    final ratio = prediction == null || target == null
+        ? null
+        : (prediction.total / target).clamp(0.0, 1.0);
+
+    final caption = [
+      if (prediction != null)
+        '${prediction.basis} · L ${prediction.listening} · R ${prediction.reading}'
+      else
+        'Làm ít nhất 30 câu Listening và 30 câu Reading để có điểm dự đoán.',
+      if (daysLeft != null && daysLeft >= 0)
+        daysLeft == 0 ? 'Thi hôm nay!' : 'Còn $daysLeft ngày đến ngày thi',
+      if (prediction == null && last != null) 'Gần nhất: ${last.testTitle}',
+    ].join('\n');
+
+    return Semantics(
+      button: true,
+      label: 'Mục tiêu học tập',
+      child: InkWell(
+        onTap: () => showGoalSheet(context),
+        borderRadius: AppRadius.brLg,
+        child: AppHeroCard(
+          child: Row(
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Wrap(
+                      spacing: AppSpacing.s8,
+                      runSpacing: AppSpacing.s4,
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      children: [
+                        Text(
+                          'Dự đoán TOEIC',
+                          style: context.textStyles.labelLarge?.copyWith(
+                            color: fg,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: AppSpacing.s8,
+                            vertical: AppSpacing.s2,
+                          ),
+                          decoration: BoxDecoration(
+                            color: fg.withValues(alpha: 0.2),
+                            borderRadius: AppRadius.brFull,
+                          ),
+                          child: Text(
+                            target == null ? 'Đặt mục tiêu' : 'Mục tiêu $target',
+                            style: context.textStyles.labelSmall?.copyWith(
+                              color: fg,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Gaps.v4,
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.baseline,
+                      textBaseline: TextBaseline.alphabetic,
+                      children: [
+                        Text(
+                          prediction?.total.toString() ?? '—',
+                          style: context.textStyles.displaySmall?.copyWith(
+                            color: fg,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                        Gaps.h4,
+                        Text(
+                          '/ 990',
+                          style: context.textStyles.titleMedium?.copyWith(
+                            color: fg.withValues(alpha: 0.8),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Gaps.v8,
+                    Text(
+                      caption,
+                      maxLines: 3,
+                      overflow: TextOverflow.ellipsis,
+                      style: context.textStyles.bodySmall?.copyWith(
+                        color: fg.withValues(alpha: 0.9),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              if (ratio != null) ...[
+                Gaps.h16,
+                ScoreRing(
+                  value: ratio,
+                  size: AppSizes.ringMd,
+                  strokeWidth: AppSizes.ringStrokeMd,
+                  color: fg,
+                  trackColor: fg.withValues(alpha: 0.25),
+                  semanticLabel: 'Tiến độ hướng tới điểm mục tiêu',
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        Fmt.percent(ratio),
+                        style: context.textStyles.titleMedium?.copyWith(
+                          color: fg,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      Text(
+                        'mục tiêu',
+                        style: context.textStyles.labelSmall?.copyWith(
+                          color: fg.withValues(alpha: 0.8),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ],
           ),
         ),
       ),
@@ -170,73 +352,39 @@ class _Greeting extends ConsumerWidget {
   }
 }
 
-/// Thẻ tổng quan: điểm cao nhất + lượt làm gần nhất.
-class _OverviewHero extends StatelessWidget {
-  const _OverviewHero({required this.attempts});
-
-  final List<Attempt> attempts;
+/// Nhiệm vụ hôm nay, tính từ hoạt động thật. Chạm → mở việc chưa xong đầu tiên.
+class _DailyMission extends ConsumerWidget {
+  const _DailyMission();
 
   @override
-  Widget build(BuildContext context) {
-    final fg = AppHeroCard.foreground(context);
-    final last = attempts.firstOrNull;
-    final best = attempts
-        .where((a) => a.isFullTest)
-        .map((a) => ToeicScore.listening(a.listeningCorrect) + ToeicScore.reading(a.readingCorrect))
-        .fold<int?>(null, (m, v) => m == null || v > m ? v : m);
-    final lastRatio = last == null || last.totalQuestions == 0
-        ? 0.0
-        : last.correct / last.totalQuestions;
-
-    return AppHeroCard(
-      child: Row(
-        children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  best == null ? 'Chưa có điểm full test' : 'Điểm cao nhất',
-                  style: context.textStyles.labelLarge?.copyWith(color: fg),
-                ),
-                Gaps.v4,
-                Text(
-                  best?.toString() ?? '—',
-                  style: context.textStyles.displaySmall?.copyWith(color: fg),
-                ),
-                Gaps.v8,
-                Text(
-                  last == null
-                      ? 'Chọn một đề bên dưới để bắt đầu.'
-                      : 'Gần nhất: ${last.testTitle}\n${Fmt.dateTime(last.finishedAt)}',
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: context.textStyles.bodySmall?.copyWith(color: fg),
-                ),
-              ],
-            ),
+  Widget build(BuildContext context, WidgetRef ref) {
+    final progress = ref.watch(studyProgressProvider).value;
+    if (progress == null) return const SizedBox.shrink();
+    final next = progress.missions.where((m) => !m.isDone).firstOrNull;
+    return DailyMissionCard(
+      completed: progress.missionsDone,
+      total: progress.missions.length,
+      items: [
+        for (final m in progress.missions)
+          DailyMissionItem(
+            title: m.title,
+            isDone: m.isDone,
+            trailing: '${m.done.clamp(0, m.target)}/${m.target}',
           ),
-          if (last != null) ...[
-            Gaps.h16,
-            ScoreRing(
-              value: lastRatio,
-              size: AppSizes.ringMd,
-              strokeWidth: AppSizes.ringStrokeMd,
-              color: fg,
-              trackColor: fg.withValues(alpha: 0.25),
-              semanticLabel: 'Tỉ lệ đúng lần gần nhất',
-              child: Text(
-                Fmt.percent(lastRatio),
-                style: context.textStyles.titleMedium?.copyWith(color: fg),
-              ),
-            ),
-          ],
-        ],
-      ),
+      ],
+      onTap: next == null
+          ? () => showGoalSheet(context)
+          : () => switch (next.kind) {
+              MissionKind.questions => context.go(Routes.tests),
+              MissionKind.words => context.go(Routes.vocab),
+              MissionKind.mistakes => context.push(Routes.mistakes),
+              MissionKind.dictations => context.push(Routes.listening),
+            },
     );
   }
 }
 
+/// Lối tắt hành động dạng Bento Grid trực quan.
 class _QuickActions extends ConsumerWidget {
   const _QuickActions();
 
@@ -244,35 +392,67 @@ class _QuickActions extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final vocab = ref.watch(vocabOverviewProvider).value;
     final mistakes = ref.watch(mistakesProvider).value;
-    return IntrinsicHeight(
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Expanded(
-            child: _QuickAction(
-              icon: Icons.style_rounded,
-              tone: AppTone.warning,
-              title: 'Ôn từ vựng',
-              subtitle: vocab == null ? 'Flashcard SRS' : '${vocab.sessionSize} từ hôm nay',
-              onTap: () => context.go(Routes.vocab),
-            ),
+
+    return Column(
+      children: [
+        IntrinsicHeight(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Expanded(
+                child: _QuickAction(
+                  icon: Icons.style_rounded,
+                  tone: AppTone.warning,
+                  title: 'Ôn từ vựng',
+                  subtitle: vocab == null ? 'Flashcard SRS' : '${vocab.sessionSize} từ hôm nay',
+                  onTap: () => context.go(Routes.vocab),
+                ),
+              ),
+              Gaps.h12,
+              Expanded(
+                child: _QuickAction(
+                  icon: Icons.assignment_late_outlined,
+                  tone: AppTone.danger,
+                  title: 'Sổ câu sai',
+                  subtitle: mistakes == null
+                      ? 'Ôn câu làm sai'
+                      : mistakes.isEmpty
+                      ? 'Chưa có câu sai'
+                      : '${mistakes.length} câu cần ôn',
+                  onTap: () => context.push(Routes.mistakes),
+                ),
+              ),
+            ],
           ),
-          Gaps.h12,
-          Expanded(
-            child: _QuickAction(
-              icon: Icons.assignment_late_outlined,
-              tone: AppTone.danger,
-              title: 'Sổ câu sai',
-              subtitle: mistakes == null
-                  ? 'Ôn câu làm sai'
-                  : mistakes.isEmpty
-                  ? 'Chưa có câu sai'
-                  : '${mistakes.length} câu cần ôn',
-              onTap: () => context.push(Routes.mistakes),
-            ),
+        ),
+        Gaps.v12,
+        IntrinsicHeight(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Expanded(
+                child: _QuickAction(
+                  icon: Icons.hearing_rounded,
+                  tone: AppTone.info,
+                  title: 'Luyện nghe',
+                  subtitle: 'Chép chính tả, nói theo',
+                  onTap: () => context.push(Routes.listening),
+                ),
+              ),
+              Gaps.h12,
+              Expanded(
+                child: _QuickAction(
+                  icon: Icons.timer_outlined,
+                  tone: AppTone.success,
+                  title: 'Thi thử 120p',
+                  subtitle: 'Bấm giờ như thi thật',
+                  onTap: () => context.go(Routes.tests),
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
@@ -323,6 +503,25 @@ class _QuickAction extends StatelessWidget {
   }
 }
 
+/// Banner thương mại hoá Bami PRO.
+class _CommercialUpgradeBanner extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return UpgradeBanner(
+      title: 'Mở khoá đặc quyền Bami PRO',
+      description: 'Ngân hàng 20+ đề ETS 2024 mới nhất & AI phân tích giải thích bẫy đề.',
+      actionLabel: 'Xem chi tiết',
+      onUpgrade: () {
+        showAppSnackBar(
+          context,
+          'Bạn đang sử dụng phiên bản Bami PRO đầy đủ!',
+          tone: AppTone.success,
+        );
+      },
+    );
+  }
+}
+
 class _TestCard extends StatelessWidget {
   const _TestCard({required this.test, this.lastAttempt, this.inProgress});
 
@@ -336,14 +535,20 @@ class _TestCard extends StatelessWidget {
     final done = a == null
         ? null
         : a.isFullTest
-        ? '${ToeicScore.listening(a.listeningCorrect) + ToeicScore.reading(a.readingCorrect)} điểm'
+        ? '${a.totalScore} điểm'
         : '${a.correct}/${a.totalQuestions} đúng';
+
+    final isFullTest = test.questionCount >= 100;
 
     return AppCard(
       onTap: () => context.go(Routes.testDetail(test.id)),
       child: Row(
         children: [
-          const IconBadge(icon: Icons.menu_book_rounded, size: AppSizes.badgeLg),
+          IconBadge(
+            icon: isFullTest ? Icons.menu_book_rounded : Icons.quiz_outlined,
+            size: AppSizes.badgeLg,
+            tone: isFullTest ? AppTone.info : AppTone.neutral,
+          ),
           Gaps.h16,
           Expanded(
             child: Column(
@@ -352,32 +557,38 @@ class _TestCard extends StatelessWidget {
                 Text(test.title, style: context.textStyles.titleMedium),
                 Gaps.v4,
                 Text(
-                  [if (test.source != null) test.source!, '${test.questionCount} câu'].join(' · '),
+                  [
+                    if (test.source != null) test.source!,
+                    '${test.questionCount} câu',
+                    isFullTest ? '120 phút' : '15 phút',
+                  ].join(' · '),
                   style: context.textStyles.bodySmall?.copyWith(
                     color: context.colors.onSurfaceVariant,
                   ),
                 ),
-                if (done != null || inProgress != null) ...[
-                  Gaps.v8,
-                  Wrap(
-                    spacing: AppSpacing.s8,
-                    runSpacing: AppSpacing.s4,
-                    children: [
-                      if (inProgress case final p?)
-                        StatusBadge(
-                          label: 'Đang làm dở · ${p.answers.length}/${p.totalQuestions}',
-                          tone: AppTone.info,
-                          icon: Icons.pause_circle_outline_rounded,
-                        ),
-                      if (done != null)
-                        StatusBadge(
-                          label: 'Đã làm · $done',
-                          tone: AppTone.success,
-                          icon: Icons.check_rounded,
-                        ),
-                    ],
-                  ),
-                ],
+                Gaps.v8,
+                Wrap(
+                  spacing: AppSpacing.s8,
+                  runSpacing: AppSpacing.s4,
+                  children: [
+                    TestTag(
+                      label: isFullTest ? 'Chuẩn ETS' : 'Mini Test',
+                      tone: isFullTest ? TestTagTone.success : TestTagTone.neutral,
+                    ),
+                    if (inProgress case final p?)
+                      StatusBadge(
+                        label: 'Làm dở · ${p.answers.length}/${p.totalQuestions}',
+                        tone: AppTone.info,
+                        icon: Icons.pause_circle_outline_rounded,
+                      ),
+                    if (done != null)
+                      StatusBadge(
+                        label: 'Đã làm · $done',
+                        tone: AppTone.success,
+                        icon: Icons.check_rounded,
+                      ),
+                  ],
+                ),
               ],
             ),
           ),

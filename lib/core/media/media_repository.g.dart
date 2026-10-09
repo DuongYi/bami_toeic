@@ -84,4 +84,4 @@ final class MediaRepositoryProvider
   }
 }
 
-String _$mediaRepositoryHash() => r'9d67ad81e431ad057e18c2fb3a24e801b4f41f3b';
+String _$mediaRepositoryHash() => r'64498eb2b088d92cd1898bad2d9348734efae019';

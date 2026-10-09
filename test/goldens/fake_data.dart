@@ -1,4 +1,5 @@
 // Dữ liệu & repository giả để chụp màn hình (golden) không cần mạng.
+import 'package:bami_toeic/core/media/offline_store.dart';
 import 'package:bami_toeic/helper/srs.dart';
 import 'package:bami_toeic/module/auth/data/models/session.dart';
 import 'package:bami_toeic/module/auth/presentation/controllers/auth_controller.dart';
@@ -202,6 +203,13 @@ class FakeTestRepository implements TestRepository {
       tags: const ['inference'],
     ),
   ];
+
+  @override
+  Future<OfflineEntry> downloadTest(String id, {void Function(double)? onProgress}) async =>
+      OfflineEntry(bytes: 0, savedAt: DateTime(2026, 10, 1), files: const {});
+
+  @override
+  Future<void> removeOffline(String id) async {}
 
   @override
   Future<List<QuestionGroup>> fetchMistakeGroups(List<LatestAnswer> mistakes) async => _groups;

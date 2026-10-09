@@ -2,7 +2,7 @@
 ///
 ///   import 'package:bami_toeic/core/design_system/design_system.dart';
 ///
-/// Xem `.claude/skills/bami-design-system/SKILL.md` để biết quy tắc sử dụng.
+/// Xem `.agents/skills/bami-design-system/SKILL.md` để biết quy tắc sử dụng.
 library;
 
 export 'components/app_banner.dart';
@@ -15,14 +15,19 @@ export 'components/app_list_group.dart';
 export 'components/app_page_header.dart';
 export 'components/app_progress_bar.dart';
 export 'components/choice_card.dart';
+export 'components/daily_mission_card.dart';
 export 'components/icon_badge.dart';
 export 'components/number_cell.dart';
+export 'components/pro_badge.dart';
 export 'components/score_ring.dart';
 export 'components/section_header.dart';
 export 'components/stat_card.dart';
 export 'components/stat_tile.dart';
 export 'components/state_views.dart';
 export 'components/status_badge.dart';
+export 'components/streak_badge.dart';
+export 'components/test_tag.dart';
+export 'components/upgrade_banner.dart';
 export 'theme/app_theme.dart';
 export 'theme/context_ext.dart';
 export 'tokens/app_colors.dart';

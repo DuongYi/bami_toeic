@@ -6,7 +6,6 @@ import 'package:go_router/go_router.dart';
 import '../../../../core/design_system/design_system.dart';
 import '../../../../core/network/app_exception.dart';
 import '../../../../helper/format.dart';
-import '../../../../helper/score.dart';
 import '../../../../routes/app_router.dart';
 import '../../../test/data/models/test_models.dart';
 import '../../../test/data/question_tags.dart';
@@ -46,7 +45,17 @@ class HistoryPage extends ConsumerWidget {
                 : ListView(
                     padding: AppInsets.screen,
                     children: [
-                      const AppPageHeader(title: 'Tiến độ'),
+                      AppPageHeader(
+                        title: 'Tiến độ học tập',
+                        trailing: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: const [
+                            StreakBadge(count: 3),
+                            Gaps.h8,
+                            ProBadge(label: 'PRO', mini: true),
+                          ],
+                        ),
+                      ),
                       _Overview(attempts: list),
                       Gaps.v16,
                       if (stats.value case final s? when s.isNotEmpty) ...[
@@ -85,12 +94,7 @@ class _Overview extends StatelessWidget {
     final full = attempts.where((a) => a.isFullTest).toList();
     final best = full.isEmpty
         ? null
-        : full
-              .map(
-                (a) =>
-                    ToeicScore.listening(a.listeningCorrect) + ToeicScore.reading(a.readingCorrect),
-              )
-              .reduce((x, y) => x > y ? x : y);
+        : full.map((a) => a.totalScore).reduce((x, y) => x > y ? x : y);
     final totalQ = attempts.fold(0, (s, a) => s + a.totalQuestions);
     final totalC = attempts.fold(0, (s, a) => s + a.correct);
 
@@ -229,9 +233,7 @@ class _AttemptTile extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final a = attempt;
-    final score = a.isFullTest
-        ? '${ToeicScore.listening(a.listeningCorrect) + ToeicScore.reading(a.readingCorrect)}'
-        : '${a.correct}/${a.totalQuestions}';
+    final score = a.isFullTest ? '${a.totalScore}' : '${a.correct}/${a.totalQuestions}';
 
     return Semantics(
       // Thay thế cho thao tác vuốt (WCAG 2.5.7).

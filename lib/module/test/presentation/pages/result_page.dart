@@ -7,6 +7,7 @@ import '../../../../helper/format.dart';
 import '../../../../helper/score.dart';
 import '../../../../routes/app_router.dart';
 import '../../data/models/test_models.dart';
+import '../../../vocab/presentation/widgets/word_lookup_sheet.dart';
 import '../controllers/test_providers.dart';
 import '../widgets/question_group_view.dart';
 
@@ -87,8 +88,8 @@ class _ResultBodyState extends State<_ResultBody> {
         .where((q) => !_isCorrect(q) && widget.data.answers[q.id] != null)
         .length;
     final skipped = questions.where((q) => widget.data.answers[q.id] == null).length;
-    final listening = ToeicScore.listening(a.listeningCorrect);
-    final reading = ToeicScore.reading(a.readingCorrect);
+    final listening = a.listeningScore;
+    final reading = a.readingScore;
     final (title, hint) = _verdict(ratio);
     final muted = context.textStyles.bodySmall?.copyWith(color: context.colors.onSurfaceVariant);
 
@@ -135,12 +136,58 @@ class _ResultBodyState extends State<_ResultBody> {
                           icon: Icons.close_rounded,
                         ),
                         StatusBadge(label: '$skipped bỏ trống', icon: Icons.remove_rounded),
+                        TestTag(
+                          label: ratio >= 0.85
+                              ? 'Trình độ C1'
+                              : ratio >= 0.7
+                              ? 'Trình độ B2'
+                              : ratio >= 0.5
+                              ? 'Trình độ B1'
+                              : 'Cần bứt phá',
+                          tone: ratio >= 0.7 ? TestTagTone.success : TestTagTone.warning,
+                        ),
                       ],
                     ),
                   ],
                 ),
               ),
               Gaps.v8,
+              if (wrong > 0) ...[
+                AppCard(
+                  tone: AppTone.warning,
+                  onTap: () => context.push(Routes.mistakes),
+                  child: Row(
+                    children: [
+                      const IconBadge(
+                        icon: Icons.assignment_late_outlined,
+                        tone: AppTone.danger,
+                        size: AppSizes.badgeMd,
+                      ),
+                      Gaps.h12,
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Đã lưu $wrong câu sai vào Sổ câu sai',
+                              style: context.textStyles.titleSmall?.copyWith(
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            Gaps.v4,
+                            Text(
+                              'Bấm để xem phân tích bẫy đề thi và ôn lại ngay.',
+                              style: context.textStyles.bodySmall,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Icon(Icons.chevron_right_rounded, color: context.colors.onSurfaceVariant),
+                    ],
+                  ),
+                ),
+                Gaps.v8,
+              ],
               Padding(
                 padding: AppInsets.screenH,
                 child: Text(
@@ -281,6 +328,7 @@ class _ReviewPagerState extends State<_ReviewPager> {
           answers: widget.answers,
           isRevealed: (_) => true,
           showTranscript: true,
+          contextMenuBuilder: lookupContextMenu(context),
         ),
       ),
     );

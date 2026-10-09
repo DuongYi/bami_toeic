@@ -27,11 +27,11 @@
 | # | Hạng mục | Giá trị | Độ lớn | Ưu tiên |
 |---|---|---|---|---|
 | E1 | Lưu & tiếp tục bài làm dở ✅ | Không mất bài khi thoát/tắt app | M | **P0** |
-| E2 | Audio Listening liên tục kiểu thi thật | Thi thử sát thật | L | **P0** |
+| E2 | Audio Listening liên tục kiểu thi thật ✅ | Thi thử sát thật | L | **P0** |
 | E3 | Sổ câu sai ✅ | Ôn tập hiệu quả nhất | M | **P1** |
 | E4 | Đánh dấu câu (flag) ✅ | Xem lại trước khi nộp | S | P1 |
-| E5 | Phiếu trả lời kiểu OMR | Tô nhanh như đề giấy | S | P2 |
-| E6 | Bảng quy đổi điểm theo từng đề | Điểm chính xác hơn | S | P2 |
+| E5 | Phiếu trả lời kiểu OMR ✅ | Tô nhanh như đề giấy | S | P2 |
+| E6 | Bảng quy đổi điểm theo từng đề ✅ (hạ tầng; sách ETS 2026 không in bảng) | Điểm chính xác hơn | S | P2 |
 | E7 | Gắn thẻ dạng câu hỏi + thống kê ✅ | Biết yếu ngữ pháp/dạng nào | M | P2 |
 
 Thứ tự đề xuất: **E1 → E2 → E4 → E3 → E5 → E6 → E7** (E4 làm cùng lúc với E1 vì chung state).

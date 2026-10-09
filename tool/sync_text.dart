@@ -45,6 +45,9 @@ Future<void> _sync(SupabaseClient db, String dir, bool dryRun) async {
     return;
   }
   final testId = test['id'] as String;
+  if (data['score_table'] != null && !dryRun) {
+    await db.from('tests').update({'score_table': data['score_table']}).eq('id', testId);
+  }
   final rows = await db
       .from('questions')
       .select('id, number, group_id, content, options, explanation, tags')

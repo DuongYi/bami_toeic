@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/design_system/design_system.dart';
+import '../../../../core/media/media_image.dart';
 import '../../data/models/test_models.dart';
 import 'audio_bar.dart';
 
@@ -24,8 +25,10 @@ class QuestionGroupView extends StatelessWidget {
     this.isRevealed,
     this.showTranscript = false,
     this.autoPlayAudio = false,
+    this.showAudio = true,
     this.isFlagged,
     this.onToggleFlag,
+    this.contextMenuBuilder,
   });
 
   final QuestionGroup group;
@@ -39,9 +42,15 @@ class QuestionGroupView extends StatelessWidget {
   final bool showTranscript;
   final bool autoPlayAudio;
 
+  /// false khi audio do nơi khác phát (thi thử nghe liền mạch).
+  final bool showAudio;
+
   /// Đánh dấu câu (null = không hiện nút cờ, vd. màn xem lại)
   final bool Function(Question q)? isFlagged;
   final void Function(Question q)? onToggleFlag;
+
+  /// Menu khi bôi đen chữ (vd. thêm "Tra từ"); null = menu mặc định.
+  final EditableTextContextMenuBuilder? contextMenuBuilder;
 
   @override
   Widget build(BuildContext context) {
@@ -65,13 +74,19 @@ class QuestionGroupView extends StatelessWidget {
           ),
         ),
         Gaps.v12,
-        if (group.audioUrl != null) ...[
+        if (showAudio && group.audioUrl != null) ...[
           AudioBar(url: group.audioUrl!, autoPlay: autoPlayAudio),
           Gaps.v8,
         ],
         if (group.imageUrl != null) ...[_ZoomableImage(url: group.imageUrl!), Gaps.v12],
         if (group.passage != null && group.passage!.trim().isNotEmpty) ...[
-          AppCard(child: SelectableText(group.passage!, style: context.textStyles.bodyLarge)),
+          AppCard(
+            child: SelectableText(
+              group.passage!,
+              style: context.textStyles.bodyLarge,
+              contextMenuBuilder: contextMenuBuilder,
+            ),
+          ),
           Gaps.v12,
         ],
         if (showTranscript && group.transcript != null)
@@ -79,7 +94,7 @@ class QuestionGroupView extends StatelessWidget {
             title: const Text('Transcript'),
             tilePadding: EdgeInsets.zero,
             childrenPadding: const EdgeInsets.only(bottom: AppSpacing.s12),
-            children: [SelectableText(group.transcript!)],
+            children: [SelectableText(group.transcript!, contextMenuBuilder: contextMenuBuilder)],
           ),
         for (final q in group.questions)
           _QuestionTile(
@@ -89,6 +104,7 @@ class QuestionGroupView extends StatelessWidget {
             revealed: isRevealed?.call(q) ?? false,
             flagged: isFlagged?.call(q) ?? false,
             onToggleFlag: onToggleFlag,
+            contextMenuBuilder: contextMenuBuilder,
           ),
       ],
     );
@@ -103,6 +119,7 @@ class _QuestionTile extends StatelessWidget {
     required this.revealed,
     this.flagged = false,
     this.onToggleFlag,
+    this.contextMenuBuilder,
   });
 
   final Question question;
@@ -111,6 +128,7 @@ class _QuestionTile extends StatelessWidget {
   final bool revealed;
   final bool flagged;
   final void Function(Question q)? onToggleFlag;
+  final EditableTextContextMenuBuilder? contextMenuBuilder;
 
   @override
   Widget build(BuildContext context) {
@@ -127,7 +145,8 @@ class _QuestionTile extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(top: AppSpacing.s12),
-                  child: Text.rich(
+                  child: SelectableText.rich(
+                    contextMenuBuilder: contextMenuBuilder,
                     TextSpan(
                       children: [
                         TextSpan(
@@ -310,7 +329,10 @@ class _ZoomableImage extends StatelessWidget {
           builder: (_) => Dialog.fullscreen(
             child: Stack(
               children: [
-                InteractiveViewer(maxScale: 5, child: Center(child: Image.network(url))),
+                InteractiveViewer(
+                  maxScale: 5,
+                  child: Center(child: Image(image: mediaImage(url))),
+                ),
                 Positioned(
                   top: AppSpacing.s8,
                   right: AppSpacing.s8,
@@ -328,8 +350,8 @@ class _ZoomableImage extends StatelessWidget {
         ),
         child: ClipRRect(
           borderRadius: AppRadius.brMd,
-          child: Image.network(
-            url,
+          child: Image(
+            image: mediaImage(url),
             fit: BoxFit.contain,
             loadingBuilder: (context, child, progress) => progress == null
                 ? child

@@ -904,7 +904,8 @@ as List<Question>,
 mixin _$Attempt {
 
  String get id; String get testId;/// Từ `tests(title)` → `{"title": "..."}`
-@JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false) String get testTitle; String get mode; List<int> get parts; DateTime get startedAt; DateTime get finishedAt; int get totalQuestions; int get listeningCorrect; int get readingCorrect;/// 'test' = làm đề, 'mistakes' = luyện lại sổ câu sai
+@JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false) String get testTitle;/// Từ `tests(score_table)` – bảng quy đổi riêng của đề (nếu có)
+@JsonKey(name: 'tests', fromJson: _readScoreTable, includeToJson: false) ScoreTable? get scoreTable; String get mode; List<int> get parts; DateTime get startedAt; DateTime get finishedAt; int get totalQuestions; int get listeningCorrect; int get readingCorrect;/// 'test' = làm đề, 'mistakes' = luyện lại sổ câu sai
  String get source;
 /// Create a copy of Attempt
 /// with the given fields replaced by the non-null parameter values.
@@ -919,20 +920,20 @@ $AttemptCopyWith<Attempt> get copyWith => _$AttemptCopyWithImpl<Attempt>(this as
 @override
 bool operator ==(Object other) {
   final _this = this as Attempt;
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Attempt&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.testId, _this.testId) || other.testId == _this.testId)&&(identical(other.testTitle, _this.testTitle) || other.testTitle == _this.testTitle)&&(identical(other.mode, _this.mode) || other.mode == _this.mode)&&const DeepCollectionEquality().equals(other.parts, _this.parts)&&(identical(other.startedAt, _this.startedAt) || other.startedAt == _this.startedAt)&&(identical(other.finishedAt, _this.finishedAt) || other.finishedAt == _this.finishedAt)&&(identical(other.totalQuestions, _this.totalQuestions) || other.totalQuestions == _this.totalQuestions)&&(identical(other.listeningCorrect, _this.listeningCorrect) || other.listeningCorrect == _this.listeningCorrect)&&(identical(other.readingCorrect, _this.readingCorrect) || other.readingCorrect == _this.readingCorrect)&&(identical(other.source, _this.source) || other.source == _this.source));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Attempt&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.testId, _this.testId) || other.testId == _this.testId)&&(identical(other.testTitle, _this.testTitle) || other.testTitle == _this.testTitle)&&(identical(other.scoreTable, _this.scoreTable) || other.scoreTable == _this.scoreTable)&&(identical(other.mode, _this.mode) || other.mode == _this.mode)&&const DeepCollectionEquality().equals(other.parts, _this.parts)&&(identical(other.startedAt, _this.startedAt) || other.startedAt == _this.startedAt)&&(identical(other.finishedAt, _this.finishedAt) || other.finishedAt == _this.finishedAt)&&(identical(other.totalQuestions, _this.totalQuestions) || other.totalQuestions == _this.totalQuestions)&&(identical(other.listeningCorrect, _this.listeningCorrect) || other.listeningCorrect == _this.listeningCorrect)&&(identical(other.readingCorrect, _this.readingCorrect) || other.readingCorrect == _this.readingCorrect)&&(identical(other.source, _this.source) || other.source == _this.source));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
   final _this = this as Attempt;
-  return Object.hash(runtimeType,_this.id,_this.testId,_this.testTitle,_this.mode,const DeepCollectionEquality().hash(_this.parts),_this.startedAt,_this.finishedAt,_this.totalQuestions,_this.listeningCorrect,_this.readingCorrect,_this.source);
+  return Object.hash(runtimeType,_this.id,_this.testId,_this.testTitle,_this.scoreTable,_this.mode,const DeepCollectionEquality().hash(_this.parts),_this.startedAt,_this.finishedAt,_this.totalQuestions,_this.listeningCorrect,_this.readingCorrect,_this.source);
 }
 
 @override
 String toString() {
   final _this = this as Attempt;
-  return 'Attempt(id: ${_this.id}, testId: ${_this.testId}, testTitle: ${_this.testTitle}, mode: ${_this.mode}, parts: ${_this.parts}, startedAt: ${_this.startedAt}, finishedAt: ${_this.finishedAt}, totalQuestions: ${_this.totalQuestions}, listeningCorrect: ${_this.listeningCorrect}, readingCorrect: ${_this.readingCorrect}, source: ${_this.source})';
+  return 'Attempt(id: ${_this.id}, testId: ${_this.testId}, testTitle: ${_this.testTitle}, scoreTable: ${_this.scoreTable}, mode: ${_this.mode}, parts: ${_this.parts}, startedAt: ${_this.startedAt}, finishedAt: ${_this.finishedAt}, totalQuestions: ${_this.totalQuestions}, listeningCorrect: ${_this.listeningCorrect}, readingCorrect: ${_this.readingCorrect}, source: ${_this.source})';
 }
 
 
@@ -943,7 +944,7 @@ abstract mixin class $AttemptCopyWith<$Res>  {
   factory $AttemptCopyWith(Attempt value, $Res Function(Attempt) _then) = _$AttemptCopyWithImpl;
 @useResult
 $Res call({
- String id, String testId,@JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false) String testTitle, String mode, List<int> parts, DateTime startedAt, DateTime finishedAt, int totalQuestions, int listeningCorrect, int readingCorrect, String source
+ String id, String testId,@JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false) String testTitle,@JsonKey(name: 'tests', fromJson: _readScoreTable, includeToJson: false) ScoreTable? scoreTable, String mode, List<int> parts, DateTime startedAt, DateTime finishedAt, int totalQuestions, int listeningCorrect, int readingCorrect, String source
 });
 
 
@@ -960,12 +961,13 @@ class _$AttemptCopyWithImpl<$Res>
 
 /// Create a copy of Attempt
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? testId = null,Object? testTitle = null,Object? mode = null,Object? parts = null,Object? startedAt = null,Object? finishedAt = null,Object? totalQuestions = null,Object? listeningCorrect = null,Object? readingCorrect = null,Object? source = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? testId = null,Object? testTitle = null,Object? scoreTable = freezed,Object? mode = null,Object? parts = null,Object? startedAt = null,Object? finishedAt = null,Object? totalQuestions = null,Object? listeningCorrect = null,Object? readingCorrect = null,Object? source = null,}) {
   return _then(Attempt(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,testId: null == testId ? _self.testId : testId // ignore: cast_nullable_to_non_nullable
 as String,testTitle: null == testTitle ? _self.testTitle : testTitle // ignore: cast_nullable_to_non_nullable
-as String,mode: null == mode ? _self.mode : mode // ignore: cast_nullable_to_non_nullable
+as String,scoreTable: freezed == scoreTable ? _self.scoreTable : scoreTable // ignore: cast_nullable_to_non_nullable
+as ScoreTable?,mode: null == mode ? _self.mode : mode // ignore: cast_nullable_to_non_nullable
 as String,parts: null == parts ? _self.parts : parts // ignore: cast_nullable_to_non_nullable
 as List<int>,startedAt: null == startedAt ? _self.startedAt : startedAt // ignore: cast_nullable_to_non_nullable
 as DateTime,finishedAt: null == finishedAt ? _self.finishedAt : finishedAt // ignore: cast_nullable_to_non_nullable
@@ -1058,10 +1060,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String testId, @JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false)  String testTitle,  String mode,  List<int> parts,  DateTime startedAt,  DateTime finishedAt,  int totalQuestions,  int listeningCorrect,  int readingCorrect,  String source)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String testId, @JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false)  String testTitle, @JsonKey(name: 'tests', fromJson: _readScoreTable, includeToJson: false)  ScoreTable? scoreTable,  String mode,  List<int> parts,  DateTime startedAt,  DateTime finishedAt,  int totalQuestions,  int listeningCorrect,  int readingCorrect,  String source)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Attempt() when $default != null:
-return $default(_that.id,_that.testId,_that.testTitle,_that.mode,_that.parts,_that.startedAt,_that.finishedAt,_that.totalQuestions,_that.listeningCorrect,_that.readingCorrect,_that.source);case _:
+return $default(_that.id,_that.testId,_that.testTitle,_that.scoreTable,_that.mode,_that.parts,_that.startedAt,_that.finishedAt,_that.totalQuestions,_that.listeningCorrect,_that.readingCorrect,_that.source);case _:
   return orElse();
 
 }
@@ -1079,10 +1081,10 @@ return $default(_that.id,_that.testId,_that.testTitle,_that.mode,_that.parts,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String testId, @JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false)  String testTitle,  String mode,  List<int> parts,  DateTime startedAt,  DateTime finishedAt,  int totalQuestions,  int listeningCorrect,  int readingCorrect,  String source)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String testId, @JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false)  String testTitle, @JsonKey(name: 'tests', fromJson: _readScoreTable, includeToJson: false)  ScoreTable? scoreTable,  String mode,  List<int> parts,  DateTime startedAt,  DateTime finishedAt,  int totalQuestions,  int listeningCorrect,  int readingCorrect,  String source)  $default,) {final _that = this;
 switch (_that) {
 case _Attempt():
-return $default(_that.id,_that.testId,_that.testTitle,_that.mode,_that.parts,_that.startedAt,_that.finishedAt,_that.totalQuestions,_that.listeningCorrect,_that.readingCorrect,_that.source);case _:
+return $default(_that.id,_that.testId,_that.testTitle,_that.scoreTable,_that.mode,_that.parts,_that.startedAt,_that.finishedAt,_that.totalQuestions,_that.listeningCorrect,_that.readingCorrect,_that.source);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -1099,10 +1101,10 @@ return $default(_that.id,_that.testId,_that.testTitle,_that.mode,_that.parts,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String testId, @JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false)  String testTitle,  String mode,  List<int> parts,  DateTime startedAt,  DateTime finishedAt,  int totalQuestions,  int listeningCorrect,  int readingCorrect,  String source)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String testId, @JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false)  String testTitle, @JsonKey(name: 'tests', fromJson: _readScoreTable, includeToJson: false)  ScoreTable? scoreTable,  String mode,  List<int> parts,  DateTime startedAt,  DateTime finishedAt,  int totalQuestions,  int listeningCorrect,  int readingCorrect,  String source)?  $default,) {final _that = this;
 switch (_that) {
 case _Attempt() when $default != null:
-return $default(_that.id,_that.testId,_that.testTitle,_that.mode,_that.parts,_that.startedAt,_that.finishedAt,_that.totalQuestions,_that.listeningCorrect,_that.readingCorrect,_that.source);case _:
+return $default(_that.id,_that.testId,_that.testTitle,_that.scoreTable,_that.mode,_that.parts,_that.startedAt,_that.finishedAt,_that.totalQuestions,_that.listeningCorrect,_that.readingCorrect,_that.source);case _:
   return null;
 
 }
@@ -1114,13 +1116,15 @@ return $default(_that.id,_that.testId,_that.testTitle,_that.mode,_that.parts,_th
 @JsonSerializable()
 
 class _Attempt extends Attempt {
-  const _Attempt({required this.id, required this.testId, @JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false) this.testTitle = '', required this.mode, required  List<int> parts, required this.startedAt, required this.finishedAt, required this.totalQuestions, required this.listeningCorrect, required this.readingCorrect, this.source = 'test'}): _parts = parts,super._();
+  const _Attempt({required this.id, required this.testId, @JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false) this.testTitle = '', @JsonKey(name: 'tests', fromJson: _readScoreTable, includeToJson: false) this.scoreTable, required this.mode, required  List<int> parts, required this.startedAt, required this.finishedAt, required this.totalQuestions, required this.listeningCorrect, required this.readingCorrect, this.source = 'test'}): _parts = parts,super._();
   factory _Attempt.fromJson(Map<String, dynamic> json) => _$AttemptFromJson(json);
 
 @override final  String id;
 @override final  String testId;
 /// Từ `tests(title)` → `{"title": "..."}`
 @override@JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false) final  String testTitle;
+/// Từ `tests(score_table)` – bảng quy đổi riêng của đề (nếu có)
+@override@JsonKey(name: 'tests', fromJson: _readScoreTable, includeToJson: false) final  ScoreTable? scoreTable;
 @override final  String mode;
  final  List<int> _parts;
 @override List<int> get parts {
@@ -1150,18 +1154,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Attempt&&(identical(other.id, id) || other.id == id)&&(identical(other.testId, testId) || other.testId == testId)&&(identical(other.testTitle, testTitle) || other.testTitle == testTitle)&&(identical(other.mode, mode) || other.mode == mode)&&const DeepCollectionEquality().equals(other.parts, _parts)&&(identical(other.startedAt, startedAt) || other.startedAt == startedAt)&&(identical(other.finishedAt, finishedAt) || other.finishedAt == finishedAt)&&(identical(other.totalQuestions, totalQuestions) || other.totalQuestions == totalQuestions)&&(identical(other.listeningCorrect, listeningCorrect) || other.listeningCorrect == listeningCorrect)&&(identical(other.readingCorrect, readingCorrect) || other.readingCorrect == readingCorrect)&&(identical(other.source, source) || other.source == source));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Attempt&&(identical(other.id, id) || other.id == id)&&(identical(other.testId, testId) || other.testId == testId)&&(identical(other.testTitle, testTitle) || other.testTitle == testTitle)&&(identical(other.scoreTable, scoreTable) || other.scoreTable == scoreTable)&&(identical(other.mode, mode) || other.mode == mode)&&const DeepCollectionEquality().equals(other.parts, _parts)&&(identical(other.startedAt, startedAt) || other.startedAt == startedAt)&&(identical(other.finishedAt, finishedAt) || other.finishedAt == finishedAt)&&(identical(other.totalQuestions, totalQuestions) || other.totalQuestions == totalQuestions)&&(identical(other.listeningCorrect, listeningCorrect) || other.listeningCorrect == listeningCorrect)&&(identical(other.readingCorrect, readingCorrect) || other.readingCorrect == readingCorrect)&&(identical(other.source, source) || other.source == source));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
-    return Object.hash(runtimeType,id,testId,testTitle,mode,const DeepCollectionEquality().hash(_parts),startedAt,finishedAt,totalQuestions,listeningCorrect,readingCorrect,source);
+    return Object.hash(runtimeType,id,testId,testTitle,scoreTable,mode,const DeepCollectionEquality().hash(_parts),startedAt,finishedAt,totalQuestions,listeningCorrect,readingCorrect,source);
 }
 
 @override
 String toString() {
-    return 'Attempt(id: $id, testId: $testId, testTitle: $testTitle, mode: $mode, parts: $parts, startedAt: $startedAt, finishedAt: $finishedAt, totalQuestions: $totalQuestions, listeningCorrect: $listeningCorrect, readingCorrect: $readingCorrect, source: $source)';
+    return 'Attempt(id: $id, testId: $testId, testTitle: $testTitle, scoreTable: $scoreTable, mode: $mode, parts: $parts, startedAt: $startedAt, finishedAt: $finishedAt, totalQuestions: $totalQuestions, listeningCorrect: $listeningCorrect, readingCorrect: $readingCorrect, source: $source)';
 }
 
 
@@ -1172,7 +1176,7 @@ abstract mixin class _$AttemptCopyWith<$Res> implements $AttemptCopyWith<$Res> {
   factory _$AttemptCopyWith(_Attempt value, $Res Function(_Attempt) _then) = __$AttemptCopyWithImpl;
 @override @useResult
 $Res call({
- String id, String testId,@JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false) String testTitle, String mode, List<int> parts, DateTime startedAt, DateTime finishedAt, int totalQuestions, int listeningCorrect, int readingCorrect, String source
+ String id, String testId,@JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false) String testTitle,@JsonKey(name: 'tests', fromJson: _readScoreTable, includeToJson: false) ScoreTable? scoreTable, String mode, List<int> parts, DateTime startedAt, DateTime finishedAt, int totalQuestions, int listeningCorrect, int readingCorrect, String source
 });
 
 
@@ -1189,12 +1193,13 @@ class __$AttemptCopyWithImpl<$Res>
 
 /// Create a copy of Attempt
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? testId = null,Object? testTitle = null,Object? mode = null,Object? parts = null,Object? startedAt = null,Object? finishedAt = null,Object? totalQuestions = null,Object? listeningCorrect = null,Object? readingCorrect = null,Object? source = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? testId = null,Object? testTitle = null,Object? scoreTable = freezed,Object? mode = null,Object? parts = null,Object? startedAt = null,Object? finishedAt = null,Object? totalQuestions = null,Object? listeningCorrect = null,Object? readingCorrect = null,Object? source = null,}) {
   return _then(_Attempt(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,testId: null == testId ? _self.testId : testId // ignore: cast_nullable_to_non_nullable
 as String,testTitle: null == testTitle ? _self.testTitle : testTitle // ignore: cast_nullable_to_non_nullable
-as String,mode: null == mode ? _self.mode : mode // ignore: cast_nullable_to_non_nullable
+as String,scoreTable: freezed == scoreTable ? _self.scoreTable : scoreTable // ignore: cast_nullable_to_non_nullable
+as ScoreTable?,mode: null == mode ? _self.mode : mode // ignore: cast_nullable_to_non_nullable
 as String,parts: null == parts ? _self._parts : parts // ignore: cast_nullable_to_non_nullable
 as List<int>,startedAt: null == startedAt ? _self.startedAt : startedAt // ignore: cast_nullable_to_non_nullable
 as DateTime,finishedAt: null == finishedAt ? _self.finishedAt : finishedAt // ignore: cast_nullable_to_non_nullable

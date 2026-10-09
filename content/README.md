@@ -9,6 +9,8 @@
   "title": "ETS 2024 - Test 1",        // bắt buộc, duy nhất
   "source": "ETS 2024",
   "description": "…",
+  // tuỳ chọn: bảng quy đổi điểm của đề, mỗi dòng [minĐúng, maxĐúng, minĐiểm, maxĐiểm]
+  "score_table": {"listening": [[96, 100, 475, 495], …], "reading": [[96, 100, 460, 495], …]},
   "groups": [                           // theo đúng thứ tự trong đề
     // Part 1: 1 nhóm / câu, có ảnh + audio, options để trống
     { "part": 1, "audio": "q1.mp3", "image": "q1.jpg", "transcript": "(A) … (B) …",

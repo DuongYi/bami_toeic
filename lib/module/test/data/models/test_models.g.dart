@@ -94,6 +94,7 @@ _Attempt _$AttemptFromJson(Map<String, dynamic> json) => _Attempt(
   id: json['id'] as String,
   testId: json['test_id'] as String,
   testTitle: json['tests'] == null ? '' : _readTitle(json['tests']),
+  scoreTable: _readScoreTable(json['tests']),
   mode: json['mode'] as String,
   parts: (json['parts'] as List<dynamic>).map((e) => (e as num).toInt()).toList(),
   startedAt: DateTime.parse(json['started_at'] as String),

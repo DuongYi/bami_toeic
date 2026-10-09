@@ -3,6 +3,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../../helper/srs.dart';
 import '../../../auth/presentation/controllers/auth_controller.dart';
+import '../../../goals/data/study_store.dart';
 import '../../data/models/vocab_models.dart';
 import '../../data/vocab_repository.dart';
 import 'vocab_controller.dart';
@@ -61,6 +62,7 @@ class FlashcardSession extends _$FlashcardSession {
       ),
     );
 
+    ref.read(studyStoreProvider).record(StudyEvent.words);
     try {
       final userId = ref.read(currentUserIdProvider);
       if (userId == null) return;

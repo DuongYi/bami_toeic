@@ -1,5 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../../../../helper/score.dart';
+
 part 'test_models.freezed.dart';
 part 'test_models.g.dart';
 
@@ -80,6 +82,9 @@ abstract class Attempt with _$Attempt {
     @JsonKey(name: 'tests', fromJson: _readTitle, includeToJson: false)
     @Default('')
     String testTitle,
+
+    /// Từ `tests(score_table)` – bảng quy đổi riêng của đề (nếu có)
+    @JsonKey(name: 'tests', fromJson: _readScoreTable, includeToJson: false) ScoreTable? scoreTable,
     required String mode,
     required List<int> parts,
     required DateTime startedAt,
@@ -98,10 +103,14 @@ abstract class Attempt with _$Attempt {
   bool get isFullTest => source != 'mistakes' && parts.length == 7 && totalQuestions == 200;
   bool get isExam => mode == 'exam';
   bool get isMistakeReview => source == 'mistakes';
+  int get listeningScore => ToeicScore.listening(listeningCorrect, scoreTable);
+  int get readingScore => ToeicScore.reading(readingCorrect, scoreTable);
+  int get totalScore => listeningScore + readingScore;
   Duration get duration => finishedAt.difference(startedAt);
 }
 
 String _readTitle(Object? v) => v is Map ? (v['title'] as String? ?? '') : '';
+ScoreTable? _readScoreTable(Object? v) => v is Map ? ScoreTable.tryParse(v['score_table']) : null;
 
 @freezed
 abstract class AttemptAnswer with _$AttemptAnswer {

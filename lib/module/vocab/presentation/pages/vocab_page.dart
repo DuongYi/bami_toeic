@@ -61,7 +61,17 @@ class _VocabBody extends ConsumerWidget {
           padding: const EdgeInsets.fromLTRB(AppSpacing.screen, 0, AppSpacing.screen, 0),
           sliver: SliverList.list(
             children: [
-              const AppPageHeader(title: 'Từ vựng'),
+              AppPageHeader(
+                title: 'Từ vựng SRS',
+                trailing: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: const [
+                    StreakBadge(count: 3),
+                    Gaps.h8,
+                    ProBadge(label: 'PRO', mini: true),
+                  ],
+                ),
+              ),
               AppHeroCard(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../../goals/data/study_store.dart';
 import '../../data/in_progress_store.dart';
 import '../../data/models/test_models.dart';
 import '../../data/test_repository.dart';
@@ -58,7 +59,9 @@ class TestTaking extends _$TestTaking {
   Timer? _timer;
   Timer? _saveDebounce;
   int _ticksSinceSave = 0;
-  static const _saveDelay = Duration(milliseconds: 800); // ds-ignore: debounce lưu bài, không phải animation
+  static const _saveDelay = Duration(
+    milliseconds: 800,
+  ); // ds-ignore: debounce lưu bài, không phải animation
 
   bool get _isMistakes => testId == kMistakesSession;
 
@@ -186,6 +189,11 @@ class TestTaking extends _$TestTaking {
   // ---------- thao tác ----------
 
   void select(Question q, String letter) {
+    final before = state.value;
+    if (before != null && !before.answers.containsKey(q.id) && !before.revealed.contains(q.id)) {
+      final store = ref.read(studyStoreProvider)..record(StudyEvent.questions);
+      if (_isMistakes) store.record(StudyEvent.mistakes);
+    }
     _update((s) {
       if (s.revealed.contains(q.id)) return s;
       return s.copyWith(

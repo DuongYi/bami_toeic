@@ -7,6 +7,8 @@ import '../../../../helper/format.dart';
 import '../../../../routes/app_router.dart';
 import '../../data/in_progress_store.dart';
 import '../../data/models/test_models.dart';
+import '../../../../core/network/app_exception.dart';
+import '../controllers/offline_controller.dart';
 import '../controllers/test_providers.dart';
 import '../widgets/question_group_view.dart';
 
@@ -60,6 +62,7 @@ class _DetailBodyState extends ConsumerState<_DetailBody> {
         children: [
           // Thông tin đề
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const IconBadge(icon: Icons.menu_book_rounded, size: AppSizes.badgeLg),
               Gaps.h16,
@@ -71,12 +74,22 @@ class _DetailBodyState extends ConsumerState<_DetailBody> {
                       header: true,
                       child: Text(s.title, style: context.textStyles.headlineSmall),
                     ),
+                    Gaps.v4,
+                    Wrap(
+                      spacing: AppSpacing.s8,
+                      runSpacing: AppSpacing.s4,
+                      children: [
+                        TestTag(label: s.source ?? 'ETS Format', tone: TestTagTone.info),
+                        TestTag(
+                          label: s.questionCount >= 100 ? 'Đề thi 120p' : 'Mini Test',
+                          tone: s.questionCount >= 100 ? TestTagTone.success : TestTagTone.neutral,
+                        ),
+                        const ProBadge(label: 'PRO', mini: true),
+                      ],
+                    ),
+                    Gaps.v4,
                     Text(
-                      [
-                        if (s.source != null) s.source!,
-                        '${s.questionCount} câu',
-                        '${parts.length} Part',
-                      ].join(' · '),
+                      '${s.questionCount} câu hỏi · ${parts.length} Part hoàn chỉnh',
                       style: muted,
                     ),
                   ],
@@ -85,6 +98,26 @@ class _DetailBodyState extends ConsumerState<_DetailBody> {
             ],
           ),
           if (s.description != null) ...[Gaps.v12, Text(s.description!, style: muted)],
+          Gaps.v12,
+          AppCard(
+            tone: AppTone.info,
+            child: Row(
+              children: [
+                Icon(
+                  Icons.auto_awesome_rounded,
+                  color: context.colors.primary,
+                  size: AppSizes.iconMd,
+                ),
+                Gaps.h12,
+                Expanded(
+                  child: Text(
+                    'Bami PRO hỗ trợ giải thích bẫy đề thi & lưu từ vựng trực tiếp vào Flashcard.',
+                    style: context.textStyles.bodySmall,
+                  ),
+                ),
+              ],
+            ),
+          ),
           if (ref.watch(inProgressProvider(s.id)).value case final snap?) ...[
             Gaps.v16,
             _ResumeCard(snapshot: snap),
@@ -127,6 +160,8 @@ class _DetailBodyState extends ConsumerState<_DetailBody> {
             ),
             Gaps.v8,
           ],
+          Gaps.v16,
+          _OfflineTile(testId: s.id),
         ],
       ),
       bottomNavigationBar: AppBottomBar(
@@ -224,6 +259,76 @@ class _ResumeCard extends ConsumerWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+/// Tải đề (nội dung + audio + ảnh) về máy để làm khi không có mạng.
+class _OfflineTile extends ConsumerWidget {
+  const _OfflineTile({required this.testId});
+
+  final String testId;
+
+  Future<void> _download(BuildContext context, WidgetRef ref) async {
+    final messenger = ScaffoldMessenger.of(context);
+    try {
+      await ref.read(offlineTestProvider(testId).notifier).download();
+      showAppSnackBarOn(messenger, 'Đã tải đề về máy', tone: AppTone.success);
+    } catch (e) {
+      showAppSnackBarOn(
+        messenger,
+        'Tải thất bại: ${AppException.from(e).message}',
+        tone: AppTone.danger,
+      );
+    }
+  }
+
+  Future<void> _remove(BuildContext context, WidgetRef ref) async {
+    final ok = await showAppConfirmDialog(
+      context,
+      title: 'Xoá bản offline?',
+      message: 'Đề vẫn làm được khi có mạng; chỉ xoá file trên máy.',
+      confirmLabel: 'Xoá',
+      destructive: true,
+    );
+    if (ok) await ref.read(offlineTestProvider(testId).notifier).remove();
+  }
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final state = ref.watch(offlineTestProvider(testId)).value;
+    return AppListGroup(
+      children: [
+        switch (state) {
+          OfflineReady(:final entry) => ListTile(
+            leading: const IconBadge(icon: Icons.offline_pin_rounded, tone: AppTone.success),
+            title: const Text('Đã tải về máy'),
+            subtitle: Text(
+              '${(entry.bytes / 1024 / 1024).toStringAsFixed(1)} MB · ${Fmt.date(entry.savedAt)}',
+            ),
+            trailing: IconButton(
+              tooltip: 'Xoá bản offline',
+              icon: const Icon(Icons.delete_outline_rounded),
+              onPressed: () => _remove(context, ref),
+            ),
+          ),
+          OfflineDownloading(:final progress) => ListTile(
+            leading: const IconBadge(icon: Icons.downloading_rounded),
+            title: Text('Đang tải… ${Fmt.percent(progress)}'),
+            subtitle: Padding(
+              padding: const EdgeInsets.only(top: AppSpacing.s8),
+              child: AppProgressBar(value: progress, tone: AppTone.info),
+            ),
+          ),
+          _ => ListTile(
+            leading: const IconBadge(icon: Icons.download_rounded, tone: AppTone.neutral),
+            title: const Text('Tải về để làm offline'),
+            subtitle: const Text('Audio + ảnh khoảng 20 MB · nên dùng Wi-Fi'),
+            trailing: const Icon(Icons.chevron_right_rounded),
+            onTap: state == null ? null : () => _download(context, ref),
+          ),
+        },
+      ],
     );
   }
 }

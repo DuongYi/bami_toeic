@@ -34,7 +34,9 @@ for t in range(int(a), int(b2 or a) + 1):
     ok, bad, missing = 0, [], []
     for n in range(1, 32):
         # ghép cặp nháy tuần tự rồi mới lọc: chỉ lấy câu trích tiếng Anh (ASCII), đủ dài
-        raw = re.findall(r"'([^']+)'", ex.get(str(n), '').replace("’", "'"))
+        # Dấu nháy giữa 2 chữ cái (I'd, we're) là từ rút gọn, không phải ngoặc trích dẫn
+        text_ex = re.sub(r"(?<=[A-Za-z])'(?=[A-Za-z])", '\x00', ex.get(str(n), '').replace("’", "'"))
+        raw = [q.replace('\x00', "'") for q in re.findall(r"'([^']+)'", text_ex)]
         quotes = [norm(q) for q in raw if all(ord(c) < 128 for c in q) and len(q) >= 8]
         if not quotes:
             continue
