@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'config/env.dart';
 import 'core/design_system/design_system.dart';
+import 'core/network/app_exception.dart';
 import 'routes/app_router.dart';
 
 void main() {
@@ -11,7 +12,15 @@ void main() {
     runApp(const _MissingEnvApp());
     return;
   }
-  runApp(const ProviderScope(child: BamiToeicApp()));
+  runApp(const ProviderScope(retry: providerRetry, child: BamiToeicApp()));
+}
+
+/// Riverpod 3 mặc định tự thử lại MỌI exception 10 lần (~40 giây + timeout mạng),
+/// trong lúc đó màn hình chỉ hiện vòng tải → trông như "load vô hạn", lỗi thật bị che.
+/// Chỉ thử lại lỗi mạng tạm thời (tối đa 2 lần); lỗi khác hiện ngay kèm nút Thử lại.
+Duration? providerRetry(int retryCount, Object error) {
+  if (retryCount >= 2 || AppException.from(error) is! NetworkException) return null;
+  return Duration(seconds: 1 << retryCount);
 }
 
 class BamiToeicApp extends ConsumerWidget {
