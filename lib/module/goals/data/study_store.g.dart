@@ -20,23 +20,27 @@ Map<String, dynamic> _$DayLogToJson(_DayLog instance) => <String, dynamic>{
   'dictations': instance.dictations,
 };
 
-_GoalSettings _$GoalSettingsFromJson(Map<String, dynamic> json) => _GoalSettings(
-  targetScore: (json['target_score'] as num?)?.toInt(),
-  examDate: json['exam_date'] == null ? null : DateTime.parse(json['exam_date'] as String),
-  dailyQuestions: (json['daily_questions'] as num?)?.toInt() ?? 20,
-  dailyWords: (json['daily_words'] as num?)?.toInt() ?? 15,
-  dailyDictations: (json['daily_dictations'] as num?)?.toInt() ?? 3,
-  reminderMinutes: (json['reminder_minutes'] as num?)?.toInt(),
-);
+_GoalSettings _$GoalSettingsFromJson(Map<String, dynamic> json) =>
+    _GoalSettings(
+      targetScore: (json['target_score'] as num?)?.toInt(),
+      examDate: json['exam_date'] == null
+          ? null
+          : DateTime.parse(json['exam_date'] as String),
+      dailyQuestions: (json['daily_questions'] as num?)?.toInt() ?? 20,
+      dailyWords: (json['daily_words'] as num?)?.toInt() ?? 15,
+      dailyDictations: (json['daily_dictations'] as num?)?.toInt() ?? 3,
+      reminderMinutes: (json['reminder_minutes'] as num?)?.toInt(),
+    );
 
-Map<String, dynamic> _$GoalSettingsToJson(_GoalSettings instance) => <String, dynamic>{
-  'target_score': instance.targetScore,
-  'exam_date': instance.examDate?.toIso8601String(),
-  'daily_questions': instance.dailyQuestions,
-  'daily_words': instance.dailyWords,
-  'daily_dictations': instance.dailyDictations,
-  'reminder_minutes': instance.reminderMinutes,
-};
+Map<String, dynamic> _$GoalSettingsToJson(_GoalSettings instance) =>
+    <String, dynamic>{
+      'target_score': instance.targetScore,
+      'exam_date': instance.examDate?.toIso8601String(),
+      'daily_questions': instance.dailyQuestions,
+      'daily_words': instance.dailyWords,
+      'daily_dictations': instance.dailyDictations,
+      'reminder_minutes': instance.reminderMinutes,
+    };
 
 // **************************************************************************
 // RiverpodGenerator
@@ -48,7 +52,8 @@ Map<String, dynamic> _$GoalSettingsToJson(_GoalSettings instance) => <String, dy
 @ProviderFor(studyStore)
 final studyStoreProvider = StudyStoreProvider._();
 
-final class StudyStoreProvider extends $FunctionalProvider<StudyStore, StudyStore, StudyStore>
+final class StudyStoreProvider
+    extends $FunctionalProvider<StudyStore, StudyStore, StudyStore>
     with $Provider<StudyStore> {
   StudyStoreProvider._()
     : super(
@@ -76,7 +81,10 @@ final class StudyStoreProvider extends $FunctionalProvider<StudyStore, StudyStor
 
   /// {@macro riverpod.override_with_value}
   Override overrideWithValue(StudyStore value) {
-    return $ProviderOverride(origin: this, providerOverride: $SyncValueProvider<StudyStore>(value));
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<StudyStore>(value),
+    );
   }
 }
 
@@ -92,7 +100,9 @@ final class StudyLogProvider
           Map<String, DayLog>,
           FutureOr<Map<String, DayLog>>
         >
-    with $FutureModifier<Map<String, DayLog>>, $FutureProvider<Map<String, DayLog>> {
+    with
+        $FutureModifier<Map<String, DayLog>>,
+        $FutureProvider<Map<String, DayLog>> {
   StudyLogProvider._()
     : super(
         from: null,
@@ -109,8 +119,9 @@ final class StudyLogProvider
 
   @$internal
   @override
-  $FutureProviderElement<Map<String, DayLog>> $createElement($ProviderPointer pointer) =>
-      $FutureProviderElement(pointer);
+  $FutureProviderElement<Map<String, DayLog>> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
   FutureOr<Map<String, DayLog>> create(Ref ref) {
@@ -124,7 +135,12 @@ String _$studyLogHash() => r'8ee134cfdcd2069f1c599524568c13cf3f894f5c';
 final goalSettingsProvider = GoalSettingsProvider._();
 
 final class GoalSettingsProvider
-    extends $FunctionalProvider<AsyncValue<GoalSettings>, GoalSettings, FutureOr<GoalSettings>>
+    extends
+        $FunctionalProvider<
+          AsyncValue<GoalSettings>,
+          GoalSettings,
+          FutureOr<GoalSettings>
+        >
     with $FutureModifier<GoalSettings>, $FutureProvider<GoalSettings> {
   GoalSettingsProvider._()
     : super(
@@ -142,8 +158,9 @@ final class GoalSettingsProvider
 
   @$internal
   @override
-  $FutureProviderElement<GoalSettings> $createElement($ProviderPointer pointer) =>
-      $FutureProviderElement(pointer);
+  $FutureProviderElement<GoalSettings> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
   FutureOr<GoalSettings> create(Ref ref) {

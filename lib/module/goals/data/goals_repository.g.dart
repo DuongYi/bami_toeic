@@ -12,7 +12,8 @@ part of 'goals_repository.dart';
 @ProviderFor(goalsApi)
 final goalsApiProvider = GoalsApiProvider._();
 
-final class GoalsApiProvider extends $FunctionalProvider<GoalsApi, GoalsApi, GoalsApi>
+final class GoalsApiProvider
+    extends $FunctionalProvider<GoalsApi, GoalsApi, GoalsApi>
     with $Provider<GoalsApi> {
   GoalsApiProvider._()
     : super(
@@ -30,7 +31,8 @@ final class GoalsApiProvider extends $FunctionalProvider<GoalsApi, GoalsApi, Goa
 
   @$internal
   @override
-  $ProviderElement<GoalsApi> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+  $ProviderElement<GoalsApi> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
 
   @override
   GoalsApi create(Ref ref) {
@@ -39,7 +41,10 @@ final class GoalsApiProvider extends $FunctionalProvider<GoalsApi, GoalsApi, Goa
 
   /// {@macro riverpod.override_with_value}
   Override overrideWithValue(GoalsApi value) {
-    return $ProviderOverride(origin: this, providerOverride: $SyncValueProvider<GoalsApi>(value));
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<GoalsApi>(value),
+    );
   }
 }
 
@@ -49,7 +54,8 @@ String _$goalsApiHash() => r'71af8b9cc86837641e4aec05a8cdf7c04c9e6059';
 final goalsRepositoryProvider = GoalsRepositoryProvider._();
 
 final class GoalsRepositoryProvider
-    extends $FunctionalProvider<GoalsRepository, GoalsRepository, GoalsRepository>
+    extends
+        $FunctionalProvider<GoalsRepository, GoalsRepository, GoalsRepository>
     with $Provider<GoalsRepository> {
   GoalsRepositoryProvider._()
     : super(

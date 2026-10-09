@@ -34,6 +34,7 @@ class DictationPage extends ConsumerWidget {
       appBar: AppBar(),
       body: AsyncView(
         value: clips,
+        loading: (_) => const TestTakingSkeleton(),
         onRetry: () => ref.invalidate(dictationClipsProvider(testId, part)),
         data: (_) => const SizedBox.shrink(),
       ),

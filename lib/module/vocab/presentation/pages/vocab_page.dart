@@ -31,6 +31,7 @@ class VocabPage extends ConsumerWidget {
           onRefresh: () => ref.refresh(vocabListProvider.future),
           child: AsyncView(
             value: overview,
+            loading: (_) => const VocabSkeleton(),
             onRetry: () => ref.invalidate(vocabListProvider),
             data: (o) => _VocabBody(overview: o, topic: topic),
           ),
@@ -66,10 +67,14 @@ class _VocabBody extends ConsumerWidget {
           sliver: SliverList.list(
             children: [
               AppPageHeader(
+                overline: 'HỌC TỪ THÔNG MINH',
                 title: 'Từ vựng SRS',
-                trailing: Row(
-                  mainAxisSize: MainAxisSize.min,
+                subtitle: 'Ghi nhớ dài hạn với thuật toán lặp lại ngắt quãng',
+                topBar: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: const [
+                    CoinBadge(amount: 150),
+                    Gaps.h8,
                     StreakBadge(count: 3),
                     Gaps.h8,
                     ProBadge(label: 'PRO', mini: true),
@@ -88,11 +93,17 @@ class _VocabBody extends ConsumerWidget {
                             children: [
                               Text(
                                 'Ôn tập hôm nay',
-                                style: context.textStyles.labelLarge?.copyWith(color: fg),
+                                style: context.textStyles.labelLarge?.copyWith(
+                                  color: fg,
+                                  fontWeight: FontWeight.w700,
+                                ),
                               ),
                               Text(
                                 '${o.sessionSize} từ',
-                                style: context.textStyles.displaySmall?.copyWith(color: fg),
+                                style: context.textStyles.displaySmall?.copyWith(
+                                  color: fg,
+                                  fontWeight: FontWeight.w800,
+                                ),
                               ),
                             ],
                           ),
@@ -104,10 +115,63 @@ class _VocabBody extends ConsumerWidget {
                         ),
                       ],
                     ),
-                    Gaps.v4,
-                    Text(
-                      '${o.dueCount} từ đến hạn · ${o.newCount} từ mới · ${o.total} từ trong kho',
-                      style: context.textStyles.bodySmall?.copyWith(color: fg),
+                    Gaps.v8,
+                    Wrap(
+                      spacing: AppSpacing.s8,
+                      runSpacing: AppSpacing.s4,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: AppSpacing.s8,
+                            vertical: AppSpacing.s2,
+                          ),
+                          decoration: BoxDecoration(
+                            color: fg.withValues(alpha: 0.2),
+                            borderRadius: AppRadius.brFull,
+                          ),
+                          child: Text(
+                            '⚡️ ${o.dueCount} đến hạn',
+                            style: context.textStyles.labelSmall?.copyWith(
+                              color: fg,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: AppSpacing.s8,
+                            vertical: AppSpacing.s2,
+                          ),
+                          decoration: BoxDecoration(
+                            color: fg.withValues(alpha: 0.15),
+                            borderRadius: AppRadius.brFull,
+                          ),
+                          child: Text(
+                            '🌱 ${o.newCount} từ mới',
+                            style: context.textStyles.labelSmall?.copyWith(
+                              color: fg,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: AppSpacing.s8,
+                            vertical: AppSpacing.s2,
+                          ),
+                          decoration: BoxDecoration(
+                            color: fg.withValues(alpha: 0.15),
+                            borderRadius: AppRadius.brFull,
+                          ),
+                          child: Text(
+                            '📚 ${o.total} trong kho',
+                            style: context.textStyles.labelSmall?.copyWith(
+                              color: fg,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                     Gaps.v16,
                     FilledButton.icon(
@@ -120,7 +184,10 @@ class _VocabBody extends ConsumerWidget {
                       icon: Icon(
                         o.sessionSize == 0 ? Icons.check_rounded : Icons.play_arrow_rounded,
                       ),
-                      label: Text(o.sessionSize == 0 ? 'Đã ôn xong hôm nay' : 'Bắt đầu học'),
+                      label: Text(
+                        o.sessionSize == 0 ? 'Đã ôn xong hôm nay' : 'Bắt đầu học ngay',
+                        style: const TextStyle(fontWeight: FontWeight.w700),
+                      ),
                     ),
                   ],
                 ),

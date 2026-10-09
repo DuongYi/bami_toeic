@@ -13,7 +13,12 @@ part of 'study_progress.dart';
 final studyProgressProvider = StudyProgressProvider._();
 
 final class StudyProgressProvider
-    extends $FunctionalProvider<AsyncValue<StudyProgress>, StudyProgress, FutureOr<StudyProgress>>
+    extends
+        $FunctionalProvider<
+          AsyncValue<StudyProgress>,
+          StudyProgress,
+          FutureOr<StudyProgress>
+        >
     with $FutureModifier<StudyProgress>, $FutureProvider<StudyProgress> {
   StudyProgressProvider._()
     : super(
@@ -31,8 +36,9 @@ final class StudyProgressProvider
 
   @$internal
   @override
-  $FutureProviderElement<StudyProgress> $createElement($ProviderPointer pointer) =>
-      $FutureProviderElement(pointer);
+  $FutureProviderElement<StudyProgress> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
   FutureOr<StudyProgress> create(Ref ref) {

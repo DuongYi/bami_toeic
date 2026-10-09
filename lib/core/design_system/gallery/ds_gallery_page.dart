@@ -390,6 +390,7 @@ class _CommercialDemo extends StatelessWidget {
             ProBadge(),
             ProBadge(label: 'VIP', mini: true),
             StreakBadge(count: 7),
+            CoinBadge(amount: 150),
             TestTag(label: 'ETS 2024', tone: TestTagTone.info),
             TestTag(label: 'Chuẩn đề thi', tone: TestTagTone.success),
             TestTag(label: 'Nâng cao', tone: TestTagTone.danger),

@@ -6,37 +6,46 @@ part of 'in_progress_store.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_TakingSnapshot _$TakingSnapshotFromJson(Map<String, dynamic> json) => _TakingSnapshot(
+_TakingSnapshot _$TakingSnapshotFromJson(
+  Map<String, dynamic> json,
+) => _TakingSnapshot(
   testId: json['test_id'] as String,
   mode: json['mode'] as String,
-  parts: (json['parts'] as List<dynamic>).map((e) => (e as num).toInt()).toList(),
+  parts: (json['parts'] as List<dynamic>)
+      .map((e) => (e as num).toInt())
+      .toList(),
   startedAt: DateTime.parse(json['started_at'] as String),
   clockSeconds: (json['clock_seconds'] as num).toInt(),
   index: (json['index'] as num?)?.toInt() ?? 0,
   answers:
-      (json['answers'] as Map<String, dynamic>?)?.map((k, e) => MapEntry(k, e as String)) ??
+      (json['answers'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as String),
+      ) ??
       const <String, String>{},
   revealed:
-      (json['revealed'] as List<dynamic>?)?.map((e) => e as String).toList() ?? const <String>[],
+      (json['revealed'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+      const <String>[],
   flagged:
-      (json['flagged'] as List<dynamic>?)?.map((e) => e as String).toList() ?? const <String>[],
+      (json['flagged'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+      const <String>[],
   totalQuestions: (json['total_questions'] as num).toInt(),
   savedAt: DateTime.parse(json['saved_at'] as String),
 );
 
-Map<String, dynamic> _$TakingSnapshotToJson(_TakingSnapshot instance) => <String, dynamic>{
-  'test_id': instance.testId,
-  'mode': instance.mode,
-  'parts': instance.parts,
-  'started_at': instance.startedAt.toIso8601String(),
-  'clock_seconds': instance.clockSeconds,
-  'index': instance.index,
-  'answers': instance.answers,
-  'revealed': instance.revealed,
-  'flagged': instance.flagged,
-  'total_questions': instance.totalQuestions,
-  'saved_at': instance.savedAt.toIso8601String(),
-};
+Map<String, dynamic> _$TakingSnapshotToJson(_TakingSnapshot instance) =>
+    <String, dynamic>{
+      'test_id': instance.testId,
+      'mode': instance.mode,
+      'parts': instance.parts,
+      'started_at': instance.startedAt.toIso8601String(),
+      'clock_seconds': instance.clockSeconds,
+      'index': instance.index,
+      'answers': instance.answers,
+      'revealed': instance.revealed,
+      'flagged': instance.flagged,
+      'total_questions': instance.totalQuestions,
+      'saved_at': instance.savedAt.toIso8601String(),
+    };
 
 // **************************************************************************
 // RiverpodGenerator
@@ -55,7 +64,9 @@ final class SharedPreferencesProvider
           SharedPreferences,
           FutureOr<SharedPreferences>
         >
-    with $FutureModifier<SharedPreferences>, $FutureProvider<SharedPreferences> {
+    with
+        $FutureModifier<SharedPreferences>,
+        $FutureProvider<SharedPreferences> {
   SharedPreferencesProvider._()
     : super(
         from: null,
@@ -72,8 +83,9 @@ final class SharedPreferencesProvider
 
   @$internal
   @override
-  $FutureProviderElement<SharedPreferences> $createElement($ProviderPointer pointer) =>
-      $FutureProviderElement(pointer);
+  $FutureProviderElement<SharedPreferences> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
   FutureOr<SharedPreferences> create(Ref ref) {
@@ -87,7 +99,8 @@ String _$sharedPreferencesHash() => r'ad13470fe866595ad0f58a3e26f11048d94ef22e';
 final inProgressStoreProvider = InProgressStoreProvider._();
 
 final class InProgressStoreProvider
-    extends $FunctionalProvider<InProgressStore, InProgressStore, InProgressStore>
+    extends
+        $FunctionalProvider<InProgressStore, InProgressStore, InProgressStore>
     with $Provider<InProgressStore> {
   InProgressStoreProvider._()
     : super(
@@ -133,17 +146,23 @@ final inProgressProvider = InProgressFamily._();
 
 final class InProgressProvider
     extends
-        $FunctionalProvider<AsyncValue<TakingSnapshot?>, TakingSnapshot?, FutureOr<TakingSnapshot?>>
+        $FunctionalProvider<
+          AsyncValue<TakingSnapshot?>,
+          TakingSnapshot?,
+          FutureOr<TakingSnapshot?>
+        >
     with $FutureModifier<TakingSnapshot?>, $FutureProvider<TakingSnapshot?> {
   /// Bài làm dở của 1 đề (null nếu không có).
-  InProgressProvider._({required InProgressFamily super.from, required String super.argument})
-    : super(
-        retry: null,
-        name: r'inProgressProvider',
-        isAutoDispose: true,
-        dependencies: null,
-        $allTransitiveDependencies: null,
-      );
+  InProgressProvider._({
+    required InProgressFamily super.from,
+    required String super.argument,
+  }) : super(
+         retry: null,
+         name: r'inProgressProvider',
+         isAutoDispose: true,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
   @override
   String debugGetCreateSourceHash() => _$inProgressHash();
@@ -157,8 +176,9 @@ final class InProgressProvider
 
   @$internal
   @override
-  $FutureProviderElement<TakingSnapshot?> $createElement($ProviderPointer pointer) =>
-      $FutureProviderElement(pointer);
+  $FutureProviderElement<TakingSnapshot?> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
   FutureOr<TakingSnapshot?> create(Ref ref) {
@@ -194,7 +214,8 @@ final class InProgressFamily extends $Family
 
   /// Bài làm dở của 1 đề (null nếu không có).
 
-  InProgressProvider call(String testId) => InProgressProvider._(argument: testId, from: this);
+  InProgressProvider call(String testId) =>
+      InProgressProvider._(argument: testId, from: this);
 
   @override
   String toString() => r'inProgressProvider';
@@ -234,8 +255,9 @@ final class InProgressAllProvider
 
   @$internal
   @override
-  $FutureProviderElement<Map<String, TakingSnapshot>> $createElement($ProviderPointer pointer) =>
-      $FutureProviderElement(pointer);
+  $FutureProviderElement<Map<String, TakingSnapshot>> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
   FutureOr<Map<String, TakingSnapshot>> create(Ref ref) {

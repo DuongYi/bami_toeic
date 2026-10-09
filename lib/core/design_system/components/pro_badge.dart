@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../tokens/app_dimens.dart';
-import '../tokens/app_tone.dart';
+import '../tokens/app_palette.dart';
 import '../theme/context_ext.dart';
 
-/// Huy hiệu PRO / Thành viên trả phí hoặc tính năng cao cấp.
+/// Huy hiệu PRO / Thành viên trả phí với hiệu ứng ánh kim cao cấp.
 class ProBadge extends StatelessWidget {
   const ProBadge({super.key, this.label = 'PRO', this.mini = false});
 
@@ -13,10 +13,6 @@ class ProBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final tc = AppTone.warning.colorsOf(context);
-    final textStyle = (mini ? context.textStyles.labelSmall : context.textStyles.labelMedium)
-        ?.copyWith(color: tc.onContainer, fontWeight: FontWeight.w800, letterSpacing: 0.5);
-
     return Semantics(
       label: 'Tài khoản $label',
       child: Container(
@@ -25,9 +21,19 @@ class ProBadge extends StatelessWidget {
           vertical: mini ? AppSpacing.s2 : AppSpacing.s4,
         ),
         decoration: BoxDecoration(
-          color: tc.container,
+          gradient: LinearGradient(
+            colors: context.surfaces.gold,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
           borderRadius: AppRadius.brXs,
-          border: Border.all(color: tc.main.withValues(alpha: 0.4), width: 1),
+          boxShadow: [
+            BoxShadow(
+              color: AppPalette.gold600.withValues(alpha: 0.25),
+              blurRadius: 4,
+              offset: const Offset(0, 1),
+            ),
+          ],
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
@@ -35,10 +41,18 @@ class ProBadge extends StatelessWidget {
             Icon(
               Icons.workspace_premium_rounded,
               size: mini ? AppSizes.iconXs : AppSizes.iconSm,
-              color: tc.main,
+              color: Colors.white,
             ),
-            SizedBox(width: AppSpacing.s4),
-            Text(label, style: textStyle),
+            const SizedBox(width: AppSpacing.s4),
+            Text(
+              label,
+              style: (mini ? context.textStyles.labelSmall : context.textStyles.labelMedium)
+                  ?.copyWith(
+                color: Colors.white,
+                fontWeight: FontWeight.w900,
+                letterSpacing: 0.5,
+              ),
+            ),
           ],
         ),
       ),

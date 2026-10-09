@@ -24,6 +24,7 @@ class MistakesPage extends ConsumerWidget {
         onRefresh: () => ref.refresh(mistakesProvider.future),
         child: AsyncView(
           value: mistakes,
+          loading: (_) => const MistakesSkeleton(),
           onRetry: () => ref.invalidate(mistakesProvider),
           data: (list) => list.isEmpty
               ? const ScrollableFill(

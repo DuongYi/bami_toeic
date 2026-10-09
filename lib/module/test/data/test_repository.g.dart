@@ -12,7 +12,8 @@ part of 'test_repository.dart';
 @ProviderFor(testApi)
 final testApiProvider = TestApiProvider._();
 
-final class TestApiProvider extends $FunctionalProvider<TestApi, TestApi, TestApi>
+final class TestApiProvider
+    extends $FunctionalProvider<TestApi, TestApi, TestApi>
     with $Provider<TestApi> {
   TestApiProvider._()
     : super(
@@ -30,7 +31,8 @@ final class TestApiProvider extends $FunctionalProvider<TestApi, TestApi, TestAp
 
   @$internal
   @override
-  $ProviderElement<TestApi> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+  $ProviderElement<TestApi> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
 
   @override
   TestApi create(Ref ref) {
@@ -39,7 +41,10 @@ final class TestApiProvider extends $FunctionalProvider<TestApi, TestApi, TestAp
 
   /// {@macro riverpod.override_with_value}
   Override overrideWithValue(TestApi value) {
-    return $ProviderOverride(origin: this, providerOverride: $SyncValueProvider<TestApi>(value));
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<TestApi>(value),
+    );
   }
 }
 

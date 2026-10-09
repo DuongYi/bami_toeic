@@ -50,6 +50,7 @@ class FlashcardPage extends ConsumerWidget {
       ),
       body: AsyncView(
         value: session,
+        loading: (_) => const FlashcardSkeleton(),
         onRetry: () => ref.invalidate(provider),
         data: (s) {
           final card = s.current;

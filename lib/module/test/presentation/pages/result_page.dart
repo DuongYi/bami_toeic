@@ -30,6 +30,7 @@ class ResultPage extends ConsumerWidget {
       ),
       body: AsyncView(
         value: data,
+        loading: (_) => const ResultSkeleton(),
         onRetry: () => ref.invalidate(attemptResultProvider(attemptId)),
         data: (d) => _ResultBody(data: d),
       ),
@@ -99,11 +100,36 @@ class _ResultBodyState extends State<_ResultBody> {
           child: ListView(
             padding: AppInsets.screen,
             children: [
-              // Hero kết quả
+              // Hero kết quả chứng nhận TOEIC
               AppCard(
                 padding: AppInsets.cardLarge,
                 child: Column(
                   children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.verified_rounded,
+                              size: AppSizes.iconSm,
+                              color: AppTone.success.colorsOf(context).main,
+                            ),
+                            Gaps.h4,
+                            Text(
+                              'BÁO CÁO KẾT QUẢ TOEIC',
+                              style: context.textStyles.labelSmall?.copyWith(
+                                color: context.colors.onSurfaceVariant,
+                                fontWeight: FontWeight.w800,
+                                letterSpacing: 0.5,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const ProBadge(label: 'CERTIFIED', mini: true),
+                      ],
+                    ),
+                    Gaps.v16,
                     ScoreRing(
                       value: ratio,
                       semanticLabel: 'Tỉ lệ đúng',

@@ -25,6 +25,7 @@ class TestDetailPage extends ConsumerWidget {
       appBar: AppBar(),
       body: AsyncView(
         value: detail,
+        loading: (_) => const TestDetailSkeleton(),
         onRetry: () => ref.invalidate(testDetailProvider(testId)),
         data: (_) => const SizedBox.shrink(),
       ),
@@ -60,42 +61,106 @@ class _DetailBodyState extends ConsumerState<_DetailBody> {
       body: ListView(
         padding: const EdgeInsets.fromLTRB(AppSpacing.screen, 0, AppSpacing.screen, AppSpacing.s24),
         children: [
-          // Thông tin đề
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const IconBadge(icon: Icons.menu_book_rounded, size: AppSizes.badgeLg),
-              Gaps.h16,
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+          // Thông tin đề thương mại hoá chuẩn ETS
+          AppHeroCard(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Semantics(
-                      header: true,
-                      child: Text(s.title, style: context.textStyles.headlineSmall),
-                    ),
-                    Gaps.v4,
-                    Wrap(
-                      spacing: AppSpacing.s8,
-                      runSpacing: AppSpacing.s4,
-                      children: [
-                        TestTag(label: s.source ?? 'ETS Format', tone: TestTagTone.info),
-                        TestTag(
-                          label: s.questionCount >= 100 ? 'Đề thi 120p' : 'Mini Test',
-                          tone: s.questionCount >= 100 ? TestTagTone.success : TestTagTone.neutral,
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: AppSpacing.s8,
+                        vertical: AppSpacing.s2,
+                      ),
+                      decoration: BoxDecoration(
+                        color: context.surfaces.onHero.withValues(alpha: 0.2),
+                        borderRadius: AppRadius.brFull,
+                      ),
+                      child: Text(
+                        '★ CHUẨN ĐỀ THI ETS 2024',
+                        style: context.textStyles.labelSmall?.copyWith(
+                          color: context.surfaces.onHero,
+                          fontWeight: FontWeight.w800,
+                          letterSpacing: 0.5,
                         ),
-                        const ProBadge(label: 'PRO', mini: true),
-                      ],
+                      ),
                     ),
-                    Gaps.v4,
-                    Text(
-                      '${s.questionCount} câu hỏi · ${parts.length} Part hoàn chỉnh',
-                      style: muted,
+                    const ProBadge(label: 'PRO VIP', mini: true),
+                  ],
+                ),
+                Gaps.v12,
+                Semantics(
+                  header: true,
+                  child: Text(
+                    s.title,
+                    style: context.textStyles.headlineSmall?.copyWith(
+                      color: context.surfaces.onHero,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ),
+                Gaps.v8,
+                Wrap(
+                  spacing: AppSpacing.s8,
+                  runSpacing: AppSpacing.s4,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: AppSpacing.s8,
+                        vertical: AppSpacing.s2,
+                      ),
+                      decoration: BoxDecoration(
+                        color: context.surfaces.onHero.withValues(alpha: 0.15),
+                        borderRadius: AppRadius.brFull,
+                      ),
+                      child: Text(
+                        '⏱ ${s.questionCount >= 100 ? "120 phút" : "15 phút"}',
+                        style: context.textStyles.labelSmall?.copyWith(
+                          color: context.surfaces.onHero,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: AppSpacing.s8,
+                        vertical: AppSpacing.s2,
+                      ),
+                      decoration: BoxDecoration(
+                        color: context.surfaces.onHero.withValues(alpha: 0.15),
+                        borderRadius: AppRadius.brFull,
+                      ),
+                      child: Text(
+                        '📝 ${s.questionCount} câu hỏi',
+                        style: context.textStyles.labelSmall?.copyWith(
+                          color: context.surfaces.onHero,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: AppSpacing.s8,
+                        vertical: AppSpacing.s2,
+                      ),
+                      decoration: BoxDecoration(
+                        color: context.surfaces.onHero.withValues(alpha: 0.15),
+                        borderRadius: AppRadius.brFull,
+                      ),
+                      child: Text(
+                        '📚 ${parts.length} Part đầy đủ',
+                        style: context.textStyles.labelSmall?.copyWith(
+                          color: context.surfaces.onHero,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
                     ),
                   ],
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           if (s.description != null) ...[Gaps.v12, Text(s.description!, style: muted)],
           Gaps.v12,

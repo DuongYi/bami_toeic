@@ -5,18 +5,27 @@ import '../../network/app_exception.dart';
 import '../theme/context_ext.dart';
 import '../tokens/app_dimens.dart';
 
-/// Render AsyncValue theo 3 trạng thái chuẩn: loading / lỗi (có Thử lại) / dữ liệu.
+import 'app_skeleton.dart';
+
+/// Render AsyncValue theo 3 trạng thái chuẩn: skeleton loading / lỗi (có Thử lại) / dữ liệu.
 class AsyncView<T> extends StatelessWidget {
-  const AsyncView({super.key, required this.value, required this.data, this.onRetry});
+  const AsyncView({
+    super.key,
+    required this.value,
+    required this.data,
+    this.loading,
+    this.onRetry,
+  });
 
   final AsyncValue<T> value;
   final Widget Function(T data) data;
+  final WidgetBuilder? loading;
   final VoidCallback? onRetry;
 
   @override
   Widget build(BuildContext context) => value.when(
     data: data,
-    loading: () => const AppLoadingView(),
+    loading: () => loading?.call(context) ?? const AppSkeletonList(),
     error: (e, _) => AppErrorView(message: AppException.from(e).message, onRetry: onRetry),
   );
 }
@@ -25,7 +34,7 @@ class AppLoadingView extends StatelessWidget {
   const AppLoadingView({super.key});
 
   @override
-  Widget build(BuildContext context) => const Center(child: CircularProgressIndicator());
+  Widget build(BuildContext context) => const AppSkeletonList();
 }
 
 class AppErrorView extends StatelessWidget {

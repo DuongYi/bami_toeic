@@ -6,23 +6,25 @@ part of 'goals_api.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Map<String, dynamic> _$GoalsUpsertToJson(GoalsUpsert instance) => <String, dynamic>{
-  'target_score': instance.targetScore,
-  'exam_date': instance.examDate,
-  'daily_questions': instance.dailyQuestions,
-  'daily_words': instance.dailyWords,
-  'daily_dictations': instance.dailyDictations,
-  'reminder_minutes': instance.reminderMinutes,
-  'updated_at': instance.updatedAt.toIso8601String(),
-};
+Map<String, dynamic> _$GoalsUpsertToJson(GoalsUpsert instance) =>
+    <String, dynamic>{
+      'target_score': instance.targetScore,
+      'exam_date': instance.examDate,
+      'daily_questions': instance.dailyQuestions,
+      'daily_words': instance.dailyWords,
+      'daily_dictations': instance.dailyDictations,
+      'reminder_minutes': instance.reminderMinutes,
+      'updated_at': instance.updatedAt.toIso8601String(),
+    };
 
-Map<String, dynamic> _$StudyDayBumpToJson(StudyDayBump instance) => <String, dynamic>{
-  'p_day': instance.day,
-  'p_questions': instance.questions,
-  'p_mistakes': instance.mistakes,
-  'p_words': instance.words,
-  'p_dictations': instance.dictations,
-};
+Map<String, dynamic> _$StudyDayBumpToJson(StudyDayBump instance) =>
+    <String, dynamic>{
+      'p_day': instance.day,
+      'p_questions': instance.questions,
+      'p_mistakes': instance.mistakes,
+      'p_words': instance.words,
+      'p_dictations': instance.dictations,
+    };
 
 StudyDayRow _$StudyDayRowFromJson(Map<String, dynamic> json) => StudyDayRow(
   day: json['day'] as String,

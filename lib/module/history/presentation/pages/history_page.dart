@@ -34,6 +34,7 @@ class HistoryPage extends ConsumerWidget {
           onRefresh: () => _refresh(ref),
           child: AsyncView(
             value: attempts,
+            loading: (_) => const HistorySkeleton(),
             onRetry: () => _refresh(ref),
             data: (list) => list.isEmpty
                 ? const ScrollableFill(
@@ -49,9 +50,11 @@ class HistoryPage extends ConsumerWidget {
                     ),
                     children: [
                       AppPageHeader(
+                        overline: 'THEO DÕI NĂNG LỰC',
                         title: 'Tiến độ học tập',
-                        trailing: Row(
-                          mainAxisSize: MainAxisSize.min,
+                        subtitle: 'Phân tích điểm số dự đoán và lịch sử làm bài',
+                        topBar: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
                           children: const [
                             StreakBadge(count: 3),
                             Gaps.h8,

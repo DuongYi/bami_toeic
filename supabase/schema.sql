@@ -330,3 +330,119 @@ alter table public.in_progress enable row level security;
 drop policy if exists "own in progress" on public.in_progress;
 create policy "own in progress" on public.in_progress for all to authenticated
   using (user_id = auth.uid()) with check (user_id = auth.uid());
+
+-- ---------- 005: Thương Khung Bảng (bảng xếp hạng) ----------
+-- • profiles: tên hiển thị + tuỳ chọn ẩn khỏi bảng. Chỉ chủ sở hữu đọc/ghi trực tiếp.
+-- • leaderboard(): hàm security definer chỉ trả số liệu TỔNG HỢP (điểm full test cao nhất,
+--   số câu 7 ngày) + tên hiển thị, không lộ bài làm chi tiết hay email của người khác.
+-- Chạy lại nhiều lần vẫn an toàn.
+
+create table if not exists public.profiles (
+  user_id             uuid primary key default auth.uid() references auth.users(id) on delete cascade,
+  display_name        text check (char_length(trim(display_name)) between 2 and 24),
+  show_on_leaderboard boolean not null default true,
+  updated_at          timestamptz not null default now()
+);
+alter table public.profiles enable row level security;
+drop policy if exists "own profile" on public.profiles;
+create policy "own profile" on public.profiles for all to authenticated
+  using (user_id = (select auth.uid())) with check (user_id = (select auth.uid()));
+
+-- Quy đổi điểm 1 phần (giống ToeicScore trong lib/helper/score.dart):
+-- có bảng quy đổi → điểm giữa khoảng, làm tròn 5; không có → ước tính tuyến tính.
+create or replace function public.toeic_section_score(p_table jsonb, p_section text, p_correct int)
+returns int language sql immutable set search_path = '' as $$
+  select coalesce(
+    (select (round(((r->>2)::numeric + (r->>3)::numeric) / 2 / 5) * 5)::int
+       from jsonb_array_elements(
+              case when jsonb_typeof(p_table -> p_section) = 'array' then p_table -> p_section
+                   else '[]'::jsonb end
+            ) with ordinality as e(r, i)
+      where jsonb_typeof(r) = 'array' and jsonb_array_length(r) = 4
+        and p_correct between (r->>0)::numeric and (r->>1)::numeric
+      order by i
+      limit 1),
+    case when p_correct <= 0 then 5
+         else least(495, greatest(5, (round(
+           (p_correct * 4.9 + case when p_section = 'listening' then 10 else -5 end) / 5
+         ) * 5)::int))
+    end);
+$$;
+
+-- p_board: 'score' = điểm full test cao nhất; 'week' = số câu đã làm 7 ngày qua.
+-- rank = null: chưa đủ dữ liệu để xếp hạng (luôn trả dòng của chính mình để hiện "Bạn").
+drop function if exists public.leaderboard(text, int);
+create or replace function public.leaderboard(p_board text default 'score', p_limit int default 100)
+returns table (
+  rank           int,
+  user_id        uuid,
+  display_name   text,
+  is_me          boolean,
+  best_score     int,
+  best_listening int,
+  best_reading   int,
+  full_tests     int,
+  week_questions int,
+  week_correct   int
+)
+language sql stable security definer set search_path = '' as $$
+  with me as (select auth.uid() as id),
+  players as (
+    select a.user_id from public.attempts a
+    union
+    select id from me where id is not null
+  ),
+  visible as (
+    select pl.user_id,
+           coalesce(nullif(trim(p.display_name), ''),
+                    'Học viên ' || upper(left(pl.user_id::text, 4))) as display_name
+    from players pl
+    left join public.profiles p on p.user_id = pl.user_id
+    where coalesce(p.show_on_leaderboard, true) or pl.user_id = (select id from me)
+  ),
+  full_scores as (
+    select a.user_id,
+           public.toeic_section_score(t.score_table, 'listening', a.listening_correct) as l,
+           public.toeic_section_score(t.score_table, 'reading', a.reading_correct)     as r
+    from public.attempts a
+    join public.tests t on t.id = a.test_id
+    where a.source <> 'mistakes' and cardinality(a.parts) = 7 and a.total_questions = 200
+  ),
+  best as (
+    select distinct on (user_id) user_id, l, r, l + r as total,
+           count(*) over (partition by user_id)::int as n
+    from full_scores
+    order by user_id, l + r desc
+  ),
+  week as (
+    select user_id, sum(total_questions)::int as q,
+           sum(listening_correct + reading_correct)::int as c
+    from public.attempts
+    where finished_at >= now() - interval '7 days'
+    group by user_id
+  ),
+  board as (
+    select v.user_id, v.display_name, v.user_id = (select id from me) as is_me,
+           b.total, b.l, b.r, coalesce(b.n, 0) as n,
+           coalesce(w.q, 0) as q, coalesce(w.c, 0) as c,
+           case when p_board = 'week' then coalesce(w.q, 0) else coalesce(b.total, 0) end as metric,
+           case when p_board = 'week' then coalesce(w.c, 0) else coalesce(b.n, 0) end as tiebreak
+    from visible v
+    left join best b on b.user_id = v.user_id
+    left join week w on w.user_id = v.user_id
+  ),
+  ranked as (
+    select *, case when metric > 0
+                   then rank() over (order by metric > 0 desc, metric desc, tiebreak desc)::int
+              end as rk
+    from board
+  )
+  select rk, user_id, display_name, is_me, total, l, r, n, q, c
+  from ranked
+  where (select id from me) is not null
+    and ((rk is not null and rk <= least(greatest(p_limit, 1), 200)) or is_me)
+  order by rk nulls last, display_name;
+$$;
+
+revoke all on function public.leaderboard(text, int) from public, anon;
+grant execute on function public.leaderboard(text, int) to authenticated;

@@ -180,6 +180,7 @@ class _TestTakingPageState extends ConsumerState<TestTakingPage> {
         appBar: AppBar(),
         body: AsyncView(
           value: status,
+          loading: (_) => const TestTakingSkeleton(),
           onRetry: () => ref.invalidate(_provider),
           data: (_) => const SizedBox.shrink(),
         ),

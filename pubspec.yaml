@@ -27,6 +27,7 @@ dependencies:
   timezone: ^0.11.1
   flutter_timezone: ^5.1.1
   path_provider: ^2.1.6
+  flutter_launcher_icons: ^0.14.4
 
 dev_dependencies:
   flutter_test:
@@ -40,10 +41,28 @@ dev_dependencies:
   freezed: ^4.0.2
   riverpod_generator: ^4.0.9
 
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo/bami_logo.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/logo/bami_logo.png"
+    background_color: "#000000"
+    theme_color: "#000000"
+  windows:
+    generate: true
+    image_path: "assets/logo/bami_logo.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "assets/logo/bami_logo.png"
 
 flutter:
   uses-material-design: true
-  # Be Vietnam Pro (SIL OFL 1.1, xem assets/fonts/OFL.txt)
+  assets:
+    - assets/logo/
   fonts:
     - family: BeVietnamPro
       fonts:

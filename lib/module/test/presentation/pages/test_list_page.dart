@@ -16,10 +16,17 @@ import '../controllers/test_providers.dart';
 
 /// Màn chủ: lời chào kèm chuỗi học tập, thẻ dự đoán điểm TOEIC, nhiệm vụ ngày,
 /// bento lối tắt luyện tập và danh sách đề thi chuẩn hóa ETS.
-class TestListPage extends ConsumerWidget {
+class TestListPage extends ConsumerStatefulWidget {
   const TestListPage({super.key});
 
-  Future<void> _refresh(WidgetRef ref) {
+  @override
+  ConsumerState<TestListPage> createState() => _TestListPageState();
+}
+
+class _TestListPageState extends ConsumerState<TestListPage> {
+  String _filter = 'all';
+
+  Future<void> _refresh() {
     ref
       ..invalidate(attemptsProvider)
       ..invalidate(mistakesProvider)
@@ -29,7 +36,7 @@ class TestListPage extends ConsumerWidget {
   }
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     final tests = ref.watch(testListProvider);
     final attempts = ref.watch(attemptsProvider).value ?? const <Attempt>[];
     final inProgress = ref.watch(inProgressAllProvider).value ?? const {};
@@ -38,55 +45,89 @@ class TestListPage extends ConsumerWidget {
       body: SafeArea(
         bottom: false,
         child: RefreshIndicator(
-          onRefresh: () => _refresh(ref),
+          onRefresh: _refresh,
           child: AsyncView(
             value: tests,
+            loading: (_) => const TestListSkeleton(),
             onRetry: () => ref.invalidate(testListProvider),
-            data: (list) => ListView(
-              // Chừa chỗ cho thanh tab nổi (nội dung cuộn chạy dưới thanh kính)
-              padding: AppInsets.screen.copyWith(
-                bottom: AppSpacing.screen + AppGlassTabBar.inset(context),
-              ),
-              children: [
-                const _Greeting(),
-                _OverviewHero(attempts: attempts),
-                Gaps.v16,
-                const _DailyMission(),
-                Gaps.v16,
-                const _QuickActions(),
-                Gaps.v16,
-                _CommercialUpgradeBanner(),
-                Gaps.v24,
-                SectionHeader(
-                  title: 'Đề thi ETS & Luyện tập',
-                  subtitle: 'Được biên soạn chuẩn theo format đề thi thật',
-                  trailing: Text(
-                    '${list.length} đề',
-                    style: context.textStyles.labelLarge?.copyWith(
-                      color: context.colors.onSurfaceVariant,
+            data: (list) {
+              final filtered = switch (_filter) {
+                'ets' => list.where((t) => t.questionCount >= 100).toList(),
+                'mini' => list.where((t) => t.questionCount < 100).toList(),
+                _ => list,
+              };
+
+              return ListView(
+                // Chừa chỗ cho thanh tab nổi (nội dung cuộn chạy dưới thanh kính)
+                padding: AppInsets.screen.copyWith(
+                  bottom: AppSpacing.screen + AppGlassTabBar.inset(context),
+                ),
+                children: [
+                  const _Greeting(),
+                  _OverviewHero(attempts: attempts),
+                  Gaps.v16,
+                  const _DailyMission(),
+                  Gaps.v16,
+                  const _QuickActions(),
+                  Gaps.v16,
+                  _CommercialUpgradeBanner(),
+                  Gaps.v24,
+                  SectionHeader(
+                    title: 'Đề thi ETS & Luyện tập',
+                    subtitle: 'Được biên soạn chuẩn theo format đề thi thật',
+                    trailing: Text(
+                      '${list.length} đề',
+                      style: context.textStyles.labelLarge?.copyWith(
+                        color: context.colors.onSurfaceVariant,
+                      ),
                     ),
                   ),
-                ),
-                if (list.isEmpty)
-                  const AppCard(
-                    child: AppEmptyView(
-                      icon: Icons.inbox_outlined,
-                      message: 'Chưa có đề nào.\nDùng script tool/import_test.dart để thêm đề.',
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        ChoiceChip(
+                          label: Text('Tất cả (${list.length})'),
+                          selected: _filter == 'all',
+                          onSelected: (_) => setState(() => _filter = 'all'),
+                        ),
+                        Gaps.h8,
+                        ChoiceChip(
+                          label: const Text('🔥 ETS 2024 Hot'),
+                          selected: _filter == 'ets',
+                          onSelected: (_) => setState(() => _filter = 'ets'),
+                        ),
+                        Gaps.h8,
+                        ChoiceChip(
+                          label: const Text('⚡️ Mini Test 15p'),
+                          selected: _filter == 'mini',
+                          onSelected: (_) => setState(() => _filter = 'mini'),
+                        ),
+                      ],
                     ),
-                  )
-                else
-                  for (final t in list) ...[
-                    _TestCard(
-                      test: t,
-                      lastAttempt: attempts
-                          .where((a) => a.testId == t.id && !a.isMistakeReview)
-                          .firstOrNull,
-                      inProgress: inProgress[t.id],
-                    ),
-                    Gaps.v12,
-                  ],
-              ],
-            ),
+                  ),
+                  Gaps.v16,
+                  if (filtered.isEmpty)
+                    const AppCard(
+                      child: AppEmptyView(
+                        icon: Icons.inbox_outlined,
+                        message: 'Không tìm thấy đề thi phù hợp với bộ lọc.',
+                      ),
+                    )
+                  else
+                    for (final t in filtered) ...[
+                      _TestCard(
+                        test: t,
+                        lastAttempt: attempts
+                            .where((a) => a.testId == t.id && !a.isMistakeReview)
+                            .firstOrNull,
+                        inProgress: inProgress[t.id],
+                      ),
+                      Gaps.v12,
+                    ],
+                ],
+              );
+            },
           ),
         ),
       ),
@@ -177,38 +218,106 @@ class _Greeting extends ConsumerWidget {
     );
   }
 
+  String _displayName(String? email) {
+    if (email == null || email.isEmpty) return 'Học viên';
+    final name = email.split('@').first;
+    if (name.isEmpty) return 'Học viên';
+    return name[0].toUpperCase() + name.substring(1);
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final email = ref.watch(authControllerProvider).value?.user.email;
     final progress = ref.watch(studyProgressProvider).value;
     final initial = (email == null || email.isEmpty) ? 'B' : email[0].toUpperCase();
+    final streak = progress?.streak ?? 0;
+    final isStreakActive = progress?.activeToday ?? false;
+
     return AppPageHeader(
-      overline: 'Xin chào',
-      title: 'Hôm nay luyện gì nhỉ?',
-      trailing: Row(
-        mainAxisSize: MainAxisSize.min,
+      topBar: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          StreakBadge(
-            count: progress?.streak ?? 0,
-            active: progress?.activeToday ?? false,
-            onTap: () => showGoalSheet(context),
-          ),
-          Gaps.h8,
-          Tooltip(
-            message: 'Tài khoản',
-            child: InkResponse(
-              onTap: () => _openAccount(context, ref, email, progress?.streak ?? 0),
-              radius: AppSizes.touchTarget / 2,
-              child: CircleAvatar(
-                radius: AppSizes.touchTarget / 2,
-                backgroundColor: context.colors.primaryContainer,
-                foregroundColor: context.colors.onPrimaryContainer,
-                child: Text(initial, style: context.textStyles.titleMedium),
+          Semantics(
+            button: true,
+            label: 'Tài khoản học viên: ${_displayName(email)}',
+            child: InkWell(
+              onTap: () => _openAccount(context, ref, email, streak),
+              borderRadius: AppRadius.brFull,
+              child: Container(
+                padding: const EdgeInsets.fromLTRB(
+                  AppSpacing.s4,
+                  AppSpacing.s4,
+                  AppSpacing.s12,
+                  AppSpacing.s4,
+                ),
+                decoration: BoxDecoration(
+                  color: context.colors.surfaceContainerHighest.withValues(alpha: 0.6),
+                  borderRadius: AppRadius.brFull,
+                  border: Border.all(
+                    color: context.colors.outlineVariant.withValues(alpha: 0.5),
+                    width: 1,
+                  ),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    CircleAvatar(
+                      radius: AppSizes.avatarSm / 2,
+                      backgroundColor: context.colors.primary,
+                      foregroundColor: context.colors.onPrimary,
+                      child: Text(
+                        initial,
+                        style: context.textStyles.labelMedium?.copyWith(
+                          color: context.colors.onPrimary,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                    Gaps.h8,
+                    ConstrainedBox(
+                      constraints: const BoxConstraints(maxWidth: 100),
+                      child: Text(
+                        _displayName(email),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: context.textStyles.labelLarge?.copyWith(
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                    Gaps.h4,
+                    Icon(
+                      Icons.keyboard_arrow_down_rounded,
+                      size: AppSizes.iconSm,
+                      color: context.colors.onSurfaceVariant,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              CoinBadge(
+                amount: 150,
+                onTap: () => _openAccount(context, ref, email, streak),
+              ),
+              Gaps.h8,
+              StreakBadge(
+                count: streak,
+                active: isStreakActive,
+                onTap: () => showGoalSheet(context),
+              ),
+            ],
+          ),
         ],
       ),
+      overline: 'LỘ TRÌNH ETS HÔM NAY',
+      title: 'Hôm nay luyện gì nhỉ?',
+      subtitle: streak > 0
+          ? 'Đang duy trì chuỗi $streak ngày liên tục. Tiếp tục phát huy nhé! 🔥'
+          : 'Chọn 1 đề thi ngắn để khởi động chuỗi học tập bứt phá điểm số.',
     );
   }
 }
@@ -283,6 +392,24 @@ class _OverviewHero extends ConsumerWidget {
                             ),
                           ),
                         ),
+                        if (prediction != null)
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: AppSpacing.s8,
+                              vertical: AppSpacing.s2,
+                            ),
+                            decoration: BoxDecoration(
+                              color: fg.withValues(alpha: 0.18),
+                              borderRadius: AppRadius.brFull,
+                            ),
+                            child: Text(
+                              '🎧 ${prediction.listening} · 📖 ${prediction.reading}',
+                              style: context.textStyles.labelSmall?.copyWith(
+                                color: fg,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ),
                       ],
                     ),
                     Gaps.v4,
@@ -545,32 +672,90 @@ class _TestCard extends StatelessWidget {
 
     return AppCard(
       onTap: () => context.go(Routes.testDetail(test.id)),
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          IconBadge(
-            icon: isFullTest ? Icons.menu_book_rounded : Icons.quiz_outlined,
-            size: AppSizes.badgeLg,
-            tone: isFullTest ? AppTone.info : AppTone.neutral,
-          ),
-          Gaps.h16,
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(test.title, style: context.textStyles.titleMedium),
-                Gaps.v4,
-                Text(
-                  [
-                    if (test.source != null) test.source!,
-                    '${test.questionCount} câu',
-                    isFullTest ? '120 phút' : '15 phút',
-                  ].join(' · '),
-                  style: context.textStyles.bodySmall?.copyWith(
-                    color: context.colors.onSurfaceVariant,
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                width: AppSizes.badgeLg,
+                height: AppSizes.badgeLg,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: isFullTest ? context.surfaces.hero : context.surfaces.cyan,
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  borderRadius: AppRadius.brMd,
+                ),
+                child: Center(
+                  child: Icon(
+                    isFullTest ? Icons.menu_book_rounded : Icons.bolt_rounded,
+                    color: context.surfaces.onHero,
+                    size: AppSizes.iconMd,
                   ),
                 ),
-                Gaps.v8,
-                Wrap(
+              ),
+              Gaps.h12,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Text(
+                            test.title,
+                            style: context.textStyles.titleMedium?.copyWith(
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ),
+                        if (isFullTest)
+                          const ProBadge(label: 'PRO', mini: true),
+                      ],
+                    ),
+                    Gaps.v4,
+                    Wrap(
+                      spacing: AppSpacing.s12,
+                      runSpacing: AppSpacing.s4,
+                      children: [
+                        Text(
+                          '⏱ ${isFullTest ? "120 phút" : "15 phút"}',
+                          style: context.textStyles.bodySmall?.copyWith(
+                            color: context.colors.onSurfaceVariant,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          '📝 ${test.questionCount} câu',
+                          style: context.textStyles.bodySmall?.copyWith(
+                            color: context.colors.onSurfaceVariant,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          '⭐️ 4.9',
+                          style: context.textStyles.bodySmall?.copyWith(
+                            color: AppTone.warning.colorsOf(context).main,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          Gaps.v12,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Wrap(
                   spacing: AppSpacing.s8,
                   runSpacing: AppSpacing.s4,
                   children: [
@@ -592,10 +777,25 @@ class _TestCard extends StatelessWidget {
                       ),
                   ],
                 ),
-              ],
-            ),
+              ),
+              Gaps.h8,
+              FilledButton.tonal(
+                onPressed: () => context.go(Routes.testDetail(test.id)),
+                style: FilledButton.styleFrom(
+                  visualDensity: VisualDensity.compact,
+                  padding: const EdgeInsets.symmetric(horizontal: AppSpacing.s12),
+                ),
+                child: const Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text('Làm bài'),
+                    Gaps.h4,
+                    Icon(Icons.arrow_forward_rounded, size: AppSizes.iconXs),
+                  ],
+                ),
+              ),
+            ],
           ),
-          Icon(Icons.chevron_right_rounded, color: context.colors.onSurfaceVariant),
         ],
       ),
     );

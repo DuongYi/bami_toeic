@@ -44,11 +44,11 @@ abstract final class AppTheme {
           background: background,
           raised: raised,
           hairline: hairline,
-          // Light: gradient primary rực. Dark: tông container đậm để không chói.
+          // Light: gradient 3-stop rực rỡ (Electric Blue -> Indigo -> Violet). Dark: tông container đậm dịu mắt.
           hero: light
-              ? [cs.primary, Color.lerp(cs.primary, cs.tertiary, 0.55)!]
+              ? const [AppPalette.brandBlue, AppPalette.brandIndigo, AppPalette.brandViolet]
               : [cs.primaryContainer, Color.lerp(cs.primaryContainer, cs.tertiaryContainer, 0.55)!],
-          onHero: light ? cs.onPrimary : cs.onPrimaryContainer,
+          onHero: light ? Colors.white : cs.onPrimaryContainer,
         ),
       ],
       scaffoldBackgroundColor: background,
