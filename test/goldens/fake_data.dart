@@ -1,4 +1,6 @@
 // Dữ liệu & repository giả để chụp màn hình (golden) không cần mạng.
+import 'package:bami_toeic/module/goals/data/goals_repository.dart';
+import 'package:bami_toeic/module/goals/data/study_store.dart';
 import 'package:bami_toeic/core/media/offline_store.dart';
 import 'package:bami_toeic/helper/srs.dart';
 import 'package:bami_toeic/module/auth/data/models/session.dart';
@@ -212,6 +214,19 @@ class FakeTestRepository implements TestRepository {
   Future<void> removeOffline(String id) async {}
 
   @override
+  Future<List<InProgressRow>> fetchInProgress({String? testId}) async => const [];
+
+  @override
+  Future<void> saveInProgress(
+    String testId,
+    Map<String, dynamic> snapshot,
+    DateTime savedAt,
+  ) async {}
+
+  @override
+  Future<void> deleteInProgress(String testId) async {}
+
+  @override
   Future<List<QuestionGroup>> fetchMistakeGroups(List<LatestAnswer> mistakes) async => _groups;
 
   @override
@@ -305,4 +320,20 @@ class FakeVocabRepository implements VocabRepository {
     required String vocabId,
     required SrsState state,
   }) async {}
+}
+
+class FakeGoalsRepository implements GoalsRepository {
+  @override
+  Future<GoalSettings?> fetchGoals() async => const GoalSettings(targetScore: 800);
+
+  @override
+  Future<void> saveGoals(GoalSettings g) async {}
+
+  @override
+  Future<Map<String, DayLog>> fetchDays(DateTime since) async => {
+    dayKey(DateTime.now()): const DayLog(questions: 12, words: 15),
+  };
+
+  @override
+  Future<void> bump(String day, DayLog delta) async {}
 }

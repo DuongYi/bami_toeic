@@ -19,7 +19,9 @@ final class TestListProvider
           List<TestSummary>,
           FutureOr<List<TestSummary>>
         >
-    with $FutureModifier<List<TestSummary>>, $FutureProvider<List<TestSummary>> {
+    with
+        $FutureModifier<List<TestSummary>>,
+        $FutureProvider<List<TestSummary>> {
   TestListProvider._()
     : super(
         from: null,
@@ -36,8 +38,9 @@ final class TestListProvider
 
   @$internal
   @override
-  $FutureProviderElement<List<TestSummary>> $createElement($ProviderPointer pointer) =>
-      $FutureProviderElement(pointer);
+  $FutureProviderElement<List<TestSummary>> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
   FutureOr<List<TestSummary>> create(Ref ref) {
@@ -51,16 +54,23 @@ String _$testListHash() => r'0fb64188cd5ce7abaa7fca05ec672a7e7b52e5e2';
 final testDetailProvider = TestDetailFamily._();
 
 final class TestDetailProvider
-    extends $FunctionalProvider<AsyncValue<TestDetail>, TestDetail, FutureOr<TestDetail>>
+    extends
+        $FunctionalProvider<
+          AsyncValue<TestDetail>,
+          TestDetail,
+          FutureOr<TestDetail>
+        >
     with $FutureModifier<TestDetail>, $FutureProvider<TestDetail> {
-  TestDetailProvider._({required TestDetailFamily super.from, required String super.argument})
-    : super(
-        retry: null,
-        name: r'testDetailProvider',
-        isAutoDispose: true,
-        dependencies: null,
-        $allTransitiveDependencies: null,
-      );
+  TestDetailProvider._({
+    required TestDetailFamily super.from,
+    required String super.argument,
+  }) : super(
+         retry: null,
+         name: r'testDetailProvider',
+         isAutoDispose: true,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
   @override
   String debugGetCreateSourceHash() => _$testDetailHash();
@@ -107,7 +117,8 @@ final class TestDetailFamily extends $Family
         isAutoDispose: true,
       );
 
-  TestDetailProvider call(String testId) => TestDetailProvider._(argument: testId, from: this);
+  TestDetailProvider call(String testId) =>
+      TestDetailProvider._(argument: testId, from: this);
 
   @override
   String toString() => r'testDetailProvider';
@@ -117,16 +128,23 @@ final class TestDetailFamily extends $Family
 final attemptResultProvider = AttemptResultFamily._();
 
 final class AttemptResultProvider
-    extends $FunctionalProvider<AsyncValue<AttemptResult>, AttemptResult, FutureOr<AttemptResult>>
+    extends
+        $FunctionalProvider<
+          AsyncValue<AttemptResult>,
+          AttemptResult,
+          FutureOr<AttemptResult>
+        >
     with $FutureModifier<AttemptResult>, $FutureProvider<AttemptResult> {
-  AttemptResultProvider._({required AttemptResultFamily super.from, required String super.argument})
-    : super(
-        retry: null,
-        name: r'attemptResultProvider',
-        isAutoDispose: true,
-        dependencies: null,
-        $allTransitiveDependencies: null,
-      );
+  AttemptResultProvider._({
+    required AttemptResultFamily super.from,
+    required String super.argument,
+  }) : super(
+         retry: null,
+         name: r'attemptResultProvider',
+         isAutoDispose: true,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
   @override
   String debugGetCreateSourceHash() => _$attemptResultHash();
@@ -140,8 +158,9 @@ final class AttemptResultProvider
 
   @$internal
   @override
-  $FutureProviderElement<AttemptResult> $createElement($ProviderPointer pointer) =>
-      $FutureProviderElement(pointer);
+  $FutureProviderElement<AttemptResult> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
   FutureOr<AttemptResult> create(Ref ref) {
@@ -185,7 +204,11 @@ final partStatsProvider = PartStatsProvider._();
 
 final class PartStatsProvider
     extends
-        $FunctionalProvider<AsyncValue<List<PartStat>>, List<PartStat>, FutureOr<List<PartStat>>>
+        $FunctionalProvider<
+          AsyncValue<List<PartStat>>,
+          List<PartStat>,
+          FutureOr<List<PartStat>>
+        >
     with $FutureModifier<List<PartStat>>, $FutureProvider<List<PartStat>> {
   PartStatsProvider._()
     : super(
@@ -203,8 +226,9 @@ final class PartStatsProvider
 
   @$internal
   @override
-  $FutureProviderElement<List<PartStat>> $createElement($ProviderPointer pointer) =>
-      $FutureProviderElement(pointer);
+  $FutureProviderElement<List<PartStat>> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
   FutureOr<List<PartStat>> create(Ref ref) {
@@ -220,7 +244,8 @@ String _$partStatsHash() => r'8149b12759ce9a6dd910f8d0745e6dfd48774986';
 final attemptsProvider = AttemptsProvider._();
 
 /// Lịch sử làm bài.
-final class AttemptsProvider extends $AsyncNotifierProvider<Attempts, List<Attempt>> {
+final class AttemptsProvider
+    extends $AsyncNotifierProvider<Attempts, List<Attempt>> {
   /// Lịch sử làm bài.
   AttemptsProvider._()
     : super(
@@ -277,7 +302,9 @@ final class MistakesProvider
           List<LatestAnswer>,
           FutureOr<List<LatestAnswer>>
         >
-    with $FutureModifier<List<LatestAnswer>>, $FutureProvider<List<LatestAnswer>> {
+    with
+        $FutureModifier<List<LatestAnswer>>,
+        $FutureProvider<List<LatestAnswer>> {
   /// Sổ câu sai: câu sai/bỏ trống ở lần trả lời gần nhất.
   MistakesProvider._()
     : super(
@@ -295,8 +322,9 @@ final class MistakesProvider
 
   @$internal
   @override
-  $FutureProviderElement<List<LatestAnswer>> $createElement($ProviderPointer pointer) =>
-      $FutureProviderElement(pointer);
+  $FutureProviderElement<List<LatestAnswer>> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
   FutureOr<List<LatestAnswer>> create(Ref ref) {
@@ -310,7 +338,12 @@ String _$mistakesHash() => r'63dd4e000d91753c4fa354a5f55e409db2ab925d';
 final tagStatsProvider = TagStatsProvider._();
 
 final class TagStatsProvider
-    extends $FunctionalProvider<AsyncValue<List<TagStat>>, List<TagStat>, FutureOr<List<TagStat>>>
+    extends
+        $FunctionalProvider<
+          AsyncValue<List<TagStat>>,
+          List<TagStat>,
+          FutureOr<List<TagStat>>
+        >
     with $FutureModifier<List<TagStat>>, $FutureProvider<List<TagStat>> {
   TagStatsProvider._()
     : super(
@@ -328,8 +361,9 @@ final class TagStatsProvider
 
   @$internal
   @override
-  $FutureProviderElement<List<TagStat>> $createElement($ProviderPointer pointer) =>
-      $FutureProviderElement(pointer);
+  $FutureProviderElement<List<TagStat>> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
   FutureOr<List<TagStat>> create(Ref ref) {

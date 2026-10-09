@@ -6,22 +6,22 @@ part of 'media_api.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Map<String, dynamic> _$SignRequestToJson(SignRequest instance) => <String, dynamic>{
-  'paths': instance.paths,
-  'expiresIn': instance.expiresIn,
-};
+Map<String, dynamic> _$SignRequestToJson(SignRequest instance) =>
+    <String, dynamic>{'paths': instance.paths, 'expiresIn': instance.expiresIn};
 
-_SignedObject _$SignedObjectFromJson(Map<String, dynamic> json) => _SignedObject(
-  path: json['path'] as String?,
-  error: json['error'] as String?,
-  signedUrl: json['signedURL'] as String?,
-);
+_SignedObject _$SignedObjectFromJson(Map<String, dynamic> json) =>
+    _SignedObject(
+      path: json['path'] as String?,
+      error: json['error'] as String?,
+      signedUrl: json['signedURL'] as String?,
+    );
 
-Map<String, dynamic> _$SignedObjectToJson(_SignedObject instance) => <String, dynamic>{
-  'path': instance.path,
-  'error': instance.error,
-  'signedURL': instance.signedUrl,
-};
+Map<String, dynamic> _$SignedObjectToJson(_SignedObject instance) =>
+    <String, dynamic>{
+      'path': instance.path,
+      'error': instance.error,
+      'signedURL': instance.signedUrl,
+    };
 
 // dart format off
 

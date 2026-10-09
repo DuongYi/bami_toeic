@@ -1,6 +1,7 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../core/media/media_repository.dart';
+import '../../../core/network/app_exception.dart';
 import '../../../core/network/dio_client.dart';
 import '../../../core/network/postgrest.dart';
 import '../../../helper/srs.dart';
@@ -23,7 +24,16 @@ class VocabRepository {
   final MediaRepository _media;
 
   Future<List<VocabItem>> fetchAll() async {
-    final items = await _api.getVocab();
+    final all = await _api.getVocab();
+    // Từ riêng trùng (word, topic) với bộ chung → hiện bản riêng, ẩn bản chung.
+    final own = {
+      for (final v in all)
+        if (!v.isShared) (v.word.toLowerCase(), v.topic),
+    };
+    final items = [
+      for (final v in all)
+        if (!v.isShared || !own.contains((v.word.toLowerCase(), v.topic))) v,
+    ];
     // Audio phát âm nằm trong bucket media riêng tư → ký URL tạm.
     final signed = await _media.signAll([for (final v in items) ?v.audioUrl]);
     return [
@@ -31,10 +41,20 @@ class VocabRepository {
     ];
   }
 
-  Future<void> save(VocabInput input, {String? id}) =>
-      id == null ? _api.createVocab(input) : _api.updateVocab(input, id: Pg.eq(id));
+  /// Thêm từ (thành từ riêng của user). Sửa từ bộ chung mà không có quyền
+  /// → tạo bản riêng thay thế (bộ chung giữ nguyên cho người khác).
+  Future<void> save(VocabInput input, {String? id}) async {
+    if (id == null) return _api.createVocab(input);
+    final updated = await _api.updateVocab(input, id: Pg.eq(id));
+    if (updated.isEmpty) await _api.createVocab(input);
+  }
 
-  Future<void> delete(String id) => _api.deleteVocab(id: Pg.eq(id));
+  Future<void> delete(String id) async {
+    final deleted = await _api.deleteVocab(id: Pg.eq(id));
+    if (deleted.isEmpty) {
+      throw const ForbiddenException('Từ này thuộc bộ từ chung, chỉ admin mới xoá được.');
+    }
+  }
 
   Future<void> saveReview({
     required String userId,

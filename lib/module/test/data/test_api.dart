@@ -81,4 +81,21 @@ abstract class TestApi {
 
   @GET('/rest/v1/tag_stats')
   Future<List<TagStat>> getTagStats();
+
+  /// Bài làm dở của user (RLS); lọc 1 đề bằng `test_id=eq.<id>`.
+  @GET('/rest/v1/in_progress')
+  Future<List<InProgressRow>> getInProgress({
+    @Query('test_id') String? testId,
+    @Query('select') String select = 'test_id,snapshot,saved_at',
+  });
+
+  @POST('/rest/v1/in_progress')
+  @Headers({'Prefer': Pg.upsert})
+  Future<void> upsertInProgress(
+    @Body() InProgressUpsert body, {
+    @Query('on_conflict') String onConflict = 'user_id,test_id',
+  });
+
+  @DELETE('/rest/v1/in_progress')
+  Future<void> deleteInProgress({@Query('test_id') required String testId});
 }

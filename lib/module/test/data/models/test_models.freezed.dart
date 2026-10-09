@@ -2339,6 +2339,288 @@ as int,
 
 }
 
+
+/// @nodoc
+mixin _$InProgressRow {
+
+ String get testId; Map<String, dynamic> get snapshot; DateTime get savedAt;
+/// Create a copy of InProgressRow
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$InProgressRowCopyWith<InProgressRow> get copyWith => _$InProgressRowCopyWithImpl<InProgressRow>(this as InProgressRow, _$identity);
+
+  /// Serializes this InProgressRow to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  final _this = this as InProgressRow;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is InProgressRow&&(identical(other.testId, _this.testId) || other.testId == _this.testId)&&const DeepCollectionEquality().equals(other.snapshot, _this.snapshot)&&(identical(other.savedAt, _this.savedAt) || other.savedAt == _this.savedAt));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+  final _this = this as InProgressRow;
+  return Object.hash(runtimeType,_this.testId,const DeepCollectionEquality().hash(_this.snapshot),_this.savedAt);
+}
+
+@override
+String toString() {
+  final _this = this as InProgressRow;
+  return 'InProgressRow(testId: ${_this.testId}, snapshot: ${_this.snapshot}, savedAt: ${_this.savedAt})';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $InProgressRowCopyWith<$Res>  {
+  factory $InProgressRowCopyWith(InProgressRow value, $Res Function(InProgressRow) _then) = _$InProgressRowCopyWithImpl;
+@useResult
+$Res call({
+ String testId, Map<String, dynamic> snapshot, DateTime savedAt
+});
+
+
+
+
+}
+/// @nodoc
+class _$InProgressRowCopyWithImpl<$Res>
+    implements $InProgressRowCopyWith<$Res> {
+  _$InProgressRowCopyWithImpl(this._self, this._then);
+
+  final InProgressRow _self;
+  final $Res Function(InProgressRow) _then;
+
+/// Create a copy of InProgressRow
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? testId = null,Object? snapshot = null,Object? savedAt = null,}) {
+  return _then(InProgressRow(
+testId: null == testId ? _self.testId : testId // ignore: cast_nullable_to_non_nullable
+as String,snapshot: null == snapshot ? _self.snapshot : snapshot // ignore: cast_nullable_to_non_nullable
+as Map<String, dynamic>,savedAt: null == savedAt ? _self.savedAt : savedAt // ignore: cast_nullable_to_non_nullable
+as DateTime,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [InProgressRow].
+extension InProgressRowPatterns on InProgressRow {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _InProgressRow value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _InProgressRow() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _InProgressRow value)  $default,){
+final _that = this;
+switch (_that) {
+case _InProgressRow():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _InProgressRow value)?  $default,){
+final _that = this;
+switch (_that) {
+case _InProgressRow() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String testId,  Map<String, dynamic> snapshot,  DateTime savedAt)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _InProgressRow() when $default != null:
+return $default(_that.testId,_that.snapshot,_that.savedAt);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String testId,  Map<String, dynamic> snapshot,  DateTime savedAt)  $default,) {final _that = this;
+switch (_that) {
+case _InProgressRow():
+return $default(_that.testId,_that.snapshot,_that.savedAt);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String testId,  Map<String, dynamic> snapshot,  DateTime savedAt)?  $default,) {final _that = this;
+switch (_that) {
+case _InProgressRow() when $default != null:
+return $default(_that.testId,_that.snapshot,_that.savedAt);case _:
+  return null;
+
+}
+}
+
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class _InProgressRow implements InProgressRow {
+  const _InProgressRow({required this.testId, required  Map<String, dynamic> snapshot, required this.savedAt}): _snapshot = snapshot;
+  factory _InProgressRow.fromJson(Map<String, dynamic> json) => _$InProgressRowFromJson(json);
+
+@override final  String testId;
+ final  Map<String, dynamic> _snapshot;
+@override Map<String, dynamic> get snapshot {
+  if (_snapshot is EqualUnmodifiableMapView) return _snapshot;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableMapView(_snapshot);
+}
+
+@override final  DateTime savedAt;
+
+/// Create a copy of InProgressRow
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$InProgressRowCopyWith<_InProgressRow> get copyWith => __$InProgressRowCopyWithImpl<_InProgressRow>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$InProgressRowToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _InProgressRow&&(identical(other.testId, testId) || other.testId == testId)&&const DeepCollectionEquality().equals(other.snapshot, _snapshot)&&(identical(other.savedAt, savedAt) || other.savedAt == savedAt));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,testId,const DeepCollectionEquality().hash(_snapshot),savedAt);
+}
+
+@override
+String toString() {
+    return 'InProgressRow(testId: $testId, snapshot: $snapshot, savedAt: $savedAt)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$InProgressRowCopyWith<$Res> implements $InProgressRowCopyWith<$Res> {
+  factory _$InProgressRowCopyWith(_InProgressRow value, $Res Function(_InProgressRow) _then) = __$InProgressRowCopyWithImpl;
+@override @useResult
+$Res call({
+ String testId, Map<String, dynamic> snapshot, DateTime savedAt
+});
+
+
+
+
+}
+/// @nodoc
+class __$InProgressRowCopyWithImpl<$Res>
+    implements _$InProgressRowCopyWith<$Res> {
+  __$InProgressRowCopyWithImpl(this._self, this._then);
+
+  final _InProgressRow _self;
+  final $Res Function(_InProgressRow) _then;
+
+/// Create a copy of InProgressRow
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? testId = null,Object? snapshot = null,Object? savedAt = null,}) {
+  return _then(_InProgressRow(
+testId: null == testId ? _self.testId : testId // ignore: cast_nullable_to_non_nullable
+as String,snapshot: null == snapshot ? _self._snapshot : snapshot // ignore: cast_nullable_to_non_nullable
+as Map<String, dynamic>,savedAt: null == savedAt ? _self.savedAt : savedAt // ignore: cast_nullable_to_non_nullable
+as DateTime,
+  ));
+}
+
+
+}
+
 /// @nodoc
 mixin _$TestDetail {
 

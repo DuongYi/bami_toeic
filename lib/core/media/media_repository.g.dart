@@ -12,7 +12,8 @@ part of 'media_repository.dart';
 @ProviderFor(mediaApi)
 final mediaApiProvider = MediaApiProvider._();
 
-final class MediaApiProvider extends $FunctionalProvider<MediaApi, MediaApi, MediaApi>
+final class MediaApiProvider
+    extends $FunctionalProvider<MediaApi, MediaApi, MediaApi>
     with $Provider<MediaApi> {
   MediaApiProvider._()
     : super(
@@ -30,7 +31,8 @@ final class MediaApiProvider extends $FunctionalProvider<MediaApi, MediaApi, Med
 
   @$internal
   @override
-  $ProviderElement<MediaApi> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+  $ProviderElement<MediaApi> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
 
   @override
   MediaApi create(Ref ref) {
@@ -39,7 +41,10 @@ final class MediaApiProvider extends $FunctionalProvider<MediaApi, MediaApi, Med
 
   /// {@macro riverpod.override_with_value}
   Override overrideWithValue(MediaApi value) {
-    return $ProviderOverride(origin: this, providerOverride: $SyncValueProvider<MediaApi>(value));
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<MediaApi>(value),
+    );
   }
 }
 
@@ -49,7 +54,8 @@ String _$mediaApiHash() => r'00361a7c6c2674f1b4e1a2e5022cd25ca87c51cf';
 final mediaRepositoryProvider = MediaRepositoryProvider._();
 
 final class MediaRepositoryProvider
-    extends $FunctionalProvider<MediaRepository, MediaRepository, MediaRepository>
+    extends
+        $FunctionalProvider<MediaRepository, MediaRepository, MediaRepository>
     with $Provider<MediaRepository> {
   MediaRepositoryProvider._()
     : super(

@@ -15,7 +15,8 @@ final dioProvider = DioProvider._();
 
 /// Dio dùng chung cho toàn app (Supabase REST, Auth).
 
-final class DioProvider extends $FunctionalProvider<Dio, Dio, Dio> with $Provider<Dio> {
+final class DioProvider extends $FunctionalProvider<Dio, Dio, Dio>
+    with $Provider<Dio> {
   /// Dio dùng chung cho toàn app (Supabase REST, Auth).
   DioProvider._()
     : super(
@@ -33,7 +34,8 @@ final class DioProvider extends $FunctionalProvider<Dio, Dio, Dio> with $Provide
 
   @$internal
   @override
-  $ProviderElement<Dio> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+  $ProviderElement<Dio> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
 
   @override
   Dio create(Ref ref) {
@@ -42,7 +44,10 @@ final class DioProvider extends $FunctionalProvider<Dio, Dio, Dio> with $Provide
 
   /// {@macro riverpod.override_with_value}
   Override overrideWithValue(Dio value) {
-    return $ProviderOverride(origin: this, providerOverride: $SyncValueProvider<Dio>(value));
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<Dio>(value),
+    );
   }
 }
 

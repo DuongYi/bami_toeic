@@ -22,7 +22,9 @@ final class DictationClipsProvider
           List<QuestionGroup>,
           FutureOr<List<QuestionGroup>>
         >
-    with $FutureModifier<List<QuestionGroup>>, $FutureProvider<List<QuestionGroup>> {
+    with
+        $FutureModifier<List<QuestionGroup>>,
+        $FutureProvider<List<QuestionGroup>> {
   /// Các đoạn audio có transcript của 1 Part (1–4) trong 1 đề, dùng để chép chính tả.
   DictationClipsProvider._({
     required DictationClipsFamily super.from,
@@ -47,8 +49,9 @@ final class DictationClipsProvider
 
   @$internal
   @override
-  $FutureProviderElement<List<QuestionGroup>> $createElement($ProviderPointer pointer) =>
-      $FutureProviderElement(pointer);
+  $FutureProviderElement<List<QuestionGroup>> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
   FutureOr<List<QuestionGroup>> create(Ref ref) {
@@ -72,7 +75,11 @@ String _$dictationClipsHash() => r'8b97ed820b462d46167ae2eae8fcdce42fdce9a1';
 /// Các đoạn audio có transcript của 1 Part (1–4) trong 1 đề, dùng để chép chính tả.
 
 final class DictationClipsFamily extends $Family
-    with $FunctionalFamilyOverride<FutureOr<List<QuestionGroup>>, (String, int)> {
+    with
+        $FunctionalFamilyOverride<
+          FutureOr<List<QuestionGroup>>,
+          (String, int)
+        > {
   DictationClipsFamily._()
     : super(
         retry: null,

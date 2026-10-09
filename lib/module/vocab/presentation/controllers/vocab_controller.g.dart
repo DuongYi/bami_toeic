@@ -15,7 +15,8 @@ final sessionRandomProvider = SessionRandomProvider._();
 
 /// Nguồn ngẫu nhiên để xáo thẻ (override bằng seed cố định trong test).
 
-final class SessionRandomProvider extends $FunctionalProvider<Random, Random, Random>
+final class SessionRandomProvider
+    extends $FunctionalProvider<Random, Random, Random>
     with $Provider<Random> {
   /// Nguồn ngẫu nhiên để xáo thẻ (override bằng seed cố định trong test).
   SessionRandomProvider._()
@@ -34,7 +35,8 @@ final class SessionRandomProvider extends $FunctionalProvider<Random, Random, Ra
 
   @$internal
   @override
-  $ProviderElement<Random> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+  $ProviderElement<Random> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
 
   @override
   Random create(Ref ref) {
@@ -43,7 +45,10 @@ final class SessionRandomProvider extends $FunctionalProvider<Random, Random, Ra
 
   /// {@macro riverpod.override_with_value}
   Override overrideWithValue(Random value) {
-    return $ProviderOverride(origin: this, providerOverride: $SyncValueProvider<Random>(value));
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<Random>(value),
+    );
   }
 }
 
@@ -55,7 +60,8 @@ String _$sessionRandomHash() => r'eede9748a6ed1a185db870d83fcff9b3381d023b';
 final vocabListProvider = VocabListProvider._();
 
 /// Toàn bộ từ vựng + thao tác thêm/sửa/xoá.
-final class VocabListProvider extends $AsyncNotifierProvider<VocabList, List<VocabItem>> {
+final class VocabListProvider
+    extends $AsyncNotifierProvider<VocabList, List<VocabItem>> {
   /// Toàn bộ từ vựng + thao tác thêm/sửa/xoá.
   VocabListProvider._()
     : super(
@@ -101,7 +107,8 @@ abstract class _$VocabList extends $AsyncNotifier<List<VocabItem>> {
 @ProviderFor(VocabFilter)
 final vocabFilterProvider = VocabFilterProvider._();
 
-final class VocabFilterProvider extends $NotifierProvider<VocabFilter, VocabFilterState> {
+final class VocabFilterProvider
+    extends $NotifierProvider<VocabFilter, VocabFilterState> {
   VocabFilterProvider._()
     : super(
         from: null,
@@ -181,8 +188,9 @@ final class VocabOverviewProvider
 
   @$internal
   @override
-  $ProviderElement<AsyncValue<VocabOverview>> $createElement($ProviderPointer pointer) =>
-      $ProviderElement(pointer);
+  $ProviderElement<AsyncValue<VocabOverview>> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
 
   @override
   AsyncValue<VocabOverview> create(Ref ref) {

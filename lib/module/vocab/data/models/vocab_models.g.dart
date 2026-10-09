@@ -50,6 +50,7 @@ _VocabItem _$VocabItemFromJson(Map<String, dynamic> json) => _VocabItem(
   exampleMeaning: json['example_meaning'] as String?,
   topic: json['topic'] as String,
   audioUrl: json['audio_url'] as String?,
+  userId: json['user_id'] as String?,
   reviews:
       (json['vocab_reviews'] as List<dynamic>?)
           ?.map((e) => VocabReview.fromJson(e as Map<String, dynamic>))
@@ -67,4 +68,5 @@ Map<String, dynamic> _$VocabItemToJson(_VocabItem instance) => <String, dynamic>
   'example_meaning': instance.exampleMeaning,
   'topic': instance.topic,
   'audio_url': instance.audioUrl,
+  'user_id': instance.userId,
 };

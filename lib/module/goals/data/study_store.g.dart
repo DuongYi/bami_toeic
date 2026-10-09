@@ -118,7 +118,7 @@ final class StudyLogProvider
   }
 }
 
-String _$studyLogHash() => r'8efb88ca70c5d0955a970b93725790260b0d66a9';
+String _$studyLogHash() => r'8ee134cfdcd2069f1c599524568c13cf3f894f5c';
 
 @ProviderFor(goalSettings)
 final goalSettingsProvider = GoalSettingsProvider._();
@@ -151,4 +151,4 @@ final class GoalSettingsProvider
   }
 }
 
-String _$goalSettingsHash() => r'5224cf7d58d68de53689e832c4a310cab312a94d';
+String _$goalSettingsHash() => r'ebc07fe712c602131b0a34dc308616027f718ac2';

@@ -14,7 +14,8 @@ part of 'auth_controller.dart';
 final authControllerProvider = AuthControllerProvider._();
 
 /// Nguồn sự thật duy nhất về trạng thái đăng nhập. `null` = chưa đăng nhập.
-final class AuthControllerProvider extends $AsyncNotifierProvider<AuthController, Session?> {
+final class AuthControllerProvider
+    extends $AsyncNotifierProvider<AuthController, Session?> {
   /// Nguồn sự thật duy nhất về trạng thái đăng nhập. `null` = chưa đăng nhập.
   AuthControllerProvider._()
     : super(
@@ -64,7 +65,8 @@ final currentUserIdProvider = CurrentUserIdProvider._();
 
 /// id user hiện tại (dùng khi ghi dữ liệu có cột user_id).
 
-final class CurrentUserIdProvider extends $FunctionalProvider<String?, String?, String?>
+final class CurrentUserIdProvider
+    extends $FunctionalProvider<String?, String?, String?>
     with $Provider<String?> {
   /// id user hiện tại (dùng khi ghi dữ liệu có cột user_id).
   CurrentUserIdProvider._()
@@ -83,7 +85,8 @@ final class CurrentUserIdProvider extends $FunctionalProvider<String?, String?, 
 
   @$internal
   @override
-  $ProviderElement<String?> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+  $ProviderElement<String?> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
 
   @override
   String? create(Ref ref) {
@@ -92,7 +95,10 @@ final class CurrentUserIdProvider extends $FunctionalProvider<String?, String?, 
 
   /// {@macro riverpod.override_with_value}
   Override overrideWithValue(String? value) {
-    return $ProviderOverride(origin: this, providerOverride: $SyncValueProvider<String?>(value));
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<String?>(value),
+    );
   }
 }
 

@@ -32,6 +32,9 @@ abstract class VocabItem with _$VocabItem {
     required String topic,
     String? audioUrl,
 
+    /// null = từ trong bộ chung (vd. ETS 2026); có giá trị = từ riêng của user này
+    String? userId,
+
     /// Embed `vocab_reviews(*)`; RLS chỉ trả về lịch ôn của user hiện tại (0 hoặc 1 dòng).
     @JsonKey(name: 'vocab_reviews', includeToJson: false)
     @Default(<VocabReview>[])
@@ -41,6 +44,8 @@ abstract class VocabItem with _$VocabItem {
   factory VocabItem.fromJson(Map<String, dynamic> json) => _$VocabItemFromJson(json);
 
   VocabReview? get review => reviews.firstOrNull;
+
+  bool get isShared => userId == null;
 
   /// null = từ mới, chưa học
   SrsState? get srs => switch (review) {

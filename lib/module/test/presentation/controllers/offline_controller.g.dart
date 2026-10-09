@@ -14,16 +14,19 @@ part of 'offline_controller.dart';
 final offlineTestProvider = OfflineTestFamily._();
 
 /// keepAlive: rời trang chi tiết đề vẫn giữ tiến độ tải.
-final class OfflineTestProvider extends $AsyncNotifierProvider<OfflineTest, OfflineState> {
+final class OfflineTestProvider
+    extends $AsyncNotifierProvider<OfflineTest, OfflineState> {
   /// keepAlive: rời trang chi tiết đề vẫn giữ tiến độ tải.
-  OfflineTestProvider._({required OfflineTestFamily super.from, required String super.argument})
-    : super(
-        retry: null,
-        name: r'offlineTestProvider',
-        isAutoDispose: false,
-        dependencies: null,
-        $allTransitiveDependencies: null,
-      );
+  OfflineTestProvider._({
+    required OfflineTestFamily super.from,
+    required String super.argument,
+  }) : super(
+         retry: null,
+         name: r'offlineTestProvider',
+         isAutoDispose: false,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
   @override
   String debugGetCreateSourceHash() => _$offlineTestHash();
@@ -74,7 +77,8 @@ final class OfflineTestFamily extends $Family
 
   /// keepAlive: rời trang chi tiết đề vẫn giữ tiến độ tải.
 
-  OfflineTestProvider call(String testId) => OfflineTestProvider._(argument: testId, from: this);
+  OfflineTestProvider call(String testId) =>
+      OfflineTestProvider._(argument: testId, from: this);
 
   @override
   String toString() => r'offlineTestProvider';

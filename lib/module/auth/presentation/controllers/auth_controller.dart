@@ -1,5 +1,6 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../../goals/data/study_store.dart';
 import '../../data/auth_repository.dart';
 import '../../data/models/session.dart';
 
@@ -23,6 +24,7 @@ class AuthController extends _$AuthController {
   }
 
   Future<void> signOut() async {
+    await ref.read(studyStoreProvider).onSignOut();
     await ref.read(authRepositoryProvider).signOut();
     state = const AsyncData(null);
   }

@@ -159,6 +159,18 @@ abstract class TagStat with _$TagStat {
   double get accuracy => total == 0 ? 0 : correct / total;
 }
 
+/// Bài làm dở trên server (bảng `in_progress`); snapshot là JSON của TakingSnapshot.
+@freezed
+abstract class InProgressRow with _$InProgressRow {
+  const factory InProgressRow({
+    required String testId,
+    required Map<String, dynamic> snapshot,
+    required DateTime savedAt,
+  }) = _InProgressRow;
+
+  factory InProgressRow.fromJson(Map<String, dynamic> json) => _$InProgressRowFromJson(json);
+}
+
 // ---------- Gửi lên API ----------
 
 @JsonSerializable(createFactory: false)
@@ -237,4 +249,15 @@ abstract class AttemptResult with _$AttemptResult {
 
   List<Question> get questions => [for (final g in groups) ...g.questions];
   bool isCorrect(Question q) => answers[q.id] == q.answer;
+}
+
+@JsonSerializable(createFactory: false)
+class InProgressUpsert {
+  const InProgressUpsert({required this.testId, required this.snapshot, required this.savedAt});
+
+  final String testId;
+  final Map<String, dynamic> snapshot;
+  final DateTime savedAt;
+
+  Map<String, dynamic> toJson() => _$InProgressUpsertToJson(this);
 }

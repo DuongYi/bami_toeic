@@ -20,12 +20,14 @@ abstract class VocabApi {
   @Headers({'Prefer': Pg.returnMinimal})
   Future<void> createVocab(@Body() VocabInput body);
 
+  /// Trả về các dòng đã sửa: rỗng nghĩa là RLS chặn (từ dùng chung, không phải admin).
   @PATCH('/rest/v1/vocab')
-  @Headers({'Prefer': Pg.returnMinimal})
-  Future<void> updateVocab(@Body() VocabInput body, {@Query('id') required String id});
+  @Headers({'Prefer': Pg.returnRepresentation})
+  Future<List<VocabItem>> updateVocab(@Body() VocabInput body, {@Query('id') required String id});
 
   @DELETE('/rest/v1/vocab')
-  Future<void> deleteVocab({@Query('id') required String id});
+  @Headers({'Prefer': Pg.returnRepresentation})
+  Future<List<VocabItem>> deleteVocab({@Query('id') required String id});
 
   @POST('/rest/v1/vocab_reviews')
   @Headers({'Prefer': Pg.upsert})

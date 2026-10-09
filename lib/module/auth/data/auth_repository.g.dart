@@ -12,7 +12,8 @@ part of 'auth_repository.dart';
 @ProviderFor(authApi)
 final authApiProvider = AuthApiProvider._();
 
-final class AuthApiProvider extends $FunctionalProvider<AuthApi, AuthApi, AuthApi>
+final class AuthApiProvider
+    extends $FunctionalProvider<AuthApi, AuthApi, AuthApi>
     with $Provider<AuthApi> {
   AuthApiProvider._()
     : super(
@@ -30,7 +31,8 @@ final class AuthApiProvider extends $FunctionalProvider<AuthApi, AuthApi, AuthAp
 
   @$internal
   @override
-  $ProviderElement<AuthApi> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+  $ProviderElement<AuthApi> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
 
   @override
   AuthApi create(Ref ref) {
@@ -39,7 +41,10 @@ final class AuthApiProvider extends $FunctionalProvider<AuthApi, AuthApi, AuthAp
 
   /// {@macro riverpod.override_with_value}
   Override overrideWithValue(AuthApi value) {
-    return $ProviderOverride(origin: this, providerOverride: $SyncValueProvider<AuthApi>(value));
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<AuthApi>(value),
+    );
   }
 }
 

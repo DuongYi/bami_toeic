@@ -42,8 +42,8 @@ class _TestTakingPageState extends ConsumerState<TestTakingPage> {
     super.initState();
     // App bị đưa xuống nền / tắt → lưu bài làm dở ngay
     _lifecycle = AppLifecycleListener(
-      onInactive: () => ref.read(_provider.notifier).saveProgress(),
-      onPause: () => ref.read(_provider.notifier).saveProgress(),
+      onInactive: () => ref.read(_provider.notifier).saveProgress(force: true),
+      onPause: () => ref.read(_provider.notifier).saveProgress(force: true),
     );
   }
 
@@ -115,7 +115,7 @@ class _TestTakingPageState extends ConsumerState<TestTakingPage> {
       confirmLabel: 'Tạm dừng',
       cancelLabel: 'Làm tiếp',
     );
-    if (ok) await ref.read(_provider.notifier).saveProgress();
+    if (ok) await ref.read(_provider.notifier).saveProgress(force: true);
     return ok;
   }
 

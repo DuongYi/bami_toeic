@@ -13,7 +13,8 @@ part of 'reminder_service.dart';
 final reminderServiceProvider = ReminderServiceProvider._();
 
 final class ReminderServiceProvider
-    extends $FunctionalProvider<ReminderService, ReminderService, ReminderService>
+    extends
+        $FunctionalProvider<ReminderService, ReminderService, ReminderService>
     with $Provider<ReminderService> {
   ReminderServiceProvider._()
     : super(

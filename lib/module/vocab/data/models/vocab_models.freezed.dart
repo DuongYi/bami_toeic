@@ -295,7 +295,8 @@ as DateTime,
 /// @nodoc
 mixin _$VocabItem {
 
- String get id; String get word; String? get ipa; String? get pos; String get meaning; String? get example; String? get exampleMeaning; String get topic; String? get audioUrl;/// Embed `vocab_reviews(*)`; RLS chỉ trả về lịch ôn của user hiện tại (0 hoặc 1 dòng).
+ String get id; String get word; String? get ipa; String? get pos; String get meaning; String? get example; String? get exampleMeaning; String get topic; String? get audioUrl;/// null = từ trong bộ chung (vd. ETS 2026); có giá trị = từ riêng của user này
+ String? get userId;/// Embed `vocab_reviews(*)`; RLS chỉ trả về lịch ôn của user hiện tại (0 hoặc 1 dòng).
 @JsonKey(name: 'vocab_reviews', includeToJson: false) List<VocabReview> get reviews;
 /// Create a copy of VocabItem
 /// with the given fields replaced by the non-null parameter values.
@@ -310,20 +311,20 @@ $VocabItemCopyWith<VocabItem> get copyWith => _$VocabItemCopyWithImpl<VocabItem>
 @override
 bool operator ==(Object other) {
   final _this = this as VocabItem;
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is VocabItem&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.word, _this.word) || other.word == _this.word)&&(identical(other.ipa, _this.ipa) || other.ipa == _this.ipa)&&(identical(other.pos, _this.pos) || other.pos == _this.pos)&&(identical(other.meaning, _this.meaning) || other.meaning == _this.meaning)&&(identical(other.example, _this.example) || other.example == _this.example)&&(identical(other.exampleMeaning, _this.exampleMeaning) || other.exampleMeaning == _this.exampleMeaning)&&(identical(other.topic, _this.topic) || other.topic == _this.topic)&&(identical(other.audioUrl, _this.audioUrl) || other.audioUrl == _this.audioUrl)&&const DeepCollectionEquality().equals(other.reviews, _this.reviews));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is VocabItem&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.word, _this.word) || other.word == _this.word)&&(identical(other.ipa, _this.ipa) || other.ipa == _this.ipa)&&(identical(other.pos, _this.pos) || other.pos == _this.pos)&&(identical(other.meaning, _this.meaning) || other.meaning == _this.meaning)&&(identical(other.example, _this.example) || other.example == _this.example)&&(identical(other.exampleMeaning, _this.exampleMeaning) || other.exampleMeaning == _this.exampleMeaning)&&(identical(other.topic, _this.topic) || other.topic == _this.topic)&&(identical(other.audioUrl, _this.audioUrl) || other.audioUrl == _this.audioUrl)&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&const DeepCollectionEquality().equals(other.reviews, _this.reviews));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
   final _this = this as VocabItem;
-  return Object.hash(runtimeType,_this.id,_this.word,_this.ipa,_this.pos,_this.meaning,_this.example,_this.exampleMeaning,_this.topic,_this.audioUrl,const DeepCollectionEquality().hash(_this.reviews));
+  return Object.hash(runtimeType,_this.id,_this.word,_this.ipa,_this.pos,_this.meaning,_this.example,_this.exampleMeaning,_this.topic,_this.audioUrl,_this.userId,const DeepCollectionEquality().hash(_this.reviews));
 }
 
 @override
 String toString() {
   final _this = this as VocabItem;
-  return 'VocabItem(id: ${_this.id}, word: ${_this.word}, ipa: ${_this.ipa}, pos: ${_this.pos}, meaning: ${_this.meaning}, example: ${_this.example}, exampleMeaning: ${_this.exampleMeaning}, topic: ${_this.topic}, audioUrl: ${_this.audioUrl}, reviews: ${_this.reviews})';
+  return 'VocabItem(id: ${_this.id}, word: ${_this.word}, ipa: ${_this.ipa}, pos: ${_this.pos}, meaning: ${_this.meaning}, example: ${_this.example}, exampleMeaning: ${_this.exampleMeaning}, topic: ${_this.topic}, audioUrl: ${_this.audioUrl}, userId: ${_this.userId}, reviews: ${_this.reviews})';
 }
 
 
@@ -334,7 +335,7 @@ abstract mixin class $VocabItemCopyWith<$Res>  {
   factory $VocabItemCopyWith(VocabItem value, $Res Function(VocabItem) _then) = _$VocabItemCopyWithImpl;
 @useResult
 $Res call({
- String id, String word, String? ipa, String? pos, String meaning, String? example, String? exampleMeaning, String topic, String? audioUrl,@JsonKey(name: 'vocab_reviews', includeToJson: false) List<VocabReview> reviews
+ String id, String word, String? ipa, String? pos, String meaning, String? example, String? exampleMeaning, String topic, String? audioUrl, String? userId,@JsonKey(name: 'vocab_reviews', includeToJson: false) List<VocabReview> reviews
 });
 
 
@@ -351,7 +352,7 @@ class _$VocabItemCopyWithImpl<$Res>
 
 /// Create a copy of VocabItem
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? word = null,Object? ipa = freezed,Object? pos = freezed,Object? meaning = null,Object? example = freezed,Object? exampleMeaning = freezed,Object? topic = null,Object? audioUrl = freezed,Object? reviews = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? word = null,Object? ipa = freezed,Object? pos = freezed,Object? meaning = null,Object? example = freezed,Object? exampleMeaning = freezed,Object? topic = null,Object? audioUrl = freezed,Object? userId = freezed,Object? reviews = null,}) {
   return _then(VocabItem(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,word: null == word ? _self.word : word // ignore: cast_nullable_to_non_nullable
@@ -362,6 +363,7 @@ as String,example: freezed == example ? _self.example : example // ignore: cast_
 as String?,exampleMeaning: freezed == exampleMeaning ? _self.exampleMeaning : exampleMeaning // ignore: cast_nullable_to_non_nullable
 as String?,topic: null == topic ? _self.topic : topic // ignore: cast_nullable_to_non_nullable
 as String,audioUrl: freezed == audioUrl ? _self.audioUrl : audioUrl // ignore: cast_nullable_to_non_nullable
+as String?,userId: freezed == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
 as String?,reviews: null == reviews ? _self.reviews : reviews // ignore: cast_nullable_to_non_nullable
 as List<VocabReview>,
   ));
@@ -448,10 +450,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String word,  String? ipa,  String? pos,  String meaning,  String? example,  String? exampleMeaning,  String topic,  String? audioUrl, @JsonKey(name: 'vocab_reviews', includeToJson: false)  List<VocabReview> reviews)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String word,  String? ipa,  String? pos,  String meaning,  String? example,  String? exampleMeaning,  String topic,  String? audioUrl,  String? userId, @JsonKey(name: 'vocab_reviews', includeToJson: false)  List<VocabReview> reviews)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _VocabItem() when $default != null:
-return $default(_that.id,_that.word,_that.ipa,_that.pos,_that.meaning,_that.example,_that.exampleMeaning,_that.topic,_that.audioUrl,_that.reviews);case _:
+return $default(_that.id,_that.word,_that.ipa,_that.pos,_that.meaning,_that.example,_that.exampleMeaning,_that.topic,_that.audioUrl,_that.userId,_that.reviews);case _:
   return orElse();
 
 }
@@ -469,10 +471,10 @@ return $default(_that.id,_that.word,_that.ipa,_that.pos,_that.meaning,_that.exam
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String word,  String? ipa,  String? pos,  String meaning,  String? example,  String? exampleMeaning,  String topic,  String? audioUrl, @JsonKey(name: 'vocab_reviews', includeToJson: false)  List<VocabReview> reviews)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String word,  String? ipa,  String? pos,  String meaning,  String? example,  String? exampleMeaning,  String topic,  String? audioUrl,  String? userId, @JsonKey(name: 'vocab_reviews', includeToJson: false)  List<VocabReview> reviews)  $default,) {final _that = this;
 switch (_that) {
 case _VocabItem():
-return $default(_that.id,_that.word,_that.ipa,_that.pos,_that.meaning,_that.example,_that.exampleMeaning,_that.topic,_that.audioUrl,_that.reviews);case _:
+return $default(_that.id,_that.word,_that.ipa,_that.pos,_that.meaning,_that.example,_that.exampleMeaning,_that.topic,_that.audioUrl,_that.userId,_that.reviews);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -489,10 +491,10 @@ return $default(_that.id,_that.word,_that.ipa,_that.pos,_that.meaning,_that.exam
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String word,  String? ipa,  String? pos,  String meaning,  String? example,  String? exampleMeaning,  String topic,  String? audioUrl, @JsonKey(name: 'vocab_reviews', includeToJson: false)  List<VocabReview> reviews)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String word,  String? ipa,  String? pos,  String meaning,  String? example,  String? exampleMeaning,  String topic,  String? audioUrl,  String? userId, @JsonKey(name: 'vocab_reviews', includeToJson: false)  List<VocabReview> reviews)?  $default,) {final _that = this;
 switch (_that) {
 case _VocabItem() when $default != null:
-return $default(_that.id,_that.word,_that.ipa,_that.pos,_that.meaning,_that.example,_that.exampleMeaning,_that.topic,_that.audioUrl,_that.reviews);case _:
+return $default(_that.id,_that.word,_that.ipa,_that.pos,_that.meaning,_that.example,_that.exampleMeaning,_that.topic,_that.audioUrl,_that.userId,_that.reviews);case _:
   return null;
 
 }
@@ -504,7 +506,7 @@ return $default(_that.id,_that.word,_that.ipa,_that.pos,_that.meaning,_that.exam
 @JsonSerializable()
 
 class _VocabItem extends VocabItem {
-  const _VocabItem({required this.id, required this.word, this.ipa, this.pos, required this.meaning, this.example, this.exampleMeaning, required this.topic, this.audioUrl, @JsonKey(name: 'vocab_reviews', includeToJson: false)  List<VocabReview> reviews = const <VocabReview>[]}): _reviews = reviews,super._();
+  const _VocabItem({required this.id, required this.word, this.ipa, this.pos, required this.meaning, this.example, this.exampleMeaning, required this.topic, this.audioUrl, this.userId, @JsonKey(name: 'vocab_reviews', includeToJson: false)  List<VocabReview> reviews = const <VocabReview>[]}): _reviews = reviews,super._();
   factory _VocabItem.fromJson(Map<String, dynamic> json) => _$VocabItemFromJson(json);
 
 @override final  String id;
@@ -516,6 +518,8 @@ class _VocabItem extends VocabItem {
 @override final  String? exampleMeaning;
 @override final  String topic;
 @override final  String? audioUrl;
+/// null = từ trong bộ chung (vd. ETS 2026); có giá trị = từ riêng của user này
+@override final  String? userId;
 /// Embed `vocab_reviews(*)`; RLS chỉ trả về lịch ôn của user hiện tại (0 hoặc 1 dòng).
  final  List<VocabReview> _reviews;
 /// Embed `vocab_reviews(*)`; RLS chỉ trả về lịch ôn của user hiện tại (0 hoặc 1 dòng).
@@ -539,18 +543,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _VocabItem&&(identical(other.id, id) || other.id == id)&&(identical(other.word, word) || other.word == word)&&(identical(other.ipa, ipa) || other.ipa == ipa)&&(identical(other.pos, pos) || other.pos == pos)&&(identical(other.meaning, meaning) || other.meaning == meaning)&&(identical(other.example, example) || other.example == example)&&(identical(other.exampleMeaning, exampleMeaning) || other.exampleMeaning == exampleMeaning)&&(identical(other.topic, topic) || other.topic == topic)&&(identical(other.audioUrl, audioUrl) || other.audioUrl == audioUrl)&&const DeepCollectionEquality().equals(other.reviews, _reviews));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _VocabItem&&(identical(other.id, id) || other.id == id)&&(identical(other.word, word) || other.word == word)&&(identical(other.ipa, ipa) || other.ipa == ipa)&&(identical(other.pos, pos) || other.pos == pos)&&(identical(other.meaning, meaning) || other.meaning == meaning)&&(identical(other.example, example) || other.example == example)&&(identical(other.exampleMeaning, exampleMeaning) || other.exampleMeaning == exampleMeaning)&&(identical(other.topic, topic) || other.topic == topic)&&(identical(other.audioUrl, audioUrl) || other.audioUrl == audioUrl)&&(identical(other.userId, userId) || other.userId == userId)&&const DeepCollectionEquality().equals(other.reviews, _reviews));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
-    return Object.hash(runtimeType,id,word,ipa,pos,meaning,example,exampleMeaning,topic,audioUrl,const DeepCollectionEquality().hash(_reviews));
+    return Object.hash(runtimeType,id,word,ipa,pos,meaning,example,exampleMeaning,topic,audioUrl,userId,const DeepCollectionEquality().hash(_reviews));
 }
 
 @override
 String toString() {
-    return 'VocabItem(id: $id, word: $word, ipa: $ipa, pos: $pos, meaning: $meaning, example: $example, exampleMeaning: $exampleMeaning, topic: $topic, audioUrl: $audioUrl, reviews: $reviews)';
+    return 'VocabItem(id: $id, word: $word, ipa: $ipa, pos: $pos, meaning: $meaning, example: $example, exampleMeaning: $exampleMeaning, topic: $topic, audioUrl: $audioUrl, userId: $userId, reviews: $reviews)';
 }
 
 
@@ -561,7 +565,7 @@ abstract mixin class _$VocabItemCopyWith<$Res> implements $VocabItemCopyWith<$Re
   factory _$VocabItemCopyWith(_VocabItem value, $Res Function(_VocabItem) _then) = __$VocabItemCopyWithImpl;
 @override @useResult
 $Res call({
- String id, String word, String? ipa, String? pos, String meaning, String? example, String? exampleMeaning, String topic, String? audioUrl,@JsonKey(name: 'vocab_reviews', includeToJson: false) List<VocabReview> reviews
+ String id, String word, String? ipa, String? pos, String meaning, String? example, String? exampleMeaning, String topic, String? audioUrl, String? userId,@JsonKey(name: 'vocab_reviews', includeToJson: false) List<VocabReview> reviews
 });
 
 
@@ -578,7 +582,7 @@ class __$VocabItemCopyWithImpl<$Res>
 
 /// Create a copy of VocabItem
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? word = null,Object? ipa = freezed,Object? pos = freezed,Object? meaning = null,Object? example = freezed,Object? exampleMeaning = freezed,Object? topic = null,Object? audioUrl = freezed,Object? reviews = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? word = null,Object? ipa = freezed,Object? pos = freezed,Object? meaning = null,Object? example = freezed,Object? exampleMeaning = freezed,Object? topic = null,Object? audioUrl = freezed,Object? userId = freezed,Object? reviews = null,}) {
   return _then(_VocabItem(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,word: null == word ? _self.word : word // ignore: cast_nullable_to_non_nullable
@@ -589,6 +593,7 @@ as String,example: freezed == example ? _self.example : example // ignore: cast_
 as String?,exampleMeaning: freezed == exampleMeaning ? _self.exampleMeaning : exampleMeaning // ignore: cast_nullable_to_non_nullable
 as String?,topic: null == topic ? _self.topic : topic // ignore: cast_nullable_to_non_nullable
 as String,audioUrl: freezed == audioUrl ? _self.audioUrl : audioUrl // ignore: cast_nullable_to_non_nullable
+as String?,userId: freezed == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
 as String?,reviews: null == reviews ? _self._reviews : reviews // ignore: cast_nullable_to_non_nullable
 as List<VocabReview>,
   ));

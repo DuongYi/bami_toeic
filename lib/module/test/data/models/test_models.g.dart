@@ -24,6 +24,12 @@ Map<String, dynamic> _$AttemptAnswerInsertToJson(AttemptAnswerInsert instance) =
   'is_correct': instance.isCorrect,
 };
 
+Map<String, dynamic> _$InProgressUpsertToJson(InProgressUpsert instance) => <String, dynamic>{
+  'test_id': instance.testId,
+  'snapshot': instance.snapshot,
+  'saved_at': instance.savedAt.toIso8601String(),
+};
+
 _TestSummary _$TestSummaryFromJson(Map<String, dynamic> json) => _TestSummary(
   id: json['id'] as String,
   title: json['title'] as String,
@@ -172,4 +178,16 @@ Map<String, dynamic> _$TagStatToJson(_TagStat instance) => <String, dynamic>{
   'tag': instance.tag,
   'total': instance.total,
   'correct': instance.correct,
+};
+
+_InProgressRow _$InProgressRowFromJson(Map<String, dynamic> json) => _InProgressRow(
+  testId: json['test_id'] as String,
+  snapshot: json['snapshot'] as Map<String, dynamic>,
+  savedAt: DateTime.parse(json['saved_at'] as String),
+);
+
+Map<String, dynamic> _$InProgressRowToJson(_InProgressRow instance) => <String, dynamic>{
+  'test_id': instance.testId,
+  'snapshot': instance.snapshot,
+  'saved_at': instance.savedAt.toIso8601String(),
 };

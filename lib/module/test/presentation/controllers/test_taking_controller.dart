@@ -157,7 +157,8 @@ class TestTaking extends _$TestTaking {
   }
 
   /// Ghi ảnh chụp hiện tại (gọi cả khi rời màn hình).
-  Future<void> saveProgress() async {
+  /// [force]: đồng bộ lên server ngay (thoát màn / app xuống nền).
+  Future<void> saveProgress({bool force = false}) async {
     final s = state.value;
     if (_isMistakes || s == null || s.isDone) return;
     _ticksSinceSave = 0;
@@ -176,8 +177,9 @@ class TestTaking extends _$TestTaking {
             revealed: s.revealed.toList(),
             flagged: s.flagged.toList(),
             totalQuestions: s.totalQuestions,
-            savedAt: DateTime.now(),
+            savedAt: DateTime.now().toUtc(),
           ),
+          force: force,
         );
     if (ref.mounted) {
       ref

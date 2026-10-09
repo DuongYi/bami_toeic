@@ -220,6 +220,18 @@ class TestRepository {
 
   Future<void> deleteAttempt(String id) => _api.deleteAttempt(id: Pg.eq(id));
 
+  // ---------- Bài làm dở (đồng bộ nhiều máy) ----------
+
+  Future<List<InProgressRow>> fetchInProgress({String? testId}) =>
+      _api.getInProgress(testId: testId == null ? null : Pg.eq(testId));
+
+  Future<void> saveInProgress(String testId, Map<String, dynamic> snapshot, DateTime savedAt) =>
+      _api.upsertInProgress(
+        InProgressUpsert(testId: testId, snapshot: snapshot, savedAt: savedAt.toUtc()),
+      );
+
+  Future<void> deleteInProgress(String testId) => _api.deleteInProgress(testId: Pg.eq(testId));
+
   Future<List<PartStat>> fetchPartStats() => _api.getPartStats();
 
   Future<List<TagStat>> fetchTagStats() => _api.getTagStats();

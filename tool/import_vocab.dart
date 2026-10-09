@@ -1,4 +1,5 @@
-// Import bộ từ vựng (mảng JSON) vào bảng vocab – upsert theo (word, topic), chạy lại an toàn.
+// Import bộ từ vựng (mảng JSON) vào BỘ TỪ CHUNG (vocab.user_id = null) – upsert theo
+// (user_id, word, topic), chạy lại an toàn. Cần tài khoản admin (bảng app_admins, migration 004).
 //
 //   dart run tool/import_vocab.dart content/raw/ets2026/vocab/ets2026_all.json [--dry-run]
 //
@@ -26,11 +27,12 @@ Future<void> main(List<String> args) async {
       stderr.writeln('❌ Phần tử #$i thiếu word/meaning');
       exit(65);
     }
-    final row = {
+    final row = <String, dynamic>{
       for (final c in _columns)
         if (v[c] case final String s when s.trim().isNotEmpty) c: s.trim(),
     };
     row['topic'] ??= 'General';
+    row['user_id'] = null; // bộ chung, mọi user đều thấy
     // Trùng (word, topic) trong cùng 1 lô làm upsert lỗi → giữ bản đầu.
     rows.putIfAbsent('${row['word']}|${row['topic']}', () => row);
   }
@@ -54,7 +56,7 @@ Future<void> main(List<String> args) async {
     final list = rows.values.toList();
     for (var i = 0; i < list.length; i += 200) {
       final chunk = list.sublist(i, (i + 200).clamp(0, list.length));
-      await db.from('vocab').upsert(chunk, onConflict: 'word,topic');
+      await db.from('vocab').upsert(chunk, onConflict: 'user_id,word,topic');
       stdout.writeln('  ↑ ${i + chunk.length}/${list.length}');
     }
     stdout.writeln('✅ Đã import ${list.length} từ');

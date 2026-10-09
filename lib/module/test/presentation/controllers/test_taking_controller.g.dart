@@ -14,7 +14,8 @@ part of 'test_taking_controller.dart';
 final testTakingProvider = TestTakingFamily._();
 
 /// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" (hoặc bộ lọc sổ câu sai) để làm khoá family ổn định.
-final class TestTakingProvider extends $AsyncNotifierProvider<TestTaking, TakingState> {
+final class TestTakingProvider
+    extends $AsyncNotifierProvider<TestTaking, TakingState> {
   /// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" (hoặc bộ lọc sổ câu sai) để làm khoá family ổn định.
   TestTakingProvider._({
     required TestTakingFamily super.from,
@@ -52,7 +53,7 @@ final class TestTakingProvider extends $AsyncNotifierProvider<TestTaking, Taking
   }
 }
 
-String _$testTakingHash() => r'126e013e86aafca877219c22b8316c347ae09f2b';
+String _$testTakingHash() => r'c1dcdf52da52dea00310a89dcb42ecbc0d3b2afa';
 
 /// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" (hoặc bộ lọc sổ câu sai) để làm khoá family ổn định.
 
@@ -104,6 +105,9 @@ abstract class _$TestTaking extends $AsyncNotifier<TakingState> {
               Object?,
               Object?
             >;
-    return element.handleCreate(ref, () => build(_$args.$1, _$args.$2, _$args.$3));
+    return element.handleCreate(
+      ref,
+      () => build(_$args.$1, _$args.$2, _$args.$3),
+    );
   }
 }

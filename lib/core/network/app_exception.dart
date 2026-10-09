@@ -67,6 +67,11 @@ class UnauthorizedException extends AppException {
   const UnauthorizedException(super.message);
 }
 
+/// Không có quyền với dữ liệu (RLS chặn, vd. sửa/xoá dữ liệu dùng chung).
+class ForbiddenException extends AppException {
+  const ForbiddenException(super.message);
+}
+
 class NotFoundException extends AppException {
   const NotFoundException(super.message);
 }

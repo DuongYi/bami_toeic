@@ -14,7 +14,8 @@ part of 'login_controller.dart';
 final loginControllerProvider = LoginControllerProvider._();
 
 /// Trạng thái gửi form đăng nhập (loading / lỗi).
-final class LoginControllerProvider extends $AsyncNotifierProvider<LoginController, void> {
+final class LoginControllerProvider
+    extends $AsyncNotifierProvider<LoginController, void> {
   /// Trạng thái gửi form đăng nhập (loading / lỗi).
   LoginControllerProvider._()
     : super(

@@ -177,7 +177,7 @@ final class InProgressProvider
   }
 }
 
-String _$inProgressHash() => r'72b6aa894ea560c189e1516e9be1f6b40ee756b1';
+String _$inProgressHash() => r'0c7d8cce90a07a7a8f7008d2dfddd8bb076dff96';
 
 /// Bài làm dở của 1 đề (null nếu không có).
 
@@ -243,4 +243,4 @@ final class InProgressAllProvider
   }
 }
 
-String _$inProgressAllHash() => r'7fcd6cd1d396d708c06834b9fc2c53dac37a0115';
+String _$inProgressAllHash() => r'9471b920060ed4b0fdf1fc974a1b802107265d82';

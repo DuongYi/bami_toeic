@@ -18,6 +18,7 @@ App Flutter ôn luyện TOEIC cá nhân. Backend là Supabase (gói Free): Postg
 - **Mục tiêu & chuỗi ngày học**: điểm mục tiêu, ngày thi, chỉ tiêu mỗi ngày, nhắc học bằng thông báo; điểm dự đoán từ full test hoặc tỉ lệ đúng.
 - **Offline**: tải đề (nội dung + audio + ảnh) về máy ở trang chi tiết đề.
 - **Media riêng tư**: bucket `media` không public, app dùng URL ký tạm (12 giờ).
+- **Theo từng tài khoản, đồng bộ nhiều máy**: lượt làm bài, lịch ôn SRS, bài làm dở, chuỗi ngày học, mục tiêu đều lưu theo user (RLS). Ghi vào máy trước, có mạng thì đồng bộ. Từ vựng: bộ chung (ETS) + từ riêng của mỗi người; đề và media chỉ admin (`app_admins`) được sửa.
 - **Bảng quy đổi điểm theo đề**: cột `tests.score_table` (để trống thì dùng công thức ước tính).
 
 ## Cài đặt (khoảng 15 phút, làm một lần)
@@ -25,7 +26,7 @@ App Flutter ôn luyện TOEIC cá nhân. Backend là Supabase (gói Free): Postg
 ### 1. Tạo Supabase project
 1. Đăng ký tại https://supabase.com → **New project** (chọn region Singapore cho gần VN).
 2. **SQL Editor → New query** → dán toàn bộ `supabase/schema.sql` → **Run**.
-   Project tạo trước 10/2026: chạy thêm `supabase/migrations/002_learning_features.sql` (thẻ dạng câu, sổ câu sai, bucket riêng tư) và `003_score_table.sql`.
+   Project tạo trước 10/2026: chạy thêm `supabase/migrations/002_learning_features.sql` (thẻ dạng câu, sổ câu sai, bucket riêng tư) `003_score_table.sql` và `004_per_user_sync.sql` (dữ liệu học theo user, đồng bộ nhiều máy, quyền admin).
 3. **Authentication → Users → Add user → Create new user**: nhập email và mật khẩu, tick *Auto Confirm User*.
 4. **Authentication → Sign In / Providers**: tắt **Allow new users to sign up**. Chỉ bạn đăng nhập được.
 5. **Project Settings → API Keys**: copy *Project URL* và *Publishable key*.
