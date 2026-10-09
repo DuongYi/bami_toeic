@@ -45,6 +45,8 @@ dev_dependencies:
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
+  remove_alpha_ios: true # App Store từ chối icon iOS có kênh alpha
+  background_color_ios: "#127D94" # màu viền logo, lấp góc trong suốt
   image_path: "assets/logo/bami_logo.png"
   min_sdk_android: 21 # android min sdk min:16, default 21
   web:
