@@ -5,6 +5,8 @@ import 'package:bami_toeic/core/media/offline_store.dart';
 import 'package:bami_toeic/helper/srs.dart';
 import 'package:bami_toeic/module/auth/data/models/session.dart';
 import 'package:bami_toeic/module/auth/presentation/controllers/auth_controller.dart';
+import 'package:bami_toeic/module/leaderboard/data/leaderboard_repository.dart';
+import 'package:bami_toeic/module/leaderboard/data/models/leaderboard_models.dart';
 import 'package:bami_toeic/module/test/data/models/test_models.dart';
 import 'package:bami_toeic/module/test/data/test_repository.dart';
 import 'package:bami_toeic/module/vocab/data/models/vocab_models.dart';
@@ -336,4 +338,62 @@ class FakeGoalsRepository implements GoalsRepository {
 
   @override
   Future<void> bump(String day, DayLog delta) async {}
+}
+
+class FakeLeaderboardRepository implements LeaderboardRepository {
+  @override
+  Future<List<LeaderboardEntry>> fetchBoard(LeaderboardBoard board) async => const [
+    LeaderboardEntry(
+      rank: 1,
+      userId: 'a',
+      displayName: 'Lâm Phong',
+      bestScore: 905,
+      bestListening: 470,
+      bestReading: 435,
+      fullTests: 6,
+      weekQuestions: 420,
+      weekCorrect: 371,
+    ),
+    LeaderboardEntry(
+      rank: 2,
+      userId: 'b',
+      displayName: 'Tiểu Vy',
+      bestScore: 785,
+      bestListening: 420,
+      bestReading: 365,
+      fullTests: 3,
+      weekQuestions: 260,
+      weekCorrect: 198,
+    ),
+    LeaderboardEntry(
+      rank: 3,
+      userId: 'me',
+      displayName: 'Bami',
+      isMe: true,
+      bestScore: 690,
+      bestListening: 375,
+      bestReading: 315,
+      fullTests: 2,
+      weekQuestions: 180,
+      weekCorrect: 129,
+    ),
+    LeaderboardEntry(
+      rank: 4,
+      userId: 'c',
+      displayName: 'Học viên 7F2A',
+      bestScore: 455,
+      bestListening: 260,
+      bestReading: 195,
+      fullTests: 1,
+      weekQuestions: 40,
+      weekCorrect: 22,
+    ),
+  ];
+
+  @override
+  Future<LeaderboardProfile> fetchProfile() async =>
+      const LeaderboardProfile(displayName: 'Bami');
+
+  @override
+  Future<void> saveProfile(LeaderboardProfile p) async {}
 }

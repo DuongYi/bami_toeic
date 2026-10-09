@@ -8,6 +8,7 @@ import '../module/auth/presentation/pages/login_page.dart';
 import '../module/auth/presentation/pages/splash_page.dart';
 import '../module/debug/presentation/pages/log_viewer_page.dart';
 import '../module/history/presentation/pages/history_page.dart';
+import '../module/leaderboard/presentation/pages/leaderboard_page.dart';
 import '../module/listening/presentation/pages/dictation_page.dart';
 import '../module/listening/presentation/pages/listening_home_page.dart';
 import '../module/shell/home_shell.dart';
@@ -28,6 +29,7 @@ abstract final class Routes {
   static const tests = '/tests';
   static const vocab = '/vocab';
   static const history = '/history';
+  static const leaderboard = '/leaderboard';
   static const designSystem = '/design-system';
   static const mistakes = '/mistakes';
   static const listening = '/listening';
@@ -94,6 +96,9 @@ GoRouter router(Ref ref) {
           ),
           StatefulShellBranch(
             routes: [GoRoute(path: Routes.history, builder: (_, _) => const HistoryPage())],
+          ),
+          StatefulShellBranch(
+            routes: [GoRoute(path: Routes.leaderboard, builder: (_, _) => const LeaderboardPage())],
           ),
         ],
       ),

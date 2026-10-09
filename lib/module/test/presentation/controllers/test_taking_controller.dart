@@ -4,6 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../goals/data/study_store.dart';
+import '../../../leaderboard/presentation/controllers/leaderboard_controller.dart';
 import '../../data/in_progress_store.dart';
 import '../../data/models/test_models.dart';
 import '../../data/test_repository.dart';
@@ -252,6 +253,7 @@ class TestTaking extends _$TestTaking {
     _saveDebounce?.cancel();
     ref
       ..invalidate(attemptsProvider)
+      ..invalidate(leaderboardProvider)
       ..invalidate(partStatsProvider)
       ..invalidate(tagStatsProvider)
       ..invalidate(mistakesProvider)

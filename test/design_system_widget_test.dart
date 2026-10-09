@@ -52,6 +52,42 @@ void main() {
     final size = tester.getSize(find.byType(TextButton));
     expect(size.height, greaterThanOrEqualTo(AppSizes.touchTarget));
   });
+
+  testWidgets('VocabSkeleton render không lỗi và không tràn layout', (tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.light(),
+        home: const Scaffold(body: VocabSkeleton()),
+      ),
+    );
+    await tester.pump();
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('Tất cả Skeleton loaders render an toàn không lỗi', (tester) async {
+    final skeletons = <Widget>[
+      const TestListSkeleton(),
+      const TestDetailSkeleton(),
+      const VocabSkeleton(),
+      const ResultSkeleton(),
+      const MistakesSkeleton(),
+      const TestTakingSkeleton(),
+      const HistorySkeleton(),
+      const SplashSkeleton(),
+      const FlashcardSkeleton(),
+    ];
+
+    for (final sk in skeletons) {
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: AppTheme.light(),
+          home: Scaffold(body: sk),
+        ),
+      );
+      await tester.pump();
+      expect(tester.takeException(), isNull);
+    }
+  });
 }
 
 double _contrast(Color a, Color b) {

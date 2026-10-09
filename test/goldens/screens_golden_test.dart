@@ -5,6 +5,7 @@ import 'dart:math';
 import 'package:bami_toeic/main.dart';
 import 'package:bami_toeic/module/auth/presentation/controllers/auth_controller.dart';
 import 'package:bami_toeic/module/goals/data/goals_repository.dart';
+import 'package:bami_toeic/module/leaderboard/data/leaderboard_repository.dart';
 import 'package:bami_toeic/module/test/data/test_repository.dart';
 import 'package:bami_toeic/module/vocab/data/vocab_repository.dart';
 import 'package:bami_toeic/module/vocab/presentation/controllers/vocab_controller.dart';
@@ -36,6 +37,7 @@ Future<ProviderContainer> _boot(
         testRepositoryProvider.overrideWithValue(FakeTestRepository()),
         vocabRepositoryProvider.overrideWithValue(FakeVocabRepository()),
         goalsRepositoryProvider.overrideWithValue(FakeGoalsRepository()),
+        leaderboardRepositoryProvider.overrideWithValue(FakeLeaderboardRepository()),
         sessionRandomProvider.overrideWithValue(Random(1)),
       ],
       child: const BamiToeicApp(),
@@ -133,6 +135,13 @@ void main() {
     final c = await _boot(tester);
     await _go(tester, c, Routes.history);
     await _shot(tester, '07_history');
+    await _teardown(tester);
+  });
+
+  testWidgets('Thương Khung Bảng', (tester) async {
+    final c = await _boot(tester);
+    await _go(tester, c, Routes.leaderboard);
+    await _shot(tester, '09_leaderboard');
     await _teardown(tester);
   });
 

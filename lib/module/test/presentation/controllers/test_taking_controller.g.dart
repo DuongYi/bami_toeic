@@ -53,7 +53,7 @@ final class TestTakingProvider
   }
 }
 
-String _$testTakingHash() => r'c1dcdf52da52dea00310a89dcb42ecbc0d3b2afa';
+String _$testTakingHash() => r'ec8c7c58af18685cdbc2a103f4cf4a00dc41ca98';
 
 /// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" (hoặc bộ lọc sổ câu sai) để làm khoá family ổn định.
 

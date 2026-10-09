@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../tokens/app_dimens.dart';
 import '../theme/context_ext.dart';
+import 'app_glass_tab_bar.dart';
 
 /// Khối Skeleton Shimmer cơ bản cho hiệu ứng tải trang mượt mà.
 class AppSkeleton extends StatelessWidget {
@@ -131,7 +132,10 @@ class AppSkeletonCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height,
+      height: child == null ? height : null,
+      constraints: (child != null && height != null)
+          ? BoxConstraints(minHeight: height!)
+          : null,
       padding: padding,
       decoration: BoxDecoration(
         color: context.surfaces.raised,
@@ -442,19 +446,33 @@ class VocabSkeleton extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppSkeletonShimmer(
       child: ListView(
-        padding: AppInsets.screen,
-        physics: const NeverScrollableScrollPhysics(),
+        padding: AppInsets.screen.copyWith(
+          bottom: AppSpacing.fabClearance + AppGlassTabBar.inset(context),
+        ),
+        physics: const AlwaysScrollableScrollPhysics(),
         children: [
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               AppSkeleton.line(width: 140, height: 24),
-              AppSkeleton(width: 80, height: 28, borderRadius: AppRadius.brFull),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  AppSkeleton(width: 50, height: 24, borderRadius: AppRadius.brFull),
+                  Gaps.h8,
+                  AppSkeleton(width: 60, height: 24, borderRadius: AppRadius.brFull),
+                  Gaps.h8,
+                  AppSkeleton(width: 44, height: 24, borderRadius: AppRadius.brFull),
+                ],
+              ),
             ],
           ),
           Gaps.v16,
+          const AppSkeleton.line(width: 180, height: 28),
+          Gaps.v4,
+          const AppSkeleton.line(width: 240, height: 14),
+          Gaps.v16,
           const AppSkeletonCard(
-            height: 160,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -754,7 +772,7 @@ class FlashcardSkeleton extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppSkeletonShimmer(
       child: Center(
-        child: Padding(
+        child: SingleChildScrollView(
           padding: AppInsets.screen,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
