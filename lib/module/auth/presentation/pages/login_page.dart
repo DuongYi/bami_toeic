@@ -35,8 +35,8 @@ class _LoginPageState extends ConsumerState<LoginPage> {
     setState(() => _submitted = true);
     if (!_formKey.currentState!.validate()) return;
     FocusScope.of(context).unfocus();
-    TextInput.finishAutofillContext(); // gợi ý lưu mật khẩu vào trình quản lý mật khẩu
-    // Router tự chuyển trang khi đăng nhập thành công.
+    // Router tự chuyển trang khi đăng nhập thành công; AutofillGroup khi bị huỷ sẽ tự
+    // commit để hệ điều hành gợi ý lưu mật khẩu (chỉ khi đúng, không lưu mật khẩu sai).
     ref
         .read(loginControllerProvider.notifier)
         .submit(email: _email.text.trim(), password: _password.text);

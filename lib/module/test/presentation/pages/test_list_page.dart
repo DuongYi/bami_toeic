@@ -142,7 +142,7 @@ class _Greeting extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final email = ref.watch(authControllerProvider).value?.user.email;
-    final initial = (email ?? '?').substring(0, 1).toUpperCase();
+    final initial = (email == null || email.isEmpty) ? '?' : email[0].toUpperCase();
     return AppPageHeader(
       overline: 'Xin chào 👋',
       title: 'Hôm nay luyện gì nhỉ?',

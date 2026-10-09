@@ -32,6 +32,9 @@ Future<void> main(List<String> args) async {
   for (final g in groups) {
     for (final key in ['audio', 'image']) {
       final path = g[key] as String?;
+      if (path != null && !path.startsWith('http') && !_isSafeRelative(path)) {
+        _fail('Đường dẫn media không hợp lệ (phải nằm trong thư mục đề): $path');
+      }
       if (path != null && !path.startsWith('http') && !File('${dir.path}/$path').existsSync()) {
         _fail('Thiếu file media: ${dir.path}/$path');
       }
@@ -135,6 +138,14 @@ void _validate(Map<String, dynamic> data, List<Map<String, dynamic>> groups) {
       if (!RegExp(r'^[A-Da-d]$').hasMatch('${q['answer']}')) _fail('Câu $n: answer phải là A-D');
     }
   }
+}
+
+/// Chỉ cho phép đường dẫn tương đối nằm trong thư mục đề (không tuyệt đối, không `..`).
+bool _isSafeRelative(String path) {
+  if (path.isEmpty || path.startsWith('/') || path.startsWith(r'\') || path.contains(':')) {
+    return false;
+  }
+  return !path.split(RegExp(r'[/\\]')).contains('..');
 }
 
 String _ask(String prompt, {bool hidden = false}) {

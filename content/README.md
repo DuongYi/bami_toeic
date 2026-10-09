@@ -59,3 +59,23 @@ Cột: `word,ipa,pos,meaning,example,example_meaning,topic` (xem `vocab_sample.c
 
 Import: Supabase Dashboard → Table Editor → bảng `vocab` → **Insert → Import data from CSV**.
 Hoặc thêm từng từ ngay trong app (nút +).
+
+## Chuyển sách PDF scan (ETS 2026) thành đề
+
+Nguồn: `content/LISTENING/` (PDF + `Audio/E26-Tnn-*.mp3`) và `content/READING/` — đều bị `.gitignore`.
+Công cụ (macOS, không cần cài thêm): `tool/pdf_tool.swift` (PDFKit + Vision OCR) và `tool/ets/`.
+
+```bash
+# 1. OCR có toạ độ (một lần, ~20 phút)
+W=content/raw/ets2026
+OCR_TSV=1 swift tool/pdf_tool.swift ocr "content/LISTENING/LISTENING ETS 2026.pdf" 1 140 > $W/lc.tsv
+OCR_TSV=1 OCR_DPI=300 swift tool/pdf_tool.swift ocr "content/READING/READING ETS 2026.pdf" 1 300 > $W/rc300.tsv && touch $W/rc300.done
+OCR_TSV=1 OCR_LANGS=en-US,ko-KR swift tool/pdf_tool.swift ocr "content/LISTENING/TRANSCRIPT.pdf" 5 296 > $W/tr.tsv
+# 2. Đáp án → $W/keys.json (tool/ets/extract_keys.py, soát tay ô thiếu)
+# 3. Dựng đề → content/tests/ets2026_testNN/ (ảnh Part 1, biểu đồ, ảnh đoạn văn Part 7, audio AAC 48 kbps)
+python3 tool/ets/build_ets.py 1-10
+python3 tool/ets/audit.py 1-10          # soát lỗi OCR còn sót
+# 4. Sửa tay câu OCR hỏng: $W/overrides.json {"test": {"câu": {"content", "options"}}} rồi chạy lại bước 3
+# 5. Đẩy lên Supabase (hỏi email/mật khẩu 1 lần)
+bash tool/ets/import_all.sh
+```

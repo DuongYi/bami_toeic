@@ -49,3 +49,11 @@ app.*.map.json
 
 # Supabase keys
 env.json
+
+# Tài liệu gốc (PDF/mp3 nặng) – không commit
+content/raw/
+content/LISTENING/
+content/READING/
+# Đề ETS đã chuyển đổi (có bản quyền, nặng) – không commit
+content/tests/ets2026_*/
+test/goldens/failures/

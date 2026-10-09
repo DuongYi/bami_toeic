@@ -37,7 +37,9 @@ class AuthRepository {
   /// Đổi lỗi của Supabase Auth sang thông báo tiếng Việt dễ hiểu.
   static AppException mapSignInError(DioException e) {
     final data = e.response?.data;
-    final code = data is Map ? (data['error_code'] ?? data['error']) as String? : null;
+    // Không ép kiểu trực tiếp: body lỗi lạ (số, object) không được làm crash luồng đăng nhập.
+    final rawCode = data is Map ? (data['error_code'] ?? data['error']) : null;
+    final code = rawCode is String ? rawCode : null;
     final msg = data is Map ? '${data['msg'] ?? data['error_description'] ?? ''}' : '';
     final status = e.response?.statusCode;
 

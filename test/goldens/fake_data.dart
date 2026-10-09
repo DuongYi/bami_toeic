@@ -9,6 +9,9 @@ import 'package:bami_toeic/module/vocab/data/vocab_repository.dart';
 
 final now = DateTime(2026, 10, 8, 9, 30);
 
+/// Lịch ôn từ vựng phải tính theo NGÀY THẬT (app so với DateTime.now()), nếu không golden đổi mỗi ngày.
+final _today = DateTime.now();
+
 class FakeAuth extends AuthController {
   @override
   Future<Session?> build() async => const Session(
@@ -201,7 +204,7 @@ final _vocab = [
       ease: 2.5,
       intervalDays: 6,
       repetitions: 2,
-      dueAt: now.add(const Duration(days: 3)),
+      dueAt: _today.add(const Duration(days: 2, hours: 12)),
     ),
   ),
   _v(
@@ -225,7 +228,7 @@ final _vocab = [
       ease: 2.3,
       intervalDays: 1,
       repetitions: 1,
-      dueAt: now.subtract(const Duration(hours: 2)),
+      dueAt: _today.subtract(const Duration(hours: 2)),
     ),
   ),
   _v('v4', 'postpone', '/poʊstˈpoʊn/', 'v', 'hoãn lại', 'Office'),
