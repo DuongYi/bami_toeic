@@ -22,9 +22,9 @@ class AppListGroup extends StatelessWidget {
             if (i > 0)
               Divider(
                 height: 1,
-                thickness: 1,
+                thickness: 0.5,
                 indent: dividerIndent,
-                color: context.colors.outlineVariant.withValues(alpha: 0.5),
+                color: context.colors.outlineVariant.withValues(alpha: 0.25),
               ),
             child,
           ],

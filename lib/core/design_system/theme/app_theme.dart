@@ -8,14 +8,21 @@ import '../tokens/app_surfaces.dart';
 /// Lớp 3 – COMPONENT: cấu hình mặc định cho mọi widget Material.
 /// Widget trong app chỉ cần dùng component chuẩn, KHÔNG tự set màu/bo góc/padding.
 abstract final class AppTheme {
-  static ThemeData light() => _build(Brightness.light, AppColors.light, contrast: 0);
-  static ThemeData dark() => _build(Brightness.dark, AppColors.dark, contrast: 0);
-  static ThemeData lightHighContrast() =>
-      _build(Brightness.light, AppColors.lightHighContrast, contrast: 1);
-  static ThemeData darkHighContrast() =>
-      _build(Brightness.dark, AppColors.darkHighContrast, contrast: 1);
+  static ThemeData light({String? fontFamily}) =>
+      _build(Brightness.light, AppColors.light, contrast: 0, fontFamily: fontFamily);
+  static ThemeData dark({String? fontFamily}) =>
+      _build(Brightness.dark, AppColors.dark, contrast: 0, fontFamily: fontFamily);
+  static ThemeData lightHighContrast({String? fontFamily}) =>
+      _build(Brightness.light, AppColors.lightHighContrast, contrast: 1, fontFamily: fontFamily);
+  static ThemeData darkHighContrast({String? fontFamily}) =>
+      _build(Brightness.dark, AppColors.darkHighContrast, contrast: 1, fontFamily: fontFamily);
 
-  static ThemeData _build(Brightness brightness, AppColors appColors, {required double contrast}) {
+  static ThemeData _build(
+    Brightness brightness,
+    AppColors appColors, {
+    required double contrast,
+    String? fontFamily,
+  }) {
     final cs = ColorScheme.fromSeed(
       seedColor: AppPalette.brandBlue,
       brightness: brightness,
@@ -32,7 +39,7 @@ abstract final class AppTheme {
     final base = ThemeData(
       colorScheme: cs,
       useMaterial3: true,
-      fontFamily: AppTypography.fontFamily,
+      fontFamily: fontFamily ?? AppTypography.fontFamily,
     );
     final text = _textTheme(base.textTheme);
 
@@ -47,7 +54,11 @@ abstract final class AppTheme {
           // Light: gradient 3-stop rực rỡ (Electric Blue -> Indigo -> Violet). Dark: tông container đậm dịu mắt.
           hero: light
               ? const [AppPalette.brandBlue, AppPalette.brandIndigo, AppPalette.brandViolet]
-              : [cs.primaryContainer, Color.lerp(cs.primaryContainer, cs.tertiaryContainer, 0.55)!],
+              : [
+                  cs.primaryContainer,
+                  Color.lerp(cs.primaryContainer, cs.tertiaryContainer, 0.55)!,
+                  cs.tertiaryContainer,
+                ],
           onHero: light ? Colors.white : cs.onPrimaryContainer,
         ),
       ],
@@ -59,13 +70,26 @@ abstract final class AppTheme {
         backgroundColor: background,
         surfaceTintColor: Colors.transparent,
         scrolledUnderElevation: 0,
-        titleTextStyle: text.titleLarge?.copyWith(color: cs.onSurface, fontWeight: FontWeight.w700),
+        toolbarHeight: 60,
+        titleTextStyle: text.headlineMedium?.copyWith(
+          color: cs.onSurface,
+          fontWeight: FontWeight.w800,
+          letterSpacing: -0.5,
+        ),
       ),
       cardTheme: CardThemeData(
-        elevation: 0,
+        elevation: light ? 1.5 : 0.5,
+        shadowColor: light
+            ? cs.shadow.withValues(alpha: 0.08)
+            : Colors.black.withValues(alpha: 0.35),
         margin: EdgeInsets.zero,
         color: raised,
-        shape: RoundedRectangleBorder(borderRadius: AppRadius.brLg, side: hairline),
+        shape: RoundedRectangleBorder(
+          borderRadius: AppRadius.brLg,
+          side: light
+              ? BorderSide.none
+              : BorderSide(color: cs.outlineVariant.withValues(alpha: 0.25)),
+        ),
         clipBehavior: Clip.antiAlias,
       ),
       navigationBarTheme: NavigationBarThemeData(

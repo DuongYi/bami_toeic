@@ -11,8 +11,10 @@ import '../module/debug/presentation/pages/log_viewer_page.dart';
 import '../module/history/presentation/pages/history_page.dart';
 import '../module/leaderboard/presentation/pages/leaderboard_page.dart';
 import '../module/listening/presentation/pages/dictation_page.dart';
-import '../module/plan/presentation/pages/admin_users_page.dart';
 import '../module/listening/presentation/pages/listening_home_page.dart';
+import '../module/plan/presentation/pages/admin_users_page.dart';
+import '../module/profile/presentation/pages/profile_page.dart';
+import '../module/settings/presentation/pages/settings_page.dart';
 import '../module/shell/home_shell.dart';
 import '../module/test/presentation/controllers/test_taking_controller.dart';
 import '../module/test/presentation/pages/mistakes_page.dart';
@@ -41,6 +43,8 @@ abstract final class Routes {
   static const mistakes = '/mistakes';
   static const listening = '/listening';
   static const debugLogs = '/debug/logs';
+  static const profile = '/profile';
+  static const settings = '/settings';
 
   static String forgotPassword({String? email}) => email == null || email.isEmpty
       ? forgotPasswordPath
@@ -138,6 +142,8 @@ GoRouter router(Ref ref) {
         ),
       ),
       GoRoute(path: Routes.mistakes, builder: (_, _) => const MistakesPage()),
+      GoRoute(path: Routes.profile, builder: (_, _) => const ProfilePage()),
+      GoRoute(path: Routes.settings, builder: (_, _) => const SettingsPage()),
       GoRoute(path: Routes.adminUsers, builder: (_, _) => const AdminUsersPage()),
       // Có cả ở bản release (không có nút nổi) để vẫn lấy được log khi cần.
       GoRoute(path: Routes.debugLogs, builder: (_, _) => const LogViewerPage()),

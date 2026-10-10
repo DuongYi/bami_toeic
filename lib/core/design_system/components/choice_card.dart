@@ -42,10 +42,14 @@ class ChoiceCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: selected ? cs.primaryContainer.withValues(alpha: 0.45) : context.surfaces.raised,
           borderRadius: AppRadius.brLg,
-          border: Border.all(
-            color: selected ? cs.primary : cs.outlineVariant,
-            width: selected ? 2 : 1,
-          ),
+          border: selected ? Border.all(color: cs.primary, width: 2) : null,
+          boxShadow: [
+            BoxShadow(
+              color: cs.shadow.withValues(alpha: selected ? 0.08 : 0.04),
+              blurRadius: 8,
+              offset: const Offset(0, 2),
+            ),
+          ],
         ),
         child: Material(
           type: MaterialType.transparency,

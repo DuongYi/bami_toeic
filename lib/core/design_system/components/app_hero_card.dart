@@ -24,6 +24,15 @@ class AppHeroCard extends StatelessWidget {
           end: Alignment.bottomRight,
           colors: context.surfaces.hero,
         ),
+        boxShadow: [
+          BoxShadow(
+            color: context.colors.primary.withValues(
+              alpha: Theme.of(context).brightness == Brightness.light ? 0.20 : 0.08,
+            ),
+            blurRadius: 16,
+            offset: const Offset(0, 4),
+          ),
+        ],
       ),
       child: DefaultTextStyle.merge(
         style: TextStyle(color: fg),

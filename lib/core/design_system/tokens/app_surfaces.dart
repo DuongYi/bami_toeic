@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 
 import 'app_palette.dart';
@@ -63,6 +65,19 @@ class AppSurfaces extends ThemeExtension<AppSurfaces> {
     cyan: cyan ?? this.cyan,
   );
 
+  static List<Color> _lerpColorList(List<Color> a, List<Color> b, double t) {
+    if (a.isEmpty) return b;
+    if (b.isEmpty) return a;
+    final maxLen = math.max(a.length, b.length);
+    final result = <Color>[];
+    for (var i = 0; i < maxLen; i++) {
+      final colorA = i < a.length ? a[i] : a.last;
+      final colorB = i < b.length ? b[i] : b.last;
+      result.add(Color.lerp(colorA, colorB, t)!);
+    }
+    return result;
+  }
+
   @override
   AppSurfaces lerp(AppSurfaces? other, double t) {
     if (other == null) return this;
@@ -70,13 +85,13 @@ class AppSurfaces extends ThemeExtension<AppSurfaces> {
       background: Color.lerp(background, other.background, t)!,
       raised: Color.lerp(raised, other.raised, t)!,
       hairline: BorderSide.lerp(hairline, other.hairline, t),
-      hero: [for (var i = 0; i < hero.length; i++) Color.lerp(hero[i], other.hero[i], t)!],
+      hero: _lerpColorList(hero, other.hero, t),
       onHero: Color.lerp(onHero, other.onHero, t)!,
-      gold: [for (var i = 0; i < gold.length; i++) Color.lerp(gold[i], other.gold[i], t)!],
-      rose: [for (var i = 0; i < rose.length; i++) Color.lerp(rose[i], other.rose[i], t)!],
-      emerald: [for (var i = 0; i < emerald.length; i++) Color.lerp(emerald[i], other.emerald[i], t)!],
-      violet: [for (var i = 0; i < violet.length; i++) Color.lerp(violet[i], other.violet[i], t)!],
-      cyan: [for (var i = 0; i < cyan.length; i++) Color.lerp(cyan[i], other.cyan[i], t)!],
+      gold: _lerpColorList(gold, other.gold, t),
+      rose: _lerpColorList(rose, other.rose, t),
+      emerald: _lerpColorList(emerald, other.emerald, t),
+      violet: _lerpColorList(violet, other.violet, t),
+      cyan: _lerpColorList(cyan, other.cyan, t),
     );
   }
 }

@@ -10,6 +10,7 @@ import 'core/logging/app_log.dart';
 import 'core/logging/provider_log_observer.dart';
 import 'core/network/app_exception.dart';
 import 'module/debug/presentation/widgets/debug_log_button.dart';
+import 'module/settings/presentation/controllers/settings_controller.dart';
 import 'routes/app_router.dart';
 
 void main() {
@@ -63,13 +64,18 @@ class BamiToeicApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final themeMode = ref.watch(appThemeModeProvider);
+    final font = ref.watch(appFontFamilyProvider);
+    final effectiveFont = font == AppFontFamilyNotifier.fontSystem ? null : font;
+
     return MaterialApp.router(
       title: 'Bami TOEIC',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.light(),
-      darkTheme: AppTheme.dark(),
-      highContrastTheme: AppTheme.lightHighContrast(),
-      highContrastDarkTheme: AppTheme.darkHighContrast(),
+      themeMode: themeMode,
+      theme: AppTheme.light(fontFamily: effectiveFont),
+      darkTheme: AppTheme.dark(fontFamily: effectiveFont),
+      highContrastTheme: AppTheme.lightHighContrast(fontFamily: effectiveFont),
+      highContrastDarkTheme: AppTheme.darkHighContrast(fontFamily: effectiveFont),
       routerConfig: ref.watch(routerProvider),
       builder: _showDebugButton
           ? (context, child) => DebugLogButton(

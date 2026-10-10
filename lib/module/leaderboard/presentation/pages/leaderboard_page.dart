@@ -8,6 +8,7 @@ import '../../../../helper/format.dart';
 import '../../../../routes/app_router.dart';
 import '../../data/models/leaderboard_models.dart';
 import '../../data/realm.dart';
+import '../../../plan/presentation/widgets/header_badges.dart';
 import '../controllers/leaderboard_controller.dart';
 import '../widgets/leaderboard_profile_sheet.dart';
 
@@ -41,6 +42,7 @@ class _LeaderboardPageState extends ConsumerState<LeaderboardPage> {
             overline: 'BẢNG XẾP HẠNG',
             title: 'Thương Khung Bảng',
             subtitle: 'So tài cùng các đạo hữu, xem ai đang ở cảnh giới nào',
+            topBar: const HeaderBadges(),
             trailing: IconButton(
               tooltip: 'Hồ sơ xếp hạng',
               icon: const Icon(Icons.manage_accounts_outlined),

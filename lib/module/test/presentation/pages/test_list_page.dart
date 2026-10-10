@@ -1,16 +1,13 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/design_system/design_system.dart';
-import '../../../../core/network/app_exception.dart';
 import '../../../../helper/format.dart';
 import '../../../../routes/app_router.dart';
 import '../../../auth/presentation/controllers/auth_controller.dart';
 import '../../../goals/presentation/controllers/study_progress.dart';
 import '../../../goals/presentation/widgets/goal_sheet.dart';
-import '../../../plan/data/models/plan_models.dart';
 import '../../../plan/presentation/controllers/plan_controller.dart';
 import '../../../plan/presentation/widgets/pro_sheet.dart';
 import '../../../vocab/presentation/controllers/vocab_controller.dart';
@@ -145,140 +142,6 @@ class _TestListPageState extends ConsumerState<TestListPage> {
 class _Greeting extends ConsumerWidget {
   const _Greeting();
 
-  static String _planLabel(MyPlan? plan) => switch (plan) {
-    null => 'Đang tải gói…',
-    MyPlan(isAdmin: true) => 'Quản trị viên · Toàn quyền',
-    MyPlan(isPro: true, :final proUntil?) => 'Bami PRO · đến ${Fmt.date(proUntil.toLocal())}',
-    MyPlan(isPro: true) => 'Bami PRO',
-    _ => 'Gói miễn phí · Xem quyền lợi PRO',
-  };
-
-  Future<void> _deleteAccount(BuildContext ctx, WidgetRef ref) async {
-    final ok = await showAppConfirmDialog(
-      ctx,
-      title: 'Xoá tài khoản?',
-      message:
-          'Toàn bộ bài làm, từ vựng riêng, mục tiêu và hạng của bạn sẽ bị xoá vĩnh viễn. '
-          'Không thể hoàn tác.',
-      confirmLabel: 'Xoá vĩnh viễn',
-      destructive: true,
-    );
-    if (!ok || !ctx.mounted) return;
-    final messenger = ScaffoldMessenger.of(ctx);
-    Navigator.pop(ctx);
-    try {
-      await ref.read(authControllerProvider.notifier).deleteAccount();
-    } catch (e) {
-      showAppSnackBarOn(messenger, AppException.from(e).message, tone: AppTone.danger);
-    }
-  }
-
-  void _openAccount(BuildContext context, WidgetRef ref, String? email, int streak) {
-    final plan = ref.read(myPlanProvider).value;
-    showAppBottomSheet<void>(
-      context,
-      builder: (ctx) => SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(
-            AppSpacing.screen,
-            0,
-            AppSpacing.screen,
-            AppSpacing.s16,
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Tài khoản học viên', style: ctx.textStyles.titleLarge),
-                  if (plan?.isPro ?? false) const ProBadge(),
-                ],
-              ),
-              Gaps.v12,
-              AppListGroup(
-                children: [
-                  ListTile(
-                    leading: const IconBadge(icon: Icons.person_rounded),
-                    title: Text(email ?? 'Học viên Bami'),
-                    subtitle: Text(_planLabel(plan)),
-                    trailing: plan?.isPro ?? false ? null : const Icon(Icons.chevron_right_rounded),
-                    onTap: () {
-                      Navigator.pop(ctx);
-                      showProSheet(context);
-                    },
-                  ),
-                  if (plan?.isAdmin ?? false)
-                    ListTile(
-                      leading: const IconBadge(
-                        icon: Icons.admin_panel_settings_outlined,
-                        tone: AppTone.info,
-                      ),
-                      title: const Text('Quản lý học viên'),
-                      subtitle: const Text('Cấp, gia hạn hoặc thu hồi PRO'),
-                      trailing: const Icon(Icons.chevron_right_rounded),
-                      onTap: () {
-                        Navigator.pop(ctx);
-                        context.push(Routes.adminUsers);
-                      },
-                    ),
-                  ListTile(
-                    leading: const IconBadge(
-                      icon: Icons.local_fire_department_rounded,
-                      tone: AppTone.warning,
-                    ),
-                    title: const Text('Mục tiêu & nhắc học'),
-                    subtitle: Text(
-                      streak == 0 ? 'Bắt đầu chuỗi ngày học hôm nay' : '$streak ngày học liên tiếp',
-                    ),
-                    trailing: StreakBadge(count: streak, active: streak > 0),
-                    onTap: () {
-                      Navigator.pop(ctx);
-                      showGoalSheet(context);
-                    },
-                  ),
-                  if (kDebugMode)
-                    ListTile(
-                      leading: const IconBadge(icon: Icons.palette_outlined, tone: AppTone.neutral),
-                      title: const Text('Design System'),
-                      trailing: const Icon(Icons.chevron_right_rounded),
-                      onTap: () {
-                        Navigator.pop(ctx);
-                        context.push(Routes.designSystem);
-                      },
-                    ),
-                  ListTile(
-                    leading: const IconBadge(icon: Icons.logout_rounded, tone: AppTone.danger),
-                    title: Text('Đăng xuất', style: TextStyle(color: ctx.colors.error)),
-                    onTap: () async {
-                      final ok = await showAppConfirmDialog(
-                        ctx,
-                        title: 'Đăng xuất?',
-                        message: 'Bạn sẽ cần nhập lại email và mật khẩu.',
-                        confirmLabel: 'Đăng xuất',
-                        destructive: true,
-                      );
-                      if (!ok) return;
-                      if (ctx.mounted) Navigator.pop(ctx);
-                      ref.read(authControllerProvider.notifier).signOut();
-                    },
-                  ),
-                ],
-              ),
-              Gaps.v8,
-              TextButton(
-                onPressed: () => _deleteAccount(ctx, ref),
-                style: TextButton.styleFrom(foregroundColor: ctx.colors.error),
-                child: const Text('Xoá tài khoản'),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
   String _displayName(String? email) {
     if (email == null || email.isEmpty) return 'Học viên';
     final name = email.split('@').first;
@@ -300,10 +163,10 @@ class _Greeting extends ConsumerWidget {
         children: [
           Semantics(
             button: true,
-            label: 'Tài khoản học viên: ${_displayName(email)}',
+            label: 'Trang cá nhân học viên: ${_displayName(email)}',
             child: InkWell(
-              onTap: () => _openAccount(context, ref, email, streak),
-              borderRadius: AppRadius.brFull,
+              onTap: () => context.push(Routes.profile),
+              borderRadius: AppRadius.brMd,
               child: Container(
                 padding: const EdgeInsets.fromLTRB(
                   AppSpacing.s4,
@@ -313,11 +176,7 @@ class _Greeting extends ConsumerWidget {
                 ),
                 decoration: BoxDecoration(
                   color: context.colors.surfaceContainerHighest.withValues(alpha: 0.6),
-                  borderRadius: AppRadius.brFull,
-                  border: Border.all(
-                    color: context.colors.outlineVariant.withValues(alpha: 0.5),
-                    width: 1,
-                  ),
+                  borderRadius: AppRadius.brMd,
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -346,7 +205,7 @@ class _Greeting extends ConsumerWidget {
                     ),
                     Gaps.h4,
                     Icon(
-                      Icons.keyboard_arrow_down_rounded,
+                      Icons.chevron_right_rounded,
                       size: AppSizes.iconSm,
                       color: context.colors.onSurfaceVariant,
                     ),

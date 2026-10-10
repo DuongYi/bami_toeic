@@ -46,13 +46,13 @@ abstract final class Gaps {
   static const h24 = SizedBox(width: AppSpacing.s24);
 }
 
-/// Bo góc (M3 shape scale).
+/// Bo góc (tinh chỉnh hiện đại, ít bo, sắc nét và cao cấp).
 abstract final class AppRadius {
   static const double xs = 4;
-  static const double sm = 8;
-  static const double md = 12;
-  static const double lg = 16;
-  static const double xl = 28;
+  static const double sm = 6;
+  static const double md = 8;
+  static const double lg = 12;
+  static const double xl = 16;
   static const double full = 999;
 
   static const brXs = BorderRadius.all(Radius.circular(xs));

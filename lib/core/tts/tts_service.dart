@@ -1,26 +1,30 @@
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../module/settings/presentation/controllers/settings_controller.dart';
+
 part 'tts_service.g.dart';
 
 /// Phát âm tiếng Anh bằng giọng đọc có sẵn của máy (không cần file audio).
 @Riverpod(keepAlive: true)
 TtsService ttsService(Ref ref) {
-  final s = TtsService(FlutterTts());
+  final speed = ref.watch(ttsSpeedProvider);
+  final s = TtsService(FlutterTts(), speed: speed);
   ref.onDispose(s.stop);
   return s;
 }
 
 class TtsService {
-  TtsService(this._tts);
+  TtsService(this._tts, {this.speed = 0.45});
 
   final FlutterTts _tts;
+  final double speed;
   Future<void>? _ready;
 
   Future<void> _init() async {
     await _tts.setLanguage('en-US');
-    // Chậm hơn mặc định một chút cho người học.
-    await _tts.setSpeechRate(0.45);
+    // Chậm hơn mặc định một chút cho người học hoặc theo thiết lập.
+    await _tts.setSpeechRate(speed);
     await _tts.awaitSpeakCompletion(false);
   }
 
