@@ -54,15 +54,18 @@ final class DioProvider extends $FunctionalProvider<Dio, Dio, Dio>
 String _$dioHash() => r'bebcc3b6a18e9e3bf56d2fe96bc53c5f63390437';
 
 /// Dio cho API bên ngoài (vd. từ điển Anh–Anh): không gắn apikey / token Supabase.
+/// Timeout ngắn: các dịch vụ này chỉ là phần bổ sung, sập thì báo lỗi nhanh thay vì treo màn hình.
 
 @ProviderFor(externalDio)
 final externalDioProvider = ExternalDioProvider._();
 
 /// Dio cho API bên ngoài (vd. từ điển Anh–Anh): không gắn apikey / token Supabase.
+/// Timeout ngắn: các dịch vụ này chỉ là phần bổ sung, sập thì báo lỗi nhanh thay vì treo màn hình.
 
 final class ExternalDioProvider extends $FunctionalProvider<Dio, Dio, Dio>
     with $Provider<Dio> {
   /// Dio cho API bên ngoài (vd. từ điển Anh–Anh): không gắn apikey / token Supabase.
+  /// Timeout ngắn: các dịch vụ này chỉ là phần bổ sung, sập thì báo lỗi nhanh thay vì treo màn hình.
   ExternalDioProvider._()
     : super(
         from: null,
@@ -96,4 +99,4 @@ final class ExternalDioProvider extends $FunctionalProvider<Dio, Dio, Dio>
   }
 }
 
-String _$externalDioHash() => r'5455f9dccffe6564229db7dffefb63b5da80675f';
+String _$externalDioHash() => r'd0e3a7907792f1660e1c67486e943c1859c18802';

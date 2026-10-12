@@ -197,7 +197,7 @@ final class EnEntriesProvider
     required EnEntriesFamily super.from,
     required String super.argument,
   }) : super(
-         retry: null,
+         retry: _noRetry,
          name: r'enEntriesProvider',
          isAutoDispose: true,
          dependencies: null,
@@ -237,7 +237,7 @@ final class EnEntriesProvider
   }
 }
 
-String _$enEntriesHash() => r'4aefcbe6f146a3cb41ef6d16bff6beac66a137a8';
+String _$enEntriesHash() => r'cb19152b39ca633e752fb7077adb0e1492cddc50';
 
 /// Định nghĩa Anh–Anh (API ngoài, có thể chậm/lỗi – chỉ là phần bổ sung).
 
@@ -245,7 +245,7 @@ final class EnEntriesFamily extends $Family
     with $FunctionalFamilyOverride<FutureOr<List<EnEntry>>, String> {
   EnEntriesFamily._()
     : super(
-        retry: null,
+        retry: _noRetry,
         name: r'enEntriesProvider',
         dependencies: null,
         $allTransitiveDependencies: null,
@@ -281,7 +281,7 @@ final class TranslationProvider
     required TranslationFamily super.from,
     required String super.argument,
   }) : super(
-         retry: null,
+         retry: _noRetry,
          name: r'translationProvider',
          isAutoDispose: true,
          dependencies: null,
@@ -321,7 +321,7 @@ final class TranslationProvider
   }
 }
 
-String _$translationHash() => r'a4b6dd895ce325da29be81509e2f570d489d14e7';
+String _$translationHash() => r'b30d1761cf427f17b7313e4c68c720cedec416c7';
 
 /// Dịch câu / đoạn Anh → Việt (Google Dịch).
 
@@ -329,7 +329,7 @@ final class TranslationFamily extends $Family
     with $FunctionalFamilyOverride<FutureOr<Translation>, String> {
   TranslationFamily._()
     : super(
-        retry: null,
+        retry: _noRetry,
         name: r'translationProvider',
         dependencies: null,
         $allTransitiveDependencies: null,

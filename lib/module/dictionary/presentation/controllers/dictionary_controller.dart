@@ -21,13 +21,16 @@ Future<List<DictSuggestion>> dictSuggestions(Ref ref, String query) =>
 Future<DictLookup> dictLookup(Ref ref, String query) =>
     ref.watch(dictionaryRepositoryProvider).lookup(query);
 
+/// API ngoài (Anh–Anh, Google Dịch): không tự thử lại – lỗi thì hiện ngay kèm nút Thử lại.
+Duration? _noRetry(int retryCount, Object error) => null;
+
 /// Định nghĩa Anh–Anh (API ngoài, có thể chậm/lỗi – chỉ là phần bổ sung).
-@riverpod
+@Riverpod(retry: _noRetry)
 Future<List<EnEntry>> enEntries(Ref ref, String word) =>
     ref.watch(dictionaryRepositoryProvider).english(word);
 
 /// Dịch câu / đoạn Anh → Việt (Google Dịch).
-@riverpod
+@Riverpod(retry: _noRetry)
 Future<Translation> translation(Ref ref, String text) =>
     ref.watch(translateRepositoryProvider).translate(text);
 

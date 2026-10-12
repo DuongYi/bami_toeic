@@ -46,12 +46,13 @@ Dio dio(Ref ref) {
 }
 
 /// Dio cho API bên ngoài (vd. từ điển Anh–Anh): không gắn apikey / token Supabase.
+/// Timeout ngắn: các dịch vụ này chỉ là phần bổ sung, sập thì báo lỗi nhanh thay vì treo màn hình.
 @Riverpod(keepAlive: true)
 Dio externalDio(Ref ref) {
   final dio = Dio(
     BaseOptions(
-      connectTimeout: const Duration(seconds: 10),
-      receiveTimeout: const Duration(seconds: 15),
+      connectTimeout: const Duration(seconds: 5),
+      receiveTimeout: const Duration(seconds: 8),
     ),
   );
   dio.interceptors.addAll([ErrorInterceptor(), NetworkLogInterceptor(tag: 'external')]);

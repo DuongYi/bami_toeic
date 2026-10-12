@@ -80,11 +80,18 @@ void showAppSnackBarOn(
 }
 
 /// Bottom sheet chuẩn: có drag handle, cuộn được, đẩy lên khi bàn phím mở.
-Future<T?> showAppBottomSheet<T>(BuildContext context, {required WidgetBuilder builder}) {
+/// Mặc định mở trên navigator gốc để phủ cả thanh tab nổi (`AppGlassTabBar`) của HomeShell –
+/// mở từ navigator của tab thì thanh tab vẽ đè lên đáy sheet.
+Future<T?> showAppBottomSheet<T>(
+  BuildContext context, {
+  required WidgetBuilder builder,
+  bool useRootNavigator = true,
+}) {
   return showModalBottomSheet<T>(
     context: context,
     isScrollControlled: true,
     useSafeArea: true,
+    useRootNavigator: useRootNavigator,
     builder: (ctx) => Padding(
       padding: EdgeInsets.only(bottom: MediaQuery.viewInsetsOf(ctx).bottom),
       child: builder(ctx),

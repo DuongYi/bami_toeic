@@ -6,6 +6,7 @@ import '../../../../core/design_system/design_system.dart';
 import '../../../../helper/format.dart';
 import '../../../../routes/app_router.dart';
 import '../../../auth/presentation/controllers/auth_controller.dart';
+import '../../../dictionary/presentation/widgets/dictionary_sheet.dart';
 import '../../../goals/presentation/controllers/study_progress.dart';
 import '../../../goals/presentation/widgets/goal_sheet.dart';
 import '../../../plan/presentation/controllers/plan_controller.dart';
@@ -237,6 +238,8 @@ class _Greeting extends ConsumerWidget {
                 active: isStreakActive,
                 onTap: () => showGoalSheet(context),
               ),
+              Gaps.h4,
+              const DictionaryButton(compact: true),
             ],
           ),
         ],
