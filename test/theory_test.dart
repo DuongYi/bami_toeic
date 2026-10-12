@@ -69,6 +69,36 @@ void main() {
     });
   });
 
+  group('Nội dung assets/theory/*.json', () {
+    final repo = TheoryRepository();
+    setUpAll(repo.loadTopics);
+
+    test('toàn vẹn: id duy nhất, quiz hợp lệ, ví dụ khớp highlight', () {
+      final topics = repo.getAllTopics();
+      final topicIds = <String>{};
+      final quizIds = <String>{};
+      for (final t in topics) {
+        expect(topicIds.add(t.id), true, reason: 'trùng id chủ điểm ${t.id}');
+        expect(t.sections, isNotEmpty, reason: '${t.id} không có section');
+        expect(['Cơ bản', 'Trung cấp', 'Nâng cao'], contains(t.difficulty), reason: t.id);
+        // Nhóm ngữ pháp: highlight là cụm cần tô trong câu. Mẹo thi / Phát âm dùng highlight làm ghi chú.
+        final grammar = t.category != TheoryCategory.strategy && t.category != TheoryCategory.pronunciation;
+        for (final e in t.examples.where((_) => grammar)) {
+          // Highlight dạng "a ... b" (mảnh rời) chỉ để tham khảo, không tô được → bỏ qua.
+          if (e.highlight case final h? when !h.contains('...') && !h.contains('->')) {
+            expect(e.english.contains(h), true, reason: '${t.id}: highlight "$h" không có trong câu');
+          }
+        }
+        for (final q in t.quiz) {
+          expect(quizIds.add(q.id), true, reason: 'trùng id quiz ${q.id}');
+          expect(q.options.length, inInclusiveRange(2, 4), reason: q.id);
+          expect(q.options.toSet().length, q.options.length, reason: '${q.id}: phương án trùng');
+          expect(q.answerIndex, inInclusiveRange(0, q.options.length - 1), reason: q.id);
+        }
+      }
+    });
+  });
+
   group('TheoryController Test', () {
     test('Lọc theo danh mục và tìm kiếm từ khóa', () async {
       final container = ProviderContainer();

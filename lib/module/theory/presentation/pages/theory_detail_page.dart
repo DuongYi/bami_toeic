@@ -435,6 +435,38 @@ class _SectionContentWidget extends StatelessWidget {
 }
 
 /// Thẻ ví dụ minh họa từ đề ETS
+/// Câu ví dụ tô nổi cụm ngữ pháp chính ([highlight]) khi cụm đó nằm liền trong câu.
+class _HighlightedSentence extends StatelessWidget {
+  const _HighlightedSentence({required this.text, this.highlight, this.style});
+
+  final String text;
+  final String? highlight;
+  final TextStyle? style;
+
+  @override
+  Widget build(BuildContext context) {
+    final h = highlight;
+    final i = h == null || h.isEmpty ? -1 : text.indexOf(h);
+    if (i < 0) return Text(text, style: style);
+    return Text.rich(
+      TextSpan(
+        children: [
+          TextSpan(text: text.substring(0, i)),
+          TextSpan(
+            text: h,
+            style: TextStyle(
+              color: context.colors.onPrimaryContainer,
+              backgroundColor: context.colors.primaryContainer,
+            ),
+          ),
+          TextSpan(text: text.substring(i + h!.length)),
+        ],
+      ),
+      style: style,
+    );
+  }
+}
+
 class _ExampleCard extends StatelessWidget {
   const _ExampleCard({required this.example});
 
@@ -475,8 +507,9 @@ class _ExampleCard extends StatelessWidget {
             ],
           ),
           Gaps.v8,
-          Text(
-            example.english,
+          _HighlightedSentence(
+            text: example.english,
+            highlight: example.highlight,
             style: context.textStyles.bodyLarge?.copyWith(
               fontWeight: FontWeight.w600,
               color: context.colors.onSurface,
