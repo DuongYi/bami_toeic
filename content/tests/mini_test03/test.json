@@ -130,7 +130,7 @@
           "options": [
             "Survey retail store managers",
             "Redesign the company's mobile shopping application",
-            "Contact a logistics courier about QR-code drop-offs",
+            "Contact a delivery company",
             "Issue refunds to unsatisfied shoppers"
           ],
           "answer": "C",
@@ -166,7 +166,7 @@
           "number": 72,
           "content": "What is available in the central atrium until 4:00 P.M.?",
           "options": [
-            "Complimentary artisan coffee drinks",
+            "Free hot beverages",
             "Automotive test drive bookings",
             "Live acoustic musical performances",
             "Free smartphone repair assessments"
@@ -184,7 +184,7 @@
             "By signing up for an email newsletter",
             "By filling out a customer satisfaction survey",
             "By applying for a department store credit card",
-            "By spending over fifty dollars at participating stores"
+            "By making a minimum purchase"
           ],
           "answer": "D",
           "explanation": "Thông báo: \"If you spend over fifty dollars at any participating store today, present your receipt ... to receive a free canvas shopping tote\" → Chọn (D).",
@@ -366,7 +366,7 @@
           "options": [
             "To install high-performance audio speakers",
             "To repair severe collision body damage",
-            "For a scheduled inspection and brake pad replacement",
+            "For routine maintenance work",
             "To test-drive a newly arrived Silverton sedan"
           ],
           "answer": "C",
@@ -380,7 +380,7 @@
           "content": "What will Apex Automotive do next month?",
           "options": [
             "Discontinue the promotional discount coupon program",
-            "Expand the waiting lounge and install faster internet",
+            "Enlarge its customer waiting area",
             "Relocate the auto repair shop to a new facility",
             "Hire additional mechanical technicians"
           ],

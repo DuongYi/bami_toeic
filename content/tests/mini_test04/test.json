@@ -99,7 +99,7 @@
           "content": "What discrepancy did Jason discover on the banquet invoice?",
           "options": [
             "A mandatory gratuity fee was omitted",
-            "The company was charged for thirty extra dinner plates",
+            "Too many meals were billed",
             "The date of the awards banquet was incorrect",
             "The event hall rental fee was doubled"
           ],
@@ -113,9 +113,9 @@
           "number": 33,
           "content": "How much is the cost discrepancy approximately?",
           "options": [
-            "Five hundred dollars",
-            "Three thousand dollars",
-            "Two hundred dollars",
+            "About five hundred dollars",
+            "Nearly three thousand dollars",
+            "Around two hundred dollars",
             "Over one thousand dollars"
           ],
           "answer": "D",
@@ -167,7 +167,7 @@
           "content": "What must supervisors use when preparing their submissions?",
           "options": [
             "An external audit evaluation software",
-            "The updated spreadsheet template on the intranet",
+            "A revised online template",
             "A proprietary mobile banking application",
             "A printed physical ledger from accounting"
           ],
@@ -184,7 +184,7 @@
             "A software training workshop on accounting tools",
             "An annual shareholder voting session",
             "A retirement luncheon for senior accountants",
-            "An open financial briefing with the executive board"
+            "A question-and-answer session"
           ],
           "answer": "D",
           "explanation": "Người nói nêu: \"...the executive board will host an open financial briefing on Wednesday morning...\" → Chọn (D).",
@@ -380,7 +380,7 @@
           "content": "When must the remaining balance of $10,400 be settled?",
           "options": [
             "On December 12",
-            "On or before November 28",
+            "By November 28",
             "By December 1",
             "On October 5"
           ],
@@ -403,7 +403,7 @@
             "They are the only vendor offering color photocopy machines",
             "They agreed to buy back old office furniture",
             "Their corporate headquarters is located next to Apex Studio",
-            "Lower monthly lease pricing and a rapid maintenance guarantee"
+            "Lower costs and faster repairs"
           ],
           "answer": "D",
           "explanation": "Ủy ban đề xuất Apex vì chi phí thuê hàng tháng thấp hơn 12% và cam kết phản hồi kỹ thuật trong vòng 4 tiếng (\"monthly lease rate ... 12% lower ... guarantees a four-hour on-site maintenance response time\") → Chọn (D).",
@@ -417,7 +417,7 @@
           "options": [
             "A further five percent discount on paper supplies",
             "Replacement of all office desktop computers",
-            "Complimentary installation and staff training in early January",
+            "Free setup and employee training",
             "An option to terminate the lease within six months"
           ],
           "answer": "C",

@@ -128,7 +128,7 @@
           "number": 34,
           "content": "How does the man propose to solve the schedule problem?",
           "options": [
-            "By recruiting interns to help assemble packets",
+            "By asking interns for help",
             "By printing new brochures in the office",
             "By contacting a different shipping vendor",
             "By rescheduling the client presentation"
@@ -168,7 +168,7 @@
           "options": [
             "Station parking lots will be closed for repaving.",
             "A new express route to Riverside will open.",
-            "Train service between two stations will be temporarily suspended.",
+            "Some train service will be suspended.",
             "Train ticket fares will increase by five percent."
           ],
           "answer": "C",
@@ -184,7 +184,7 @@
             "Discounted taxi vouchers",
             "Ferry transit vouchers",
             "Bicycle rental stations",
-            "Free shuttle buses every ten minutes"
+            "A shuttle bus service"
           ],
           "answer": "D",
           "explanation": "Thông báo nêu: \"Complimentary shuttle buses will operate outside Oakfield Station every ten minutes...\" → Chọn (D).",
@@ -381,7 +381,7 @@
           "options": [
             "Pay an expedited shipping surcharge upon driver arrival",
             "Return half of the ordered standing desks",
-            "Email customer support at least 24 hours before the delivery date",
+            "Send an e-mail one day in advance",
             "Visit the regional distribution warehouse in person"
           ],
           "answer": "C",
@@ -417,7 +417,7 @@
           "options": [
             "Postponing lunch service until 1:30 P.M.",
             "Replacing the hot buffet with cold sandwich platters",
-            "Serving the luncheon thirty minutes earlier at 12:00 P.M.",
+            "Serving lunch half an hour earlier",
             "Moving the dining area to an outdoor terrace"
           ],
           "answer": "C",
