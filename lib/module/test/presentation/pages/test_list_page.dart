@@ -493,11 +493,11 @@ class _QuickActions extends ConsumerWidget {
               Gaps.h12,
               Expanded(
                 child: _QuickAction(
-                  icon: Icons.timer_outlined,
+                  icon: Icons.auto_stories_rounded,
                   tone: AppTone.success,
-                  title: 'Thi thử 120p',
-                  subtitle: 'Bấm giờ như thi thật',
-                  onTap: () => context.go(Routes.tests),
+                  title: 'Lý thuyết & Mẹo thi',
+                  subtitle: 'Ngữ pháp, IPA, bẫy ETS',
+                  onTap: () => context.push(Routes.theory),
                 ),
               ),
             ],

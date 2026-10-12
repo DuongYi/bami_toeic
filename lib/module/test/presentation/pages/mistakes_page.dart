@@ -19,7 +19,16 @@ class MistakesPage extends ConsumerWidget {
     final mistakes = ref.watch(mistakesProvider);
     final count = mistakes.value?.length ?? 0;
     return Scaffold(
-      appBar: AppBar(title: const Text('Sổ câu sai')),
+      appBar: AppBar(
+        title: const Text('Sổ câu sai'),
+        actions: [
+          IconButton(
+            tooltip: 'Sổ tay lý thuyết & mẹo thi',
+            icon: const Icon(Icons.auto_stories_rounded),
+            onPressed: () => context.push(Routes.theory),
+          ),
+        ],
+      ),
       body: RefreshIndicator(
         onRefresh: () => ref.refresh(mistakesProvider.future),
         child: AsyncView(
@@ -109,6 +118,45 @@ class _MistakesBody extends StatelessWidget {
                   'Luyện lại sổ câu sai thường xuyên giúp tăng ngay 50–100 điểm bằng cách triệt tiêu các bẫy đề thi lặp lại.',
                   style: context.textStyles.bodySmall,
                 ),
+              ),
+            ],
+          ),
+        ),
+        Gaps.v12,
+        AppCard(
+          tone: AppTone.info,
+          onTap: () => context.push(Routes.theory),
+          child: Row(
+            children: [
+              const IconBadge(
+                icon: Icons.menu_book_rounded,
+                tone: AppTone.info,
+                size: AppSizes.badgeMd,
+              ),
+              Gaps.h12,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Ôn lại lý thuyết nền tảng',
+                      style: context.textStyles.titleSmall?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Gaps.v4,
+                    Text(
+                      'Xem lại các thì, mệnh đề, dạng từ và bẫy ETS để không lặp lại lỗi sai.',
+                      style: context.textStyles.bodySmall?.copyWith(
+                        color: context.colors.onSurfaceVariant,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Icon(
+                Icons.chevron_right_rounded,
+                color: context.colors.onSurfaceVariant,
               ),
             ],
           ),

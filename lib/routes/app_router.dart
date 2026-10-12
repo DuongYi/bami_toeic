@@ -22,6 +22,8 @@ import '../module/test/presentation/pages/result_page.dart';
 import '../module/test/presentation/pages/test_detail_page.dart';
 import '../module/test/presentation/pages/test_list_page.dart';
 import '../module/test/presentation/pages/test_taking_page.dart';
+import '../module/theory/presentation/pages/theory_detail_page.dart';
+import '../module/theory/presentation/pages/theory_home_page.dart';
 import '../module/vocab/data/practice.dart';
 import '../module/vocab/presentation/pages/flashcard_page.dart';
 import '../module/vocab/presentation/pages/practice_page.dart';
@@ -45,6 +47,9 @@ abstract final class Routes {
   static const debugLogs = '/debug/logs';
   static const profile = '/profile';
   static const settings = '/settings';
+  static const theory = '/theory';
+
+  static String theoryDetail(String id) => '/theory/$id';
 
   static String forgotPassword({String? email}) => email == null || email.isEmpty
       ? forgotPasswordPath
@@ -142,6 +147,16 @@ GoRouter router(Ref ref) {
         ),
       ),
       GoRoute(path: Routes.mistakes, builder: (_, _) => const MistakesPage()),
+      GoRoute(
+        path: Routes.theory,
+        builder: (_, _) => const TheoryHomePage(),
+        routes: [
+          GoRoute(
+            path: ':topicId',
+            builder: (_, s) => TheoryDetailPage(topicId: s.pathParameters['topicId']!),
+          ),
+        ],
+      ),
       GoRoute(path: Routes.profile, builder: (_, _) => const ProfilePage()),
       GoRoute(path: Routes.settings, builder: (_, _) => const SettingsPage()),
       GoRoute(path: Routes.adminUsers, builder: (_, _) => const AdminUsersPage()),
