@@ -250,6 +250,7 @@ class _TestTakingPageState extends ConsumerState<TestTakingPage> {
                   provider: _provider,
                   groupIndex: i,
                   isExam: isExam,
+                  onJumpToGroup: _goTo,
                 ),
               ),
             ),
@@ -275,22 +276,27 @@ class _GroupPage extends ConsumerWidget {
     required this.provider,
     required this.groupIndex,
     required this.isExam,
+    this.onJumpToGroup,
   });
 
   final TestTakingProvider provider;
   final int groupIndex;
   final bool isExam;
+  final ValueChanged<int>? onJumpToGroup;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final (group, answers, revealed, flagged) = ref.watch(
+    final (group, allGroups, answers, revealed, flagged) = ref.watch(
       provider.select((s) {
         final v = s.value!;
-        return (v.groups[groupIndex], v.answers, v.revealed, v.flagged);
+        return (v.groups[groupIndex], v.groups, v.answers, v.revealed, v.flagged);
       }),
     );
     return QuestionGroupView(
       group: group,
+      allGroups: allGroups,
+      currentGroupIndex: groupIndex,
+      onJumpToGroup: onJumpToGroup,
       answers: answers,
       onSelect: ref.read(provider.notifier).select,
       isRevealed: (q) => revealed.contains(q.id),

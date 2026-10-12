@@ -14,10 +14,13 @@ class AudioBar extends StatefulWidget {
   State<AudioBar> createState() => _AudioBarState();
 }
 
-class _AudioBarState extends State<AudioBar> {
+class _AudioBarState extends State<AudioBar> with AutomaticKeepAliveClientMixin {
   final _player = AudioPlayer();
   String? _error;
   static const _speeds = [0.75, 1.0, 1.25];
+
+  @override
+  bool get wantKeepAlive => true;
 
   @override
   void initState() {
@@ -51,6 +54,7 @@ class _AudioBarState extends State<AudioBar> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     final scheme = context.colors;
     if (_error != null) {
       return Card(

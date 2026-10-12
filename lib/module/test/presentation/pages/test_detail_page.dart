@@ -83,189 +83,246 @@ class _DetailBodyState extends ConsumerState<_DetailBody> {
     final s = widget.detail.summary;
     final parts = _perPart.keys.toList()..sort();
     final allSelected = _selected.length == parts.length;
-    final muted = context.textStyles.bodySmall?.copyWith(color: context.colors.onSurfaceVariant);
 
     return Scaffold(
       appBar: AppBar(),
-      body: ListView(
-        padding: const EdgeInsets.fromLTRB(AppSpacing.screen, 0, AppSpacing.screen, AppSpacing.s24),
-        children: [
-          // Thông tin đề thương mại hoá chuẩn ETS
-          AppHeroCard(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 860),
+          child: ListView(
+            padding: const EdgeInsets.fromLTRB(AppSpacing.screen, 0, AppSpacing.screen, AppSpacing.s24),
+            children: [
+              // Thông tin đề thương mại hoá chuẩn ETS
+              AppHeroCard(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: AppSpacing.s8,
-                        vertical: AppSpacing.s2,
-                      ),
-                      decoration: BoxDecoration(
-                        color: context.surfaces.onHero.withValues(alpha: 0.2),
-                        borderRadius: AppRadius.brFull,
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: AppSpacing.s8,
+                            vertical: AppSpacing.s4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: context.surfaces.onHero.withValues(alpha: 0.22),
+                            borderRadius: AppRadius.brFull,
+                            border: Border.all(
+                              color: context.surfaces.onHero.withValues(alpha: 0.35),
+                              width: 1,
+                            ),
+                          ),
+                          child: Text(
+                            '★ ${(s.source ?? 'Bami TOEIC').toUpperCase()}',
+                            style: context.textStyles.labelSmall?.copyWith(
+                              color: context.surfaces.onHero,
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: 0.5,
+                            ),
+                          ),
+                        ),
+                        if (!s.isFree) const ProBadge(mini: true),
+                      ],
+                    ),
+                    Gaps.v12,
+                    Semantics(
+                      header: true,
                       child: Text(
-                        '★ ${(s.source ?? 'Bami TOEIC').toUpperCase()}',
-                        style: context.textStyles.labelSmall?.copyWith(
+                        s.title,
+                        style: context.textStyles.headlineSmall?.copyWith(
                           color: context.surfaces.onHero,
                           fontWeight: FontWeight.w800,
-                          letterSpacing: 0.5,
                         ),
                       ),
                     ),
-                    if (!s.isFree) const ProBadge(mini: true),
+                    Gaps.v12,
+                    Wrap(
+                      spacing: AppSpacing.s8,
+                      runSpacing: AppSpacing.s4,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: AppSpacing.s12,
+                            vertical: AppSpacing.s4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: context.surfaces.onHero.withValues(alpha: 0.2),
+                            borderRadius: AppRadius.brFull,
+                            border: Border.all(
+                              color: context.surfaces.onHero.withValues(alpha: 0.35),
+                              width: 1,
+                            ),
+                          ),
+                          child: Text(
+                            '⏱ ${s.questionCount >= 100 ? "120 phút" : "15 phút"}',
+                            style: context.textStyles.labelSmall?.copyWith(
+                              color: context.surfaces.onHero,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: AppSpacing.s12,
+                            vertical: AppSpacing.s4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: context.surfaces.onHero.withValues(alpha: 0.2),
+                            borderRadius: AppRadius.brFull,
+                            border: Border.all(
+                              color: context.surfaces.onHero.withValues(alpha: 0.35),
+                              width: 1,
+                            ),
+                          ),
+                          child: Text(
+                            '📝 ${s.questionCount} câu hỏi',
+                            style: context.textStyles.labelSmall?.copyWith(
+                              color: context.surfaces.onHero,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: AppSpacing.s12,
+                            vertical: AppSpacing.s4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: context.surfaces.onHero.withValues(alpha: 0.2),
+                            borderRadius: AppRadius.brFull,
+                            border: Border.all(
+                              color: context.surfaces.onHero.withValues(alpha: 0.35),
+                              width: 1,
+                            ),
+                          ),
+                          child: Text(
+                            '📚 ${parts.length} Part đầy đủ',
+                            style: context.textStyles.labelSmall?.copyWith(
+                              color: context.surfaces.onHero,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
+              ),
+              if (s.description != null) ...[
                 Gaps.v12,
-                Semantics(
-                  header: true,
-                  child: Text(
-                    s.title,
-                    style: context.textStyles.headlineSmall?.copyWith(
-                      color: context.surfaces.onHero,
-                      fontWeight: FontWeight.w800,
-                    ),
+                Text(
+                  s.description!,
+                  style: context.textStyles.bodyMedium?.copyWith(
+                    color: context.colors.onSurfaceVariant,
+                    height: 1.4,
                   ),
                 ),
-                Gaps.v8,
-                Wrap(
-                  spacing: AppSpacing.s8,
-                  runSpacing: AppSpacing.s4,
+              ],
+              Gaps.v12,
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppSpacing.s16,
+                  vertical: AppSpacing.s12,
+                ),
+                decoration: BoxDecoration(
+                  color: context.colors.primaryContainer.withValues(alpha: 0.25),
+                  borderRadius: AppRadius.brLg,
+                  border: Border.all(
+                    color: context.colors.primary.withValues(alpha: 0.3),
+                    width: 1,
+                  ),
+                ),
+                child: Row(
                   children: [
                     Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: AppSpacing.s8,
-                        vertical: AppSpacing.s2,
-                      ),
+                      padding: const EdgeInsets.all(AppSpacing.s8),
                       decoration: BoxDecoration(
-                        color: context.surfaces.onHero.withValues(alpha: 0.15),
-                        borderRadius: AppRadius.brFull,
+                        color: context.colors.primary.withValues(alpha: 0.12),
+                        borderRadius: AppRadius.brSm,
                       ),
-                      child: Text(
-                        '⏱ ${s.questionCount >= 100 ? "120 phút" : "15 phút"}',
-                        style: context.textStyles.labelSmall?.copyWith(
-                          color: context.surfaces.onHero,
-                          fontWeight: FontWeight.w600,
-                        ),
+                      child: Icon(
+                        Icons.auto_awesome_rounded,
+                        color: context.colors.primary,
+                        size: AppSizes.iconSm,
                       ),
                     ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: AppSpacing.s8,
-                        vertical: AppSpacing.s2,
-                      ),
-                      decoration: BoxDecoration(
-                        color: context.surfaces.onHero.withValues(alpha: 0.15),
-                        borderRadius: AppRadius.brFull,
-                      ),
+                    Gaps.h12,
+                    Expanded(
                       child: Text(
-                        '📝 ${s.questionCount} câu hỏi',
-                        style: context.textStyles.labelSmall?.copyWith(
-                          color: context.surfaces.onHero,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: AppSpacing.s8,
-                        vertical: AppSpacing.s2,
-                      ),
-                      decoration: BoxDecoration(
-                        color: context.surfaces.onHero.withValues(alpha: 0.15),
-                        borderRadius: AppRadius.brFull,
-                      ),
-                      child: Text(
-                        '📚 ${parts.length} Part đầy đủ',
-                        style: context.textStyles.labelSmall?.copyWith(
-                          color: context.surfaces.onHero,
-                          fontWeight: FontWeight.w600,
+                        'Bami PRO hỗ trợ giải thích bẫy đề thi & lưu từ vựng trực tiếp vào Flashcard.',
+                        style: context.textStyles.bodySmall?.copyWith(
+                          color: context.colors.onSurface,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                     ),
                   ],
                 ),
+              ),
+              if (ref.watch(inProgressProvider(s.id)).value case final snap?) ...[
+                Gaps.v16,
+                _ResumeCard(snapshot: snap),
               ],
-            ),
-          ),
-          if (s.description != null) ...[Gaps.v12, Text(s.description!, style: muted)],
-          Gaps.v12,
-          AppCard(
-            tone: AppTone.info,
-            child: Row(
-              children: [
-                Icon(
-                  Icons.auto_awesome_rounded,
-                  color: context.colors.primary,
-                  size: AppSizes.iconMd,
+              Gaps.v24,
+              const SectionHeader(title: 'Chế độ'),
+              ChoiceCard(
+                icon: Icons.lightbulb_outline_rounded,
+                title: 'Luyện tập',
+                subtitle: 'Hiện đáp án và giải thích ngay. Không giới hạn thời gian.',
+                selected: _mode == 'practice',
+                onTap: () => setState(() => _mode = 'practice'),
+              ),
+              Gaps.v8,
+              ChoiceCard(
+                icon: Icons.timer_outlined,
+                title: 'Thi thử',
+                subtitle: 'Tính giờ như thi thật (120 phút / 200 câu), chấm khi nộp.',
+                selected: _mode == 'exam',
+                onTap: () => setState(() => _mode = 'exam'),
+              ),
+              Gaps.v24,
+              SectionHeader(
+                title: 'Chọn Part',
+                subtitle: 'Đã chọn $_count câu',
+                trailing: TextButton(
+                  onPressed: () => setState(() => _selected = allSelected ? {} : parts.toSet()),
+                  child: Text(allSelected ? 'Bỏ chọn' : 'Chọn tất cả'),
                 ),
-                Gaps.h12,
-                Expanded(
-                  child: Text(
-                    'Bami PRO hỗ trợ giải thích bẫy đề thi & lưu từ vựng trực tiếp vào Flashcard.',
-                    style: context.textStyles.bodySmall,
-                  ),
+              ),
+              for (final p in parts) ...[
+                ChoiceCard(
+                  multiSelect: true,
+                  icon: p <= 4 ? Icons.headphones_rounded : Icons.chrome_reader_mode_outlined,
+                  title: partNames[p] ?? 'Part $p',
+                  subtitle: '${_perPart[p]} câu · ${p <= 4 ? 'Listening' : 'Reading'}',
+                  selected: _selected.contains(p),
+                  onTap: () =>
+                      setState(() => _selected.contains(p) ? _selected.remove(p) : _selected.add(p)),
                 ),
+                Gaps.v8,
               ],
-            ),
+              Gaps.v16,
+              _OfflineTile(testId: s.id),
+            ],
           ),
-          if (ref.watch(inProgressProvider(s.id)).value case final snap?) ...[
-            Gaps.v16,
-            _ResumeCard(snapshot: snap),
-          ],
-          Gaps.v24,
-          const SectionHeader(title: 'Chế độ'),
-          ChoiceCard(
-            icon: Icons.lightbulb_outline_rounded,
-            title: 'Luyện tập',
-            subtitle: 'Hiện đáp án và giải thích ngay. Không giới hạn thời gian.',
-            selected: _mode == 'practice',
-            onTap: () => setState(() => _mode = 'practice'),
-          ),
-          Gaps.v8,
-          ChoiceCard(
-            icon: Icons.timer_outlined,
-            title: 'Thi thử',
-            subtitle: 'Tính giờ như thi thật (120 phút / 200 câu), chấm khi nộp.',
-            selected: _mode == 'exam',
-            onTap: () => setState(() => _mode = 'exam'),
-          ),
-          Gaps.v24,
-          SectionHeader(
-            title: 'Chọn Part',
-            subtitle: 'Đã chọn $_count câu',
-            trailing: TextButton(
-              onPressed: () => setState(() => _selected = allSelected ? {} : parts.toSet()),
-              child: Text(allSelected ? 'Bỏ chọn' : 'Chọn tất cả'),
-            ),
-          ),
-          for (final p in parts) ...[
-            ChoiceCard(
-              multiSelect: true,
-              icon: p <= 4 ? Icons.headphones_rounded : Icons.chrome_reader_mode_outlined,
-              title: partNames[p] ?? 'Part $p',
-              subtitle: '${_perPart[p]} câu · ${p <= 4 ? 'Listening' : 'Reading'}',
-              selected: _selected.contains(p),
-              onTap: () =>
-                  setState(() => _selected.contains(p) ? _selected.remove(p) : _selected.add(p)),
-            ),
-            Gaps.v8,
-          ],
-          Gaps.v16,
-          _OfflineTile(testId: s.id),
-        ],
+        ),
       ),
-      bottomNavigationBar: AppBottomBar(
-        child: AppPrimaryButton(
-          icon: Icons.play_arrow_rounded,
-          label: _selected.isEmpty ? 'Chọn ít nhất 1 Part' : 'Bắt đầu · $_count câu',
-          onPressed: _selected.isEmpty
-              ? null
-              : () =>
-                    context.push(Routes.take(s.id, mode: _mode, parts: _selected.toList()..sort())),
+      bottomNavigationBar: Center(
+        heightFactor: 1,
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 860),
+          child: AppBottomBar(
+            child: AppPrimaryButton(
+              icon: Icons.play_arrow_rounded,
+              label: _selected.isEmpty ? 'Chọn ít nhất 1 Part' : 'Bắt đầu · $_count câu',
+              onPressed: _selected.isEmpty
+                  ? null
+                  : () => context.push(
+                        Routes.take(s.id, mode: _mode, parts: _selected.toList()..sort()),
+                      ),
+            ),
+          ),
         ),
       ),
     );
@@ -293,10 +350,28 @@ class _ResumeCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final snap = snapshot;
-    final muted = context.textStyles.bodySmall?.copyWith(color: context.colors.onSurfaceVariant);
     final clock = Fmt.clock(Duration(seconds: snap.clockSeconds));
-    return AppCard(
-      tone: AppTone.info,
+    final percent = snap.totalQuestions == 0
+        ? 0
+        : ((snap.answers.length / snap.totalQuestions) * 100).round();
+
+    return Container(
+      decoration: BoxDecoration(
+        color: context.surfaces.raised,
+        borderRadius: AppRadius.brLg,
+        border: Border.all(
+          color: context.colors.primary.withValues(alpha: 0.35),
+          width: 1.5,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: context.colors.shadow.withValues(alpha: 0.06),
+            blurRadius: 10,
+            offset: const Offset(0, 3),
+          ),
+        ],
+      ),
+      padding: const EdgeInsets.all(AppSpacing.s16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -305,47 +380,78 @@ class _ResumeCard extends ConsumerWidget {
               IconBadge(
                 icon: snap.isExam ? Icons.timer_outlined : Icons.lightbulb_outline_rounded,
                 size: AppSizes.badgeMd,
+                tone: AppTone.info,
               ),
               Gaps.h12,
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Đang làm dở', style: context.textStyles.titleMedium),
+                    Text(
+                      'Đang làm dở',
+                      style: context.textStyles.titleMedium?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: context.colors.onSurface,
+                      ),
+                    ),
+                    Gaps.v4,
                     Text(
                       [
                         snap.isExam ? 'Thi thử · còn $clock' : 'Luyện tập · $clock',
                         'Part ${snap.parts.join(', ')}',
                         'Lưu ${Fmt.dateTime(snap.savedAt.toLocal())}',
                       ].join(' · '),
-                      style: muted,
+                      style: context.textStyles.bodySmall?.copyWith(
+                        color: context.colors.onSurfaceVariant,
+                      ),
                     ),
                   ],
                 ),
               ),
             ],
           ),
-          Gaps.v12,
-          LabeledProgress(
-            label: 'Đã làm',
-            value: snap.totalQuestions == 0 ? 0 : snap.answers.length / snap.totalQuestions,
-            trailing: '${snap.answers.length}/${snap.totalQuestions}',
+          Gaps.v16,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Tiến độ làm bài',
+                style: context.textStyles.labelMedium?.copyWith(
+                  fontWeight: FontWeight.w600,
+                  color: context.colors.onSurface,
+                ),
+              ),
+              Text(
+                '${snap.answers.length}/${snap.totalQuestions} câu ($percent%)',
+                style: context.textStyles.labelMedium?.copyWith(
+                  fontWeight: FontWeight.bold,
+                  color: context.colors.primary,
+                ),
+              ),
+            ],
           ),
-          Gaps.v12,
+          Gaps.v8,
+          AppProgressBar(
+            value: snap.totalQuestions == 0 ? 0 : snap.answers.length / snap.totalQuestions,
+            tone: AppTone.info,
+          ),
+          Gaps.v16,
           Row(
             children: [
               Expanded(
-                child: OutlinedButton(
+                child: OutlinedButton.icon(
+                  icon: const Icon(Icons.restart_alt_rounded),
                   onPressed: () => _discard(context, ref),
-                  child: const Text('Làm lại từ đầu'),
+                  label: const Text('Làm lại từ đầu'),
                 ),
               ),
               Gaps.h8,
               Expanded(
-                child: FilledButton.tonalIcon(
+                child: FilledButton.icon(
                   icon: const Icon(Icons.play_arrow_rounded),
-                  onPressed: () =>
-                      context.push(Routes.take(snap.testId, mode: snap.mode, parts: snap.parts)),
+                  onPressed: () => context.push(
+                    Routes.take(snap.testId, mode: snap.mode, parts: snap.parts),
+                  ),
                   label: const Text('Tiếp tục'),
                 ),
               ),

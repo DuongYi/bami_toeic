@@ -40,9 +40,12 @@ class ChoiceCard extends StatelessWidget {
       child: AnimatedContainer(
         duration: AppMotion.of(context, AppMotion.short),
         decoration: BoxDecoration(
-          color: selected ? cs.primaryContainer.withValues(alpha: 0.45) : context.surfaces.raised,
+          color: selected ? cs.primaryContainer.withValues(alpha: 0.35) : context.surfaces.raised,
           borderRadius: AppRadius.brLg,
-          border: selected ? Border.all(color: cs.primary, width: 2) : null,
+          border: Border.all(
+            color: selected ? cs.primary : cs.outlineVariant,
+            width: selected ? 2 : 1,
+          ),
           boxShadow: [
             BoxShadow(
               color: cs.shadow.withValues(alpha: selected ? 0.08 : 0.04),
@@ -68,20 +71,28 @@ class ChoiceCard extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(title, style: context.textStyles.titleMedium),
-                        if (subtitle != null)
+                        Text(
+                          title,
+                          style: context.textStyles.titleMedium?.copyWith(
+                            fontWeight: selected ? FontWeight.bold : FontWeight.w600,
+                            color: cs.onSurface,
+                          ),
+                        ),
+                        if (subtitle != null) ...[
+                          Gaps.v4,
                           Text(
                             subtitle!,
                             style: context.textStyles.bodySmall?.copyWith(
                               color: cs.onSurfaceVariant,
                             ),
                           ),
+                        ],
                       ],
                     ),
                   ),
                   if (trailing != null) ...[Gaps.h8, trailing!],
                   Gaps.h8,
-                  Icon(indicator, color: selected ? cs.primary : cs.outline),
+                  Icon(indicator, color: selected ? cs.primary : cs.onSurfaceVariant),
                 ],
               ),
             ),
