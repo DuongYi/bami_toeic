@@ -42,6 +42,8 @@ dev_dependencies:
   json_serializable: ^6.14.1
   freezed: ^4.0.2
   riverpod_generator: ^4.0.9
+  integration_test:
+    sdk: flutter
 
 flutter_launcher_icons:
   android: "launcher_icon"
