@@ -49,7 +49,6 @@ void main() async {
 
     // 2. Tạo hình ảnh Part 1 và audio Part 1 - 4
     for (final g in t.groups) {
-      final part = g['part'] as int;
       final image = g['image'] as String?;
       final audio = g['audio'] as String?;
       final svgContent = g['_svg'] as String?;

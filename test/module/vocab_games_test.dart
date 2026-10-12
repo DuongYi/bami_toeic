@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:bami_toeic/core/design_system/design_system.dart';
 import 'package:bami_toeic/module/vocab/data/game_logic.dart';
-import 'package:bami_toeic/module/vocab/data/models/game_models.dart';
 import 'package:bami_toeic/module/vocab/data/models/vocab_models.dart';
 import 'package:bami_toeic/module/vocab/presentation/controllers/vocab_controller.dart';
 import 'package:bami_toeic/module/vocab/presentation/pages/word_match_game_page.dart';
