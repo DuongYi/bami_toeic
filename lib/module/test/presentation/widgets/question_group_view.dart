@@ -702,7 +702,7 @@ class _AnswerSheetColumnState extends State<_AnswerSheetColumn> {
                   padding: const EdgeInsets.only(bottom: AppSpacing.s8),
                   child: AnswerOption(
                     letter: letter,
-                    text: q.optionText(optIdx),
+                    text: audioOnly(q, revealed: isRev) ? '' : q.optionText(optIdx),
                     selected: chosen == letter,
                     result: !isRev
                         ? null
@@ -899,6 +899,10 @@ class _OmrCompactRow extends StatelessWidget {
   }
 }
 
+/// Part 1/2 thi bằng tai: câu hỏi và phương án chỉ nằm trong audio. Dù dữ liệu lỡ có chữ
+/// (đề nhập sai) cũng không hiện khi chưa xem đáp án – tránh lộ đáp án.
+bool audioOnly(Question q, {required bool revealed}) => q.part <= 2 && !revealed;
+
 class _QuestionTile extends StatelessWidget {
   const _QuestionTile({
     required this.question,
@@ -933,7 +937,7 @@ class _QuestionTile extends StatelessWidget {
           fontWeight: FontWeight.w600,
         );
 
-    final fullQuestionText = '${q.number}. ${q.content ?? ''}';
+    final fullQuestionText = '${q.number}. ${audioOnly(q, revealed: revealed) ? '' : q.content ?? ''}';
 
     return Padding(
       padding: EdgeInsets.zero,
@@ -980,7 +984,7 @@ class _QuestionTile extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: AppSpacing.s8),
               child: AnswerOption(
                 letter: letter,
-                text: q.optionText(i),
+                text: audioOnly(q, revealed: revealed) ? '' : q.optionText(i),
                 selected: chosen == letter,
                 result: !revealed
                     ? null

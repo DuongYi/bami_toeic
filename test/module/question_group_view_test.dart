@@ -332,4 +332,43 @@ void main() {
       expect(find.text('Bỏ highlight'), findsOneWidget);
     });
   });
+
+  group('Part 1/2 chỉ nghe', () {
+    const leaky = Question(
+      id: 'p2',
+      part: 2,
+      number: 7,
+      content: 'Where is the meeting?',
+      options: ['In room 5.', 'Yes, I did.', 'At noon.'],
+      answer: 'A',
+    );
+    final group = QuestionGroup(
+      id: 'g2',
+      part: 2,
+      orderNo: 7,
+      audioUrl: 'https://example.com/a07.m4a',
+      questions: const [leaky],
+    );
+
+    testWidgets('chưa xem đáp án → không hiện chữ câu hỏi / phương án dù dữ liệu có', (
+      tester,
+    ) async {
+      await tester.pumpWidget(
+        _wrap(QuestionGroupView(group: group, answers: const {}, onSelect: (_, _) {})),
+      );
+      await tester.pump();
+      expect(find.textContaining('Where is the meeting?'), findsNothing);
+      expect(find.text('In room 5.'), findsNothing);
+      expect(find.text('A'), findsOneWidget); // vẫn có nút chọn A/B/C
+      expect(find.text('C'), findsOneWidget);
+    });
+
+    testWidgets('đã xem đáp án → hiện lại chữ để đối chiếu', (tester) async {
+      await tester.pumpWidget(
+        _wrap(QuestionGroupView(group: group, answers: const {'p2': 'B'}, isRevealed: (_) => true)),
+      );
+      await tester.pump();
+      expect(find.text('In room 5.'), findsOneWidget);
+    });
+  });
 }
