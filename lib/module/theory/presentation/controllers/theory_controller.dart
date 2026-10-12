@@ -85,20 +85,21 @@ class TheoryController extends Notifier<TheoryState> {
   @override
   TheoryState build() {
     final repo = ref.watch(theoryRepositoryProvider);
-    final topics = repo.getAllTopics();
     _loadUserProgress();
-    return TheoryState(allTopics: topics, isLoading: true);
+    return TheoryState(allTopics: repo.getAllTopics(), isLoading: true);
   }
 
   TheoryRepository get _repo => ref.read(theoryRepositoryProvider);
 
   Future<void> _loadUserProgress() async {
     try {
+      final topics = await _repo.loadTopics();
       final completed = await _repo.getCompletedTopicIds();
       final bookmarks = await _repo.getBookmarkedTopicIds();
       final scores = await _repo.getQuizScores();
       if (!ref.mounted) return;
       state = state.copyWith(
+        allTopics: topics,
         completedIds: completed,
         bookmarkedIds: bookmarks,
         quizScores: scores,

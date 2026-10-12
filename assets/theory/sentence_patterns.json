@@ -1,0 +1,1198 @@
+[
+  {
+    "id": "pattern-conditionals",
+    "category": "sentencePatterns",
+    "title": "Câu điều kiện loại 0, 1, 2, 3 & Đảo ngữ câu điều kiện",
+    "subtitle": "Công thức 4 loại câu điều kiện & Dấu hiệu Should / Were / Had đảo ngữ",
+    "read_time_minutes": 7,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "conditionals",
+      "inversion"
+    ],
+    "overview": "Câu điều kiện là cấu trúc trọng tâm trong TOEIC. Đặc biệt, đề thi rất thích ra dạng đảo ngữ câu điều kiện (bỏ If đưa trợ động từ lên đầu).",
+    "sections": [
+      {
+        "title": "1. Câu điều kiện loại 1 & Đảo ngữ với Should",
+        "content": "Diễn tả giả định có thể xảy ra ở hiện tại hoặc tương lai.",
+        "formula": "If + S + V(hiện tại), S + will/can + V_inf\nĐảo ngữ: Should + S + V_inf, S + will/can + V_inf",
+        "bullet_points": [
+          "Khi thấy đầu câu có \"Should\" và cuối câu không có dấu hỏi chấm \"?\" -> Đó là đảo ngữ câu điều kiện loại 1!",
+          "Động từ sau chủ ngữ luôn ở dạng nguyên mẫu: \"Should you have any questions, please contact us.\""
+        ],
+        "tips": [
+          "Trong email công việc: \"Should you need further assistance\" thay cho \"If you need further assistance\"."
+        ]
+      },
+      {
+        "title": "2. Câu điều kiện loại 2 & 3 và Đảo ngữ",
+        "content": "Loại 2 giả định trái với hiện tại; Loại 3 giả định trái với quá khứ.",
+        "formula": "Loại 2: If + S + V2/were, S + would + V_inf (Đảo ngữ: Were + S + to V / Were + S + Adj)\nLoại 3: If + S + had V3, S + would have V3 (Đảo ngữ: Had + S + V3, S + would have V3)",
+        "bullet_points": [
+          "Đảo ngữ loại 3 xuất hiện ở các câu Part 5 nâng cao: \"Had the flight not been delayed, we would have attended the opening ceremony.\""
+        ],
+        "tips": [
+          "Cụm từ tương đương: \"Provided that / As long as\" mang nghĩa như \"If\"; \"Unless\" = \"If not\"."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Should you require any additional information, please do not hesitate to reach out.",
+        "vietnamese": "Nếu bạn cần thêm bất kỳ thông tin nào, xin đừng ngần ngại liên hệ.",
+        "explanation": "Đảo ngữ câu điều kiện loại 1: Đưa \"Should\" lên đầu câu, động từ \"require\" giữ nguyên mẫu.",
+        "highlight": "Should you require ... please do not hesitate",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-cond-1",
+        "question": "_______ you experience any technical difficulties, our support hotline is available 24/7.",
+        "options": [
+          "Unless",
+          "Should",
+          "Whether",
+          "Although"
+        ],
+        "answer_index": 1,
+        "explanation": "Đầu câu có động từ nguyên thể \"experience\", vế sau là câu điều kiện -> đảo ngữ với \"Should\"."
+      },
+      {
+        "id": "q-cond-2",
+        "question": "Had we known about the scheduling conflict, we _______ the conference date.",
+        "options": [
+          "change",
+          "will change",
+          "would have changed",
+          "have changed"
+        ],
+        "answer_index": 2,
+        "explanation": "Đảo ngữ câu điều kiện loại 3 \"Had we known\" -> mệnh đề chính dùng \"would have changed\"."
+      }
+    ]
+  },
+  {
+    "id": "pattern-passive-voice",
+    "category": "sentencePatterns",
+    "title": "Thể Bị động toàn diện & Bị động đặc biệt",
+    "subtitle": "Nhận biết tân ngữ, nội động từ không bị động & Cấu trúc Have/Get sth done",
+    "read_time_minutes": 7,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "passive",
+      "verb-form"
+    ],
+    "overview": "Để làm nhanh câu chủ động / bị động trong 5 giây: Nhìn phía sau chỗ trống có Tân ngữ (danh từ) hay không. Nếu có tân ngữ -> thường là Chủ động; nếu không có tân ngữ (chỉ có giới từ/trạng từ) -> Bị động.",
+    "sections": [
+      {
+        "title": "1. Quy tắc xác định Bị động nhanh",
+        "content": "Công thức chung của câu bị động luôn có dạng Be + V3/ed.",
+        "formula": "S + be + V3/ed (+ by O)",
+        "bullet_points": [
+          "Động từ khiếm khuyết bị động: modal + be + V3 (can be installed, must be submitted).",
+          "Hiện tại hoàn thành bị động: have/has been + V3 (has been approved).",
+          "Hiện tại tiếp diễn bị động: is/are being + V3 (is being repaired)."
+        ],
+        "tips": [
+          "NGOẠI LỆ SỐNG CÒN: Các nội động từ (Intransitive verbs) KHÔNG BAO GIỜ chia bị động: happen, occur, arrive, remain, exist, expire, disappear, participate."
+        ]
+      },
+      {
+        "title": "2. Cấu trúc Bị động đặc biệt",
+        "content": "Cấu trúc nhờ vả và bị động của động từ tường thuật.",
+        "formula": "Have/Get sth done (nhờ/thuê ai làm gì)\nIt is believed/reported/expected that...",
+        "bullet_points": [
+          "Ví dụ: \"We will have the air conditioning system inspected next week.\" (inspected chia V3 vì bổ nghĩa cho vật air conditioning)."
+        ],
+        "tips": [
+          "Cấu trúc: \"be expected to V\", \"be required to V\", \"be scheduled to V\" gặp cực nhiều trong TOEIC."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "All expense reports must be submitted to the finance department by Friday.",
+        "vietnamese": "Tất cả các báo cáo chi phí phải được nộp cho phòng tài chính trước thứ Sáu.",
+        "explanation": "Chủ ngữ \"expense reports\" là vật, không tự nộp -> chia bị động \"must be submitted\".",
+        "highlight": "must be submitted to",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-pass-1",
+        "question": "The defective machinery is currently _______ by certified technicians.",
+        "options": [
+          "repair",
+          "repaired",
+          "being repaired",
+          "repairing"
+        ],
+        "answer_index": 2,
+        "explanation": "Chủ ngữ máy móc đang được sửa chữa bởi kỹ thuật viên -> chia hiện tại tiếp diễn bị động \"being repaired\"."
+      },
+      {
+        "id": "q-pass-2",
+        "question": "The product warranty _______ at the end of next month.",
+        "options": [
+          "is expired",
+          "expires",
+          "has been expired",
+          "will be expired"
+        ],
+        "answer_index": 1,
+        "explanation": "\"expire\" là nội động từ, KHÔNG chia bị động -> chọn \"expires\" (hoặc will expire)."
+      }
+    ]
+  },
+  {
+    "id": "pattern-relative-clauses",
+    "category": "sentencePatterns",
+    "title": "Mệnh đề quan hệ & Rút gọn mệnh đề quan hệ",
+    "subtitle": "Who, Whom, Which, That, Whose & Rút gọn V-ing / V3",
+    "read_time_minutes": 7,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "relative-clause",
+      "participle"
+    ],
+    "overview": "Kỹ năng rút gọn mệnh đề quan hệ thành cụm phân từ (Present & Past Participles) là chìa khóa giải quyết các câu Part 5 dài và phức tạp.",
+    "sections": [
+      {
+        "title": "1. Đại từ quan hệ cơ bản",
+        "content": "Nối hai mệnh đề với nhau dựa trên danh từ đứng trước.",
+        "formula": "N_person + WHO + V | N_person + WHOM + S + V\nN_thing + WHICH + V/S + V\nN + WHOSE + Noun (chỉ sở hữu)",
+        "bullet_points": [
+          "That có thể thay cho Who/Which trong mệnh đề xác định (không có dấu phẩy).",
+          "Không dùng \"that\" sau dấu phẩy hoặc sau giới từ."
+        ],
+        "tips": [
+          "Whose luôn đi kèm một danh từ không có mạo từ: \"the applicant whose resume was impressive\"."
+        ]
+      },
+      {
+        "title": "2. Rút gọn mệnh đề quan hệ (Cực kỳ quan trọng)",
+        "content": "Lược bỏ đại từ quan hệ và to be, biến đổi động từ.",
+        "formula": "Chủ động -> V-ing | Bị động -> V3/ed",
+        "bullet_points": [
+          "Chủ động: \"Passengers who travel overseas\" -> \"Passengers traveling overseas\".",
+          "Bị động: \"Items which are purchased online\" -> \"Items purchased online\"."
+        ],
+        "tips": [
+          "Bẫy: Trong câu đã có động từ chính rồi, chỗ trống bổ nghĩa cho danh từ đứng trước chỉ có thể là V-ing (chủ động) hoặc V3 (bị động)."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Anyone interested in attending the leadership seminar should register online.",
+        "vietnamese": "Bất kỳ ai quan tâm đến việc tham gia hội thảo lãnh đạo nên đăng ký trực tuyến.",
+        "explanation": "Rút gọn từ \"Anyone who is interested in\" -> \"Anyone interested in\".",
+        "highlight": "Anyone interested in ... should register",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-rel-1",
+        "question": "Candidates _______ a degree in computer engineering are encouraged to apply.",
+        "options": [
+          "holding",
+          "held",
+          "hold",
+          "are holding"
+        ],
+        "answer_index": 0,
+        "explanation": "Câu đã có vị ngữ chính \"are encouraged\". Chỗ trống rút gọn mệnh đề quan hệ chủ động \"who hold\" -> chọn \"holding\"."
+      },
+      {
+        "id": "q-rel-2",
+        "question": "We need to hire an IT manager _______ expertise includes cloud architecture.",
+        "options": [
+          "who",
+          "whom",
+          "whose",
+          "which"
+        ],
+        "answer_index": 2,
+        "explanation": "Sau chỗ trống là danh từ \"expertise\" (chuyên môn của người đó) -> chọn đại từ sở hữu \"whose\"."
+      }
+    ]
+  },
+  {
+    "id": "pattern-inversion",
+    "category": "sentencePatterns",
+    "title": "Cấu trúc Đảo ngữ nâng cao trong đề TOEIC",
+    "subtitle": "Đảo ngữ với trạng từ phủ định, Only when & Cụm giới từ vị trí",
+    "read_time_minutes": 6,
+    "difficulty": "Nâng cao",
+    "tags": [
+      "inversion",
+      "sentence-structure"
+    ],
+    "overview": "Đảo ngữ xảy ra khi trạng từ phủ định hoặc bán phủ định được đẩy lên đầu câu nhằm mục đích nhấn mạnh. Lúc này ta mượn trợ động từ đảo lên trước chủ ngữ.",
+    "sections": [
+      {
+        "title": "1. Đảo ngữ với Trạng từ phủ định",
+        "content": "Khi các từ phủ định đứng đầu câu, đảo Trợ động từ / To be / Modal lên trước Chủ ngữ.",
+        "formula": "Negative Word + Trợ động từ + S + V_inf",
+        "bullet_points": [
+          "Từ phủ định: Seldom, Rarely, Hardly, Scarcely, Barely, Never, Little.",
+          "Cụm phủ định: At no time, Under no circumstances, In no way.",
+          "Ví dụ: \"Seldom does our company launch a product without extensive beta testing.\""
+        ],
+        "tips": [
+          "Cấu trúc vừa mới... thì đã: \"Hardly had S + V3 when S + V2\" / \"No sooner had S + V3 than S + V2\"."
+        ]
+      },
+      {
+        "title": "2. Đảo ngữ với ONLY",
+        "content": "Only after, Only when, Only by đứng đầu câu thì mệnh đề chính phía sau sẽ đảo ngữ.",
+        "formula": "Only after / Only when + S + V, Trợ động từ + S + V_inf",
+        "bullet_points": [
+          "\"Only after reviewing the feedback did the team finalize the design.\""
+        ],
+        "tips": [
+          "Lưu ý: Mệnh đề ngay sau Only KHÔNG đảo, chỉ đảo ngữ ở mệnh đề chính phía sau."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Under no circumstances should confidential client files be removed from the office.",
+        "vietnamese": "Dưới bất kỳ hoàn cảnh nào, tài liệu bảo mật của khách hàng cũng không được mang ra khỏi văn phòng.",
+        "explanation": "\"Under no circumstances\" đứng đầu câu -> đảo trợ động từ \"should\" lên trước chủ ngữ \"confidential client files\".",
+        "highlight": "Under no circumstances should ... be removed",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-inv-1",
+        "question": "Rarely _______ such a comprehensive warranty offered on commercial equipment.",
+        "options": [
+          "is",
+          "are",
+          "has",
+          "will"
+        ],
+        "answer_index": 0,
+        "explanation": "\"Rarely\" đứng đầu câu đảo ngữ. Chủ ngữ là \"such a comprehensive warranty\" (số ít) -> chọn \"is\"."
+      }
+    ]
+  },
+  {
+    "id": "pattern-comparisons",
+    "category": "sentencePatterns",
+    "title": "Cấu trúc So sánh (Bằng, Hơn, Nhất & Càng... càng)",
+    "subtitle": "Từ nhấn mạnh so sánh hơn (Much, Far) & So sánh kép",
+    "read_time_minutes": 6,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "comparisons",
+      "adjective",
+      "adverb"
+    ],
+    "overview": "So sánh xuất hiện thường xuyên ở Part 5. Đề bài hay kiểm tra từ bổ nghĩa cho so sánh hơn hoặc dạng so sánh kép \"The more... the more...\".",
+    "sections": [
+      {
+        "title": "1. So sánh bằng, hơn, nhất",
+        "content": "Quy tắc chia tính từ/trạng từ ngắn và dài.",
+        "formula": "Bằng: as + adj/adv + as\nHơn: adj-er / more + adj + than\nNhất: the + adj-est / the most + adj",
+        "bullet_points": [
+          "Các trạng từ nhấn mạnh mức độ so sánh hơn (CỰC KỲ QUAN TRỌNG): much, far, significantly, substantially, considerably, slightly.",
+          "KHÔNG dùng \"very\" hoặc \"more\" để bổ nghĩa cho so sánh hơn: nói \"much higher\", KHÔNG nói \"very higher\"."
+        ],
+        "tips": [
+          "Bẫy: Giữa \"as... as\" có thể là Tính từ hoặc Trạng từ. Nhìn động từ phía trước: nếu là V thường -> dùng Adv; nếu là Be/Linking verb -> dùng Adj."
+        ]
+      },
+      {
+        "title": "2. So sánh kép (Càng... càng)",
+        "content": "Hai vế tương hỗ nhau diễn tả mối quan hệ tỉ lệ thuận.",
+        "formula": "The + comparative + S + V, the + comparative + S + V",
+        "bullet_points": [
+          "\"The more experienced the candidate is, the higher the salary offered.\""
+        ],
+        "tips": [
+          "Khi thấy đầu vế 1 có \"The + so sánh hơn\", vế 2 cũng phải bắt đầu bằng \"The + so sánh hơn\"."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "The new processor operates significantly faster than the previous model.",
+        "vietnamese": "Bộ vi xử lý mới hoạt động nhanh hơn đáng kể so với mẫu trước đó.",
+        "explanation": "\"significantly\" là trạng từ nhấn mạnh cho cấu trúc so sánh hơn \"faster than\".",
+        "highlight": "significantly faster than",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-comp-1",
+        "question": "This quarter’s revenue was _______ higher than our initial financial forecasts.",
+        "options": [
+          "substantially",
+          "very",
+          "too",
+          "more"
+        ],
+        "answer_index": 0,
+        "explanation": "\"substantially\" là trạng từ chuẩn dùng để nhấn mạnh cho so sánh hơn \"higher\" -> chọn \"substantially\"."
+      }
+    ]
+  },
+  {
+    "id": "pattern-subjunctive",
+    "category": "sentencePatterns",
+    "title": "Thể giả định trong tiếng Anh thương mại",
+    "subtitle": "Cấu trúc Suggest, Recommend, Require + that + S + (should) + V-inf",
+    "read_time_minutes": 5,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "subjunctive",
+      "verb-form"
+    ],
+    "overview": "Thể giả định diễn tả đề xuất, yêu cầu, mệnh lệnh cấp thiết. Trong mệnh đề THAT, động từ luôn ở dạng nguyên mẫu không \"to\", kể cả khi chủ ngữ là He, She, It.",
+    "sections": [
+      {
+        "title": "Công thức & Động từ giả định",
+        "content": "Động từ sau THAT bỏ qua mọi quy tắc chia thì/số ít số nhiều.",
+        "formula": "S + V(đề xuất) + that + S + (should) + V_inf\nIt is + Adj(cần thiết) + that + S + (should) + V_inf",
+        "bullet_points": [
+          "Động từ: recommend, suggest, insist, request, require, demand, ask, advise, propose.",
+          "Tính từ: essential, vital, necessary, imperative, important, mandatory.",
+          "Ví dụ: \"The CEO recommended that Mr. Baker attend the seminar.\" (attend giữ nguyên mẫu dù chủ ngữ là Mr. Baker)."
+        ],
+        "tips": [
+          "Nếu ở dạng bị động: dùng \"be + V3/ed\": \"It is mandatory that all visitors be accompanied by security.\""
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "The safety inspector requested that the factory halt operations immediately.",
+        "vietnamese": "Thanh tra an toàn đã yêu cầu nhà máy tạm dừng hoạt động ngay lập tức.",
+        "explanation": "Sau \"requested that\", động từ \"halt\" ở dạng nguyên mẫu giả định (không chia -s hay -ed).",
+        "highlight": "requested that the factory halt",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-subj-1",
+        "question": "Human Resources insists that each new employee _______ the ethics training session.",
+        "options": [
+          "complete",
+          "completes",
+          "completed",
+          "completing"
+        ],
+        "answer_index": 0,
+        "explanation": "Theo cấu trúc giả định sau \"insists that\", động từ giữ nguyên mẫu không chia -> chọn \"complete\"."
+      }
+    ]
+  },
+  {
+    "id": "pattern-parallelism",
+    "category": "sentencePatterns",
+    "title": "Cấu trúc Song hành (Parallel Structure / Parallelism)",
+    "subtitle": "Quy tắc cân bằng ngữ pháp với And, But, Or & Not only... but also",
+    "read_time_minutes": 6,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "parallelism",
+      "sentence-structure"
+    ],
+    "overview": "Cấu trúc song hành đòi hỏi các thành phần nối với nhau bằng liên từ kết hợp (and, but, or) hoặc liên từ tương quan (both... and, not only... but also) phải cùng một dạng ngữ pháp (cùng là Noun, cùng là V-ing, cùng là Tính từ hoặc cùng là Mệnh đề).",
+    "sections": [
+      {
+        "title": "1. Quy tắc cân bằng với Liên từ kết hợp (And, But, Or)",
+        "content": "Hai hoặc nhiều từ/cụm từ nối bởi liên từ phải đồng nhất về dạng thức.",
+        "formula": "Noun and Noun | Adj and Adj | V-ing and V-ing | To-V and To-V",
+        "bullet_points": [
+          "Ví dụ đúng: \"The candidate is hardworking, intelligent, and dedicated.\" (tất cả đều là tính từ).",
+          "Ví dụ sai: \"The candidate is hardworking, intelligent, and has dedication.\" (sai vì vế cuối là cụm động từ)."
+        ],
+        "tips": [
+          "Khi thấy liên từ \"and / or / but\" nằm giữa chỗ trống và một từ khác, hãy nhìn dạng từ của vế đối diện để chọn từ loại y hệt."
+        ]
+      },
+      {
+        "title": "2. Song hành với Liên từ tương quan",
+        "content": "Áp dụng cho các cặp từ đi liền nhau.",
+        "formula": "Both A and B | Not only A but also B | Either A or B | Neither A nor B",
+        "bullet_points": [
+          "Cả 2 vế A và B phải có cấu trúc đối xứng tuyệt đối.",
+          "\"The new policy aims not only to reduce costs but also to improve efficiency.\" (cả 2 vế đều là to-V)."
+        ],
+        "tips": [
+          "Bẫy TOEIC: Vế trước là \"to inspect\" nhưng vế sau lừa bằng danh từ \"inspection\" -> phải chọn \"to repair\"."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Our software engineers are responsible for designing, testing, and maintaining cloud applications.",
+        "vietnamese": "Các kỹ sư phần mềm của chúng tôi chịu trách nhiệm thiết kế, kiểm thử và bảo trì các ứng dụng đám mây.",
+        "explanation": "Chuỗi ba hành động nối bởi \"and\" đều ở dạng V-ing song hành: designing, testing, maintaining.",
+        "highlight": "designing, testing, and maintaining",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-par-1",
+        "question": "The executive committee praised Ms. Lin for her creativity, professionalism, and _______ under pressure.",
+        "options": [
+          "calm",
+          "calmness",
+          "calmly",
+          "to calm"
+        ],
+        "answer_index": 1,
+        "explanation": "Vế trước có \"creativity\" và \"professionalism\" là danh từ, nên sau \"and\" bắt buộc là danh từ -> chọn \"calmness\"."
+      },
+      {
+        "id": "q-par-2",
+        "question": "The management decided not only to upgrade hardware but also _______ comprehensive training for all employees.",
+        "options": [
+          "providing",
+          "to provide",
+          "provided",
+          "provides"
+        ],
+        "answer_index": 1,
+        "explanation": "Cấu trúc \"not only to upgrade ... but also [to V]\" cân bằng với to-infinitive -> chọn \"to provide\"."
+      }
+    ]
+  },
+  {
+    "id": "pattern-noun-clauses",
+    "category": "sentencePatterns",
+    "title": "Mệnh đề Danh từ (Noun Clauses: That, Whether, What)",
+    "subtitle": "Mệnh đề đóng vai trò Chủ ngữ, Tân ngữ & Phân biệt That vs What",
+    "read_time_minutes": 7,
+    "difficulty": "Nâng cao",
+    "tags": [
+      "noun-clause",
+      "conjunctions"
+    ],
+    "overview": "Mệnh đề danh từ là một mệnh đề đầy đủ (S + V) đứng ở vị trí của một danh từ (làm chủ ngữ hoặc tân ngữ trong câu). Các câu hỏi phân biệt That / What / Whether xuất hiện thường xuyên ở Part 5 mức điểm 750+.",
+    "sections": [
+      {
+        "title": "1. Mệnh đề THAT và WHAT",
+        "content": "Phân biệt mệnh đề hoàn chỉnh vs mệnh đề thiếu thành phần.",
+        "formula": "THAT + S + V + O (mệnh đề đầy đủ)\nWHAT + V / S + V (mệnh đề thiếu chủ ngữ hoặc tân ngữ)",
+        "bullet_points": [
+          "That the project was approved surprised everyone. (Mệnh đề That làm chủ ngữ, vế sau đầy đủ S+V).",
+          "What the client requested is beyond our current budget. (What thay thế cho danh từ bị thiếu của requested)."
+        ],
+        "tips": [
+          "Bí quyết: Sau chỗ trống nếu câu đã ĐẦY ĐỦ chủ ngữ + vị ngữ + tân ngữ -> chọn THAT. Nếu phía sau THIẾU tân ngữ hoặc chủ ngữ -> chọn WHAT."
+        ]
+      },
+      {
+        "title": "2. Mệnh đề WHETHER / IF (Liệu rằng... hay không)",
+        "content": "Dùng diễn tả sự không chắc chắn hoặc cân nhắc lựa chọn.",
+        "formula": "Whether + S + V + (or not) | Discuss / Wonder + whether + S + V",
+        "bullet_points": [
+          "Làm tân ngữ cho động từ: \"The board is considering whether to expand into Asia.\"",
+          "Làm tân ngữ cho giới từ: CHỈ DÙNG WHETHER, KHÔNG DÙNG IF (\"We are concerned about whether the deal will close\").",
+          "Làm chủ ngữ đầu câu: CHỈ DÙNG WHETHER, KHÔNG DÙNG IF (\"Whether we succeed depends on preparation\")."
+        ],
+        "tips": [
+          "Đi kèm \"or not\": dùng \"Whether or not\" đứng liền nhau được, nhưng \"If or not\" là SAI ngữ pháp."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "What impressed the hiring committee the most was her extensive leadership experience.",
+        "vietnamese": "Điều gây ấn tượng mạnh nhất với hội đồng tuyển dụng là kinh nghiệm lãnh đạo sâu rộng của cô ấy.",
+        "explanation": "\"What\" làm chủ ngữ cho mệnh đề danh từ \"What impressed the hiring committee the most\".",
+        "highlight": "What impressed ... was her experience",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-nc-1",
+        "question": "_______ the local community supports the highway construction remains uncertain.",
+        "options": [
+          "Whether",
+          "If",
+          "Unless",
+          "Despite"
+        ],
+        "answer_index": 0,
+        "explanation": "Đứng đầu câu làm chủ ngữ cho mệnh đề danh từ mang nghĩa \"liệu rằng... hay không\" chỉ dùng \"Whether\", không dùng \"If\"."
+      },
+      {
+        "id": "q-nc-2",
+        "question": "The survey results indicate _______ customer satisfaction has risen by 15%.",
+        "options": [
+          "what",
+          "that",
+          "which",
+          "whether or"
+        ],
+        "answer_index": 1,
+        "explanation": "Phía sau là một mệnh đề hoàn chỉnh đầy đủ S + V (\"customer satisfaction has risen\") -> chọn liên từ \"that\"."
+      }
+    ]
+  },
+  {
+    "id": "pattern-cleft-emphasis",
+    "category": "sentencePatterns",
+    "title": "Cấu trúc Câu chẻ & Nhấn mạnh (Cleft Sentences)",
+    "subtitle": "It is... that & Dùng trợ động từ Do/Does/Did để nhấn mạnh",
+    "read_time_minutes": 6,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "emphasis",
+      "sentence-structure"
+    ],
+    "overview": "Trong giao tiếp và email thương mại, câu chẻ được dùng để hướng sự chú ý tối đa của người đọc vào một đối tượng, thời gian hoặc địa điểm cụ thể.",
+    "sections": [
+      {
+        "title": "1. Câu chẻ với IT IS / IT WAS ... THAT",
+        "content": "Nhấn mạnh Chủ ngữ, Tân ngữ hoặc Trạng từ thời gian/nơi chốn.",
+        "formula": "It is/was + [Thành phần cần nhấn mạnh] + THAT/WHO + S + V",
+        "bullet_points": [
+          "Nhấn mạnh chủ ngữ (người): \"It was Ms. Patel who proposed the reorganization.\" (Chính cô Patel là người đã đề xuất).",
+          "Nhấn mạnh thời gian: \"It was only yesterday that we received the formal approval.\"",
+          "Nhấn mạnh địa điểm: \"It is in Tokyo that our flagship store is situated.\""
+        ],
+        "tips": [
+          "Để kiểm tra câu chẻ: Nếu bỏ \"It is/was\" và \"that\" đi, phần còn lại vẫn tạo thành một câu hoàn chỉnh có nghĩa."
+        ]
+      },
+      {
+        "title": "2. Nhấn mạnh bằng trợ động từ DO / DOES / DID",
+        "content": "Đặt trước động từ nguyên thể trong câu khẳng định.",
+        "formula": "S + do / does / did + V_inf",
+        "bullet_points": [
+          "\"I do believe that our strategy will yield positive outcomes.\" (Tôi thực sự tin rằng...).",
+          "\"The courier did deliver the parcel on time yesterday.\" (Người chuyển phát thực sự đã giao đúng giờ)."
+        ],
+        "tips": [
+          "Động từ sau Do/Does/Did luôn giữ nguyên mẫu, không chia thì hay số ít."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "It was the international marketing campaign that boosted our third-quarter revenue.",
+        "vietnamese": "Chính chiến dịch tiếp thị quốc tế là yếu tố đã thúc đẩy doanh thu quý 3 của chúng ta.",
+        "explanation": "Cấu trúc câu chẻ \"It was [Noun] that [V]\" để nhấn mạnh chủ thể hành động.",
+        "highlight": "It was ... that boosted our revenue",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-cleft-1",
+        "question": "It was during the annual general meeting _______ the CEO announced his planned retirement.",
+        "options": [
+          "when",
+          "which",
+          "that",
+          "where"
+        ],
+        "answer_index": 2,
+        "explanation": "Cấu trúc câu chẻ chuẩn nhấn mạnh trạng từ chỉ thời gian: \"It was ... that\" -> chọn \"that\"."
+      }
+    ]
+  },
+  {
+    "id": "pattern-cause-effect-purpose",
+    "category": "sentencePatterns",
+    "title": "Mẫu câu Nguyên nhân, Kết quả & Mục đích",
+    "subtitle": "So... that, Such... that, Too... to, Enough to & In order to / So that",
+    "read_time_minutes": 7,
+    "difficulty": "Cơ bản",
+    "tags": [
+      "sentence-structure",
+      "adjective",
+      "conjunctions"
+    ],
+    "overview": "Các mẫu câu chỉ kết quả (quá đến nỗi mà) và chỉ mục đích (để mà) là điểm ngữ pháp nền tảng xuất hiện dày đặc ở cả bài đọc Part 6 và Part 7.",
+    "sections": [
+      {
+        "title": "1. Cấu trúc Quá... đến nỗi mà (So... that & Such... that)",
+        "content": "Chỉ mức độ dẫn đến kết quả.",
+        "formula": "S + be/V + SO + Adj/Adv + THAT + S + V\nS + V + SUCH + (a/an) + Adj + Noun + THAT + S + V",
+        "bullet_points": [
+          "\"The demands were so high that extra staff had to be hired.\"",
+          "\"It was such a demanding project that the team worked overtime.\""
+        ],
+        "tips": [
+          "Ghi nhớ: \"SO\" đi với Tính từ/Trạng từ đơn lẻ. \"SUCH\" bắt buộc phải đi kèm Cụm danh từ (có Noun)."
+        ]
+      },
+      {
+        "title": "2. Cấu trúc Too... to & Enough to",
+        "content": "Quá không thể làm gì vs Đủ để làm gì.",
+        "formula": "TOO + Adj/Adv + (for sb) + TO V (quá... không thể)\nAdj/Adv + ENOUGH + (for sb) + TO V (đủ... để làm gì)\nENOUGH + Noun + TO V",
+        "bullet_points": [
+          "\"The instructions were clear enough for newcomers to follow.\"",
+          "\"We had enough financial resources to acquire the competitor.\""
+        ],
+        "tips": [
+          "Lưu ý vị trí: Tính từ đứng TRƯỚC enough (\"clear enough\"), nhưng Danh từ đứng SAU enough (\"enough time\")."
+        ]
+      },
+      {
+        "title": "3. Mẫu câu chỉ mục đích (In order to & So that)",
+        "content": "Chỉ lý do hướng tới kết quả mong muốn.",
+        "formula": "In order to / So as to + V_inf\nSo that / In order that + S + can/could/will + V_inf",
+        "bullet_points": [
+          "\"The firm updated its servers in order to safeguard customer data.\"",
+          "\"We sent an alert so that subscribers could renew before the expiration date.\""
+        ],
+        "tips": [
+          "Sau \"in order to\" là động từ nguyên mẫu V-inf; sau \"so that\" là cả một mệnh đề có S + Modal verb."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "The keynote address was so inspiring that the entire audience gave a standing ovation.",
+        "vietnamese": "Bài phát biểu chính truyền cảm hứng đến nỗi toàn bộ khán giả đã đứng dậy vỗ tay.",
+        "explanation": "\"so + inspiring (adj) + that\" diễn tả mức độ dẫn đến kết quả.",
+        "highlight": "so inspiring that",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-cep-1",
+        "question": "The logistics system was _______ efficient that delivery times dropped by half.",
+        "options": [
+          "so",
+          "such",
+          "too",
+          "very"
+        ],
+        "answer_index": 0,
+        "explanation": "Trước tính từ \"efficient\" và theo sau là mệnh đề \"that\" -> dùng cấu trúc \"so... that\"."
+      },
+      {
+        "id": "q-cep-2",
+        "question": "Please submit your reimbursement claims promptly _______ the accounting team can process them.",
+        "options": [
+          "in order to",
+          "so that",
+          "because of",
+          "due to"
+        ],
+        "answer_index": 1,
+        "explanation": "Phía sau là mệnh đề có chủ ngữ và động từ khuyết thiếu \"the team can process\" -> dùng \"so that\"."
+      }
+    ]
+  },
+  {
+    "id": "pattern-participle-clauses",
+    "category": "sentencePatterns",
+    "title": "Mệnh đề Trạng ngữ Rút gọn & Bẫy Chủ ngữ treo",
+    "subtitle": "Rút gọn V-ing / V3 đứng đầu câu & Quy tắc đồng chủ ngữ",
+    "read_time_minutes": 7,
+    "difficulty": "Nâng cao",
+    "tags": [
+      "participle",
+      "sentence-structure"
+    ],
+    "overview": "Khi hai mệnh đề có cùng chủ ngữ, ta có thể rút gọn mệnh đề trạng ngữ đứng đầu câu thành dạng V-ing (chủ động) hoặc V3/ed (bị động). Dạng bài này phân hóa điểm số cao trong Part 5.",
+    "sections": [
+      {
+        "title": "1. Rút gọn Chủ động & Bị động",
+        "content": "Lược bỏ liên từ và chủ ngữ của mệnh đề đầu.",
+        "formula": "Chủ động: V-ing, S + V + O\nBị động: V3/ed, S + V + O\nNhấn mạnh hoàn thành trước: Having + V3/ed, S + V + O",
+        "bullet_points": [
+          "Chủ động: \"After he reviewed the budget, Mr. Lin signed it.\" -> \"Reviewing the budget, Mr. Lin signed it.\"",
+          "Bị động: \"Because it was built in 1920, the hall needed repairs.\" -> \"Built in 1920, the hall needed repairs.\"",
+          "Hoàn thành trước: \"Having finished the audit, the inspectors submitted their report.\""
+        ],
+        "tips": [
+          "Bí quyết vàng: Nhìn ngay CHỦ NGỮ sau dấu phẩy. Nếu chủ ngữ đó TỰ LÀM được hành động -> chọn V-ing. Nếu chủ ngữ đó BỊ TÁC ĐỘNG -> chọn V3/ed."
+        ]
+      },
+      {
+        "title": "2. Bẫy Chủ ngữ treo (Dangling Modifiers)",
+        "content": "Lỗi ngữ pháp khi chủ ngữ chính không ăn khớp với phân từ đứng đầu.",
+        "formula": "[V-ing / V3], S(phải là chủ thể của hành động) + V",
+        "bullet_points": [
+          "Sai: \"Walking into the office, the lights turned on.\" (Cái đèn không thể tự đi bộ được!).",
+          "Đúng: \"Walking into the office, the manager turned on the lights.\""
+        ],
+        "tips": [
+          "Trong Part 5: Nếu 4 đáp án có cả V-ing và V3/ed đứng đầu câu trước dấu phẩy, hãy dịch nghĩa chủ ngữ đứng ngay sau dấu phẩy để quyết định."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Located in the heart of the business district, our headquarters offers state-of-the-art facilities.",
+        "vietnamese": "Nằm tại trung tâm khu thương mại, trụ sở chính của chúng tôi cung cấp các tiện ích hiện đại bậc nhất.",
+        "explanation": "Trụ sở chính (headquarters) được đặt vị trí (bị động) -> dùng quá khứ phân từ \"Located\" đứng đầu câu.",
+        "highlight": "Located in ... our headquarters offers",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-part-1",
+        "question": "_______ by the unexpected market decline, the board convened an emergency strategy session.",
+        "options": [
+          "Alarming",
+          "Alarmed",
+          "Alarm",
+          "To alarm"
+        ],
+        "answer_index": 1,
+        "explanation": "Hội đồng quản trị (the board) bị làm cho hoang mang bởi sự sụt giảm thị trường (bị động) -> chọn \"Alarmed\"."
+      }
+    ]
+  },
+  {
+    "id": "pattern-causative",
+    "category": "sentencePatterns",
+    "title": "Cấu trúc Truyền khiến & Sai khiến (Causative Verbs)",
+    "subtitle": "Have, Get, Make, Let, Help & Cấu trúc nhờ vả chủ động / bị động",
+    "read_time_minutes": 7,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "causative",
+      "verb-form"
+    ],
+    "overview": "Cấu trúc truyền khiến diễn tả việc nhờ, yêu cầu, thuê hoặc cho phép người khác làm việc gì đó, hoặc có một đồ vật được bảo dưỡng, sửa chữa.",
+    "sections": [
+      {
+        "title": "1. Cấu trúc với HAVE & GET",
+        "content": "Khác biệt giữa Chủ động (người làm) và Bị động (đồ vật được làm).",
+        "formula": "Chủ động: S + have + O(người) + V_inf\nChủ động: S + get + O(người) + TO V\nBị động chung: S + have / get + O(vật) + V3/ed",
+        "bullet_points": [
+          "\"The director had the assistant prepare the presentation.\" (prepare nguyên mẫu).",
+          "\"The director got the assistant to prepare the presentation.\" (to prepare).",
+          "\"We had our office air conditioning repaired yesterday.\" (repaired V3)."
+        ],
+        "tips": [
+          "Quy tắc ghi nhớ: \"Have người V_inf\" nhưng \"Get người TO V\". Với đồ vật thì cả 2 đều đi với V3/ed."
+        ]
+      },
+      {
+        "title": "2. Cấu trúc với MAKE, LET, HELP",
+        "content": "Động từ chỉ ép buộc, cho phép và giúp đỡ.",
+        "formula": "S + make + O + V_inf (bắt buộc ai làm gì)\nS + let + O + V_inf (cho phép ai làm gì)\nS + help + O + (to) V_inf (giúp ai làm gì)",
+        "bullet_points": [
+          "\"New regulations make all drivers carry safety kits.\" (carry nguyên mẫu).",
+          "Thể bị động của Make: \"Be made TO V\" (Bị động thì xuất hiện lại to: \"Employees were made to attend the training\")."
+        ],
+        "tips": [
+          "Sau Help có thể dùng cả động từ nguyên mẫu không \"to\" hoặc có \"to\": \"help you install\" hoặc \"help you to install\" đều đúng."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "The facility manager had the security locks replaced following the policy review.",
+        "vietnamese": "Quản lý cơ sở đã cho thay thế các khóa an ninh sau đợt xem xét chính sách.",
+        "explanation": "Tân ngữ là đồ vật \"the security locks\" được thay thế (bị động) -> dùng V3 \"replaced\".",
+        "highlight": "had the security locks replaced",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-caus-1",
+        "question": "The supervisor got the maintenance crew _______ the leaking pipes immediately.",
+        "options": [
+          "fix",
+          "to fix",
+          "fixing",
+          "fixed"
+        ],
+        "answer_index": 1,
+        "explanation": "Cấu trúc \"Get + O(người) + TO V\" -> chọn \"to fix\"."
+      },
+      {
+        "id": "q-caus-2",
+        "question": "We need to have the promotional banners _______ before the trade show begins.",
+        "options": [
+          "print",
+          "printed",
+          "printing",
+          "to print"
+        ],
+        "answer_index": 1,
+        "explanation": "Cấu trúc \"Have + O(vật: banners) + V3\" (bị động) -> chọn \"printed\"."
+      }
+    ]
+  },
+  {
+    "id": "pattern-perception-verbs",
+    "category": "sentencePatterns",
+    "title": "Động từ Tri giác & Động từ Chỉ thị",
+    "subtitle": "See, Hear, Watch, Notice + V-inf vs V-ing & Dạng bị động",
+    "read_time_minutes": 6,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "perception-verbs",
+      "verb-form"
+    ],
+    "overview": "Động từ tri giác (chỉ giác quan: nhìn, nghe, nhận thấy) có hai cấu trúc đi kèm tùy thuộc vào việc người nói chứng kiến trọn vẹn hành động hay chỉ nhìn thấy một phần hành động đang diễn ra.",
+    "sections": [
+      {
+        "title": "1. Phân biệt V-inf vs V-ing sau Động từ tri giác",
+        "content": "See, hear, watch, observe, notice + O + V_inf / V-ing.",
+        "formula": "See/Hear + O + V_inf (chứng kiến TOÀN BỘ từ đầu đến cuối)\nSee/Hear + O + V-ing (chứng kiến MỘT PHẦN hành động đang diễn ra)",
+        "bullet_points": [
+          "\"I saw the delivery driver drop the parcel.\" (chứng kiến toàn bộ sự việc rơi bưu kiện).",
+          "\"We heard technicians discussing the network issue in the hallway.\" (nghe thấy họ đang thảo luận lúc đi ngang qua)."
+        ],
+        "tips": [
+          "Bị động của động từ tri giác: Bắt buộc dùng \"to V\" (\"He was seen to enter the building\", KHÔNG dùng \"was seen enter\")."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Several witnesses noticed an unauthorized vehicle enter the restricted compound.",
+        "vietnamese": "Nhiều nhân chứng nhận thấy một chiếc xe không được phép đi vào khu vực cấm.",
+        "explanation": "Sau \"noticed + O\", động từ \"enter\" ở dạng nguyên mẫu miêu tả toàn bộ sự việc đi vào.",
+        "highlight": "noticed an unauthorized vehicle enter",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-perc-1",
+        "question": "The security guard observed a suspicious person _______ around the perimeter fence.",
+        "options": [
+          "loitered",
+          "loitering",
+          "was loitering",
+          "to loitered"
+        ],
+        "answer_index": 1,
+        "explanation": "Sau \"observed + O\", hành động đang diễn ra được diễn tả bằng V-ing -> chọn \"loitering\"."
+      }
+    ]
+  },
+  {
+    "id": "pattern-modal-past",
+    "category": "sentencePatterns",
+    "title": "Động từ Khuyết thiếu trong Quá khứ (Modal Verbs in Past)",
+    "subtitle": "Must have, Should have, Could have, Can’t have + V3/ed",
+    "read_time_minutes": 7,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "modals",
+      "verb-form"
+    ],
+    "overview": "Diễn tả sự suy đoán hoặc nuối tiếc về một sự việc đã xảy ra trong quá khứ. Cực kỳ thường gặp trong các bài hội thoại Part 3 và bài nói Part 4 khi nhân vật giải thích nguyên nhân sự cố.",
+    "sections": [
+      {
+        "title": "1. Bảng suy đoán mức độ chắc chắn trong quá khứ",
+        "content": "Dựa vào căn cứ thực tế để suy luận.",
+        "formula": "Must have + V3 (chắc chắn đã làm gì)\nCan’t / Couldn’t have + V3 (chắc chắn đã KHÔNG làm gì)\nMay / Might have + V3 (có lẽ đã làm gì, không chắc chắn)",
+        "bullet_points": [
+          "\"The package arrived yesterday, so the supplier must have dispatched it on Monday.\"",
+          "\"He can't have received the memo because his computer was offline all day.\""
+        ],
+        "tips": [
+          "Trong TOEIC: \"Must have + V3\" thường đi kèm với các bằng chứng thực tế xác đáng trong ngữ cảnh."
+        ]
+      },
+      {
+        "title": "2. Diễn tả sự nuối tiếc: SHOULD HAVE + V3",
+        "content": "Lẽ ra nên làm gì trong quá khứ nhưng thực tế đã không làm.",
+        "formula": "Should have + V3/ed (lẽ ra nên làm)\nShould not have + V3/ed (lẽ ra không nên làm)",
+        "bullet_points": [
+          "\"We should have booked the convention hall earlier; now it is fully occupied.\"",
+          "\"You shouldn't have shared confidential passwords over unencrypted email.\""
+        ],
+        "tips": [
+          "\"Could have + V3\": Đã có thể làm gì nhưng đã không làm."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "We should have reserved the conference tickets earlier because the event is now completely sold out.",
+        "vietnamese": "Lẽ ra chúng ta nên đặt vé hội nghị sớm hơn vì sự kiện hiện đã bán hết sạch vé.",
+        "explanation": "\"should have reserved\" thể hiện sự tiếc nuối về việc đã không đặt vé sớm trong quá khứ.",
+        "highlight": "should have reserved",
+        "part_tag": "Part 3 & 4"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-modp-1",
+        "question": "The financial audit revealed several discrepancies; the accounts team _______ verified the receipts earlier.",
+        "options": [
+          "must",
+          "should have",
+          "would have been",
+          "could"
+        ],
+        "answer_index": 1,
+        "explanation": "Ngữ cảnh thể hiện sự phê bình/nuối tiếc rằng lẽ ra phòng kế toán nên kiểm tra hóa đơn sớm hơn -> chọn \"should have\"."
+      }
+    ]
+  },
+  {
+    "id": "pattern-wish-time",
+    "category": "sentencePatterns",
+    "title": "Cấu trúc Ước muốn & It’s high time",
+    "subtitle": "Wish, If only & Cấu trúc đã đến lúc phải làm gì",
+    "read_time_minutes": 6,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "wish",
+      "subjunctive"
+    ],
+    "overview": "Cấu trúc giả định với Wish và It's high time dùng để diễn tả mong muốn trái với thực tế hoặc nhấn mạnh tính cấp bách của một hành động cần thực hiện ngay.",
+    "sections": [
+      {
+        "title": "1. Cấu trúc với WISH & IF ONLY",
+        "content": "Lùi thì so với thời điểm mong muốn.",
+        "formula": "Ước ở hiện tại: S + wish + S + V2/ed (were cho mọi ngôi)\nƯớc ở quá khứ: S + wish + S + had + V3/ed\nƯớc ở tương lai: S + wish + S + would/could + V_inf",
+        "bullet_points": [
+          "\"I wish we had more time to finalize the proposal.\" (hiện tại không có đủ thời gian).",
+          "\"The director wishes he had attended yesterday's negotiation.\" (quá khứ đã không tham dự)."
+        ],
+        "tips": [
+          "Sau Wish ở hiện tại, động từ to be dùng \"were\" cho tất cả các ngôi (I wish he were here)."
+        ]
+      },
+      {
+        "title": "2. Cấu trúc IT'S (HIGH / ABOUT) TIME",
+        "content": "Đã đến lúc ai đó PHẢI làm việc gì (mang tính nhắc nhở cấp bách).",
+        "formula": "It is high time + S + V2/ed\nIt is time + (for sb) + TO V",
+        "bullet_points": [
+          "\"It is high time we upgraded our cybersecurity infrastructure.\" (đã đến lúc phải nâng cấp ngay).",
+          "\"It is time for the committee to make a definitive decision.\""
+        ],
+        "tips": [
+          "Bẫy TOEIC: Sau \"It is high time + S\", động từ bắt buộc chia ở QUÁ KHỨ ĐƠN (V2/ed)."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "It is high time the company reviewed its remote work policies to attract younger talent.",
+        "vietnamese": "Đã đến lúc công ty phải xem xét lại các chính sách làm việc từ xa để thu hút nhân tài trẻ.",
+        "explanation": "Cấu trúc \"It is high time + S + V2/ed\" -> động từ chia quá khứ \"reviewed\".",
+        "highlight": "It is high time the company reviewed",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-wt-1",
+        "question": "It is about time our marketing department _______ a new customer loyalty program.",
+        "options": [
+          "launches",
+          "launched",
+          "has launched",
+          "launching"
+        ],
+        "answer_index": 1,
+        "explanation": "Theo cấu trúc \"It is about time + S + V2/ed\" -> chọn \"launched\"."
+      }
+    ]
+  },
+  {
+    "id": "pattern-tag-agreement",
+    "category": "sentencePatterns",
+    "title": "Câu hỏi đuôi & Mẫu câu Đồng tình",
+    "subtitle": "Tag Questions & Cấu trúc So, Too, Either, Neither trong giao tiếp",
+    "read_time_minutes": 7,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "tag-questions",
+      "agreement",
+      "listening"
+    ],
+    "overview": "Câu hỏi đuôi và mẫu câu đồng tình xuất hiện với tần suất cực lớn trong Part 2 và Part 3 của bài thi Listening nhằm xác nhận thông tin hoặc thể hiện sự tán thành.",
+    "sections": [
+      {
+        "title": "1. Quy tắc Câu hỏi đuôi (Tag Questions)",
+        "content": "Đối nghịch khẳng định - phủ định giữa mệnh đề chính và phần đuôi.",
+        "formula": "Mệnh đề khẳng định (+) , đuôi phủ định (-)?\nMệnh đề phủ định (-) , đuôi khẳng định (+)?",
+        "bullet_points": [
+          "\"The shipment arrived on time, didn't it?\"",
+          "\"Mr. Gomez isn't attending the workshop, is he?\"",
+          "Trường hợp đặc biệt: \"Let's + V, shall we?\" | Câu mệnh lệnh: \"Open the window, will you?\" | \"I am ..., aren't I?\""
+        ],
+        "tips": [
+          "Nếu câu chính chứa từ phủ định (never, seldom, hardly, scarcely, neither, nobody) thì phần đuôi tính là KHẲNG ĐỊNH (\"He never complains, does he?\")."
+        ]
+      },
+      {
+        "title": "2. Mẫu câu Đồng tình (So, Too, Neither, Either)",
+        "content": "Đồng tình với ý kiến khẳng định hoặc phủ định của người khác.",
+        "formula": "Đồng tình (+): So + Trợ động từ + S  HOẶC  S + Trợ động từ + too\nĐồng tình (-): Neither + Trợ động từ + S  HOẶC  S + Trợ động từ (not) + either",
+        "bullet_points": [
+          "\"A: I like the new layout. - B: So do I / I do too.\"",
+          "\"A: I didn't receive the file. - B: Neither did I / I didn't either.\""
+        ],
+        "tips": [
+          "Lưu ý: \"Neither\" đã mang nghĩa phủ định nên trợ động từ đi sau nó ở dạng KHẲNG ĐỊNH (Neither do I, KHÔNG nói Neither don't I)."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Speaker A: \"I haven’t had a chance to read the quarterly report.\" - Speaker B: \"Neither have I.\"",
+        "vietnamese": "Người A: \"Tôi chưa có cơ hội đọc báo cáo quý.\" - Người B: \"Tôi cũng chưa.\"",
+        "explanation": "Đồng tình với câu phủ định ở thì hiện tại hoàn thành -> dùng \"Neither have I\".",
+        "highlight": "Neither have I",
+        "part_tag": "Part 2 & 3"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-tag-1",
+        "question": "The management team hardly ever approves overtime requests without prior notice, _______?",
+        "options": [
+          "do they",
+          "don’t they",
+          "does it",
+          "doesn’t it"
+        ],
+        "answer_index": 0,
+        "explanation": "\"hardly ever\" là trạng từ mang nghĩa phủ định, chủ ngữ \"the team\" thay bằng \"they\" -> đuôi khẳng định \"do they\"."
+      }
+    ]
+  },
+  {
+    "id": "pattern-concession-advanced",
+    "category": "sentencePatterns",
+    "title": "Mẫu câu Nhượng bộ nâng cao trong bài đọc",
+    "subtitle": "No matter what/how, However + Adj & Cấu trúc Adj + as/though + S + V",
+    "read_time_minutes": 7,
+    "difficulty": "Nâng cao",
+    "tags": [
+      "concession",
+      "sentence-structure"
+    ],
+    "overview": "Các mẫu câu nhượng bộ nâng cao mang sắc thái trang trọng, thường xuất hiện trong các bài báo kinh tế, thư từ chính thức hoặc thông báo chính sách ở Part 6 & 7.",
+    "sections": [
+      {
+        "title": "1. Cấu trúc NO MATTER HOW / HOWEVER + ADJ",
+        "content": "Dù cho... đến mức nào đi chăng nữa.",
+        "formula": "No matter how + Adj/Adv + S + V, Mệnh đề chính\nHowever + Adj/Adv + S + V, Mệnh đề chính",
+        "bullet_points": [
+          "\"However challenging the project may be, we will deliver on schedule.\"",
+          "\"No matter how experienced candidates are, all must undergo onboarding.\""
+        ],
+        "tips": [
+          "Khác biệt: \"However,\" đứng trước dấu phẩy mang nghĩa \"Tuy nhiên\". Còn \"However + Adj\" đứng liền nhau mang nghĩa \"Dù... đến đâu\"."
+        ]
+      },
+      {
+        "title": "2. Đảo Tính từ lên đầu với AS / THOUGH",
+        "content": "Cấu trúc nhượng bộ mang tính văn phong báo chí.",
+        "formula": "Adj / Adv + AS / THOUGH + S + V, Mệnh đề chính",
+        "bullet_points": [
+          "\"Hard as the team worked, they could not prevent the software glitch.\"",
+          "\"Successful though the product was, profit margins remained narrow.\""
+        ],
+        "tips": [
+          "Công thức tương đương: \"Although the team worked hard...\"."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "However complex the technical specifications may seem, our support staff can guide you through each step.",
+        "vietnamese": "Dù các thông số kỹ thuật có vẻ phức tạp đến đâu, đội ngũ hỗ trợ của chúng tôi có thể hướng dẫn bạn từng bước.",
+        "explanation": "\"However + complex (adj) + S + V\" thể hiện sự nhượng bộ \"dù phức tạp đến đâu\".",
+        "highlight": "However complex the specifications may seem",
+        "part_tag": "Part 5 & 6"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-conc-1",
+        "question": "_______ difficult the financial circumstances, the corporation maintained its philanthropic contributions.",
+        "options": [
+          "No matter how",
+          "Although",
+          "Despite",
+          "Even though"
+        ],
+        "answer_index": 0,
+        "explanation": "Đứng trước tính từ \"difficult\" tạo thành cấu trúc nhượng bộ -> chọn \"No matter how\"."
+      }
+    ]
+  },
+  {
+    "id": "pattern-used-to",
+    "category": "sentencePatterns",
+    "title": "Phân biệt Used to V, Be used to V-ing & Be used to V",
+    "subtitle": "Thói quen quá khứ vs Đã quen với việc gì vs Được dùng để làm gì",
+    "read_time_minutes": 6,
+    "difficulty": "Cơ bản",
+    "tags": [
+      "used-to",
+      "verb-form"
+    ],
+    "overview": "Ba cấu trúc chứa từ \"used to\" có hình thức rất giống nhau nhưng ý nghĩa và dạng động từ theo sau hoàn toàn khác biệt. Đây là một trong những câu bẫy quen thuộc của đề thi TOEIC.",
+    "sections": [
+      {
+        "title": "1. Ba công thức cốt lõi",
+        "content": "Xác định dạng thức dựa trên ý nghĩa và động từ đi kèm.",
+        "formula": "1. S + used to + V_inf (đã từng làm gì trong quá khứ, nay không làm nữa)\n2. S + be / get used to + V-ing / Noun (đã quen / đang làm quen với việc gì ở hiện tại)\n3. S(vật) + be used to + V_inf (được dùng ĐỂ làm gì - thể bị động)",
+        "bullet_points": [
+          "\"Mr. Lee used to manage the regional office before he transferred.\" (quá khứ từng quản lý).",
+          "\"Our sales reps are used to traveling long distances.\" (quen với việc đi lại nhiều).",
+          "\"This encrypted flash drive is used to store sensitive data.\" (được dùng để lưu trữ dữ liệu)."
+        ],
+        "tips": [
+          "Bí quyết: Nếu chủ ngữ là VẬT thì thường là nghĩa \"được dùng để làm gì\" -> chia \"be used to + V_inf\"."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "After two months in the international branch, Elena has gotten used to working with multicultural teams.",
+        "vietnamese": "Sau hai tháng tại chi nhánh quốc tế, Elena đã dần quen với việc làm việc cùng các nhóm đa văn hóa.",
+        "explanation": "Cấu trúc \"get used to + V-ing\" diễn tả việc dần quen với một hoạt động ở hiện tại.",
+        "highlight": "gotten used to working",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-ut-1",
+        "question": "The accounting team is accustomed to long hours, so they are used to _______ under tight deadlines.",
+        "options": [
+          "work",
+          "working",
+          "worked",
+          "be worked"
+        ],
+        "answer_index": 1,
+        "explanation": "Sau \"are used to\" (đã quen với việc gì) cần một V-ing -> chọn \"working\"."
+      },
+      {
+        "id": "q-ut-2",
+        "question": "The specialized diagnostic scanner is used to _______ engine errors quickly.",
+        "options": [
+          "detect",
+          "detecting",
+          "detected",
+          "detection"
+        ],
+        "answer_index": 0,
+        "explanation": "Chủ ngữ là đồ vật \"scanner\", mang nghĩa bị động \"được dùng để làm gì\" -> dùng V nguyên thể \"detect\"."
+      }
+    ]
+  }
+]

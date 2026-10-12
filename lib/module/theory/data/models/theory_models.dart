@@ -58,6 +58,14 @@ class TheoryExample {
   final String explanation;
   final String? highlight;
   final String? partTag;
+
+  factory TheoryExample.fromJson(Map<String, dynamic> j) => TheoryExample(
+    english: j['english'] as String,
+    vietnamese: j['vietnamese'] as String,
+    explanation: j['explanation'] as String,
+    highlight: j['highlight'] as String?,
+    partTag: j['part_tag'] as String?,
+  );
 }
 
 /// Khối nội dung / công thức trong bài lý thuyết
@@ -75,6 +83,14 @@ class TheorySection {
   final String? formula;
   final List<String> bulletPoints;
   final List<String> tips;
+
+  factory TheorySection.fromJson(Map<String, dynamic> j) => TheorySection(
+    title: j['title'] as String,
+    content: j['content'] as String,
+    formula: j['formula'] as String?,
+    bulletPoints: _strings(j['bullet_points']),
+    tips: _strings(j['tips']),
+  );
 }
 
 /// Câu hỏi kiểm tra nhanh (Mini Quiz) cuối bài học
@@ -92,6 +108,14 @@ class TheoryQuizQuestion {
   final List<String> options;
   final int answerIndex;
   final String explanation;
+
+  factory TheoryQuizQuestion.fromJson(Map<String, dynamic> j) => TheoryQuizQuestion(
+    id: j['id'] as String,
+    question: j['question'] as String,
+    options: _strings(j['options']),
+    answerIndex: j['answer_index'] as int,
+    explanation: j['explanation'] as String,
+  );
 }
 
 /// Bài học lý thuyết hoàn chỉnh
@@ -121,4 +145,25 @@ class TheoryTopic {
   final List<TheorySection> sections;
   final List<TheoryExample> examples;
   final List<TheoryQuizQuestion> quiz;
+
+  /// Đọc từ assets/theory/*.json (khoá snake_case).
+  factory TheoryTopic.fromJson(Map<String, dynamic> j) => TheoryTopic(
+    id: j['id'] as String,
+    category: TheoryCategory.values.byName(j['category'] as String),
+    title: j['title'] as String,
+    subtitle: j['subtitle'] as String,
+    readTimeMinutes: j['read_time_minutes'] as int,
+    difficulty: j['difficulty'] as String,
+    tags: _strings(j['tags']),
+    overview: j['overview'] as String,
+    sections: [for (final s in j['sections'] as List) TheorySection.fromJson(s as Map<String, dynamic>)],
+    examples: [
+      for (final e in (j['examples'] as List?) ?? const []) TheoryExample.fromJson(e as Map<String, dynamic>),
+    ],
+    quiz: [
+      for (final q in (j['quiz'] as List?) ?? const []) TheoryQuizQuestion.fromJson(q as Map<String, dynamic>),
+    ],
+  );
 }
+
+List<String> _strings(Object? v) => [for (final x in (v as List?) ?? const []) x as String];

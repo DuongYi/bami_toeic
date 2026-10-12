@@ -18,6 +18,7 @@ void main() {
 
   group('TheoryRepository Test', () {
     final repo = TheoryRepository();
+    setUpAll(repo.loadTopics);
 
     test('Lấy toàn bộ chủ điểm lý thuyết 5 danh mục phong phú', () {
       final topics = repo.getAllTopics();
@@ -73,6 +74,10 @@ void main() {
       final container = ProviderContainer();
       addTearDown(container.dispose);
 
+      // Nội dung đọc từ assets/theory/*.json (bất đồng bộ).
+      container.read(theoryControllerProvider);
+      await container.read(theoryRepositoryProvider).loadTopics();
+      await Future<void>.delayed(const Duration(milliseconds: 50));
       final stateInitial = container.read(theoryControllerProvider);
       expect(stateInitial.filteredTopics.isNotEmpty, true);
 
@@ -105,8 +110,11 @@ void main() {
       addTearDown(tester.view.resetPhysicalSize);
       addTearDown(tester.view.resetDevicePixelRatio);
 
+      final repo = TheoryRepository();
+      await tester.runAsync(repo.loadTopics);
       await tester.pumpWidget(
         ProviderScope(
+          overrides: [theoryRepositoryProvider.overrideWithValue(repo)],
           child: MaterialApp(
             theme: AppTheme.light(),
             home: const TheoryHomePage(),
@@ -127,8 +135,11 @@ void main() {
       addTearDown(tester.view.resetPhysicalSize);
       addTearDown(tester.view.resetDevicePixelRatio);
 
+      final repo = TheoryRepository();
+      await tester.runAsync(repo.loadTopics);
       await tester.pumpWidget(
         ProviderScope(
+          overrides: [theoryRepositoryProvider.overrideWithValue(repo)],
           child: MaterialApp(
             theme: AppTheme.light(),
             home: const TheoryDetailPage(topicId: 'tenses-present-simple-continuous'),

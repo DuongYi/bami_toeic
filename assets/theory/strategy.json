@@ -1,0 +1,360 @@
+[
+  {
+    "id": "strategy-part1",
+    "category": "strategy",
+    "title": "Mẹo thi Part 1 (Mô tả tranh & Bẫy Being)",
+    "subtitle": "Chiến thuật quan sát, bẫy hành động vs trạng thái & Bẫy vật không tự di chuyển",
+    "read_time_minutes": 7,
+    "difficulty": "Cơ bản",
+    "tags": [
+      "part1",
+      "listening",
+      "strategy"
+    ],
+    "overview": "Part 1 có 6 bức tranh. Tận dụng thời gian băng đọc hướng dẫn để quan sát nhanh các yếu tố: người, hành động, vị trí đồ vật và không gian nền.",
+    "sections": [
+      {
+        "title": "1. Mẹo vàng \"Being + V3\" (Bẫy vật không tự di chuyển)",
+        "content": "Nguyên tắc loại suy mạnh nhất trong Part 1.",
+        "formula": "Tranh không người + Nghe thấy \"being + V3\" -> 99% LOẠI BỎ",
+        "bullet_points": [
+          "Cấu trúc \"is/are being + V3\" diễn tả hành động đang được một NGƯỜI tác động lên đồ vật (ví dụ: \"The car is being repaired\").",
+          "Nếu trong tranh KHÔNG có bóng dáng con người mà nghe thấy \"being\" -> loại ngay lập tức!",
+          "Ngoại lệ hiếm hoi: \"The display is being shown\" hoặc cây cối đổ bóng \"Trees are casting shadows\"."
+        ],
+        "tips": [
+          "Phân biệt: \"is displayed\" (đang được trưng bày sẵn - trạng thái tĩnh) vs \"is being displayed\" (đang có người mang ra trưng bày)."
+        ]
+      },
+      {
+        "title": "2. Phân biệt Trạng thái vs Hành động",
+        "content": "Bẫy trang phục và phụ kiện thường xuyên xuất hiện.",
+        "formula": "Wearing (đang mặc trên người) vs Putting on (hành động đang xỏ tay áo vào)",
+        "bullet_points": [
+          "Nếu người trong tranh đã mặc sẵn áo/đeo kính -> chọn \"wearing\".",
+          "Nếu tay đang cầm áo chuẩn bị mặc vào -> chọn \"putting on\"."
+        ],
+        "tips": [
+          "Bẫy âm tương đồng: Từ phát âm na ná các vật trong hình nhưng sai nghĩa (vd: \"coffee\" vs \"copy\")."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Picture shows books neatly arranged on shelves with no people. Option: \"Books are being placed on the shelf.\"",
+        "vietnamese": "Tranh chỉ có sách xếp ngăn nắp trên kệ, không có người. Đáp án: \"Sách đang được xếp lên kệ.\"",
+        "explanation": "Không có người thì không thể có hành động \"being placed\" -> loại ngay đáp án này.",
+        "highlight": "being placed on the shelf -> LOẠI",
+        "part_tag": "Part 1"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-strat-p1-1",
+        "question": "Trong bức tranh chỉ có một chiếc xe đỗ trong gara trống, không có người. Nghe thấy: \"The vehicle is being washed.\" Ta nên làm gì?",
+        "options": [
+          "Chọn ngay vì có chiếc xe",
+          "Loại bỏ vì tranh không có người tác động hành động being",
+          "Chờ nghe lại",
+          "Đoán bừa"
+        ],
+        "answer_index": 1,
+        "explanation": "\"Being washed\" đòi hỏi phải có người đang rửa xe. Tranh không có người thì loại ngay câu chứa \"being\"."
+      }
+    ]
+  },
+  {
+    "id": "strategy-part2",
+    "category": "strategy",
+    "title": "Mẹo thi Part 2 (Hỏi - Đáp 25 câu & Bẫy Yes/No)",
+    "subtitle": "Quy tắc loại suy câu hỏi Wh-, bẫy từ đồng âm & Mẹo câu trả lời gián tiếp",
+    "read_time_minutes": 7,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "part2",
+      "listening",
+      "strategy"
+    ],
+    "overview": "Part 2 không có chữ trên đề thi, đòi hỏi sự tập trung cao độ vào từ để hỏi đầu tiên (Who, Where, When, Why, How, What).",
+    "sections": [
+      {
+        "title": "1. Quy tắc loại trừ thần tốc",
+        "content": "Không cần hiểu 100% câu vẫn có thể loại bỏ 2 đáp án sai.",
+        "formula": "Wh- Questions -> KHÔNG chọn Yes/No/Sure/Of course",
+        "bullet_points": [
+          "Khi câu hỏi bắt đầu bằng Who, Where, When, Why, How, What: đáp án nào bắt đầu bằng \"Yes\", \"No\", \"Sure\", \"Certainly\" -> LOẠI 100%.",
+          "Bẫy lặp lại từ (Same sound trap): Đáp án lặp lại từ y hệt hoặc từ phát âm na ná câu hỏi thường là 80% bẫy đánh lừa."
+        ],
+        "tips": [
+          "Ví dụ: Câu hỏi có \"project\", đáp án có \"projection\" -> bẫy lặp âm, hãy cẩn thận!"
+        ]
+      },
+      {
+        "title": "2. Mẹo \"Câu trả lời gián tiếp\" luôn đúng 90%",
+        "content": "Dạng đáp án né tránh hoặc không biết thông tin.",
+        "formula": "I have no idea / Let me check / It hasn’t been decided yet",
+        "bullet_points": [
+          "\"I'm not sure.\"",
+          "\"Let me check with the department head.\"",
+          "\"It hasn't been announced yet.\"",
+          "\"Why don't you ask Sarah in accounting?\""
+        ],
+        "tips": [
+          "Khi nghe thấy đáp án thể hiện việc hỏi người khác hoặc thông tin chưa chốt, thường đó là đáp án đúng."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Question: \"Where should I file these client invoices?\" - Option: \"Yes, I did yesterday.\" vs \"Ask Ms. Gomez in accounting.\"",
+        "vietnamese": "Câu hỏi: \"Tôi nên lưu các hóa đơn khách hàng này ở đâu?\" - Đáp án: \"Hỏi cô Gomez ở phòng kế toán nhé.\"",
+        "explanation": "Câu hỏi Where không chọn \"Yes\". Đáp án chỉ dẫn hỏi người khác là câu trả lời gián tiếp chuẩn xác.",
+        "highlight": "Where ... -> Ask Ms. Gomez",
+        "part_tag": "Part 2"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-strat-p2-1",
+        "question": "Question: \"When will the quarterly review meeting start?\" - Đáp án nào sau đây khả năng cao là ĐÚNG?",
+        "options": [
+          "Yes, at 2 PM.",
+          "It hasn’t been scheduled yet.",
+          "Meeting with clients.",
+          "Start the engine."
+        ],
+        "answer_index": 1,
+        "explanation": "Câu hỏi When không chọn \"Yes\" (loại A). C & D là bẫy lặp từ. Đáp án gián tiếp \"It hasn’t been scheduled yet\" là đáp án đúng."
+      }
+    ]
+  },
+  {
+    "id": "strategy-part3-4",
+    "category": "strategy",
+    "title": "Chiến thuật Part 3 & 4 (Đọc trước đề & 8 giây vàng)",
+    "subtitle": "Kỹ thuật đọc trước 3 câu hỏi, bắt từ khóa & Câu hỏi nhìn bảng biểu Graphics",
+    "read_time_minutes": 8,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "part3",
+      "part4",
+      "listening",
+      "strategy"
+    ],
+    "overview": "Điểm số Part 3 & 4 phụ thuộc 70% vào khả năng đọc trước câu hỏi trong \"khoảng thời gian vàng\" giữa các đoạn hội thoại.",
+    "sections": [
+      {
+        "title": "1. Quy tắc \"8 giây vàng\"",
+        "content": "Tận dụng thời gian đọc hướng dẫn và thời gian nghỉ giữa 2 đoạn.",
+        "formula": "Vừa nghe vừa tô đáp án -> Dành trọn 8 giây nghỉ để đọc 3 câu tiếp theo",
+        "bullet_points": [
+          "Khi đoạn audio vừa kết thúc, bạn phải hoàn thành việc chọn cả 3 câu.",
+          "Khi người đọc bắt đầu đọc câu hỏi 1, 2, 3 thì mắt bạn đã phải nhìn xuống 3 câu của ĐOẠN TIẾP THEO để gạch chân từ khóa."
+        ],
+        "tips": [
+          "Từ khóa cần gạch: Danh từ riêng, nghề nghiệp người nói, vấn đề phàn nàn, hành động tiếp theo (next)."
+        ]
+      },
+      {
+        "title": "2. Chiến thuật câu hỏi nhìn bảng biểu (Graphics)",
+        "content": "Không nhìn vào thông tin đã có sẵn trong các đáp án A/B/C/D.",
+        "formula": "Nghe thông tin ở Cột A -> Tìm đáp án tương ứng ở Cột B",
+        "bullet_points": [
+          "Ví dụ: 4 đáp án A, B, C, D là tên phòng (Room 101, Room 102...). Khi nghe, người nói sẽ KHÔNG nói số phòng mà nói tên chủ đề cuộc họp tương ứng ở cột bên cạnh!"
+        ],
+        "tips": [
+          "Nguyên tắc đối chiếu chéo thông tin giúp bắt trọn điểm câu hỏi hình ảnh trong Part 3 & 4."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Graphic shows: Table with Workshop names and Room numbers. Question asks: \"Which room will the woman go to?\"",
+        "vietnamese": "Bảng biểu hiển thị tên hội thảo và số phòng. Câu hỏi: \"Người phụ nữ sẽ đến phòng nào?\"",
+        "explanation": "Người nói sẽ nhắc đến tên buổi hội thảo \"Digital Marketing\", nhìn vào bảng thấy phòng 304 -> chọn phòng 304.",
+        "highlight": "Cross-reference audio clue with chart column",
+        "part_tag": "Part 3"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-strat-p3-1",
+        "question": "Khi làm Part 3 & 4, thời điểm lý tưởng nhất để đọc 3 câu hỏi của đoạn tiếp theo là khi nào?",
+        "options": [
+          "Khi đoạn băng tiếp theo bắt đầu nói",
+          "Khi người đọc băng đang đọc 3 câu hỏi của đoạn trước",
+          "Sau khi kết thúc toàn bộ bài thi",
+          "Không cần đọc trước"
+        ],
+        "answer_index": 1,
+        "explanation": "Tận dụng lúc băng đọc lại các câu hỏi của đoạn vừa xong để tranh thủ đọc trước 3 câu của bài tiếp theo."
+      }
+    ]
+  },
+  {
+    "id": "strategy-part5",
+    "category": "strategy",
+    "title": "Chiến thuật Part 5 (Hoàn thành câu trong 10-15 giây)",
+    "subtitle": "Phân loại câu ngữ pháp vs từ vựng & Kỹ thuật canh giờ 10 phút",
+    "read_time_minutes": 7,
+    "difficulty": "Cơ bản",
+    "tags": [
+      "part5",
+      "reading",
+      "strategy"
+    ],
+    "overview": "Part 5 gồm 30 câu. Mục tiêu chuẩn: Hoàn thành trong 10–12 phút để dành tối đa thời gian cho bài đọc dài Part 7.",
+    "sections": [
+      {
+        "title": "1. Phân loại câu hỏi trong 1 giây đầu tiên",
+        "content": "Nhìn 4 đáp án trước khi đọc câu hỏi.",
+        "formula": "4 đáp án chung gốc từ -> Câu Ngữ pháp (xử lý 10s)\n4 đáp án khác nghĩa -> Câu Từ vựng (xử lý 20-30s)",
+        "bullet_points": [
+          "Câu ngữ pháp: Chỉ cần nhìn từ đứng ngay trước và ngay sau chỗ trống để xác định từ loại còn thiếu (Noun, Adj, Adv, Verb-form). Không cần dịch cả câu!",
+          "Câu từ vựng: Tìm nhanh chủ ngữ, vị ngữ và tân ngữ chính để nắm ý nghĩa cốt lõi, tìm collocations quen thuộc."
+        ],
+        "tips": [
+          "Nếu gặp câu từ vựng lạ quá 30 giây không nghĩ ra -> chọn đáp án cảm tính và ĐI TIẾP, không được dừng lại quá lâu."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "The CEO _______ announced the opening of a new research center. (Options: recent, recently, recency, more recent)",
+        "vietnamese": "Tổng giám đốc vừa mới công bố việc mở trung tâm nghiên cứu mới.",
+        "explanation": "4 đáp án cùng gốc từ \"recent\". Chỗ trống đứng giữa chủ ngữ \"The CEO\" và động từ \"announced\" -> cần trạng từ \"recently\" (giải quyết trong 5s).",
+        "highlight": "The CEO [recently] announced",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-strat-p5-1",
+        "question": "Thời gian tối đa nên dành cho toàn bộ 30 câu Part 5 là bao nhiêu phút?",
+        "options": [
+          "10–12 phút",
+          "25 phút",
+          "35 phút",
+          "50 phút"
+        ],
+        "answer_index": 0,
+        "explanation": "30 câu Part 5 nên làm trong 10-12 phút (khoảng 20s/câu) để dành trọn vẹn 55 phút cho Part 7."
+      }
+    ]
+  },
+  {
+    "id": "strategy-part6",
+    "category": "strategy",
+    "title": "Chiến thuật Part 6 (Điền đoạn văn & Câu điền nguyên câu)",
+    "subtitle": "Kỹ thuật định vị câu điền nguyên câu & Dấu hiệu liên từ nối logic",
+    "read_time_minutes": 7,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "part6",
+      "reading",
+      "strategy"
+    ],
+    "overview": "Part 6 gồm 16 câu chia làm 4 đoạn văn. Thách thức lớn nhất là dạng câu \"Chọn câu văn thích hợp nhất điền vào chỗ trống\".",
+    "sections": [
+      {
+        "title": "1. Xử lý câu điền nguyên câu (Sentence Insertion)",
+        "content": "Quy tắc nhìn câu trước và câu sau chỗ trống.",
+        "formula": "Câu phía trước -> [CÂU CẦN ĐIỀN] -> Câu phía sau",
+        "bullet_points": [
+          "Tìm đại từ thay thế (This, These, Such, It, They) trong câu đáp án kết nối với nội dung câu phía trước.",
+          "Tìm từ nối chỉ quan hệ: \"For example\" (đưa ra minh chứng), \"However\" (phản bác), \"Therefore\" (kết quả), \"In addition\" (bổ sung)."
+        ],
+        "tips": [
+          "Nếu câu sau chỗ trống bắt đầu bằng \"Please contact...\", câu điền vào thường là thông báo về sự cố hoặc thông tin cần liên hệ."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Sentence before: \"Our annual budget has been reduced.\" Blank. Sentence after: \"Consequently, we must postpone our equipment upgrade.\"",
+        "vietnamese": "Câu trước: Ngân sách bị cắt giảm. Chỗ trống. Câu sau: Do đó chúng ta phải hoãn nâng cấp.",
+        "explanation": "Câu điền vào giải thích lý do cần thắt chặt chi tiêu để logic với từ nối \"Consequently\" ở câu sau.",
+        "highlight": "budget reduced -> consequently postpone",
+        "part_tag": "Part 6"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-strat-p6-1",
+        "question": "Dấu hiệu quan trọng nhất để chọn đúng câu điền nguyên câu trong Part 6 là gì?",
+        "options": [
+          "Chọn câu dài nhất",
+          "Tìm mối liên kết logic, từ nối và đại từ thay thế với câu trước và câu sau",
+          "Chọn câu chứa từ vựng khó nhất",
+          "Luôn chọn câu có từ However"
+        ],
+        "answer_index": 1,
+        "explanation": "Tính mạch lạc của đoạn văn dựa vào từ nối logic (Therefore, However) và đại từ liên kết (This, These) giữa các câu."
+      }
+    ]
+  },
+  {
+    "id": "strategy-part7",
+    "category": "strategy",
+    "title": "Chiến thuật Part 7 (Đọc hiểu 54 câu - Quét bài & Móc xích)",
+    "subtitle": "Phân bổ 55 phút vàng, kỹ thuật Paraphrase & Xử lý bài đọc kép/ba",
+    "read_time_minutes": 8,
+    "difficulty": "Nâng cao",
+    "tags": [
+      "part7",
+      "reading",
+      "strategy"
+    ],
+    "overview": "Part 7 chiếm 54 câu trên tổng số 100 câu Reading. Phân bổ thời gian hợp lý và làm chủ kỹ thuật Paraphrase (diễn đạt lại bằng từ đồng nghĩa) quyết định điểm số 800+ TOEIC.",
+    "sections": [
+      {
+        "title": "1. Chiến thuật phân bổ 55 phút vàng",
+        "content": "Đừng để bị thiếu giờ làm bài ở các đoạn cuối!",
+        "formula": "Đoạn đơn (Single passages - 29 câu): 30 phút\nĐoạn kép & ba (Double & Triple - 25 câu): 25 phút",
+        "bullet_points": [
+          "Đoạn đơn: Trung bình 55 giây/câu.",
+          "Đoạn kép & ba: Trung bình 60 giây/câu.",
+          "Đọc lướt câu hỏi trước để ghi nhớ từ khóa (tên riêng, ngày tháng, chức vụ, số tiền) rồi quét bài đọc."
+        ],
+        "tips": [
+          "Nếu còn 5 phút mà còn 10 câu: hãy dùng trực giác tô nhanh tất cả đáp án, tuyệt đối không để trống phiếu trả lời!"
+        ]
+      },
+      {
+        "title": "2. Kỹ thuật bắt bẫy Cross-Passage (Bài đọc kép/ba)",
+        "content": "Câu hỏi móc xích thông tin giữa 2 đoạn văn.",
+        "formula": "Dữ kiện 1 (Đoạn 1) + Dữ kiện 2 (Đoạn 2) -> Đáp án suy luận",
+        "bullet_points": [
+          "Trong bài đọc kép/ba, câu hỏi số 3 hoặc 4 thường KHÔNG nằm trọn trong 1 đoạn.",
+          "Ví dụ: Đoạn 1 là email đặt món ăn \"Gold package\", Đoạn 2 là hóa đơn ghi giá từng món -> Câu hỏi hỏi tổng chi phí là bao nhiêu."
+        ],
+        "tips": [
+          "Bẫy Paraphrase: Đáp án ĐÚNG hầu như luôn dùng TỪ ĐỒNG NGHĨA. Từ nào trong bài đọc lặp lại y hệt 100% trong đáp án thường là bẫy đánh lừa!"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Passage 1 mentions \"Gold members receive 20% discount\". Passage 2 shows an invoice with total $80. Question asks: How much was the original price?",
+        "vietnamese": "Đoạn 1 nói thành viên Vàng giảm 20%. Đoạn 2 hóa đơn $80. Hỏi: Giá gốc là bao nhiêu? -> $100.",
+        "explanation": "Câu hỏi móc xích điển hình kết hợp thông tin mức giảm giá ở đoạn 1 và số tiền thanh toán ở đoạn 2.",
+        "highlight": "Cross-passage inference (Móc xích 2 đoạn)",
+        "part_tag": "Part 7"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-strat-p7-1",
+        "question": "Trong Part 7, đặc điểm điển hình của đáp án ĐÚNG cho câu hỏi chi tiết là gì?",
+        "options": [
+          "Lặp lại y hệt từng từ có trong bài đọc",
+          "Sử dụng từ đồng nghĩa (Paraphrase) để diễn đạt lại nội dung",
+          "Chứa các từ tuyệt đối như always, never",
+          "Là đáp án dài nhất trong 4 lựa chọn"
+        ],
+        "answer_index": 1,
+        "explanation": "ETS luôn kiểm tra vốn từ vựng bằng cách dùng từ đồng nghĩa (paraphrase) trong đáp án đúng."
+      }
+    ]
+  }
+]

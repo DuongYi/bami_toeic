@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/design_system/design_system.dart';
 import '../../data/models/theory_models.dart';
-import '../../data/theory_repository.dart';
 import '../controllers/theory_controller.dart';
 
 /// Màn hình chi tiết bài học lý thuyết kèm công thức, ví dụ đề ETS và Mini Quiz
@@ -24,9 +23,11 @@ class _TheoryDetailPageState extends ConsumerState<TheoryDetailPage> {
   Widget build(BuildContext context) {
     final state = ref.watch(theoryControllerProvider);
     final controller = ref.read(theoryControllerProvider.notifier);
-    final repo = ref.read(theoryRepositoryProvider);
-    final topic = repo.getTopicById(widget.topicId);
+    final topic = state.allTopics.where((t) => t.id == widget.topicId).firstOrNull;
 
+    if (topic == null && state.isLoading) {
+      return Scaffold(appBar: AppBar(), body: const AppLoadingView());
+    }
     if (topic == null) {
       return Scaffold(
         appBar: AppBar(title: const Text('Chi tiết lý thuyết')),

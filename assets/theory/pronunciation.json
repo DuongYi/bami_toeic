@@ -1,0 +1,260 @@
+[
+  {
+    "id": "pronunciation-vowels",
+    "category": "pronunciation",
+    "title": "Bảng Nguyên âm IPA (Nguyên âm đơn & Nguyên âm đôi)",
+    "subtitle": "Phân biệt nguyên âm ngắn / dài & Sự khác biệt giọng US - UK",
+    "read_time_minutes": 7,
+    "difficulty": "Cơ bản",
+    "tags": [
+      "pronunciation",
+      "ipa",
+      "listening"
+    ],
+    "overview": "Bảng 44 âm IPA là nền móng để nghe chuẩn từng từ trong đề thi TOEIC. Phân biệt được nguyên âm ngắn và dài giúp bạn tránh nghe nhầm các từ có nghĩa hoàn toàn khác nhau.",
+    "sections": [
+      {
+        "title": "1. Cặp nguyên âm ngắn vs dài",
+        "content": "Âm dài có dấu hai chấm \":\" và cần kéo dài hơi hơn.",
+        "formula": "/iː/ vs /ɪ/ | /uː/ vs /ʊ/ | /ɔː/ vs /ɒ/ | /ɑː/ vs /ʌ/",
+        "bullet_points": [
+          "/iː/ vs /ɪ/: sheep (con cừu) vs ship (tàu thủy); leave (rời đi) vs live (sống).",
+          "/uː/ vs /ʊ/: fool (kẻ ngốc) vs full (đầy); pool (bể bơi) vs pull (kéo).",
+          "/ɔː/ vs /ɒ/: port (cảng) vs pot (nồi); caught (bắt) vs cot (giường cũi)."
+        ],
+        "tips": [
+          "Luyện tập khẩu hình miệng: Âm ngắn bật hơi nhanh, dứt khoát; âm dài giữ hơi ổn định trong cổ họng."
+        ]
+      },
+      {
+        "title": "2. Nguyên âm đôi (Diphthongs)",
+        "content": "Sự trượt mượt mà từ âm này sang âm khác.",
+        "formula": "/eɪ/, /aɪ/, /ɔɪ/, /aʊ/, /əʊ/, /ɪə/, /eə/",
+        "bullet_points": [
+          "/eɪ/: pay, late, make, explain.",
+          "/aɪ/: price, client, flight, sign.",
+          "/əʊ/ (US: /oʊ/): phone, notice, propose, open."
+        ],
+        "tips": [
+          "Khác biệt US - UK: Giọng Mỹ phát âm rõ âm /r/ ở cuối từ (car, board, floor), trong khi giọng Anh kéo dài nguyên âm và nuốt âm /r/."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Please take a seat /siːt/ while we check your ticket. (Don’t confuse with sit /sɪt/)",
+        "vietnamese": "Xin vui lòng ngồi xuống trong khi chúng tôi kiểm tra vé của bạn.",
+        "explanation": "Danh từ \"seat\" có âm /iː/ dài, khác với động từ \"sit\" có âm /ɪ/ ngắn.",
+        "highlight": "seat /siːt/ vs sit /sɪt/",
+        "part_tag": "Part 1 & 2"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-pron-v1",
+        "question": "Từ \"leave\" (rời đi) chứa nguyên âm nào trong bảng phiên âm IPA?",
+        "options": [
+          "/ɪ/ (ngắn)",
+          "/iː/ (dài)",
+          "/e/",
+          "/aɪ/"
+        ],
+        "answer_index": 1,
+        "explanation": "\"leave\" phát âm là /liːv/ với nguyên âm /iː/ dài, phân biệt với \"live\" /lɪv/ có nguyên âm /ɪ/ ngắn."
+      }
+    ]
+  },
+  {
+    "id": "pronunciation-consonants",
+    "category": "pronunciation",
+    "title": "Cặp Phụ âm dễ nhầm lẫn trong đề nghe TOEIC",
+    "subtitle": "Phụ âm vô thanh vs hữu thanh, cặp âm /s/ - /ʃ/ và /θ/ - /ð/",
+    "read_time_minutes": 7,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "pronunciation",
+      "ipa",
+      "listening"
+    ],
+    "overview": "Trong băng nghe TOEIC Part 1 & 2, người đọc thường dùng các từ có phụ âm na ná nhau để gài bẫy thí sinh không nghe rõ âm cuối hoặc cặp âm gió.",
+    "sections": [
+      {
+        "title": "1. Phụ âm vô thanh vs hữu thanh",
+        "content": "Âm vô thanh chỉ có luồng hơi, âm hữu thanh làm rung dây thanh quản.",
+        "formula": "/p/ - /b/ | /t/ - /d/ | /k/ - /g/ | /f/ - /v/",
+        "bullet_points": [
+          "/p/ vs /b/: pack (đóng gói) vs back (phía sau); copy vs coffee.",
+          "/t/ vs /d/: write (viết) vs ride (cưỡi xe); tie (cà vạt) vs die."
+        ],
+        "tips": [
+          "Đặt ngón tay lên cổ họng: khi phát âm /b/, /d/, /g/ cổ họng phải rung; khi phát âm /p/, /t/, /k/ cổ họng không rung."
+        ]
+      },
+      {
+        "title": "2. Cặp âm gió hay nhầm lẫn nhất",
+        "content": "Đặc biệt quan trọng với người học Việt Nam.",
+        "formula": "/s/ vs /ʃ/ | /θ/ vs /ð/ | /tʃ/ vs /dʒ/",
+        "bullet_points": [
+          "/s/ (xè răng) vs /ʃ/ (chu môi): see vs she; sell vs shell; sign vs shine.",
+          "/θ/ (đặt lưỡi giữa 2 hàm răng, đẩy hơi) vs /ð/ (rung lưỡi): think vs this; thank vs that.",
+          "/tʃ/ vs /dʒ/: cheap (rẻ) vs jeep (xe díp); choose vs juice."
+        ],
+        "tips": [
+          "Phụ âm đuôi (Ending sounds) quyết định nghĩa: \"nice\" /naɪs/ vs \"nine\" /naɪn/ vs \"night\" /naɪt/."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "She sells /selz/ seashells by the seashore. Notice the shift between /s/ and /ʃ/.",
+        "vietnamese": "Cô ấy bán vỏ sò bên bờ biển. Chú ý sự luân chuyển giữa âm /s/ và /ʃ/.",
+        "explanation": "\"sells\" có âm /s/, \"she\" và \"shell\" có âm /ʃ/.",
+        "highlight": "/s/ (sells) vs /ʃ/ (she, shell)",
+        "part_tag": "Part 1 & 2"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-pron-c1",
+        "question": "Âm đầu tiên của từ \"think\" trong tiếng Anh được phát âm như thế nào?",
+        "options": [
+          "/t/",
+          "/s/",
+          "/θ/ (đặt lưỡi giữa răng đẩy hơi)",
+          "/f/"
+        ],
+        "answer_index": 2,
+        "explanation": "\"think\" bắt đầu bằng âm vô thanh /θ/, phát âm bằng cách đặt đầu lưỡi giữa hai hàm răng và đẩy luồng hơi ra."
+      }
+    ]
+  },
+  {
+    "id": "pronunciation-stress",
+    "category": "pronunciation",
+    "title": "Quy tắc đánh Trọng âm từ 2-3 âm tiết",
+    "subtitle": "Quy tắc Danh - Động từ, hậu tố nhận trọng âm & Hậu tố dịch chuyển trọng âm",
+    "read_time_minutes": 7,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "pronunciation",
+      "stress",
+      "listening"
+    ],
+    "overview": "Nắm được trọng âm giúp bạn nhận diện từ khi người bản xứ nói nhanh. Trong tiếng Anh, âm tiết mang trọng âm sẽ được phát âm to hơn, cao hơn và dài hơn.",
+    "sections": [
+      {
+        "title": "1. Quy tắc từ 2 âm tiết",
+        "content": "Quy tắc phân biệt Danh từ / Tính từ vs Động từ.",
+        "formula": "Danh từ & Tính từ: Trọng âm âm tiết 1\nĐộng từ: Trọng âm âm tiết 2",
+        "bullet_points": [
+          "Danh từ: 'contract (hợp đồng), 'record (kỷ lục), 'present (món quà), 'project (dự án).",
+          "Động từ: con'tract (co lại), re'cord (ghi âm), pre'sent (thuyết trình), pro'ject (phóng ra)."
+        ],
+        "tips": [
+          "Các ngoại lệ thông dụng: ho'tel (danh từ nhưng nhấn âm 2), 'machine (danh từ nhấn âm 2)."
+        ]
+      },
+      {
+        "title": "2. Quy tắc hậu tố (Suffixes)",
+        "content": "Hậu tố chi phối vị trí trọng âm.",
+        "formula": "-ic, -tion, -sion: Nhấn âm NGAY TRƯỚC nó\n-ee, -eer, -ese: Nhấn CHÍNH NÓ",
+        "bullet_points": [
+          "Hậu tố -ic, -tion, -sion: eco'nomic, prepa'ration, de'cision.",
+          "Hậu tố -ee, -eer: employ'ee, volunt'eer, engin'eer.",
+          "Hậu tố không làm đổi trọng âm: -ful, -less, -ness, -ment, -ly (care -> 'careful, 'carefully)."
+        ],
+        "tips": [
+          "Từ có đuôi -cy, -ty, -phy, -gy: Trọng âm rơi vào âm tiết thứ 3 tính từ cuối lên (e'conomy, pho'tography)."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "The company will pre'sent a special 'present to the retiring manager.",
+        "vietnamese": "Công ty sẽ trao tặng một món quà đặc biệt cho người quản lý sắp về hưu.",
+        "explanation": "Động từ \"pre'sent\" nhấn âm 2, danh từ \"present\" nhấn âm 1.",
+        "highlight": "pre'sent (Verb) vs 'present (Noun)",
+        "part_tag": "Part 2 & 3"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-pron-s1",
+        "question": "Từ \"decision\" có trọng âm rơi vào âm tiết thứ mấy?",
+        "options": [
+          "Âm tiết thứ 1",
+          "Âm tiết thứ 2",
+          "Âm tiết thứ 3",
+          "Không có trọng âm"
+        ],
+        "answer_index": 1,
+        "explanation": "Hậu tố \"-sion\" khiến trọng âm rơi vào âm tiết ngay trước nó -> de'ci.sion (âm tiết 2)."
+      }
+    ]
+  },
+  {
+    "id": "pronunciation-connected-speech",
+    "category": "pronunciation",
+    "title": "Nối âm, Nuốt âm & Biến âm Flap T thực chiến",
+    "subtitle": "Linking sounds, Elision và kỹ thuật nghe âm lướt trong đề thi ETS",
+    "read_time_minutes": 8,
+    "difficulty": "Nâng cao",
+    "tags": [
+      "pronunciation",
+      "listening",
+      "connected-speech"
+    ],
+    "overview": "Lý do lớn nhất khiến học viên không nghe kịp Part 3 và Part 4 là vì người bản ngữ không đọc từng từ rời rạc mà luôn sử dụng hiện tượng Connected Speech (nói liền mạch).",
+    "sections": [
+      {
+        "title": "1. Nối âm (Linking Sounds)",
+        "content": "Phụ âm cuối của từ trước nối sang nguyên âm đầu của từ sau.",
+        "formula": "Phụ âm + Nguyên âm -> Nối liền mạch",
+        "bullet_points": [
+          "\"Hold on\" -> nghe như /həʊl dɒn/.",
+          "\"Check in\" -> nghe như /tʃek kɪn/.",
+          "\"Pick it up\" -> nghe như /pɪ kɪ tʌp/."
+        ],
+        "tips": [
+          "Khi nghe thấy từ lạ tai, hãy thử tách âm đầu của từ đó trả lại cho từ đứng trước."
+        ]
+      },
+      {
+        "title": "2. Nuốt âm (Elision) & Biến âm Flap T",
+        "content": "Âm /t/ và /d/ bị lược bỏ hoặc biến đổi trong giọng Mỹ.",
+        "formula": "Nuốt /t/, /d/ khi đứng giữa 2 phụ âm\nFlap T: /t/ kẹp giữa 2 nguyên âm -> đọc thành /d/ nhẹ",
+        "bullet_points": [
+          "Nuốt âm: \"last night\" -> đọc thành /lɑːs naɪt/; \"next door\" -> /neks dɔː/.",
+          "Flap T (Mỹ): \"water\" -> nghe như \"wa-der\"; \"meeting\" -> nghe như \"mee-ding\"; \"city\" -> \"ci-dy\".",
+          "Giảm âm (Weak forms): Các từ chức năng (of, for, can, to) được đọc thành âm schwa /ə/ rất nhẹ: \"cup of tea\" -> /kʌp əv tiː/."
+        ],
+        "tips": [
+          "Luyện tập kỹ thuật Shadowing (nói nhại theo băng) là cách duy nhất để tai bắt kịp hiện tượng Connected Speech."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Could you pick it up at the front desk? -> Pronounced as /kʊdʒuː pɪ kɪ tʌp æt ðə frʌnt desk/",
+        "vietnamese": "Bạn có thể lấy nó ở bàn lễ tân được không?",
+        "explanation": "Nối âm \"pick it up\" và nối âm \"Could you\" -> /kʊdʒuː/.",
+        "highlight": "pick it up /pɪ kɪ tʌp/",
+        "part_tag": "Part 2 & 3"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-pron-cs1",
+        "question": "Trong giọng Anh-Mỹ (General American), từ \"meeting\" thường được phát âm theo quy tắc nào?",
+        "options": [
+          "Nuốt hoàn toàn âm t thành /miːɪŋ/",
+          "Biến âm Flap T: âm /t/ kẹp giữa 2 nguyên âm phát âm thành âm /d/ lướt nhẹ",
+          "Nhấn mạnh âm /t/ bật hơi mạnh",
+          "Đọc ngắt quãng từng âm"
+        ],
+        "answer_index": 1,
+        "explanation": "Quy tắc Flap T trong giọng Mỹ biến âm /t/ giữa hai nguyên âm thành âm /d/ lướt nhẹ -> nghe như \"mee-ding\"."
+      }
+    ]
+  }
+]
