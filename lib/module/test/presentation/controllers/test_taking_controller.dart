@@ -55,6 +55,16 @@ abstract class TakingState with _$TakingState {
 }
 
 /// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" (hoặc bộ lọc sổ câu sai) để làm khoá family ổn định.
+/// Thời gian chế độ thi cho [count] câu đã chọn. Đề có [limitMinutes] riêng (vd. Quick Test 15 phút)
+/// thì chia theo tỉ lệ số câu của cả đề ([testTotal]); không có thì 120 phút / 200 câu.
+Duration examDuration(int count, {int? limitMinutes, int testTotal = 0}) {
+  if (limitMinutes != null && testTotal > 0) {
+    final limit = limitMinutes * 60;
+    return Duration(seconds: (limit * count / testTotal).round().clamp(60, limit));
+  }
+  return Duration(seconds: (7200 * count / 200).round().clamp(300, 7200));
+}
+
 @riverpod
 class TestTaking extends _$TestTaking {
   Timer? _timer;
@@ -77,6 +87,8 @@ class TestTaking extends _$TestTaking {
 
     final List<QuestionGroup> groups;
     final List<int> partList;
+    int? limitMinutes;
+    var testTotal = 0;
     if (_isMistakes) {
       final all = await repo.fetchMistakes();
       final filtered = switch (parts.split(':')) {
@@ -91,6 +103,8 @@ class TestTaking extends _$TestTaking {
       // Không watch testDetailProvider: làm mới danh sách đề không được reset bài đang làm.
       final detail = await repo.fetchTest(testId);
       groups = detail.groups.where((g) => partList.contains(g.part)).toList();
+      limitMinutes = detail.summary.timeLimitMinutes;
+      testTotal = detail.groups.fold(0, (s, g) => s + g.questions.length);
     }
     final count = groups.fold(0, (s, g) => s + g.questions.length);
 
@@ -100,9 +114,8 @@ class TestTaking extends _$TestTaking {
       groups: groups,
       startedAt: DateTime.now(),
       isMistakeSession: _isMistakes,
-      // 120 phút / 200 câu, chia theo số câu đã chọn.
       clock: isExam
-          ? Duration(seconds: (7200 * count / 200).round().clamp(300, 7200))
+          ? examDuration(count, limitMinutes: limitMinutes, testTotal: testTotal)
           : Duration.zero,
     );
 

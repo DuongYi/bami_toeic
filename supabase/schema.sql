@@ -796,3 +796,8 @@ grant execute on function public.dict_lookup(text[]) to authenticated;
 drop policy if exists "own words" on public.vocab;
 create policy "own words" on public.vocab for all to authenticated
   using (user_id = (select auth.uid())) with check (user_id = (select auth.uid()));
+
+-- ---------- 009: Thời gian làm bài riêng của đề ----------
+-- null = app tự tính 120 phút × số câu / 200. Đặt khi đề có thời lượng riêng (vd. Quick Test 15 phút).
+alter table public.tests add column if not exists time_limit_minutes int
+  check (time_limit_minutes between 1 and 240);

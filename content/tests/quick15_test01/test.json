@@ -3,6 +3,7 @@
   "source": "Bami TOEIC - Quick 15m",
   "description": "Thử thách 15 phút: 15 câu chọn lọc Part 5 (8 câu), Part 6 (4 câu), Part 7 (3 câu) rèn luyện phản xạ và tốc độ làm bài.",
   "is_free": true,
+  "time_limit_minutes": 15,
   "groups": [
     {
       "part": 5,
@@ -10,10 +11,17 @@
         {
           "number": 101,
           "content": "All expense invoices must be submitted ------- to the accounting department for prompt reimbursement.",
-          "options": ["promptly", "prompt", "promptness", "prompted"],
-          "answer": "A",
+          "options": [
+            "prompt",
+            "promptly",
+            "prompted",
+            "promptness"
+          ],
+          "answer": "B",
           "explanation": "Sau động từ bị động \"must be submitted\" cần một trạng từ (adverb) bổ nghĩa cho hành động nộp → chọn \"promptly\" (ngay lập tức, kịp thời).",
-          "tags": ["word-form"]
+          "tags": [
+            "word-form"
+          ]
         }
       ]
     },
@@ -23,10 +31,18 @@
         {
           "number": 102,
           "content": "Ms. Gomez confirmed her flight ------- for the upcoming international marketing summit in Tokyo.",
-          "options": ["reservation", "reserve", "reserved", "reserving"],
-          "answer": "A",
+          "options": [
+            "reserved",
+            "reserve",
+            "reserving",
+            "reservation"
+          ],
+          "answer": "D",
           "explanation": "Cụm danh từ \"flight reservation\" = việc đặt chỗ chuyến bay. Sau danh từ \"flight\" đóng vai trò định ngữ cần danh từ chính → \"reservation\".",
-          "tags": ["word-form", "vocabulary"]
+          "tags": [
+            "word-form",
+            "vocabulary"
+          ]
         }
       ]
     },
@@ -36,10 +52,17 @@
         {
           "number": 103,
           "content": "Mr. Henderson presented ------- quarterly sales report during the regional executive meeting.",
-          "options": ["he", "him", "his", "himself"],
-          "answer": "C",
+          "options": [
+            "his",
+            "himself",
+            "him",
+            "he"
+          ],
+          "answer": "A",
           "explanation": "Đứng trước cụm danh từ \"quarterly sales report\" cần tính từ sở hữu bổ nghĩa → chọn \"his\" (của anh ấy).",
-          "tags": ["pronoun"]
+          "tags": [
+            "pronoun"
+          ]
         }
       ]
     },
@@ -49,10 +72,17 @@
         {
           "number": 104,
           "content": "The outdoor ribbon-cutting ceremony was delayed ------- unexpected inclement weather in the harbor area.",
-          "options": ["because", "due to", "although", "in spite"],
+          "options": [
+            "although",
+            "due to",
+            "in spite",
+            "because"
+          ],
           "answer": "B",
           "explanation": "Theo sau chỗ trống là cụm danh từ (\"unexpected inclement weather\") chỉ lý do → chọn giới từ \"due to\" (bởi vì). \"Because\" cần mệnh đề; \"in spite\" thiếu \"of\".",
-          "tags": ["preposition"]
+          "tags": [
+            "vocabulary"
+          ]
         }
       ]
     },
@@ -62,10 +92,17 @@
         {
           "number": 105,
           "content": "Apex Solutions ------- a lucrative multi-year contract to modernize the city's mass transit system.",
-          "options": ["was awarded", "awarded", "awarding", "were awarded"],
-          "answer": "A",
+          "options": [
+            "awarded",
+            "awarding",
+            "was awarded",
+            "were awarded"
+          ],
+          "answer": "C",
           "explanation": "Chủ ngữ số ít \"Apex Solutions\" (tên công ty) được trao hợp đồng → dùng dạng bị động số ít thì quá khứ đơn: \"was awarded\".",
-          "tags": ["grammar"]
+          "tags": [
+            "verb-form"
+          ]
         }
       ]
     },
@@ -75,10 +112,18 @@
         {
           "number": 106,
           "content": "To maintain customer trust, the firm needs to partner with a more ------- logistics provider.",
-          "options": ["reliable", "reliant", "relying", "reliably"],
-          "answer": "A",
+          "options": [
+            "reliably",
+            "reliant",
+            "relying",
+            "reliable"
+          ],
+          "answer": "D",
           "explanation": "Trước danh từ \"logistics provider\" cần tính từ mang nghĩa \"đáng tin cậy\" → chọn \"reliable\". \"Reliant\" mang nghĩa phụ thuộc vào ai đó.",
-          "tags": ["vocabulary", "word-form"]
+          "tags": [
+            "vocabulary",
+            "word-form"
+          ]
         }
       ]
     },
@@ -88,10 +133,17 @@
         {
           "number": 107,
           "content": "------- the renovation budget was finalized late, the construction crew completed the lobby ahead of schedule.",
-          "options": ["Although", "Despite", "However", "Therefore"],
+          "options": [
+            "Although",
+            "However",
+            "Despite",
+            "Therefore"
+          ],
           "answer": "A",
           "explanation": "Theo sau là mệnh đề đầy đủ (S + V) có ý nghĩa tương phản đối lập → chọn liên từ \"Although\" (Mặc dù). \"Despite\" cần danh từ/cụm danh từ.",
-          "tags": ["conjunction"]
+          "tags": [
+            "preposition-conjunction"
+          ]
         }
       ]
     },
@@ -101,10 +153,17 @@
         {
           "number": 108,
           "content": "The regional director commended the hospitality team for providing consistently ------- service to guests.",
-          "options": ["exceptional", "exceptionally", "exception", "excepting"],
-          "answer": "A",
+          "options": [
+            "exceptionally",
+            "excepting",
+            "exceptional",
+            "exception"
+          ],
+          "answer": "C",
           "explanation": "Bổ nghĩa cho danh từ \"service\" đứng sau và được bổ nghĩa bởi trạng từ \"consistently\" cần một tính từ → chọn \"exceptional\" (xuất sắc, đặc biệt tốt).",
-          "tags": ["word-form"]
+          "tags": [
+            "word-form"
+          ]
         }
       ]
     },
@@ -114,40 +173,59 @@
       "questions": [
         {
           "number": 131,
-          "content": "Choose the best preposition to fill in blank [131].",
-          "options": ["through", "across", "between", "among"],
-          "answer": "A",
+          "options": [
+            "between",
+            "among",
+            "through",
+            "across"
+          ],
+          "answer": "C",
           "explanation": "Cụm \"continue through + mốc thời gian\" = tiếp diễn liên tục suốt đến tận (chủ nhật).",
-          "tags": ["preposition"]
+          "tags": [
+            "preposition-conjunction"
+          ]
         },
         {
           "number": 132,
-          "content": "Choose the best sentence to fill in blank [132].",
           "options": [
-            "Cardboard boxes and color-coded labels will be distributed",
             "The cafeteria menu will be upgraded next month",
+            "Annual vacation requests should be submitted via the portal",
             "Parking permits must be renewed annually by all drivers",
-            "Annual vacation requests should be submitted via the portal"
+            "Cardboard boxes and color-coded labels will be distributed"
           ],
-          "answer": "A",
+          "answer": "D",
           "explanation": "Câu trước nhắc đến việc nhân viên đóng gói đồ đạc (\"pack their desktop computers...\"), do đó câu nối phù hợp nhất là phát hộp và nhãn dán.",
-          "tags": ["context"]
+          "tags": [
+            "sentence-insertion"
+          ]
         },
         {
           "number": 133,
-          "content": "Choose the best verb tense to fill in blank [133].",
-          "options": ["will receive", "received", "have received", "are receiving"],
+          "options": [
+            "will receive",
+            "have received",
+            "received",
+            "are receiving"
+          ],
           "answer": "A",
           "explanation": "Diễn tả hành động sẽ xảy ra trong tương lai vào sáng thứ Hai (\"on Monday morning\") → chọn thì tương lai đơn \"will receive\".",
-          "tags": ["grammar"]
+          "tags": [
+            "verb-form"
+          ]
         },
         {
           "number": 134,
-          "content": "Choose the best word form to fill in blank [134].",
-          "options": ["cooperation", "cooperate", "cooperative", "cooperatively"],
-          "answer": "A",
+          "options": [
+            "cooperative",
+            "cooperation",
+            "cooperate",
+            "cooperatively"
+          ],
+          "answer": "B",
           "explanation": "Sau tính từ sở hữu \"your\" và trước liên từ \"and patience\" (danh từ) cần một danh từ song hành → chọn \"cooperation\" (sự hợp tác).",
-          "tags": ["word-form"]
+          "tags": [
+            "word-form"
+          ]
         }
       ]
     },
@@ -159,40 +237,46 @@
           "number": 147,
           "content": "Why was the corporate discount applied to this order?",
           "options": [
-            "The customer purchased standing desks",
+            "The items were paid for in cash",
             "The total order value exceeded $3,000",
-            "The order was placed before October 10",
-            "The items were paid for in cash"
+            "The customer purchased standing desks",
+            "The order was placed before October 10"
           ],
           "answer": "B",
           "explanation": "Trong hoá đơn ghi rõ: \"Corporate Discount (10% on orders over $3,000)\" → đơn hàng trên 3,000 USD được giảm giá.",
-          "tags": ["detail"]
+          "tags": [
+            "detail"
+          ]
         },
         {
           "number": 148,
           "content": "What is required at the time of delivery?",
           "options": [
+            "Inspection by a certified technician",
             "Payment of remaining balance",
             "Assembly of all office furniture",
-            "A signature from an authorized representative",
-            "Inspection by a certified technician"
+            "A signature from an authorized representative"
           ],
-          "answer": "C",
+          "answer": "D",
           "explanation": "Văn bản nêu: \"An authorized representative must be present to sign the delivery manifest.\"",
-          "tags": ["detail"]
+          "tags": [
+            "detail"
+          ]
         },
         {
           "number": 149,
           "content": "What should Ms. Chen do if she wants to change the delivery date without a penalty?",
           "options": [
-            "Call the driver directly on Thursday morning",
             "Email customer support at least 24 hours in advance",
             "Return the items within 30 business days",
+            "Call the driver directly on Thursday morning",
             "Submit a written request by postal mail"
           ],
-          "answer": "B",
+          "answer": "A",
           "explanation": "Mục 'Need to reschedule?' yêu cầu: \"Please notify our dispatch department at support@officepro.com at least 24 hours prior to the scheduled delivery time\".",
-          "tags": ["inference"]
+          "tags": [
+            "inference"
+          ]
         }
       ]
     }

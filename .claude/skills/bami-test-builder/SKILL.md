@@ -22,13 +22,15 @@ Sinh đề TOEIC **giống đề ETS thật** ở định dạng `content/tests/
 | Part 6 có `content` kiểu "Choose the best preposition…" | Lộ dạng câu hỏi | Part 6 không có `content`; chỗ trống đánh dấu `---(131)---` trong `passage` |
 | Viết đề trong file Dart khổng lồ (`tool/data_part*.dart`) | Lỗi cú pháp làm hỏng `flutter analyze` / `build_runner` | Soạn thẳng JSON theo từng Part trong `content/tests/<id>/parts/` |
 | "Extreme" = từ chuyên ngành hiếm, đảo ngữ văn chương | Không giống đề thật | Độ khó đến từ paraphrase, bẫy, suy luận – xem `writing-guide.md` |
+| `--replace` làm đề miễn phí thành đề PRO (tool cũ không gửi `is_free`) | User free bị khoá đề | Luôn ghi `is_free` trong test.json; sau import kiểm tra cột `is_free` trên DB |
 
 ## Quy trình
 
 Đặt `S=.claude/skills/bami-test-builder/scripts`, `D=content/tests/<id>` (id: `snake_case`, vd. `bami_full_03`, `mini_test06`, `quick15_test06`).
 
-1. **Chốt yêu cầu**: loại đề (blueprint), band điểm mục tiêu, số đề, chủ đề cần tránh trùng với đề đã có (`ls content/tests`).
-2. **Tạo khung**: `python3 $S/new_test.py $D --blueprint full|mini25|quick15|part:5 --title "…"`
+1. **Chốt yêu cầu**: loại đề (blueprint), band điểm mục tiêu, số đề, **miễn phí hay PRO** (`is_free`),
+   chủ đề cần tránh trùng với đề đã có (`ls content/tests`).
+2. **Tạo khung**: `python3 $S/new_test.py $D --blueprint full|mini25|quick15|part:5 --title "…" [--free] [--minutes N]`
    → `$D/meta.json` + `$D/parts/pN.json` có sẵn số câu, số nhóm đúng blueprint (giá trị `TODO`).
 3. **Soạn từng Part** (mỗi lần 1 file `parts/pN.json`, đề full nên làm lần lượt P1 → P7 để không tràn ngữ cảnh):
    theo `ets-spec.md` + `writing-guide.md`. Viết đáp án đúng ở bất kỳ vị trí nào – bước 5 sẽ xáo.
@@ -45,7 +47,7 @@ Sinh đề TOEIC **giống đề ETS thật** ở định dạng `content/tests/
    - Chạy lại `validate_test.py $D --media` để chắc file đã đủ.
 8. **Import**: `dart run tool/import_test.dart $D --dry-run`, rồi bảo người dùng chạy
    `! dart run tool/import_test.dart $D` (cần đăng nhập admin; thêm `--replace` để ghi đè đề cùng tên – mất lịch sử làm bài của đề đó).
-9. **Xác nhận trên DB** (Supabase MCP `execute_sql`): đủ số câu, Part 1/2 `options = '[]'` và `content is null`,
+9. **Xác nhận trên DB** (Supabase MCP `execute_sql`): đủ số câu, `is_free` / `time_limit_minutes` đúng, Part 1/2 `options = '[]'` và `content is null`,
    phân bố đáp án theo Part. Báo lại người dùng: số câu, phân bố đáp án, cảnh báo còn lại, việc họ cần làm.
 
 ## Sửa nội dung sau khi đã ghép

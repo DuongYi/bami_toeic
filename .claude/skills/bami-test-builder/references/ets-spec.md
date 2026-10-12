@@ -7,6 +7,8 @@
   "title": "Bami Full Test 03",          // duy nhất trong DB
   "source": "Bami TOEIC",                // nhãn nguồn hiện trong app
   "description": "…",                    // 1 câu, tiếng Việt
+  "is_free": false,                      // true = user chưa có PRO làm được; KHÔNG ghi = đề PRO
+  "time_limit_minutes": 15,              // tuỳ chọn; bỏ trống = 120 phút × số câu / 200
   "groups": [ /* theo đúng thứ tự đề, số câu tăng dần */ ]
 }
 ```

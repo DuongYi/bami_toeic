@@ -9,6 +9,8 @@ part 'test_models.g.dart';
 
 @freezed
 abstract class TestSummary with _$TestSummary {
+  const TestSummary._();
+
   const factory TestSummary({
     required String id,
     required String title,
@@ -22,9 +24,15 @@ abstract class TestSummary with _$TestSummary {
 
     /// Đề miễn phí: user chưa có PRO vẫn làm được.
     @Default(false) bool isFree,
+
+    /// Thời gian chế độ thi của cả đề (phút); null = 120 phút × số câu / 200.
+    int? timeLimitMinutes,
   }) = _TestSummary;
 
   factory TestSummary.fromJson(Map<String, dynamic> json) => _$TestSummaryFromJson(json);
+
+  /// Số phút chế độ thi khi làm cả đề (khớp `examDuration` ở màn làm bài).
+  int get examMinutes => timeLimitMinutes ?? (120 * questionCount / 200).round().clamp(5, 120);
 }
 
 int _readCount(Object? v) => switch (v) {

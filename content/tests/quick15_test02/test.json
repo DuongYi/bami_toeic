@@ -3,6 +3,7 @@
   "source": "Bami TOEIC - Quick 15m",
   "description": "Thử thách 15 phút: 15 câu chọn lọc Part 5 (8 câu), Part 6 (4 câu), Part 7 (3 câu) chủ đề Tuyển dụng, Nhân sự & Môi trường làm việc.",
   "is_free": true,
+  "time_limit_minutes": 15,
   "groups": [
     {
       "part": 5,
@@ -10,10 +11,17 @@
         {
           "number": 101,
           "content": "All prospective candidates must review the employment policies ------- before signing the contract.",
-          "options": ["thoroughly", "thorough", "thoroughness", "thoroughfare"],
-          "answer": "A",
+          "options": [
+            "thoroughness",
+            "thoroughly",
+            "thoroughfare",
+            "thorough"
+          ],
+          "answer": "B",
           "explanation": "Đứng sau động từ vị ngữ \"review the employment policies\" cần một phó từ (adverb) chỉ thể cách bổ nghĩa cho hành động xem xét → chọn \"thoroughly\" (một cách cẩn thận, kỹ lưỡng).",
-          "tags": ["word-form"]
+          "tags": [
+            "word-form"
+          ]
         }
       ]
     },
@@ -23,10 +31,18 @@
         {
           "number": 102,
           "content": "The Human Resources department commended Ms. Sullivan for her exceptional ------- in handling staff inquiries.",
-          "options": ["efficiency", "efficient", "efficiently", "efficiencies"],
-          "answer": "A",
+          "options": [
+            "efficiencies",
+            "efficient",
+            "efficiently",
+            "efficiency"
+          ],
+          "answer": "D",
           "explanation": "Sau tính từ \"exceptional\" (xuất sắc) cần một danh từ số ít / không đếm được làm tân ngữ cho giới từ \"for\" → chọn danh từ trừu tượng \"efficiency\" (sự hiệu quả).",
-          "tags": ["word-form", "vocabulary"]
+          "tags": [
+            "word-form",
+            "vocabulary"
+          ]
         }
       ]
     },
@@ -36,10 +52,17 @@
         {
           "number": 103,
           "content": "Dr. Vance offered ------- assistance to the junior researchers preparing the laboratory proposal.",
-          "options": ["she", "her", "herself", "hers"],
-          "answer": "B",
+          "options": [
+            "her",
+            "herself",
+            "she",
+            "hers"
+          ],
+          "answer": "A",
           "explanation": "Đứng trước danh từ \"assistance\" (sự giúp đỡ) cần tính từ sở hữu để bổ nghĩa → chọn \"her\" (của cô ấy).",
-          "tags": ["pronoun"]
+          "tags": [
+            "pronoun"
+          ]
         }
       ]
     },
@@ -49,10 +72,17 @@
         {
           "number": 104,
           "content": "The production team worked extra shifts ------- they could fulfill the overseas orders ahead of schedule.",
-          "options": ["so that", "because of", "in order to", "as if"],
-          "answer": "A",
+          "options": [
+            "in order to",
+            "because of",
+            "as if",
+            "so that"
+          ],
+          "answer": "D",
           "explanation": "Sau chỗ trống là một mệnh đề hoàn chỉnh có trợ động từ (\"they could fulfill...\") chỉ mục đích → chọn liên từ \"so that\" (để mà). \"In order to\" theo sau bởi V nguyên mẫu.",
-          "tags": ["conjunction"]
+          "tags": [
+            "preposition-conjunction"
+          ]
         }
       ]
     },
@@ -62,10 +92,17 @@
         {
           "number": 105,
           "content": "Visitors must wear safety helmets and reflective vests at all times ------- the manufacturing warehouse.",
-          "options": ["throughout", "between", "among", "against"],
-          "answer": "A",
+          "options": [
+            "against",
+            "among",
+            "throughout",
+            "between"
+          ],
+          "answer": "C",
           "explanation": "Giới từ \"throughout\" + địa điểm mang nghĩa \"trên khắp / trong toàn bộ khuôn viên kho sản xuất\".",
-          "tags": ["preposition"]
+          "tags": [
+            "preposition-conjunction"
+          ]
         }
       ]
     },
@@ -75,10 +112,18 @@
         {
           "number": 106,
           "content": "The tech firm adopted ------- work hours to accommodate engineers commuting from suburban districts.",
-          "options": ["flexible", "flexibility", "flexibly", "flex"],
-          "answer": "A",
+          "options": [
+            "flexibly",
+            "flex",
+            "flexible",
+            "flexibility"
+          ],
+          "answer": "C",
           "explanation": "Trước cụm danh từ \"work hours\" (giờ làm việc) cần tính từ bổ nghĩa → chọn \"flexible\" (linh hoạt, linh động).",
-          "tags": ["word-form", "vocabulary"]
+          "tags": [
+            "word-form",
+            "vocabulary"
+          ]
         }
       ]
     },
@@ -88,10 +133,17 @@
         {
           "number": 107,
           "content": "Should you experience system errors during the online assessment, please notify technical support -------.",
-          "options": ["immediately", "frequently", "mutually", "rarely"],
-          "answer": "A",
+          "options": [
+            "mutually",
+            "immediately",
+            "rarely",
+            "frequently"
+          ],
+          "answer": "B",
           "explanation": "Xét ngữ cảnh câu điều kiện (\"nếu bạn gặp lỗi hệ thống...\"), thông báo cần được gửi ngay lập tức → chọn \"immediately\" (ngay lập tức).",
-          "tags": ["vocabulary"]
+          "tags": [
+            "vocabulary"
+          ]
         }
       ]
     },
@@ -101,53 +153,79 @@
         {
           "number": 108,
           "content": "Job applicants will not be scheduled for a formal panel interview ------- they submit verifiable references.",
-          "options": ["unless", "without", "despite", "whereas"],
+          "options": [
+            "unless",
+            "without",
+            "despite",
+            "whereas"
+          ],
           "answer": "A",
           "explanation": "Theo sau là mệnh đề \"they submit verifiable references\" và mang nghĩa phủ định điều kiện (\"trừ khi họ nộp người tham chiếu xác thực\") → chọn liên từ \"unless\" (= if not).",
-          "tags": ["conjunction"]
+          "tags": [
+            "preposition-conjunction"
+          ]
         }
       ]
     },
     {
       "part": 6,
-      "passage": "MEMORANDUM\nTo: All Department Staff\nFrom: Eleanor Vance, Human Resources Director\nDate: October 14\nSubject: Staff Promotion\n\nWe are delighted to announce the promotion of Marcus Bennett to the position of Senior Marketing Strategist, effective November 1. Over the past three years, Mr. Bennett has demonstrated extraordinary creativity and initiative in spearheading our digital outreach initiatives. [131] ------- his leadership, our corporate social media engagement expanded by forty percent.\n\nIn his new capacity, Mr. Bennett will oversee all cross-regional campaigns and mentor incoming digital media associates. He will be directly [132] ------- for aligning quarterly promotional objectives with regional sales managers. [133] -------. We are confident that his analytical capabilities will continue to drive organizational growth.\n\nPlease join us in the executive lounge on Friday at 4:00 P.M. to celebrate this milestone. Light appetizers and beverages will be [134] ------- by the hospitality team.",
+      "passage": "MEMORANDUM\nTo: All Department Staff\nFrom: Eleanor Vance, Human Resources Director\nDate: October 14\nSubject: Staff Promotion\n\nWe are delighted to announce the promotion of Marcus Bennett to the position of Senior Marketing Strategist, effective November 1. Over the past three years, Mr. Bennett has demonstrated extraordinary creativity and initiative in spearheading our digital outreach initiatives. ---(131)--- his leadership, our corporate social media engagement expanded by forty percent.\n\nIn his new capacity, Mr. Bennett will oversee all cross-regional campaigns and mentor incoming digital media associates. He will be directly ---(132)--- for aligning quarterly promotional objectives with regional sales managers. ---(133)---. We are confident that his analytical capabilities will continue to drive organizational growth.\n\nPlease join us in the executive lounge on Friday at 4:00 P.M. to celebrate this milestone. Light appetizers and beverages will be ---(134)--- by the hospitality team.",
       "questions": [
         {
           "number": 131,
-          "content": "Choose the best word or phrase to fill in blank [131].",
-          "options": ["Under", "Above", "Between", "Against"],
-          "answer": "A",
+          "options": [
+            "Above",
+            "Between",
+            "Under",
+            "Against"
+          ],
+          "answer": "C",
           "explanation": "Cụm thành ngữ cố định phổ biến trong TOEIC: \"Under someone's leadership\" = dưới sự lãnh đạo / dẫn dắt của ai đó.",
-          "tags": ["preposition"]
+          "tags": [
+            "preposition-conjunction"
+          ]
         },
         {
           "number": 132,
-          "content": "Choose the best word to fill in blank [132].",
-          "options": ["responsible", "responsibly", "responsibility", "response"],
-          "answer": "A",
+          "options": [
+            "responsibly",
+            "responsible",
+            "responsibility",
+            "response"
+          ],
+          "answer": "B",
           "explanation": "Cấu trúc \"be directly responsible for + V-ing/N\": chịu trách nhiệm trực tiếp cho việc gì → chọn tính từ \"responsible\".",
-          "tags": ["word-form"]
+          "tags": [
+            "word-form"
+          ]
         },
         {
           "number": 133,
-          "content": "Choose the best sentence to fill in blank [133].",
           "options": [
             "He will also participate in the upcoming executive strategy retreat.",
+            "All attendees must validate their parking passes at the front desk.",
             "His relocation request has been postponed until next spring.",
-            "The client rejected the revised campaign proposal.",
-            "All attendees must validate their parking passes at the front desk."
+            "The client rejected the revised campaign proposal."
           ],
           "answer": "A",
           "explanation": "Câu trước nói về các nhiệm vụ mới của Marcus Bennett. Câu (A) tiếp nối mạch bổ sung trách nhiệm mới (\"Anh ấy cũng sẽ tham gia kỳ hội nghị chiến lược sắp tới\"). Các câu khác không liên quan hoặc mang nội dung tiêu cực/lạc đề.",
-          "tags": ["context"]
+          "tags": [
+            "sentence-insertion"
+          ]
         },
         {
           "number": 134,
-          "content": "Choose the best form of the verb to fill in blank [134].",
-          "options": ["provided", "provides", "providing", "provision"],
-          "answer": "A",
+          "options": [
+            "provision",
+            "provides",
+            "providing",
+            "provided"
+          ],
+          "answer": "D",
           "explanation": "Cấu trúc bị động thì tương lai đơn: \"will be + V3/ed\" → chọn \"provided\" (sẽ được cung cấp bởi đội ngũ lễ tân).",
-          "tags": ["grammar"]
+          "tags": [
+            "word-form"
+          ]
         }
       ]
     },
@@ -159,40 +237,46 @@
           "number": 147,
           "content": "What is the primary purpose of the notice?",
           "options": [
-            "To advertise an available employment position",
-            "To announce a scheduled server upgrade",
             "To outline privacy compliance requirements",
-            "To promote an IT training certification course"
+            "To promote an IT training certification course",
+            "To advertise an available employment position",
+            "To announce a scheduled server upgrade"
           ],
-          "answer": "A",
+          "answer": "C",
           "explanation": "Tiêu đề \"Career Opportunity: Senior Database Administrator\" và nội dung mô tả vị trí, trách nhiệm, phúc lợi cho thấy mục đích chính là đăng tin tuyển dụng việc làm → chọn A.",
-          "tags": ["main-idea"]
+          "tags": [
+            "main-idea"
+          ]
         },
         {
           "number": 148,
           "content": "What is NOT stated as a responsibility for the role?",
           "options": [
-            "Conducting disaster recovery tests",
-            "Optimizing database response times",
             "Collaborating with security engineers",
-            "Designing user-facing mobile interfaces"
+            "Designing user-facing mobile interfaces",
+            "Optimizing database response times",
+            "Conducting disaster recovery tests"
           ],
-          "answer": "D",
+          "answer": "B",
           "explanation": "Bài đọc liệt kê quản lý database, backup, hợp tác với security engineers; không hề đề cập đến việc thiết kế giao diện di động (mobile interfaces) → chọn D.",
-          "tags": ["detail"]
+          "tags": [
+            "detail"
+          ]
         },
         {
           "number": 149,
           "content": "What are applicants required to submit by November 20?",
           "options": [
-            "A cover letter, resume, and project portfolio",
+            "An official background check verification",
             "Two letters of academic recommendation",
             "A certified college diploma copy",
-            "An official background check verification"
+            "A cover letter, resume, and project portfolio"
           ],
-          "answer": "A",
+          "answer": "D",
           "explanation": "Đoạn cuối nêu rõ: \"Interested professionals should submit a cover letter, an updated resume, and a project portfolio to careers@crestviewsoftware.com no later than November 20.\" → chọn A.",
-          "tags": ["detail"]
+          "tags": [
+            "detail"
+          ]
         }
       ]
     }

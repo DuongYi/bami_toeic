@@ -43,7 +43,8 @@ class TestRepository {
     ];
   }
 
-  static const _testSelect = 'id,title,source,description,is_free,question_total';
+  static const _testSelect =
+      'id,title,source,description,is_free,time_limit_minutes,question_total';
   static const _attemptSelect = '*,tests(title,score_table)';
 
   /// Mất mạng → trả về các đề đã tải offline (nếu có).
@@ -104,6 +105,7 @@ class TestRepository {
           description: s['description'] as String?,
           questionCount: s['question_count'] as int? ?? 0,
           isFree: s['is_free'] as bool? ?? false,
+          timeLimitMinutes: s['time_limit_minutes'] as int?,
         ),
         groups: [
           for (final g in j['groups'] as List) QuestionGroup.fromJson(g as Map<String, dynamic>),
@@ -142,6 +144,7 @@ class TestRepository {
           'description': summary.description,
           'question_count': summary.questionCount,
           'is_free': summary.isFree,
+          'time_limit_minutes': summary.timeLimitMinutes,
         },
         'groups': [for (final g in groups) g.toJson()],
       }),

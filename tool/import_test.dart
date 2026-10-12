@@ -86,6 +86,9 @@ Future<void> main(List<String> args) async {
         'source': data['source'],
         'description': data['description'],
         if (data['score_table'] != null) 'score_table': data['score_table'],
+        // Không gửi = đề PRO (mặc định của bảng). --replace tạo lại dòng nên phải gửi lại mỗi lần.
+        'is_free': data['is_free'] == true,
+        if (data['time_limit_minutes'] != null) 'time_limit_minutes': data['time_limit_minutes'],
       })
       .select('id')
       .single();
@@ -134,6 +137,11 @@ Future<void> main(List<String> args) async {
 
 void _validate(Map<String, dynamic> data, List<Map<String, dynamic>> groups) {
   if (data['title'] is! String) _fail('Thiếu "title"');
+  if (data['is_free'] != null && data['is_free'] is! bool) _fail('"is_free" phải là true/false');
+  final limit = data['time_limit_minutes'];
+  if (limit != null && (limit is! int || limit < 1 || limit > 240)) {
+    _fail('"time_limit_minutes" phải là số phút 1–240');
+  }
   final numbers = <int>{};
   for (final g in groups) {
     final part = g['part'];

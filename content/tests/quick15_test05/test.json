@@ -3,6 +3,7 @@
   "source": "Bami TOEIC - Quick 15m",
   "description": "Thử thách 15 phút: 15 câu chọn lọc Part 5 (8 câu), Part 6 (4 câu), Part 7 (3 câu) chủ đề Vận chuyển, Chuỗi cung ứng, Kho vận & Quản lý cơ sở vật chất.",
   "is_free": true,
+  "time_limit_minutes": 15,
   "groups": [
     {
       "part": 5,
@@ -10,10 +11,17 @@
         {
           "number": 101,
           "content": "Warehouse safety regulations will be ------- enforced across all regional fulfillment centers beginning next Monday.",
-          "options": ["strictly", "strict", "strictness", "strictest"],
-          "answer": "A",
+          "options": [
+            "strictest",
+            "strict",
+            "strictly",
+            "strictness"
+          ],
+          "answer": "C",
           "explanation": "Đứng giữa trợ động từ \"will be\" và phân từ hai \"enforced\" cần một phó từ (adverb) chỉ mức độ / thể cách → chọn \"strictly\" (một cách nghiêm ngặt).",
-          "tags": ["word-form"]
+          "tags": [
+            "word-form"
+          ]
         }
       ]
     },
@@ -23,10 +31,17 @@
         {
           "number": 102,
           "content": "The certified technician will ------- the automated conveyor belt before regular factory operations resume.",
-          "options": ["inspect", "inspection", "inspector", "inspects"],
-          "answer": "A",
+          "options": [
+            "inspection",
+            "inspect",
+            "inspector",
+            "inspects"
+          ],
+          "answer": "B",
           "explanation": "Sau động từ khuyết thiếu \"will\" cần động từ nguyên mẫu không 'to' (bare infinitive) → chọn \"inspect\" (kiểm tra, thanh tra).",
-          "tags": ["word-form", "grammar"]
+          "tags": [
+            "word-form"
+          ]
         }
       ]
     },
@@ -36,10 +51,17 @@
         {
           "number": 103,
           "content": "Freight drivers must submit ------- daily delivery mileage logs to the fleet dispatcher every evening.",
-          "options": ["their", "they", "them", "theirs"],
-          "answer": "A",
+          "options": [
+            "theirs",
+            "them",
+            "they",
+            "their"
+          ],
+          "answer": "D",
           "explanation": "Đứng trước cụm danh từ \"daily delivery mileage logs\" cần tính từ sở hữu số nhiều tương ứng với \"Freight drivers\" → chọn \"their\" (của họ).",
-          "tags": ["pronoun"]
+          "tags": [
+            "pronoun"
+          ]
         }
       ]
     },
@@ -49,10 +71,17 @@
         {
           "number": 104,
           "content": "The cargo vessel remained docked at the terminal ------- port customs officers examined the shipping manifests.",
-          "options": ["while", "during", "despite", "between"],
+          "options": [
+            "while",
+            "during",
+            "despite",
+            "between"
+          ],
           "answer": "A",
           "explanation": "Theo sau là một mệnh đề (\"port customs officers examined...\") diễn tả hành động xảy ra đồng thời trong quá khứ → chọn liên từ thời gian \"while\" (trong khi). \"During\" chỉ đi với cụm danh từ.",
-          "tags": ["conjunction"]
+          "tags": [
+            "preposition-conjunction"
+          ]
         }
       ]
     },
@@ -62,10 +91,17 @@
         {
           "number": 105,
           "content": "Perishable food supplies arriving at the depot must be stored ------- designated refrigeration compartments.",
-          "options": ["inside", "above", "along", "onto"],
-          "answer": "A",
+          "options": [
+            "above",
+            "along",
+            "onto",
+            "inside"
+          ],
+          "answer": "D",
           "explanation": "Giới từ chỉ vị trí bên trong khoang chứa hàng / tủ đông lạnh → chọn \"inside\" (bên trong).",
-          "tags": ["preposition"]
+          "tags": [
+            "preposition-conjunction"
+          ]
         }
       ]
     },
@@ -75,10 +111,17 @@
         {
           "number": 106,
           "content": "Due to unexpected congestion at the seaport, customers should anticipate minor ------- in shipment deliveries.",
-          "options": ["delays", "permits", "supplies", "receipts"],
-          "answer": "A",
+          "options": [
+            "receipts",
+            "delays",
+            "permits",
+            "supplies"
+          ],
+          "answer": "B",
           "explanation": "Do cảng biển bị tắc nghẽn (congestion), khách hàng cần lường trước sự chậm trễ trong giao hàng → chọn danh từ phù hợp ngữ cảnh \"delays\" (sự chậm trễ).",
-          "tags": ["vocabulary"]
+          "tags": [
+            "vocabulary"
+          ]
         }
       ]
     },
@@ -88,10 +131,17 @@
         {
           "number": 107,
           "content": "The newly installed optical sorting machines process parcel routing much more ------- than older manual systems.",
-          "options": ["efficiently", "efficient", "efficiency", "efficacious"],
+          "options": [
+            "efficiently",
+            "efficient",
+            "efficiency",
+            "efficacious"
+          ],
           "answer": "A",
           "explanation": "Bổ nghĩa cho động từ hành động \"process parcel routing\" ở dạng so sánh hơn (\"much more ... than\") cần một phó từ → chọn \"efficiently\" (một cách hiệu quả).",
-          "tags": ["word-form"]
+          "tags": [
+            "word-form"
+          ]
         }
       ]
     },
@@ -101,53 +151,79 @@
         {
           "number": 108,
           "content": "Either the main logistics hub in Seattle ------- the satellite depot in Portland will fulfill the urgent component order.",
-          "options": ["or", "and", "nor", "both"],
-          "answer": "A",
+          "options": [
+            "nor",
+            "and",
+            "or",
+            "both"
+          ],
+          "answer": "C",
           "explanation": "Cặp liên từ tương quan bắt buộc: \"Either A or B\" = Hoặc A hoặc B.",
-          "tags": ["conjunction"]
+          "tags": [
+            "preposition-conjunction"
+          ]
         }
       ]
     },
     {
       "part": 6,
-      "passage": "PACIFIC CARGO LOGISTICS\nCustomer Advisory: Shipment Tracking #PC-884920\nDate: October 18\nRecipient: Starlight Electronics Ltd.\n\nDear Valued Client,\n\nWe are writing to provide an important update regarding your shipment of precision semiconductor components (Tracking ID: PC-884920). Due to severe weather conditions along the Western Pacific maritime corridor, your container vessel was required to seek temporary anchorage outside Kaohsiung Harbor for maritime safety.\n\nAs a direct result of this necessary detour, the estimated arrival at the Port of Long Beach has been [131] ------- from October 22 to October 27. [132] -------. Our customs brokerage unit has already pre-filed all electronic import documentation to ensure cargo is discharged rapidly upon berthing.\n\nOnce the container is unloaded, our certified transport partner will deliver the freight [133] ------- to your Irvine assembly facility. We sincerely regret any inconvenience caused by this unavoidable maritime delay. For continuous real-time container updates, please log in to your account dashboard or [134] ------- with your dedicated client manager.",
+      "passage": "PACIFIC CARGO LOGISTICS\nCustomer Advisory: Shipment Tracking #PC-884920\nDate: October 18\nRecipient: Starlight Electronics Ltd.\n\nDear Valued Client,\n\nWe are writing to provide an important update regarding your shipment of precision semiconductor components (Tracking ID: PC-884920). Due to severe weather conditions along the Western Pacific maritime corridor, your container vessel was required to seek temporary anchorage outside Kaohsiung Harbor for maritime safety.\n\nAs a direct result of this necessary detour, the estimated arrival at the Port of Long Beach has been ---(131)--- from October 22 to October 27. ---(132)---. Our customs brokerage unit has already pre-filed all electronic import documentation to ensure cargo is discharged rapidly upon berthing.\n\nOnce the container is unloaded, our certified transport partner will deliver the freight ---(133)--- to your Irvine assembly facility. We sincerely regret any inconvenience caused by this unavoidable maritime delay. For continuous real-time container updates, please log in to your account dashboard or ---(134)--- with your dedicated client manager.",
       "questions": [
         {
           "number": 131,
-          "content": "Choose the best verb form to fill in blank [131].",
-          "options": ["rescheduled", "rescheduling", "reschedule", "reschedules"],
-          "answer": "A",
+          "options": [
+            "reschedule",
+            "reschedules",
+            "rescheduling",
+            "rescheduled"
+          ],
+          "answer": "D",
           "explanation": "Cấu trúc bị động thì hiện tại hoàn thành: \"has been + V3/ed\" → chọn \"rescheduled\" (đã được dời lại lịch từ 22 sang 27 tháng 10).",
-          "tags": ["grammar"]
+          "tags": [
+            "word-form"
+          ]
         },
         {
           "number": 132,
-          "content": "Choose the best sentence to fill in blank [132].",
           "options": [
             "We are monitoring maritime advisories closely and will alert you to further updates.",
             "Our corporate office will host an executive banquet this weekend.",
-            "Please ensure all personal luggage is tagged before boarding the flight.",
-            "The annual software subscription fee has already been deducted."
+            "The annual software subscription fee has already been deducted.",
+            "Please ensure all personal luggage is tagged before boarding the flight."
           ],
           "answer": "A",
           "explanation": "Câu trước vừa thông báo lùi ngày giao hàng do thời tiết xấu. Câu (A) nối tiếp thông tin trấn an và theo dõi tình hình vận chuyển (\"Chúng tôi đang theo dõi sát sao các cảnh báo hàng hải và sẽ thông báo cho bạn nếu có cập nhật mới\").",
-          "tags": ["context"]
+          "tags": [
+            "sentence-insertion"
+          ]
         },
         {
           "number": 133,
-          "content": "Choose the best adverb to fill in blank [133].",
-          "options": ["directly", "direct", "direction", "directness"],
-          "answer": "A",
+          "options": [
+            "direction",
+            "direct",
+            "directly",
+            "directness"
+          ],
+          "answer": "C",
           "explanation": "Bổ nghĩa cho động từ \"will deliver the freight\" cần một phó từ chỉ cách thức → chọn \"directly\" (giao hàng trực tiếp tới cơ sở lắp ráp của bạn).",
-          "tags": ["word-form"]
+          "tags": [
+            "word-form"
+          ]
         },
         {
           "number": 134,
-          "content": "Choose the best verb to fill in blank [134].",
-          "options": ["consult", "consulting", "consultation", "consulted"],
-          "answer": "A",
+          "options": [
+            "consultation",
+            "consult",
+            "consulting",
+            "consulted"
+          ],
+          "answer": "B",
           "explanation": "Cấu trúc song hành với động từ nguyên mẫu đứng trước liên từ \"or\": \"please log in ... or consult with ...\".",
-          "tags": ["grammar"]
+          "tags": [
+            "word-form"
+          ]
         }
       ]
     },
@@ -159,27 +235,31 @@
           "number": 147,
           "content": "What is the primary objective of this notice?",
           "options": [
-            "To inform tenants about scheduled lobby and elevator renovations",
             "To invite building occupants to an annual social reception",
             "To announce an upcoming increase in monthly parking fees",
+            "To inform tenants about scheduled lobby and elevator renovations",
             "To warn employees about unexpected electrical outages"
           ],
-          "answer": "A",
+          "answer": "C",
           "explanation": "Tiêu đề và nội dung thông báo đều tập trung vào việc hiện đại hóa sảnh chính tầng trệt và hệ thống thang máy của tòa nhà Metro Tower → chọn A.",
-          "tags": ["main-idea"]
+          "tags": [
+            "main-idea"
+          ]
         },
         {
           "number": 148,
           "content": "Where must tenants enter the building during Phase 1?",
           "options": [
+            "Through the temporary emergency stairwell",
             "Through the West Plaza side doors",
             "Through the main revolving doors",
-            "Via the underground parking loading dock",
-            "Through the temporary emergency stairwell"
+            "Via the underground parking loading dock"
           ],
-          "answer": "A",
+          "answer": "B",
           "explanation": "Trong mục Phase 1: \"The main revolving entrance will be inaccessible; all tenants and guests must enter through the West Plaza side doors\" → chọn A.",
-          "tags": ["detail"]
+          "tags": [
+            "detail"
+          ]
         },
         {
           "number": 149,
@@ -192,7 +272,9 @@
           ],
           "answer": "A",
           "explanation": "Mục Noise & After-Hours Schedule: \"all noisy tile drilling and structural removal will occur strictly between 7:00 P.M. and 5:00 A.M. on weekdays, and throughout the weekend\" → chọn A.",
-          "tags": ["detail"]
+          "tags": [
+            "detail"
+          ]
         }
       ]
     }

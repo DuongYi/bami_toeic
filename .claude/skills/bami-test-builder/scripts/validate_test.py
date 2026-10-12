@@ -268,6 +268,11 @@ def main():
         err('đề', 'thiếu title')
     if todo(data.get('description')):
         warn('đề', 'description còn TODO')
+    if not isinstance(data.get('is_free'), bool):
+        warn('đề', 'chưa có "is_free" → import thành đề PRO (user free không làm được)')
+    limit = data.get('time_limit_minutes')
+    if limit is not None and (not isinstance(limit, int) or not 1 <= limit <= 240):
+        err('đề', '"time_limit_minutes" phải là số phút 1–240')
     for gi, g in enumerate(data.get('groups') or []):
         check_group(gi, g)
     check_order(data, a.blueprint)

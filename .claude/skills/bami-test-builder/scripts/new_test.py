@@ -49,6 +49,8 @@ def main():
     ap.add_argument('--title', required=True)
     ap.add_argument('--source', default='Bami TOEIC')
     ap.add_argument('--description', default='TODO')
+    ap.add_argument('--free', action='store_true', help='đề miễn phí (mặc định: đề PRO)')
+    ap.add_argument('--minutes', type=int, help='thời gian thi riêng (vd. quick15: 15)')
     ap.add_argument('--force', action='store_true', help='ghi đè khung đã có')
     a = ap.parse_args()
 
@@ -56,9 +58,12 @@ def main():
     if (d / 'parts').exists() and not a.force:
         sys.exit(f'{d}/parts đã tồn tại – dùng --force để ghi đè')
     (d / 'parts').mkdir(parents=True, exist_ok=True)
-    save(d / 'meta.json', {
-        'title': a.title, 'source': a.source, 'description': a.description, 'blueprint': a.blueprint,
-    })
+    meta = {'title': a.title, 'source': a.source, 'description': a.description, 'is_free': a.free,
+            'blueprint': a.blueprint}
+    minutes = a.minutes or (15 if a.blueprint == 'quick15' else None)
+    if minutes:
+        meta['time_limit_minutes'] = minutes
+    save(d / 'meta.json', meta)
     by_part = {}
     for part, nums, flags in blueprint_groups(a.blueprint):
         by_part.setdefault(part, []).append(group(part, nums, flags))

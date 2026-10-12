@@ -667,7 +667,7 @@ class _TestCard extends StatelessWidget {
                       runSpacing: AppSpacing.s4,
                       children: [
                         Text(
-                          '⏱ ${isFullTest ? "120 phút" : "15 phút"}',
+                          '⏱ ${test.examMinutes} phút',
                           style: context.textStyles.bodySmall?.copyWith(
                             color: context.colors.onSurfaceVariant,
                             fontWeight: FontWeight.w500,

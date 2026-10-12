@@ -8,15 +8,12 @@ part of 'test_taking_controller.dart';
 
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, type=warning
-/// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" (hoặc bộ lọc sổ câu sai) để làm khoá family ổn định.
 
 @ProviderFor(TestTaking)
 final testTakingProvider = TestTakingFamily._();
 
-/// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" (hoặc bộ lọc sổ câu sai) để làm khoá family ổn định.
 final class TestTakingProvider
     extends $AsyncNotifierProvider<TestTaking, TakingState> {
-  /// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" (hoặc bộ lọc sổ câu sai) để làm khoá family ổn định.
   TestTakingProvider._({
     required TestTakingFamily super.from,
     required (String, String, String) super.argument,
@@ -53,9 +50,7 @@ final class TestTakingProvider
   }
 }
 
-String _$testTakingHash() => r'ec8c7c58af18685cdbc2a103f4cf4a00dc41ca98';
-
-/// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" (hoặc bộ lọc sổ câu sai) để làm khoá family ổn định.
+String _$testTakingHash() => r'f749c24b4700660c339432c4555a167d544c95cc';
 
 final class TestTakingFamily extends $Family
     with
@@ -75,16 +70,12 @@ final class TestTakingFamily extends $Family
         isAutoDispose: true,
       );
 
-  /// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" (hoặc bộ lọc sổ câu sai) để làm khoá family ổn định.
-
   TestTakingProvider call(String testId, String mode, String parts) =>
       TestTakingProvider._(argument: (testId, mode, parts), from: this);
 
   @override
   String toString() => r'testTakingProvider';
 }
-
-/// Trạng thái một lượt làm bài. [parts] dạng "1,2,5" (hoặc bộ lọc sổ câu sai) để làm khoá family ổn định.
 
 abstract class _$TestTaking extends $AsyncNotifier<TakingState> {
   late final _$args = ref.$arg as (String, String, String);

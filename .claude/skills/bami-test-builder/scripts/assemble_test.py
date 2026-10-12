@@ -27,7 +27,8 @@ def main():
             groups += chunk
     if not groups:
         sys.exit(f'Không có nhóm nào trong {d}/parts')
-    out = {k: v for k, v in meta.items() if k in ('title', 'source', 'description', 'score_table')}
+    keys = ('title', 'source', 'description', 'is_free', 'time_limit_minutes', 'score_table')
+    out = {k: v for k, v in meta.items() if k in keys}
     out['groups'] = groups
     if (d / 'test.json').exists():
         shutil.copy(d / 'test.json', d / 'test.json.bak')

@@ -155,7 +155,7 @@ class _DetailBodyState extends ConsumerState<_DetailBody> {
                             ),
                           ),
                           child: Text(
-                            '⏱ ${s.questionCount >= 100 ? "120 phút" : "15 phút"}',
+                            '⏱ ${s.examMinutes} phút',
                             style: context.textStyles.labelSmall?.copyWith(
                               color: context.surfaces.onHero,
                               fontWeight: FontWeight.bold,
@@ -277,7 +277,7 @@ class _DetailBodyState extends ConsumerState<_DetailBody> {
               ChoiceCard(
                 icon: Icons.timer_outlined,
                 title: 'Thi thử',
-                subtitle: 'Tính giờ như thi thật (120 phút / 200 câu), chấm khi nộp.',
+                subtitle: 'Tính giờ như thi thật (${s.examMinutes} phút cả đề, bớt Part thì giảm theo), chấm khi nộp.',
                 selected: _mode == 'exam',
                 onTap: () => setState(() => _mode = 'exam'),
               ),
