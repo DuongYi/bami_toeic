@@ -8,24 +8,16 @@
       "part": 1,
       "image": "p1_q1.png",
       "audio": "p1_q1.m4a",
-      "transcript": "(A) A cashier is scanning merchandise at a register. (B) Clothing racks have been pushed against the glass door. (C) Customers are dining at an outdoor bistro table. (D) Mannequins are displayed in a storefront showcase.",
+      "transcript": "(A) Mannequins are displayed in a storefront showcase.\n(B) A cashier is scanning merchandise at a register.\n(C) Customers are dining at an outdoor bistro table.\n(D) Clothing racks have been pushed against the glass door.",
       "_speech": "Number 1. Look at the picture marked number 1 in your test book. (A) A cashier is scanning merchandise at a register. (B) Clothing racks have been pushed against the glass door. (C) Customers are dining at an outdoor bistro table. (D) Mannequins are displayed in a storefront showcase.",
       "_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"600\" viewBox=\"0 0 800 600\">\n  <rect width=\"800\" height=\"600\" fill=\"#FDF2F8\"/>\n  <rect y=\"380\" width=\"800\" height=\"220\" fill=\"#FCE7F3\"/>\n  <rect x=\"180\" y=\"240\" width=\"440\" height=\"200\" rx=\"16\" fill=\"#DB2777\"/>\n  <rect x=\"240\" y=\"160\" width=\"120\" height=\"90\" rx=\"8\" fill=\"#1E293B\"/>\n  <rect x=\"250\" y=\"170\" width=\"100\" height=\"70\" rx=\"4\" fill=\"#67E8F9\"/>\n  <circle cx=\"540\" cy=\"180\" r=\"35\" fill=\"#F472B6\"/>\n  <rect x=\"510\" y=\"225\" width=\"60\" height=\"160\" rx=\"12\" fill=\"#BE185D\"/>\n  <rect x=\"380\" y=\"260\" width=\"60\" height=\"70\" fill=\"#F3F4F6\"/>\n</svg>",
       "questions": [
         {
           "number": 1,
-          "content": "Choose the statement that best describes the picture.",
-          "options": [
-            "A cashier is scanning merchandise at a register.",
-            "Clothing racks have been pushed against the glass door.",
-            "Customers are dining at an outdoor bistro table.",
-            "Mannequins are displayed in a storefront showcase."
-          ],
-          "answer": "A",
-          "explanation": "Tranh vẽ cảnh thu ngân đang đứng tại quầy thanh toán với máy quét và hàng hóa → Chọn (A).",
+          "answer": "B",
+          "explanation": "Tranh vẽ cảnh thu ngân đang đứng tại quầy thanh toán với máy quét và hàng hóa → Chọn (B).",
           "tags": [
-            "listening",
-            "photographs"
+            "photo"
           ]
         }
       ]
@@ -34,24 +26,16 @@
       "part": 1,
       "image": "p1_q2.png",
       "audio": "p1_q2.m4a",
-      "transcript": "(A) Outdoor dining tables are shaded by large umbrellas. (B) Waitstaff are polishing wine glasses at the counter. (C) Street performers are gathering an audience. (D) Pedestrians are sheltering under a bus canopy.",
+      "transcript": "(A) Outdoor dining tables are shaded by large umbrellas.\n(B) Waitstaff are polishing wine glasses at the counter.\n(C) Pedestrians are sheltering under a bus canopy.\n(D) Street performers are gathering an audience.",
       "_speech": "Number 2. Look at the picture marked number 2 in your test book. (A) Outdoor dining tables are shaded by large umbrellas. (B) Waitstaff are polishing wine glasses at the counter. (C) Street performers are gathering an audience. (D) Pedestrians are sheltering under a bus canopy.",
       "_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"600\" viewBox=\"0 0 800 600\">\n  <rect width=\"800\" height=\"600\" fill=\"#ECFDF5\"/>\n  <circle cx=\"700\" cy=\"100\" r=\"50\" fill=\"#FBBF24\"/>\n  <rect y=\"420\" width=\"800\" height=\"180\" fill=\"#D1D5DB\"/>\n  <polygon points=\"150,220 350,220 250,140\" fill=\"#059669\"/>\n  <rect x=\"245\" y=\"220\" width=\"10\" height=\"220\" fill=\"#065F46\"/>\n  <rect x=\"180\" y=\"380\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#92400E\"/>\n  <polygon points=\"450,220 650,220 550,140\" fill=\"#059669\"/>\n  <rect x=\"545\" y=\"220\" width=\"10\" height=\"220\" fill=\"#065F46\"/>\n  <rect x=\"480\" y=\"380\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#92400E\"/>\n</svg>",
       "questions": [
         {
           "number": 2,
-          "content": "Choose the statement that best describes the picture.",
-          "options": [
-            "Outdoor dining tables are shaded by large umbrellas.",
-            "Waitstaff are polishing wine glasses at the counter.",
-            "Street performers are gathering an audience.",
-            "Pedestrians are sheltering under a bus canopy."
-          ],
           "answer": "A",
           "explanation": "Những chiếc bàn ăn ngoài trời được che bóng mát bởi những cây dù lớn → Chọn (A).",
           "tags": [
-            "listening",
-            "photographs"
+            "photo"
           ]
         }
       ]
@@ -59,22 +43,15 @@
     {
       "part": 2,
       "audio": "p2_q7.m4a",
-      "transcript": "M: When does our promotional campaign for the autumn apparel line launch?\nW: (A) Early next month on social media. (B) Yes, autumn is my favorite season. (C) A twenty percent discount coupon.",
+      "transcript": "When does our promotional campaign for the autumn apparel line launch?\n(A) Early next month on social media.\n(B) A twenty percent discount coupon.\n(C) Yes, autumn is my favorite season.",
       "_speech": "Number 7. When does our promotional campaign for the autumn apparel line launch? (A) Early next month on social media. (B) Yes, autumn is my favorite season. (C) A twenty percent discount coupon.",
       "questions": [
         {
           "number": 7,
-          "content": "When does our promotional campaign for the autumn apparel line launch?",
-          "options": [
-            "Early next month on social media.",
-            "Yes, autumn is my favorite season.",
-            "A twenty percent discount coupon."
-          ],
           "answer": "A",
           "explanation": "Hỏi \"When\" về thời điểm ra mắt chiến dịch tiếp thị → Chọn (A) \"Early next month on social media\".",
           "tags": [
-            "listening",
-            "question-response"
+            "wh-question"
           ]
         }
       ]
@@ -82,22 +59,15 @@
     {
       "part": 2,
       "audio": "p2_q8.m4a",
-      "transcript": "W: Where can shoppers redeem their reward loyalty points?\nM: (A) At any checkout counter or online. (B) It earned five stars in reviews. (C) About forty reward points.",
+      "transcript": "Where can shoppers redeem their reward loyalty points?\n(A) About forty reward points.\n(B) At any checkout counter or online.\n(C) It earned five stars in reviews.",
       "_speech": "Number 8. Where can shoppers redeem their reward loyalty points? (A) At any checkout counter or online. (B) It earned five stars in reviews. (C) About forty reward points.",
       "questions": [
         {
           "number": 8,
-          "content": "Where can shoppers redeem their reward loyalty points?",
-          "options": [
-            "At any checkout counter or online.",
-            "It earned five stars in reviews.",
-            "About forty reward points."
-          ],
-          "answer": "A",
-          "explanation": "Hỏi \"Where\" về địa điểm đổi điểm tích lũy → Chọn (A) \"Tại bất kỳ quầy thu ngân nào hoặc trực tuyến\".",
+          "answer": "B",
+          "explanation": "Hỏi \"Where\" về địa điểm đổi điểm tích lũy → Chọn (B) \"Tại bất kỳ quầy thu ngân nào hoặc trực tuyến\".",
           "tags": [
-            "listening",
-            "question-response"
+            "wh-question"
           ]
         }
       ]
@@ -105,22 +75,15 @@
     {
       "part": 2,
       "audio": "p2_q9.m4a",
-      "transcript": "M: Could you please review the draft of the press release before five o'clock?\nW: (A) Certainly, I will read it right after lunch. (B) The printing press broke down. (C) Yes, exactly five copies.",
+      "transcript": "Could you please review the draft of the press release before five o'clock?\n(A) The printing press broke down.\n(B) Yes, exactly five copies.\n(C) Certainly, I will read it right after lunch.",
       "_speech": "Number 9. Could you please review the draft of the press release before five o'clock? (A) Certainly, I will read it right after lunch. (B) The printing press broke down. (C) Yes, exactly five copies.",
       "questions": [
         {
           "number": 9,
-          "content": "Could you please review the draft of the press release before five o'clock?",
-          "options": [
-            "Certainly, I will read it right after lunch.",
-            "The printing press broke down.",
-            "Yes, exactly five copies."
-          ],
-          "answer": "A",
-          "explanation": "Lời đề nghị xem xét thông cáo báo chí \"Could you please review...\" → đồng ý sẵn lòng \"Chắc chắn rồi, tôi sẽ đọc ngay sau bữa trưa\" (A).",
+          "answer": "C",
+          "explanation": "Lời đề nghị xem xét thông cáo báo chí \"Could you please review...\" → đồng ý sẵn lòng \"Chắc chắn rồi, tôi sẽ đọc ngay sau bữa trưa\" (C).",
           "tags": [
-            "listening",
-            "question-response"
+            "request"
           ]
         }
       ]
@@ -135,48 +98,45 @@
           "number": 32,
           "content": "What aspect of the company's service received low ratings?",
           "options": [
-            "The online returns process",
             "The product packaging quality",
             "The speed of domestic delivery",
-            "The accuracy of inventory counts"
+            "The accuracy of inventory counts",
+            "The online returns process"
           ],
-          "answer": "A",
-          "explanation": "Người phụ nữ nhận xét: \"...our online returns process scored below average\" → Chọn (A).",
+          "answer": "D",
+          "explanation": "Người phụ nữ nhận xét: \"...our online returns process scored below average\" → Chọn (D).",
           "tags": [
-            "listening",
-            "conversation"
+            "detail"
           ]
         },
         {
           "number": 33,
           "content": "What problem did customers mention in their reviews?",
           "options": [
+            "Customer service phone lines were busy",
             "Printing return labels was inconvenient",
             "Replacement items arrived damaged",
-            "Customer service phone lines were busy",
             "The return window of 14 days was too short"
           ],
-          "answer": "A",
-          "explanation": "Người nam cho biết khách hàng phản ánh việc in nhãn đổi trả và tìm tủ nhận hàng phiền phức (\"printing physical return labels ... was cumbersome\") → Chọn (A).",
+          "answer": "B",
+          "explanation": "Người nam cho biết khách hàng phản ánh việc in nhãn đổi trả và tìm tủ nhận hàng phiền phức (\"printing physical return labels ... was cumbersome\") → Chọn (B).",
           "tags": [
-            "listening",
-            "conversation"
+            "detail"
           ]
         },
         {
           "number": 34,
           "content": "What will Mark do this afternoon?",
           "options": [
-            "Contact a logistics courier about QR-code drop-offs",
+            "Survey retail store managers",
             "Redesign the company's mobile shopping application",
-            "Issue refunds to unsatisfied shoppers",
-            "Survey retail store managers"
+            "Contact a logistics courier about QR-code drop-offs",
+            "Issue refunds to unsatisfied shoppers"
           ],
-          "answer": "A",
-          "explanation": "Mark nói: \"I will contact Swift Logistics this afternoon to check their integration pricing\" → Chọn (A).",
+          "answer": "C",
+          "explanation": "Mark nói: \"I will contact Swift Logistics this afternoon to check their integration pricing\" → Chọn (C).",
           "tags": [
-            "listening",
-            "conversation"
+            "next-action"
           ]
         }
       ]
@@ -191,16 +151,15 @@
           "number": 71,
           "content": "What is being celebrated at Greenfield Mall?",
           "options": [
-            "The grand opening of a renovated wing",
-            "The mall's twentieth anniversary",
             "A national public holiday festival",
+            "The mall's twentieth anniversary",
+            "The grand opening of a renovated wing",
             "A regional student fashion competition"
           ],
-          "answer": "A",
-          "explanation": "Thông báo nêu: \"To celebrate the grand opening of our newly renovated East Wing...\" → Chọn (A).",
+          "answer": "C",
+          "explanation": "Thông báo nêu: \"To celebrate the grand opening of our newly renovated East Wing...\" → Chọn (C).",
           "tags": [
-            "listening",
-            "talks"
+            "detail"
           ]
         },
         {
@@ -208,31 +167,29 @@
           "content": "What is available in the central atrium until 4:00 P.M.?",
           "options": [
             "Complimentary artisan coffee drinks",
-            "Live acoustic musical performances",
             "Automotive test drive bookings",
+            "Live acoustic musical performances",
             "Free smartphone repair assessments"
           ],
           "answer": "A",
           "explanation": "Thông báo: \"...complimentary artisan coffee bar will be serving hot espresso drinks until 4:00 P.M.\" → Chọn (A).",
           "tags": [
-            "listening",
-            "talks"
+            "detail"
           ]
         },
         {
           "number": 73,
           "content": "How can shoppers qualify for a free canvas tote bag?",
           "options": [
-            "By spending over fifty dollars at participating stores",
             "By signing up for an email newsletter",
             "By filling out a customer satisfaction survey",
-            "By applying for a department store credit card"
+            "By applying for a department store credit card",
+            "By spending over fifty dollars at participating stores"
           ],
-          "answer": "A",
-          "explanation": "Thông báo: \"If you spend over fifty dollars at any participating store today, present your receipt ... to receive a free canvas shopping tote\" → Chọn (A).",
+          "answer": "D",
+          "explanation": "Thông báo: \"If you spend over fifty dollars at any participating store today, present your receipt ... to receive a free canvas shopping tote\" → Chọn (D).",
           "tags": [
-            "listening",
-            "talks"
+            "detail"
           ]
         }
       ]
@@ -244,15 +201,14 @@
           "number": 101,
           "content": "Participants found the interactive workshop on digital marketing analytics extremely -------.",
           "options": [
-            "informative",
             "inform",
+            "informative",
             "informatively",
             "information"
           ],
-          "answer": "A",
+          "answer": "B",
           "explanation": "Cấu trúc \"find + O + adj\" (nhận thấy cái gì như thế nào) → sau phó từ chỉ mức độ \"extremely\" cần tính từ \"informative\" (bổ ích, hữu ích).",
           "tags": [
-            "reading",
             "word-form"
           ]
         }
@@ -265,15 +221,14 @@
           "number": 102,
           "content": "Hotel guests dining at the seaside restaurant are entitled to a complimentary breakfast ------- every morning.",
           "options": [
-            "buffet",
-            "permit",
             "contract",
-            "voucher"
+            "voucher",
+            "permit",
+            "buffet"
           ],
-          "answer": "A",
+          "answer": "D",
           "explanation": "Cụm danh từ cố định trong ngành khách sạn \"breakfast buffet\" (bữa ăn sáng tự chọn).",
           "tags": [
-            "reading",
             "vocabulary"
           ]
         }
@@ -286,15 +241,14 @@
           "number": 103,
           "content": "Delegates attending the summit are requested to register ------- on the official event portal.",
           "options": [
-            "themselves",
-            "they",
             "them",
-            "theirs"
+            "theirs",
+            "they",
+            "themselves"
           ],
-          "answer": "A",
+          "answer": "D",
           "explanation": "Hành động đăng ký tác động lên chính chủ ngữ \"Delegates\" → dùng đại từ phản thân \"themselves\" (tự đăng ký).",
           "tags": [
-            "reading",
             "pronoun"
           ]
         }
@@ -307,16 +261,15 @@
           "number": 104,
           "content": "The technical seminar was rescheduled ------- the keynote speaker missed his connecting flight.",
           "options": [
-            "because",
-            "due to",
             "in spite of",
+            "due to",
+            "because",
             "as though"
           ],
-          "answer": "A",
+          "answer": "C",
           "explanation": "Theo sau là một mệnh đề hoàn chỉnh có chủ ngữ và động từ (\"the keynote speaker missed his connecting flight\") chỉ nguyên nhân → chọn liên từ \"because\".",
           "tags": [
-            "reading",
-            "conjunction"
+            "preposition-conjunction"
           ]
         }
       ]
@@ -330,83 +283,74 @@
           "options": [
             "behind",
             "into",
-            "onto",
-            "during"
+            "during",
+            "onto"
           ],
           "answer": "A",
           "explanation": "Vị trí không gian của bãi đỗ xe so với cổng vào siêu thị → chọn giới từ nơi chốn \"behind\" (phía sau).",
           "tags": [
-            "reading",
-            "preposition"
+            "preposition-conjunction"
           ]
         }
       ]
     },
     {
       "part": 6,
-      "passage": "NOTICE TO ALL SYSTEM USERS\nFrom: IT Infrastructure & Operations\nDate: September 5\nSubject: Scheduled CRM System Maintenance\n\nPlease be advised that our central Customer Relationship Management (CRM) platform will undergo routine system maintenance this Saturday, September 9, beginning at 11:00 P.M. and concluding at 4:00 A.M. on Sunday morning.\n\nDuring this five-hour maintenance window, the database will be temporarily [131] ------- to all personnel. This maintenance is essential to deploy critical security patches and enhance server performance. [132] -------. We advise all sales and support representatives to finalize and save all active transaction records before logging off on Friday afternoon.\n\nIf you require urgent client contact records during the maintenance outage, please export the necessary files [133] ------- Saturday noon. Regular database operations will resume [134] ------- at 4:30 A.M. on Sunday.",
+      "passage": "NOTICE TO ALL SYSTEM USERS\nFrom: IT Infrastructure & Operations\nDate: September 5\nSubject: Scheduled CRM System Maintenance\n\nPlease be advised that our central Customer Relationship Management (CRM) platform will undergo routine system maintenance this Saturday, September 9, beginning at 11:00 P.M. and concluding at 4:00 A.M. on Sunday morning.\n\nDuring this five-hour maintenance window, the database will be temporarily ---(131)--- to all personnel. This maintenance is essential to deploy critical security patches and enhance server performance. ---(132)---. We advise all sales and support representatives to finalize and save all active transaction records before logging off on Friday afternoon.\n\nIf you require urgent client contact records during the maintenance outage, please export the necessary files ---(133)--- Saturday noon. Regular database operations will resume ---(134)--- at 4:30 A.M. on Sunday.",
       "questions": [
         {
           "number": 131,
-          "content": "Choose the best word to fill in blank [131].",
           "options": [
             "inaccessible",
+            "accessing",
             "accessible",
-            "accessibility",
-            "accessing"
+            "accessibility"
           ],
           "answer": "A",
           "explanation": "Trong thời gian hệ thống bảo trì máy chủ, cơ sở dữ liệu sẽ tạm thời \"không thể truy cập được\" → chọn tính từ phủ định \"inaccessible\".",
           "tags": [
-            "reading",
             "vocabulary"
           ]
         },
         {
           "number": 132,
-          "content": "Choose the best sentence to fill in blank [132].",
           "options": [
-            "These enhancements will ensure faster query times and improved data safety.",
+            "The executive dining lounge will be closed during the holidays.",
             "The marketing campaign proposal was rejected by our overseas partner.",
             "All international travel receipts must be turned in by Thursday.",
-            "The executive dining lounge will be closed during the holidays."
+            "These enhancements will ensure faster query times and improved data safety."
           ],
-          "answer": "A",
-          "explanation": "Câu trước nói về mục đích nâng cấp bảo mật và hiệu năng. Câu (A) tiếp nối mạch logic: \"Những nâng cấp này sẽ đảm bảo thời gian truy vấn nhanh hơn và dữ liệu an toàn hơn\".",
+          "answer": "D",
+          "explanation": "Câu trước nói về mục đích nâng cấp bảo mật và hiệu năng. Câu (D) tiếp nối mạch logic: \"Những nâng cấp này sẽ đảm bảo thời gian truy vấn nhanh hơn và dữ liệu an toàn hơn\".",
           "tags": [
-            "reading",
-            "context"
+            "sentence-insertion"
           ]
         },
         {
           "number": 133,
-          "content": "Choose the best preposition to fill in blank [133].",
           "options": [
-            "before",
-            "among",
             "between",
-            "toward"
+            "toward",
+            "before",
+            "among"
           ],
-          "answer": "A",
+          "answer": "C",
           "explanation": "Chỉ mốc thời gian phải hoàn tất trước khi sự kiện xảy ra: \"before Saturday noon\" (trước trưa Thứ Bảy).",
           "tags": [
-            "reading",
-            "preposition"
+            "preposition-conjunction"
           ]
         },
         {
           "number": 134,
-          "content": "Choose the best adverb to fill in blank [134].",
           "options": [
+            "prompted",
             "promptly",
-            "prompt",
             "promptness",
-            "prompted"
+            "prompt"
           ],
-          "answer": "A",
+          "answer": "B",
           "explanation": "Bổ nghĩa cho động từ \"will resume\" tại mốc thời gian cụ thể cần phó từ (adverb) → chọn \"promptly\" (đúng giờ, kịp thời).",
           "tags": [
-            "reading",
             "word-form"
           ]
         }
@@ -420,15 +364,14 @@
           "number": 147,
           "content": "Why did Mr. Miller bring his vehicle to Apex Automotive?",
           "options": [
-            "For a scheduled inspection and brake pad replacement",
+            "To install high-performance audio speakers",
             "To repair severe collision body damage",
-            "To test-drive a newly arrived Silverton sedan",
-            "To install high-performance audio speakers"
+            "For a scheduled inspection and brake pad replacement",
+            "To test-drive a newly arrived Silverton sedan"
           ],
-          "answer": "A",
-          "explanation": "Khách hàng viết: \"I brought my sedan in for the scheduled 30,000-mile inspection and front brake pad replacement\" → Chọn (A).",
+          "answer": "C",
+          "explanation": "Khách hàng viết: \"I brought my sedan in for the scheduled 30,000-mile inspection and front brake pad replacement\" → Chọn (C).",
           "tags": [
-            "reading",
             "detail"
           ]
         },
@@ -436,15 +379,14 @@
           "number": 148,
           "content": "What will Apex Automotive do next month?",
           "options": [
+            "Discontinue the promotional discount coupon program",
             "Expand the waiting lounge and install faster internet",
             "Relocate the auto repair shop to a new facility",
-            "Discontinue the promotional discount coupon program",
             "Hire additional mechanical technicians"
           ],
-          "answer": "A",
-          "explanation": "Người quản lý phản hồi: \"...we are scheduled to expand the customer lounge next month with extra workstations and high-speed fiber internet\" → Chọn (A).",
+          "answer": "B",
+          "explanation": "Người quản lý phản hồi: \"...we are scheduled to expand the customer lounge next month with extra workstations and high-speed fiber internet\" → Chọn (B).",
           "tags": [
-            "reading",
             "detail"
           ]
         }
@@ -460,13 +402,12 @@
           "options": [
             "Exclusive early admission and a 15% plant discount",
             "Free admission for up to ten non-member guests",
-            "A complimentary pair of professional gardening shears",
-            "Reserved parking stalls in the overflow lot"
+            "Reserved parking stalls in the overflow lot",
+            "A complimentary pair of professional gardening shears"
           ],
           "answer": "A",
           "explanation": "Thông báo nêu: \"Garden members enjoy exclusive admission on Friday, May 20 from 8:00 A.M. to 10:00 A.M., plus an extra 15% discount on all plant purchases\" → Chọn (A).",
           "tags": [
-            "reading",
             "detail"
           ]
         },
@@ -476,13 +417,12 @@
           "options": [
             "At an overflow parking lot at a nearby school",
             "In the garden's primary North Lot",
-            "On an adjacent residential neighborhood street",
-            "In an underground parking facility"
+            "In an underground parking facility",
+            "On an adjacent residential neighborhood street"
           ],
           "answer": "A",
           "explanation": "Sarah viết: \"...the North Lot was full by 10:30 A.M., parking attendants directed us smoothly to the overflow lot at the adjacent middle school\" → Chọn (A).",
           "tags": [
-            "reading",
             "detail"
           ]
         },
@@ -490,15 +430,14 @@
           "number": 154,
           "content": "What does Sarah Jenkins indicate she will do before next year?",
           "options": [
-            "Buy a garden family membership",
-            "Volunteer as a parking attendant",
             "Donate plant seeds to the conservatory",
-            "Host a gardening workshop in her backyard"
+            "Host a gardening workshop in her backyard",
+            "Volunteer as a parking attendant",
+            "Buy a garden family membership"
           ],
-          "answer": "A",
-          "explanation": "Câu cuối bài review: \"We definitely plan to purchase a family membership before next year's sale!\" → Chọn (A).",
+          "answer": "D",
+          "explanation": "Câu cuối bài review: \"We definitely plan to purchase a family membership before next year's sale!\" → Chọn (D).",
           "tags": [
-            "reading",
             "inference"
           ]
         }

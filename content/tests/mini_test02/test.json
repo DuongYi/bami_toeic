@@ -8,24 +8,16 @@
       "part": 1,
       "image": "p1_q1.png",
       "audio": "p1_q1.m4a",
-      "transcript": "(A) A speaker is standing near a whiteboard. (B) Some chairs are stacked against the back wall. (C) Documents are being passed around the boardroom. (D) A technician is replacing a ceiling projector bulb.",
+      "transcript": "(A) Documents are being passed around the boardroom.\n(B) A speaker is standing near a whiteboard.\n(C) A technician is replacing a ceiling projector bulb.\n(D) Some chairs are stacked against the back wall.",
       "_speech": "Number 1. Look at the picture marked number 1 in your test book. (A) A speaker is standing near a whiteboard. (B) Some chairs are stacked against the back wall. (C) Documents are being passed around the boardroom. (D) A technician is replacing a ceiling projector bulb.",
       "_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"600\" viewBox=\"0 0 800 600\">\n  <rect width=\"800\" height=\"600\" fill=\"#F1F5F9\"/>\n  <rect y=\"420\" width=\"800\" height=\"180\" fill=\"#CBD5E1\"/>\n  <rect x=\"120\" y=\"100\" width=\"340\" height=\"220\" rx=\"8\" fill=\"#FFFFFF\" stroke=\"#94A3B8\" stroke-width=\"8\"/>\n  <line x1=\"160\" y1=\"160\" x2=\"380\" y2=\"160\" stroke=\"#0284C7\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n  <line x1=\"160\" y1=\"210\" x2=\"320\" y2=\"210\" stroke=\"#0284C7\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n  <circle cx=\"580\" cy=\"220\" r=\"45\" fill=\"#3B82F6\"/>\n  <rect x=\"540\" y=\"270\" width=\"80\" height=\"170\" rx=\"16\" fill=\"#1E40AF\"/>\n  <line x1=\"560\" y1=\"440\" x2=\"560\" y2=\"560\" stroke=\"#1E3A8A\" stroke-width=\"20\" stroke-linecap=\"round\"/>\n  <line x1=\"600\" y1=\"440\" x2=\"600\" y2=\"560\" stroke=\"#1E3A8A\" stroke-width=\"20\" stroke-linecap=\"round\"/>\n</svg>",
       "questions": [
         {
           "number": 1,
-          "content": "Choose the statement that best describes the picture.",
-          "options": [
-            "A speaker is standing near a whiteboard.",
-            "Some chairs are stacked against the back wall.",
-            "Documents are being passed around the boardroom.",
-            "A technician is replacing a ceiling projector bulb."
-          ],
-          "answer": "A",
-          "explanation": "Bức tranh miêu tả một người đang đứng thuyết trình cạnh bảng trắng trong phòng hội thảo → Chọn (A).",
+          "answer": "B",
+          "explanation": "Bức tranh miêu tả một người đang đứng thuyết trình cạnh bảng trắng trong phòng hội thảo → Chọn (B).",
           "tags": [
-            "listening",
-            "photographs"
+            "photo"
           ]
         }
       ]
@@ -34,24 +26,16 @@
       "part": 1,
       "image": "p1_q2.png",
       "audio": "p1_q2.m4a",
-      "transcript": "(A) Shelves in a library are stocked with reference books. (B) A customer is paying at a retail checkout counter. (C) Boxes are being unloaded from a cargo van. (D) A ladder is leaning against a brick wall.",
+      "transcript": "(A) Shelves in a library are stocked with reference books.\n(B) Boxes are being unloaded from a cargo van.\n(C) A customer is paying at a retail checkout counter.\n(D) A ladder is leaning against a brick wall.",
       "_speech": "Number 2. Look at the picture marked number 2 in your test book. (A) Shelves in a library are stocked with reference books. (B) A customer is paying at a retail checkout counter. (C) Boxes are being unloaded from a cargo van. (D) A ladder is leaning against a brick wall.",
       "_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"600\" viewBox=\"0 0 800 600\">\n  <rect width=\"800\" height=\"600\" fill=\"#FEF3C7\"/>\n  <rect x=\"100\" y=\"80\" width=\"600\" height=\"440\" rx=\"12\" fill=\"#78350F\"/>\n  <rect x=\"140\" y=\"110\" width=\"520\" height=\"110\" fill=\"#451A03\"/>\n  <rect x=\"140\" y=\"240\" width=\"520\" height=\"110\" fill=\"#451A03\"/>\n  <rect x=\"140\" y=\"370\" width=\"520\" height=\"110\" fill=\"#451A03\"/>\n  <rect x=\"160\" y=\"130\" width=\"40\" height=\"90\" fill=\"#DC2626\"/>\n  <rect x=\"210\" y=\"130\" width=\"35\" height=\"90\" fill=\"#2563EB\"/>\n  <rect x=\"255\" y=\"130\" width=\"50\" height=\"90\" fill=\"#16A34A\"/>\n  <rect x=\"315\" y=\"130\" width=\"45\" height=\"90\" fill=\"#D97706\"/>\n  <rect x=\"160\" y=\"260\" width=\"55\" height=\"90\" fill=\"#9333EA\"/>\n  <rect x=\"225\" y=\"260\" width=\"40\" height=\"90\" fill=\"#0D9488\"/>\n  <rect x=\"275\" y=\"260\" width=\"60\" height=\"90\" fill=\"#E11D48\"/>\n</svg>",
       "questions": [
         {
           "number": 2,
-          "content": "Choose the statement that best describes the picture.",
-          "options": [
-            "Shelves in a library are stocked with reference books.",
-            "A customer is paying at a retail checkout counter.",
-            "Boxes are being unloaded from a cargo van.",
-            "A ladder is leaning against a brick wall."
-          ],
           "answer": "A",
           "explanation": "Các kệ sách được sắp xếp ngay ngắn đầy các cuốn sách → Chọn (A).",
           "tags": [
-            "listening",
-            "photographs"
+            "photo"
           ]
         }
       ]
@@ -59,22 +43,15 @@
     {
       "part": 2,
       "audio": "p2_q7.m4a",
-      "transcript": "W: Who will be conducting the orientation for our incoming software engineers?\nM: (A) David from the talent acquisition team. (B) In the fourth-floor seminar room. (C) It starts tomorrow at nine.",
+      "transcript": "Who will be conducting the orientation for our incoming software engineers?\n(A) In the fourth-floor seminar room.\n(B) It starts tomorrow at nine.\n(C) David from the talent acquisition team.",
       "_speech": "Number 7. Who will be conducting the orientation for our incoming software engineers? (A) David from the talent acquisition team. (B) In the fourth-floor seminar room. (C) It starts tomorrow at nine.",
       "questions": [
         {
           "number": 7,
-          "content": "Who will be conducting the orientation for our incoming software engineers?",
-          "options": [
-            "David from the talent acquisition team.",
-            "In the fourth-floor seminar room.",
-            "It starts tomorrow at nine."
-          ],
-          "answer": "A",
-          "explanation": "Hỏi \"Who\" về người phụ trách → Chọn (A) \"David from the talent acquisition team\".",
+          "answer": "C",
+          "explanation": "Hỏi \"Who\" về người phụ trách → Chọn (C) \"David from the talent acquisition team\".",
           "tags": [
-            "listening",
-            "question-response"
+            "wh-question"
           ]
         }
       ]
@@ -82,22 +59,15 @@
     {
       "part": 2,
       "audio": "p2_q8.m4a",
-      "transcript": "M: Did you send the revised job description to the hiring manager?\nW: (A) Yes, I emailed it first thing this morning. (B) He was hired as a systems analyst. (C) About thirty applicants applied.",
+      "transcript": "Did you send the revised job description to the hiring manager?\n(A) About thirty applicants applied.\n(B) Yes, I emailed it first thing this morning.\n(C) He was hired as a systems analyst.",
       "_speech": "Number 8. Did you send the revised job description to the hiring manager? (A) Yes, I emailed it first thing this morning. (B) He was hired as a systems analyst. (C) About thirty applicants applied.",
       "questions": [
         {
           "number": 8,
-          "content": "Did you send the revised job description to the hiring manager?",
-          "options": [
-            "Yes, I emailed it first thing this morning.",
-            "He was hired as a systems analyst.",
-            "About thirty applicants applied."
-          ],
-          "answer": "A",
-          "explanation": "Câu hỏi Yes/No trong quá khứ → xác nhận đã gửi qua email vào đầu giờ sáng nay (A).",
+          "answer": "B",
+          "explanation": "Câu hỏi Yes/No trong quá khứ → xác nhận đã gửi qua email vào đầu giờ sáng nay (B).",
           "tags": [
-            "listening",
-            "question-response"
+            "yes-no"
           ]
         }
       ]
@@ -105,22 +75,15 @@
     {
       "part": 2,
       "audio": "p2_q9.m4a",
-      "transcript": "W: Shouldn't we order more copies of the employee benefits booklet?\nM: (A) We still have three unopened boxes in storage. (B) The human resources office is on level two. (C) Yes, she received the benefit.",
+      "transcript": "Shouldn't we order more copies of the employee benefits booklet?\n(A) We still have three unopened boxes in storage.\n(B) The human resources office is on level two.\n(C) Yes, she received the benefit.",
       "_speech": "Number 9. Shouldn't we order more copies of the employee benefits booklet? (A) We still have three unopened boxes in storage. (B) The human resources office is on level two. (C) Yes, she received the benefit.",
       "questions": [
         {
           "number": 9,
-          "content": "Shouldn't we order more copies of the employee benefits booklet?",
-          "options": [
-            "We still have three unopened boxes in storage.",
-            "The human resources office is on level two.",
-            "Yes, she received the benefit."
-          ],
           "answer": "A",
           "explanation": "Câu hỏi phủ định gợi ý đặt thêm tài liệu → trả lời gián tiếp là trong kho vẫn còn 3 thùng chưa mở (A).",
           "tags": [
-            "listening",
-            "question-response"
+            "yes-no"
           ]
         }
       ]
@@ -136,47 +99,44 @@
           "content": "What position are the speakers interviewing candidates for?",
           "options": [
             "Senior graphic designer",
-            "Software quality tester",
+            "Financial risk analyst",
             "Human resources director",
-            "Financial risk analyst"
+            "Software quality tester"
           ],
           "answer": "A",
           "explanation": "Người nam hỏi: \"have you finalized the interview schedule for the senior graphic designer candidates?\" → Chọn (A).",
           "tags": [
-            "listening",
-            "conversation"
+            "detail"
           ]
         },
         {
           "number": 33,
           "content": "Why did Alex Mercer request a schedule change?",
           "options": [
-            "Because of a family emergency",
+            "Because he lost his portfolio files",
             "Because his train was cancelled",
-            "Because he accepted another job offer",
-            "Because he lost his portfolio files"
+            "Because of a family emergency",
+            "Because he accepted another job offer"
           ],
-          "answer": "A",
-          "explanation": "Người phụ nữ nói: \"...ask if we could reschedule his meeting to Friday morning due to a family emergency\" → Chọn (A).",
+          "answer": "C",
+          "explanation": "Người phụ nữ nói: \"...ask if we could reschedule his meeting to Friday morning due to a family emergency\" → Chọn (C).",
           "tags": [
-            "listening",
-            "conversation"
+            "request-suggestion"
           ]
         },
         {
           "number": 34,
           "content": "What will Rebecca do next?",
           "options": [
-            "Send a confirmation email to the applicant",
             "Reserve conference room 302",
+            "Interview another prospective designer",
             "Print copies of the applicant's resume",
-            "Interview another prospective designer"
+            "Send a confirmation email to the applicant"
           ],
-          "answer": "A",
-          "explanation": "Rebecca nói: \"I'll send him a confirmation email right away...\" → Chọn (A).",
+          "answer": "D",
+          "explanation": "Rebecca nói: \"I'll send him a confirmation email right away...\" → Chọn (D).",
           "tags": [
-            "listening",
-            "conversation"
+            "next-action"
           ]
         }
       ]
@@ -191,48 +151,45 @@
           "number": 71,
           "content": "Who most likely are the listeners?",
           "options": [
+            "Customers testing new tablet devices",
             "Newly hired company employees",
             "Visiting international tourists",
-            "College students touring a computer laboratory",
-            "Customers testing new tablet devices"
+            "College students touring a computer laboratory"
           ],
-          "answer": "A",
-          "explanation": "Người nói chào mừng nhân viên mới (\"welcome to Crestview Technologies... leading your orientation session today\") → Chọn (A).",
+          "answer": "B",
+          "explanation": "Người nói chào mừng nhân viên mới (\"welcome to Crestview Technologies... leading your orientation session today\") → Chọn (B).",
           "tags": [
-            "listening",
-            "talks"
+            "speaker-identity"
           ]
         },
         {
           "number": 72,
           "content": "How long will the training program last?",
           "options": [
-            "Three days",
-            "One week",
             "Two hours",
-            "Four months"
+            "Four months",
+            "One week",
+            "Three days"
           ],
-          "answer": "A",
-          "explanation": "Người nói nêu rõ: \"Over the next three days, you will receive in-depth training...\" → Chọn (A).",
+          "answer": "D",
+          "explanation": "Người nói nêu rõ: \"Over the next three days, you will receive in-depth training...\" → Chọn (D).",
           "tags": [
-            "listening",
-            "talks"
+            "detail"
           ]
         },
         {
           "number": 73,
           "content": "What are listeners instructed to do before the first module?",
           "options": [
-            "Complete an electronic emergency contact form on their tablets",
-            "Introduce themselves to the executive vice president",
             "Submit original college diploma certificates",
-            "Take a written English comprehension examination"
+            "Take a written English comprehension examination",
+            "Complete an electronic emergency contact form on their tablets",
+            "Introduce themselves to the executive vice president"
           ],
-          "answer": "A",
-          "explanation": "Người nói dặn: \"...please take a moment to log in to the tablets placed on your desks and complete the electronic emergency contact form\" → Chọn (A).",
+          "answer": "C",
+          "explanation": "Người nói dặn: \"...please take a moment to log in to the tablets placed on your desks and complete the electronic emergency contact form\" → Chọn (C).",
           "tags": [
-            "listening",
-            "talks"
+            "detail"
           ]
         }
       ]
@@ -244,15 +201,14 @@
           "number": 101,
           "content": "All job applicants must fill out the employment history form ------- prior to entering the interview room.",
           "options": [
-            "completely",
+            "completion",
             "complete",
-            "completing",
-            "completion"
+            "completely",
+            "completing"
           ],
-          "answer": "A",
+          "answer": "C",
           "explanation": "Bổ nghĩa cho cụm động từ vị ngữ \"fill out the employment history form\" cần một phó từ (adverb) chỉ thể cách → chọn \"completely\" (một cách đầy đủ, hoàn chỉnh).",
           "tags": [
-            "reading",
             "word-form"
           ]
         }
@@ -265,15 +221,14 @@
           "number": 102,
           "content": "The human resources committee expressed great ------- with the high caliber of candidate applications.",
           "options": [
-            "satisfaction",
-            "satisfactory",
             "satisfy",
-            "satisfying"
+            "satisfactory",
+            "satisfying",
+            "satisfaction"
           ],
-          "answer": "A",
+          "answer": "D",
           "explanation": "Sau tính từ \"great\" cần danh từ làm tân ngữ trực tiếp cho động từ \"expressed\" → chọn \"satisfaction\" (sự hài lòng).",
           "tags": [
-            "reading",
             "word-form"
           ]
         }
@@ -294,7 +249,6 @@
           "answer": "A",
           "explanation": "Đứng trước cụm danh từ \"outstanding contribution\" cần tính từ sở hữu số nhiều tương ứng với \"summer interns\" → chọn \"their\" (của họ).",
           "tags": [
-            "reading",
             "pronoun"
           ]
         }
@@ -307,16 +261,15 @@
           "number": 104,
           "content": "Applicants will not be invited for an executive interview ------- their background check passes scrutiny.",
           "options": [
-            "unless",
+            "without",
             "despite",
             "because of",
-            "without"
+            "unless"
           ],
-          "answer": "A",
+          "answer": "D",
           "explanation": "Theo sau là một mệnh đề hoàn chỉnh mang nghĩa điều kiện phủ định (\"trừ phi việc xác minh lý lịch được thông qua\") → chọn liên từ \"unless\" (= if not).",
           "tags": [
-            "reading",
-            "conjunction"
+            "preposition-conjunction"
           ]
         }
       ]
@@ -328,86 +281,77 @@
           "number": 105,
           "content": "The newly adopted corporate dress policy will remain in effect ------- the upcoming fiscal year.",
           "options": [
+            "onto",
             "throughout",
             "between",
-            "against",
-            "onto"
+            "against"
           ],
-          "answer": "A",
+          "answer": "B",
           "explanation": "Giới từ \"throughout\" đi với khoảng thời gian mang nghĩa \"xuyên suốt / trong toàn bộ năm tài chính sắp tới\".",
           "tags": [
-            "reading",
-            "preposition"
+            "preposition-conjunction"
           ]
         }
       ]
     },
     {
       "part": 6,
-      "passage": "MEMORANDUM\nTo: All Department Directors\nFrom: Eleanor Vance, Human Resources Vice President\nDate: September 8\nSubject: Promotion Announcement\n\nWe take tremendous pride in announcing the promotion of Daniel Thorne to the position of Senior Talent Acquisition Director, effective October 1. Over the last four years, Mr. Thorne has demonstrated outstanding leadership and strategic vision in modernizing our global hiring workflows. [131] ------- his tenure, our average onboarding time decreased by thirty-five percent.\n\nIn his expanded capacity, Mr. Thorne will spearhead executive recruitment initiatives and coordinate university internship partnerships. He will be directly [132] ------- for aligning our staffing roadmap with international branch targets. [133] -------. We are confident that his analytical acumen will continue to strengthen our workforce.\n\nPlease join us in the fifth-floor reception lounge this Friday at 4:30 P.M. to celebrate his promotion. Complimentary beverages and light hors d'oeuvres will be [134] ------- by the corporate hospitality team.",
+      "passage": "MEMORANDUM\nTo: All Department Directors\nFrom: Eleanor Vance, Human Resources Vice President\nDate: September 8\nSubject: Promotion Announcement\n\nWe take tremendous pride in announcing the promotion of Daniel Thorne to the position of Senior Talent Acquisition Director, effective October 1. Over the last four years, Mr. Thorne has demonstrated outstanding leadership and strategic vision in modernizing our global hiring workflows. ---(131)--- his tenure, our average onboarding time decreased by thirty-five percent.\n\nIn his expanded capacity, Mr. Thorne will spearhead executive recruitment initiatives and coordinate university internship partnerships. He will be directly ---(132)--- for aligning our staffing roadmap with international branch targets. ---(133)---. We are confident that his analytical acumen will continue to strengthen our workforce.\n\nPlease join us in the fifth-floor reception lounge this Friday at 4:30 P.M. to celebrate his promotion. Complimentary beverages and light hors d'oeuvres will be ---(134)--- by the corporate hospitality team.",
       "questions": [
         {
           "number": 131,
-          "content": "Choose the best preposition to fill in blank [131].",
           "options": [
-            "During",
+            "Against",
             "Above",
-            "Between",
-            "Against"
+            "During",
+            "Between"
           ],
-          "answer": "A",
+          "answer": "C",
           "explanation": "Cụm từ chỉ khoảng thời gian nhiệm kỳ: \"During his tenure\" = Trong suốt nhiệm kỳ của ông ấy.",
           "tags": [
-            "reading",
-            "preposition"
+            "preposition-conjunction"
           ]
         },
         {
           "number": 132,
-          "content": "Choose the best word to fill in blank [132].",
           "options": [
             "responsible",
             "responsibly",
-            "responsibility",
-            "responsive"
+            "responsive",
+            "responsibility"
           ],
           "answer": "A",
           "explanation": "Cấu trúc cố định \"be directly responsible for + V-ing/N\" (chịu trách nhiệm trực tiếp cho...) → chọn tính từ \"responsible\".",
           "tags": [
-            "reading",
             "word-form"
           ]
         },
         {
           "number": 133,
-          "content": "Choose the best sentence to fill in blank [133].",
           "options": [
-            "He will also mentor incoming recruiters across our European regional offices.",
             "The company budget for international travel was drastically reduced.",
-            "All employees must renew their parking garage passes before Friday.",
-            "The flight to Frankfurt was delayed due to winter storms."
+            "He will also mentor incoming recruiters across our European regional offices.",
+            "The flight to Frankfurt was delayed due to winter storms.",
+            "All employees must renew their parking garage passes before Friday."
           ],
-          "answer": "A",
-          "explanation": "Câu trước nói về trách nhiệm mới của Daniel Thorne. Câu (A) bổ sung thêm trách nhiệm phù hợp (\"Anh ấy cũng sẽ hướng dẫn các chuyên viên tuyển dụng mới...\").",
+          "answer": "B",
+          "explanation": "Câu trước nói về trách nhiệm mới của Daniel Thorne. Câu (B) bổ sung thêm trách nhiệm phù hợp (\"Anh ấy cũng sẽ hướng dẫn các chuyên viên tuyển dụng mới...\").",
           "tags": [
-            "reading",
-            "context"
+            "sentence-insertion"
           ]
         },
         {
           "number": 134,
-          "content": "Choose the best verb form to fill in blank [134].",
           "options": [
-            "provided",
-            "provides",
             "providing",
-            "provision"
+            "provides",
+            "provision",
+            "provided"
           ],
-          "answer": "A",
+          "answer": "D",
           "explanation": "Cấu trúc bị động tương lai: \"will be + V3/ed\" → chọn \"provided\" (sẽ được cung cấp bởi đội ngũ lễ tân).",
           "tags": [
-            "reading",
-            "grammar"
+            "word-form"
           ]
         }
       ]
@@ -420,15 +364,14 @@
           "number": 147,
           "content": "What is the primary purpose of the notice?",
           "options": [
-            "To announce an open employment position",
             "To promote an upcoming cloud computing seminar",
             "To inform customers about scheduled server maintenance",
+            "To announce an open employment position",
             "To request bids from external software contractors"
           ],
-          "answer": "A",
-          "explanation": "Tiêu đề \"Career Opportunity: Senior Cloud Systems Architect\" và nội dung miêu tả công việc, yêu cầu tuyển dụng cho thấy mục đích chính là đăng tin tuyển dụng (A).",
+          "answer": "C",
+          "explanation": "Tiêu đề \"Career Opportunity: Senior Cloud Systems Architect\" và nội dung miêu tả công việc, yêu cầu tuyển dụng cho thấy mục đích chính là đăng tin tuyển dụng (C).",
           "tags": [
-            "reading",
             "main-idea"
           ]
         },
@@ -436,15 +379,14 @@
           "number": 148,
           "content": "What is NOT stated as a required qualification for the role?",
           "options": [
-            "A Master's degree in Business Administration",
-            "A Bachelor's degree in Computer Science or related field",
             "At least 6 years managing enterprise cloud deployments",
-            "Experience using infrastructure automation tools"
+            "A Bachelor's degree in Computer Science or related field",
+            "Experience using infrastructure automation tools",
+            "A Master's degree in Business Administration"
           ],
-          "answer": "A",
-          "explanation": "Yêu cầu chỉ ghi \"Bachelor's degree in Computer Science...\", không hề yêu cầu bằng thạc sĩ kinh doanh (MBA) → Chọn (A).",
+          "answer": "D",
+          "explanation": "Yêu cầu chỉ ghi \"Bachelor's degree in Computer Science...\", không hề yêu cầu bằng thạc sĩ kinh doanh (MBA) → Chọn (D).",
           "tags": [
-            "reading",
             "detail"
           ]
         }
@@ -458,15 +400,14 @@
           "number": 152,
           "content": "What benefit does the new company policy introduce?",
           "options": [
-            "Financial reimbursement for approved professional certification expenses",
-            "Additional paid vacation days for employees completing training",
+            "Free membership to a local athletic health club",
             "Complimentary laptop computers for home office use",
-            "Free membership to a local athletic health club"
+            "Additional paid vacation days for employees completing training",
+            "Financial reimbursement for approved professional certification expenses"
           ],
-          "answer": "A",
-          "explanation": "Chính sách công ty tài trợ 100% lệ phí thi và tài liệu ôn tập chứng chỉ chuyên môn lên tới $1,500/năm → Chọn (A).",
+          "answer": "D",
+          "explanation": "Chính sách công ty tài trợ 100% lệ phí thi và tài liệu ôn tập chứng chỉ chuyên môn lên tới $1,500/năm → Chọn (D).",
           "tags": [
-            "reading",
             "detail"
           ]
         },
@@ -474,15 +415,14 @@
           "number": 153,
           "content": "Why is Priya Patel eligible for the program?",
           "options": [
+            "She already passed the DevOps exam in August",
             "She has worked at the company for more than six months",
-            "She is the head of the human resources division",
             "She scored the highest mark on a corporate quiz",
-            "She already passed the DevOps exam in August"
+            "She is the head of the human resources division"
           ],
-          "answer": "A",
-          "explanation": "Điều kiện chính sách là làm việc ít nhất 6 tháng; Priya Patel cho biết cô đã làm việc tại công ty hơn hai năm (\"over two years\") → Chọn (A).",
+          "answer": "B",
+          "explanation": "Điều kiện chính sách là làm việc ít nhất 6 tháng; Priya Patel cho biết cô đã làm việc tại công ty hơn hai năm (\"over two years\") → Chọn (B).",
           "tags": [
-            "reading",
             "inference"
           ]
         },
@@ -498,7 +438,6 @@
           "answer": "A",
           "explanation": "Priya nêu rõ: \"The preparation course and official exam voucher cost $650 in total\" → Chọn (A).",
           "tags": [
-            "reading",
             "detail"
           ]
         }

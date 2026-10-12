@@ -8,24 +8,16 @@
       "part": 1,
       "image": "p1_q1.png",
       "audio": "p1_q1.m4a",
-      "transcript": "(A) A woman is organizing files in a cabinet. (B) A laptop has been left open on a wooden desk. (C) Some armchairs are arranged around a rug. (D) A coffee cup is being cleaned in the sink.",
+      "transcript": "(A) Some armchairs are arranged around a rug.\n(B) A coffee cup is being cleaned in the sink.\n(C) A laptop has been left open on a wooden desk.\n(D) A woman is organizing files in a cabinet.",
       "_speech": "Number 1. Look at the picture marked number 1 in your test book. (A) A woman is organizing files in a cabinet. (B) A laptop has been left open on a wooden desk. (C) Some armchairs are arranged around a rug. (D) A coffee cup is being cleaned in the sink.",
       "_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"600\" viewBox=\"0 0 800 600\">\n  <rect width=\"800\" height=\"600\" fill=\"#EAEFF5\"/>\n  <rect y=\"380\" width=\"800\" height=\"220\" fill=\"#B5835A\"/>\n  <rect x=\"240\" y=\"220\" width=\"320\" height=\"200\" rx=\"12\" fill=\"#1E293B\"/>\n  <rect x=\"255\" y=\"235\" width=\"290\" height=\"170\" rx=\"6\" fill=\"#60A5FA\"/>\n  <polygon points=\"200,420 600,420 560,440 240,440\" fill=\"#0F172A\"/>\n  <rect x=\"620\" y=\"320\" width=\"60\" height=\"80\" rx=\"8\" fill=\"#F8FAFC\"/>\n  <circle cx=\"140\" cy=\"340\" r=\"35\" fill=\"#10B981\"/>\n  <rect x=\"125\" y=\"355\" width=\"30\" height=\"50\" fill=\"#D97706\"/>\n</svg>",
       "questions": [
         {
           "number": 1,
-          "content": "Choose the statement that best describes the picture.",
-          "options": [
-            "A woman is organizing files in a cabinet.",
-            "A laptop has been left open on a wooden desk.",
-            "Some armchairs are arranged around a rug.",
-            "A coffee cup is being cleaned in the sink."
-          ],
-          "answer": "B",
-          "explanation": "Trong bức tranh miêu tả một chiếc máy tính xách tay đang mở trên bàn gỗ cùng một tách cà phê và chậu cây nhỏ → Chọn (B).",
+          "answer": "C",
+          "explanation": "Trong bức tranh miêu tả một chiếc máy tính xách tay đang mở trên bàn gỗ cùng một tách cà phê và chậu cây nhỏ → Chọn (C).",
           "tags": [
-            "listening",
-            "photographs"
+            "photo"
           ]
         }
       ]
@@ -34,24 +26,16 @@
       "part": 1,
       "image": "p1_q2.png",
       "audio": "p1_q2.m4a",
-      "transcript": "(A) Several bicycles are parked in front of a wooden fence. (B) A cyclist is pedaling down a busy avenue. (C) Vehicles are waiting at a traffic intersection. (D) A wooden barrier is being constructed by carpenters.",
+      "transcript": "(A) A wooden barrier is being constructed by carpenters.\n(B) Vehicles are waiting at a traffic intersection.\n(C) A cyclist is pedaling down a busy avenue.\n(D) Several bicycles are parked in front of a wooden fence.",
       "_speech": "Number 2. Look at the picture marked number 2 in your test book. (A) Several bicycles are parked in front of a wooden fence. (B) A cyclist is pedaling down a busy avenue. (C) Vehicles are waiting at a traffic intersection. (D) A wooden barrier is being constructed by carpenters.",
       "_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"600\" viewBox=\"0 0 800 600\">\n  <rect width=\"800\" height=\"600\" fill=\"#DBEAFE\"/>\n  <circle cx=\"680\" cy=\"120\" r=\"45\" fill=\"#FBBF24\"/>\n  <rect y=\"420\" width=\"800\" height=\"180\" fill=\"#9CA3AF\"/>\n  <rect y=\"220\" width=\"800\" height=\"20\" fill=\"#854D0E\"/>\n  <rect y=\"300\" width=\"800\" height=\"20\" fill=\"#854D0E\"/>\n  <rect x=\"150\" y=\"180\" width=\"20\" height=\"240\" fill=\"#713F12\"/>\n  <rect x=\"380\" y=\"180\" width=\"20\" height=\"240\" fill=\"#713F12\"/>\n  <rect x=\"620\" y=\"180\" width=\"20\" height=\"240\" fill=\"#713F12\"/>\n  <circle cx=\"200\" cy=\"460\" r=\"45\" stroke=\"#1E293B\" stroke-width=\"12\" fill=\"none\"/>\n  <circle cx=\"330\" cy=\"460\" r=\"45\" stroke=\"#1E293B\" stroke-width=\"12\" fill=\"none\"/>\n  <circle cx=\"480\" cy=\"460\" r=\"45\" stroke=\"#1E293B\" stroke-width=\"12\" fill=\"none\"/>\n  <circle cx=\"610\" cy=\"460\" r=\"45\" stroke=\"#1E293B\" stroke-width=\"12\" fill=\"none\"/>\n</svg>",
       "questions": [
         {
           "number": 2,
-          "content": "Choose the statement that best describes the picture.",
-          "options": [
-            "Several bicycles are parked in front of a wooden fence.",
-            "A cyclist is pedaling down a busy avenue.",
-            "Vehicles are waiting at a traffic intersection.",
-            "A wooden barrier is being constructed by carpenters."
-          ],
-          "answer": "A",
-          "explanation": "Những chiếc xe đạp được xếp thành hàng phía trước hàng rào gỗ → Chọn (A).",
+          "answer": "D",
+          "explanation": "Những chiếc xe đạp được xếp thành hàng phía trước hàng rào gỗ → Chọn (D).",
           "tags": [
-            "listening",
-            "photographs"
+            "photo"
           ]
         }
       ]
@@ -59,22 +43,15 @@
     {
       "part": 2,
       "audio": "p2_q7.m4a",
-      "transcript": "M: Where is the annual shareholder meeting taking place this year?\nW: (A) In the third-floor auditorium. (B) Yes, every twelve months. (C) Mr. Davis delivered a great talk.",
+      "transcript": "Where is the annual shareholder meeting taking place this year?\n(A) Mr. Davis delivered a great talk.\n(B) Yes, every twelve months.\n(C) In the third-floor auditorium.",
       "_speech": "Number 7. Where is the annual shareholder meeting taking place this year? (A) In the third-floor auditorium. (B) Yes, every twelve months. (C) Mr. Davis delivered a great talk.",
       "questions": [
         {
           "number": 7,
-          "content": "Where is the annual shareholder meeting taking place this year?",
-          "options": [
-            "In the third-floor auditorium.",
-            "Yes, every twelve months.",
-            "Mr. Davis delivered a great talk."
-          ],
-          "answer": "A",
-          "explanation": "Câu hỏi bắt đầu bằng \"Where\" hỏi địa điểm → phương án chỉ nơi chốn (A) \"In the third-floor auditorium\" là đáp án chính xác.",
+          "answer": "C",
+          "explanation": "Câu hỏi bắt đầu bằng \"Where\" hỏi địa điểm → phương án chỉ nơi chốn (C) \"In the third-floor auditorium\" là đáp án chính xác.",
           "tags": [
-            "listening",
-            "question-response"
+            "wh-question"
           ]
         }
       ]
@@ -82,22 +59,15 @@
     {
       "part": 2,
       "audio": "p2_q8.m4a",
-      "transcript": "W: When will the updated project schedule be distributed to the team?\nM: (A) Across the street from the clinic. (B) Later this afternoon by email. (C) Thirty team members in total.",
+      "transcript": "When will the updated project schedule be distributed to the team?\n(A) Across the street from the clinic.\n(B) Later this afternoon by email.\n(C) Thirty team members in total.",
       "_speech": "Number 8. When will the updated project schedule be distributed to the team? (A) Across the street from the clinic. (B) Later this afternoon by email. (C) Thirty team members in total.",
       "questions": [
         {
           "number": 8,
-          "content": "When will the updated project schedule be distributed to the team?",
-          "options": [
-            "Across the street from the clinic.",
-            "Later this afternoon by email.",
-            "Thirty team members in total."
-          ],
           "answer": "B",
           "explanation": "Câu hỏi bắt đầu bằng \"When\" hỏi thời gian hoàn thành → chọn (B) \"Later this afternoon by email\".",
           "tags": [
-            "listening",
-            "question-response"
+            "wh-question"
           ]
         }
       ]
@@ -105,22 +75,15 @@
     {
       "part": 2,
       "audio": "p2_q9.m4a",
-      "transcript": "M: Would you like me to book your train tickets for the regional conference?\nW: (A) Thanks, but I have already arranged them. (B) The express train was delayed. (C) Yes, at station platform three.",
+      "transcript": "Would you like me to book your train tickets for the regional conference?\n(A) Thanks, but I have already arranged them.\n(B) The express train was delayed.\n(C) Yes, at station platform three.",
       "_speech": "Number 9. Would you like me to book your train tickets for the regional conference? (A) Thanks, but I have already arranged them. (B) The express train was delayed. (C) Yes, at station platform three.",
       "questions": [
         {
           "number": 9,
-          "content": "Would you like me to book your train tickets for the regional conference?",
-          "options": [
-            "Thanks, but I have already arranged them.",
-            "The express train was delayed.",
-            "Yes, at station platform three."
-          ],
           "answer": "A",
           "explanation": "Lời đề nghị giúp đỡ \"Would you like me to...\" → phản hồi lịch sự từ chối khéo (A) \"Cảm ơn, nhưng tôi đã tự thu xếp rồi\".",
           "tags": [
-            "listening",
-            "question-response"
+            "request"
           ]
         }
       ]
@@ -135,16 +98,15 @@
           "number": 32,
           "content": "What problem are the speakers discussing?",
           "options": [
-            "A shipment of promotional brochures is delayed.",
-            "An exhibition booth reservation was cancelled.",
             "A presentation room is too small for attendees.",
-            "The budget for marketing materials was cut."
+            "The budget for marketing materials was cut.",
+            "An exhibition booth reservation was cancelled.",
+            "A shipment of promotional brochures is delayed."
           ],
-          "answer": "A",
-          "explanation": "Người phụ nữ hỏi về tài liệu quảng cáo và người nam giải thích xe tải giao hàng bị kẹt xe trên cao tốc đến 2h chiều mới tới → Chọn (A).",
+          "answer": "D",
+          "explanation": "Người phụ nữ hỏi về tài liệu quảng cáo và người nam giải thích xe tải giao hàng bị kẹt xe trên cao tốc đến 2h chiều mới tới → Chọn (D).",
           "tags": [
-            "listening",
-            "conversation"
+            "detail"
           ]
         },
         {
@@ -153,30 +115,28 @@
           "options": [
             "This afternoon at 2:00 P.M.",
             "Tomorrow morning",
-            "Next Monday",
-            "At the end of this month"
+            "At the end of this month",
+            "Next Monday"
           ],
           "answer": "B",
           "explanation": "Người phụ nữ nói: \"The marketing expo starts tomorrow morning\" → Chọn (B).",
           "tags": [
-            "listening",
-            "conversation"
+            "detail"
           ]
         },
         {
           "number": 34,
           "content": "How does the man propose to solve the schedule problem?",
           "options": [
-            "By printing new brochures in the office",
-            "By rescheduling the client presentation",
             "By recruiting interns to help assemble packets",
-            "By contacting a different shipping vendor"
+            "By printing new brochures in the office",
+            "By contacting a different shipping vendor",
+            "By rescheduling the client presentation"
           ],
-          "answer": "C",
-          "explanation": "Người nam nói: \"I will ask two interns from human resources to help us organize and fold the materials...\" → Chọn (C).",
+          "answer": "A",
+          "explanation": "Người nam nói: \"I will ask two interns from human resources to help us organize and fold the materials...\" → Chọn (A).",
           "tags": [
-            "listening",
-            "conversation"
+            "detail"
           ]
         }
       ]
@@ -191,48 +151,45 @@
           "number": 71,
           "content": "Where is this announcement most likely being broadcast?",
           "options": [
-            "Inside an airport departure lounge",
             "At a passenger train station",
             "At an automotive repair center",
-            "Inside a regional ferry terminal"
+            "Inside a regional ferry terminal",
+            "Inside an airport departure lounge"
           ],
-          "answer": "B",
-          "explanation": "Thông báo nhắc tới \"transit passengers\", \"Silverline Express\", \"track maintenance\", \"train service\" → phát tại ga tàu hỏa (B).",
+          "answer": "A",
+          "explanation": "Thông báo nhắc tới \"transit passengers\", \"Silverline Express\", \"track maintenance\", \"train service\" → phát tại ga tàu hỏa (A).",
           "tags": [
-            "listening",
-            "talks"
+            "detail"
           ]
         },
         {
           "number": 72,
           "content": "What will occur this weekend?",
           "options": [
-            "Train ticket fares will increase by five percent.",
-            "Train service between two stations will be temporarily suspended.",
+            "Station parking lots will be closed for repaving.",
             "A new express route to Riverside will open.",
-            "Station parking lots will be closed for repaving."
+            "Train service between two stations will be temporarily suspended.",
+            "Train ticket fares will increase by five percent."
           ],
-          "answer": "B",
-          "explanation": "Thông báo nói: \"track maintenance between Oakfield and Pinecrest will temporarily suspend through-train service this weekend\" → Chọn (B).",
+          "answer": "C",
+          "explanation": "Thông báo nói: \"track maintenance between Oakfield and Pinecrest will temporarily suspend through-train service this weekend\" → Chọn (C).",
           "tags": [
-            "listening",
-            "talks"
+            "detail"
           ]
         },
         {
           "number": 73,
           "content": "What alternative transportation is provided for passengers?",
           "options": [
-            "Free shuttle buses every ten minutes",
             "Discounted taxi vouchers",
+            "Ferry transit vouchers",
             "Bicycle rental stations",
-            "Ferry transit vouchers"
+            "Free shuttle buses every ten minutes"
           ],
-          "answer": "A",
-          "explanation": "Thông báo nêu: \"Complimentary shuttle buses will operate outside Oakfield Station every ten minutes...\" → Chọn (A).",
+          "answer": "D",
+          "explanation": "Thông báo nêu: \"Complimentary shuttle buses will operate outside Oakfield Station every ten minutes...\" → Chọn (D).",
           "tags": [
-            "listening",
-            "talks"
+            "detail"
           ]
         }
       ]
@@ -252,7 +209,6 @@
           "answer": "A",
           "explanation": "Bổ nghĩa cho động từ thể bị động \"must be forwarded\" cần một trạng từ chỉ cách thức → chọn \"promptly\" (kịp thời, ngay lập tức).",
           "tags": [
-            "reading",
             "word-form"
           ]
         }
@@ -265,15 +221,14 @@
           "number": 102,
           "content": "Ms. Kowalski demonstrated remarkable ------- when resolving the overseas client's shipping dispute.",
           "options": [
-            "professionalism",
-            "professionally",
             "professional",
-            "profess"
+            "professionalism",
+            "profess",
+            "professionally"
           ],
-          "answer": "A",
+          "answer": "B",
           "explanation": "Sau tính từ \"remarkable\" cần một danh từ làm tân ngữ cho động từ \"demonstrated\" → chọn danh từ \"professionalism\" (tác phong chuyên nghiệp).",
           "tags": [
-            "reading",
             "word-form"
           ]
         }
@@ -286,15 +241,14 @@
           "number": 103,
           "content": "Dr. Chen scheduled a virtual briefing to introduce ------- research proposal to the executive board.",
           "options": [
-            "his",
-            "him",
             "himself",
-            "he"
+            "him",
+            "he",
+            "his"
           ],
-          "answer": "A",
+          "answer": "D",
           "explanation": "Đứng trước cụm danh từ \"research proposal\" cần một tính từ sở hữu bổ nghĩa → chọn \"his\" (của ông ấy).",
           "tags": [
-            "reading",
             "pronoun"
           ]
         }
@@ -307,16 +261,15 @@
           "number": 104,
           "content": "The company offered all staff members flexible hours ------- commuter traffic could be minimized during rush hour.",
           "options": [
-            "so that",
-            "because of",
+            "as if",
             "in order to",
-            "as if"
+            "so that",
+            "because of"
           ],
-          "answer": "A",
+          "answer": "C",
           "explanation": "Theo sau chỗ trống là mệnh đề có chủ ngữ và trợ động từ (\"commuter traffic could be minimized...\") biểu thị mục đích → chọn liên từ \"so that\" (để mà).",
           "tags": [
-            "reading",
-            "conjunction"
+            "preposition-conjunction"
           ]
         }
       ]
@@ -328,59 +281,53 @@
           "number": 105,
           "content": "Protective eyeglasses and earplugs are mandatory at all times ------- the manufacturing plant floor.",
           "options": [
-            "throughout",
-            "between",
             "against",
-            "onto"
+            "throughout",
+            "onto",
+            "between"
           ],
-          "answer": "A",
+          "answer": "B",
           "explanation": "Giới từ \"throughout\" đi kèm địa điểm mang nghĩa \"trên toàn bộ khuôn viên / khắp mặt sàn nhà máy sản xuất\".",
           "tags": [
-            "reading",
-            "preposition"
+            "preposition-conjunction"
           ]
         }
       ]
     },
     {
       "part": 6,
-      "passage": "MEMORANDUM\nTo: All Headquarters Personnel\nFrom: Facilities & Operations Committee\nDate: October 14\nSubject: Scheduled Corporate Office Relocation\n\nAs previously communicated, our headquarters will transition to the modern Diamond Tower complex over the upcoming weekend. The relocation procedures will begin on Friday at 5:00 P.M. and continue [131] ------- Sunday evening.\n\nAll team members are requested to pack their personal desktop items and sensitive documents into the provided blue plastic crates before departing on Friday afternoon. [132] -------. Cardboard boxes and color-coded destination labels will be distributed by the facilities team starting tomorrow at 9:00 A.M.\n\nPlease note that our new facility features an automated optical card reader system. You will receive your new permanent access badge [133] ------- upon checking in with the security desk on Monday morning. We sincerely appreciate your patience and [134] ------- as we finalize this exciting corporate transition.",
+      "passage": "MEMORANDUM\nTo: All Headquarters Personnel\nFrom: Facilities & Operations Committee\nDate: October 14\nSubject: Scheduled Corporate Office Relocation\n\nAs previously communicated, our headquarters will transition to the modern Diamond Tower complex over the upcoming weekend. The relocation procedures will begin on Friday at 5:00 P.M. and continue ---(131)--- Sunday evening.\n\nAll team members are requested to pack their personal desktop items and sensitive documents into the provided blue plastic crates before departing on Friday afternoon. ---(132)---. Cardboard boxes and color-coded destination labels will be distributed by the facilities team starting tomorrow at 9:00 A.M.\n\nPlease note that our new facility features an automated optical card reader system. You will receive your new permanent access badge ---(133)--- upon checking in with the security desk on Monday morning. We sincerely appreciate your patience and ---(134)--- as we finalize this exciting corporate transition.",
       "questions": [
         {
           "number": 131,
-          "content": "Choose the best preposition to fill in blank [131].",
           "options": [
-            "through",
             "across",
+            "among",
             "between",
-            "among"
+            "through"
           ],
-          "answer": "A",
+          "answer": "D",
           "explanation": "Cụm diễn tả hành động liên tục đến hết một mốc thời gian: \"continue through Sunday evening\" (tiếp diễn liên tục xuyên suốt đến hết tối Chủ Nhật).",
           "tags": [
-            "reading",
-            "preposition"
+            "preposition-conjunction"
           ]
         },
         {
           "number": 132,
-          "content": "Choose the best sentence to fill in blank [132].",
           "options": [
+            "Annual health insurance renewal documents must be signed by noon.",
             "Please ensure all storage crates are securely locked and clearly labeled.",
             "The cafeteria will launch a new seasonal lunch menu next month.",
-            "Annual health insurance renewal documents must be signed by noon.",
             "Parking tickets can be validated at the front information counter."
           ],
-          "answer": "A",
-          "explanation": "Câu trước nói về việc đóng gói đồ đạc vào thùng nhựa được cung cấp. Câu (A) nối tiếp dặn dò khóa và dán nhãn thùng chứa đồ một cách logic.",
+          "answer": "B",
+          "explanation": "Câu trước nói về việc đóng gói đồ đạc vào thùng nhựa được cung cấp. Câu (B) nối tiếp dặn dò khóa và dán nhãn thùng chứa đồ một cách logic.",
           "tags": [
-            "reading",
-            "context"
+            "sentence-insertion"
           ]
         },
         {
           "number": 133,
-          "content": "Choose the best adverb to fill in blank [133].",
           "options": [
             "promptly",
             "prompt",
@@ -390,23 +337,20 @@
           "answer": "A",
           "explanation": "Bổ nghĩa cho cụm động từ \"will receive your new permanent access badge\" cần trạng từ → chọn \"promptly\" (ngay lập tức khi điểm danh sáng thứ Hai).",
           "tags": [
-            "reading",
             "word-form"
           ]
         },
         {
           "number": 134,
-          "content": "Choose the best word form to fill in blank [134].",
           "options": [
-            "cooperation",
             "cooperate",
-            "cooperative",
-            "cooperatively"
+            "cooperatively",
+            "cooperation",
+            "cooperative"
           ],
-          "answer": "A",
+          "answer": "C",
           "explanation": "Sau tính từ sở hữu \"your\" và đi liền sau danh từ \"patience and...\" cần một danh từ đồng vị → chọn \"cooperation\" (sự hợp tác).",
           "tags": [
-            "reading",
             "word-form"
           ]
         }
@@ -421,14 +365,13 @@
           "content": "Why did Ms. Chen's order qualify for a 10% discount?",
           "options": [
             "Because she placed an order exceeding $3,000 in total value",
+            "Because she enrolled in an annual equipment maintenance plan",
             "Because she paid the entire balance using a corporate charge card",
-            "Because she agreed to accept an afternoon delivery slot",
-            "Because she enrolled in an annual equipment maintenance plan"
+            "Because she agreed to accept an afternoon delivery slot"
           ],
           "answer": "A",
           "explanation": "Dòng chiết khấu nêu rõ: \"Corporate Volume Discount (10% on orders above $3,000)\" → Đơn hàng vượt $3,000 nên được giảm giá 10% (A).",
           "tags": [
-            "reading",
             "detail"
           ]
         },
@@ -436,15 +379,14 @@
           "number": 148,
           "content": "What must Ms. Chen do to reschedule delivery without incurring a penalty fee?",
           "options": [
-            "Email customer support at least 24 hours before the delivery date",
-            "Visit the regional distribution warehouse in person",
+            "Pay an expedited shipping surcharge upon driver arrival",
             "Return half of the ordered standing desks",
-            "Pay an expedited shipping surcharge upon driver arrival"
+            "Email customer support at least 24 hours before the delivery date",
+            "Visit the regional distribution warehouse in person"
           ],
-          "answer": "A",
-          "explanation": "Đoạn cuối: \"Please email our dispatch unit at logistics@officepro.com at least 24 hours prior to the scheduled delivery date...\" → Chọn (A).",
+          "answer": "C",
+          "explanation": "Đoạn cuối: \"Please email our dispatch unit at logistics@officepro.com at least 24 hours prior to the scheduled delivery date...\" → Chọn (C).",
           "tags": [
-            "reading",
             "detail"
           ]
         }
@@ -458,15 +400,14 @@
           "number": 152,
           "content": "What is the purpose of Mr. Vance's email?",
           "options": [
-            "To reserve meeting space and catering for a company retreat",
             "To file a formal complaint regarding faulty audiovisual equipment",
-            "To apply for a vacant event coordinator position",
-            "To cancel an existing conference room reservation"
+            "To reserve meeting space and catering for a company retreat",
+            "To cancel an existing conference room reservation",
+            "To apply for a vacant event coordinator position"
           ],
-          "answer": "A",
-          "explanation": "Mr. Vance viết thư để đặt phòng Horizon và dịch vụ ăn uống tiệc trưa cho 35 người tham gia kỳ nghỉ dưỡng ban lãnh đạo → Chọn (A).",
+          "answer": "B",
+          "explanation": "Mr. Vance viết thư để đặt phòng Horizon và dịch vụ ăn uống tiệc trưa cho 35 người tham gia kỳ nghỉ dưỡng ban lãnh đạo → Chọn (B).",
           "tags": [
-            "reading",
             "main-idea"
           ]
         },
@@ -474,15 +415,14 @@
           "number": 153,
           "content": "What adjustment does Ms. Higgins propose regarding lunch?",
           "options": [
-            "Serving the luncheon thirty minutes earlier at 12:00 P.M.",
-            "Moving the dining area to an outdoor terrace",
+            "Postponing lunch service until 1:30 P.M.",
             "Replacing the hot buffet with cold sandwich platters",
-            "Postponing lunch service until 1:30 P.M."
+            "Serving the luncheon thirty minutes earlier at 12:00 P.M.",
+            "Moving the dining area to an outdoor terrace"
           ],
-          "answer": "A",
-          "explanation": "Ms. Higgins giải thích khách sạn có tiệc lớn ở đại sảnh nên: \"luncheon service in the Horizon Suite will need to be served thirty minutes earlier, at 12:00 P.M.\" → Chọn (A).",
+          "answer": "C",
+          "explanation": "Ms. Higgins giải thích khách sạn có tiệc lớn ở đại sảnh nên: \"luncheon service in the Horizon Suite will need to be served thirty minutes earlier, at 12:00 P.M.\" → Chọn (C).",
           "tags": [
-            "reading",
             "detail"
           ]
         },
@@ -490,15 +430,14 @@
           "number": 154,
           "content": "What must Mr. Vance do by November 20?",
           "options": [
-            "Submit a signed contract and a 20% deposit",
-            "Confirm the dietary restrictions of all 35 attendees",
             "Pay the full rental balance in advance",
-            "Inspect the Horizon Conference Room in person"
+            "Confirm the dietary restrictions of all 35 attendees",
+            "Inspect the Horizon Conference Room in person",
+            "Submit a signed contract and a 20% deposit"
           ],
-          "answer": "A",
-          "explanation": "Đoạn cuối e-mail 2: \"Please review the attached banquet contract and return a signed copy along with a 20% deposit by November 20...\" → Chọn (A).",
+          "answer": "D",
+          "explanation": "Đoạn cuối e-mail 2: \"Please review the attached banquet contract and return a signed copy along with a 20% deposit by November 20...\" → Chọn (D).",
           "tags": [
-            "reading",
             "detail"
           ]
         }

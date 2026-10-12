@@ -8,24 +8,16 @@
       "part": 1,
       "image": "p1_q1.png",
       "audio": "p1_q1.m4a",
-      "transcript": "(A) An accountant is reviewing spreadsheets on multiple monitors. (B) File cabinets are being loaded into an elevator. (C) An office desk is being disassembled by movers. (D) A banker is counting cash at a teller window.",
+      "transcript": "(A) An accountant is reviewing spreadsheets on multiple monitors.\n(B) An office desk is being disassembled by movers.\n(C) File cabinets are being loaded into an elevator.\n(D) A banker is counting cash at a teller window.",
       "_speech": "Number 1. Look at the picture marked number 1 in your test book. (A) An accountant is reviewing spreadsheets on multiple monitors. (B) File cabinets are being loaded into an elevator. (C) An office desk is being disassembled by movers. (D) A banker is counting cash at a teller window.",
       "_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"600\" viewBox=\"0 0 800 600\">\n  <rect width=\"800\" height=\"600\" fill=\"#F8FAFC\"/>\n  <rect y=\"400\" width=\"800\" height=\"200\" fill=\"#E2E8F0\"/>\n  <rect x=\"140\" y=\"220\" width=\"240\" height=\"160\" rx=\"8\" fill=\"#1E293B\"/>\n  <rect x=\"150\" y=\"230\" width=\"220\" height=\"140\" rx=\"4\" fill=\"#38BDF8\"/>\n  <rect x=\"420\" y=\"220\" width=\"240\" height=\"160\" rx=\"8\" fill=\"#1E293B\"/>\n  <rect x=\"430\" y=\"230\" width=\"220\" height=\"140\" rx=\"4\" fill=\"#34D399\"/>\n  <rect x=\"240\" y=\"380\" width=\"40\" height=\"40\" fill=\"#0F172A\"/>\n  <rect x=\"520\" y=\"380\" width=\"40\" height=\"40\" fill=\"#0F172A\"/>\n  <circle cx=\"400\" cy=\"460\" r=\"40\" fill=\"#64748B\"/>\n</svg>",
       "questions": [
         {
           "number": 1,
-          "content": "Choose the statement that best describes the picture.",
-          "options": [
-            "An accountant is reviewing spreadsheets on multiple monitors.",
-            "File cabinets are being loaded into an elevator.",
-            "An office desk is being disassembled by movers.",
-            "A banker is counting cash at a teller window."
-          ],
           "answer": "A",
           "explanation": "Bàn làm việc với nhiều màn hình hiển thị bảng tính tài chính → Chọn (A).",
           "tags": [
-            "listening",
-            "photographs"
+            "photo"
           ]
         }
       ]
@@ -34,24 +26,16 @@
       "part": 1,
       "image": "p1_q2.png",
       "audio": "p1_q2.m4a",
-      "transcript": "(A) Guests are seated in rows facing a conference podium. (B) Banquet tables are being folded and stored away. (C) Microphones are being installed on the ceiling. (D) Waiters are clearing dinner plates from tables.",
+      "transcript": "(A) Microphones are being installed on the ceiling.\n(B) Waiters are clearing dinner plates from tables.\n(C) Guests are seated in rows facing a conference podium.\n(D) Banquet tables are being folded and stored away.",
       "_speech": "Number 2. Look at the picture marked number 2 in your test book. (A) Guests are seated in rows facing a conference podium. (B) Banquet tables are being folded and stored away. (C) Microphones are being installed on the ceiling. (D) Waiters are clearing dinner plates from tables.",
       "_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"600\" viewBox=\"0 0 800 600\">\n  <rect width=\"800\" height=\"600\" fill=\"#EFF6FF\"/>\n  <rect y=\"420\" width=\"800\" height=\"180\" fill=\"#DBEAFE\"/>\n  <rect x=\"340\" y=\"240\" width=\"120\" height=\"180\" fill=\"#475569\"/>\n  <circle cx=\"360\" cy=\"480\" r=\"30\" fill=\"#1E40AF\"/>\n  <circle cx=\"440\" cy=\"480\" r=\"30\" fill=\"#1E40AF\"/>\n  <circle cx=\"280\" cy=\"480\" r=\"30\" fill=\"#1E40AF\"/>\n  <circle cx=\"520\" cy=\"480\" r=\"30\" fill=\"#1E40AF\"/>\n  <circle cx=\"320\" cy=\"540\" r=\"30\" fill=\"#1E3A8A\"/>\n  <circle cx=\"480\" cy=\"540\" r=\"30\" fill=\"#1E3A8A\"/>\n</svg>",
       "questions": [
         {
           "number": 2,
-          "content": "Choose the statement that best describes the picture.",
-          "options": [
-            "Guests are seated in rows facing a conference podium.",
-            "Banquet tables are being folded and stored away.",
-            "Microphones are being installed on the ceiling.",
-            "Waiters are clearing dinner plates from tables."
-          ],
-          "answer": "A",
-          "explanation": "Người tham dự ngồi theo hàng hướng về bục phát biểu của phòng hội nghị → Chọn (A).",
+          "answer": "C",
+          "explanation": "Người tham dự ngồi theo hàng hướng về bục phát biểu của phòng hội nghị → Chọn (C).",
           "tags": [
-            "listening",
-            "photographs"
+            "photo"
           ]
         }
       ]
@@ -59,22 +43,15 @@
     {
       "part": 2,
       "audio": "p2_q7.m4a",
-      "transcript": "W: Where should I submit my travel reimbursement form?\nM: (A) Directly to the accounting department on the second floor. (B) Yes, the flight was fully reimbursed. (C) Within thirty calendar days.",
+      "transcript": "Where should I submit my travel reimbursement form?\n(A) Directly to the accounting department on the second floor.\n(B) Yes, the flight was fully reimbursed.\n(C) Within thirty calendar days.",
       "_speech": "Number 7. Where should I submit my travel reimbursement form? (A) Directly to the accounting department on the second floor. (B) Yes, the flight was fully reimbursed. (C) Within thirty calendar days.",
       "questions": [
         {
           "number": 7,
-          "content": "Where should I submit my travel reimbursement form?",
-          "options": [
-            "Directly to the accounting department on the second floor.",
-            "Yes, the flight was fully reimbursed.",
-            "Within thirty calendar days."
-          ],
           "answer": "A",
           "explanation": "Hỏi \"Where\" về nơi nộp đơn hoàn tiền công tác → Chọn (A) \"Trực tiếp cho phòng kế toán tại tầng 2\".",
           "tags": [
-            "listening",
-            "question-response"
+            "wh-question"
           ]
         }
       ]
@@ -82,22 +59,15 @@
     {
       "part": 2,
       "audio": "p2_q8.m4a",
-      "transcript": "M: Has the finance director approved our revised quarterly budget yet?\nW: (A) She is still reviewing the travel line items. (B) In the corporate conference room. (C) About fifteen percent higher.",
+      "transcript": "Has the finance director approved our revised quarterly budget yet?\n(A) About fifteen percent higher.\n(B) In the corporate conference room.\n(C) She is still reviewing the travel line items.",
       "_speech": "Number 8. Has the finance director approved our revised quarterly budget yet? (A) She is still reviewing the travel line items. (B) In the corporate conference room. (C) About fifteen percent higher.",
       "questions": [
         {
           "number": 8,
-          "content": "Has the finance director approved our revised quarterly budget yet?",
-          "options": [
-            "She is still reviewing the travel line items.",
-            "In the corporate conference room.",
-            "About fifteen percent higher."
-          ],
-          "answer": "A",
-          "explanation": "Câu hỏi trạng thái phê duyệt ngân sách → trả lời tình trạng bà ấy vẫn đang xem xét các mục công tác phí (A).",
+          "answer": "C",
+          "explanation": "Câu hỏi trạng thái phê duyệt ngân sách → trả lời tình trạng bà ấy vẫn đang xem xét các mục công tác phí (C).",
           "tags": [
-            "listening",
-            "question-response"
+            "yes-no"
           ]
         }
       ]
@@ -105,22 +75,15 @@
     {
       "part": 2,
       "audio": "p2_q9.m4a",
-      "transcript": "W: Would you prefer paying with a company credit card or via wire transfer?\nM: (A) A wire transfer will be much easier for our audit records. (B) The card expired last month. (C) Yes, twenty percent off.",
+      "transcript": "Would you prefer paying with a company credit card or via wire transfer?\n(A) The card expired last month.\n(B) A wire transfer will be much easier for our audit records.\n(C) Yes, twenty percent off.",
       "_speech": "Number 9. Would you prefer paying with a company credit card or via wire transfer? (A) A wire transfer will be much easier for our audit records. (B) The card expired last month. (C) Yes, twenty percent off.",
       "questions": [
         {
           "number": 9,
-          "content": "Would you prefer paying with a company credit card or via wire transfer?",
-          "options": [
-            "A wire transfer will be much easier for our audit records.",
-            "The card expired last month.",
-            "Yes, twenty percent off."
-          ],
-          "answer": "A",
-          "explanation": "Câu hỏi lựa chọn (Credit card hay Wire transfer) → chọn hình thức chuyển khoản (A) \"A wire transfer will be much easier...\".",
+          "answer": "B",
+          "explanation": "Câu hỏi lựa chọn (Credit card hay Wire transfer) → chọn hình thức chuyển khoản (B) \"A wire transfer will be much easier...\".",
           "tags": [
-            "listening",
-            "question-response"
+            "choice"
           ]
         }
       ]
@@ -135,48 +98,45 @@
           "number": 32,
           "content": "What discrepancy did Jason discover on the banquet invoice?",
           "options": [
+            "A mandatory gratuity fee was omitted",
             "The company was charged for thirty extra dinner plates",
-            "The event hall rental fee was doubled",
             "The date of the awards banquet was incorrect",
-            "A mandatory gratuity fee was omitted"
+            "The event hall rental fee was doubled"
           ],
-          "answer": "A",
-          "explanation": "Jason phát hiện hóa đơn tính tiền 200 suất trong khi chỉ có 170 khách (chênh lệch 30 suất) → Chọn (A).",
+          "answer": "B",
+          "explanation": "Jason phát hiện hóa đơn tính tiền 200 suất trong khi chỉ có 170 khách (chênh lệch 30 suất) → Chọn (B).",
           "tags": [
-            "listening",
-            "conversation"
+            "detail"
           ]
         },
         {
           "number": 33,
           "content": "How much is the cost discrepancy approximately?",
           "options": [
-            "Over one thousand dollars",
             "Five hundred dollars",
+            "Three thousand dollars",
             "Two hundred dollars",
-            "Three thousand dollars"
+            "Over one thousand dollars"
           ],
-          "answer": "A",
-          "explanation": "Lisa nói: \"Oh, that's a difference of over one thousand dollars\" → Chọn (A).",
+          "answer": "D",
+          "explanation": "Lisa nói: \"Oh, that's a difference of over one thousand dollars\" → Chọn (D).",
           "tags": [
-            "listening",
-            "conversation"
+            "detail"
           ]
         },
         {
           "number": 34,
           "content": "What did the banquet manager promise to do before 4:00 P.M.?",
           "options": [
-            "Send an amended invoice with the correct figure",
+            "Visit the company headquarters in person",
             "Cancel the banquet reservation",
-            "Provide free floral centerpieces for all tables",
-            "Visit the company headquarters in person"
+            "Send an amended invoice with the correct figure",
+            "Provide free floral centerpieces for all tables"
           ],
-          "answer": "A",
-          "explanation": "Jason cho biết quản lý hứa gửi hóa đơn sửa đổi trước 4 giờ chiều (\"She promised to send an amended invoice with the correct amount before 4:00 P.M.\") → Chọn (A).",
+          "answer": "C",
+          "explanation": "Jason cho biết quản lý hứa gửi hóa đơn sửa đổi trước 4 giờ chiều (\"She promised to send an amended invoice with the correct amount before 4:00 P.M.\") → Chọn (C).",
           "tags": [
-            "listening",
-            "conversation"
+            "detail"
           ]
         }
       ]
@@ -192,47 +152,44 @@
           "content": "What is the speaker mainly announcing?",
           "options": [
             "Deadlines for year-end budget proposals",
-            "A reduction in travel reimbursement rates",
             "A transition to a new corporate banking partner",
+            "A reduction in travel reimbursement rates",
             "The election of a new board of directors"
           ],
           "answer": "A",
           "explanation": "Người nói thông báo về thời hạn nộp đề xuất ngân sách cuối năm (\"important announcement regarding our year-end budgeting deadlines\") → Chọn (A).",
           "tags": [
-            "listening",
-            "talks"
+            "detail"
           ]
         },
         {
           "number": 72,
           "content": "What must supervisors use when preparing their submissions?",
           "options": [
+            "An external audit evaluation software",
             "The updated spreadsheet template on the intranet",
-            "A printed physical ledger from accounting",
             "A proprietary mobile banking application",
-            "An external audit evaluation software"
+            "A printed physical ledger from accounting"
           ],
-          "answer": "A",
-          "explanation": "Người nói nhắc: \"Please remember to use the updated spreadsheet template available in the corporate intranet portal...\" → Chọn (A).",
+          "answer": "B",
+          "explanation": "Người nói nhắc: \"Please remember to use the updated spreadsheet template available in the corporate intranet portal...\" → Chọn (B).",
           "tags": [
-            "listening",
-            "talks"
+            "detail"
           ]
         },
         {
           "number": 73,
           "content": "What event is scheduled for Wednesday morning?",
           "options": [
-            "An open financial briefing with the executive board",
-            "An annual shareholder voting session",
             "A software training workshop on accounting tools",
-            "A retirement luncheon for senior accountants"
+            "An annual shareholder voting session",
+            "A retirement luncheon for senior accountants",
+            "An open financial briefing with the executive board"
           ],
-          "answer": "A",
-          "explanation": "Người nói nêu: \"...the executive board will host an open financial briefing on Wednesday morning...\" → Chọn (A).",
+          "answer": "D",
+          "explanation": "Người nói nêu: \"...the executive board will host an open financial briefing on Wednesday morning...\" → Chọn (D).",
           "tags": [
-            "listening",
-            "talks"
+            "detail"
           ]
         }
       ]
@@ -244,15 +201,14 @@
           "number": 101,
           "content": "All travel expense reports must be submitted for managerial ------- by the final business day of the month.",
           "options": [
+            "approving",
             "approval",
             "approve",
-            "approving",
             "approved"
           ],
-          "answer": "A",
+          "answer": "B",
           "explanation": "Sau tính từ \"managerial\" cần một danh từ để tạo thành cụm danh từ \"managerial approval\" (sự phê duyệt của cấp quản lý).",
           "tags": [
-            "reading",
             "word-form"
           ]
         }
@@ -266,14 +222,13 @@
           "content": "The auditing committee emphasized that all client financial records must remain strictly -------.",
           "options": [
             "confidential",
+            "confident",
             "confidentially",
-            "confidence",
-            "confident"
+            "confidence"
           ],
           "answer": "A",
           "explanation": "Động từ nối \"remain\" đi với tính từ chỉ tính chất. Sau phó từ bổ nghĩa \"strictly\" cần tính từ mang nghĩa bảo mật → chọn \"confidential\" (bảo mật, bí mật).",
           "tags": [
-            "reading",
             "word-form"
           ]
         }
@@ -286,15 +241,14 @@
           "number": 103,
           "content": "The chief financial officer reviewed the balance sheet figures ------- before distributing them to investors.",
           "options": [
-            "himself",
-            "he",
             "his",
-            "him"
+            "him",
+            "himself",
+            "he"
           ],
-          "answer": "A",
+          "answer": "C",
           "explanation": "Câu đã đầy đủ chủ ngữ, vị ngữ và tân ngữ. Đại từ phản thân \"himself\" đứng cuối mệnh đề để nhấn mạnh chính ông CFO làm hành động kiểm tra.",
           "tags": [
-            "reading",
             "pronoun"
           ]
         }
@@ -307,16 +261,15 @@
           "number": 104,
           "content": "Employees will be reimbursed for allowable travel expenses ------- they submit original itemized receipts.",
           "options": [
-            "provided that",
-            "as well as",
             "in case of",
-            "regardless of"
+            "as well as",
+            "regardless of",
+            "provided that"
           ],
-          "answer": "A",
+          "answer": "D",
           "explanation": "Liên từ điều kiện \"Provided that\" mang nghĩa \"với điều kiện là / miễn là\" đi kèm một mệnh đề hoàn chỉnh.",
           "tags": [
-            "reading",
-            "conjunction"
+            "vocabulary"
           ]
         }
       ]
@@ -328,86 +281,77 @@
           "number": 105,
           "content": "Reimbursement checks will be deposited into employees' bank accounts ------- ten business days.",
           "options": [
-            "within",
             "among",
             "toward",
-            "along"
+            "along",
+            "within"
           ],
-          "answer": "A",
+          "answer": "D",
           "explanation": "Giới từ \"within\" + khoảng thời gian mang nghĩa \"trong vòng / không quá mười ngày làm việc\".",
           "tags": [
-            "reading",
-            "preposition"
+            "preposition-conjunction"
           ]
         }
       ]
     },
     {
       "part": 6,
-      "passage": "MEMORANDUM\nTo: All Department Supervisors\nFrom: Gregory Simmons, Chief Financial Officer\nDate: November 3\nSubject: Updated Corporate Travel Guidelines\n\nEffective December 1, all staff members traveling on corporate business must adhere strictly to our revised travel reimbursement guidelines. Under this updated protocol, all flight and hotel arrangements must be booked [131] ------- our designated corporate travel management portal to secure negotiated corporate rates.\n\nEmployees will no longer receive reimbursement for personal incidental charges, such as hotel minibar purchases or dry-cleaning services. [132] -------. Itemized expense claims, accompanied by scanned copies of official receipts, must be submitted within 14 calendar days of returning from travel.\n\nFailure to provide documented receipts on time will lead to reimbursement [133] -------. Should you have questions regarding allowable per-diem meals, please check the intranet directory or [134] ------- the finance department directly.",
+      "passage": "MEMORANDUM\nTo: All Department Supervisors\nFrom: Gregory Simmons, Chief Financial Officer\nDate: November 3\nSubject: Updated Corporate Travel Guidelines\n\nEffective December 1, all staff members traveling on corporate business must adhere strictly to our revised travel reimbursement guidelines. Under this updated protocol, all flight and hotel arrangements must be booked ---(131)--- our designated corporate travel management portal to secure negotiated corporate rates.\n\nEmployees will no longer receive reimbursement for personal incidental charges, such as hotel minibar purchases or dry-cleaning services. ---(132)---. Itemized expense claims, accompanied by scanned copies of official receipts, must be submitted within 14 calendar days of returning from travel.\n\nFailure to provide documented receipts on time will lead to reimbursement ---(133)---. Should you have questions regarding allowable per-diem meals, please check the intranet directory or ---(134)--- the finance department directly.",
       "questions": [
         {
           "number": 131,
-          "content": "Choose the best preposition to fill in blank [131].",
           "options": [
-            "through",
             "across",
-            "between",
-            "toward"
+            "through",
+            "toward",
+            "between"
           ],
-          "answer": "A",
+          "answer": "B",
           "explanation": "Giới từ \"through\" mang nghĩa \"thông qua cổng quản lý công tác được chỉ định\" (\"through our designated corporate travel management portal\").",
           "tags": [
-            "reading",
-            "preposition"
+            "preposition-conjunction"
           ]
         },
         {
           "number": 132,
-          "content": "Choose the best sentence to fill in blank [132].",
           "options": [
-            "Such personal charges must be settled directly by the individual traveler.",
-            "Our annual product demonstration was well attended by international guests.",
+            "Parking permits will be issued at the security booth tomorrow.",
             "The customer service hotline operates twenty-four hours a day.",
-            "Parking permits will be issued at the security booth tomorrow."
+            "Such personal charges must be settled directly by the individual traveler.",
+            "Our annual product demonstration was well attended by international guests."
           ],
-          "answer": "A",
-          "explanation": "Câu trước nói về việc công ty không hoàn tiền cho chi phí cá nhân (mini-bar, giặt ủi). Câu (A) nối tiếp logic: \"Các chi phí cá nhân như vậy phải do chính người đi công tác thanh toán\".",
+          "answer": "C",
+          "explanation": "Câu trước nói về việc công ty không hoàn tiền cho chi phí cá nhân (mini-bar, giặt ủi). Câu (C) nối tiếp logic: \"Các chi phí cá nhân như vậy phải do chính người đi công tác thanh toán\".",
           "tags": [
-            "reading",
-            "context"
+            "sentence-insertion"
           ]
         },
         {
           "number": 133,
-          "content": "Choose the best noun form to fill in blank [133].",
           "options": [
-            "delays",
             "delayed",
+            "delaying",
             "deliberate",
-            "delaying"
+            "delays"
           ],
-          "answer": "A",
+          "answer": "D",
           "explanation": "Sau danh từ \"reimbursement\" cần danh từ để tạo thành cụm danh từ ghép \"reimbursement delays\" (sự chậm trễ trong hoàn trả chi phí).",
           "tags": [
-            "reading",
             "word-form"
           ]
         },
         {
           "number": 134,
-          "content": "Choose the best verb form to fill in blank [134].",
           "options": [
             "contact",
-            "contacting",
             "contacted",
-            "contactable"
+            "contactable",
+            "contacting"
           ],
           "answer": "A",
           "explanation": "Cấu trúc song hành với động từ nguyên mẫu đứng trước liên từ \"or\": \"please check ... or contact ... directly\".",
           "tags": [
-            "reading",
-            "grammar"
+            "word-form"
           ]
         }
       ]
@@ -428,7 +372,6 @@
           "answer": "A",
           "explanation": "Mục tiêu đề hợp đồng: \"Event: Annual Corporate Honors Banquet\" (tiệc vinh danh doanh nghiệp hàng năm) → Chọn (A).",
           "tags": [
-            "reading",
             "detail"
           ]
         },
@@ -436,15 +379,14 @@
           "number": 148,
           "content": "When must the remaining balance of $10,400 be settled?",
           "options": [
+            "On December 12",
             "On or before November 28",
-            "On October 5",
             "By December 1",
-            "On December 12"
+            "On October 5"
           ],
-          "answer": "A",
-          "explanation": "Trong mục Financial Terms: \"Remaining Balance Due: $10,400 payable on or before November 28\" → Chọn (A).",
+          "answer": "B",
+          "explanation": "Trong mục Financial Terms: \"Remaining Balance Due: $10,400 payable on or before November 28\" → Chọn (B).",
           "tags": [
-            "reading",
             "detail"
           ]
         }
@@ -458,15 +400,14 @@
           "number": 152,
           "content": "Why did the procurement committee recommend Apex Imaging Services?",
           "options": [
-            "Lower monthly lease pricing and a rapid maintenance guarantee",
             "They are the only vendor offering color photocopy machines",
+            "They agreed to buy back old office furniture",
             "Their corporate headquarters is located next to Apex Studio",
-            "They agreed to buy back old office furniture"
+            "Lower monthly lease pricing and a rapid maintenance guarantee"
           ],
-          "answer": "A",
-          "explanation": "Ủy ban đề xuất Apex vì chi phí thuê hàng tháng thấp hơn 12% và cam kết phản hồi kỹ thuật trong vòng 4 tiếng (\"monthly lease rate ... 12% lower ... guarantees a four-hour on-site maintenance response time\") → Chọn (A).",
+          "answer": "D",
+          "explanation": "Ủy ban đề xuất Apex vì chi phí thuê hàng tháng thấp hơn 12% và cam kết phản hồi kỹ thuật trong vòng 4 tiếng (\"monthly lease rate ... 12% lower ... guarantees a four-hour on-site maintenance response time\") → Chọn (D).",
           "tags": [
-            "reading",
             "detail"
           ]
         },
@@ -474,15 +415,14 @@
           "number": 153,
           "content": "What condition does Mr. Sterling require before signing the agreement?",
           "options": [
-            "Complimentary installation and staff training in early January",
             "A further five percent discount on paper supplies",
             "Replacement of all office desktop computers",
+            "Complimentary installation and staff training in early January",
             "An option to terminate the lease within six months"
           ],
-          "answer": "A",
-          "explanation": "CEO Marcus Sterling yêu cầu: \"ensure that the contract includes complimentary installation and staff training during the first week of January\" → Chọn (A).",
+          "answer": "C",
+          "explanation": "CEO Marcus Sterling yêu cầu: \"ensure that the contract includes complimentary installation and staff training during the first week of January\" → Chọn (C).",
           "tags": [
-            "reading",
             "detail"
           ]
         },
@@ -490,15 +430,14 @@
           "number": 154,
           "content": "What is the duration of the proposed contract?",
           "options": [
-            "Five years",
-            "Three months",
             "One year",
-            "Twelve months"
+            "Five years",
+            "Twelve months",
+            "Three months"
           ],
-          "answer": "A",
-          "explanation": "CEO chỉ đạo: \"Please proceed with drafting the formal five-year agreement...\" → Chọn (A).",
+          "answer": "B",
+          "explanation": "CEO chỉ đạo: \"Please proceed with drafting the formal five-year agreement...\" → Chọn (B).",
           "tags": [
-            "reading",
             "detail"
           ]
         }
