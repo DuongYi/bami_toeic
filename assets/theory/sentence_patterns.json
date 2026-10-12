@@ -1194,5 +1194,975 @@
         "explanation": "Chủ ngữ là đồ vật \"scanner\", mang nghĩa bị động \"được dùng để làm gì\" -> dùng V nguyên thể \"detect\"."
       }
     ]
+  },
+  {
+    "id": "pattern-so-such-too-enough",
+    "category": "sentencePatterns",
+    "title": "Cấu trúc So…that, Such…that, Too…to & Enough",
+    "subtitle": "Phân biệt so/such theo từ đi sau, vị trí của enough và đảo ngữ So/Such",
+    "read_time_minutes": 7,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "sentence-structure",
+      "adjective",
+      "adverb",
+      "inversion"
+    ],
+    "overview": "Bốn cấu trúc chỉ mức độ – kết quả này thường xuất hiện trong Part 5 dưới dạng 4 phương án so / such / too / very. Chìa khoá là nhìn từ đứng NGAY SAU chỗ trống: tính từ/trạng từ hay cụm danh từ, và phía sau có \"that\" hay \"to V\".",
+    "sections": [
+      {
+        "title": "1. So … that (quá … đến nỗi)",
+        "content": "So đứng trước tính từ hoặc trạng từ (không có danh từ đi kèm), theo sau là mệnh đề that chỉ kết quả.",
+        "formula": "S + be/linking verb + so + adj + that + S + V\nS + V + so + adv + that + S + V",
+        "bullet_points": [
+          "\"The demand was so high that we hired extra staff.\"",
+          "So + many/few + danh từ đếm được số nhiều: \"so many orders that…\".",
+          "So + much/little + danh từ không đếm được: \"so much paperwork that…\"."
+        ],
+        "tips": [
+          "Sau chỗ trống là tính từ/trạng từ trơ trọi + that → chọn so. Nếu là phó từ mức độ không có that phía sau → very cũng có thể đúng; phải nhìn có \"that\" không."
+        ]
+      },
+      {
+        "title": "2. Such … that",
+        "content": "Such đứng trước CỤM DANH TỪ (có thể có tính từ bổ nghĩa). Danh từ đếm được số ít phải có a/an.",
+        "formula": "S + V + such + (a/an) + adj + N + that + S + V",
+        "bullet_points": [
+          "\"It was such a popular seminar that registration closed early.\"",
+          "Danh từ số nhiều/không đếm được: \"such positive reviews that…\", \"such heavy traffic that…\".",
+          "Không dùng such với many/much: nói \"so many people\", không nói \"such many people\" (nhưng \"such a lot of\" vẫn đúng)."
+        ],
+        "tips": [
+          "Mẹo nhận diện: sau chỗ trống có \"a/an\" hoặc kết thúc bằng một danh từ trước \"that\" → such."
+        ]
+      },
+      {
+        "title": "3. Too … to và Enough",
+        "content": "Too mang nghĩa 'quá … nên không thể', theo sau là to V. Enough nghĩa 'đủ … để', vị trí thay đổi theo từ loại.",
+        "formula": "S + be + too + adj (+ for sb) + to V\nadj/adv + enough + to V\nenough + N + to V",
+        "bullet_points": [
+          "\"The room is too small to accommodate 50 guests.\" (= không đủ chỗ).",
+          "Enough đứng SAU tính từ/trạng từ: \"qualified enough\", \"quickly enough\".",
+          "Enough đứng TRƯỚC danh từ: \"enough funding\", \"enough seats\".",
+          "Too không đi với that trong văn viết chuẩn của TOEIC; that đi với so/such."
+        ],
+        "tips": [
+          "Bẫy hay gặp: \"enough qualified\" (sai vị trí) – nhớ quy tắc adj + enough. Thấy \"to V\" phía sau và câu mang nghĩa phủ định → too; mang nghĩa đạt mức → enough."
+        ]
+      },
+      {
+        "title": "4. Đảo ngữ So … that / Such … that",
+        "content": "Để nhấn mạnh, đưa so + adj hoặc such lên đầu câu và đảo trợ động từ/be lên trước chủ ngữ.",
+        "formula": "So + adj + be + S + that + S + V\nSuch + be + N + that + S + V",
+        "bullet_points": [
+          "\"So successful was the campaign that it was extended for another month.\"",
+          "\"Such was the demand for tickets that the venue added a second show.\"",
+          "Mức Part 5 thường chỉ hỏi chọn So/Such ở đầu câu: sau Such là động từ be + danh từ; sau So là tính từ."
+        ],
+        "tips": [
+          "Chỗ trống đầu câu, ngay sau là \"was/were + the + danh từ\" → Such. Ngay sau là tính từ rồi mới đến be → So."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "The new scheduling software is so intuitive that most employees learned it in a single afternoon.",
+        "vietnamese": "Phần mềm xếp lịch mới dễ dùng đến nỗi phần lớn nhân viên học được chỉ trong một buổi chiều.",
+        "explanation": "Sau chỗ trống là tính từ \"intuitive\" + mệnh đề that → so.",
+        "highlight": "so intuitive that",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "It was such a well-organized conference that the association booked the same venue for next year.",
+        "vietnamese": "Đó là một hội nghị được tổ chức tốt đến mức hiệp hội đã đặt luôn địa điểm này cho năm sau.",
+        "explanation": "Sau such là cụm danh từ số ít có a: \"a well-organized conference\".",
+        "highlight": "such a well-organized conference that",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The warehouse is too far from the port to handle same-day deliveries.",
+        "vietnamese": "Nhà kho ở quá xa cảng nên không thể xử lý giao hàng trong ngày.",
+        "explanation": "too + adj + to V mang nghĩa phủ định (không thể).",
+        "highlight": "too far from the port to handle",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Ms. Ito is experienced enough to lead the regional sales team on her own.",
+        "vietnamese": "Cô Ito đủ kinh nghiệm để tự mình dẫn dắt đội bán hàng khu vực.",
+        "explanation": "Enough đứng sau tính từ \"experienced\" + to V.",
+        "highlight": "experienced enough to lead",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Such was the response to the promotion that the store ran out of stock by noon.",
+        "vietnamese": "Phản ứng với chương trình khuyến mãi lớn đến mức cửa hàng hết hàng trước buổi trưa.",
+        "explanation": "Đảo ngữ Such + be + danh từ + that nhấn mạnh mức độ.",
+        "highlight": "Such was the response to the promotion that",
+        "part_tag": "Part 7"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-sste-1",
+        "question": "The keynote speech was _______ inspiring that many attendees requested a copy of the slides.",
+        "options": [
+          "such",
+          "so",
+          "too",
+          "very"
+        ],
+        "answer_index": 1,
+        "explanation": "Sau chỗ trống là tính từ \"inspiring\" và phía sau có mệnh đề \"that…\" → so + adj + that. \"such\" cần danh từ; \"too\" đi với to V; \"very\" không đi với that chỉ kết quả."
+      },
+      {
+        "id": "q-sste-2",
+        "question": "It was _______ a successful product launch that the company doubled its production.",
+        "options": [
+          "so",
+          "too",
+          "such",
+          "enough"
+        ],
+        "answer_index": 2,
+        "explanation": "Sau chỗ trống là cụm danh từ có mạo từ \"a successful product launch\" + that → such. \"so\", \"too\" không đứng trước a + danh từ; \"enough\" sai nghĩa và vị trí."
+      },
+      {
+        "id": "q-sste-3",
+        "question": "The conference room is too small _______ all forty participants.",
+        "options": [
+          "holding",
+          "for holding",
+          "that it holds",
+          "to hold"
+        ],
+        "answer_index": 3,
+        "explanation": "Cấu trúc too + adj + to V → \"to hold\". \"holding\", \"for holding\" sai dạng; \"that it holds\" không dùng với too."
+      },
+      {
+        "id": "q-sste-4",
+        "question": "The proposal was not detailed _______ to convince the investors.",
+        "options": [
+          "enough",
+          "so",
+          "such",
+          "too"
+        ],
+        "answer_index": 0,
+        "explanation": "adj + enough + to V: \"detailed enough to convince\". \"so\", \"such\" cần that; \"too\" phải đứng trước tính từ."
+      },
+      {
+        "id": "q-sste-5",
+        "question": "There were _______ many applicants for the position that the interviews lasted three days.",
+        "options": [
+          "such",
+          "too",
+          "enough",
+          "so"
+        ],
+        "answer_index": 3,
+        "explanation": "so + many + danh từ đếm được số nhiều + that → \"so many applicants\". Không dùng \"such many\"; \"too many … that\" sai cấu trúc; \"enough many\" không tồn tại."
+      },
+      {
+        "id": "q-sste-6",
+        "question": "_______ was the demand for the limited edition that it sold out within an hour.",
+        "options": [
+          "Such",
+          "So",
+          "Too",
+          "Enough"
+        ],
+        "answer_index": 0,
+        "explanation": "Đảo ngữ Such + be + danh từ + that: \"Such was the demand…\". \"So\" phải đi với tính từ (So great was the demand…); \"Too\", \"Enough\" không dùng trong đảo ngữ này."
+      },
+      {
+        "id": "q-sste-7",
+        "question": "The instructions were written so _______ that even new employees could follow them easily.",
+        "options": [
+          "clear",
+          "clearly",
+          "clearness",
+          "clearer"
+        ],
+        "answer_index": 1,
+        "explanation": "Từ cần điền bổ nghĩa cho động từ \"were written\" → trạng từ \"clearly\" (so + adv + that). \"clear\", \"clearer\" là tính từ; \"clearness\" là danh từ."
+      }
+    ]
+  },
+  {
+    "id": "pattern-correlative-conjunctions",
+    "category": "sentencePatterns",
+    "title": "Liên từ tương quan: Both…and, Either…or, Neither…nor, Not only…but also",
+    "subtitle": "Ghép cặp đúng, chia động từ theo chủ ngữ gần & quy tắc song hành",
+    "read_time_minutes": 6,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "conjunctions",
+      "agreement",
+      "parallelism"
+    ],
+    "overview": "Liên từ tương quan luôn đi theo CẶP cố định. Part 5 thường cho sẵn một nửa cặp (both, either, neither, not only, whether) và hỏi nửa còn lại, hoặc hỏi chia động từ khi chủ ngữ được nối bằng cặp liên từ. Đây là dạng câu 'được điểm nhanh' nếu thuộc cặp.",
+    "sections": [
+      {
+        "title": "1. Bảng cặp liên từ tương quan",
+        "content": "Mỗi vế đầu chỉ đi với một vế sau duy nhất. Ghép sai cặp là bẫy phổ biến nhất.",
+        "formula": "both A and B · either A or B · neither A nor B\nnot only A but (also) B · whether A or B",
+        "bullet_points": [
+          "both … and: cả A lẫn B (luôn mang nghĩa cộng gộp).",
+          "either … or: hoặc A hoặc B (một trong hai).",
+          "neither … nor: không A cũng không B (đã mang nghĩa phủ định, không thêm not).",
+          "not only … but (also): không chỉ A mà còn B.",
+          "whether … or (not): liệu A hay B / dù A hay B."
+        ],
+        "tips": [
+          "Bẫy cặp sai kinh điển: neither … or, either … nor, both … or, not only … and. Thấy vế đầu trong câu là ghép ngay vế sau tương ứng."
+        ]
+      },
+      {
+        "title": "2. Hoà hợp chủ ngữ – động từ",
+        "content": "Khi hai chủ ngữ được nối bằng liên từ tương quan, cách chia động từ khác nhau theo từng cặp.",
+        "formula": "Both A and B + V(số nhiều)\nEither A or B / Neither A nor B / Not only A but also B + V chia theo B (chủ ngữ gần)",
+        "bullet_points": [
+          "\"Both the manager and her assistant are attending.\"",
+          "\"Neither the director nor the board members were informed.\" (chia theo members).",
+          "\"Either the supervisors or the CEO makes the final call.\" (chia theo CEO).",
+          "A as well as B / A along with B: chia theo A (chủ ngữ đầu)."
+        ],
+        "tips": [
+          "Với either/neither/not only, che A lại và chỉ nhìn danh từ đứng ngay trước động từ để chia số ít/số nhiều."
+        ]
+      },
+      {
+        "title": "3. Quy tắc song hành (Parallelism)",
+        "content": "Hai vế được nối phải cùng loại ngữ pháp: danh từ – danh từ, tính từ – tính từ, to V – to V, cụm giới từ – cụm giới từ.",
+        "bullet_points": [
+          "\"The position requires both creativity and precision.\" (danh từ – danh từ).",
+          "\"You can apply either online or by mail.\" (trạng từ – cụm giới từ chỉ cách thức, cùng chức năng).",
+          "\"She decided not only to renew the contract but also to expand it.\" (to V – to V)."
+        ],
+        "tips": [
+          "Chỗ trống ở vế sau: xác định từ loại của vế đầu rồi chọn phương án cùng từ loại – thường là câu từ loại trá hình."
+        ]
+      },
+      {
+        "title": "4. Whether … or & As well as",
+        "content": "Whether mở đầu mệnh đề danh từ (liệu … hay) hoặc mệnh đề nhượng bộ (dù … hay). As well as tương đương 'và cả', nhưng không ảnh hưởng chia động từ theo vế sau.",
+        "bullet_points": [
+          "\"Ms. Park has not decided whether to accept the offer or to stay.\"",
+          "\"Whether you travel by train or by car, the trip takes about three hours.\"",
+          "Whether + to V được, nhưng if + to V thì không."
+        ],
+        "tips": [
+          "Thấy \"or not\" hoặc \"or + phương án thứ hai\" cuối câu và chỗ trống trước to V → whether, không chọn if hay either."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Both the sales team and the customer service department will attend Friday's training session.",
+        "vietnamese": "Cả đội bán hàng lẫn phòng chăm sóc khách hàng sẽ tham dự buổi đào tạo vào thứ Sáu.",
+        "explanation": "Cặp both … and nối hai chủ ngữ → động từ số nhiều.",
+        "highlight": "Both the sales team and the customer service department",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Neither the regional manager nor the accountants were aware of the billing error.",
+        "vietnamese": "Cả quản lý khu vực lẫn các kế toán viên đều không biết về lỗi tính phí.",
+        "explanation": "Neither … nor: động từ chia theo chủ ngữ gần \"the accountants\" (số nhiều) → were.",
+        "highlight": "Neither the regional manager nor the accountants were",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The upgraded printer is not only faster but also more energy-efficient than the previous model.",
+        "vietnamese": "Máy in nâng cấp không chỉ nhanh hơn mà còn tiết kiệm năng lượng hơn mẫu trước.",
+        "explanation": "Not only … but also nối hai tính từ so sánh hơn (song hành).",
+        "highlight": "not only faster but also more energy-efficient",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Applicants may submit their portfolios either by e-mail or through the online portal.",
+        "vietnamese": "Ứng viên có thể nộp hồ sơ năng lực qua e-mail hoặc qua cổng trực tuyến.",
+        "explanation": "Either … or nối hai cụm giới từ chỉ cách thức (by e-mail / through the portal).",
+        "highlight": "either by e-mail or through the online portal",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "The committee has not yet decided whether to postpone the event or to move it online.",
+        "vietnamese": "Ủy ban vẫn chưa quyết định liệu sẽ hoãn sự kiện hay chuyển sang trực tuyến.",
+        "explanation": "Whether + to V … or + to V, hai vế song hành.",
+        "highlight": "whether to postpone the event or to move it online",
+        "part_tag": "Part 7"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-corr-1",
+        "question": "Both the sales team _______ the marketing department will attend the workshop.",
+        "options": [
+          "or",
+          "nor",
+          "and",
+          "but"
+        ],
+        "answer_index": 2,
+        "explanation": "Cặp cố định both … and → \"and\". \"or\" đi với either, \"nor\" đi với neither, \"but\" đi với not only."
+      },
+      {
+        "id": "q-corr-2",
+        "question": "Neither the manager nor the assistants _______ aware of the schedule change.",
+        "options": [
+          "was",
+          "were",
+          "is",
+          "has been"
+        ],
+        "answer_index": 1,
+        "explanation": "Neither … nor: động từ chia theo chủ ngữ gần \"the assistants\" (số nhiều); ngữ cảnh quá khứ → \"were\". \"was\", \"is\", \"has been\" là dạng số ít."
+      },
+      {
+        "id": "q-corr-3",
+        "question": "Applicants may submit their résumés either by e-mail _______ through our online portal.",
+        "options": [
+          "nor",
+          "and",
+          "but also",
+          "or"
+        ],
+        "answer_index": 3,
+        "explanation": "Cặp either … or → \"or\". \"nor\" chỉ đi với neither, \"and\" với both, \"but also\" với not only."
+      },
+      {
+        "id": "q-corr-4",
+        "question": "The new software is not only faster _______ more secure than the previous version.",
+        "options": [
+          "but also",
+          "and also",
+          "as well",
+          "or even"
+        ],
+        "answer_index": 0,
+        "explanation": "Cặp not only … but (also) → \"but also\". \"and also\", \"as well\", \"or even\" không ghép được với not only."
+      },
+      {
+        "id": "q-corr-5",
+        "question": "Ms. Lee has not decided _______ to accept the offer or to remain at her current firm.",
+        "options": [
+          "either",
+          "neither",
+          "whether",
+          "both"
+        ],
+        "answer_index": 2,
+        "explanation": "Sau \"decided\" cần mệnh đề danh từ \"whether to V … or to V\" (liệu … hay). \"either\" không đứng sau decided để mở đầu to V; \"neither\" cần nor; \"both\" cần and."
+      },
+      {
+        "id": "q-corr-6",
+        "question": "Either the regional managers or the CEO _______ the final decision on the budget.",
+        "options": [
+          "make",
+          "makes",
+          "are making",
+          "have made"
+        ],
+        "answer_index": 1,
+        "explanation": "Either … or: chia theo chủ ngữ gần \"the CEO\" (số ít) → \"makes\". \"make\", \"are making\", \"have made\" là dạng số nhiều."
+      },
+      {
+        "id": "q-corr-7",
+        "question": "The training covers safety procedures as well as _______ maintenance.",
+        "options": [
+          "equip",
+          "equipping",
+          "equipment",
+          "equipped"
+        ],
+        "answer_index": 2,
+        "explanation": "Song hành với cụm danh từ \"safety procedures\" → cần cụm danh từ ghép \"equipment maintenance\". \"equip\" là động từ, \"equipping\", \"equipped\" không tạo cụm danh từ đúng nghĩa."
+      }
+    ]
+  },
+  {
+    "id": "pattern-conditional-conjunctions",
+    "category": "sentencePatterns",
+    "title": "Liên từ Điều kiện: Unless, Provided that, As long as, In case & In the event of",
+    "subtitle": "Phân biệt nghĩa, liên từ vs giới từ tương ứng và Otherwise / Without / But for",
+    "read_time_minutes": 7,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "conjunctions",
+      "conditionals",
+      "prepositions"
+    ],
+    "overview": "Ngoài if, đề TOEIC rất hay dùng các liên từ điều kiện khác trong thông báo, chính sách, hợp đồng. Part 5 thường cho 4 phương án vừa khác nghĩa (unless vs provided that) vừa khác từ loại (in case vs in case of). Hai câu hỏi cần trả lời: nghĩa nào hợp logic, và phía sau là mệnh đề hay cụm danh từ.",
+    "sections": [
+      {
+        "title": "1. Nhóm 'nếu / miễn là'",
+        "content": "Các liên từ đều đi với mệnh đề (S + V) và động từ chia hiện tại khi nói về tương lai.",
+        "formula": "provided (that) / providing (that) / as long as / so long as / on condition that + S + V",
+        "bullet_points": [
+          "provided (that), providing (that): với điều kiện là (văn phong hợp đồng, chính sách).",
+          "as long as / so long as: miễn là.",
+          "only if: chỉ khi (nhấn mạnh điều kiện duy nhất); đặt đầu câu thì đảo ngữ mệnh đề chính.",
+          "\"Employees may work remotely provided that they attend weekly meetings.\""
+        ],
+        "tips": [
+          "Không dùng will sau các liên từ này: \"as long as you submit\", không \"as long as you will submit\"."
+        ]
+      },
+      {
+        "title": "2. Unless = if … not",
+        "content": "Unless mang nghĩa phủ định sẵn: 'trừ khi / nếu không'. Mệnh đề sau unless thường ở dạng khẳng định.",
+        "formula": "Unless + S + V(khẳng định) = If + S + do/does not + V",
+        "bullet_points": [
+          "\"Unless the parts arrive by Friday, production will stop.\" = If the parts do not arrive…",
+          "Không viết \"unless … not\" khi muốn diễn đạt nghĩa if … not (thừa phủ định).",
+          "Dấu hiệu chọn unless: mệnh đề chính mang nghĩa hậu quả tiêu cực (will be canceled, will not be processed)."
+        ],
+        "tips": [
+          "Thay thử 'if … not' vào chỗ trống: nếu câu hợp logic → unless; nếu cần nghĩa 'miễn là' → provided that / as long as."
+        ]
+      },
+      {
+        "title": "3. Liên từ vs Giới từ tương ứng",
+        "content": "Nhiều cặp có nghĩa giống nhau nhưng khác từ loại. Nhìn phía sau chỗ trống: mệnh đề (S + V) hay cụm danh từ.",
+        "formula": "in case + S + V  vs  in case of + N\nin the event (that) + S + V  vs  in the event of + N\nif + S + V  vs  without / but for + N (nếu không có)",
+        "bullet_points": [
+          "in case: phòng khi (biện pháp dự phòng) – \"Bring an umbrella in case it rains.\"",
+          "in case of + N: trong trường hợp – \"In case of emergency, call security.\"",
+          "in the event of + N: trong trường hợp (trang trọng) – \"In the event of a power outage…\".",
+          "without / but for + N: nếu không có – thường đi với điều kiện loại 2/3 (would / would have)."
+        ],
+        "tips": [
+          "Sau chỗ trống là cụm danh từ (a fire alarm, bad weather) → chọn dạng có giới từ (in case of, in the event of). Là mệnh đề → in case, in the event that."
+        ]
+      },
+      {
+        "title": "4. Otherwise – trạng từ liên kết",
+        "content": "Otherwise nghĩa 'nếu không thì', là TRẠNG TỪ liên kết hai mệnh đề độc lập, không phải liên từ. Thường đứng sau dấu chấm phẩy hoặc đầu câu mới.",
+        "formula": "Mệnh đề 1 (mệnh lệnh / điều cần làm); otherwise, mệnh đề 2 (hậu quả)",
+        "bullet_points": [
+          "\"Please register by June 1; otherwise, you will not receive a name badge.\"",
+          "Rất hay xuất hiện trong Part 6 (email nhắc hạn chót).",
+          "Không dùng otherwise để nối trực tiếp hai mệnh đề chỉ bằng dấu phẩy trong văn viết chuẩn."
+        ],
+        "tips": [
+          "Câu trước là yêu cầu/hạn chót, câu sau là hậu quả xấu và chỗ trống đứng sau dấu chấm phẩy/đầu câu → otherwise."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Unless the contractor submits the revised blueprints by Monday, the project will be delayed.",
+        "vietnamese": "Trừ khi nhà thầu nộp bản vẽ sửa đổi trước thứ Hai, dự án sẽ bị trì hoãn.",
+        "explanation": "Unless = if … not; mệnh đề chính là hậu quả tiêu cực; động từ sau unless chia hiện tại.",
+        "highlight": "Unless the contractor submits the revised blueprints by Monday",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Staff may leave early on Friday provided that all client requests have been answered.",
+        "vietnamese": "Nhân viên có thể về sớm vào thứ Sáu với điều kiện mọi yêu cầu của khách hàng đã được trả lời.",
+        "explanation": "provided that + mệnh đề, nghĩa 'với điều kiện là'.",
+        "highlight": "provided that all client requests have been answered",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "In the event of severe weather, the outdoor ceremony will be moved to the main auditorium.",
+        "vietnamese": "Trong trường hợp thời tiết xấu, buổi lễ ngoài trời sẽ được chuyển vào hội trường chính.",
+        "explanation": "Sau chỗ trống là cụm danh từ \"severe weather\" → in the event of.",
+        "highlight": "In the event of severe weather",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Please keep your receipt in case you need to exchange the item.",
+        "vietnamese": "Vui lòng giữ hoá đơn phòng khi bạn cần đổi sản phẩm.",
+        "explanation": "in case + mệnh đề (you need) diễn tả biện pháp dự phòng.",
+        "highlight": "in case you need to exchange the item",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "Complete the safety training by the end of the month; otherwise, your access badge will be deactivated.",
+        "vietnamese": "Hãy hoàn thành khoá đào tạo an toàn trước cuối tháng; nếu không, thẻ ra vào của bạn sẽ bị vô hiệu hoá.",
+        "explanation": "Otherwise nối yêu cầu và hậu quả, đứng sau dấu chấm phẩy.",
+        "highlight": "otherwise, your access badge will be deactivated",
+        "part_tag": "Part 6"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-condj-1",
+        "question": "_______ the shipment arrives by Friday, we will have to postpone the product launch.",
+        "options": [
+          "Unless",
+          "Provided that",
+          "As long as",
+          "In case of"
+        ],
+        "answer_index": 0,
+        "explanation": "Mệnh đề chính là hậu quả tiêu cực (phải hoãn ra mắt) → nghĩa 'nếu hàng KHÔNG tới' → \"Unless\". \"Provided that\", \"As long as\" mang nghĩa 'miễn là', ngược logic; \"In case of\" là giới từ, không đi với mệnh đề."
+      },
+      {
+        "id": "q-condj-2",
+        "question": "Employees may work from home on Fridays _______ they complete their weekly reports on time.",
+        "options": [
+          "unless",
+          "provided that",
+          "otherwise",
+          "in case of"
+        ],
+        "answer_index": 1,
+        "explanation": "Cần nghĩa 'với điều kiện là' + mệnh đề → \"provided that\". \"unless\" ngược nghĩa; \"otherwise\" là trạng từ liên kết; \"in case of\" phải đi với danh từ."
+      },
+      {
+        "id": "q-condj-3",
+        "question": "Please keep a copy of the receipt _______ you need to return the item.",
+        "options": [
+          "in case of",
+          "unless",
+          "in case",
+          "otherwise"
+        ],
+        "answer_index": 2,
+        "explanation": "Biện pháp dự phòng + mệnh đề \"you need to return…\" → liên từ \"in case\". \"in case of\" cần danh từ; \"unless\" sai nghĩa; \"otherwise\" không nối mệnh đề phụ."
+      },
+      {
+        "id": "q-condj-4",
+        "question": "_______ a fire alarm, all staff must exit through the nearest stairwell.",
+        "options": [
+          "In case",
+          "Provided that",
+          "Unless",
+          "In the event of"
+        ],
+        "answer_index": 3,
+        "explanation": "Sau chỗ trống là cụm danh từ \"a fire alarm\" → giới từ \"In the event of\". \"In case\", \"Provided that\", \"Unless\" là liên từ, cần mệnh đề S + V."
+      },
+      {
+        "id": "q-condj-5",
+        "question": "Submit the form by noon; _______, your request will not be processed until next week.",
+        "options": [
+          "unless",
+          "otherwise",
+          "provided",
+          "as long as"
+        ],
+        "answer_index": 1,
+        "explanation": "Đứng sau dấu chấm phẩy, trước dấu phẩy, nối yêu cầu với hậu quả → trạng từ liên kết \"otherwise\". Các phương án còn lại là liên từ, không đứng một mình giữa hai dấu câu như vậy."
+      },
+      {
+        "id": "q-condj-6",
+        "question": "_______ the generous support of our sponsors, the charity gala would not have been possible.",
+        "options": [
+          "Without",
+          "Unless",
+          "Otherwise",
+          "Provided"
+        ],
+        "answer_index": 0,
+        "explanation": "Sau chỗ trống là cụm danh từ và mệnh đề chính là điều kiện loại 3 (would not have been) → \"Without\" (nếu không có). \"Unless\", \"Provided\" cần mệnh đề; \"Otherwise\" không đứng trước danh từ."
+      },
+      {
+        "id": "q-condj-7",
+        "question": "The discount applies _______ the order exceeds $500.",
+        "options": [
+          "but for",
+          "otherwise",
+          "in the event of",
+          "only if"
+        ],
+        "answer_index": 3,
+        "explanation": "Phía sau là mệnh đề \"the order exceeds $500\", nghĩa 'chỉ khi' → \"only if\". \"but for\", \"in the event of\" là giới từ cần danh từ; \"otherwise\" sai chức năng."
+      }
+    ]
+  },
+  {
+    "id": "pattern-it-structures",
+    "category": "sentencePatterns",
+    "title": "Cấu trúc với \"It\" (chủ ngữ giả & tân ngữ giả)",
+    "subtitle": "It is + adj + to V / that S V, It takes, It is expected that & make it + adj",
+    "read_time_minutes": 8,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "sentence-structure",
+      "subjunctive",
+      "infinitive",
+      "verb-form"
+    ],
+    "overview": "Tiếng Anh thương mại rất hay đẩy phần thông tin dài (to V, mệnh đề that) ra cuối câu và dùng \"it\" làm chủ ngữ hoặc tân ngữ giả. Part 5 khai thác cấu trúc này theo 3 kiểu: chọn đúng dạng tính từ sau \"It is\", chia động từ nguyên mẫu trong mệnh đề that (giả định), và bẫy thiếu \"it\" sau make / find.",
+    "sections": [
+      {
+        "title": "1. It is + tính từ + (for sb) + to V",
+        "content": "\"It\" là chủ ngữ giả, chủ ngữ thật là cụm to V phía sau. Muốn nói rõ ai thực hiện hành động thì chèn \"for + người\". Với tính từ chỉ tính cách (kind, generous, thoughtful, careless) dùng \"of + người\".",
+        "formula": "It is + adj (+ for sb) + to V\nIt is + adj tính cách + of sb + to V",
+        "bullet_points": [
+          "It is important for all staff to attend the safety briefing.",
+          "It is difficult to predict next quarter's demand.",
+          "It was generous of the director to fund the team dinner.",
+          "Tính từ hay gặp: important, essential, necessary, difficult, easy, possible, advisable, customary, mandatory."
+        ],
+        "tips": [
+          "Chỗ trống ngay sau \"It is\" mà phía sau là \"for sb / to V / that\" → bắt buộc là TÍNH TỪ (necessary), không phải danh từ (necessity) hay trạng từ (necessarily)."
+        ]
+      },
+      {
+        "title": "2. It is + tính từ + that + S + (should) + V nguyên mẫu",
+        "content": "Sau các tính từ chỉ sự cần thiết / khẩn cấp, mệnh đề that dùng thể giả định: động từ để NGUYÊN MẪU không chia theo chủ ngữ, không thêm -s, không lùi thì (có thể hiểu là đã lược \"should\").",
+        "formula": "It is + essential / imperative / vital / necessary / crucial / mandatory + that + S + V (bare)",
+        "bullet_points": [
+          "It is imperative that every visitor sign in at reception. (không phải \"signs\")",
+          "It is essential that the report be submitted on time. (bị động: be + V3)",
+          "It was necessary that the client approve the design before printing. (không lùi thì thành \"approved\")"
+        ],
+        "tips": [
+          "Bẫy ETS: chủ ngữ số ít (each visitor, the manager) dụ bạn chọn động từ thêm -s. Thấy tính từ cần thiết + that → chọn dạng nguyên mẫu."
+        ]
+      },
+      {
+        "title": "3. It takes (sb) + thời gian + to V",
+        "content": "Diễn tả ai đó cần bao lâu để làm việc gì. Động từ là \"take\" (chia theo thì), không dùng spend / need với chủ ngữ giả \"it\". Tương tự, \"It costs (sb) + tiền + to V\" nói về chi phí.",
+        "formula": "It + take(s) / took + (sb) + time + to V\nIt + cost(s) + (sb) + money + to V",
+        "bullet_points": [
+          "It takes about two days to process a refund.",
+          "It took the movers five hours to relocate the archive.",
+          "So sánh: The team spent five hours relocating the archive. (spend + time + V-ing, chủ ngữ là người)"
+        ],
+        "tips": [
+          "Chủ ngữ là \"It\" + thời gian + to V → chọn take. Chủ ngữ là người + thời gian + V-ing → chọn spend."
+        ]
+      },
+      {
+        "title": "4. It is said / expected / believed that… & dạng chuyển",
+        "content": "Dùng để đưa tin, dự báo một cách khách quan (rất hay gặp trong bản tin, thông cáo Part 4 & Part 7). Có thể chuyển sang dạng chủ ngữ thật + be + V3 + to V.",
+        "formula": "It is + said / expected / believed / reported / estimated + that + S + V\n= S + be + V3 + to V",
+        "bullet_points": [
+          "It is expected that sales will rise next year. = Sales are expected to rise next year.",
+          "It is estimated that the project will cost $2 million. = The project is estimated to cost $2 million."
+        ],
+        "tips": [
+          "Sau \"It is widely / generally\" là V3 (expected, believed, agreed), vì đây là bị động: tin đó được người khác cho là đúng."
+        ]
+      },
+      {
+        "title": "5. make / find / consider + it + tính từ + to V (tân ngữ giả)",
+        "content": "Khi tân ngữ thật là một cụm to V hoặc mệnh đề that dài, phải đặt \"it\" vào vị trí tân ngữ, tính từ theo sau, rồi mới đến cụm thật.",
+        "formula": "S + make / find / consider / think + it + adj + (for sb) + to V / that…",
+        "bullet_points": [
+          "The new app makes it easier for drivers to plan their routes.",
+          "Many customers find it convenient to pay online.",
+          "We consider it essential that all data be backed up daily."
+        ],
+        "tips": [
+          "Bẫy thiếu \"it\": \"makes easier to track orders\" là SAI. Nếu 4 phương án có it / them / this / its và phía sau là adj + to V → chọn \"it\"."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "It is essential that all receipts be submitted by Friday.",
+        "vietnamese": "Điều thiết yếu là tất cả hoá đơn phải được nộp trước thứ Sáu.",
+        "explanation": "Sau \"It is essential that\" động từ ở thể giả định: dùng \"be submitted\" (nguyên mẫu, bị động), không dùng \"are submitted\".",
+        "highlight": "It is essential that all receipts be submitted",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "It took the technicians three hours to repair the main server.",
+        "vietnamese": "Các kỹ thuật viên mất ba tiếng để sửa máy chủ chính.",
+        "explanation": "Cấu trúc It + took + người + thời gian + to V; không dùng \"spent\" với chủ ngữ giả \"it\".",
+        "highlight": "It took the technicians three hours to repair",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The new scheduling app makes it easier for managers to assign shifts.",
+        "vietnamese": "Ứng dụng xếp lịch mới giúp quản lý phân ca dễ dàng hơn.",
+        "explanation": "\"it\" là tân ngữ giả thay cho cụm \"to assign shifts\"; bỏ \"it\" thì câu sai ngữ pháp.",
+        "highlight": "makes it easier for managers to assign",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "It is expected that the merger will be completed by the end of the quarter.",
+        "vietnamese": "Dự kiến thương vụ sáp nhập sẽ hoàn tất trước cuối quý.",
+        "explanation": "Câu đưa tin khách quan; tương đương \"The merger is expected to be completed…\".",
+        "highlight": "It is expected that",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "It is important for new employees to complete the safety training during their first week.",
+        "vietnamese": "Nhân viên mới cần hoàn thành khoá huấn luyện an toàn trong tuần đầu tiên.",
+        "explanation": "\"for new employees\" chỉ người thực hiện hành động \"to complete\".",
+        "highlight": "It is important for new employees to complete",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-its-1",
+        "question": "It is imperative that each visitor _______ a security badge at all times.",
+        "options": [
+          "wears",
+          "wear",
+          "wore",
+          "wearing"
+        ],
+        "answer_index": 1,
+        "explanation": "Sau \"It is imperative that\" dùng thể giả định: động từ nguyên mẫu \"wear\" dù chủ ngữ là \"each visitor\". \"wears\" chia theo chủ ngữ, \"wore\" lùi thì, \"wearing\" không làm vị ngữ được."
+      },
+      {
+        "id": "q-its-2",
+        "question": "It _______ the shipping company two weeks to deliver the replacement parts.",
+        "options": [
+          "spent",
+          "made",
+          "took",
+          "needed"
+        ],
+        "answer_index": 2,
+        "explanation": "Cấu trúc It + take + sb + thời gian + to V → \"took\". \"spent\" cần chủ ngữ là người và theo sau là V-ing; \"made\" và \"needed\" không đi với khuôn này."
+      },
+      {
+        "id": "q-its-3",
+        "question": "The updated filing system has made _______ much easier to locate client records.",
+        "options": [
+          "it",
+          "them",
+          "this",
+          "its"
+        ],
+        "answer_index": 0,
+        "explanation": "\"it\" là tân ngữ giả thay cho cụm \"to locate client records\" (make + it + adj + to V). \"them/this\" không có gì để thay thế; \"its\" là tính từ sở hữu."
+      },
+      {
+        "id": "q-its-4",
+        "question": "It is _______ for all department heads to submit their budget proposals before the deadline.",
+        "options": [
+          "necessity",
+          "necessarily",
+          "necessitate",
+          "necessary"
+        ],
+        "answer_index": 3,
+        "explanation": "Sau \"It is\" và trước \"for sb to V\" cần tính từ → \"necessary\". \"necessity\" là danh từ, \"necessarily\" là trạng từ, \"necessitate\" là động từ."
+      },
+      {
+        "id": "q-its-5",
+        "question": "It is widely _______ that the new regulations will reduce shipping costs.",
+        "options": [
+          "expecting",
+          "expected",
+          "expectation",
+          "expects"
+        ],
+        "answer_index": 1,
+        "explanation": "Cấu trúc bị động đưa tin \"It is (widely) expected that…\" → V3 \"expected\". \"expecting\" là chủ động, \"expectation\" là danh từ, \"expects\" không đứng sau \"is\"."
+      },
+      {
+        "id": "q-its-6",
+        "question": "Because of the snowstorm, it was difficult _______ to reach the convention center on time.",
+        "options": [
+          "of the guests",
+          "the guests",
+          "for the guests",
+          "to the guests"
+        ],
+        "answer_index": 2,
+        "explanation": "It is + adj + for sb + to V → \"for the guests\". \"of sb\" chỉ dùng với tính từ chỉ tính cách (kind, generous); thiếu giới từ hoặc dùng \"to\" đều sai."
+      }
+    ]
+  },
+  {
+    "id": "pattern-verb-object-patterns",
+    "category": "sentencePatterns",
+    "title": "Mẫu động từ: V + O + to V, V + V-ing, V + O + from V-ing",
+    "subtitle": "Require sb to V, recommend V-ing, prevent sb from V-ing & \"to\" là giới từ",
+    "read_time_minutes": 9,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "verb-form",
+      "gerund",
+      "infinitive",
+      "sentence-structure"
+    ],
+    "overview": "Gần như đề nào cũng có 2–3 câu Part 5 hỏi dạng động từ theo sau một động từ / tính từ khác. Chìa khoá là thuộc \"khuôn\" của từng động từ: có tân ngữ rồi to V, đi thẳng V-ing, hay đi với from + V-ing; và nhận ra những cụm có \"to\" là giới từ (look forward to + V-ing).",
+    "sections": [
+      {
+        "title": "1. V + O + to V (yêu cầu, cho phép, khuyến khích)",
+        "content": "Nhóm động từ tác động lên một người để người đó làm gì. Tân ngữ đứng ngay sau động từ, rồi đến to V. Khi chuyển bị động, tân ngữ lên làm chủ ngữ: be + V3 + to V.",
+        "formula": "S + ask / require / encourage / remind / allow / enable / urge / advise / invite / instruct / permit + O + to V\nBị động: S + be + required / asked / encouraged / reminded / advised + to V",
+        "bullet_points": [
+          "The manager asked the team to revise the proposal.",
+          "The software enables users to share files securely.",
+          "All guests are required to show their tickets at the entrance.",
+          "Customers are reminded to keep their receipts."
+        ],
+        "tips": [
+          "Thấy \"be required / asked / encouraged / advised\" ngay trước chỗ trống → chọn to V."
+        ]
+      },
+      {
+        "title": "2. V + V-ing",
+        "content": "Nhóm động từ theo sau trực tiếp là danh động từ: avoid, consider, recommend, suggest, postpone, delay, finish, mind, keep, involve, include, discontinue, anticipate, risk, deny.",
+        "formula": "S + avoid / consider / recommend / suggest / postpone / delay / finish / discontinue + V-ing",
+        "bullet_points": [
+          "The board is considering opening a branch in Osaka.",
+          "We recommend booking your hotel at least a month in advance.",
+          "The airline has discontinued serving meals on short flights.",
+          "recommend / suggest còn đi với mệnh đề: suggest that the meeting (should) be moved."
+        ],
+        "tips": [
+          "suggest / recommend KHÔNG đi với \"O + to V\" trong đáp án ETS: \"suggest him to call\" là sai; dùng \"suggest calling\" hoặc \"suggest that he call\"."
+        ]
+      },
+      {
+        "title": "3. V + O + from + V-ing (ngăn cản)",
+        "content": "Nhóm động từ mang nghĩa ngăn chặn, cấm đoán đi với cấu trúc tân ngữ + from + V-ing.",
+        "formula": "S + prevent / prohibit / discourage / keep / stop / deter / ban + O + from + V-ing",
+        "bullet_points": [
+          "Heavy snow prevented the trucks from leaving the depot.",
+          "Employees are prohibited from sharing passwords.",
+          "High fees discourage small businesses from applying."
+        ],
+        "tips": [
+          "Chỗ trống sau \"prevent / keep / prohibit + O\" mà có sẵn \"from\" → V-ing; chưa có \"from\" thì chọn phương án \"from + V-ing\"."
+        ]
+      },
+      {
+        "title": "4. be + tính từ + to V",
+        "content": "Nhiều tính từ chỉ khả năng, sẵn sàng, dự kiến đi với to V: eligible, likely, reluctant, eager, willing, able, pleased, sure, scheduled, due, ready.",
+        "formula": "S + be + eligible / likely / reluctant / eager / willing / scheduled / due + to V",
+        "bullet_points": [
+          "Full-time staff are eligible to receive a bonus. (khác với eligible for + danh từ: eligible for a bonus)",
+          "The shipment is scheduled to arrive on Monday.",
+          "Investors are reluctant to commit before the audit."
+        ]
+      },
+      {
+        "title": "5. Khi \"to\" là GIỚI TỪ → + V-ing",
+        "content": "Trong các cụm sau, \"to\" là giới từ nên theo sau là danh từ hoặc V-ing, không phải động từ nguyên mẫu. Đây là bẫy kinh điển vì người học quen phản xạ \"to + V\".",
+        "formula": "look forward to / be committed to / be dedicated to / be devoted to / object to / be used to / be accustomed to / contribute to / in addition to + V-ing",
+        "bullet_points": [
+          "We look forward to meeting you at the conference.",
+          "The company is committed to reducing its carbon emissions.",
+          "In addition to managing the budget, Ms. Ortiz trains new hires."
+        ],
+        "tips": [
+          "Mẹo thử: thay chỗ trống bằng một danh từ (\"committed to quality\"). Nếu câu vẫn đúng thì \"to\" là giới từ → chọn V-ing."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Management encouraged all employees to participate in the wellness program.",
+        "vietnamese": "Ban quản lý khuyến khích toàn bộ nhân viên tham gia chương trình chăm sóc sức khoẻ.",
+        "explanation": "encourage + O + to V: \"all employees\" là tân ngữ, theo sau là \"to participate\".",
+        "highlight": "encouraged all employees to participate",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The supervisor recommended postponing the product launch until the spring.",
+        "vietnamese": "Người giám sát đề xuất hoãn buổi ra mắt sản phẩm đến mùa xuân.",
+        "explanation": "recommend + V-ing; không dùng \"recommended to postpone\".",
+        "highlight": "recommended postponing",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Heavy rain prevented the crew from completing the roof repairs on schedule.",
+        "vietnamese": "Mưa lớn khiến đội thi công không thể hoàn thành việc sửa mái đúng tiến độ.",
+        "explanation": "prevent + O + from + V-ing.",
+        "highlight": "prevented the crew from completing",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "Full-time staff are eligible to receive an annual performance bonus.",
+        "vietnamese": "Nhân viên toàn thời gian đủ điều kiện nhận thưởng hiệu suất hằng năm.",
+        "explanation": "be eligible + to V; nếu theo sau là danh từ thì dùng \"eligible for\".",
+        "highlight": "are eligible to receive",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "We look forward to working with your team on the upcoming campaign.",
+        "vietnamese": "Chúng tôi mong được làm việc với nhóm của quý vị trong chiến dịch sắp tới.",
+        "explanation": "\"to\" trong \"look forward to\" là giới từ → \"working\" (V-ing).",
+        "highlight": "look forward to working",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "All passengers are required to present a valid photo ID at check-in.",
+        "vietnamese": "Tất cả hành khách phải xuất trình giấy tờ tùy thân có ảnh hợp lệ khi làm thủ tục.",
+        "explanation": "Bị động của \"require sb to V\": be required + to V.",
+        "highlight": "are required to present",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-vop-1",
+        "question": "The new security policy requires all visitors _______ at the front desk.",
+        "options": [
+          "signing in",
+          "sign in",
+          "to sign in",
+          "signed in"
+        ],
+        "answer_index": 2,
+        "explanation": "require + O + to V → \"to sign in\". Động từ require không đi với V-ing, V nguyên mẫu hay V3 sau tân ngữ chỉ người."
+      },
+      {
+        "id": "q-vop-2",
+        "question": "The consultant suggested _______ the meeting to a larger conference room.",
+        "options": [
+          "moving",
+          "to move",
+          "move",
+          "moved"
+        ],
+        "answer_index": 0,
+        "explanation": "suggest + V-ing → \"moving\". \"suggest to move\" là lỗi thường gặp; \"move/moved\" không đứng ngay sau suggest khi không có mệnh đề that."
+      },
+      {
+        "id": "q-vop-3",
+        "question": "The new firewall keeps unauthorized users _______ the company database.",
+        "options": [
+          "to access",
+          "access",
+          "accessed",
+          "from accessing"
+        ],
+        "answer_index": 3,
+        "explanation": "keep + O + from + V-ing (ngăn ai làm gì) → \"from accessing\". Các dạng còn lại không phù hợp với nghĩa ngăn chặn."
+      },
+      {
+        "id": "q-vop-4",
+        "question": "Ms. Patel is committed to _______ the highest level of customer service.",
+        "options": [
+          "provide",
+          "providing",
+          "provided",
+          "provides"
+        ],
+        "answer_index": 1,
+        "explanation": "\"to\" trong \"be committed to\" là giới từ → V-ing \"providing\". Thử thay bằng danh từ: \"committed to excellence\" vẫn đúng."
+      },
+      {
+        "id": "q-vop-5",
+        "question": "Employees who have worked here for six months are eligible _______ in the stock purchase plan.",
+        "options": [
+          "participating",
+          "participation",
+          "to participate",
+          "participated"
+        ],
+        "answer_index": 2,
+        "explanation": "be eligible + to V → \"to participate\". Nếu dùng danh từ phải có \"for\" (eligible for participation), nên \"participation\" đứng một mình là sai."
+      },
+      {
+        "id": "q-vop-6",
+        "question": "Customers are reminded _______ their receipts in case they need to return an item.",
+        "options": [
+          "to keep",
+          "keeping",
+          "keep",
+          "kept"
+        ],
+        "answer_index": 0,
+        "explanation": "Bị động của \"remind sb to V\": be reminded + to V → \"to keep\"."
+      }
+    ]
   }
 ]

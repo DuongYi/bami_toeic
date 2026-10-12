@@ -415,5 +415,1971 @@
         "explanation": "Phía sau là mệnh đề có chủ ngữ và vị ngữ \"there was dense fog\" -> chọn liên từ \"because\"."
       }
     ]
+  },
+  {
+    "id": "pos-articles",
+    "category": "partsOfSpeech",
+    "title": "Mạo từ a / an / the & danh từ không đếm được",
+    "subtitle": "Danh từ số ít cần từ hạn định, a/an theo âm, the xác định & bẫy \"an information\"",
+    "read_time_minutes": 7,
+    "difficulty": "Cơ bản",
+    "tags": [
+      "nouns",
+      "articles",
+      "word-form"
+    ],
+    "overview": "Mạo từ quyết định chỗ trống phải là danh từ số ít, số nhiều hay không đếm được. Part 5 thường cho 4 phương án là cùng một danh từ ở các dạng khác nhau (advice / advices / an advice) hoặc 4 từ hạn định (a / an / the / much). Nắm 4 quy tắc dưới đây là xử lý được gần hết.",
+    "sections": [
+      {
+        "title": "1. Danh từ đếm được số ít luôn cần từ hạn định",
+        "content": "Danh từ đếm được ở số ít không bao giờ đứng trơ trọi: phải có a/an/the hoặc một từ hạn định khác (my, this, each, every, another…). Ngược lại, danh từ số nhiều và không đếm được có thể đứng một mình khi nói chung chung.",
+        "formula": "a / an / the / this / my / each + N đếm được số ít\n(không mạo từ) + N số nhiều / N không đếm được (nghĩa chung)",
+        "bullet_points": [
+          "SAI: We hired consultant. → ĐÚNG: We hired a consultant.",
+          "Applicants should submit a résumé and two references.",
+          "Customers expect fast delivery. (danh từ không đếm được, nghĩa chung)"
+        ],
+        "tips": [
+          "Trước chỗ trống không có từ hạn định nào → loại ngay danh từ đếm được số ít (manager, proposal), chọn dạng số nhiều hoặc không đếm được."
+        ]
+      },
+      {
+        "title": "2. a hay an: dựa vào ÂM đầu, không phải chữ cái",
+        "content": "\"an\" đứng trước âm nguyên âm, \"a\" đứng trước âm phụ âm. Chú ý các từ viết bằng nguyên âm nhưng phát âm phụ âm và ngược lại.",
+        "formula": "an + âm nguyên âm /æ, e, ɪ, ɒ, ʌ, ə…/\na + âm phụ âm (kể cả /j/, /w/)",
+        "bullet_points": [
+          "an hour, an honest mistake, an MBA, an HR manager, an updated version",
+          "a university, a European client, a one-year contract, a used car"
+        ]
+      },
+      {
+        "title": "3. Khi nào dùng \"the\"",
+        "content": "\"the\" dùng khi người nghe biết đang nói đến cái nào: đã nhắc trước đó, được xác định bởi cụm phía sau, là duy nhất, hoặc theo sau là so sánh nhất / số thứ tự.",
+        "formula": "the + N đã xác định / duy nhất\nthe + so sánh nhất / số thứ tự (first, second, last, next) / same",
+        "bullet_points": [
+          "the CEO of the company, the main entrance, the quality of our products",
+          "the largest supplier in the region, on the third floor, the first quarter",
+          "We ordered a projector. The projector arrived yesterday. (nhắc lại → the)"
+        ],
+        "tips": [
+          "Thấy so sánh nhất (-est / most) hoặc số thứ tự ngay sau chỗ trống → chọn \"the\"."
+        ]
+      },
+      {
+        "title": "4. Danh từ không đếm được hay gặp trong TOEIC",
+        "content": "Những danh từ sau KHÔNG có dạng số nhiều và không đi với a/an. Muốn đếm phải dùng \"a piece of / an item of\" hoặc lượng từ (much, little, some, any).",
+        "bullet_points": [
+          "information, equipment, furniture, advice, luggage / baggage, feedback, research, merchandise, machinery, clothing, stationery, software, knowledge, access, permission",
+          "SAI: an information, equipments, a furniture → ĐÚNG: some information, equipment, a piece of furniture",
+          "Động từ chia số ít: The equipment is ready. / All the furniture has been delivered."
+        ],
+        "tips": [
+          "Bẫy Part 5: 4 phương án \"advice / advices / an advice / advise\". Loại dạng có -s và có \"an\" của danh từ không đếm được, loại động từ \"advise\"."
+        ]
+      },
+      {
+        "title": "5. Không dùng mạo từ (zero article)",
+        "content": "Một số trường hợp cố định không dùng mạo từ trong văn phong công sở.",
+        "bullet_points": [
+          "Tên công ty, thành phố, ngày tháng: at Delmont Corporation, in Seoul, on Monday",
+          "by + phương tiện / cách thức: by train, by e-mail, by credit card",
+          "Cụm cố định: at work, at noon, in person, on time, in advance, under construction"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Please send us an updated copy of the contract by noon.",
+        "vietnamese": "Vui lòng gửi cho chúng tôi bản cập nhật của hợp đồng trước buổi trưa.",
+        "explanation": "\"an\" vì \"updated\" bắt đầu bằng âm nguyên âm; \"the contract\" là hợp đồng đã xác định giữa hai bên.",
+        "highlight": "an updated copy of the contract",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "We received useful feedback from customers about the new design.",
+        "vietnamese": "Chúng tôi nhận được nhiều phản hồi hữu ích từ khách hàng về thiết kế mới.",
+        "explanation": "\"feedback\" không đếm được nên không có \"a\" và không thêm -s.",
+        "highlight": "useful feedback",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Ms. Lin was hired as an HR consultant for a one-year term.",
+        "vietnamese": "Cô Lin được thuê làm cố vấn nhân sự với nhiệm kỳ một năm.",
+        "explanation": "\"an HR\" vì chữ H đọc là /eɪtʃ/ (âm nguyên âm); \"a one-year\" vì \"one\" đọc là /wʌn/ (âm phụ âm).",
+        "highlight": "an HR consultant for a one-year term",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The quarterly report will be presented on the third floor.",
+        "vietnamese": "Báo cáo quý sẽ được trình bày ở tầng ba.",
+        "explanation": "Số thứ tự \"third\" luôn đi với \"the\".",
+        "highlight": "on the third floor",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "All office equipment must be turned off at the end of the day.",
+        "vietnamese": "Toàn bộ thiết bị văn phòng phải được tắt vào cuối ngày.",
+        "explanation": "\"equipment\" không đếm được → không thêm -s, động từ chia số ít.",
+        "highlight": "All office equipment must be",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-art-1",
+        "question": "Mr. Okafor has worked as _______ independent consultant for several firms in the region.",
+        "options": [
+          "a",
+          "an",
+          "much",
+          "any"
+        ],
+        "answer_index": 1,
+        "explanation": "\"independent\" bắt đầu bằng âm nguyên âm /ɪ/ → \"an\". \"consultant\" là danh từ đếm được số ít nên không dùng \"much\"; \"any\" không hợp nghĩa câu khẳng định này."
+      },
+      {
+        "id": "q-art-2",
+        "question": "The technician gave us some useful _______ on how to maintain the printers.",
+        "options": [
+          "advices",
+          "an advice",
+          "advise",
+          "advice"
+        ],
+        "answer_index": 3,
+        "explanation": "\"advice\" là danh từ không đếm được → không thêm -s, không đi với \"an\". \"advise\" là động từ."
+      },
+      {
+        "id": "q-art-3",
+        "question": "This is _______ largest trade fair ever held in the region.",
+        "options": [
+          "the",
+          "a",
+          "an",
+          "much"
+        ],
+        "answer_index": 0,
+        "explanation": "So sánh nhất \"largest\" luôn đi với \"the\"."
+      },
+      {
+        "id": "q-art-4",
+        "question": "All new _______ must be inspected before it is installed in the factory.",
+        "options": [
+          "machines",
+          "a machine",
+          "machinery",
+          "machineries"
+        ],
+        "answer_index": 2,
+        "explanation": "Đại từ \"it\" và \"All new\" + danh từ không đếm được → \"machinery\". \"machines\" số nhiều không khớp với \"it\"; \"All new a machine\" sai; \"machineries\" không tồn tại."
+      },
+      {
+        "id": "q-art-5",
+        "question": "Please let us know if you need _______ further information about the event.",
+        "options": [
+          "many",
+          "any",
+          "a",
+          "an"
+        ],
+        "answer_index": 1,
+        "explanation": "\"information\" không đếm được → không dùng \"a/an/many\". \"any\" dùng trong mệnh đề if với cả danh từ không đếm được."
+      },
+      {
+        "id": "q-art-6",
+        "question": "Our customer service center is closed on _______ first Monday of every month.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "each"
+        ],
+        "answer_index": 2,
+        "explanation": "Số thứ tự \"first\" đi với \"the\". \"each first Monday\" sai vì \"each\" không đứng trước số thứ tự kèm \"of every month\"."
+      }
+    ]
+  },
+  {
+    "id": "pos-quantifiers-determiners",
+    "category": "partsOfSpeech",
+    "title": "Lượng từ & từ hạn định (each, every, few, little, another, the others…)",
+    "subtitle": "Đi với danh từ nào, chia động từ ra sao & bẫy \"most of employees\"",
+    "read_time_minutes": 9,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "nouns",
+      "agreement",
+      "quantifiers"
+    ],
+    "overview": "Lượng từ là loại câu \"ăn điểm\" của Part 5 nếu nắm chắc 2 câu hỏi: lượng từ này đi với danh từ số ít, số nhiều hay không đếm được, và động từ phía sau chia số ít hay số nhiều. Đề cũng rất hay gài cặp another / other / the other / the others.",
+    "sections": [
+      {
+        "title": "1. each / every",
+        "content": "each và every đi với danh từ đếm được SỐ ÍT và động từ số ít. \"each\" còn dùng được với \"of the + N số nhiều\" (động từ vẫn số ít), còn \"every\" thì không.",
+        "formula": "each / every + N số ít + V số ít\neach of the + N số nhiều + V số ít",
+        "bullet_points": [
+          "Every employee has access to the online portal.",
+          "Each of the candidates was interviewed twice.",
+          "SAI: every of the candidates / every employees"
+        ]
+      },
+      {
+        "title": "2. many / much, few / little, a few / a little",
+        "content": "many, few, a few + danh từ đếm được số nhiều. much, little, a little + danh từ không đếm được. a lot of, plenty of, some, any, most, all đi được cả hai loại. Có \"a\" thì nghĩa tích cực (một vài, đủ dùng); không có \"a\" thì nghĩa tiêu cực (rất ít, gần như không).",
+        "formula": "many / few / a few + N số nhiều\nmuch / little / a little + N không đếm được",
+        "bullet_points": [
+          "A few seats are still available. (còn vài chỗ – tích cực)",
+          "Few applicants met the requirements. (rất ít – tiêu cực)",
+          "There is little time left before the deadline."
+        ],
+        "tips": [
+          "Câu có \"very\", \"only\" hay ý tiêu cực (so we must hurry, unfortunately) → thường chọn few / little; ý tích cực, còn đủ dùng → a few / a little."
+        ]
+      },
+      {
+        "title": "3. a number of vs the number of, amount of",
+        "content": "\"a number of\" (nhiều) đi với danh từ số nhiều và động từ SỐ NHIỀU. \"the number of\" (con số, số lượng) đi với danh từ số nhiều nhưng động từ chia theo \"number\" nên SỐ ÍT. \"amount of\" dùng cho danh từ không đếm được.",
+        "formula": "A number of + N số nhiều + V số nhiều\nThe number of + N số nhiều + V số ít\nan / the amount of + N không đếm được",
+        "bullet_points": [
+          "A number of clients have asked for a demo.",
+          "The number of complaints has fallen sharply.",
+          "A large amount of paperwork is required."
+        ]
+      },
+      {
+        "title": "4. another / other / others / the other / the others",
+        "content": "Cặp này phân biệt theo số ít / số nhiều và \"bất kỳ\" / \"phần còn lại xác định\".",
+        "formula": "another + N số ít (một cái khác, bất kỳ)\nother + N số nhiều / không đếm được\nothers = other + N số nhiều (đại từ)\nthe other + N (cái còn lại trong 2) / the other (đại từ)\nthe others = những cái còn lại (đại từ)",
+        "bullet_points": [
+          "We need another week to finish the report.",
+          "Some staff work remotely; others come to the office.",
+          "One printer works, but the other is broken. (tổng cộng 2)",
+          "Three reports are done; the others will be ready tomorrow. (phần còn lại, từ 2 trở lên)"
+        ],
+        "tips": [
+          "Chỗ trống đứng một mình (không có danh từ sau) → chỉ có thể là đại từ: another, others, the other, the others. Đọc ngữ cảnh xem có xác định \"phần còn lại\" không."
+        ]
+      },
+      {
+        "title": "5. either / neither / both & most vs most of the",
+        "content": "either, neither + danh từ số ít (hoặc of the + N số nhiều), dùng cho 2 đối tượng. both + danh từ số nhiều. most / all / some + N (nghĩa chung) nhưng phải có \"of the / of my…\" khi danh từ đã xác định.",
+        "formula": "either / neither + N số ít / of the + N số nhiều\nboth + N số nhiều\nmost + N (chung) | most of the + N (xác định)",
+        "bullet_points": [
+          "Neither proposal was accepted.",
+          "Most employees prefer flexible hours. / Most of the employees in this office drive to work.",
+          "SAI: most of employees (thiếu \"the\")"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Each participant will receive a certificate at the end of the workshop.",
+        "vietnamese": "Mỗi người tham dự sẽ nhận một giấy chứng nhận khi kết thúc hội thảo.",
+        "explanation": "\"Each\" + danh từ số ít \"participant\".",
+        "highlight": "Each participant will receive",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "A number of customers have requested an extension of the warranty.",
+        "vietnamese": "Nhiều khách hàng đã yêu cầu gia hạn bảo hành.",
+        "explanation": "\"A number of\" mang nghĩa \"nhiều\" → động từ số nhiều \"have\".",
+        "highlight": "A number of customers have requested",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The number of online orders has doubled since January.",
+        "vietnamese": "Số lượng đơn hàng trực tuyến đã tăng gấp đôi kể từ tháng Một.",
+        "explanation": "\"The number of\" → động từ chia theo \"number\" (số ít): \"has\".",
+        "highlight": "The number of online orders has doubled",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "Only a few seats remain for Friday's seminar, so please register soon.",
+        "vietnamese": "Chỉ còn vài chỗ cho buổi hội thảo thứ Sáu, vì vậy vui lòng đăng ký sớm.",
+        "explanation": "\"a few\" + danh từ đếm được số nhiều \"seats\"; \"only a few\" nhấn mạnh còn ít nhưng vẫn còn.",
+        "highlight": "Only a few seats remain",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "One of the printers is working, but the other is out of order.",
+        "vietnamese": "Một trong hai máy in đang hoạt động, nhưng chiếc còn lại bị hỏng.",
+        "explanation": "Tổng cộng 2 máy, nói đến chiếc còn lại xác định → \"the other\".",
+        "highlight": "the other is out of order",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Most of the staff members prefer flexible working hours.",
+        "vietnamese": "Phần lớn nhân viên thích giờ làm việc linh hoạt.",
+        "explanation": "Danh từ đã xác định bằng \"the\" → phải dùng \"most of the\", không viết \"most of staff members\".",
+        "highlight": "Most of the staff members prefer",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-qnt-1",
+        "question": "_______ employee must complete the online security course by June 30.",
+        "options": [
+          "All",
+          "Most",
+          "Many",
+          "Every"
+        ],
+        "answer_index": 3,
+        "explanation": "Danh từ số ít \"employee\" → \"Every\". \"All / Most / Many\" cần danh từ số nhiều (all employees)."
+      },
+      {
+        "id": "q-qnt-2",
+        "question": "There is very _______ time left before the shipment arrives, so we need to act quickly.",
+        "options": [
+          "few",
+          "little",
+          "many",
+          "a few"
+        ],
+        "answer_index": 1,
+        "explanation": "\"time\" không đếm được → loại few / many / a few. Ý tiêu cực (\"so we need to act quickly\") → \"little\"."
+      },
+      {
+        "id": "q-qnt-3",
+        "question": "The number of applicants for the marketing position _______ higher than expected.",
+        "options": [
+          "were",
+          "have been",
+          "was",
+          "are"
+        ],
+        "answer_index": 2,
+        "explanation": "\"The number of + N số nhiều\" → động từ chia số ít theo \"number\": \"was\". Các phương án còn lại đều số nhiều."
+      },
+      {
+        "id": "q-qnt-4",
+        "question": "Ms. Ruiz will review two of the five reports today and _______ tomorrow morning.",
+        "options": [
+          "the others",
+          "the other",
+          "another",
+          "other"
+        ],
+        "answer_index": 0,
+        "explanation": "Còn lại 3 báo cáo xác định → \"the others\" (đại từ số nhiều). \"the other\" chỉ dùng khi còn đúng 1; \"another\" là một cái bất kỳ; \"other\" không đứng một mình."
+      },
+      {
+        "id": "q-qnt-5",
+        "question": "_______ of the two candidates has the required certification, so we will continue the search.",
+        "options": [
+          "Both",
+          "Either",
+          "None",
+          "Neither"
+        ],
+        "answer_index": 3,
+        "explanation": "Hai ứng viên, không ai đạt nên phải tiếp tục tìm → \"Neither\" (động từ số ít \"has\"). \"Both\" cần động từ số nhiều; \"Either\" mâu thuẫn với ý \"tiếp tục tìm\"; \"None\" dùng cho từ 3 đối tượng trở lên."
+      },
+      {
+        "id": "q-qnt-6",
+        "question": "_______ of the supplies were damaged during shipping.",
+        "options": [
+          "Much",
+          "Many",
+          "Every",
+          "Each"
+        ],
+        "answer_index": 1,
+        "explanation": "\"supplies\" số nhiều và động từ \"were\" → \"Many\". \"Much\" dùng cho không đếm được; \"Each of\" đi với động từ số ít; \"Every\" không đi với \"of\"."
+      }
+    ]
+  },
+  {
+    "id": "pos-prepositions-time-place",
+    "category": "partsOfSpeech",
+    "title": "Giới từ thời gian & nơi chốn (in/on/at, by/until, for/since, within…)",
+    "subtitle": "Mốc hay khoảng, hạn chót hay kéo dài & các giới từ trang trọng prior to / upon",
+    "read_time_minutes": 9,
+    "difficulty": "Cơ bản",
+    "tags": [
+      "prepositions",
+      "tenses"
+    ],
+    "overview": "Câu hỏi giới từ chiếm 3–5 câu Part 5 mỗi đề. Hai cặp bị hỏi nhiều nhất là by / until (hạn chót hay kéo dài) và for / since / over / within (khoảng hay mốc). Nhìn động từ và cụm thời gian phía sau là chọn được trong vài giây.",
+    "sections": [
+      {
+        "title": "1. in / on / at chỉ thời gian",
+        "content": "Đi từ nhỏ đến lớn: at cho thời điểm, on cho ngày, in cho khoảng dài hơn. Riêng \"in + khoảng thời gian\" ở tương lai nghĩa là \"sau bao lâu nữa\".",
+        "formula": "at + giờ / noon / midnight / the end of…\non + thứ / ngày tháng (on Monday, on May 5)\nin + tháng / năm / mùa / buổi (in June, in 2025, in the morning)\nin + khoảng thời gian = sau… nữa (in two weeks)",
+        "bullet_points": [
+          "The meeting starts at 9:30 A.M. on Tuesday.",
+          "The new store will open in March.",
+          "Your order will ship in three days."
+        ]
+      },
+      {
+        "title": "2. in / on / at chỉ nơi chốn",
+        "content": "at cho một điểm / địa chỉ có số nhà, on cho bề mặt / tên đường / tầng, in cho không gian bao quanh (phòng, toà nhà, thành phố, quốc gia).",
+        "formula": "at + địa điểm cụ thể / số nhà (at the front desk, at 25 Oak Street)\non + tên đường / tầng (on Oak Street, on the fifth floor)\nin + phòng / toà nhà / thành phố / quốc gia",
+        "bullet_points": [
+          "Please wait at the reception desk.",
+          "Our office is on the fifth floor of the Harmon Building.",
+          "The conference will be held in Singapore."
+        ]
+      },
+      {
+        "title": "3. by vs until",
+        "content": "\"by\" là HẠN CHÓT: hành động phải hoàn tất trước hoặc vào thời điểm đó (submit, complete, return, finish). \"until\" là KÉO DÀI liên tục đến thời điểm đó rồi mới dừng (remain, stay, last, be open, continue, wait). \"until\" còn là liên từ đi với mệnh đề.",
+        "formula": "by + mốc: động từ hoàn tất (submit / complete / arrive by Friday)\nuntil + mốc: động từ kéo dài (remain open / stay / last until 6 P.M.)",
+        "bullet_points": [
+          "Please return the form by Friday.",
+          "The library is open until 9 P.M.",
+          "The road will remain closed until the repairs are finished."
+        ],
+        "tips": [
+          "Hỏi: động từ là việc \"làm xong một lần\" hay \"kéo dài liên tục\"? Làm xong → by; kéo dài → until."
+        ]
+      },
+      {
+        "title": "4. for / since / during / within / throughout / over",
+        "content": "Phân biệt mốc thời gian và khoảng thời gian, và nghĩa của từng giới từ.",
+        "formula": "for + khoảng (for three years)\nsince + mốc (since 2019), thường với hiện tại hoàn thành\nduring + sự kiện / khoảng (during the meeting)\nwithin + khoảng = trong vòng, không quá (within 30 days)\nthroughout + khoảng / nơi = suốt, khắp (throughout the year)\nover + khoảng = trong suốt (over the past five years)",
+        "bullet_points": [
+          "Mr. Han has led the team since 2020. / for five years.",
+          "Please keep your phone silent during the presentation.",
+          "Refunds are issued within ten business days.",
+          "Sales have grown over the last decade."
+        ],
+        "tips": [
+          "Chỗ trống đứng trước \"the past / last + khoảng thời gian\" với thì hiện tại hoàn thành → \"over\" hoặc \"in\" hoặc \"for\", không phải \"since\"."
+        ]
+      },
+      {
+        "title": "5. Giới từ vị trí, chuyển động & giới từ trang trọng",
+        "content": "Các giới từ sau hay xuất hiện trong thông báo, e-mail trang trọng của Part 6 và Part 7.",
+        "bullet_points": [
+          "between (giữa 2) – among (giữa từ 3 trở lên / trong một nhóm)",
+          "across (băng qua, khắp), along (dọc theo), through (xuyên qua), throughout (khắp nơi)",
+          "prior to = before, following = after, upon + N / V-ing = ngay khi (upon arrival)",
+          "from … to / through (Monday through Friday = từ thứ Hai đến hết thứ Sáu)"
+        ],
+        "tips": [
+          "\"prior to / following / upon\" là giới từ: theo sau là danh từ hoặc V-ing, không phải mệnh đề."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "All expense reports must be submitted by 5 P.M. on Friday.",
+        "vietnamese": "Tất cả báo cáo chi phí phải được nộp trước 5 giờ chiều thứ Sáu.",
+        "explanation": "\"submit\" là hành động hoàn tất một lần → \"by\" (hạn chót); \"on\" + thứ.",
+        "highlight": "by 5 P.M. on Friday",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The museum will remain closed until the renovation is complete.",
+        "vietnamese": "Bảo tàng sẽ tiếp tục đóng cửa cho đến khi việc cải tạo hoàn tất.",
+        "explanation": "\"remain closed\" là trạng thái kéo dài → \"until\" (ở đây là liên từ, theo sau là mệnh đề).",
+        "highlight": "remain closed until",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "Sales have increased steadily over the past three years.",
+        "vietnamese": "Doanh số đã tăng đều trong suốt ba năm qua.",
+        "explanation": "\"over\" + khoảng thời gian, đi với hiện tại hoàn thành.",
+        "highlight": "over the past three years",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Refunds will be processed within ten business days of the request.",
+        "vietnamese": "Tiền hoàn lại sẽ được xử lý trong vòng mười ngày làm việc kể từ khi yêu cầu.",
+        "explanation": "\"within\" = không quá khoảng thời gian đó.",
+        "highlight": "within ten business days",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "Upon arrival, guests should check in at the front desk on the first floor.",
+        "vietnamese": "Ngay khi đến, khách nên làm thủ tục tại quầy lễ tân ở tầng một.",
+        "explanation": "\"Upon\" + danh từ = ngay khi; \"at\" + quầy (điểm cụ thể), \"on\" + tầng.",
+        "highlight": "Upon arrival",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "The workshop runs from Monday through Thursday at our office on Elm Street.",
+        "vietnamese": "Hội thảo diễn ra từ thứ Hai đến hết thứ Năm tại văn phòng của chúng tôi trên phố Elm.",
+        "explanation": "\"from … through\" bao gồm cả ngày cuối; \"on\" + tên đường.",
+        "highlight": "from Monday through Thursday",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-ptp-1",
+        "question": "The quarterly sales meeting will be held _______ Tuesday, March 14.",
+        "options": [
+          "on",
+          "in",
+          "at",
+          "by"
+        ],
+        "answer_index": 0,
+        "explanation": "Thứ / ngày tháng cụ thể → \"on\". \"in\" cho tháng/năm, \"at\" cho giờ, \"by\" là hạn chót không hợp với \"be held\"."
+      },
+      {
+        "id": "q-ptp-2",
+        "question": "Please return the signed contract _______ the end of this week.",
+        "options": [
+          "until",
+          "since",
+          "by",
+          "during"
+        ],
+        "answer_index": 2,
+        "explanation": "\"return\" là hành động hoàn tất một lần → hạn chót \"by\". \"until\" cần động từ kéo dài; \"since\" đi với hiện tại hoàn thành; \"during\" không chỉ hạn chót."
+      },
+      {
+        "id": "q-ptp-3",
+        "question": "Mr. Chen has worked as a sales representative _______ 2019.",
+        "options": [
+          "for",
+          "since",
+          "during",
+          "within"
+        ],
+        "answer_index": 1,
+        "explanation": "\"2019\" là mốc thời gian + hiện tại hoàn thành → \"since\". \"for\" và \"within\" đi với khoảng thời gian; \"during\" không dùng với mốc."
+      },
+      {
+        "id": "q-ptp-4",
+        "question": "Free refreshments will be served _______ the intermission.",
+        "options": [
+          "since",
+          "until",
+          "by",
+          "during"
+        ],
+        "answer_index": 3,
+        "explanation": "\"the intermission\" là một khoảng / sự kiện → \"during\" (trong lúc giải lao)."
+      },
+      {
+        "id": "q-ptp-5",
+        "question": "The year-end bonus will be divided equally _______ the members of the sales team.",
+        "options": [
+          "between",
+          "through",
+          "among",
+          "along"
+        ],
+        "answer_index": 2,
+        "explanation": "Chia cho nhiều thành viên trong một nhóm → \"among\". \"between\" dùng cho hai đối tượng; \"through / along\" là giới từ chuyển động."
+      },
+      {
+        "id": "q-ptp-6",
+        "question": "_______ the past six months, the company has opened three new branches.",
+        "options": [
+          "Over",
+          "Since",
+          "At",
+          "By"
+        ],
+        "answer_index": 0,
+        "explanation": "\"the past six months\" là khoảng thời gian + hiện tại hoàn thành → \"Over\". \"Since\" cần mốc; \"At / By\" không hợp nghĩa."
+      }
+    ]
+  },
+  {
+    "id": "pos-participial-adjectives",
+    "category": "partsOfSpeech",
+    "title": "Tính từ đuôi -ing & -ed (phân từ làm tính từ)",
+    "subtitle": "Interesting vs interested, attached file, rising costs, qualified candidates",
+    "read_time_minutes": 7,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "adjective",
+      "participle",
+      "word-form"
+    ],
+    "overview": "Part 5 thường cho 4 dạng của cùng một động từ (enclose / enclosing / enclosed / encloses) đứng trước danh từ hoặc sau \"be / find\". Quy tắc gốc: -ing mang nghĩa chủ động / gây ra cảm xúc, -ed mang nghĩa bị động / người cảm nhận. Ngoài ra có một danh sách cụm cố định nên thuộc lòng.",
+    "sections": [
+      {
+        "title": "1. Tính từ chỉ cảm xúc: -ing gây ra, -ed cảm nhận",
+        "content": "Tính từ -ing mô tả sự vật / sự việc GÂY RA cảm xúc. Tính từ -ed mô tả NGƯỜI cảm nhận cảm xúc đó.",
+        "formula": "Sự vật + be + V-ing (The results were disappointing.)\nNgười + be + V-ed (The staff were disappointed.)",
+        "bullet_points": [
+          "interesting / interested, satisfying / satisfied, disappointing / disappointed",
+          "confusing / confused, exciting / excited, encouraging / encouraged, overwhelming / overwhelmed",
+          "find + O + adj: The audience found the speech inspiring."
+        ],
+        "tips": [
+          "Hỏi: chủ ngữ đang \"gây ra\" cảm xúc hay \"cảm thấy\"? Người cảm thấy → -ed; sự việc gây ra → -ing. \"be satisfied with / interested in / pleased with\" là cụm cố định."
+        ]
+      },
+      {
+        "title": "2. Phân từ đứng trước danh từ: chủ động hay bị động",
+        "content": "Khi phân từ bổ nghĩa cho danh từ, hỏi danh từ đó TỰ thực hiện hành động hay BỊ tác động. Tự thực hiện → V-ing; bị tác động → V-ed / V3.",
+        "formula": "V-ing + N: N tự làm (rising costs = chi phí đang tăng)\nV-ed + N: N bị làm (revised schedule = lịch đã được sửa)",
+        "bullet_points": [
+          "Chủ động (-ing): rising costs, growing demand, leading company, remaining balance, existing customers, missing items, increasing competition, lasting impression",
+          "Bị động (-ed/V3): attached file, enclosed document, revised schedule, detailed report, completed form, discounted price, damaged goods, written consent"
+        ]
+      },
+      {
+        "title": "3. Các cụm -ed mang nghĩa chủ động cần thuộc lòng",
+        "content": "Một số tính từ đuôi -ed đứng trước danh từ chỉ người nhưng mang nghĩa \"có / đủ\", không phải bị động. Đây là cụm cố định trong tin tuyển dụng.",
+        "bullet_points": [
+          "experienced staff (nhân viên có kinh nghiệm), qualified candidates (ứng viên đủ tiêu chuẩn), skilled workers, dedicated team, motivated individuals, highly trained technicians",
+          "SAI: experiencing staff, qualifying candidates trong nghĩa \"đủ trình độ\""
+        ],
+        "tips": [
+          "Tin tuyển dụng Part 7 gần như luôn dùng \"experienced / qualified / skilled\". Thấy \"highly ______ candidates\" → chọn \"qualified\"."
+        ]
+      },
+      {
+        "title": "4. Phân từ đứng sau danh từ (mệnh đề quan hệ rút gọn)",
+        "content": "Phân từ có thể đứng sau danh từ khi kèm theo cụm bổ nghĩa. Quy tắc chủ động / bị động giữ nguyên.",
+        "formula": "N + V-ing… (= N + who/which + V chủ động)\nN + V3… (= N + who/which + be + V3)",
+        "bullet_points": [
+          "Employees working the night shift receive extra pay.",
+          "The documents attached to this e-mail must be signed."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Please review the attached file before tomorrow's meeting.",
+        "vietnamese": "Vui lòng xem tệp đính kèm trước cuộc họp ngày mai.",
+        "explanation": "Tệp được (người gửi) đính kèm → bị động \"attached\".",
+        "highlight": "the attached file",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "The rising cost of raw materials has forced us to raise prices.",
+        "vietnamese": "Chi phí nguyên vật liệu tăng cao buộc chúng tôi phải tăng giá.",
+        "explanation": "Chi phí tự tăng → chủ động \"rising\".",
+        "highlight": "The rising cost",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "We are looking for experienced staff to manage the new branch.",
+        "vietnamese": "Chúng tôi đang tìm nhân viên có kinh nghiệm để quản lý chi nhánh mới.",
+        "explanation": "\"experienced\" là cụm cố định nghĩa \"có kinh nghiệm\".",
+        "highlight": "experienced staff",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Customers were satisfied with the speed of the delivery.",
+        "vietnamese": "Khách hàng hài lòng với tốc độ giao hàng.",
+        "explanation": "Người cảm nhận cảm xúc → \"-ed\"; cụm cố định \"be satisfied with\".",
+        "highlight": "were satisfied with",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The results of the survey were disappointing, so the campaign will be redesigned.",
+        "vietnamese": "Kết quả khảo sát gây thất vọng nên chiến dịch sẽ được thiết kế lại.",
+        "explanation": "Kết quả gây ra cảm xúc → \"-ing\".",
+        "highlight": "were disappointing",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Existing customers will receive a 10% discount on all renewals.",
+        "vietnamese": "Khách hàng hiện tại sẽ được giảm 10% cho mọi lần gia hạn.",
+        "explanation": "\"existing\" (đang tồn tại) mang nghĩa chủ động → V-ing.",
+        "highlight": "Existing customers",
+        "part_tag": "Part 7"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-padj-1",
+        "question": "Please complete the _______ form and return it to the human resources office.",
+        "options": [
+          "enclosing",
+          "enclosed",
+          "enclose",
+          "encloses"
+        ],
+        "answer_index": 1,
+        "explanation": "Mẫu đơn được gửi kèm (bị tác động) → \"enclosed\". \"enclosing\" mang nghĩa chủ động; \"enclose / encloses\" là động từ, không đứng giữa \"the\" và danh từ."
+      },
+      {
+        "id": "q-padj-2",
+        "question": "Many attendees found the keynote speech highly _______.",
+        "options": [
+          "inspired",
+          "inspire",
+          "inspiration",
+          "inspiring"
+        ],
+        "answer_index": 3,
+        "explanation": "find + O + adj; bài phát biểu gây ra cảm hứng → \"inspiring\". \"inspired\" dành cho người cảm nhận; \"inspiration\" là danh từ, không đi sau trạng từ \"highly\"."
+      },
+      {
+        "id": "q-padj-3",
+        "question": "The _______ balance on your account must be paid within 30 days.",
+        "options": [
+          "remaining",
+          "remained",
+          "remain",
+          "remainder"
+        ],
+        "answer_index": 0,
+        "explanation": "Số dư \"còn lại\" tự tồn tại → cụm cố định \"remaining balance\". \"remain\" là nội động từ nên không có dạng bị động \"remained\" làm tính từ; \"remainder\" là danh từ."
+      },
+      {
+        "id": "q-padj-4",
+        "question": "Only highly _______ candidates will be invited to a second interview.",
+        "options": [
+          "qualify",
+          "qualifying",
+          "qualified",
+          "qualification"
+        ],
+        "answer_index": 2,
+        "explanation": "\"highly qualified candidates\" là cụm cố định (ứng viên có trình độ cao). \"qualify\" là động từ, \"qualification\" là danh từ, \"qualifying\" không đi với \"highly\" theo nghĩa này."
+      },
+      {
+        "id": "q-padj-5",
+        "question": "The staff were _______ by the sudden change in the delivery schedule.",
+        "options": [
+          "confusing",
+          "confused",
+          "confuse",
+          "confusion"
+        ],
+        "answer_index": 1,
+        "explanation": "Người (the staff) cảm thấy bối rối → \"confused\"; có \"by\" chỉ tác nhân gây ra."
+      },
+      {
+        "id": "q-padj-6",
+        "question": "Due to _______ demand, the factory will add a second production shift.",
+        "options": [
+          "grown",
+          "grow",
+          "growth",
+          "growing"
+        ],
+        "answer_index": 3,
+        "explanation": "Nhu cầu đang tự tăng → chủ động \"growing demand\". \"grown\" mang nghĩa đã được trồng / đã lớn; \"grow\" là động từ; \"growth demand\" không phải cụm đúng."
+      }
+    ]
+  },
+  {
+    "id": "pos-prepositional-collocations",
+    "category": "partsOfSpeech",
+    "title": "Cụm từ đi với giới từ cố định (Collocations Part 5)",
+    "subtitle": "Comply with, Eligible for, Access to, In accordance with & hơn 50 cụm hay ra",
+    "read_time_minutes": 9,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "prepositions",
+      "collocations",
+      "vocabulary"
+    ],
+    "overview": "Mỗi đề TOEIC có 2–4 câu Part 5 chỉ hỏi giới từ đi kèm một động từ, tính từ hoặc danh từ cố định. Đây là dạng “thuộc là ăn điểm”: nhìn từ đứng ngay trước chỗ trống, chọn giới từ trong vòng 5 giây, không cần dịch cả câu.",
+    "sections": [
+      {
+        "title": "1. Động từ + giới từ",
+        "content": "Nhiều động từ thương mại bắt buộc đi với một giới từ trước tân ngữ. Sau giới từ là danh từ hoặc V-ing, không phải động từ nguyên mẫu.",
+        "formula": "Động từ + giới từ cố định + Danh từ / V-ing",
+        "bullet_points": [
+          "with: comply with (tuân thủ), deal with (xử lý), cooperate with, consult with, coincide with (trùng với).",
+          "to: adhere to (tuân thủ), respond to (phản hồi), contribute to (đóng góp), object to (phản đối), refer to, subscribe to.",
+          "on/upon: depend on, rely on, focus on, insist on, comment on, capitalize on (tận dụng).",
+          "for: account for (chiếm/giải thích), apply for (ứng tuyển vị trí), compensate for (bồi thường), qualify for, pay for.",
+          "from: refrain from (kiềm chế), benefit from, differ from, result from (bắt nguồn từ) – còn result in (dẫn đến).",
+          "apply to + nơi/người (nộp đơn tới công ty, áp dụng cho ai) – khác với – apply for + vị trí/khoản tài trợ."
+        ],
+        "tips": [
+          "“to” trong object to, look forward to, be committed to, be dedicated to là GIỚI TỪ → theo sau là V-ing: look forward to meeting you.",
+          "result in (dẫn đến kết quả) và result from (là kết quả của) ngược nghĩa nhau – đề hay cài cả hai vào đáp án."
+        ]
+      },
+      {
+        "title": "2. Tính từ + giới từ",
+        "content": "Thường gặp sau động từ to be hoặc trong cụm rút gọn mệnh đề quan hệ (employees eligible for the bonus).",
+        "formula": "be + Tính từ + giới từ + Danh từ / V-ing",
+        "bullet_points": [
+          "for: responsible for (chịu trách nhiệm), eligible for (đủ điều kiện), suitable for, famous/known for, liable for.",
+          "of: aware of (nhận thức), capable of (có khả năng), representative of, indicative of, appreciative of.",
+          "with: familiar with (quen thuộc), satisfied with, compatible with (tương thích), consistent with, pleased with.",
+          "to: subject to (phải chịu, tùy thuộc), similar to, equivalent to, accessible to, comparable to, committed to.",
+          "about/in: concerned about, enthusiastic about; interested in, involved in, experienced in."
+        ],
+        "tips": [
+          "“subject to change / subject to approval” = có thể thay đổi / cần được duyệt – cụm xuất hiện liên tục trong thông báo Part 7."
+        ]
+      },
+      {
+        "title": "3. Danh từ + giới từ",
+        "content": "Một số danh từ đi với giới từ khác với động từ cùng gốc. Ví dụ: động từ access KHÔNG cần giới từ (access the database), nhưng danh từ access cần to (access to the database).",
+        "bullet_points": [
+          "to: access to, solution to, approach to, commitment to, contribution to, response to, reply to.",
+          "in: increase / decrease / rise / drop / growth in + lĩnh vực (an increase in sales); interest in, experience in, change in.",
+          "for: demand for, request for, need for, reason for, preference for, responsibility for.",
+          "on/with: emphasis on, effect on, impact on, influence on; contract with, relationship with.",
+          "increase of + con số (an increase of 15 percent) – khác với – increase in + lĩnh vực (an increase in revenue)."
+        ]
+      },
+      {
+        "title": "4. Cụm giới từ cố định (dùng như một giới từ)",
+        "content": "Các cụm này đứng trước danh từ hoặc V-ing, thường xuất hiện đầu câu và được ngăn bằng dấu phẩy.",
+        "formula": "Cụm giới từ + Danh từ / V-ing, Mệnh đề chính",
+        "bullet_points": [
+          "in accordance with (theo, phù hợp với), in compliance with (tuân theo), in response to (để đáp lại).",
+          "on behalf of (thay mặt), in charge of (phụ trách), in addition to (ngoài ra), instead of (thay vì).",
+          "regardless of (bất kể), in spite of / despite (mặc dù), due to / owing to / because of (do).",
+          "as of + mốc thời gian (kể từ), prior to (trước), in terms of (về mặt), with regard to / regarding (liên quan đến)."
+        ],
+        "tips": [
+          "Bốn phương án là bốn cụm giới từ khác nhau → đây là câu hỏi NGHĨA, phải đọc cả câu. Còn bốn phương án là bốn giới từ đơn → chỉ cần nhìn từ đứng ngay trước chỗ trống."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "All vendors are required to comply with the new invoicing procedures.",
+        "vietnamese": "Tất cả nhà cung cấp phải tuân thủ quy trình lập hóa đơn mới.",
+        "explanation": "“comply” luôn đi với “with”. Đồng nghĩa: adhere to, follow (không cần giới từ).",
+        "highlight": "comply with",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Mr. Okafor is responsible for coordinating the quarterly budget review.",
+        "vietnamese": "Ông Okafor chịu trách nhiệm điều phối đợt rà soát ngân sách hàng quý.",
+        "explanation": "“responsible for” + V-ing (coordinating), không dùng to V.",
+        "highlight": "responsible for",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The renovation will give employees easier access to the parking garage.",
+        "vietnamese": "Việc cải tạo sẽ giúp nhân viên ra vào nhà để xe dễ dàng hơn.",
+        "explanation": "Danh từ “access” đi với “to”; nếu là động từ thì viết “access the parking garage”.",
+        "highlight": "access to",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "In accordance with company policy, receipts must be submitted within 30 days.",
+        "vietnamese": "Theo chính sách công ty, hóa đơn phải được nộp trong vòng 30 ngày.",
+        "explanation": "Cụm giới từ cố định “in accordance with” + danh từ, đứng đầu câu và ngăn bởi dấu phẩy.",
+        "highlight": "In accordance with",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "Online sales accounted for nearly half of the company's revenue last quarter.",
+        "vietnamese": "Doanh số trực tuyến chiếm gần một nửa doanh thu của công ty trong quý trước.",
+        "explanation": "“account for” = chiếm (tỉ lệ) hoặc giải thích cho; không nhầm với “account to”.",
+        "highlight": "accounted for",
+        "part_tag": "Part 7"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-pcol-1",
+        "question": "All contractors must comply _______ the safety regulations outlined in the handbook.",
+        "options": [
+          "to",
+          "with",
+          "for",
+          "on"
+        ],
+        "answer_index": 1,
+        "explanation": "“comply with” là cụm cố định (tuân thủ). “adhere” mới đi với “to”; “for/on” không kết hợp với comply."
+      },
+      {
+        "id": "q-pcol-2",
+        "question": "Only full-time employees are eligible _______ the annual performance bonus.",
+        "options": [
+          "to",
+          "of",
+          "for",
+          "with"
+        ],
+        "answer_index": 2,
+        "explanation": "“eligible for + danh từ” (đủ điều kiện nhận). “eligible to” chỉ đi với động từ nguyên mẫu (eligible to apply), ở đây phía sau là danh từ."
+      },
+      {
+        "id": "q-pcol-3",
+        "question": "Ms. Patel will accept the industry award _______ the entire marketing department.",
+        "options": [
+          "in charge of",
+          "regardless of",
+          "in addition to",
+          "on behalf of"
+        ],
+        "answer_index": 3,
+        "explanation": "Nhận giải “thay mặt” cả phòng → on behalf of. “in charge of” = phụ trách, “regardless of” = bất kể, “in addition to” = ngoài ra – đều sai nghĩa."
+      },
+      {
+        "id": "q-pcol-4",
+        "question": "There has been a sharp increase _______ demand for electric vehicles this year.",
+        "options": [
+          "of",
+          "on",
+          "in",
+          "at"
+        ],
+        "answer_index": 2,
+        "explanation": "“increase in + lĩnh vực” (tăng về nhu cầu). “increase of” chỉ đi với con số cụ thể (an increase of 20 percent)."
+      },
+      {
+        "id": "q-pcol-5",
+        "question": "Guests are asked to refrain _______ using mobile phones during the performance.",
+        "options": [
+          "from",
+          "of",
+          "to",
+          "with"
+        ],
+        "answer_index": 0,
+        "explanation": "“refrain from + V-ing” (kiềm chế, không làm gì). Các giới từ khác không đi với refrain."
+      },
+      {
+        "id": "q-pcol-6",
+        "question": "_______ March 1, all expense reports must be submitted through the new online system.",
+        "options": [
+          "As of",
+          "In spite of",
+          "On behalf of",
+          "Instead of"
+        ],
+        "answer_index": 0,
+        "explanation": "Đi với mốc thời gian và mang nghĩa “kể từ” → As of. Ba cụm còn lại không đi với ngày tháng theo nghĩa này."
+      },
+      {
+        "id": "q-pcol-7",
+        "question": "The final price listed on the website is subject _______ change without prior notice.",
+        "options": [
+          "on",
+          "for",
+          "at",
+          "to"
+        ],
+        "answer_index": 3,
+        "explanation": "“be subject to + danh từ” (có thể bị/tùy thuộc vào): subject to change, subject to approval."
+      },
+      {
+        "id": "q-pcol-8",
+        "question": "Employees who wish to work remotely should apply _______ their supervisor for approval.",
+        "options": [
+          "for",
+          "to",
+          "on",
+          "at"
+        ],
+        "answer_index": 1,
+        "explanation": "apply to + người/nơi nhận đơn, apply for + thứ xin (for approval đã có ở cuối câu). Vì vậy chỗ trống trước “their supervisor” là “to”."
+      }
+    ]
+  },
+  {
+    "id": "pos-word-formation",
+    "category": "partsOfSpeech",
+    "title": "Cấu tạo từ: Hậu tố, Tiền tố & Ngoại lệ hay bẫy",
+    "subtitle": "-tion, -ment, -ive, -able, -ize & bẫy -ly là tính từ, -al là danh từ",
+    "read_time_minutes": 9,
+    "difficulty": "Cơ bản",
+    "tags": [
+      "word-form",
+      "nouns",
+      "adjective",
+      "adverb"
+    ],
+    "overview": "Câu từ loại chiếm 8–10 câu Part 5 mỗi đề. Nắm hậu tố giúp nhận ra loại từ của 4 phương án trong 2 giây, rồi chỉ cần xác định chỗ trống cần danh từ, tính từ, động từ hay trạng từ. Phần ngoại lệ (friendly, approval, representative…) là nơi ETS đặt bẫy nhiều nhất.",
+    "sections": [
+      {
+        "title": "1. Hậu tố danh từ",
+        "content": "Danh từ đứng sau mạo từ (a/an/the), tính từ sở hữu (his/our), tính từ, giới từ, hoặc làm chủ ngữ/tân ngữ.",
+        "formula": "a/the/tính từ sở hữu + (Tính từ) + DANH TỪ\nGiới từ + DANH TỪ / V-ing",
+        "bullet_points": [
+          "-tion / -sion: application, decision, extension, expansion.",
+          "-ment: management, agreement, requirement, reimbursement.",
+          "-ance / -ence: attendance, maintenance, reference, preference.",
+          "-ity / -ty: ability, capacity, priority, safety.",
+          "-ness: effectiveness, awareness, willingness.",
+          "Danh từ chỉ người: -er/-or (manager, supervisor), -ee (employee, trainee, attendee), -ant/-ent (applicant, consultant, resident), -ist (specialist)."
+        ]
+      },
+      {
+        "title": "2. Hậu tố tính từ, động từ, trạng từ",
+        "content": "Tính từ bổ nghĩa cho danh từ hoặc đứng sau động từ nối (be, become, remain, seem). Động từ đứng sau chủ ngữ, trợ động từ hoặc to. Trạng từ bổ nghĩa cho động từ, tính từ hoặc cả câu.",
+        "formula": "be / become / remain + TÍNH TỪ\nTrợ động từ (will, can, should…) + ĐỘNG TỪ nguyên mẫu\nTRẠNG TỪ + Động từ / Tính từ",
+        "bullet_points": [
+          "Tính từ: -able/-ible (available, accessible), -ive (effective, competitive), -ous (various, numerous), -al (financial, additional), -ful/-less (helpful, careless), -ic (economic, specific).",
+          "Động từ: -ize (organize, prioritize), -ify (notify, verify), -en (strengthen, widen), -ate (facilitate, evaluate).",
+          "Trạng từ: tính từ + -ly (efficiently, promptly, significantly)."
+        ],
+        "tips": [
+          "Gặp 4 phương án cùng gốc (decide / decision / decisive / decisively): đừng dịch, hãy nhìn 1 từ trước và 1 từ sau chỗ trống để biết vị trí cần loại từ gì."
+        ]
+      },
+      {
+        "title": "3. Ngoại lệ ETS hay cài bẫy",
+        "content": "Không phải cứ đuôi -ly là trạng từ, đuôi -al là tính từ hay đuôi -ive là tính từ.",
+        "bullet_points": [
+          "-ly nhưng là TÍNH TỪ: friendly, costly, timely, likely, orderly, lively, weekly/monthly (vừa tính từ vừa trạng từ). Muốn dùng như trạng từ phải viết “in a timely manner”.",
+          "-al nhưng là DANH TỪ: approval, proposal, arrival, rental, renewal, referral, withdrawal, removal.",
+          "-ive nhưng là DANH TỪ: representative, alternative, initiative, objective, executive, incentive.",
+          "-ant/-ent có thể là danh từ người (assistant, resident) hoặc tính từ (significant, efficient) – xem vị trí để quyết định."
+        ],
+        "tips": [
+          "Câu cần trạng từ mà các phương án có “timely” → bẫy! “timely” là tính từ; trạng từ đúng là “promptly” hoặc cụm “in a timely manner”."
+        ]
+      },
+      {
+        "title": "4. Tiền tố thay đổi nghĩa",
+        "content": "Tiền tố không đổi loại từ, chỉ đổi nghĩa. Câu hỏi dạng này phải dựa vào ngữ cảnh tích cực hay tiêu cực.",
+        "bullet_points": [
+          "Phủ định: un- (unavailable), in- (inaccurate), im- trước p/m/b (impossible, immature), il- trước l (illegal), ir- trước r (irregular), dis- (dissatisfied), non- (nonrefundable).",
+          "mis- = sai: misunderstand, misprint, mislabel.",
+          "re- = lại: renew, reschedule, reinstall. pre- = trước: preview, prearrange.",
+          "over- = quá mức: overbooked, overcharge. under- = dưới mức: understaffed, underestimate."
+        ]
+      },
+      {
+        "title": "5. Danh từ chỉ người vs danh từ chỉ vật / hoạt động",
+        "content": "Cùng gốc từ thường có hai danh từ: một chỉ người, một chỉ sự việc. ETS hay cho cả hai vào đáp án.",
+        "bullet_points": [
+          "applicant (người nộp đơn) / application (đơn, sự áp dụng).",
+          "attendee (người tham dự) / attendance (sự tham dự, số người dự).",
+          "consultant (chuyên gia tư vấn) / consultation (buổi tư vấn).",
+          "participant / participation; supervisor / supervision; employer / employee; trainer / trainee."
+        ],
+        "tips": [
+          "Chủ ngữ của động từ chỉ hành động của người (attend, sign, receive a badge) → chọn danh từ người. Danh từ người đếm được số ít luôn cần a/the/each phía trước."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "The approval of the revised budget is expected next week.",
+        "vietnamese": "Việc phê duyệt ngân sách sửa đổi dự kiến diễn ra vào tuần tới.",
+        "explanation": "“approval” là danh từ dù có đuôi -al; nó làm chủ ngữ, đứng sau mạo từ “The”.",
+        "highlight": "The approval",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Our customer service representative will contact you within two business days.",
+        "vietnamese": "Nhân viên chăm sóc khách hàng của chúng tôi sẽ liên hệ với bạn trong vòng hai ngày làm việc.",
+        "explanation": "“representative” là danh từ chỉ người (đuôi -ive nhưng không phải tính từ).",
+        "highlight": "representative",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "The shipment arrived in a timely manner despite the storm.",
+        "vietnamese": "Lô hàng đã đến kịp thời bất chấp cơn bão.",
+        "explanation": "“timely” là tính từ nên không bổ nghĩa trực tiếp cho động từ “arrived”; phải dùng cụm “in a timely manner”.",
+        "highlight": "in a timely manner",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The first software update was unsuccessful, so the technicians reinstalled the program.",
+        "vietnamese": "Lần cập nhật phần mềm đầu tiên không thành công, nên kỹ thuật viên đã cài đặt lại chương trình.",
+        "explanation": "Tiền tố “un-” tạo nghĩa phủ định, “re-” mang nghĩa “làm lại”; loại từ không thay đổi.",
+        "highlight": "unsuccessful",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "All applicants must submit two letters of recommendation.",
+        "vietnamese": "Tất cả ứng viên phải nộp hai thư giới thiệu.",
+        "explanation": "Chủ ngữ thực hiện hành động “submit” là người → “applicants”, không phải “applications”.",
+        "highlight": "applicants",
+        "part_tag": "Part 5"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-wform-1",
+        "question": "The committee will announce its final _______ after reviewing all of the proposals.",
+        "options": [
+          "decide",
+          "decisive",
+          "decision",
+          "decisively"
+        ],
+        "answer_index": 2,
+        "explanation": "Sau tính từ sở hữu “its” và tính từ “final” cần danh từ → decision. decide là động từ, decisive là tính từ, decisively là trạng từ."
+      },
+      {
+        "id": "q-wform-2",
+        "question": "Please submit your _______ for the marketing position by Friday.",
+        "options": [
+          "applicant",
+          "apply",
+          "application",
+          "applicable"
+        ],
+        "answer_index": 2,
+        "explanation": "Thứ được “nộp” là lá đơn → application (danh từ chỉ vật). applicant là người nộp đơn, apply là động từ, applicable là tính từ."
+      },
+      {
+        "id": "q-wform-3",
+        "question": "The new scheduling software has made data entry much more _______.",
+        "options": [
+          "efficient",
+          "efficiency",
+          "efficiently",
+          "efficiencies"
+        ],
+        "answer_index": 0,
+        "explanation": "Cấu trúc make + tân ngữ + TÍNH TỪ (make data entry efficient); “much more” bổ nghĩa cho tính từ → efficient."
+      },
+      {
+        "id": "q-wform-4",
+        "question": "The hotel is known for its _______ and attentive front desk staff.",
+        "options": [
+          "friend",
+          "friendly",
+          "friendship",
+          "friendliness"
+        ],
+        "answer_index": 1,
+        "explanation": "Chỗ trống song hành với tính từ “attentive” và bổ nghĩa cho “staff” → cần tính từ friendly (đuôi -ly nhưng là tính từ)."
+      },
+      {
+        "id": "q-wform-5",
+        "question": "Each _______ will receive a name badge at the registration desk.",
+        "options": [
+          "attendance",
+          "attend",
+          "attending",
+          "attendee"
+        ],
+        "answer_index": 3,
+        "explanation": "Sau “Each” cần danh từ đếm được số ít, và người nhận thẻ tên là người tham dự → attendee. attendance là sự tham dự (không đếm được trong nghĩa này)."
+      },
+      {
+        "id": "q-wform-6",
+        "question": "The board of directors gave final _______ to the construction plan.",
+        "options": [
+          "approval",
+          "approve",
+          "approved",
+          "approving"
+        ],
+        "answer_index": 0,
+        "explanation": "Sau động từ “gave” và tính từ “final” cần danh từ → approval (danh từ đuôi -al)."
+      },
+      {
+        "id": "q-wform-7",
+        "question": "Several _______ from the sales department attended the training session.",
+        "options": [
+          "represent",
+          "represented",
+          "representation",
+          "representatives"
+        ],
+        "answer_index": 3,
+        "explanation": "“Several” đi với danh từ số nhiều đếm được, và người tham dự là người → representatives."
+      },
+      {
+        "id": "q-wform-8",
+        "question": "Due to _______ weather conditions, the outdoor product launch was postponed.",
+        "options": [
+          "favorable",
+          "unfavorable",
+          "favorably",
+          "unfavorably"
+        ],
+        "answer_index": 1,
+        "explanation": "Trước cụm danh từ cần tính từ; sự kiện bị hoãn → thời tiết xấu → unfavorable. favorable sai nghĩa, hai trạng từ sai loại từ."
+      }
+    ]
+  },
+  {
+    "id": "pos-transitions-part6",
+    "category": "partsOfSpeech",
+    "title": "Từ nối & Trạng từ liên kết trong Part 6",
+    "subtitle": "However, Therefore, Moreover, Otherwise, In the meantime – chọn theo quan hệ ý",
+    "read_time_minutes": 8,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "conjunctions",
+      "transitions",
+      "reading",
+      "adverb"
+    ],
+    "overview": "Mỗi đoạn Part 6 thường có 1 câu hỏi từ nối đứng đầu câu. Bốn phương án đều đúng ngữ pháp, nên chỉ có một cách làm: đọc câu trước và câu sau, xác định quan hệ ý giữa chúng (bổ sung, tương phản, kết quả, thời gian, ví dụ, điều kiện), rồi chọn từ thuộc đúng nhóm.",
+    "sections": [
+      {
+        "title": "1. Quy trình 3 bước chọn từ nối",
+        "content": "Không chọn theo cảm giác. Tóm tắt hai câu thành hai ý ngắn rồi hỏi: câu 2 so với câu 1 là thêm ý, trái ý, hệ quả, việc xảy ra sau/trong lúc đó, ví dụ minh họa, hay hậu quả nếu không làm?",
+        "bullet_points": [
+          "Bước 1: Đọc trọn câu trước chỗ trống (không chỉ nửa câu).",
+          "Bước 2: Gọi tên quan hệ ý: + (bổ sung), vs (tương phản), → (kết quả), rồi (thời gian), ví dụ, điều kiện.",
+          "Bước 3: Loại các phương án khác nhóm; nếu còn 2 phương án cùng nhóm, chọn theo sắc thái (xem mục 4)."
+        ],
+        "tips": [
+          "Câu 1 tích cực, câu 2 tiêu cực (hoặc ngược lại) → gần như chắc chắn là nhóm tương phản: However / Nevertheless."
+        ]
+      },
+      {
+        "title": "2. Bảng nhóm từ nối",
+        "content": "Học theo nhóm nghĩa để loại phương án nhanh.",
+        "bullet_points": [
+          "Bổ sung (+): Moreover, Furthermore, In addition, Additionally, Also, Besides.",
+          "Tương phản (vs): However, Nevertheless, Nonetheless, On the other hand, In contrast, Instead, Even so.",
+          "Kết quả (→): Therefore, Thus, Consequently, As a result, Accordingly, Hence.",
+          "Thời gian / trình tự: Meanwhile, In the meantime, Subsequently, Afterward, Finally, Previously, Then.",
+          "Ví dụ / nhấn mạnh: For example, For instance, In fact, Indeed, In particular.",
+          "Điều kiện: Otherwise (nếu không thì), In that case (trong trường hợp đó)."
+        ]
+      },
+      {
+        "title": "3. Dấu câu: trạng từ liên kết khác liên từ",
+        "content": "Trạng từ liên kết (however, therefore…) không nối hai mệnh đề bằng dấu phẩy. Nó đứng đầu câu mới, hoặc sau dấu chấm phẩy. Liên từ (but, so, although) mới nối hai mệnh đề trong cùng một câu.",
+        "formula": "Câu 1. However, câu 2.\nMệnh đề 1; however, mệnh đề 2.\nMệnh đề 1, but mệnh đề 2.",
+        "bullet_points": [
+          "Sai: The office is closed, however the hotline is open.",
+          "Đúng: The office is closed. However, the hotline is open.",
+          "Đúng: The office is closed, but the hotline is open."
+        ],
+        "tips": [
+          "Chỗ trống ngay sau dấu phẩy giữa hai mệnh đề → cần LIÊN TỪ (but, so, and). Chỗ trống đầu câu, theo sau là dấu phẩy → cần TRẠNG TỪ LIÊN KẾT."
+        ]
+      },
+      {
+        "title": "4. Các cặp hay nhầm",
+        "content": "Những từ cùng nhóm vẫn có sắc thái khác nhau, ETS thường đặt chúng cạnh nhau.",
+        "bullet_points": [
+          "Instead (thay vào đó: bỏ phương án A, làm B) – khác với – In contrast (so sánh hai đối tượng khác biệt).",
+          "Otherwise = “nếu không làm vậy thì…”: thường đứng sau câu yêu cầu hoặc mệnh lệnh.",
+          "Meanwhile / In the meantime = trong lúc chờ (hai việc diễn ra song song) – khác với – Afterward / Subsequently = sau đó.",
+          "Nevertheless = dù vậy (tương phản) – khác với – Therefore = vì vậy (kết quả).",
+          "In fact / Indeed: bổ sung bằng chứng mạnh hơn cho ý vừa nêu."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "The conference room is booked on Monday. However, the smaller meeting room is available.",
+        "vietnamese": "Phòng hội nghị đã được đặt vào thứ Hai. Tuy nhiên, phòng họp nhỏ vẫn còn trống.",
+        "explanation": "Câu 2 đưa ra ý trái ngược (một phòng hết, một phòng còn) → However, đứng đầu câu kèm dấu phẩy.",
+        "highlight": "However,",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "Our team exceeded its sales targets; as a result, each member will receive a bonus.",
+        "vietnamese": "Nhóm chúng tôi đã vượt chỉ tiêu doanh số; vì vậy, mỗi thành viên sẽ được thưởng.",
+        "explanation": "Thưởng là kết quả của việc vượt chỉ tiêu → as a result; đứng sau dấu chấm phẩy là đúng chuẩn.",
+        "highlight": "; as a result,",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "Please update your password every 90 days. Otherwise, your account may be locked.",
+        "vietnamese": "Vui lòng đổi mật khẩu mỗi 90 ngày. Nếu không, tài khoản của bạn có thể bị khóa.",
+        "explanation": "Câu 2 nói hậu quả nếu không làm theo yêu cầu ở câu 1 → Otherwise.",
+        "highlight": "Otherwise,",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "The CEO will arrive at 10 A.M. In the meantime, guests can enjoy refreshments in the lobby.",
+        "vietnamese": "Giám đốc điều hành sẽ đến lúc 10 giờ sáng. Trong lúc chờ, khách có thể dùng đồ ăn nhẹ ở sảnh.",
+        "explanation": "Việc dùng đồ ăn nhẹ diễn ra trong thời gian chờ CEO đến → In the meantime.",
+        "highlight": "In the meantime,",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "The firm opened two new offices this year. Furthermore, it plans to hire 50 engineers.",
+        "vietnamese": "Công ty đã mở hai văn phòng mới trong năm nay. Hơn nữa, họ dự định tuyển 50 kỹ sư.",
+        "explanation": "Câu 2 bổ sung thêm một thông tin cùng chiều (mở rộng) → Furthermore.",
+        "highlight": "Furthermore,",
+        "part_tag": "Part 6"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-trans-1",
+        "question": "The new printer is faster than the old model. _______, it uses 30 percent less energy.",
+        "options": [
+          "However",
+          "Moreover",
+          "Otherwise",
+          "Instead"
+        ],
+        "answer_index": 1,
+        "explanation": "Câu 2 thêm một ưu điểm nữa (cùng chiều tích cực) → Moreover. However/Instead là tương phản, Otherwise là điều kiện."
+      },
+      {
+        "id": "q-trans-2",
+        "question": "Sales of our winter jackets rose sharply in December. _______, sales of summer apparel declined.",
+        "options": [
+          "Therefore",
+          "In addition",
+          "In contrast",
+          "For example"
+        ],
+        "answer_index": 2,
+        "explanation": "So sánh hai mặt hàng có xu hướng ngược nhau (tăng – giảm) → In contrast."
+      },
+      {
+        "id": "q-trans-3",
+        "question": "The main elevator is under repair this week. _______, visitors should use the stairs or the freight elevator.",
+        "options": [
+          "Therefore",
+          "Furthermore",
+          "Nevertheless",
+          "For instance"
+        ],
+        "answer_index": 0,
+        "explanation": "Thang máy chính hỏng → hệ quả: khách phải dùng thang khác → Therefore."
+      },
+      {
+        "id": "q-trans-4",
+        "question": "Please confirm your attendance by Friday. _______, we will give your seat to someone on the waiting list.",
+        "options": [
+          "Moreover",
+          "Similarly",
+          "Otherwise",
+          "Consequently"
+        ],
+        "answer_index": 2,
+        "explanation": "Câu 2 là hậu quả NẾU KHÔNG xác nhận → Otherwise. Consequently cần một sự việc đã xảy ra làm nguyên nhân, ở đây chỉ là lời yêu cầu."
+      },
+      {
+        "id": "q-trans-5",
+        "question": "The renovation project went over budget. _______, the client was very satisfied with the final result.",
+        "options": [
+          "As a result",
+          "Accordingly",
+          "In addition",
+          "Nevertheless"
+        ],
+        "answer_index": 3,
+        "explanation": "Vượt ngân sách (tiêu cực) – khách vẫn hài lòng (tích cực) → Nevertheless (dù vậy). As a result/Accordingly là kết quả, In addition là bổ sung."
+      },
+      {
+        "id": "q-trans-6",
+        "question": "Our technicians will install the new servers on Saturday. _______, staff can continue to use the backup system.",
+        "options": [
+          "Afterward",
+          "In the meantime",
+          "Otherwise",
+          "In contrast"
+        ],
+        "answer_index": 1,
+        "explanation": "Hệ thống dự phòng được dùng trong lúc chờ lắp máy chủ mới → In the meantime. Afterward (sau đó) không hợp lý vì sau khi lắp xong thì không cần dùng dự phòng nữa."
+      },
+      {
+        "id": "q-trans-7",
+        "question": "Many customers have praised the new menu. _______, our restaurant was named the city's best new dining spot last month.",
+        "options": [
+          "In fact",
+          "Instead",
+          "Otherwise",
+          "However"
+        ],
+        "answer_index": 0,
+        "explanation": "Câu 2 đưa bằng chứng mạnh hơn cho ý câu 1 (được khen → còn được bình chọn nhà hàng tốt nhất) → In fact."
+      },
+      {
+        "id": "q-trans-8",
+        "question": "The original venue could not accommodate 300 guests. _______, the gala will be held at the Grand Harbor Hotel.",
+        "options": [
+          "Similarly",
+          "Otherwise",
+          "For example",
+          "Instead"
+        ],
+        "answer_index": 3,
+        "explanation": "Bỏ địa điểm cũ, chọn địa điểm khác thay thế → Instead (thay vào đó)."
+      }
+    ]
+  },
+  {
+    "id": "pos-confusing-words",
+    "category": "partsOfSpeech",
+    "title": "Cặp từ dễ nhầm trong TOEIC",
+    "subtitle": "Affect/Effect, Rise/Raise, Among/Between, Economic/Economical, Personal/Personnel",
+    "read_time_minutes": 9,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "vocabulary",
+      "confusing-words",
+      "word-form"
+    ],
+    "overview": "ETS thích đặt hai từ giống nhau về hình thức nhưng khác nghĩa hoặc khác cách dùng vào cùng một câu hỏi Part 5. Bài này gom các cặp xuất hiện nhiều nhất, kèm dấu hiệu nhận biết nhanh để không phải đoán.",
+    "sections": [
+      {
+        "title": "1. Động từ dễ nhầm",
+        "content": "Mấu chốt là động từ có tân ngữ hay không (nội động từ hay ngoại động từ) và từ đó là động từ hay danh từ.",
+        "formula": "rise (không có tân ngữ) – raise + tân ngữ\nlie (không có tân ngữ) – lay + tân ngữ",
+        "bullet_points": [
+          "affect (v): ảnh hưởng đến – effect (n): tác động, kết quả; effect (v) hiếm, = tạo ra (effect change).",
+          "rise – rose – risen: tự tăng (Prices rose). raise – raised – raised: nâng, tăng cái gì (raise prices, raise funds).",
+          "lie – lay – lain: nằm (The documents lie on the desk). lay – laid – laid: đặt (lay the files on the desk).",
+          "lend (cho mượn): lend sb sth / lend sth to sb. borrow (mượn): borrow sth from sb.",
+          "advise (v): khuyên – advice (n, không đếm được): lời khuyên; không nói “an advice”, nói “a piece of advice”."
+        ],
+        "tips": [
+          "Phía sau chỗ trống có tân ngữ (prices, funds, salaries) → raise. Không có tân ngữ, theo sau là con số hoặc trạng từ (rose by 5%, rose sharply) → rise."
+        ]
+      },
+      {
+        "title": "2. Giới từ & trạng từ dễ nhầm",
+        "content": "Các cặp này khác nhau về số lượng đối tượng hoặc về chức năng trong câu.",
+        "bullet_points": [
+          "between: giữa hai đối tượng (hoặc các đối tượng tách biệt, liệt kê cụ thể). among: giữa một nhóm từ ba trở lên (among the staff, among all applicants).",
+          "beside: bên cạnh (vị trí). besides: ngoài ra / ngoài… ra (Besides the salary, …).",
+          "almost: gần như (+ tính từ, trạng từ, all/every/no): almost all employees. most: hầu hết (+ danh từ): most employees / most of the employees. mostly: chủ yếu (trạng từ).",
+          "especially: đặc biệt là (nhấn mạnh). specially: được làm riêng cho mục đích (specially designed for children)."
+        ],
+        "tips": [
+          "“_______ all” hoặc “_______ every” → chọn almost (không dùng most all). “_______ of the + danh từ” → chọn most."
+        ]
+      },
+      {
+        "title": "3. Tính từ cùng gốc nhưng khác nghĩa",
+        "content": "Bốn phương án đều là tính từ đúng ngữ pháp, chỉ một từ hợp nghĩa. Đây là nhóm câu khó nhất vì phải thuộc nghĩa.",
+        "bullet_points": [
+          "economic (thuộc kinh tế: economic growth) – economical (tiết kiệm: an economical car).",
+          "considerate (chu đáo, biết nghĩ cho người khác) – considerable (đáng kể: a considerable amount).",
+          "sensible (hợp lý, khôn ngoan) – sensitive (nhạy cảm; sensitive information = thông tin mật).",
+          "successive (liên tiếp: three successive years) – successful (thành công).",
+          "respectful (tôn trọng) – respective (tương ứng, riêng của mỗi người: their respective departments).",
+          "alternate (xen kẽ, cách: on alternate days) – alternative (thay thế: an alternative route).",
+          "complementary (bổ sung cho nhau) – complimentary (miễn phí; mang tính khen ngợi)."
+        ],
+        "tips": [
+          "Khách sạn, vé, đồ uống “free” trong Part 7 thường được viết là “complimentary” – câu hỏi đồng nghĩa hay hỏi từ này."
+        ]
+      },
+      {
+        "title": "4. Danh từ & tính từ dễ nhầm",
+        "content": "Hai từ chỉ khác một chữ nhưng khác loại từ.",
+        "bullet_points": [
+          "personal (adj): cá nhân, riêng tư – personnel (n): nhân sự, toàn bộ nhân viên (the personnel department, new personnel).",
+          "complement (n/v): phần bổ sung, bổ sung cho – compliment (n/v): lời khen, khen ngợi.",
+          "effect (n) – effective (adj): hiệu quả; có hiệu lực từ (effective May 1)."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Rising fuel costs have affected the company's shipping schedule.",
+        "vietnamese": "Chi phí nhiên liệu tăng đã ảnh hưởng đến lịch giao hàng của công ty.",
+        "explanation": "Cần động từ (sau trợ động từ have) → affected; effect thường là danh từ.",
+        "highlight": "affected",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The board voted to raise the minimum order quantity.",
+        "vietnamese": "Hội đồng quản trị đã biểu quyết nâng số lượng đặt hàng tối thiểu.",
+        "explanation": "Có tân ngữ “the minimum order quantity” → raise (ngoại động từ), không dùng rise.",
+        "highlight": "raise",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Could you lend me your laptop charger for the presentation?",
+        "vietnamese": "Bạn có thể cho tôi mượn sạc laptop để thuyết trình không?",
+        "explanation": "Người nói nhờ người khác CHO MÌNH mượn → lend me. Nếu dùng borrow phải nói “Can I borrow your charger?”.",
+        "highlight": "lend me",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "This seminar is especially useful for newly promoted managers.",
+        "vietnamese": "Hội thảo này đặc biệt hữu ích cho các quản lý mới được thăng chức.",
+        "explanation": "Nhấn mạnh mức độ hữu ích → especially; specially chỉ dùng khi một thứ được làm riêng cho mục đích nào đó.",
+        "highlight": "especially useful",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Please send the completed forms to your respective team leaders.",
+        "vietnamese": "Vui lòng gửi các mẫu đơn đã điền cho trưởng nhóm của mỗi người.",
+        "explanation": "“respective” = tương ứng, riêng của từng người; respectful (tôn trọng) sai nghĩa.",
+        "highlight": "respective team leaders",
+        "part_tag": "Part 7"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-conf-1",
+        "question": "The new tax policy is expected to _______ small businesses throughout the region.",
+        "options": [
+          "effect",
+          "affect",
+          "effective",
+          "affection"
+        ],
+        "answer_index": 1,
+        "explanation": "Sau “to” cần động từ mang nghĩa “ảnh hưởng đến” → affect. effect (v) nghĩa là “tạo ra”, không hợp; effective là tính từ, affection là danh từ."
+      },
+      {
+        "id": "q-conf-2",
+        "question": "Management decided to _______ the prices of all imported products by 5 percent.",
+        "options": [
+          "rise",
+          "arise",
+          "raise",
+          "risen"
+        ],
+        "answer_index": 2,
+        "explanation": "Có tân ngữ “the prices” → ngoại động từ raise. rise và arise là nội động từ, risen là quá khứ phân từ."
+      },
+      {
+        "id": "q-conf-3",
+        "question": "Guests staying in our suites receive a _______ breakfast every morning.",
+        "options": [
+          "complimentary",
+          "complementary",
+          "complimented",
+          "complemented"
+        ],
+        "answer_index": 0,
+        "explanation": "Bữa sáng “miễn phí” cho khách → complimentary. complementary = bổ sung cho nhau, sai nghĩa."
+      },
+      {
+        "id": "q-conf-4",
+        "question": "The research award will be shared _______ all members of the product development team.",
+        "options": [
+          "besides",
+          "between",
+          "beyond",
+          "among"
+        ],
+        "answer_index": 3,
+        "explanation": "Chia cho một nhóm nhiều người (all members) → among. between dùng cho hai đối tượng hoặc các đối tượng liệt kê cụ thể."
+      },
+      {
+        "id": "q-conf-5",
+        "question": "The hybrid model is more _______ than the gasoline version, saving drivers about $800 a year in fuel.",
+        "options": [
+          "economic",
+          "economy",
+          "economical",
+          "economics"
+        ],
+        "answer_index": 2,
+        "explanation": "Tiết kiệm nhiên liệu → economical (tiết kiệm). economic = thuộc về kinh tế; economy/economics là danh từ."
+      },
+      {
+        "id": "q-conf-6",
+        "question": "_______ the regular salary, employees receive a monthly transportation allowance.",
+        "options": [
+          "Besides",
+          "Beside",
+          "Between",
+          "Among"
+        ],
+        "answer_index": 0,
+        "explanation": "Nghĩa “ngoài… ra” → Besides. Beside = bên cạnh (vị trí), không hợp nghĩa."
+      },
+      {
+        "id": "q-conf-7",
+        "question": "All new _______ must attend the orientation session on Monday morning.",
+        "options": [
+          "personal",
+          "personnel",
+          "personality",
+          "personally"
+        ],
+        "answer_index": 1,
+        "explanation": "Sau tính từ “new” cần danh từ chỉ nhân viên → personnel. personal là tính từ, personally là trạng từ, personality (tính cách) sai nghĩa."
+      },
+      {
+        "id": "q-conf-8",
+        "question": "Relocating the warehouse will require a _______ amount of time and money.",
+        "options": [
+          "considerate",
+          "consideration",
+          "considering",
+          "considerable"
+        ],
+        "answer_index": 3,
+        "explanation": "Lượng thời gian và tiền “đáng kể” → considerable. considerate = chu đáo (dùng cho người), consideration là danh từ."
+      }
+    ]
+  },
+  {
+    "id": "pos-compound-nouns",
+    "category": "partsOfSpeech",
+    "title": "Danh từ ghép & Danh từ bổ nghĩa cho danh từ",
+    "subtitle": "Safety regulations, Sales figures, A two-day workshop & Bẫy chọn tính từ",
+    "read_time_minutes": 7,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "nouns",
+      "word-form",
+      "compound-nouns"
+    ],
+    "overview": "Trong tiếng Anh thương mại, danh từ thường đứng trước danh từ khác để bổ nghĩa (safety regulations, expiration date). Part 5 hay để trống vị trí danh từ đầu tiên và cho cả tính từ lẫn V-ing vào đáp án. Thuộc các cụm phổ biến và quy tắc số ít của danh từ đứng trước là đủ để lấy điểm.",
+    "sections": [
+      {
+        "title": "1. Cấu trúc Danh từ + Danh từ",
+        "content": "Danh từ đứng trước đóng vai trò như tính từ, cho biết loại, mục đích hoặc lĩnh vực của danh từ chính đứng sau.",
+        "formula": "Danh từ bổ nghĩa (thường số ít) + DANH TỪ CHÍNH",
+        "bullet_points": [
+          "Nhân sự: job opening, job description, staff meeting, performance evaluation, retirement party, training session.",
+          "Bán hàng: sales representative, sales figures, customer satisfaction, return policy, price list, order form.",
+          "Quy định: safety regulations, safety inspection, dress code, expiration date, registration fee, admission fee.",
+          "Tài chính & giấy tờ: account number, application form, expense report, budget proposal, payment method.",
+          "Cơ sở vật chất: maintenance staff, parking lot, conference room, office supplies, production facility."
+        ]
+      },
+      {
+        "title": "2. Danh từ đứng trước ở dạng số ít",
+        "content": "Danh từ bổ nghĩa thường không thêm -s, kể cả khi mang nghĩa số nhiều. Khi có số đếm và gạch nối, danh từ cũng ở dạng số ít.",
+        "formula": "a / an + số – danh từ số ít + Danh từ chính\n(a two-day workshop, a five-star hotel, a 20-minute break)",
+        "bullet_points": [
+          "a ten-year contract, a three-hour tour, a 500-page report, a six-month warranty.",
+          "Không viết: a two-days workshop, a five-stars hotel.",
+          "Ngoại lệ luôn có -s: sales (sales department), savings (savings account), customs (customs office), earnings (earnings report), electronics (electronics store), benefits (benefits package), communications (communications manager)."
+        ],
+        "tips": [
+          "Thấy mạo từ “a” đứng trước một cụm số – danh từ – danh từ → phần có gạch nối luôn số ít: a two-day conference."
+        ]
+      },
+      {
+        "title": "3. Bẫy Part 5: chỗ trống cần danh từ, không phải tính từ",
+        "content": "Nhiều thí sinh thấy chỗ trống đứng trước danh từ là chọn ngay tính từ. Nhưng trong các cụm cố định, vị trí đó là danh từ bổ nghĩa.",
+        "bullet_points": [
+          "safety regulations (quy định về an toàn) – không phải safe regulations.",
+          "application form – không phải applicable form; expiration date – không phải expired date.",
+          "maintenance staff, registration fee, admission fee, retirement party, performance review.",
+          "Cách kiểm tra: thử tính từ vào chỗ trống. Nếu nghĩa thành “quy định thì an toàn”, “mẫu đơn có thể áp dụng” – kỳ lạ – thì cần danh từ."
+        ],
+        "tips": [
+          "Bốn phương án là safe / safety / safely / safer và danh từ sau là regulations/inspection/standards → chọn danh từ “safety”."
+        ]
+      },
+      {
+        "title": "4. Danh từ ghép nhiều thành phần & hòa hợp chủ ngữ",
+        "content": "Danh từ chính luôn đứng CUỐI cụm. Chính nó quyết định số ít hay số nhiều, và động từ phải chia theo nó.",
+        "bullet_points": [
+          "customer service representative → danh từ chính: representative.",
+          "The sales figures ARE… (figures số nhiều) – The customer satisfaction survey WAS… (survey số ít).",
+          "The results of the employee training program WERE… (chủ ngữ là results)."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "The sales representative will visit our office on Tuesday to demonstrate the product.",
+        "vietnamese": "Đại diện bán hàng sẽ đến văn phòng chúng tôi vào thứ Ba để giới thiệu sản phẩm.",
+        "explanation": "“sales” là ngoại lệ luôn có -s khi làm danh từ bổ nghĩa; danh từ chính là representative.",
+        "highlight": "sales representative",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Our return policy allows customers to exchange items within 30 days of purchase.",
+        "vietnamese": "Chính sách đổi trả của chúng tôi cho phép khách đổi hàng trong vòng 30 ngày kể từ khi mua.",
+        "explanation": "“return” (danh từ) bổ nghĩa cho “policy”: chính sách về việc trả hàng.",
+        "highlight": "return policy",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "The company organized a three-day training program for new hires.",
+        "vietnamese": "Công ty đã tổ chức chương trình đào tạo ba ngày cho nhân viên mới.",
+        "explanation": "Số đếm + gạch nối + danh từ số ít (three-day), không viết three-days.",
+        "highlight": "three-day training program",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Please enter your account number in the space provided.",
+        "vietnamese": "Vui lòng nhập số tài khoản của bạn vào ô bên dưới.",
+        "explanation": "Danh từ “account” bổ nghĩa cho “number”, ở dạng số ít.",
+        "highlight": "account number",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "Several job openings have been posted on the company website.",
+        "vietnamese": "Một số vị trí tuyển dụng đã được đăng trên trang web công ty.",
+        "explanation": "Danh từ chính “openings” số nhiều → động từ “have been posted”; “job” vẫn số ít.",
+        "highlight": "job openings",
+        "part_tag": "Part 7"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-cnoun-1",
+        "question": "All visitors must follow the _______ regulations posted at the factory entrance.",
+        "options": [
+          "safe",
+          "safety",
+          "safely",
+          "safer"
+        ],
+        "answer_index": 1,
+        "explanation": "Cụm danh từ ghép cố định “safety regulations” (quy định an toàn). Tính từ safe/safer làm sai nghĩa, safely là trạng từ."
+      },
+      {
+        "id": "q-cnoun-2",
+        "question": "Please check the _______ date on the package before using the product.",
+        "options": [
+          "expire",
+          "expired",
+          "expiring",
+          "expiration"
+        ],
+        "answer_index": 3,
+        "explanation": "Cụm cố định “expiration date” (hạn sử dụng): danh từ bổ nghĩa cho “date”."
+      },
+      {
+        "id": "q-cnoun-3",
+        "question": "We are hosting a _______ workshop for newly appointed supervisors next month.",
+        "options": [
+          "two-day",
+          "two-days",
+          "two days",
+          "two-day's"
+        ],
+        "answer_index": 0,
+        "explanation": "a + số – danh từ số ít có gạch nối + danh từ chính → a two-day workshop."
+      },
+      {
+        "id": "q-cnoun-4",
+        "question": "The quarterly _______ figures will be presented at the board meeting on Thursday.",
+        "options": [
+          "sale",
+          "sold",
+          "sales",
+          "selling"
+        ],
+        "answer_index": 2,
+        "explanation": "“sales figures” (số liệu doanh số) – sales là ngoại lệ luôn có -s khi làm danh từ bổ nghĩa."
+      },
+      {
+        "id": "q-cnoun-5",
+        "question": "Applicants should fill out the _______ form and attach a recent photograph.",
+        "options": [
+          "apply",
+          "applicable",
+          "applying",
+          "application"
+        ],
+        "answer_index": 3,
+        "explanation": "Cụm danh từ ghép “application form” (mẫu đơn đăng ký)."
+      },
+      {
+        "id": "q-cnoun-6",
+        "question": "The _______ staff will inspect the air-conditioning units on Friday afternoon.",
+        "options": [
+          "maintain",
+          "maintenance",
+          "maintained",
+          "maintainable"
+        ],
+        "answer_index": 1,
+        "explanation": "“maintenance staff” = nhân viên bảo trì; danh từ maintenance bổ nghĩa cho staff."
+      },
+      {
+        "id": "q-cnoun-7",
+        "question": "Customers who open a _______ account this month will receive a $50 gift card.",
+        "options": [
+          "save",
+          "saving",
+          "savings",
+          "saved"
+        ],
+        "answer_index": 2,
+        "explanation": "Cụm chuẩn “savings account” (tài khoản tiết kiệm) – savings luôn có -s."
+      },
+      {
+        "id": "q-cnoun-8",
+        "question": "The results of the customer satisfaction survey _______ posted on the company intranet yesterday.",
+        "options": [
+          "were",
+          "was",
+          "is",
+          "has"
+        ],
+        "answer_index": 0,
+        "explanation": "Chủ ngữ chính là “The results” (số nhiều), có “yesterday” → were. “survey” chỉ nằm trong cụm bổ nghĩa."
+      }
+    ]
+  },
+  {
+    "id": "pos-special-adverbs",
+    "category": "partsOfSpeech",
+    "title": "Trạng từ đặc biệt: Hard/Hardly, Late/Lately & Vị trí trạng từ",
+    "subtitle": "Highly, Nearly, Shortly, Closely, Already/Yet/Still & trạng từ đứng ở đâu",
+    "read_time_minutes": 8,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "adverb",
+      "word-form"
+    ],
+    "overview": "Một số trạng từ có hai dạng (có và không có -ly) với nghĩa hoàn toàn khác nhau. ETS khai thác điều này trong Part 5, cùng với câu hỏi về vị trí trạng từ (giữa trợ động từ và động từ chính). Nắm bảng cặp từ và 4 vị trí chuẩn là gỡ được phần lớn câu dạng này.",
+    "sections": [
+      {
+        "title": "1. Cặp trạng từ hai dạng khác nghĩa",
+        "content": "Dạng không -ly giữ nghĩa gốc; dạng -ly thường mang nghĩa trừu tượng hoặc nghĩa khác hẳn.",
+        "bullet_points": [
+          "hard (chăm chỉ, mạnh: work hard) – hardly (hầu như không: hardly any complaints).",
+          "late (muộn: arrive late) – lately (gần đây, thường đi với hiện tại hoàn thành).",
+          "near (gần, về không gian) – nearly (gần như = almost: nearly finished).",
+          "high (cao, về độ cao: fly high) – highly (rất, ở mức cao: highly recommended, highly qualified).",
+          "short (đột ngột: stop short) – shortly (sớm thôi, ngay sau: shortly after the meeting).",
+          "close (gần: stay close) – closely (kỹ lưỡng, chặt chẽ: monitor closely, work closely with).",
+          "free (miễn phí: get in free) – freely (tự do: speak freely). wide (rộng: open wide) – widely (rộng rãi: widely used)."
+        ],
+        "tips": [
+          "hardly đã mang nghĩa phủ định → không dùng chung với not/no: “There were hardly any complaints”, không nói “There weren't hardly any”."
+        ]
+      },
+      {
+        "title": "2. Already, Yet, Still",
+        "content": "Ba trạng từ chỉ thời gian hay đi với thì hoàn thành.",
+        "formula": "S + have/has + already + V3\nS + haven't/hasn't + V3 + yet\nS + have/has + yet to + V nguyên mẫu (= vẫn chưa)\nS + still + haven't/hasn't + V3",
+        "bullet_points": [
+          "already: câu khẳng định (đã… rồi), đứng giữa have và V3.",
+          "yet: câu phủ định / nghi vấn, đứng cuối câu (chưa). Cấu trúc “have yet to do” mang nghĩa phủ định dù không có not.",
+          "still: vẫn còn; trong câu phủ định đứng TRƯỚC trợ động từ phủ định (still hasn't arrived)."
+        ]
+      },
+      {
+        "title": "3. Even, Only, Just & Quite, Rather, Fairly",
+        "content": "Các trạng từ nhấn mạnh và chỉ mức độ, đứng ngay trước từ mà chúng bổ nghĩa.",
+        "bullet_points": [
+          "even: thậm chí (even on weekends). only: chỉ (only full-time staff). just: vừa mới / chỉ (has just been released).",
+          "quite: khá, hoàn toàn (quite a long meeting – quite đứng trước a).",
+          "rather: khá (thường hơi tiêu cực: rather expensive); rather than = thay vì.",
+          "fairly: khá (trung tính: fairly easy)."
+        ]
+      },
+      {
+        "title": "4. Bốn vị trí chuẩn của trạng từ",
+        "content": "Câu hỏi vị trí thường có chỗ trống chen giữa trợ động từ và động từ chính, hoặc ngay trước tính từ.",
+        "formula": "S + trợ động từ + TRẠNG TỪ + V chính (has recently been approved)\nbe + TRẠNG TỪ + V-ing / V3 (is currently being renovated)\nTRẠNG TỪ + Tính từ (extremely busy, highly qualified)\nTRẠNG TỪ, + Mệnh đề (Unfortunately, the flight was canceled.)",
+        "bullet_points": [
+          "Trạng từ tần suất (always, usually, often, sometimes, rarely, seldom, never) đứng TRƯỚC động từ thường và SAU động từ to be.",
+          "Trạng từ bổ nghĩa cả câu (Fortunately, Unfortunately, Typically) đứng đầu câu, có dấu phẩy.",
+          "Trạng từ chỉ cách thức có thể đứng sau tân ngữ ở cuối câu: She reviewed the contract carefully."
+        ],
+        "tips": [
+          "Chỗ trống nằm giữa “has/have/will/be” và động từ chính (V3, V-ing, V nguyên mẫu) → 90% đáp án là trạng từ."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "The accounting software is widely used by small businesses across the country.",
+        "vietnamese": "Phần mềm kế toán này được các doanh nghiệp nhỏ trên cả nước sử dụng rộng rãi.",
+        "explanation": "“widely” = rộng rãi, đứng giữa be và V3 (is widely used).",
+        "highlight": "widely used",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Our customer support team has been very busy lately.",
+        "vietnamese": "Gần đây đội hỗ trợ khách hàng của chúng tôi rất bận.",
+        "explanation": "“lately” = gần đây, đi với thì hiện tại hoàn thành; late (muộn) sai nghĩa.",
+        "highlight": "has been very busy lately",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The regional manager has yet to approve the new work schedule.",
+        "vietnamese": "Quản lý khu vực vẫn chưa phê duyệt lịch làm việc mới.",
+        "explanation": "“have yet to + V” mang nghĩa phủ định (vẫn chưa), dù câu không có not.",
+        "highlight": "has yet to approve",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The airport shuttle bus nearly always arrives on time.",
+        "vietnamese": "Xe buýt đưa đón sân bay gần như luôn đến đúng giờ.",
+        "explanation": "“nearly” = almost, bổ nghĩa cho trạng từ tần suất “always”, đứng trước động từ thường.",
+        "highlight": "nearly always",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "Candidates must be highly qualified and fluent in at least two languages.",
+        "vietnamese": "Ứng viên phải có trình độ cao và thông thạo ít nhất hai ngôn ngữ.",
+        "explanation": "“highly” (ở mức cao) đứng trước tính từ “qualified”; high chỉ độ cao vật lý.",
+        "highlight": "highly qualified",
+        "part_tag": "Part 7"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-sadv-1",
+        "question": "Dr. Kim is _______ recommended by patients for her clear and careful explanations.",
+        "options": [
+          "high",
+          "highly",
+          "higher",
+          "highest"
+        ],
+        "answer_index": 1,
+        "explanation": "“highly recommended” = được đánh giá cao. high chỉ độ cao vật lý; higher/highest là so sánh, không hợp cấu trúc."
+      },
+      {
+        "id": "q-sadv-2",
+        "question": "The sales team has been working _______ to meet the year-end target.",
+        "options": [
+          "hard",
+          "hardly",
+          "hardness",
+          "hardship"
+        ],
+        "answer_index": 0,
+        "explanation": "Làm việc chăm chỉ → work hard. hardly = hầu như không (sai nghĩa); hardness/hardship là danh từ."
+      },
+      {
+        "id": "q-sadv-3",
+        "question": "The new branch manager will give a short speech _______ after the opening ceremony.",
+        "options": [
+          "short",
+          "shorten",
+          "shortage",
+          "shortly"
+        ],
+        "answer_index": 3,
+        "explanation": "“shortly after” = ngay sau khi. short (đột ngột) không đi với after; shorten là động từ, shortage là danh từ."
+      },
+      {
+        "id": "q-sadv-4",
+        "question": "Mr. Davis has _______ to submit his travel expense report for last month.",
+        "options": [
+          "already",
+          "even",
+          "yet",
+          "ever"
+        ],
+        "answer_index": 2,
+        "explanation": "Cấu trúc “have yet to + V” = vẫn chưa làm. already/even/ever không đi với “to + V” sau has theo cách này."
+      },
+      {
+        "id": "q-sadv-5",
+        "question": "Online orders have increased significantly _______ because of the holiday promotion.",
+        "options": [
+          "late",
+          "lately",
+          "lateness",
+          "latest"
+        ],
+        "answer_index": 1,
+        "explanation": "Hiện tại hoàn thành + “gần đây” → lately. late = muộn, lateness là danh từ, latest là tính từ so sánh nhất."
+      },
+      {
+        "id": "q-sadv-6",
+        "question": "The inspectors examined the equipment _______ before approving its use in the factory.",
+        "options": [
+          "close",
+          "closed",
+          "closing",
+          "closely"
+        ],
+        "answer_index": 3,
+        "explanation": "Kiểm tra “kỹ lưỡng” → closely bổ nghĩa cho động từ examined. close = gần (không gian)."
+      },
+      {
+        "id": "q-sadv-7",
+        "question": "The merger proposal has _______ been approved by the board of directors.",
+        "options": [
+          "recently",
+          "recent",
+          "recentness",
+          "more recent"
+        ],
+        "answer_index": 0,
+        "explanation": "Vị trí giữa trợ động từ “has” và “been approved” cần trạng từ → recently."
+      },
+      {
+        "id": "q-sadv-8",
+        "question": "Since the new delivery service was introduced, there have been _______ any customer complaints.",
+        "options": [
+          "hard",
+          "near",
+          "hardly",
+          "nearly"
+        ],
+        "answer_index": 2,
+        "explanation": "“hardly any” = hầu như không có. nearly any không phải cách dùng chuẩn; hard/near sai nghĩa."
+      }
+    ]
   }
 ]

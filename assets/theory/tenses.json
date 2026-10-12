@@ -453,5 +453,551 @@
         "explanation": "Mệnh đề chính \"confirmed\" ở quá khứ, hành động duyệt ngân sách diễn ra trước đó -> chọn \"had been\"."
       }
     ]
+  },
+  {
+    "id": "tenses-perfect-continuous-future-continuous",
+    "category": "tenses",
+    "title": "Tương lai tiếp diễn & Các thì Hoàn thành tiếp diễn",
+    "subtitle": "Hoàn thiện 12 thì: will be V-ing, had been V-ing, will have been V-ing",
+    "read_time_minutes": 8,
+    "difficulty": "Nâng cao",
+    "tags": [
+      "tenses",
+      "verb-form"
+    ],
+    "overview": "Ba thì còn lại để đủ 12 thì đều xoay quanh ý \"đang diễn ra\" tại một mốc cụ thể: Tương lai tiếp diễn (đang làm tại một thời điểm tương lai), Quá khứ hoàn thành tiếp diễn (đã kéo dài một khoảng trước một mốc quá khứ) và Tương lai hoàn thành tiếp diễn (sẽ kéo dài được bao lâu tính đến một mốc tương lai). Trong Part 5, chúng xuất hiện kèm dấu hiệu rất rõ: giờ cụ thể ngày mai, \"for + khoảng thời gian\" đi cùng \"before / by the time\".",
+    "sections": [
+      {
+        "title": "1. Tương lai tiếp diễn (Future Continuous)",
+        "content": "Diễn tả hành động sẽ đang diễn ra tại một thời điểm xác định trong tương lai, hoặc một việc đã lên lịch sẵn theo tiến trình bình thường (lịch sự hơn will).",
+        "formula": "S + will be + V-ing",
+        "bullet_points": [
+          "Dấu hiệu: at this time tomorrow, at 10 A.M. next Monday, this time next week, all day tomorrow.",
+          "Kết hợp: \"When you arrive, we will be holding the meeting\" (hành động đang diễn ra thì việc khác xen vào).",
+          "Dùng hỏi lịch trình lịch sự: \"Will you be attending the banquet?\""
+        ],
+        "tips": [
+          "Thấy giờ cụ thể trong tương lai (at 3 P.M. tomorrow) + động từ hành động kéo dài → ưu tiên will be V-ing, không chọn will V hay V-s."
+        ]
+      },
+      {
+        "title": "2. Quá khứ hoàn thành tiếp diễn (Past Perfect Continuous)",
+        "content": "Diễn tả hành động đã bắt đầu và kéo dài liên tục cho đến (hoặc ngay trước) một mốc/hành động khác trong quá khứ. Nhấn mạnh quá trình, thường kèm khoảng thời gian.",
+        "formula": "S + had been + V-ing (+ for/since …) + before/when + S + V2",
+        "bullet_points": [
+          "Dấu hiệu: for + khoảng thời gian đi kèm before, when, until + mốc quá khứ.",
+          "Giải thích nguyên nhân của trạng thái quá khứ: \"She was tired because she had been working overtime.\"",
+          "Phân biệt: had worked (nhấn kết quả đã xong) vs had been working (nhấn quá trình kéo dài)."
+        ],
+        "tips": [
+          "Câu có hai hành động quá khứ, một hành động kéo dài 'for six hours' xảy ra trước hành động kia → had been V-ing. Nếu chỉ có một mốc quá khứ đơn lẻ (last week, ago) → quá khứ đơn."
+        ]
+      },
+      {
+        "title": "3. Tương lai hoàn thành tiếp diễn (Future Perfect Continuous)",
+        "content": "Diễn tả hành động sẽ kéo dài được bao lâu tính đến một mốc trong tương lai. Đây là thì 'hai dấu hiệu': mốc tương lai (by + time / by the time + hiện tại đơn) và khoảng thời gian (for + period).",
+        "formula": "By + mốc tương lai, S + will have been + V-ing + for + khoảng thời gian",
+        "bullet_points": [
+          "Dấu hiệu bắt buộc: by next year / by the time + S + V(hiện tại) + for + khoảng thời gian.",
+          "Phân biệt với will have V3 (Tương lai hoàn thành): nhấn việc sẽ hoàn tất trước mốc, thường không có 'for + khoảng thời gian'.",
+          "Động từ chỉ trạng thái (know, belong, own) không dùng dạng tiếp diễn → dùng will have V3."
+        ],
+        "tips": [
+          "Có đồng thời 'By …' và 'for + số năm/tháng' → chọn will have been V-ing. Chỉ có 'By …' mà không có 'for' → thường là will have V3."
+        ]
+      },
+      {
+        "title": "4. Bảng so sánh nhanh để không chọn nhầm",
+        "content": "Ba thì này dễ bị nhầm với thì đơn và thì hoàn thành cùng thời điểm. Hãy hỏi: hành động đang diễn ra tại một điểm, hay đã kéo dài một khoảng, hay đã xong?",
+        "bullet_points": [
+          "Tương lai: will V (quyết định/dự đoán) – will be V-ing (đang diễn ra lúc đó) – will have V3 (xong trước mốc) – will have been V-ing (kéo dài đến mốc).",
+          "Quá khứ: V2 (xảy ra và kết thúc) – was/were V-ing (đang diễn ra) – had V3 (xong trước mốc) – had been V-ing (kéo dài đến mốc).",
+          "Hiện tại: V-s – am/is/are V-ing – have/has V3 – have/has been V-ing."
+        ],
+        "tips": [
+          "Trong Part 5, loại ngay phương án sai thời gian (quá khứ vs tương lai) trước, sau đó mới chọn giữa đơn / tiếp diễn / hoàn thành dựa vào dấu hiệu 'at + giờ', 'by', 'for'."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "At 9 A.M. tomorrow, the CEO will be presenting the quarterly results to the shareholders.",
+        "vietnamese": "Vào 9 giờ sáng mai, giám đốc điều hành sẽ đang trình bày kết quả quý cho các cổ đông.",
+        "explanation": "Mốc giờ cụ thể trong tương lai \"At 9 A.M. tomorrow\" + hành động kéo dài → Tương lai tiếp diễn.",
+        "highlight": "will be presenting",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The engineers had been testing the prototype for three months before they found the defect.",
+        "vietnamese": "Các kỹ sư đã thử nghiệm nguyên mẫu suốt ba tháng trước khi phát hiện ra lỗi.",
+        "explanation": "Hành động kéo dài \"for three months\" xảy ra trước một hành động quá khứ khác (found) → Quá khứ hoàn thành tiếp diễn.",
+        "highlight": "had been testing the prototype for three months",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "By the end of this year, Ms. Novak will have been managing the Tokyo branch for a decade.",
+        "vietnamese": "Tính đến cuối năm nay, cô Novak sẽ quản lý chi nhánh Tokyo được tròn mười năm.",
+        "explanation": "Có cả mốc tương lai \"By the end of this year\" và khoảng thời gian \"for a decade\" → Tương lai hoàn thành tiếp diễn.",
+        "highlight": "will have been managing",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Please do not disturb the training room this afternoon because the new hires will be taking their certification exam.",
+        "vietnamese": "Vui lòng không làm phiền phòng đào tạo chiều nay vì nhân viên mới sẽ đang làm bài thi chứng chỉ.",
+        "explanation": "Hành động sẽ đang diễn ra suốt buổi chiều (khoảng thời gian tương lai cụ thể) → will be taking.",
+        "highlight": "will be taking",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "Mr. Diaz was exhausted at the gala because he had been preparing the venue since dawn.",
+        "vietnamese": "Anh Diaz kiệt sức trong buổi dạ tiệc vì anh đã chuẩn bị địa điểm từ lúc rạng sáng.",
+        "explanation": "Giải thích nguyên nhân của trạng thái quá khứ (was exhausted) bằng một quá trình kéo dài trước đó → had been preparing.",
+        "highlight": "had been preparing the venue since dawn",
+        "part_tag": "Part 7"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-pcfc-1",
+        "question": "By the time the auditors arrive next Monday, the finance team _______ on the annual report for three weeks.",
+        "options": [
+          "will work",
+          "will have been working",
+          "has worked",
+          "is working"
+        ],
+        "answer_index": 1,
+        "explanation": "Mốc tương lai \"By the time the auditors arrive next Monday\" + khoảng thời gian \"for three weeks\" → Tương lai hoàn thành tiếp diễn \"will have been working\". \"will work\" thiếu ý kéo dài đến mốc; \"has worked\" và \"is working\" là thì hiện tại."
+      },
+      {
+        "id": "q-pcfc-2",
+        "question": "At 10 A.M. tomorrow, Ms. Patel _______ the new hires through the safety orientation.",
+        "options": [
+          "has led",
+          "had been leading",
+          "will be leading",
+          "leads"
+        ],
+        "answer_index": 2,
+        "explanation": "Thời điểm cụ thể trong tương lai \"At 10 A.M. tomorrow\" → hành động sẽ đang diễn ra: \"will be leading\". \"has led\", \"had been leading\" là hiện tại/quá khứ hoàn thành; \"leads\" không diễn tả hành động đang diễn ra tại mốc đó."
+      },
+      {
+        "id": "q-pcfc-3",
+        "question": "The technicians _______ the server for six hours before they finally located the fault.",
+        "options": [
+          "will be repairing",
+          "are repairing",
+          "have been repairing",
+          "had been repairing"
+        ],
+        "answer_index": 3,
+        "explanation": "Quá trình kéo dài \"for six hours\" xảy ra trước hành động quá khứ \"located\" → Quá khứ hoàn thành tiếp diễn \"had been repairing\". Các phương án còn lại sai mốc thời gian (tương lai, hiện tại)."
+      },
+      {
+        "id": "q-pcfc-4",
+        "question": "Please do not call the conference room between 2 and 4 P.M., as the board members _______ the merger proposal.",
+        "options": [
+          "will be discussing",
+          "discussed",
+          "had discussed",
+          "have discussed"
+        ],
+        "answer_index": 0,
+        "explanation": "Khoảng thời gian cụ thể sắp tới (between 2 and 4 P.M.) và lời dặn \"Please do not call\" → hành động sẽ đang diễn ra: \"will be discussing\". Ba phương án còn lại là quá khứ hoặc hiện tại hoàn thành, không hợp ngữ cảnh tương lai."
+      },
+      {
+        "id": "q-pcfc-5",
+        "question": "Mr. Okafor looked exhausted because he _______ overtime all week to meet the shipping deadline.",
+        "options": [
+          "works",
+          "will be working",
+          "had been working",
+          "will have worked"
+        ],
+        "answer_index": 2,
+        "explanation": "Trạng thái quá khứ \"looked exhausted\" là kết quả của quá trình kéo dài trước đó \"all week\" → \"had been working\". \"works\" là hiện tại; hai phương án còn lại là tương lai."
+      },
+      {
+        "id": "q-pcfc-6",
+        "question": "By December, Lumina Corp. _______ solar panels at this facility for a full decade.",
+        "options": [
+          "will have been manufacturing",
+          "manufactures",
+          "had been manufacturing",
+          "is manufacturing"
+        ],
+        "answer_index": 0,
+        "explanation": "\"By December\" (mốc tương lai) + \"for a full decade\" (khoảng thời gian) → \"will have been manufacturing\". \"had been manufacturing\" chỉ đúng với mốc quá khứ; \"manufactures\", \"is manufacturing\" không diễn tả sự kéo dài đến mốc."
+      }
+    ]
+  },
+  {
+    "id": "tenses-time-clauses-present-for-future",
+    "category": "tenses",
+    "title": "Hiện tại thay Tương lai trong Mệnh đề thời gian & điều kiện",
+    "subtitle": "When, once, as soon as, until, by the time, if, unless + hiện tại – bẫy \"will\" kinh điển",
+    "read_time_minutes": 7,
+    "difficulty": "Trung cấp",
+    "tags": [
+      "tenses",
+      "verb-form",
+      "conjunctions",
+      "conditionals"
+    ],
+    "overview": "Một trong những bẫy xuất hiện đều đặn nhất trong Part 5: câu nói về tương lai nhưng động từ trong mệnh đề thời gian hoặc điều kiện lại chia ở hiện tại. Mệnh đề chính mới dùng will. Nắm quy tắc này giúp loại ngay phương án \"will + V\" trong mệnh đề phụ.",
+    "sections": [
+      {
+        "title": "1. Quy tắc cốt lõi",
+        "content": "Khi mệnh đề chính nói về tương lai (will, câu mệnh lệnh, be going to), động từ trong mệnh đề trạng ngữ chỉ thời gian hoặc điều kiện dùng thì HIỆN TẠI đơn, không dùng will.",
+        "formula": "Mệnh đề chính (will / mệnh lệnh) + liên từ thời gian / điều kiện + S + V(hiện tại đơn)",
+        "bullet_points": [
+          "Liên từ thời gian: when, while, before, after, as soon as, once, until / till, by the time, the moment.",
+          "Liên từ điều kiện: if, unless, provided (that), as long as, in case, only if.",
+          "Ví dụ: \"We will start the meeting as soon as the director arrives.\" (không nói \"will arrive\")."
+        ],
+        "tips": [
+          "Thấy liên từ thời gian/điều kiện ngay trước chỗ trống và mệnh đề còn lại có will → chọn động từ hiện tại đơn, loại mọi phương án có will/would."
+        ]
+      },
+      {
+        "title": "2. Hiện tại hoàn thành để nhấn mạnh sự hoàn tất",
+        "content": "Sau once, after, when, as soon as, until có thể dùng hiện tại hoàn thành (have/has V3) để nhấn mạnh việc phải xong trước rồi mới đến hành động ở mệnh đề chính.",
+        "formula": "Once / After / As soon as + S + have/has V3, S + will V",
+        "bullet_points": [
+          "\"Once the renovation has been completed, staff will return to the third floor.\"",
+          "Dạng bị động rất hay gặp: once + N + has been + V3.",
+          "Hiện tại đơn và hiện tại hoàn thành đều đúng ngữ pháp sau các liên từ này; đề thường chỉ đưa một trong hai vào phương án."
+        ],
+        "tips": [
+          "Chủ ngữ là vật (the renovation, the order, the contract) và động từ là ngoại động từ → cần bị động: is approved / has been approved, không chọn dạng chủ động."
+        ]
+      },
+      {
+        "title": "3. By the time & Until",
+        "content": "By the time + hiện tại đơn thường đi với Tương lai hoàn thành ở mệnh đề chính. Until + hiện tại đơn thường đi với mệnh đề chính phủ định (will not … until).",
+        "formula": "By the time + S + V(hiện tại), S + will have V3\nS + will not + V + until + S + V(hiện tại)",
+        "bullet_points": [
+          "\"By the time you receive this letter, the shipment will have left the port.\"",
+          "\"The payment will not be processed until the invoice is signed.\"",
+          "Ở quá khứ: By the time + V2 → had V3 (\"By the time he arrived, the meeting had ended\")."
+        ],
+        "tips": [
+          "Không nhầm by the time (liên từ + mệnh đề) với by + mốc thời gian (giới từ + danh từ: by Friday)."
+        ]
+      },
+      {
+        "title": "4. Ngoại lệ cần biết",
+        "content": "Quy tắc trên chỉ áp dụng cho mệnh đề TRẠNG NGỮ. Nếu when/if mở đầu mệnh đề DANH TỪ (làm tân ngữ của động từ như know, ask, wonder, confirm) thì vẫn dùng will bình thường.",
+        "bullet_points": [
+          "\"Please let us know when the shipment will arrive.\" (when + mệnh đề làm tân ngữ của know → will đúng).",
+          "\"Ms. Chen asked if the client will attend the dinner.\" (if = whether).",
+          "Mẹo: nếu có thể thay if bằng whether, hoặc mệnh đề trả lời câu hỏi 'cái gì?', đó là mệnh đề danh từ."
+        ],
+        "tips": [
+          "Hỏi: mệnh đề này trả lời 'khi nào/với điều kiện gì?' (trạng ngữ → hiện tại) hay 'cái gì?' (danh từ → có thể will)."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "The technicians will install the new printers as soon as the delivery arrives.",
+        "vietnamese": "Kỹ thuật viên sẽ lắp đặt máy in mới ngay khi hàng được giao tới.",
+        "explanation": "Mệnh đề chính có will; mệnh đề sau \"as soon as\" dùng hiện tại đơn \"arrives\" dù nói về tương lai.",
+        "highlight": "as soon as the delivery arrives",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Once the budget has been approved, the marketing team will launch the campaign.",
+        "vietnamese": "Một khi ngân sách được phê duyệt, nhóm marketing sẽ khởi động chiến dịch.",
+        "explanation": "\"Once\" + hiện tại hoàn thành bị động nhấn mạnh ngân sách phải được duyệt xong trước.",
+        "highlight": "Once the budget has been approved",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "By the time the guests check in, the hotel staff will have prepared all the welcome packets.",
+        "vietnamese": "Trước khi khách làm thủ tục nhận phòng, nhân viên khách sạn sẽ đã chuẩn bị xong tất cả túi quà chào mừng.",
+        "explanation": "\"By the time\" + hiện tại đơn \"check in\", mệnh đề chính dùng Tương lai hoàn thành.",
+        "highlight": "By the time the guests check in",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Your account will remain active as long as you log in at least once every six months.",
+        "vietnamese": "Tài khoản của bạn sẽ tiếp tục hoạt động miễn là bạn đăng nhập ít nhất sáu tháng một lần.",
+        "explanation": "\"as long as\" là liên từ điều kiện → động từ phía sau chia hiện tại \"log in\".",
+        "highlight": "as long as you log in",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "Please confirm when the replacement parts will be shipped.",
+        "vietnamese": "Vui lòng xác nhận khi nào linh kiện thay thế sẽ được gửi đi.",
+        "explanation": "Ngoại lệ: \"when the replacement parts will be shipped\" là mệnh đề danh từ làm tân ngữ của \"confirm\" → dùng will vẫn đúng.",
+        "highlight": "when the replacement parts will be shipped",
+        "part_tag": "Part 7"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-tcpf-1",
+        "question": "Ms. Rivera will send the revised contract as soon as the legal department _______ it.",
+        "options": [
+          "approves",
+          "will approve",
+          "approved",
+          "would approve"
+        ],
+        "answer_index": 0,
+        "explanation": "Sau liên từ thời gian \"as soon as\", khi mệnh đề chính dùng will, động từ chia hiện tại đơn → \"approves\". \"will approve\", \"would approve\" sai quy tắc; \"approved\" sai thì."
+      },
+      {
+        "id": "q-tcpf-2",
+        "question": "Once the renovation _______, employees will move back to the third floor.",
+        "options": [
+          "will be completed",
+          "has been completed",
+          "completes",
+          "had completed"
+        ],
+        "answer_index": 1,
+        "explanation": "Sau \"once\" không dùng will; \"renovation\" là vật nên cần bị động → \"has been completed\" (hiện tại hoàn thành bị động, nhấn mạnh hoàn tất). \"completes\" là chủ động, \"had completed\" sai thì."
+      },
+      {
+        "id": "q-tcpf-3",
+        "question": "The shipment will not be released until the customer _______ the outstanding balance.",
+        "options": [
+          "will pay",
+          "would pay",
+          "pays",
+          "had paid"
+        ],
+        "answer_index": 2,
+        "explanation": "Cấu trúc \"will not … until + hiện tại đơn\" → \"pays\". Không dùng will/would trong mệnh đề sau until; \"had paid\" là quá khứ hoàn thành, sai mốc thời gian."
+      },
+      {
+        "id": "q-tcpf-4",
+        "question": "If the weather _______ favorable, the company picnic will be held at Riverside Park.",
+        "options": [
+          "will remain",
+          "remains",
+          "remained",
+          "had remained"
+        ],
+        "answer_index": 1,
+        "explanation": "Câu điều kiện loại 1: If + hiện tại đơn, S + will V → \"remains\". \"will remain\" sai vì mệnh đề if không dùng will; \"remained\", \"had remained\" thuộc điều kiện loại 2, 3."
+      },
+      {
+        "id": "q-tcpf-5",
+        "question": "By the time Mr. Chen _______ in Seoul, the presentation materials will have been printed.",
+        "options": [
+          "will arrive",
+          "arrived",
+          "will have arrived",
+          "arrives"
+        ],
+        "answer_index": 3,
+        "explanation": "\"By the time\" + hiện tại đơn khi mệnh đề chính là tương lai hoàn thành → \"arrives\". Các phương án có will sai quy tắc; \"arrived\" là quá khứ."
+      },
+      {
+        "id": "q-tcpf-6",
+        "question": "Provided that sales _______ steady, the board will approve the expansion next year.",
+        "options": [
+          "will remain",
+          "remained",
+          "remain",
+          "would remain"
+        ],
+        "answer_index": 2,
+        "explanation": "\"Provided that\" là liên từ điều kiện → động từ chia hiện tại đơn \"remain\" (chủ ngữ số nhiều \"sales\"). \"will remain\", \"would remain\" sai quy tắc; \"remained\" sai thì."
+      }
+    ]
+  },
+  {
+    "id": "tenses-signal-words",
+    "category": "tenses",
+    "title": "Bảng Dấu hiệu nhận biết Thì & Quy trình chọn thì 10 giây",
+    "subtitle": "Currently, recently, so far, over the past, by the end of, ago, already/yet – nhìn là chọn",
+    "read_time_minutes": 6,
+    "difficulty": "Cơ bản",
+    "tags": [
+      "tenses",
+      "verb-form",
+      "strategy"
+    ],
+    "overview": "Phần lớn câu chia thì trong Part 5 có sẵn một trạng từ hoặc cụm thời gian \"chỉ đường\". Học thuộc bảng dấu hiệu dưới đây và áp dụng quy trình 3 bước, bạn có thể chọn đúng thì trong khoảng 10 giây mà không cần dịch cả câu.",
+    "sections": [
+      {
+        "title": "1. Dấu hiệu nhóm Hiện tại",
+        "content": "Các trạng từ chỉ thói quen, sự thật, hoặc việc đang diễn ra ngay lúc nói.",
+        "bullet_points": [
+          "Hiện tại đơn: every day/week, usually, regularly, always, generally, each year, as a rule.",
+          "Hiện tại tiếp diễn: currently, at the moment, at present, right now, these days, this week (đang tạm thời).",
+          "Hiện tại hoàn thành: recently, lately, so far, up to now, to date, since + mốc, for + khoảng, over/in the past + khoảng, already, yet, just, ever/never.",
+          "Hiện tại hoàn thành tiếp diễn: for/since + nhấn quá trình liên tục, all morning, the whole week."
+        ],
+        "tips": [
+          "\"recently\" có thể đi với quá khứ đơn (He recently joined…) nhưng \"lately\", \"so far\", \"over the past + khoảng\" gần như luôn đi với hiện tại hoàn thành."
+        ]
+      },
+      {
+        "title": "2. Dấu hiệu nhóm Quá khứ",
+        "content": "Mốc thời gian đã kết thúc, tách biệt với hiện tại.",
+        "bullet_points": [
+          "Quá khứ đơn: yesterday, last week/month/year, ago, in 2019, when + mệnh đề quá khứ, at that time.",
+          "Quá khứ tiếp diễn: at this time yesterday, while + mệnh đề, when + hành động xen vào.",
+          "Quá khứ hoàn thành: before/after/by the time + mệnh đề quá khứ, by + mốc quá khứ (by last March)."
+        ],
+        "tips": [
+          "\"ago\" và \"last + thời gian\" KHÔNG bao giờ đi với hiện tại hoàn thành – đây là cách loại phương án has/have V3 nhanh nhất."
+        ]
+      },
+      {
+        "title": "3. Dấu hiệu nhóm Tương lai",
+        "content": "Mốc thời gian chưa tới hoặc kế hoạch sắp diễn ra.",
+        "bullet_points": [
+          "Tương lai đơn: tomorrow, next week/quarter/year, soon, in + khoảng thời gian (in two weeks), upcoming.",
+          "Tương lai tiếp diễn: at this time tomorrow, at + giờ + tomorrow.",
+          "Tương lai hoàn thành: by + mốc tương lai (by the end of next month, by 2030), by the time + hiện tại đơn.",
+          "Hiện tại tiếp diễn diễn tả lịch hẹn: \"We are meeting the client next Friday.\""
+        ],
+        "tips": [
+          "\"by the end of next quarter\" → will have V3; \"at the end of next quarter\" → thường chỉ là will V."
+        ]
+      },
+      {
+        "title": "4. Quy trình chọn thì trong 10 giây",
+        "content": "Áp dụng theo thứ tự, dừng lại ngay khi đã còn một phương án.",
+        "formula": "Bước 1: Tìm dấu hiệu thời gian → khoanh vùng Quá khứ / Hiện tại / Tương lai\nBước 2: Kiểm tra chủ ngữ số ít/số nhiều + chủ động/bị động\nBước 3: Chọn đơn / tiếp diễn / hoàn thành theo dấu hiệu cụ thể",
+        "bullet_points": [
+          "Không có dấu hiệu rõ? Nhìn động từ ở mệnh đề còn lại hoặc câu trước (Part 6) để phối thì.",
+          "Chủ ngữ là vật + ngoại động từ không có tân ngữ phía sau → chọn bị động.",
+          "Phương án là V-ing hoặc to V đứng một mình (không có trợ động từ) không thể làm động từ chính."
+        ],
+        "tips": [
+          "Trong Part 6, dấu hiệu thời gian thường nằm ở câu khác (ngày gửi email, \"next month\", \"last week\"). Đọc 1–2 câu xung quanh trước khi chọn thì."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "english": "Sales of our eco-friendly packaging have increased significantly over the past two quarters.",
+        "vietnamese": "Doanh số bao bì thân thiện môi trường của chúng tôi đã tăng đáng kể trong hai quý vừa qua.",
+        "explanation": "\"over the past two quarters\" là dấu hiệu hiện tại hoàn thành → have increased.",
+        "highlight": "have increased significantly over the past two quarters",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The IT department is currently upgrading the network in all branch offices.",
+        "vietnamese": "Phòng IT hiện đang nâng cấp mạng ở tất cả chi nhánh.",
+        "explanation": "\"currently\" → hành động đang diễn ra → hiện tại tiếp diễn.",
+        "highlight": "is currently upgrading",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Hartley Foods opened its first overseas store in Singapore five years ago.",
+        "vietnamese": "Hartley Foods mở cửa hàng nước ngoài đầu tiên ở Singapore cách đây năm năm.",
+        "explanation": "\"five years ago\" → quá khứ đơn, không dùng has opened.",
+        "highlight": "opened its first overseas store in Singapore five years ago",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "By the end of next month, the contractor will have completed the new parking garage.",
+        "vietnamese": "Tính đến cuối tháng sau, nhà thầu sẽ đã hoàn thành bãi đậu xe mới.",
+        "explanation": "\"By the end of next month\" (by + mốc tương lai) → tương lai hoàn thành.",
+        "highlight": "will have completed",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "So far, more than 300 participants have signed up for the annual charity run.",
+        "vietnamese": "Cho đến nay, đã có hơn 300 người đăng ký tham gia giải chạy từ thiện thường niên.",
+        "explanation": "\"So far\" → hiện tại hoàn thành; chủ ngữ số nhiều \"participants\" → have signed up.",
+        "highlight": "So far, more than 300 participants have signed up",
+        "part_tag": "Part 6"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q-sig-1",
+        "question": "Sales of the new tablet _______ steadily over the past six months.",
+        "options": [
+          "rise",
+          "rose",
+          "have risen",
+          "will rise"
+        ],
+        "answer_index": 2,
+        "explanation": "\"over the past six months\" là dấu hiệu hiện tại hoàn thành → \"have risen\". \"rose\" là quá khứ đơn (cần mốc đã kết thúc), \"rise\" là hiện tại đơn, \"will rise\" là tương lai."
+      },
+      {
+        "id": "q-sig-2",
+        "question": "The marketing director _______ the client's feedback at the moment, so please call back later.",
+        "options": [
+          "reviews",
+          "is reviewing",
+          "has reviewed",
+          "reviewed"
+        ],
+        "answer_index": 1,
+        "explanation": "\"at the moment\" → hành động đang diễn ra → hiện tại tiếp diễn \"is reviewing\". Các phương án khác không diễn tả việc đang diễn ra ngay lúc nói."
+      },
+      {
+        "id": "q-sig-3",
+        "question": "Haywood Logistics _______ its headquarters to Denver two years ago.",
+        "options": [
+          "moved",
+          "has moved",
+          "moves",
+          "is moving"
+        ],
+        "answer_index": 0,
+        "explanation": "\"two years ago\" → quá khứ đơn \"moved\". \"ago\" không đi với hiện tại hoàn thành \"has moved\"; \"moves\", \"is moving\" là thì hiện tại."
+      },
+      {
+        "id": "q-sig-4",
+        "question": "So far, more than 500 attendees _______ for the trade fair.",
+        "options": [
+          "register",
+          "registered",
+          "were registering",
+          "have registered"
+        ],
+        "answer_index": 3,
+        "explanation": "\"So far\" (cho đến nay) → hiện tại hoàn thành \"have registered\". \"registered\", \"were registering\" là quá khứ; \"register\" là hiện tại đơn."
+      },
+      {
+        "id": "q-sig-5",
+        "question": "By the end of next quarter, the company _______ two new branches in Asia.",
+        "options": [
+          "opens",
+          "will have opened",
+          "has opened",
+          "opened"
+        ],
+        "answer_index": 1,
+        "explanation": "\"By the end of next quarter\" (by + mốc tương lai) → tương lai hoàn thành \"will have opened\". Các phương án khác là hiện tại hoặc quá khứ."
+      },
+      {
+        "id": "q-sig-6",
+        "question": "The recruiting team has interviewed eight candidates _______, and two more interviews are scheduled for Friday.",
+        "options": [
+          "ago",
+          "so far",
+          "last week",
+          "by then"
+        ],
+        "answer_index": 1,
+        "explanation": "Động từ \"has interviewed\" là hiện tại hoàn thành → đi với \"so far\". \"ago\", \"last week\" chỉ đi với quá khứ đơn; \"by then\" cần mốc cụ thể đã nhắc trước đó và thường đi với thì hoàn thành của tương lai/quá khứ."
+      },
+      {
+        "id": "q-sig-7",
+        "question": "Currently, the IT department _______ a new security system for all branch offices.",
+        "options": [
+          "tested",
+          "will have tested",
+          "is testing",
+          "had tested"
+        ],
+        "answer_index": 2,
+        "explanation": "\"Currently\" → hiện tại tiếp diễn \"is testing\". \"tested\", \"had tested\" là quá khứ; \"will have tested\" cần mốc tương lai với by."
+      }
+    ]
   }
 ]

@@ -22,7 +22,7 @@ void main() {
 
     test('Lấy toàn bộ chủ điểm lý thuyết 5 danh mục phong phú', () {
       final topics = repo.getAllTopics();
-      expect(topics.length, 41);
+      expect(topics.length, 59);
       expect(topics.any((t) => t.category == TheoryCategory.tenses), true);
       expect(topics.any((t) => t.category == TheoryCategory.sentencePatterns), true);
       expect(topics.any((t) => t.category == TheoryCategory.partsOfSpeech), true);
@@ -30,7 +30,7 @@ void main() {
       expect(topics.any((t) => t.category == TheoryCategory.pronunciation), true);
 
       final patternTopics = repo.getTopicsByCategory(TheoryCategory.sentencePatterns);
-      expect(patternTopics.length, 18);
+      expect(patternTopics.length, 23);
     });
 
     test('Tìm bài học theo id', () {
