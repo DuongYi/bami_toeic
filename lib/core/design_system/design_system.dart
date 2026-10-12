@@ -5,6 +5,7 @@
 /// Xem `.agents/skills/bami-design-system/SKILL.md` để biết quy tắc sử dụng.
 library;
 
+export 'components/annotation_overlay.dart';
 export 'components/app_banner.dart';
 export 'components/app_bottom_bar.dart';
 export 'components/app_button.dart';

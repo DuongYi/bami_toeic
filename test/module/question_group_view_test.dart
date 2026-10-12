@@ -1,6 +1,7 @@
 import 'package:bami_toeic/core/design_system/design_system.dart';
 import 'package:bami_toeic/module/test/data/models/test_models.dart';
 import 'package:bami_toeic/module/test/presentation/widgets/question_group_view.dart';
+import 'package:bami_toeic/module/vocab/presentation/widgets/word_lookup_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -143,6 +144,192 @@ void main() {
       await tester.pump();
 
       expect(find.text('Chưa có câu nào được đánh dấu cờ.'), findsOneWidget);
+    });
+  });
+
+  group('QuestionGroupView Apple Pencil Annotation Overlay Test', () {
+    testWidgets('Hiển thị thanh bút nổi Apple Pencil và cho phép gập mở công cụ vẽ', (tester) async {
+      await tester.pumpWidget(
+        _wrap(
+          QuestionGroupView(
+            group: sampleGroup,
+            answers: const {},
+            showAudio: false,
+            onSelect: (q, letter) {},
+          ),
+          size: const Size(1024, 768),
+        ),
+      );
+      await tester.pump();
+
+      // Kiểm tra có AnnotationOverlay
+      expect(find.byType(AnnotationOverlay), findsOneWidget);
+
+      // Nút mở bút vẽ nổi
+      final openPencilBtn = find.byTooltip('Mở bút viết Apple Pencil');
+      expect(openPencilBtn, findsOneWidget);
+
+      // Chạm mở thanh công cụ bút
+      await tester.tap(openPencilBtn);
+      await tester.pumpAndSettle();
+
+      // Kiểm tra các công cụ vẽ xuất hiện
+      expect(find.byTooltip('Chạm chọn & cuộn'), findsOneWidget);
+      expect(find.byTooltip('Bút mực'), findsOneWidget);
+      expect(find.byTooltip('Bút dạ quang (Highlight)'), findsOneWidget);
+      expect(find.byTooltip('Tẩy nét vẽ'), findsOneWidget);
+      expect(find.byTooltip('Hoàn tác (Undo)'), findsOneWidget);
+      expect(find.byTooltip('Xoá tất cả nét vẽ'), findsOneWidget);
+
+      // Khi mở thanh bút, mặc định chuyển sang Bút mực và khoá cuộn màn hình
+      expect(find.text('Đã khoá cuộn'), findsOneWidget);
+
+      // Chạm chọn bút dạ quang
+      await tester.tap(find.byTooltip('Bút dạ quang (Highlight)'));
+      await tester.pump();
+      expect(find.text('Đã khoá cuộn'), findsOneWidget);
+
+      // Chạm chọn lại chế độ Chạm & cuộn
+      await tester.tap(find.byTooltip('Chạm chọn & cuộn'));
+      await tester.pump();
+      expect(find.text('Đã khoá cuộn'), findsNothing);
+
+      // Thu gọn thanh công cụ bút
+      final closePencilBtn = find.byTooltip('Thu nhỏ bút');
+      expect(closePencilBtn, findsOneWidget);
+      await tester.tap(closePencilBtn);
+      await tester.pumpAndSettle();
+
+      expect(find.byTooltip('Bút dạ quang (Highlight)'), findsNothing);
+    });
+  });
+
+  group('Text Highlighting Tests', () {
+    const highlightStyle = TextStyle(
+      backgroundColor: Color(0xFFFEF08A),
+      color: Color(0xFF854D0E),
+      fontWeight: FontWeight.w600,
+    );
+
+    test('buildHighlightedSpans splits and highlights keywords accurately', () {
+      const text = 'Where is the announcement being made?';
+      final spans = buildHighlightedSpans(
+        text,
+        {'being'},
+        highlightStyle: highlightStyle,
+      );
+
+      expect(spans.length, 3);
+      expect((spans[0] as TextSpan).text, 'Where is the announcement ');
+      expect((spans[0] as TextSpan).style?.backgroundColor, isNull);
+
+      expect((spans[1] as TextSpan).text, 'being');
+      expect((spans[1] as TextSpan).style?.backgroundColor, const Color(0xFFFEF08A));
+
+      expect((spans[2] as TextSpan).text, ' made?');
+      expect((spans[2] as TextSpan).style?.backgroundColor, isNull);
+    });
+
+    test('buildHighlightedSpans preserves bold prefix for question numbers', () {
+      const text = '71. Where is the announcement being made?';
+      final spans = buildHighlightedSpans(
+        text,
+        {'being'},
+        highlightStyle: highlightStyle,
+        boldPrefixLength: 4, // '71. '
+      );
+
+      expect(spans.length, 4);
+      expect((spans[0] as TextSpan).text, '71. ');
+      expect((spans[0] as TextSpan).style?.fontWeight, FontWeight.bold);
+
+      expect((spans[1] as TextSpan).text, 'Where is the announcement ');
+      expect((spans[2] as TextSpan).text, 'being');
+      expect((spans[2] as TextSpan).style?.backgroundColor, const Color(0xFFFEF08A));
+      expect((spans[3] as TextSpan).text, ' made?');
+    });
+
+    test('buildHighlightedSpans prioritizes longer phrases to prevent overlap fragmentation', () {
+      const text = 'Flight 302 to Tokyo';
+      final spans = buildHighlightedSpans(
+        text,
+        {'Flight', 'Flight 302'},
+        highlightStyle: highlightStyle,
+      );
+
+      expect(spans.length, 2);
+      expect((spans[0] as TextSpan).text, 'Flight 302');
+      expect((spans[0] as TextSpan).style?.backgroundColor, const Color(0xFFFEF08A));
+      expect((spans[1] as TextSpan).text, ' to Tokyo');
+    });
+
+    testWidgets('QuestionGroupView manages static highlights per group', (tester) async {
+      QuestionGroupView.clearHighlights();
+
+      await tester.pumpWidget(
+        _wrap(
+          QuestionGroupView(
+            group: sampleGroup,
+            answers: const {},
+            showAudio: false,
+          ),
+        ),
+      );
+      await tester.pump();
+
+      // Ban đầu chưa có highlight
+      expect(QuestionGroupView.getHighlights('g1', 'passage'), isEmpty);
+
+      // Thêm highlight cho passage
+      QuestionGroupView.clearHighlights();
+      expect(QuestionGroupView.getHighlights('g1', 'passage'), isEmpty);
+    });
+
+    testWidgets('lookupContextMenu provides Highlight and Tra từ in button items', (tester) async {
+      String? toggled;
+      bool isHl = false;
+
+      final controller = TextEditingController(text: 'Where is the announcement being made?');
+      controller.selection = const TextSelection(baseOffset: 26, extentOffset: 31); // 'being'
+
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: Builder(
+              builder: (ctx) {
+                return TextField(
+                  controller: controller,
+                  contextMenuBuilder: lookupContextMenu(
+                    ctx,
+                    isHighlighted: (text) => isHl,
+                    onToggleHighlight: (text) => toggled = text,
+                  ),
+                );
+              },
+            ),
+          ),
+        ),
+      );
+      await tester.pump();
+
+      // Long press / tap to show context menu toolbar
+      final textField = find.byType(TextField);
+      await tester.longPress(textField);
+      await tester.pumpAndSettle();
+
+      expect(find.text('Tra từ'), findsOneWidget);
+      expect(find.text('Highlight'), findsOneWidget);
+
+      // Tap Highlight
+      await tester.tap(find.text('Highlight'));
+      await tester.pumpAndSettle();
+      expect(toggled, 'announcement');
+
+      // Khi từ đã highlight, context menu hiển thị "Bỏ highlight"
+      isHl = true;
+      await tester.longPress(textField);
+      await tester.pumpAndSettle();
+      expect(find.text('Bỏ highlight'), findsOneWidget);
     });
   });
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/design_system/design_system.dart';
 import '../../../../core/media/media_image.dart';
+import '../../../vocab/presentation/widgets/word_lookup_sheet.dart';
 import '../../data/models/test_models.dart';
 import 'audio_bar.dart';
 
@@ -15,9 +16,134 @@ const partNames = {
   7: 'Part 7 · Đọc hiểu',
 };
 
+/// Tách chuỗi [fullText] thành các [InlineSpan], tô màu các cụm từ trong [highlights]
+/// bằng [highlightStyle]. Hỗ trợ giữ in đậm [boldPrefixLength] ký tự đầu (vd: số thứ tự câu).
+List<InlineSpan> buildHighlightedSpans(
+  String fullText,
+  Set<String> highlights, {
+  TextStyle? defaultStyle,
+  required TextStyle highlightStyle,
+  int boldPrefixLength = 0,
+}) {
+  if (fullText.isEmpty) return const [];
+
+  final cleanHighlights = highlights
+      .map((e) => e.trim())
+      .where((e) => e.isNotEmpty)
+      .toSet();
+
+  TextStyle styleForRange(int start, int end, bool isHighlighted) {
+    final isPrefix = start < boldPrefixLength;
+    var style = defaultStyle ?? const TextStyle();
+    if (isPrefix) {
+      style = style.copyWith(fontWeight: FontWeight.bold);
+    }
+    if (isHighlighted) {
+      style = style.merge(highlightStyle);
+      if (isPrefix) {
+        style = style.copyWith(fontWeight: FontWeight.bold);
+      }
+    }
+    return style;
+  }
+
+  if (cleanHighlights.isEmpty) {
+    if (boldPrefixLength > 0 && boldPrefixLength < fullText.length) {
+      return [
+        TextSpan(
+          text: fullText.substring(0, boldPrefixLength),
+          style: styleForRange(0, boldPrefixLength, false),
+        ),
+        TextSpan(
+          text: fullText.substring(boldPrefixLength),
+          style: styleForRange(boldPrefixLength, fullText.length, false),
+        ),
+      ];
+    }
+    return [
+      TextSpan(
+        text: fullText,
+        style: styleForRange(0, fullText.length, false),
+      ),
+    ];
+  }
+
+  // Sắp xếp các cụm từ theo chiều dài giảm dần để ưu tiên cụm từ dài hơn (tránh cắt vụn)
+  final terms = cleanHighlights.toList()
+    ..sort((a, b) => b.length.compareTo(a.length));
+
+  final occupied = List<bool>.filled(fullText.length, false);
+  final ranges = <({int start, int end})>[];
+  final lowerText = fullText.toLowerCase();
+
+  for (final term in terms) {
+    final lowerTerm = term.toLowerCase();
+    int startIndex = 0;
+    while (startIndex < fullText.length) {
+      final matchIndex = lowerText.indexOf(lowerTerm, startIndex);
+      if (matchIndex == -1) break;
+      final matchEnd = matchIndex + term.length;
+
+      bool overlaps = false;
+      for (int i = matchIndex; i < matchEnd; i++) {
+        if (occupied[i]) {
+          overlaps = true;
+          break;
+        }
+      }
+
+      if (!overlaps) {
+        for (int i = matchIndex; i < matchEnd; i++) {
+          occupied[i] = true;
+        }
+        ranges.add((start: matchIndex, end: matchEnd));
+      }
+
+      startIndex = matchIndex + 1;
+    }
+  }
+
+  ranges.sort((a, b) => a.start.compareTo(b.start));
+
+  final spans = <InlineSpan>[];
+  int current = 0;
+
+  void addSegment(int start, int end, bool isHighlighted) {
+    if (start >= end) return;
+    if (start < boldPrefixLength && end > boldPrefixLength) {
+      spans.add(TextSpan(
+        text: fullText.substring(start, boldPrefixLength),
+        style: styleForRange(start, boldPrefixLength, isHighlighted),
+      ));
+      spans.add(TextSpan(
+        text: fullText.substring(boldPrefixLength, end),
+        style: styleForRange(boldPrefixLength, end, isHighlighted),
+      ));
+    } else {
+      spans.add(TextSpan(
+        text: fullText.substring(start, end),
+        style: styleForRange(start, end, isHighlighted),
+      ));
+    }
+  }
+
+  for (final r in ranges) {
+    if (current < r.start) {
+      addSegment(current, r.start, false);
+    }
+    addSegment(r.start, r.end, true);
+    current = r.end;
+  }
+  if (current < fullText.length) {
+    addSegment(current, fullText.length, false);
+  }
+
+  return spans;
+}
+
 /// Hiển thị một nhóm câu hỏi: audio, ảnh, đoạn văn và các câu hỏi.
 /// Hỗ trợ chia 2/3 (ngữ cảnh + câu hỏi) và 1/3 (câu trả lời / phiếu đáp án) khi quay ngang iPad.
-class QuestionGroupView extends StatelessWidget {
+class QuestionGroupView extends StatefulWidget {
   const QuestionGroupView({
     super.key,
     required this.group,
@@ -53,13 +179,72 @@ class QuestionGroupView extends StatelessWidget {
   final bool Function(Question q)? isFlagged;
   final void Function(Question q)? onToggleFlag;
 
-  /// Menu khi bôi đen chữ (vd. thêm "Tra từ"); null = menu mặc định.
+  /// Menu khi bôi đen chữ (vd. thêm "Tra từ"); null = menu mặc định kèm Tra từ + Highlight.
   final EditableTextContextMenuBuilder? contextMenuBuilder;
 
   /// Dành cho chế độ iPad Split View: hỗ trợ xem toàn bài & nhảy câu
   final List<QuestionGroup>? allGroups;
   final int? currentGroupIndex;
   final ValueChanged<int>? onJumpToGroup;
+
+  static final _groupAnnotations = <String, List<DrawStroke>>{};
+  static final _groupHighlights = <String, Map<String, Set<String>>>{};
+
+  /// Xoá highlight của 1 group hoặc toàn bộ (cho unit test hoặc bắt đầu lượt thi mới)
+  static void clearHighlights([String? groupId]) {
+    if (groupId != null) {
+      _groupHighlights.remove(groupId);
+    } else {
+      _groupHighlights.clear();
+    }
+  }
+
+  /// Lấy danh sách từ/cụm từ đang được highlight của group và target tương ứng
+  static Set<String> getHighlights(String groupId, String target) {
+    return _groupHighlights[groupId]?[target] ?? const {};
+  }
+
+  @override
+  State<QuestionGroupView> createState() => _QuestionGroupViewState();
+}
+
+class _QuestionGroupViewState extends State<QuestionGroupView> {
+  Set<String> _getHighlightsFor(String target) {
+    return QuestionGroupView._groupHighlights[widget.group.id]?[target] ?? const {};
+  }
+
+  bool _isHighlighted(String target, String text) {
+    final clean = text.trim().toLowerCase();
+    if (clean.isEmpty) return false;
+    final set = _getHighlightsFor(target);
+    return set.any((item) => item.trim().toLowerCase() == clean);
+  }
+
+  void _toggleHighlight(String target, String text) {
+    final clean = text.trim();
+    if (clean.isEmpty) return;
+    final groupMap = QuestionGroupView._groupHighlights.putIfAbsent(
+      widget.group.id,
+      () => <String, Set<String>>{},
+    );
+    final set = groupMap.putIfAbsent(target, () => <String>{});
+    final lower = clean.toLowerCase();
+
+    if (set.any((item) => item.toLowerCase() == lower)) {
+      set.removeWhere((item) => item.toLowerCase() == lower);
+    } else {
+      set.add(clean);
+    }
+    setState(() {});
+  }
+
+  EditableTextContextMenuBuilder _buildContextMenu(BuildContext context, String target) {
+    return lookupContextMenu(
+      context,
+      isHighlighted: (text) => _isHighlighted(target, text),
+      onToggleHighlight: (text) => _toggleHighlight(target, text),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -68,27 +253,43 @@ class QuestionGroupView extends StatelessWidget {
     // Kích hoạt split screen khi màn hình xoay ngang và chiều rộng đủ lớn (iPad / tablet / web landscape)
     final isSplitLayout = isLandscape && media.width >= 700;
 
+    final warningTone = AppTone.warning.colorsOf(context);
+    final highlightStyle = TextStyle(
+      backgroundColor: warningTone.container,
+      color: warningTone.onContainer,
+      fontWeight: FontWeight.w600,
+    );
+
+    final mainContent = isSplitLayout
+        ? _buildSplitLayout(context, highlightStyle)
+        : _buildSingleColumnLayout(context, highlightStyle);
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         // Audio Header ghim cố định ở đỉnh màn hình:
         // KHÔNG BAO GIỜ bị cuộn trôi đi, KHÔNG BAO GIỜ bị ngắt hay phát lại từ đầu khi scroll!
-        if (showAudio && group.audioUrl != null)
+        if (widget.showAudio && widget.group.audioUrl != null)
           _StickyAudioBar(
-            url: group.audioUrl!,
-            autoPlay: autoPlayAudio,
+            url: widget.group.audioUrl!,
+            autoPlay: widget.autoPlayAudio,
           ),
         Expanded(
-          child: isSplitLayout
-              ? _buildSplitLayout(context)
-              : _buildSingleColumnLayout(context),
+          child: AnnotationOverlay(
+            key: ValueKey('annot_${widget.group.id}'),
+            initialStrokes: QuestionGroupView._groupAnnotations[widget.group.id] ?? const [],
+            onStrokesChanged: (strokes) => QuestionGroupView._groupAnnotations[widget.group.id] = strokes,
+            child: mainContent,
+          ),
         ),
       ],
     );
   }
 
   /// Bố cục chia 2/3 (nội dung đề) & 1/3 (câu trả lời / phiếu đáp án) tối ưu cho iPad quay ngang
-  Widget _buildSplitLayout(BuildContext context) {
+  Widget _buildSplitLayout(BuildContext context, TextStyle highlightStyle) {
+    final scrollPhysics = AnnotationScope.maybeOf(context)?.scrollPhysics;
+    final group = widget.group;
     return Row(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -96,6 +297,7 @@ class QuestionGroupView extends StatelessWidget {
         Expanded(
           flex: 2,
           child: ListView(
+            physics: scrollPhysics,
             padding: const EdgeInsets.fromLTRB(
               AppSpacing.screen,
               AppSpacing.s12,
@@ -123,35 +325,50 @@ class QuestionGroupView extends StatelessWidget {
               ],
               if (group.passage != null && group.passage!.trim().isNotEmpty) ...[
                 AppCard(
-                  child: SelectableText(
-                    group.passage!,
+                  child: SelectableText.rich(
+                    TextSpan(
+                      children: buildHighlightedSpans(
+                        group.passage!,
+                        _getHighlightsFor('passage'),
+                        defaultStyle: context.textStyles.bodyLarge,
+                        highlightStyle: highlightStyle,
+                      ),
+                    ),
                     style: context.textStyles.bodyLarge,
-                    contextMenuBuilder: contextMenuBuilder,
+                    contextMenuBuilder: _buildContextMenu(context, 'passage'),
                   ),
                 ),
                 Gaps.v12,
               ],
-              if (showTranscript && group.transcript != null)
+              if (widget.showTranscript && group.transcript != null)
                 ExpansionTile(
                   title: const Text('Transcript'),
                   tilePadding: EdgeInsets.zero,
                   childrenPadding: const EdgeInsets.only(bottom: AppSpacing.s12),
                   children: [
-                    SelectableText(
-                      group.transcript!,
-                      contextMenuBuilder: contextMenuBuilder,
+                    SelectableText.rich(
+                      TextSpan(
+                        children: buildHighlightedSpans(
+                          group.transcript!,
+                          _getHighlightsFor('transcript'),
+                          highlightStyle: highlightStyle,
+                        ),
+                      ),
+                      contextMenuBuilder: _buildContextMenu(context, 'transcript'),
                     ),
                   ],
                 ),
               for (final q in group.questions)
                 _QuestionTile(
                   question: q,
-                  chosen: answers[q.id],
-                  onSelect: onSelect,
-                  revealed: isRevealed?.call(q) ?? false,
-                  flagged: isFlagged?.call(q) ?? false,
-                  onToggleFlag: onToggleFlag,
-                  contextMenuBuilder: contextMenuBuilder,
+                  chosen: widget.answers[q.id],
+                  onSelect: widget.onSelect,
+                  revealed: widget.isRevealed?.call(q) ?? false,
+                  flagged: widget.isFlagged?.call(q) ?? false,
+                  onToggleFlag: widget.onToggleFlag,
+                  contextMenuBuilder: _buildContextMenu(context, 'q_${q.id}'),
+                  highlights: _getHighlightsFor('q_${q.id}'),
+                  highlightStyle: highlightStyle,
                 ),
             ],
           ),
@@ -166,14 +383,14 @@ class QuestionGroupView extends StatelessWidget {
           flex: 1,
           child: _AnswerSheetColumn(
             group: group,
-            allGroups: allGroups,
-            currentGroupIndex: currentGroupIndex,
-            onJumpToGroup: onJumpToGroup,
-            answers: answers,
-            onSelect: onSelect,
-            isRevealed: isRevealed,
-            isFlagged: isFlagged,
-            onToggleFlag: onToggleFlag,
+            allGroups: widget.allGroups,
+            currentGroupIndex: widget.currentGroupIndex,
+            onJumpToGroup: widget.onJumpToGroup,
+            answers: widget.answers,
+            onSelect: widget.onSelect,
+            isRevealed: widget.isRevealed,
+            isFlagged: widget.isFlagged,
+            onToggleFlag: widget.onToggleFlag,
           ),
         ),
       ],
@@ -181,8 +398,11 @@ class QuestionGroupView extends StatelessWidget {
   }
 
   /// Bố cục 1 cột truyền thống cho điện thoại hoặc iPad chế độ dọc
-  Widget _buildSingleColumnLayout(BuildContext context) {
+  Widget _buildSingleColumnLayout(BuildContext context, TextStyle highlightStyle) {
+    final scrollPhysics = AnnotationScope.maybeOf(context)?.scrollPhysics;
+    final group = widget.group;
     return ListView(
+      physics: scrollPhysics,
       padding: const EdgeInsets.fromLTRB(
         AppSpacing.screen,
         AppSpacing.s8,
@@ -210,35 +430,50 @@ class QuestionGroupView extends StatelessWidget {
         ],
         if (group.passage != null && group.passage!.trim().isNotEmpty) ...[
           AppCard(
-            child: SelectableText(
-              group.passage!,
+            child: SelectableText.rich(
+              TextSpan(
+                children: buildHighlightedSpans(
+                  group.passage!,
+                  _getHighlightsFor('passage'),
+                  defaultStyle: context.textStyles.bodyLarge,
+                  highlightStyle: highlightStyle,
+                ),
+              ),
               style: context.textStyles.bodyLarge,
-              contextMenuBuilder: contextMenuBuilder,
+              contextMenuBuilder: _buildContextMenu(context, 'passage'),
             ),
           ),
           Gaps.v12,
         ],
-        if (showTranscript && group.transcript != null)
+        if (widget.showTranscript && group.transcript != null)
           ExpansionTile(
             title: const Text('Transcript'),
             tilePadding: EdgeInsets.zero,
             childrenPadding: const EdgeInsets.only(bottom: AppSpacing.s12),
             children: [
-              SelectableText(
-                group.transcript!,
-                contextMenuBuilder: contextMenuBuilder,
+              SelectableText.rich(
+                TextSpan(
+                  children: buildHighlightedSpans(
+                    group.transcript!,
+                    _getHighlightsFor('transcript'),
+                    highlightStyle: highlightStyle,
+                  ),
+                ),
+                contextMenuBuilder: _buildContextMenu(context, 'transcript'),
               ),
             ],
           ),
         for (final q in group.questions)
           _QuestionTile(
             question: q,
-            chosen: answers[q.id],
-            onSelect: onSelect,
-            revealed: isRevealed?.call(q) ?? false,
-            flagged: isFlagged?.call(q) ?? false,
-            onToggleFlag: onToggleFlag,
-            contextMenuBuilder: contextMenuBuilder,
+            chosen: widget.answers[q.id],
+            onSelect: widget.onSelect,
+            revealed: widget.isRevealed?.call(q) ?? false,
+            flagged: widget.isFlagged?.call(q) ?? false,
+            onToggleFlag: widget.onToggleFlag,
+            contextMenuBuilder: _buildContextMenu(context, 'q_${q.id}'),
+            highlights: _getHighlightsFor('q_${q.id}'),
+            highlightStyle: highlightStyle,
           ),
       ],
     );
@@ -523,7 +758,9 @@ class _AnswerSheetColumnState extends State<_AnswerSheetColumn> {
       );
     }
 
+    final scrollPhysics = AnnotationScope.maybeOf(context)?.scrollPhysics;
     return ListView.builder(
+      physics: scrollPhysics,
       padding: const EdgeInsets.symmetric(
         vertical: AppSpacing.s8,
         horizontal: AppSpacing.s12,
@@ -670,6 +907,8 @@ class _QuestionTile extends StatelessWidget {
     this.flagged = false,
     this.onToggleFlag,
     this.contextMenuBuilder,
+    this.highlights = const {},
+    this.highlightStyle,
   });
 
   final Question question;
@@ -679,10 +918,21 @@ class _QuestionTile extends StatelessWidget {
   final bool flagged;
   final void Function(Question q)? onToggleFlag;
   final EditableTextContextMenuBuilder? contextMenuBuilder;
+  final Set<String> highlights;
+  final TextStyle? highlightStyle;
 
   @override
   Widget build(BuildContext context) {
     final q = question;
+    final warningTone = AppTone.warning.colorsOf(context);
+    final hlStyle = highlightStyle ??
+        TextStyle(
+          backgroundColor: warningTone.container,
+          color: warningTone.onContainer,
+          fontWeight: FontWeight.w600,
+        );
+
+    final fullQuestionText = '${q.number}. ${q.content ?? ''}';
 
     return Padding(
       padding: EdgeInsets.zero,
@@ -698,13 +948,13 @@ class _QuestionTile extends StatelessWidget {
                   child: SelectableText.rich(
                     contextMenuBuilder: contextMenuBuilder,
                     TextSpan(
-                      children: [
-                        TextSpan(
-                          text: '${q.number}. ',
-                          style: const TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        if (q.content != null) TextSpan(text: q.content),
-                      ],
+                      children: buildHighlightedSpans(
+                        fullQuestionText,
+                        highlights,
+                        defaultStyle: context.textStyles.titleMedium?.copyWith(fontWeight: FontWeight.w400),
+                        highlightStyle: hlStyle,
+                        boldPrefixLength: '${q.number}. '.length,
+                      ),
                     ),
                     style: context.textStyles.titleMedium?.copyWith(fontWeight: FontWeight.w400),
                   ),

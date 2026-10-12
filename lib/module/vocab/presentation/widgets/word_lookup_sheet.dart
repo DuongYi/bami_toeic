@@ -11,10 +11,15 @@ import '../../data/vocab_decks.dart';
 import '../pages/vocab_form_sheet.dart';
 import 'word_detail_sheet.dart';
 
-/// Menu bôi đen chữ có thêm nút "Tra từ" (dùng cho SelectableText trong đề).
-EditableTextContextMenuBuilder lookupContextMenu(BuildContext pageContext) => (context, state) {
+/// Menu bôi đen chữ có thêm nút "Tra từ" và "Highlight" (dùng cho SelectableText trong đề).
+EditableTextContextMenuBuilder lookupContextMenu(
+  BuildContext pageContext, {
+  bool Function(String text)? isHighlighted,
+  void Function(String text)? onToggleHighlight,
+}) => (context, state) {
   final value = state.textEditingValue;
   final selected = value.selection.textInside(value.text).trim();
+  final isHl = isHighlighted?.call(selected) ?? false;
   return AdaptiveTextSelectionToolbar.buttonItems(
     anchors: state.contextMenuAnchors,
     buttonItems: [
@@ -25,6 +30,15 @@ EditableTextContextMenuBuilder lookupContextMenu(BuildContext pageContext) => (c
             ContextMenuController.removeAny();
             state.hideToolbar();
             showWordLookup(pageContext, selected);
+          },
+        ),
+      if (selected.isNotEmpty && onToggleHighlight != null)
+        ContextMenuButtonItem(
+          label: isHl ? 'Bỏ highlight' : 'Highlight',
+          onPressed: () {
+            ContextMenuController.removeAny();
+            state.hideToolbar();
+            onToggleHighlight(selected);
           },
         ),
       ...state.contextMenuButtonItems,
