@@ -455,6 +455,8 @@ class _BottomNav extends ConsumerWidget {
   }
 }
 
+enum _PaletteFilter { all, flagged, unanswered }
+
 /// Bảng chọn câu: lưới số câu (nhảy nhanh) hoặc phiếu tô kiểu OMR (tô thẳng đáp án).
 class _QuestionPalette extends ConsumerStatefulWidget {
   const _QuestionPalette({required this.provider, required this.onJump});
@@ -468,6 +470,7 @@ class _QuestionPalette extends ConsumerStatefulWidget {
 
 class _QuestionPaletteState extends ConsumerState<_QuestionPalette> {
   bool _omr = false;
+  _PaletteFilter _filter = _PaletteFilter.all;
 
   @override
   Widget build(BuildContext context) {
@@ -486,6 +489,16 @@ class _QuestionPaletteState extends ConsumerState<_QuestionPalette> {
       for (final (gi, g) in groups.indexed)
         for (final q in g.questions) (gi, q),
     ];
+    final unansweredCount = entries.where((e) => !answers.containsKey(e.$2.id)).length;
+    final filteredEntries = entries.where((e) {
+      final (_, q) = e;
+      return switch (_filter) {
+        _PaletteFilter.all => true,
+        _PaletteFilter.flagged => flagged.contains(q.id),
+        _PaletteFilter.unanswered => !answers.containsKey(q.id),
+      };
+    }).toList();
+
     return DraggableScrollableSheet(
       expand: false,
       initialChildSize: 0.6,
@@ -497,7 +510,7 @@ class _QuestionPaletteState extends ConsumerState<_QuestionPalette> {
               AppSpacing.screen,
               0,
               AppSpacing.screen,
-              AppSpacing.s12,
+              AppSpacing.s8,
             ),
             child: SegmentedButton<bool>(
               segments: const [
@@ -516,56 +529,112 @@ class _QuestionPaletteState extends ConsumerState<_QuestionPalette> {
               onSelectionChanged: (v) => setState(() => _omr = v.first),
             ),
           ),
-          Expanded(
-            child: _omr
-                ? ListView.builder(
-                    controller: scroll,
-                    padding: const EdgeInsets.fromLTRB(
-                      AppSpacing.screen,
-                      0,
-                      AppSpacing.screen,
-                      AppSpacing.s24,
-                    ),
-                    itemCount: entries.length,
-                    itemBuilder: (context, i) {
-                      final (gi, q) = entries[i];
-                      return _OmrRow(
-                        question: q,
-                        chosen: answers[q.id],
-                        locked: revealed.contains(q.id),
-                        flagged: flagged.contains(q.id),
-                        onJump: () => widget.onJump(gi),
-                        onSelect: (letter) => ref.read(widget.provider.notifier).select(q, letter),
-                      );
-                    },
-                  )
-                : SingleChildScrollView(
-                    controller: scroll,
-                    padding: const EdgeInsets.fromLTRB(
-                      AppSpacing.screen,
-                      0,
-                      AppSpacing.screen,
-                      AppSpacing.s24,
-                    ),
-                    child: Wrap(
-                      spacing: AppSpacing.s8,
-                      runSpacing: AppSpacing.s8,
-                      children: [
-                        for (final (gi, q) in entries)
-                          NumberCell(
-                            number: q.number,
-                            filled: answers.containsKey(q.id),
-                            current: gi == index,
-                            flagged: flagged.contains(q.id),
-                            semanticLabel:
-                                'Câu ${q.number}, '
-                                '${answers.containsKey(q.id) ? 'đã trả lời' : 'chưa trả lời'}'
-                                '${flagged.contains(q.id) ? ', đã đánh dấu' : ''}',
-                            onTap: () => widget.onJump(gi),
-                          ),
-                      ],
-                    ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.fromLTRB(
+              AppSpacing.screen,
+              0,
+              AppSpacing.screen,
+              AppSpacing.s12,
+            ),
+            child: Row(
+              children: [
+                FilterChip(
+                  label: Text('Tất cả (${entries.length})'),
+                  selected: _filter == _PaletteFilter.all,
+                  onSelected: (_) => setState(() => _filter = _PaletteFilter.all),
+                ),
+                Gaps.h8,
+                FilterChip(
+                  avatar: Icon(
+                    Icons.flag_rounded,
+                    size: AppSizes.iconSm,
+                    color: _filter == _PaletteFilter.flagged
+                        ? null
+                        : AppTone.warning.colorsOf(context).main,
                   ),
+                  label: Text('Đã đánh dấu (${flagged.length})'),
+                  selected: _filter == _PaletteFilter.flagged,
+                  onSelected: (_) => setState(() => _filter = _PaletteFilter.flagged),
+                ),
+                Gaps.h8,
+                FilterChip(
+                  avatar: const Icon(
+                    Icons.radio_button_unchecked_rounded,
+                    size: AppSizes.iconSm,
+                  ),
+                  label: Text('Chưa làm ($unansweredCount)'),
+                  selected: _filter == _PaletteFilter.unanswered,
+                  onSelected: (_) => setState(() => _filter = _PaletteFilter.unanswered),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: filteredEntries.isEmpty
+                ? Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(AppSpacing.s24),
+                      child: AppEmptyView(
+                        icon: _filter == _PaletteFilter.flagged
+                            ? Icons.outlined_flag_rounded
+                            : Icons.check_circle_outline_rounded,
+                        message: _filter == _PaletteFilter.flagged
+                            ? 'Chưa có câu nào được đánh dấu.\nChạm biểu tượng cờ ở góc câu hỏi để đánh dấu xem lại.'
+                            : 'Bạn đã làm hết tất cả các câu!',
+                      ),
+                    ),
+                  )
+                : _omr
+                    ? ListView.builder(
+                        controller: scroll,
+                        padding: const EdgeInsets.fromLTRB(
+                          AppSpacing.screen,
+                          0,
+                          AppSpacing.screen,
+                          AppSpacing.s24,
+                        ),
+                        itemCount: filteredEntries.length,
+                        itemBuilder: (context, i) {
+                          final (gi, q) = filteredEntries[i];
+                          return _OmrRow(
+                            question: q,
+                            chosen: answers[q.id],
+                            locked: revealed.contains(q.id),
+                            flagged: flagged.contains(q.id),
+                            onJump: () => widget.onJump(gi),
+                            onSelect: (letter) =>
+                                ref.read(widget.provider.notifier).select(q, letter),
+                          );
+                        },
+                      )
+                    : SingleChildScrollView(
+                        controller: scroll,
+                        padding: const EdgeInsets.fromLTRB(
+                          AppSpacing.screen,
+                          0,
+                          AppSpacing.screen,
+                          AppSpacing.s24,
+                        ),
+                        child: Wrap(
+                          spacing: AppSpacing.s8,
+                          runSpacing: AppSpacing.s8,
+                          children: [
+                            for (final (gi, q) in filteredEntries)
+                              NumberCell(
+                                number: q.number,
+                                filled: answers.containsKey(q.id),
+                                current: gi == index,
+                                flagged: flagged.contains(q.id),
+                                semanticLabel:
+                                    'Câu ${q.number}, '
+                                    '${answers.containsKey(q.id) ? 'đã trả lời' : 'chưa trả lời'}'
+                                    '${flagged.contains(q.id) ? ', đã đánh dấu' : ''}',
+                                onTap: () => widget.onJump(gi),
+                              ),
+                          ],
+                        ),
+                      ),
           ),
         ],
       ),

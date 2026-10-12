@@ -311,6 +311,7 @@ class _AnswerSheetColumn extends StatefulWidget {
 
 class _AnswerSheetColumnState extends State<_AnswerSheetColumn> {
   bool _showAllOmr = false;
+  bool _showOnlyFlaggedOmr = false;
 
   @override
   Widget build(BuildContext context) {
@@ -364,11 +365,25 @@ class _AnswerSheetColumnState extends State<_AnswerSheetColumn> {
                     ],
                   ),
                 ),
+                if (_showAllOmr)
+                  IconButton(
+                    tooltip: _showOnlyFlaggedOmr ? 'Hiện tất cả' : 'Chỉ xem câu đánh dấu',
+                    isSelected: _showOnlyFlaggedOmr,
+                    icon: const Icon(Icons.outlined_flag_rounded),
+                    selectedIcon: Icon(
+                      Icons.flag_rounded,
+                      color: AppTone.warning.colorsOf(context).main,
+                    ),
+                    onPressed: () => setState(() => _showOnlyFlaggedOmr = !_showOnlyFlaggedOmr),
+                  ),
                 if (widget.allGroups != null && widget.onJumpToGroup != null)
                   IconButton(
                     tooltip: _showAllOmr ? 'Xem câu nhóm này' : 'Xem phiếu toàn bài',
                     icon: Icon(_showAllOmr ? Icons.view_headline_rounded : Icons.grid_view_rounded),
-                    onPressed: () => setState(() => _showAllOmr = !_showAllOmr),
+                    onPressed: () => setState(() {
+                      _showAllOmr = !_showAllOmr;
+                      if (!_showAllOmr) _showOnlyFlaggedOmr = false;
+                    }),
                   ),
               ],
             ),
@@ -491,8 +506,22 @@ class _AnswerSheetColumnState extends State<_AnswerSheetColumn> {
     final allGroups = widget.allGroups!;
     final entries = [
       for (final (gi, g) in allGroups.indexed)
-        for (final q in g.questions) (gi, q),
+        for (final q in g.questions)
+          if (!_showOnlyFlaggedOmr || (widget.isFlagged?.call(q) ?? false))
+            (gi, q),
     ];
+
+    if (entries.isEmpty && _showOnlyFlaggedOmr) {
+      return const Center(
+        child: Padding(
+          padding: EdgeInsets.all(AppSpacing.s16),
+          child: AppEmptyView(
+            icon: Icons.outlined_flag_rounded,
+            message: 'Chưa có câu nào được đánh dấu cờ.',
+          ),
+        ),
+      );
+    }
 
     return ListView.builder(
       padding: const EdgeInsets.symmetric(

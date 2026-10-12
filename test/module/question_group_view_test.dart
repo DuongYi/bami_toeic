@@ -135,6 +135,14 @@ void main() {
       await tester.pump();
 
       expect(find.text('Phiếu toàn bài thi'), findsOneWidget);
+
+      // Thử lọc chỉ câu đánh dấu khi chưa có câu nào gắn cờ
+      final filterFlagged = find.byTooltip('Chỉ xem câu đánh dấu');
+      expect(filterFlagged, findsOneWidget);
+      await tester.tap(filterFlagged);
+      await tester.pump();
+
+      expect(find.text('Chưa có câu nào được đánh dấu cờ.'), findsOneWidget);
     });
   });
 }
