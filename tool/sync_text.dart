@@ -1,9 +1,10 @@
 // Đồng bộ PHẦN CHỮ của 1 đề đã import (câu hỏi, đáp án, giải thích, đoạn văn, transcript)
 // từ test.json lên Supabase – không upload lại audio/ảnh, không đổi id (giữ lịch sử làm bài).
 //
-//   dart run tool/sync_text.dart content/tests/ets2026_test01 [--dry-run] [--images]
+//   dart run tool/sync_text.dart content/tests/ets2026_test01 [--dry-run] [--images] [--audio]
 //
 // --images: upload đè ảnh (jpg/png) cùng đường dẫn cũ trên Storage → link không đổi, không đụng audio.
+// --audio:  upload đè audio cùng đường dẫn cũ (vd. sau khi tạo lại bằng giọng tốt hơn) – giữ id, giữ lịch sử.
 //
 // Đăng nhập như import_test.dart (TOEIC_EMAIL / TOEIC_PASSWORD hoặc hỏi khi chạy).
 import 'dart:convert';
@@ -19,6 +20,7 @@ Future<void> main(List<String> args) async {
   }
   final dryRun = args.contains('--dry-run');
   final images = args.contains('--images');
+  final audio = args.contains('--audio');
   final env = jsonDecode(File('env.json').readAsStringSync()) as Map<String, dynamic>;
   final db = SupabaseClient(env['SUPABASE_URL'] as String, env['SUPABASE_KEY'] as String);
   await db.auth.signInWithPassword(
@@ -29,6 +31,7 @@ Future<void> main(List<String> args) async {
     for (final dir in dirs) {
       await _sync(db, dir, dryRun);
       if (images) await _uploadImages(db, dir, dryRun);
+      if (audio) await _uploadAudio(db, dir, dryRun);
     }
   } finally {
     await db.dispose();
@@ -95,12 +98,26 @@ Future<void> _sync(SupabaseClient db, String dir, bool dryRun) async {
   stdout.writeln('${dryRun ? '🔍 (thử) ' : '✅ '}"$title": cập nhật $qChanged câu, $gChanged nhóm');
 }
 
-Future<void> _uploadImages(SupabaseClient db, String dir, bool dryRun) async {
+Future<void> _uploadImages(SupabaseClient db, String dir, bool dryRun) =>
+    _uploadMedia(db, dir, dryRun, field: 'image', label: '🖼  ', noun: 'ảnh');
+
+Future<void> _uploadAudio(SupabaseClient db, String dir, bool dryRun) =>
+    _uploadMedia(db, dir, dryRun, field: 'audio', label: '🔊 ', noun: 'audio');
+
+/// Upload đè file [field] (image / audio) của mọi nhóm lên đúng key cũ trên Storage → URL giữ nguyên.
+Future<void> _uploadMedia(
+  SupabaseClient db,
+  String dir,
+  bool dryRun, {
+  required String field,
+  required String label,
+  required String noun,
+}) async {
   final data = jsonDecode(File('$dir/test.json').readAsStringSync()) as Map<String, dynamic>;
   final folder = Directory(dir).uri.pathSegments.where((s) => s.isNotEmpty).last;
   var n = 0;
   for (final g in (data['groups'] as List).cast<Map<String, dynamic>>()) {
-    final path = g['image'] as String?;
+    final path = g[field] as String?;
     if (path == null || path.startsWith('http')) continue;
     final file = File('$dir/$path');
     if (!file.existsSync()) continue;
@@ -112,7 +129,7 @@ Future<void> _uploadImages(SupabaseClient db, String dir, bool dryRun) async {
           .upload('tests/$folder/$path', file, fileOptions: const FileOptions(upsert: true));
     }
   }
-  stdout.writeln('${dryRun ? '🔍 (thử) ' : '🖼  '}"${data['title']}": upload lại $n ảnh');
+  stdout.writeln('${dryRun ? '🔍 (thử) ' : label}"${data['title']}": upload lại $n $noun');
 }
 
 String _ask(String prompt, {bool hidden = false}) {

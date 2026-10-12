@@ -239,19 +239,18 @@ def check_order(data, blueprint):
 
 
 def check_media(d, data):
-    import hashlib
     import json
     manifest_file = d / '.audio_manifest.json'
     manifest = json.loads(manifest_file.read_text()) if manifest_file.exists() else {}
     sys.path.insert(0, str(Path(__file__).parent))
-    from build_audio import script_for  # noqa: E402
+    from build_audio import audio_key  # noqa: E402
     for g in data['groups']:
         for k in ('audio', 'image'):
             name = g.get(k)
             if name and not name.startswith('http') and not (d / name).exists():
                 err(f'câu {g["questions"][0]["number"]}', f'không có file {k} "{name}"')
         if g['part'] <= 4 and g.get('audio') and (d / g['audio']).exists():
-            h = hashlib.sha1(json.dumps(script_for(g), ensure_ascii=False).encode()).hexdigest()
+            h = audio_key(g)
             if manifest.get(g['audio']) != h:
                 err(f'câu {g["questions"][0]["number"]}', f'audio "{g["audio"]}" không khớp transcript hiện tại – chạy build_audio.py')
 

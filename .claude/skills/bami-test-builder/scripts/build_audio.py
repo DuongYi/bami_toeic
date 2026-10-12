@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """Tạo audio Part 1–4 từ transcript bằng giọng macOS `say` (Mỹ / Anh / Úc), giống cách đọc đề ETS:
 lời dẫn "Number 7." / "Questions 32 through 34 refer to…", đọc câu hỏi Part 3/4 sau bài nghe, có khoảng lặng trả lời.
-Xuất AAC 48 kbps (.m4a) bằng `afconvert`. Chỉ tạo lại file khi kịch bản đổi (manifest .audio_manifest.json).
+Ưu tiên giọng Premium / Enhanced (tải trong System Settings → Accessibility → Spoken Content → Manage Voices);
+chỉ khi máy chưa có mới dùng giọng thường. Chuẩn hoá âm lượng từng câu, xuất AAC 44,1 kHz 64 kbps (.m4a).
+Chỉ tạo lại file khi kịch bản hoặc ENGINE đổi (manifest .audio_manifest.json).
 
   python3 build_audio.py content/tests/<id> [--force] [--only 7,32] [--gap 5] [--rate 165] [--list-voices]
 """
 import argparse
+import array
 import hashlib
+import math
 import json
 import random
 import re
@@ -19,19 +23,48 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from _common import SPEAKER, load, save, split_listening_transcript, test_dir  # noqa: E402
 
-NARRATOR = ['Reed (English (US))', 'Eddy (English (US))', 'Samantha']
-MALE = ['Reed (English (US))', 'Eddy (English (US))', 'Rocko (English (US))', 'Daniel',
-        'Reed (English (UK))', 'Eddy (English (UK))', 'Rocko (English (UK))', 'Aman', 'Rishi']
-FEMALE = ['Samantha', 'Flo (English (US))', 'Shelley (English (US))', 'Sandy (English (US))', 'Karen',
-          'Flo (English (UK))', 'Shelley (English (UK))', 'Sandy (English (UK))', 'Moira', 'Tessa']
+# Đổi khi cách dựng audio thay đổi → mọi file được tạo lại (manifest lưu hash kèm ENGINE).
+ENGINE = 'say-hq-2'
 RATE = 165          # từ/phút – đề thật đọc chậm, rõ
-SAMPLE = 'LEI16@22050'
+SAMPLE = 'LEI16@24000'
+TARGET_RMS = 3000   # mức âm lượng chung của mọi câu (int16)
+
+# Giới tính theo tên giọng tiếng Anh của macOS (say -v '?' không ghi giới tính).
+FEMALE_NAMES = {'Ava', 'Zoe', 'Allison', 'Samantha', 'Susan', 'Joelle', 'Noelle', 'Serena', 'Kate', 'Stephanie',
+                'Karen', 'Matilda', 'Catherine', 'Moira', 'Fiona', 'Tessa', 'Veena', 'Isha', 'Nicky', 'Martha'}
+MALE_NAMES = {'Evan', 'Nathan', 'Tom', 'Alex', 'Aaron', 'Jamie', 'Daniel', 'Oliver', 'Arthur', 'Lee', 'Gordon',
+              'Rishi', 'Aman', 'Fred', 'Malcolm'}
+# Bộ giọng tổng hợp cũ (Eloquence) nghe rè, robot – chỉ dùng khi không còn gì khác.
+LOW_QUALITY = {'Eddy', 'Flo', 'Reed', 'Rocko', 'Sandy', 'Shelley', 'Grandma', 'Grandpa', 'Fred'}
+ACCENTS = ('en_US', 'en_GB', 'en_AU', 'en_CA', 'en_IE')
 
 
 def available_voices():
+    """{tên giọng: (giới tính, locale, điểm chất lượng)} của các giọng tiếng Anh."""
     out = subprocess.run(['say', '-v', '?'], capture_output=True, text=True).stdout
-    # Dòng dạng: "Eddy (English (US)) en_US    # Hello! …"
-    return {m.group(1) for line in out.splitlines() if (m := re.match(r'^(.*?)\s+[a-z]{2,3}_[A-Z0-9]{2,3}\s+#', line))}
+    voices = {}
+    for line in out.splitlines():
+        m = re.match(r'^(.*?)\s+([a-z]{2,3}_[A-Z0-9]{2,3})\s+#', line)
+        if not m or m.group(2) not in ACCENTS:
+            continue
+        name = m.group(1)
+        base = name.split(' (')[0]
+        gender = 'f' if base in FEMALE_NAMES else 'm' if base in MALE_NAMES else None
+        if gender is None:
+            continue
+        quality = 3 if 'Premium' in name else 2 if 'Enhanced' in name else 0 if base in LOW_QUALITY else 1
+        voices[name] = (gender, m.group(2), quality)
+    return voices
+
+
+def pools(voices):
+    """Giọng nam / nữ tốt nhất hiện có (chỉ lấy mức chất lượng cao nhất của từng giới)."""
+    out = {}
+    for g in ('m', 'f'):
+        mine = {n: v for n, v in voices.items() if v[0] == g}
+        best = max((v[2] for v in mine.values()), default=None)
+        out[g] = sorted(n for n, v in mine.items() if v[2] == best)
+    return out
 
 
 def script_for(g, gap=5.0):
@@ -77,15 +110,16 @@ def script_for(g, gap=5.0):
 def cast(g, title, voices):
     """Gán giọng cho các vai, ổn định theo tên đề + số câu, khác giọng giữa người nói."""
     rng = random.Random(f'{title}:{g["questions"][0]["number"]}')
-    male = [v for v in MALE if v in voices]
-    female = [v for v in FEMALE if v in voices]
-    narrator = next((v for v in NARRATOR if v in voices), None)
-    if not (male and female and narrator):
-        sys.exit('Thiếu giọng tiếng Anh của macOS – System Settings → Accessibility → Spoken Content → tải thêm giọng.')
+    p = pools(voices)
+    if not (p['m'] and p['f']):
+        sys.exit('Thiếu giọng tiếng Anh nam/nữ – System Settings → Accessibility → Spoken Content → Manage Voices.')
+    male, female = p['m'][:], p['f'][:]
+    # Người dẫn cố định cả đề (giọng Mỹ nếu có), như đề ETS.
+    us = [n for n in male if voices[n][1] == 'en_US'] or male
+    narrator = sorted(us)[0]
     rng.shuffle(male)
     rng.shuffle(female)
     male = [v for v in male if v != narrator] or male
-    female = [v for v in female if v != narrator] or female
     first_female = rng.random() < 0.5
     roles = {'narrator': narrator, 'm': male[0], 'm1': male[0], 'm2': male[1 % len(male)],
              'w': female[0], 'w1': female[0], 'w2': female[1 % len(female)]}
@@ -93,6 +127,22 @@ def cast(g, title, voices):
     roles['asker'] = roles['speaker']
     roles['responder'] = male[0] if first_female else female[0]
     return roles
+
+
+def _normalize(pcm):
+    """Đưa 1 câu (int16 mono) về cùng mức RMS, không để vượt đỉnh."""
+    a = array.array('h', pcm)
+    if not a:
+        return pcm
+    rms = math.sqrt(sum(x * x for x in a) / len(a)) or 1
+    peak = max(abs(x) for x in a) or 1
+    gain = min(TARGET_RMS / rms, 30000 / peak)
+    return array.array('h', (int(x * gain) for x in a)).tobytes()
+
+
+def audio_key(g):
+    """Hash để biết file audio đã khớp kịch bản + cách dựng hiện tại (validate_test.py dùng chung)."""
+    return hashlib.sha1(json.dumps({'engine': ENGINE, 'script': script_for(g)}, ensure_ascii=False).encode()).hexdigest()
 
 
 def render(script, roles, out, rate, tmp):
@@ -106,14 +156,15 @@ def render(script, roles, out, rate, tmp):
                         f'--data-format={SAMPLE}', '--file-format=WAVE', '-o', str(seg), text], check=True)
         with wave.open(str(seg)) as w:
             params = params or w.getparams()
-            frames.append(('audio', w.readframes(w.getnframes())))
+            frames.append(('audio', _normalize(w.readframes(w.getnframes()))))
     wav = Path(tmp) / 'all.wav'
     with wave.open(str(wav), 'wb') as w:
         w.setparams(params)
         silence = b'\x00' * params.sampwidth * params.nchannels
         for kind, v in frames:
             w.writeframes(silence * int(params.framerate * v) if kind == 'pause' else v)
-    subprocess.run(['afconvert', '-f', 'm4af', '-d', 'aac', '-b', '48000', str(wav), str(out)], check=True)
+    subprocess.run(['afconvert', '-f', 'm4af', '-d', 'aac@44100', '-b', '64000', '--src-complexity', 'bats',
+                    str(wav), str(out)], check=True)
 
 
 def default_name(g):
@@ -133,8 +184,10 @@ def main():
     a = ap.parse_args()
     voices = available_voices()
     if a.list_voices:
-        print('Nam:', [v for v in MALE if v in voices])
-        print('Nữ :', [v for v in FEMALE if v in voices])
+        p = pools(voices)
+        for g, label in (('m', 'Nam'), ('f', 'Nữ ')):
+            q = max((voices[n][2] for n in p[g]), default=0)
+            print(f'{label} ({["robot", "thường", "Enhanced", "Premium"][q]}):', [f'{n} [{voices[n][1]}]' for n in p[g]])
         return
     if not a.dir:
         sys.exit(__doc__)
@@ -155,7 +208,7 @@ def main():
             g['audio'] = default_name(g)
             changed_json += 1
         script = script_for(g, a.gap)
-        h = hashlib.sha1(json.dumps(script_for(g), ensure_ascii=False).encode()).hexdigest()
+        h = audio_key(g)
         out = d / g['audio']
         if out.exists() and manifest.get(g['audio']) == h and not a.force:
             continue

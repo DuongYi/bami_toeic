@@ -41,7 +41,10 @@ Sinh đề TOEIC **giống đề ETS thật** ở định dạng `content/tests/
    gỡ `content`/`options` Part 1/2 và `content` Part 6 nếu lỡ có). Chạy lại an toàn; `--dry-run` để xem trước.
 6. **Kiểm tra**: `python3 $S/validate_test.py $D --blueprint <bp>` → sửa đến khi **0 lỗi**; cảnh báo phải đọc và giải thích được.
 7. **Media**:
-   - Audio Part 1–4: `python3 $S/build_audio.py $D` (giọng macOS `say` Mỹ/Anh/Úc, đọc lời dẫn + câu hỏi như đề thật, AAC 48 kbps).
+   - Audio Part 1–4: chạy `python3 $S/build_audio.py --list-voices` trước – phải thấy giọng **Premium/Enhanced** cả nam lẫn nữ
+     (thiếu thì nhờ người dùng tải: System Settings → Accessibility → Spoken Content → Manage Voices → English: Ava, Zoe,
+     Evan, Nathan, Serena, Jamie, Daniel, Lee, Matilda…). Giọng thường / Eloquence (Reed, Eddy, Fred…) nghe rè, robot.
+     Rồi `python3 $S/build_audio.py $D` (đọc lời dẫn + câu hỏi như đề thật, chuẩn hoá âm lượng, AAC 44,1 kHz 64 kbps).
      Phải chạy **sau** bước 5 (thứ tự (A)–(D) đọc trong audio Part 1/2 phụ thuộc kết quả xáo).
    - Ảnh Part 1 / biểu đồ Part 3, 4, 7: xem mục "Ảnh" trong `ets-spec.md`. Hỏi người dùng nguồn ảnh nếu chưa có.
    - Chạy lại `validate_test.py $D --media` để chắc file đã đủ.
@@ -56,6 +59,11 @@ Sinh đề TOEIC **giống đề ETS thật** ở định dạng `content/tests/
   Không sửa tay `test.json` của đề có `parts/` (lần ghép sau sẽ ghi đè).
 - Đề không có `parts/` (đề cũ): sửa thẳng `test.json`, rồi chạy lại normalize → validate → build_audio.
 - `build_audio.py` chỉ tạo lại file có kịch bản đổi; đổi `--gap` / `--rate` thì thêm `--force`.
+
+## Làm lại audio của đề đã import
+
+`build_audio.py $D` (tự tạo lại file có kịch bản / ENGINE đổi; `--force` để làm lại hết) →
+`dart run tool/sync_text.dart $D --audio` (upload đè đúng đường dẫn cũ: giữ id, không mất lịch sử làm bài).
 
 ## Sửa đề đã import bị lộ đáp án
 
