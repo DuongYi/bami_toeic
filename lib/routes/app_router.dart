@@ -29,6 +29,8 @@ import '../module/vocab/presentation/pages/flashcard_page.dart';
 import '../module/vocab/presentation/pages/practice_page.dart';
 import '../module/vocab/presentation/pages/vocab_words_page.dart';
 import '../module/vocab/presentation/pages/vocab_page.dart';
+import '../module/vocab/presentation/pages/word_match_game_page.dart';
+import '../module/vocab/presentation/pages/word_scramble_game_page.dart';
 
 part 'app_router.g.dart';
 
@@ -76,6 +78,12 @@ abstract final class Routes {
   /// Luyện chủ động; [retry]: id các từ sai cần luyện lại (cách nhau dấu phẩy).
   static String vocabPractice(String mode, {String? retry}) =>
       _path('/vocab-practice', {'mode': mode, 'retry': ?retry});
+
+  /// Mini-game ghép cặp từ vựng.
+  static String wordMatchGame({String? deck}) => _path('/vocab-word-match', {'deck': ?deck});
+
+  /// Mini-game xếp chữ đoán từ.
+  static String wordScrambleGame({String? deck}) => _path('/vocab-word-scramble', {'deck': ?deck});
 }
 
 @Riverpod(keepAlive: true)
@@ -198,6 +206,14 @@ GoRouter router(Ref ref) {
               PracticeMode.meaning,
           retryIds: s.uri.queryParameters['retry'] ?? '',
         ),
+      ),
+      GoRoute(
+        path: '/vocab-word-match',
+        builder: (_, s) => WordMatchGamePage(deckKey: s.uri.queryParameters['deck']),
+      ),
+      GoRoute(
+        path: '/vocab-word-scramble',
+        builder: (_, s) => WordScrambleGamePage(deckKey: s.uri.queryParameters['deck']),
       ),
     ],
   );

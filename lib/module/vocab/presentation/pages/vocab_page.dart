@@ -103,6 +103,36 @@ class _VocabBody extends ConsumerWidget {
         _DeckCard(stats: o.deckStats),
         Gaps.v24,
         const SectionHeader(
+          title: 'Game từ vựng',
+          subtitle: 'Vừa chơi vừa ghi nhớ sâu từ vựng TOEIC với phản xạ nhanh',
+        ),
+        AppListGroup(
+          dividerIndent: AppSpacing.s16 + AppSizes.badgeMd + AppSpacing.s16,
+          children: [
+            ListTile(
+              leading: const IconBadge(
+                icon: Icons.dashboard_customize_rounded,
+                tone: AppTone.info,
+              ),
+              title: const Text('Nối từ tốc độ'),
+              subtitle: const Text('Ghép cặp từ tiếng Anh & nghĩa tiếng Việt theo thời gian'),
+              trailing: const Icon(Icons.chevron_right_rounded),
+              onTap: () => context.push(Routes.wordMatchGame(deck: o.deck?.key)),
+            ),
+            ListTile(
+              leading: const IconBadge(
+                icon: Icons.spellcheck_rounded,
+                tone: AppTone.warning,
+              ),
+              title: const Text('Xếp chữ đoán từ'),
+              subtitle: const Text('Các chữ cái bị xáo trộn, chạm để xếp thành từ chuẩn'),
+              trailing: const Icon(Icons.chevron_right_rounded),
+              onTap: () => context.push(Routes.wordScrambleGame(deck: o.deck?.key)),
+            ),
+          ],
+        ),
+        Gaps.v24,
+        const SectionHeader(
           title: 'Luyện chủ động',
           subtitle: 'Tự nhớ lại thay vì chỉ lật thẻ – nhớ lâu hơn',
         ),
