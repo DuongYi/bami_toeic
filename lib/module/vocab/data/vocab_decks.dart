@@ -20,7 +20,11 @@ const topicLabels = {
   'Transportation': 'Giao thông',
   'Customer Service': 'Chăm sóc khách hàng',
   'General': 'Thông dụng',
+  ownTopic: 'Sổ từ của tôi',
 };
+
+/// Chủ đề của từ người học tự lưu từ từ điển.
+const ownTopic = 'Dictionary';
 
 String topicLabel(String topic) => topicLabels[topic] ?? topic;
 
@@ -117,7 +121,9 @@ List<DeckStats> allDecks(List<VocabItem> items) {
 }
 
 /// Thứ tự học từ mới: theo đề, rồi theo câu xuất hiện trong đề (từ không rõ nguồn xếp cuối).
+/// Từ tự lưu (sổ từ riêng) học trước vì người học chủ động chọn.
 int compareLearningOrder(VocabItem a, VocabItem b) {
+  if (a.isShared != b.isShared) return a.isShared ? 1 : -1;
   final t = (a.sourceTest ?? 1 << 20).compareTo(b.sourceTest ?? 1 << 20);
   if (t != 0) return t;
   final q = (a.sourceQuestion ?? 1 << 20).compareTo(b.sourceQuestion ?? 1 << 20);

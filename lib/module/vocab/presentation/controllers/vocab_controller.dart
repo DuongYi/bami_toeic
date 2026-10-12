@@ -34,6 +34,26 @@ class VocabList extends _$VocabList {
     await future;
   }
 
+  /// Lưu vào sổ từ riêng (topic [ownTopic]); trùng từ thì thay nghĩa.
+  Future<void> saveOwn(VocabInput input) async {
+    final userId = ref.read(currentUserIdProvider);
+    if (userId == null) return;
+    await ref.read(vocabRepositoryProvider).saveOwn(
+      VocabInput(
+        word: input.word,
+        ipa: input.ipa,
+        pos: input.pos,
+        meaning: input.meaning,
+        example: input.example,
+        exampleMeaning: input.exampleMeaning,
+        topic: ownTopic,
+        userId: userId,
+      ),
+    );
+    ref.invalidateSelf();
+    await future;
+  }
+
   Future<void> delete(String id) async {
     await ref.read(vocabRepositoryProvider).delete(id);
     ref.invalidateSelf();

@@ -118,6 +118,7 @@ class VocabInput {
     this.exampleMeaning,
     required this.topic,
     this.source,
+    this.userId,
   });
 
   final String word;
@@ -128,6 +129,10 @@ class VocabInput {
   final String? exampleMeaning;
   final String topic;
   final String? source;
+
+  /// Chỉ gửi khi lưu từ vào sổ riêng (bộ chung: user_id = null).
+  @JsonKey(includeIfNull: false)
+  final String? userId;
 
   Map<String, dynamic> toJson() => _$VocabInputToJson(this);
 }

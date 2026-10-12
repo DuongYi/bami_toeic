@@ -7,6 +7,7 @@ import '../../../../core/network/app_exception.dart';
 import '../../../../helper/format.dart';
 import '../../../../routes/app_router.dart';
 import '../../data/models/test_models.dart';
+import '../../../dictionary/presentation/widgets/dictionary_sheet.dart';
 import '../../../vocab/presentation/widgets/word_lookup_sheet.dart';
 import '../controllers/test_taking_controller.dart';
 import '../widgets/exam_listening_bar.dart';
@@ -219,6 +220,8 @@ class _TestTakingPageState extends ConsumerState<TestTakingPage> {
           titleSpacing: 0,
           title: _AnsweredCounter(provider: _provider),
           actions: [
+            // Chế độ thi giữ giống thi thật; vẫn tra được bằng cách bôi đen chữ.
+            if (!isExam) const DictionaryButton(compact: true),
             _ClockChip(provider: _provider),
             Gaps.h8,
             _SubmitButton(provider: _provider, onPressed: _confirmSubmit),

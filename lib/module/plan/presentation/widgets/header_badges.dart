@@ -4,11 +4,12 @@ import 'package:go_router/go_router.dart';
 
 import '../../../../core/design_system/design_system.dart';
 import '../../../../routes/app_router.dart';
+import '../../../dictionary/presentation/widgets/dictionary_sheet.dart';
 import '../../../goals/presentation/controllers/study_progress.dart';
 import '../../../goals/presentation/widgets/goal_sheet.dart';
 import '../controllers/plan_controller.dart';
 
-/// Chuỗi ngày học thật + nhãn PRO (chỉ khi có PRO) + lối tắt Trang cá nhân cho `AppPageHeader.topBar` của các tab.
+/// Chuỗi ngày học thật + nhãn PRO (chỉ khi có PRO) + tra từ điển nhanh + lối tắt Trang cá nhân cho `AppPageHeader.topBar` của các tab.
 class HeaderBadges extends ConsumerWidget {
   const HeaderBadges({super.key});
 
@@ -27,6 +28,7 @@ class HeaderBadges extends ConsumerWidget {
         ),
         if (isPro) ...[Gaps.h8, const ProBadge(mini: true)],
         Gaps.h8,
+        const DictionaryButton(compact: true),
         IconButton(
           tooltip: 'Trang cá nhân',
           icon: const Icon(Icons.person_outline_rounded),

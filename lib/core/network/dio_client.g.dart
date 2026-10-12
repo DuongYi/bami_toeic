@@ -52,3 +52,48 @@ final class DioProvider extends $FunctionalProvider<Dio, Dio, Dio>
 }
 
 String _$dioHash() => r'bebcc3b6a18e9e3bf56d2fe96bc53c5f63390437';
+
+/// Dio cho API bên ngoài (vd. từ điển Anh–Anh): không gắn apikey / token Supabase.
+
+@ProviderFor(externalDio)
+final externalDioProvider = ExternalDioProvider._();
+
+/// Dio cho API bên ngoài (vd. từ điển Anh–Anh): không gắn apikey / token Supabase.
+
+final class ExternalDioProvider extends $FunctionalProvider<Dio, Dio, Dio>
+    with $Provider<Dio> {
+  /// Dio cho API bên ngoài (vd. từ điển Anh–Anh): không gắn apikey / token Supabase.
+  ExternalDioProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'externalDioProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$externalDioHash();
+
+  @$internal
+  @override
+  $ProviderElement<Dio> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  Dio create(Ref ref) {
+    return externalDio(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(Dio value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<Dio>(value),
+    );
+  }
+}
+
+String _$externalDioHash() => r'5455f9dccffe6564229db7dffefb63b5da80675f';

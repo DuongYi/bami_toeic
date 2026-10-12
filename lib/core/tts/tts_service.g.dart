@@ -52,4 +52,4 @@ final class TtsServiceProvider
   }
 }
 
-String _$ttsServiceHash() => r'2d0ae4ce4a8ee83a4f19b6897157cf39787cb6b1';
+String _$ttsServiceHash() => r'cb2fc34544f9a72eed6685c26e7b2934a8221db3';

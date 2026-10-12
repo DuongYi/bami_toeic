@@ -16,6 +16,7 @@ Map<String, dynamic> _$VocabInputToJson(VocabInput instance) =>
       'example_meaning': instance.exampleMeaning,
       'topic': instance.topic,
       'source': instance.source,
+      'user_id': ?instance.userId,
     };
 
 Map<String, dynamic> _$VocabReviewUpsertToJson(VocabReviewUpsert instance) =>

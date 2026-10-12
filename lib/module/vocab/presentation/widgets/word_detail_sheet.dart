@@ -67,10 +67,7 @@ class _WordDetailSheetState extends ConsumerState<WordDetailSheet> {
       _ when v.isKnown => ('Đã biết', AppTone.success),
       _ when v.isMastered => ('Đã thuộc', AppTone.success),
       _ when v.isDue(now) => ('Cần ôn', AppTone.warning),
-      _ when v.isLearning => (
-        'Ôn lại ${Fmt.date(v.review!.dueAt.toLocal())}',
-        AppTone.info,
-      ),
+      _ when v.isLearning => ('Ôn lại ${Fmt.date(v.review!.dueAt.toLocal())}', AppTone.info),
       _ => ('Chưa học', AppTone.neutral),
     };
 
@@ -108,7 +105,9 @@ class _WordDetailSheetState extends ConsumerState<WordDetailSheet> {
                 StatusBadge(label: topicLabel(v.topic)),
                 if (v.sourceTest case final t?)
                   StatusBadge(
-                    label: v.sourceQuestion == null ? 'Test $t' : 'Test $t · câu ${v.sourceQuestion}',
+                    label: v.sourceQuestion == null
+                        ? 'Test $t'
+                        : 'Test $t · câu ${v.sourceQuestion}',
                     icon: Icons.quiz_outlined,
                   ),
               ],
@@ -165,7 +164,32 @@ class _WordDetailSheetState extends ConsumerState<WordDetailSheet> {
                 icon: const Icon(Icons.restart_alt_rounded),
                 label: const Text('Học lại từ đầu'),
               ),
-            if (isAdmin) ...[
+            if (!v.isShared) ...[
+              Gaps.v8,
+              TextButton.icon(
+                onPressed: _busy
+                    ? null
+                    : () async {
+                        // Từ bị xoá thì sheet không còn gì để hiện → đóng trước, báo qua messenger.
+                        final messenger = ScaffoldMessenger.of(context);
+                        final notifier = ref.read(vocabListProvider.notifier);
+                        Navigator.pop(context);
+                        try {
+                          await notifier.delete(v.id);
+                          showAppSnackBarOn(messenger, 'Đã bỏ "${v.word}" khỏi sổ từ');
+                        } catch (e) {
+                          showAppSnackBarOn(
+                            messenger,
+                            AppException.from(e).message,
+                            tone: AppTone.danger,
+                          );
+                        }
+                      },
+                icon: const Icon(Icons.bookmark_remove_outlined),
+                label: const Text('Bỏ khỏi sổ từ'),
+              ),
+            ],
+            if (isAdmin && v.isShared) ...[
               Gaps.v8,
               TextButton.icon(
                 onPressed: _busy

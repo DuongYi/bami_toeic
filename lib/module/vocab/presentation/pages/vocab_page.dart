@@ -13,7 +13,7 @@ import '../controllers/vocab_controller.dart';
 import '../widgets/deck_picker_sheet.dart';
 import 'vocab_form_sheet.dart';
 
-/// Tab Từ vựng: việc hôm nay (ôn + từ mới theo chỉ tiêu) → bộ từ đang học → luyện chủ động → tra cứu.
+/// Tab Từ vựng: việc hôm nay (ôn + từ mới theo chỉ tiêu) → bộ từ đang học → luyện chủ động → tra cứu (từ điển, kho từ).
 class VocabPage extends ConsumerWidget {
   const VocabPage({super.key});
 
@@ -152,7 +152,15 @@ class _VocabBody extends ConsumerWidget {
         Gaps.v24,
         const SectionHeader(title: 'Tra cứu'),
         AppListGroup(
+          dividerIndent: AppSpacing.s16 + AppSizes.badgeMd + AppSpacing.s16,
           children: [
+            ListTile(
+              leading: const IconBadge(icon: Icons.translate_rounded, tone: AppTone.info),
+              title: const Text('Từ điển Anh – Việt'),
+              subtitle: const Text('Hơn 100.000 từ · lưu từ mới vào sổ để ôn'),
+              trailing: const Icon(Icons.chevron_right_rounded),
+              onTap: () => context.push(Routes.dictionary()),
+            ),
             ListTile(
               leading: const IconBadge(icon: Icons.menu_book_rounded, tone: AppTone.neutral),
               title: const Text('Tất cả từ vựng'),

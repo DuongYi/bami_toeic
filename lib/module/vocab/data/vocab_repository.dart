@@ -54,10 +54,14 @@ class VocabRepository {
     if (updated.isEmpty) throw const ForbiddenException('Chỉ admin mới sửa được từ vựng.');
   }
 
+  /// Xoá từ: từ riêng của mình, hoặc từ bộ chung nếu là admin (RLS chặn trường hợp khác).
   Future<void> delete(String id) async {
     final deleted = await _api.deleteVocab(id: Pg.eq(id));
     if (deleted.isEmpty) throw const ForbiddenException('Chỉ admin mới xoá được từ vựng.');
   }
+
+  /// Lưu từ vào sổ riêng của user (từ tra trong từ điển) → ôn SRS như từ bộ chung.
+  Future<void> saveOwn(VocabInput input) => _api.upsertOwnVocab(input);
 
   /// "Đã biết từ này": bỏ khỏi phiên học, tính là đã thuộc.
   Future<void> markKnown({required String userId, required VocabItem item}) {

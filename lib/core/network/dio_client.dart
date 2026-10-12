@@ -44,3 +44,17 @@ Dio dio(Ref ref) {
   });
   return dio;
 }
+
+/// Dio cho API bên ngoài (vd. từ điển Anh–Anh): không gắn apikey / token Supabase.
+@Riverpod(keepAlive: true)
+Dio externalDio(Ref ref) {
+  final dio = Dio(
+    BaseOptions(
+      connectTimeout: const Duration(seconds: 10),
+      receiveTimeout: const Duration(seconds: 15),
+    ),
+  );
+  dio.interceptors.addAll([ErrorInterceptor(), NetworkLogInterceptor(tag: 'external')]);
+  ref.onDispose(dio.close);
+  return dio;
+}

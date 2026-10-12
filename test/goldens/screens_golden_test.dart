@@ -4,6 +4,8 @@ import 'dart:math';
 
 import 'package:bami_toeic/main.dart';
 import 'package:bami_toeic/module/auth/presentation/controllers/auth_controller.dart';
+import 'package:bami_toeic/module/dictionary/data/dictionary_repository.dart';
+import 'package:bami_toeic/module/dictionary/data/translate_repository.dart';
 import 'package:bami_toeic/module/goals/data/goals_repository.dart';
 import 'package:bami_toeic/module/goals/data/study_store.dart';
 import 'package:bami_toeic/module/leaderboard/data/leaderboard_repository.dart';
@@ -38,6 +40,8 @@ Future<ProviderContainer> _boot(
         authControllerProvider.overrideWith(FakeAuth.new),
         testRepositoryProvider.overrideWithValue(FakeTestRepository()),
         vocabRepositoryProvider.overrideWithValue(FakeVocabRepository()),
+        dictionaryRepositoryProvider.overrideWithValue(FakeDictionaryRepository()),
+        translateRepositoryProvider.overrideWithValue(FakeTranslateRepository()),
         goalsRepositoryProvider.overrideWithValue(FakeGoalsRepository()),
         // readGoals còn đặt lịch nhắc học (plugin) – treo trong widget test.
         goalSettingsProvider.overrideWith((ref) async => const GoalSettings(targetScore: 800)),
@@ -163,6 +167,30 @@ void main() {
     final c = await _boot(tester);
     await _go(tester, c, Routes.leaderboard);
     await _shot(tester, '09_leaderboard');
+    await _teardown(tester);
+  });
+
+  testWidgets('Từ điển – chưa tra', (tester) async {
+    final c = await _boot(tester);
+    await _go(tester, c, Routes.dictionary(), push: true);
+    await _shot(tester, '14_dictionary');
+    await _teardown(tester);
+  });
+
+  testWidgets('Từ điển – mục từ', (tester) async {
+    final c = await _boot(tester);
+    await _go(tester, c, Routes.dictionary(word: 'qualified'), push: true);
+    await _shot(tester, '15_dictionary_entry');
+    await _teardown(tester);
+  });
+
+  testWidgets('Từ điển – dịch câu', (tester) async {
+    final c = await _boot(tester);
+    const text =
+        'All employees are required to submit their expense reports by the end of the month. '
+        'Please contact Ms. Lee if you have questions.';
+    await _go(tester, c, Routes.dictionary(word: text), push: true);
+    await _shot(tester, '16_dictionary_translate');
     await _teardown(tester);
   });
 

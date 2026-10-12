@@ -82,7 +82,7 @@ final class VocabListProvider
   VocabList create() => VocabList();
 }
 
-String _$vocabListHash() => r'4f195d84853ef21e1eff540defdd4925656cb618';
+String _$vocabListHash() => r'15e3d5a3f9b93a53a8b4ce87bcf4216eae02e34d';
 
 /// Toàn bộ kho từ + lịch ôn của user. Giữ trong bộ nhớ (hơn 1000 từ) – làm mới khi cần.
 

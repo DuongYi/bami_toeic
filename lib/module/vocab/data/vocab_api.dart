@@ -26,6 +26,14 @@ abstract class VocabApi {
   @Headers({'Prefer': Pg.returnMinimal})
   Future<void> createVocab(@Body() VocabInput body);
 
+  /// Lưu từ vào sổ riêng (user_id = mình); trùng (user_id, word, topic) thì ghi đè nghĩa.
+  @POST('/rest/v1/vocab')
+  @Headers({'Prefer': Pg.upsert})
+  Future<void> upsertOwnVocab(
+    @Body() VocabInput body, {
+    @Query('on_conflict') String onConflict = 'user_id,word,topic',
+  });
+
   /// Trả về các dòng đã sửa: rỗng nghĩa là RLS chặn (từ dùng chung, không phải admin).
   @PATCH('/rest/v1/vocab')
   @Headers({'Prefer': Pg.returnRepresentation})

@@ -56,7 +56,7 @@ final class FlashcardSessionProvider
   }
 }
 
-String _$flashcardSessionHash() => r'b074120ded6c343b6c01f14238d65f4fcc11ade5';
+String _$flashcardSessionHash() => r'c203af69c7cf442520a02b5544d4f6a0b658104f';
 
 /// Phiên flashcard. [deckKey]: bộ lấy từ mới (null = bộ đang học);
 /// [extraNew] > 0: "Học thêm" đúng chừng ấy từ mới, bỏ qua chỉ tiêu ngày.

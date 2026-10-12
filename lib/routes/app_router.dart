@@ -8,6 +8,7 @@ import '../module/auth/presentation/pages/forgot_password_page.dart';
 import '../module/auth/presentation/pages/login_page.dart';
 import '../module/auth/presentation/pages/splash_page.dart';
 import '../module/debug/presentation/pages/log_viewer_page.dart';
+import '../module/dictionary/presentation/pages/dictionary_page.dart';
 import '../module/history/presentation/pages/history_page.dart';
 import '../module/leaderboard/presentation/pages/leaderboard_page.dart';
 import '../module/listening/presentation/pages/dictation_page.dart';
@@ -81,6 +82,9 @@ abstract final class Routes {
 
   /// Mini-game ghép cặp từ vựng.
   static String wordMatchGame({String? deck}) => _path('/vocab-word-match', {'deck': ?deck});
+
+  /// Từ điển; [word] = mở sẵn mục từ.
+  static String dictionary({String? word}) => _path('/dictionary', {'q': ?word});
 
   /// Mini-game xếp chữ đoán từ.
   static String wordScrambleGame({String? deck}) => _path('/vocab-word-scramble', {'deck': ?deck});
@@ -210,6 +214,10 @@ GoRouter router(Ref ref) {
       GoRoute(
         path: '/vocab-word-match',
         builder: (_, s) => WordMatchGamePage(deckKey: s.uri.queryParameters['deck']),
+      ),
+      GoRoute(
+        path: '/dictionary',
+        builder: (_, s) => DictionaryPage(initialWord: s.uri.queryParameters['q']),
       ),
       GoRoute(
         path: '/vocab-word-scramble',

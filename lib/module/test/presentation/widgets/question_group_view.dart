@@ -714,6 +714,7 @@ class _AnswerSheetColumnState extends State<_AnswerSheetColumn> {
                     onTap: widget.onSelect == null || isRev
                         ? null
                         : () => widget.onSelect!(q, letter),
+                    contextMenuBuilder: lookupContextMenu(context),
                   ),
                 ),
               if (isRev) ...[
@@ -989,6 +990,7 @@ class _QuestionTile extends StatelessWidget {
                             ? AppTone.danger
                             : null,
                 onTap: onSelect == null || revealed ? null : () => onSelect!(q, letter),
+                contextMenuBuilder: lookupContextMenu(context),
               ),
             ),
           if (revealed) ...[
@@ -1038,6 +1040,7 @@ class _Explanation extends StatelessWidget {
 }
 
 /// Một lựa chọn A/B/C/D. [result]: success = đáp án đúng, danger = bạn chọn sai.
+/// Có [contextMenuBuilder]: chạm vẫn chọn đáp án, nhấn giữ để bôi đen chữ → "Tra từ".
 class AnswerOption extends StatelessWidget {
   const AnswerOption({
     super.key,
@@ -1046,6 +1049,7 @@ class AnswerOption extends StatelessWidget {
     required this.selected,
     required this.result,
     required this.onTap,
+    this.contextMenuBuilder,
   });
 
   final String letter;
@@ -1053,6 +1057,7 @@ class AnswerOption extends StatelessWidget {
   final bool selected;
   final AppTone? result;
   final VoidCallback? onTap;
+  final EditableTextContextMenuBuilder? contextMenuBuilder;
 
   @override
   Widget build(BuildContext context) {
@@ -1100,7 +1105,14 @@ class AnswerOption extends StatelessWidget {
                   ),
                   Gaps.h12,
                   Expanded(
-                    child: Text(text, style: TextStyle(color: onFill)),
+                    child: contextMenuBuilder == null
+                        ? Text(text, style: TextStyle(color: onFill))
+                        : SelectableText(
+                            text,
+                            style: TextStyle(color: onFill),
+                            onTap: onTap,
+                            contextMenuBuilder: contextMenuBuilder,
+                          ),
                   ),
                   if (result != null) Icon(result!.icon, color: tone!.main),
                 ],

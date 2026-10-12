@@ -725,3 +725,74 @@ alter table public.vocab_reviews add column if not exists known boolean not null
 alter table public.vocab_reviews add column if not exists learned_at timestamptz not null default now();
 create index if not exists vocab_reviews_vocab_idx on public.vocab_reviews (vocab_id);
 -- Nguồn của bộ từ ETS 2026 được ghi bằng tool/import_vocab.dart (cột source).
+
+-- ---------- 008: Từ điển Anh–Việt + sổ từ riêng ----------
+-- • dict_entries: từ điển Anh–Việt dùng chung (~105k mục), chỉ đọc; import bằng tool/import_dictionary.dart.
+--   Nguồn: skypediacode/english-vietnamese-dictionary (CC BY-SA 4.0).
+-- • dict_suggest: gợi ý khi gõ (khớp đầu từ, không có thì tìm gần đúng bằng trigram).
+-- • dict_lookup: tra chính xác theo danh sách dạng từ (app gửi kèm dạng gốc: invoices → invoice).
+-- • vocab: user lưu từ tra được vào sổ riêng (user_id = mình, topic 'Dictionary') → ôn SRS như từ ETS.
+-- Chạy lại nhiều lần vẫn an toàn.
+
+create extension if not exists pg_trgm with schema extensions;
+
+create table if not exists public.dict_entries (
+  word_key text primary key,      -- chữ thường, dùng để tra
+  word     text not null,         -- dạng hiển thị
+  ipa      text,
+  senses   jsonb not null         -- [{"p": "n", "m": "nghĩa", "e": "câu ví dụ"}] theo thứ tự nghĩa
+);
+create index if not exists dict_entries_prefix_idx on public.dict_entries (word_key text_pattern_ops);
+create index if not exists dict_entries_trgm_idx on public.dict_entries using gin (word_key extensions.gin_trgm_ops);
+
+alter table public.dict_entries enable row level security;
+drop policy if exists "auth read dict" on public.dict_entries;
+create policy "auth read dict" on public.dict_entries for select to authenticated using (true);
+drop policy if exists "admin write dict" on public.dict_entries;
+create policy "admin write dict" on public.dict_entries for all to authenticated
+  using ((select public.is_admin())) with check ((select public.is_admin()));
+
+create or replace function public.dict_suggest(p_query text, p_limit int default 20)
+returns table (word text, ipa text, meaning text, fuzzy boolean)
+language sql stable set search_path = public, extensions as $$
+  with q as (
+    select lower(btrim(regexp_replace(p_query, '\s+', ' ', 'g'))) as k,
+           least(greatest(p_limit, 1), 50) as n
+  ),
+  prefix as (
+    select e.word, e.ipa, e.senses -> 0 ->> 'm' as meaning,
+           row_number() over (order by length(e.word_key), e.word_key) as ord
+    from dict_entries e, q
+    where q.k <> ''
+      and e.word_key like replace(replace(replace(q.k, '\', '\\'), '%', '\%'), '_', '\_') || '%'
+    order by length(e.word_key), e.word_key
+    limit (select n from q)
+  ),
+  near as (
+    select e.word, e.ipa, e.senses -> 0 ->> 'm' as meaning,
+           row_number() over (order by similarity(e.word_key, q.k) desc, e.word_key) as ord
+    from dict_entries e, q
+    where length(q.k) >= 3 and not exists (select 1 from prefix) and e.word_key % q.k
+    order by similarity(e.word_key, q.k) desc, e.word_key
+    limit 8
+  )
+  select word, ipa, meaning, false from (select * from prefix order by ord) p
+  union all
+  select word, ipa, meaning, true from (select * from near order by ord) n;
+$$;
+
+create or replace function public.dict_lookup(p_words text[])
+returns setof public.dict_entries
+language sql stable set search_path = public as $$
+  select * from dict_entries where word_key = any (p_words);
+$$;
+
+revoke all on function public.dict_suggest(text, int) from public, anon;
+grant execute on function public.dict_suggest(text, int) to authenticated;
+revoke all on function public.dict_lookup(text[]) from public, anon;
+grant execute on function public.dict_lookup(text[]) to authenticated;
+
+-- Sổ từ riêng: mỗi user thêm / sửa / xoá từ của chính mình (bộ chung vẫn chỉ admin ghi).
+drop policy if exists "own words" on public.vocab;
+create policy "own words" on public.vocab for all to authenticated
+  using (user_id = (select auth.uid())) with check (user_id = (select auth.uid()));

@@ -1,4 +1,7 @@
 // Dữ liệu & repository giả để chụp màn hình (golden) không cần mạng.
+import 'package:bami_toeic/module/dictionary/data/dictionary_repository.dart';
+import 'package:bami_toeic/module/dictionary/data/models/dict_models.dart';
+import 'package:bami_toeic/module/dictionary/data/translate_repository.dart';
 import 'package:bami_toeic/module/goals/data/goals_repository.dart';
 import 'package:bami_toeic/module/goals/data/study_store.dart';
 import 'package:bami_toeic/core/media/offline_store.dart';
@@ -372,6 +375,9 @@ class FakeVocabRepository implements VocabRepository {
   Future<void> delete(String id) async {}
 
   @override
+  Future<void> saveOwn(VocabInput input) async {}
+
+  @override
   Future<void> markKnown({
     required String userId,
     required VocabItem item,
@@ -386,6 +392,82 @@ class FakeVocabRepository implements VocabRepository {
     required String vocabId,
     required SrsState state,
   }) async {}
+}
+
+class FakeDictionaryRepository implements DictionaryRepository {
+  static const _entry = DictEntry(
+    wordKey: 'qualified',
+    word: 'qualified',
+    ipa: '/ˈkwɑːlɪfaɪd/',
+    senses: [
+      DictSense(
+        pos: 'adj',
+        meaning: 'Có đủ tư cách, có đủ khả năng, có đủ tiêu chuẩn.',
+        example: 'She is qualified for the manager position.',
+      ),
+      DictSense(
+        pos: 'adj',
+        meaning: 'Hạn chế, dè dặt.',
+        example: 'The plan received qualified approval.',
+      ),
+      DictSense(
+        pos: 'v',
+        meaning: 'Quá khứ của qualify: đủ điều kiện.',
+        example: 'He qualified as an accountant last year.',
+      ),
+    ],
+  );
+
+  @override
+  Future<List<DictSuggestion>> suggest(String query) async => const [
+    DictSuggestion(
+      word: 'qualified',
+      ipa: '/ˈkwɑːlɪfaɪd/',
+      meaning: 'Có đủ tư cách, có đủ khả năng.',
+    ),
+    DictSuggestion(
+      word: 'qualify',
+      ipa: '/ˈkwɑːlɪfaɪ/',
+      meaning: 'Đủ tư cách, đủ điều kiện.',
+    ),
+  ];
+
+  @override
+  Future<DictLookup> lookup(String query) async =>
+      DictLookup(query: query, entry: _entry);
+
+  @override
+  Future<List<EnEntry>> english(String word) async => const [
+    EnEntry(
+      word: 'qualified',
+      meanings: [
+        EnMeaning(
+          partOfSpeech: 'adjective',
+          definitions: [
+            EnDefinition(definition: 'Having the appropriate qualifications.'),
+          ],
+          synonyms: ['competent', 'certified'],
+        ),
+      ],
+    ),
+  ];
+}
+
+class FakeTranslateRepository implements TranslateRepository {
+  @override
+  Future<Translation> translate(String text) async => Translation(
+    source: text,
+    sentences: const [
+      (
+        source: 'All employees are required to submit their expense reports by the end of the month. ',
+        text: 'Tất cả nhân viên được yêu cầu nộp báo cáo chi phí trước cuối tháng. ',
+      ),
+      (
+        source: 'Please contact Ms. Lee if you have questions.',
+        text: 'Vui lòng liên hệ cô Lee nếu bạn có thắc mắc.',
+      ),
+    ],
+  );
 }
 
 class FakeGoalsRepository implements GoalsRepository {

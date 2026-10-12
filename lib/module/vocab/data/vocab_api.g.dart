@@ -81,6 +81,32 @@ class _VocabApi implements VocabApi {
   }
 
   @override
+  Future<void> upsertOwnVocab(
+    VocabInput body, {
+    String onConflict = 'user_id,word,topic',
+  }) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{r'on_conflict': onConflict};
+    final _headers = <String, dynamic>{
+      r'Prefer': 'resolution=merge-duplicates,return=minimal',
+    };
+    _headers.removeWhere((k, v) => v == null);
+    final _data = <String, dynamic>{};
+    _data.addAll(body.toJson());
+    final _options = _setStreamType<void>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/rest/v1/vocab',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    await _dio.fetch<void>(_options);
+  }
+
+  @override
   Future<List<VocabItem>> updateVocab(
     VocabInput body, {
     required String id,
