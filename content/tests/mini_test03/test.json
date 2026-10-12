@@ -1,0 +1,508 @@
+{
+  "title": "Mini Test 25Q - Đề 03",
+  "source": "Bami TOEIC - Mini Test 25Q",
+  "description": "Chủ đề Tiếp thị, Dịch vụ khách hàng, Bán lẻ & Quản lý bảo trì: Đề thi mini 25 câu chất lượng cao rèn luyện cả kỹ năng Listening và Reading.",
+  "is_free": true,
+  "groups": [
+    {
+      "part": 1,
+      "image": "p1_q1.png",
+      "audio": "p1_q1.m4a",
+      "transcript": "(A) A cashier is scanning merchandise at a register. (B) Clothing racks have been pushed against the glass door. (C) Customers are dining at an outdoor bistro table. (D) Mannequins are displayed in a storefront showcase.",
+      "_speech": "Number 1. Look at the picture marked number 1 in your test book. (A) A cashier is scanning merchandise at a register. (B) Clothing racks have been pushed against the glass door. (C) Customers are dining at an outdoor bistro table. (D) Mannequins are displayed in a storefront showcase.",
+      "_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"600\" viewBox=\"0 0 800 600\">\n  <rect width=\"800\" height=\"600\" fill=\"#FDF2F8\"/>\n  <rect y=\"380\" width=\"800\" height=\"220\" fill=\"#FCE7F3\"/>\n  <rect x=\"180\" y=\"240\" width=\"440\" height=\"200\" rx=\"16\" fill=\"#DB2777\"/>\n  <rect x=\"240\" y=\"160\" width=\"120\" height=\"90\" rx=\"8\" fill=\"#1E293B\"/>\n  <rect x=\"250\" y=\"170\" width=\"100\" height=\"70\" rx=\"4\" fill=\"#67E8F9\"/>\n  <circle cx=\"540\" cy=\"180\" r=\"35\" fill=\"#F472B6\"/>\n  <rect x=\"510\" y=\"225\" width=\"60\" height=\"160\" rx=\"12\" fill=\"#BE185D\"/>\n  <rect x=\"380\" y=\"260\" width=\"60\" height=\"70\" fill=\"#F3F4F6\"/>\n</svg>",
+      "questions": [
+        {
+          "number": 1,
+          "content": "Choose the statement that best describes the picture.",
+          "options": [
+            "A cashier is scanning merchandise at a register.",
+            "Clothing racks have been pushed against the glass door.",
+            "Customers are dining at an outdoor bistro table.",
+            "Mannequins are displayed in a storefront showcase."
+          ],
+          "answer": "A",
+          "explanation": "Tranh vẽ cảnh thu ngân đang đứng tại quầy thanh toán với máy quét và hàng hóa → Chọn (A).",
+          "tags": [
+            "listening",
+            "photographs"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "image": "p1_q2.png",
+      "audio": "p1_q2.m4a",
+      "transcript": "(A) Outdoor dining tables are shaded by large umbrellas. (B) Waitstaff are polishing wine glasses at the counter. (C) Street performers are gathering an audience. (D) Pedestrians are sheltering under a bus canopy.",
+      "_speech": "Number 2. Look at the picture marked number 2 in your test book. (A) Outdoor dining tables are shaded by large umbrellas. (B) Waitstaff are polishing wine glasses at the counter. (C) Street performers are gathering an audience. (D) Pedestrians are sheltering under a bus canopy.",
+      "_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"600\" viewBox=\"0 0 800 600\">\n  <rect width=\"800\" height=\"600\" fill=\"#ECFDF5\"/>\n  <circle cx=\"700\" cy=\"100\" r=\"50\" fill=\"#FBBF24\"/>\n  <rect y=\"420\" width=\"800\" height=\"180\" fill=\"#D1D5DB\"/>\n  <polygon points=\"150,220 350,220 250,140\" fill=\"#059669\"/>\n  <rect x=\"245\" y=\"220\" width=\"10\" height=\"220\" fill=\"#065F46\"/>\n  <rect x=\"180\" y=\"380\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#92400E\"/>\n  <polygon points=\"450,220 650,220 550,140\" fill=\"#059669\"/>\n  <rect x=\"545\" y=\"220\" width=\"10\" height=\"220\" fill=\"#065F46\"/>\n  <rect x=\"480\" y=\"380\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#92400E\"/>\n</svg>",
+      "questions": [
+        {
+          "number": 2,
+          "content": "Choose the statement that best describes the picture.",
+          "options": [
+            "Outdoor dining tables are shaded by large umbrellas.",
+            "Waitstaff are polishing wine glasses at the counter.",
+            "Street performers are gathering an audience.",
+            "Pedestrians are sheltering under a bus canopy."
+          ],
+          "answer": "A",
+          "explanation": "Những chiếc bàn ăn ngoài trời được che bóng mát bởi những cây dù lớn → Chọn (A).",
+          "tags": [
+            "listening",
+            "photographs"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q7.m4a",
+      "transcript": "M: When does our promotional campaign for the autumn apparel line launch?\nW: (A) Early next month on social media. (B) Yes, autumn is my favorite season. (C) A twenty percent discount coupon.",
+      "_speech": "Number 7. When does our promotional campaign for the autumn apparel line launch? (A) Early next month on social media. (B) Yes, autumn is my favorite season. (C) A twenty percent discount coupon.",
+      "questions": [
+        {
+          "number": 7,
+          "content": "When does our promotional campaign for the autumn apparel line launch?",
+          "options": [
+            "Early next month on social media.",
+            "Yes, autumn is my favorite season.",
+            "A twenty percent discount coupon."
+          ],
+          "answer": "A",
+          "explanation": "Hỏi \"When\" về thời điểm ra mắt chiến dịch tiếp thị → Chọn (A) \"Early next month on social media\".",
+          "tags": [
+            "listening",
+            "question-response"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q8.m4a",
+      "transcript": "W: Where can shoppers redeem their reward loyalty points?\nM: (A) At any checkout counter or online. (B) It earned five stars in reviews. (C) About forty reward points.",
+      "_speech": "Number 8. Where can shoppers redeem their reward loyalty points? (A) At any checkout counter or online. (B) It earned five stars in reviews. (C) About forty reward points.",
+      "questions": [
+        {
+          "number": 8,
+          "content": "Where can shoppers redeem their reward loyalty points?",
+          "options": [
+            "At any checkout counter or online.",
+            "It earned five stars in reviews.",
+            "About forty reward points."
+          ],
+          "answer": "A",
+          "explanation": "Hỏi \"Where\" về địa điểm đổi điểm tích lũy → Chọn (A) \"Tại bất kỳ quầy thu ngân nào hoặc trực tuyến\".",
+          "tags": [
+            "listening",
+            "question-response"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q9.m4a",
+      "transcript": "M: Could you please review the draft of the press release before five o'clock?\nW: (A) Certainly, I will read it right after lunch. (B) The printing press broke down. (C) Yes, exactly five copies.",
+      "_speech": "Number 9. Could you please review the draft of the press release before five o'clock? (A) Certainly, I will read it right after lunch. (B) The printing press broke down. (C) Yes, exactly five copies.",
+      "questions": [
+        {
+          "number": 9,
+          "content": "Could you please review the draft of the press release before five o'clock?",
+          "options": [
+            "Certainly, I will read it right after lunch.",
+            "The printing press broke down.",
+            "Yes, exactly five copies."
+          ],
+          "answer": "A",
+          "explanation": "Lời đề nghị xem xét thông cáo báo chí \"Could you please review...\" → đồng ý sẵn lòng \"Chắc chắn rồi, tôi sẽ đọc ngay sau bữa trưa\" (A).",
+          "tags": [
+            "listening",
+            "question-response"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "audio": "p3_q32-34.m4a",
+      "transcript": "W: Hello, Mark. I was reviewing our customer satisfaction ratings for the third quarter, and while our delivery speed received glowing reviews, our online returns process scored below average.\nM: I noticed that as well, Hannah. Several customers left comments stating that printing physical return labels and finding drop-off lockers was cumbersome.\nW: Perhaps we should partner with a courier that provides QR-code drop-offs where customers don't need to print labels at home.\nM: That's a fantastic idea. I will contact Swift Logistics this afternoon to check their integration pricing.",
+      "_speech": "Questions 32 through 34 refer to the following conversation. Hello, Mark. I was reviewing our customer satisfaction ratings for the third quarter, and while our delivery speed received glowing reviews, our online returns process scored below average. I noticed that as well, Hannah. Several customers left comments stating that printing physical return labels and finding drop-off lockers was cumbersome. Perhaps we should partner with a courier that provides QR-code drop-offs where customers don't need to print labels at home. That's a fantastic idea. I will contact Swift Logistics this afternoon to check their integration pricing.",
+      "questions": [
+        {
+          "number": 32,
+          "content": "What aspect of the company's service received low ratings?",
+          "options": [
+            "The online returns process",
+            "The product packaging quality",
+            "The speed of domestic delivery",
+            "The accuracy of inventory counts"
+          ],
+          "answer": "A",
+          "explanation": "Người phụ nữ nhận xét: \"...our online returns process scored below average\" → Chọn (A).",
+          "tags": [
+            "listening",
+            "conversation"
+          ]
+        },
+        {
+          "number": 33,
+          "content": "What problem did customers mention in their reviews?",
+          "options": [
+            "Printing return labels was inconvenient",
+            "Replacement items arrived damaged",
+            "Customer service phone lines were busy",
+            "The return window of 14 days was too short"
+          ],
+          "answer": "A",
+          "explanation": "Người nam cho biết khách hàng phản ánh việc in nhãn đổi trả và tìm tủ nhận hàng phiền phức (\"printing physical return labels ... was cumbersome\") → Chọn (A).",
+          "tags": [
+            "listening",
+            "conversation"
+          ]
+        },
+        {
+          "number": 34,
+          "content": "What will Mark do this afternoon?",
+          "options": [
+            "Contact a logistics courier about QR-code drop-offs",
+            "Redesign the company's mobile shopping application",
+            "Issue refunds to unsatisfied shoppers",
+            "Survey retail store managers"
+          ],
+          "answer": "A",
+          "explanation": "Mark nói: \"I will contact Swift Logistics this afternoon to check their integration pricing\" → Chọn (A).",
+          "tags": [
+            "listening",
+            "conversation"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "audio": "p4_q71-73.m4a",
+      "transcript": "Attention Greenfield Mall shoppers. Thank you for visiting us this weekend. To celebrate the grand opening of our newly renovated East Wing, select fashion boutiques and tech stores are offering storewide discounts of up to thirty percent today only. Also, be sure to stop by the central atrium where our complimentary artisan coffee bar will be serving hot espresso drinks until 4:00 P.M. If you spend over fifty dollars at any participating store today, present your receipt at the customer service booth near Entrance B to receive a free canvas shopping tote.",
+      "_speech": "Questions 71 through 73 refer to the following announcement. Attention Greenfield Mall shoppers. Thank you for visiting us this weekend. To celebrate the grand opening of our newly renovated East Wing, select fashion boutiques and tech stores are offering storewide discounts of up to thirty percent today only. Also, be sure to stop by the central atrium where our complimentary artisan coffee bar will be serving hot espresso drinks until 4:00 P.M. If you spend over fifty dollars at any participating store today, present your receipt at the customer service booth near Entrance B to receive a free canvas shopping tote.",
+      "questions": [
+        {
+          "number": 71,
+          "content": "What is being celebrated at Greenfield Mall?",
+          "options": [
+            "The grand opening of a renovated wing",
+            "The mall's twentieth anniversary",
+            "A national public holiday festival",
+            "A regional student fashion competition"
+          ],
+          "answer": "A",
+          "explanation": "Thông báo nêu: \"To celebrate the grand opening of our newly renovated East Wing...\" → Chọn (A).",
+          "tags": [
+            "listening",
+            "talks"
+          ]
+        },
+        {
+          "number": 72,
+          "content": "What is available in the central atrium until 4:00 P.M.?",
+          "options": [
+            "Complimentary artisan coffee drinks",
+            "Live acoustic musical performances",
+            "Automotive test drive bookings",
+            "Free smartphone repair assessments"
+          ],
+          "answer": "A",
+          "explanation": "Thông báo: \"...complimentary artisan coffee bar will be serving hot espresso drinks until 4:00 P.M.\" → Chọn (A).",
+          "tags": [
+            "listening",
+            "talks"
+          ]
+        },
+        {
+          "number": 73,
+          "content": "How can shoppers qualify for a free canvas tote bag?",
+          "options": [
+            "By spending over fifty dollars at participating stores",
+            "By signing up for an email newsletter",
+            "By filling out a customer satisfaction survey",
+            "By applying for a department store credit card"
+          ],
+          "answer": "A",
+          "explanation": "Thông báo: \"If you spend over fifty dollars at any participating store today, present your receipt ... to receive a free canvas shopping tote\" → Chọn (A).",
+          "tags": [
+            "listening",
+            "talks"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "content": "Participants found the interactive workshop on digital marketing analytics extremely -------.",
+          "options": [
+            "informative",
+            "inform",
+            "informatively",
+            "information"
+          ],
+          "answer": "A",
+          "explanation": "Cấu trúc \"find + O + adj\" (nhận thấy cái gì như thế nào) → sau phó từ chỉ mức độ \"extremely\" cần tính từ \"informative\" (bổ ích, hữu ích).",
+          "tags": [
+            "reading",
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "content": "Hotel guests dining at the seaside restaurant are entitled to a complimentary breakfast ------- every morning.",
+          "options": [
+            "buffet",
+            "permit",
+            "contract",
+            "voucher"
+          ],
+          "answer": "A",
+          "explanation": "Cụm danh từ cố định trong ngành khách sạn \"breakfast buffet\" (bữa ăn sáng tự chọn).",
+          "tags": [
+            "reading",
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "content": "Delegates attending the summit are requested to register ------- on the official event portal.",
+          "options": [
+            "themselves",
+            "they",
+            "them",
+            "theirs"
+          ],
+          "answer": "A",
+          "explanation": "Hành động đăng ký tác động lên chính chủ ngữ \"Delegates\" → dùng đại từ phản thân \"themselves\" (tự đăng ký).",
+          "tags": [
+            "reading",
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "content": "The technical seminar was rescheduled ------- the keynote speaker missed his connecting flight.",
+          "options": [
+            "because",
+            "due to",
+            "in spite of",
+            "as though"
+          ],
+          "answer": "A",
+          "explanation": "Theo sau là một mệnh đề hoàn chỉnh có chủ ngữ và động từ (\"the keynote speaker missed his connecting flight\") chỉ nguyên nhân → chọn liên từ \"because\".",
+          "tags": [
+            "reading",
+            "conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "content": "Customer parking spaces are situated directly ------- the primary supermarket entrance.",
+          "options": [
+            "behind",
+            "into",
+            "onto",
+            "during"
+          ],
+          "answer": "A",
+          "explanation": "Vị trí không gian của bãi đỗ xe so với cổng vào siêu thị → chọn giới từ nơi chốn \"behind\" (phía sau).",
+          "tags": [
+            "reading",
+            "preposition"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "NOTICE TO ALL SYSTEM USERS\nFrom: IT Infrastructure & Operations\nDate: September 5\nSubject: Scheduled CRM System Maintenance\n\nPlease be advised that our central Customer Relationship Management (CRM) platform will undergo routine system maintenance this Saturday, September 9, beginning at 11:00 P.M. and concluding at 4:00 A.M. on Sunday morning.\n\nDuring this five-hour maintenance window, the database will be temporarily [131] ------- to all personnel. This maintenance is essential to deploy critical security patches and enhance server performance. [132] -------. We advise all sales and support representatives to finalize and save all active transaction records before logging off on Friday afternoon.\n\nIf you require urgent client contact records during the maintenance outage, please export the necessary files [133] ------- Saturday noon. Regular database operations will resume [134] ------- at 4:30 A.M. on Sunday.",
+      "questions": [
+        {
+          "number": 131,
+          "content": "Choose the best word to fill in blank [131].",
+          "options": [
+            "inaccessible",
+            "accessible",
+            "accessibility",
+            "accessing"
+          ],
+          "answer": "A",
+          "explanation": "Trong thời gian hệ thống bảo trì máy chủ, cơ sở dữ liệu sẽ tạm thời \"không thể truy cập được\" → chọn tính từ phủ định \"inaccessible\".",
+          "tags": [
+            "reading",
+            "vocabulary"
+          ]
+        },
+        {
+          "number": 132,
+          "content": "Choose the best sentence to fill in blank [132].",
+          "options": [
+            "These enhancements will ensure faster query times and improved data safety.",
+            "The marketing campaign proposal was rejected by our overseas partner.",
+            "All international travel receipts must be turned in by Thursday.",
+            "The executive dining lounge will be closed during the holidays."
+          ],
+          "answer": "A",
+          "explanation": "Câu trước nói về mục đích nâng cấp bảo mật và hiệu năng. Câu (A) tiếp nối mạch logic: \"Những nâng cấp này sẽ đảm bảo thời gian truy vấn nhanh hơn và dữ liệu an toàn hơn\".",
+          "tags": [
+            "reading",
+            "context"
+          ]
+        },
+        {
+          "number": 133,
+          "content": "Choose the best preposition to fill in blank [133].",
+          "options": [
+            "before",
+            "among",
+            "between",
+            "toward"
+          ],
+          "answer": "A",
+          "explanation": "Chỉ mốc thời gian phải hoàn tất trước khi sự kiện xảy ra: \"before Saturday noon\" (trước trưa Thứ Bảy).",
+          "tags": [
+            "reading",
+            "preposition"
+          ]
+        },
+        {
+          "number": 134,
+          "content": "Choose the best adverb to fill in blank [134].",
+          "options": [
+            "promptly",
+            "prompt",
+            "promptness",
+            "prompted"
+          ],
+          "answer": "A",
+          "explanation": "Bổ nghĩa cho động từ \"will resume\" tại mốc thời gian cụ thể cần phó từ (adverb) → chọn \"promptly\" (đúng giờ, kịp thời).",
+          "tags": [
+            "reading",
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "APEX AUTOMOTIVE REPAIR\nCustomer Feedback & Service Evaluation\nDate of Service: August 18\nCustomer: David Miller\nVehicle: 2021 Silverton Sedan\n\nService Evaluation:\n• Punctuality: Excellent (5/5)\n• Work Quality: Excellent (5/5)\n• Facility Comfort: Average (3/5)\n• Pricing Transparency: Excellent (5/5)\n\nCustomer Remarks:\n\"I brought my sedan in for the scheduled 30,000-mile inspection and front brake pad replacement. Technician Carlos did a wonderful job walking me through the rotor measurements and finished the job thirty minutes ahead of schedule. My only minor suggestion pertains to the customer lounge: seating was limited, and the guest Wi-Fi was quite spotty. Aside from that, the mechanical work was top-notch, and I will certainly return for future oil changes.\"\n\nManager Response:\nDate: August 20\nFrom: Brenda Larson, Service Manager\n\nDear Mr. Miller,\nThank you for sharing your experience. We are delighted that Carlos provided prompt, transparent service for your brake inspection. Regarding our waiting area, we are scheduled to expand the customer lounge next month with extra workstations and high-speed fiber internet. To show our appreciation for your loyalty, please present coupon code APEX-15OFF during your next visit to receive 15% off any standard maintenance service.",
+      "questions": [
+        {
+          "number": 147,
+          "content": "Why did Mr. Miller bring his vehicle to Apex Automotive?",
+          "options": [
+            "For a scheduled inspection and brake pad replacement",
+            "To repair severe collision body damage",
+            "To test-drive a newly arrived Silverton sedan",
+            "To install high-performance audio speakers"
+          ],
+          "answer": "A",
+          "explanation": "Khách hàng viết: \"I brought my sedan in for the scheduled 30,000-mile inspection and front brake pad replacement\" → Chọn (A).",
+          "tags": [
+            "reading",
+            "detail"
+          ]
+        },
+        {
+          "number": 148,
+          "content": "What will Apex Automotive do next month?",
+          "options": [
+            "Expand the waiting lounge and install faster internet",
+            "Relocate the auto repair shop to a new facility",
+            "Discontinue the promotional discount coupon program",
+            "Hire additional mechanical technicians"
+          ],
+          "answer": "A",
+          "explanation": "Người quản lý phản hồi: \"...we are scheduled to expand the customer lounge next month with extra workstations and high-speed fiber internet\" → Chọn (A).",
+          "tags": [
+            "reading",
+            "detail"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "ANNOUNCEMENT\nGREENVALE BOTANICAL GARDENS\nAnnual Plant Sale & Horticultural Exhibition\nDates: May 20–22 | Hours: 9:00 A.M. – 6:00 P.M. Daily\n\nGreenvale Botanical Gardens is thrilled to host our 15th Annual Plant Sale! Browse thousands of rare perennial flowers, indigenous shrubs, and organic vegetable seedlings cultivated by our master gardeners.\n\nEvent Highlights:\n• Free 30-minute gardening workshops held daily at 11:00 A.M. and 2:00 P.M. in the glass conservatory.\n• Members-Only Early Access: Garden members enjoy exclusive admission on Friday, May 20 from 8:00 A.M. to 10:00 A.M., plus an extra 15% discount on all plant purchases.\n• Soil testing station: Bring a cup of backyard soil for immediate mineral analysis ($5 per sample; free for members).\n\nAdmission is $12 for adults, $6 for students, and free for children under six and current garden members. Parking is free in the North Lot.\n\n────────────────────────────────────────────────────────\n\nREVIEW POSTING\nUser: Sarah Jenkins | Date: May 23\nRating: ★★★★★\n\n\"I attended the Greenvale Plant Sale on Saturday morning with my family. The variety of heirloom tomato seedlings was astonishing, and the staff at the soil testing booth gave us practical tips on improving our garden soil. Even though the North Lot was full by 10:30 A.M., parking attendants directed us smoothly to the overflow lot at the adjacent middle school. We also attended the 2:00 P.M. indoor gardening talk, which was incredibly insightful. We definitely plan to purchase a family membership before next year's sale!\"",
+      "questions": [
+        {
+          "number": 152,
+          "content": "What benefit do garden members receive on Friday, May 20?",
+          "options": [
+            "Exclusive early admission and a 15% plant discount",
+            "Free admission for up to ten non-member guests",
+            "A complimentary pair of professional gardening shears",
+            "Reserved parking stalls in the overflow lot"
+          ],
+          "answer": "A",
+          "explanation": "Thông báo nêu: \"Garden members enjoy exclusive admission on Friday, May 20 from 8:00 A.M. to 10:00 A.M., plus an extra 15% discount on all plant purchases\" → Chọn (A).",
+          "tags": [
+            "reading",
+            "detail"
+          ]
+        },
+        {
+          "number": 153,
+          "content": "Where did Sarah Jenkins park her car during her visit?",
+          "options": [
+            "At an overflow parking lot at a nearby school",
+            "In the garden's primary North Lot",
+            "On an adjacent residential neighborhood street",
+            "In an underground parking facility"
+          ],
+          "answer": "A",
+          "explanation": "Sarah viết: \"...the North Lot was full by 10:30 A.M., parking attendants directed us smoothly to the overflow lot at the adjacent middle school\" → Chọn (A).",
+          "tags": [
+            "reading",
+            "detail"
+          ]
+        },
+        {
+          "number": 154,
+          "content": "What does Sarah Jenkins indicate she will do before next year?",
+          "options": [
+            "Buy a garden family membership",
+            "Volunteer as a parking attendant",
+            "Donate plant seeds to the conservatory",
+            "Host a gardening workshop in her backyard"
+          ],
+          "answer": "A",
+          "explanation": "Câu cuối bài review: \"We definitely plan to purchase a family membership before next year's sale!\" → Chọn (A).",
+          "tags": [
+            "reading",
+            "inference"
+          ]
+        }
+      ]
+    }
+  ]
+}

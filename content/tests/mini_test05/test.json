@@ -1,0 +1,508 @@
+{
+  "title": "Mini Test 25Q - Đề 05",
+  "source": "Bami TOEIC - Mini Test 25Q",
+  "description": "Chủ đề Kho vận, Chuỗi cung ứng, Vận tải biển & Quản lý cơ sở vật chất: Đề thi mini 25 câu chất lượng cao hoàn thiện toàn bộ các phần TOEIC.",
+  "is_free": true,
+  "groups": [
+    {
+      "part": 1,
+      "image": "p1_q1.png",
+      "audio": "p1_q1.m4a",
+      "transcript": "(A) A warehouse worker is operating a forklift truck. (B) Boxes are stacked neatly on wooden shipping pallets. (C) An overhead industrial crane is lowering a shipping container. (D) Workers are painting safety lines on the warehouse floor.",
+      "_speech": "Number 1. Look at the picture marked number 1 in your test book. (A) A warehouse worker is operating a forklift truck. (B) Boxes are stacked neatly on wooden shipping pallets. (C) An overhead industrial crane is lowering a shipping container. (D) Workers are painting safety lines on the warehouse floor.",
+      "_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"600\" viewBox=\"0 0 800 600\">\n  <rect width=\"800\" height=\"600\" fill=\"#F3F4F6\"/>\n  <rect y=\"440\" width=\"800\" height=\"160\" fill=\"#9CA3AF\"/>\n  <rect x=\"200\" y=\"420\" width=\"400\" height=\"30\" fill=\"#B45309\"/>\n  <rect x=\"220\" y=\"300\" width=\"110\" height=\"120\" fill=\"#D97706\" stroke=\"#78350F\" stroke-width=\"4\"/>\n  <rect x=\"345\" y=\"300\" width=\"110\" height=\"120\" fill=\"#D97706\" stroke=\"#78350F\" stroke-width=\"4\"/>\n  <rect x=\"470\" y=\"300\" width=\"110\" height=\"120\" fill=\"#D97706\" stroke=\"#78350F\" stroke-width=\"4\"/>\n  <rect x=\"280\" y=\"180\" width=\"110\" height=\"120\" fill=\"#D97706\" stroke=\"#78350F\" stroke-width=\"4\"/>\n  <rect x=\"410\" y=\"180\" width=\"110\" height=\"120\" fill=\"#D97706\" stroke=\"#78350F\" stroke-width=\"4\"/>\n</svg>",
+      "questions": [
+        {
+          "number": 1,
+          "content": "Choose the statement that best describes the picture.",
+          "options": [
+            "A warehouse worker is operating a forklift truck.",
+            "Boxes are stacked neatly on wooden shipping pallets.",
+            "An overhead industrial crane is lowering a shipping container.",
+            "Workers are painting safety lines on the warehouse floor."
+          ],
+          "answer": "B",
+          "explanation": "Các thùng hàng được xếp gọn gàng trên pallet gỗ vận chuyển → Chọn (B).",
+          "tags": [
+            "listening",
+            "photographs"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "image": "p1_q2.png",
+      "audio": "p1_q2.m4a",
+      "transcript": "(A) Cargo containers are stacked along the seaport dock. (B) A cruise ship is boarding passengers at the terminal. (C) Fishermen are casting nets into the harbor. (D) Seamen are coiling ropes on the wooden pier.",
+      "_speech": "Number 2. Look at the picture marked number 2 in your test book. (A) Cargo containers are stacked along the seaport dock. (B) A cruise ship is boarding passengers at the terminal. (C) Fishermen are casting nets into the harbor. (D) Seamen are coiling ropes on the wooden pier.",
+      "_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"600\" viewBox=\"0 0 800 600\">\n  <rect width=\"800\" height=\"600\" fill=\"#E0F2FE\"/>\n  <circle cx=\"100\" cy=\"120\" r=\"45\" fill=\"#FBBF24\"/>\n  <rect y=\"360\" width=\"800\" height=\"240\" fill=\"#0284C7\"/>\n  <rect y=\"440\" width=\"800\" height=\"160\" fill=\"#475569\"/>\n  <rect x=\"160\" y=\"320\" width=\"180\" height=\"120\" fill=\"#DC2626\" rx=\"4\"/>\n  <rect x=\"360\" y=\"320\" width=\"180\" height=\"120\" fill=\"#2563EB\" rx=\"4\"/>\n  <rect x=\"260\" y=\"200\" width=\"180\" height=\"120\" fill=\"#16A34A\" rx=\"4\"/>\n  <line x1=\"180\" y1=\"330\" x2=\"180\" y2=\"430\" stroke=\"#B91C1C\" stroke-width=\"4\"/>\n  <line x1=\"220\" y1=\"330\" x2=\"220\" y2=\"430\" stroke=\"#B91C1C\" stroke-width=\"4\"/>\n</svg>",
+      "questions": [
+        {
+          "number": 2,
+          "content": "Choose the statement that best describes the picture.",
+          "options": [
+            "Cargo containers are stacked along the seaport dock.",
+            "A cruise ship is boarding passengers at the terminal.",
+            "Fishermen are casting nets into the harbor.",
+            "Seamen are coiling ropes on the wooden pier."
+          ],
+          "answer": "A",
+          "explanation": "Các thùng container hàng hóa nhiều màu sắc được xếp chồng dọc bến cảng biển → Chọn (A).",
+          "tags": [
+            "listening",
+            "photographs"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q7.m4a",
+      "transcript": "M: When will the freight cargo from Kaohsiung arrive at our port terminal?\nW: (A) Early Thursday morning according to the shipping agent. (B) Forty metric tons of precision parts. (C) Yes, it has already been loaded.",
+      "_speech": "Number 7. When will the freight cargo from Kaohsiung arrive at our port terminal? (A) Early Thursday morning according to the shipping agent. (B) Forty metric tons of precision parts. (C) Yes, it has already been loaded.",
+      "questions": [
+        {
+          "number": 7,
+          "content": "When will the freight cargo from Kaohsiung arrive at our port terminal?",
+          "options": [
+            "Early Thursday morning according to the shipping agent.",
+            "Forty metric tons of precision parts.",
+            "Yes, it has already been loaded."
+          ],
+          "answer": "A",
+          "explanation": "Hỏi \"When\" về thời gian hàng cập bến cảng → Chọn (A) \"Sáng sớm thứ Năm theo đại lý vận chuyển\".",
+          "tags": [
+            "listening",
+            "question-response"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q8.m4a",
+      "transcript": "W: Who is inspecting the automated sorting conveyor in building C?\nM: (A) Senior technician Martinez and his apprentice. (B) It operates at high speeds. (C) Next to the freight loading bay.",
+      "_speech": "Number 8. Who is inspecting the automated sorting conveyor in building C? (A) Senior technician Martinez and his apprentice. (B) It operates at high speeds. (C) Next to the freight loading bay.",
+      "questions": [
+        {
+          "number": 8,
+          "content": "Who is inspecting the automated sorting conveyor in building C?",
+          "options": [
+            "Senior technician Martinez and his apprentice.",
+            "It operates at high speeds.",
+            "Next to the freight loading bay."
+          ],
+          "answer": "A",
+          "explanation": "Hỏi \"Who\" về người kiểm tra băng chuyền tự động → Chọn (A) \"Kỹ thuật viên trưởng Martinez và phụ tá\".",
+          "tags": [
+            "listening",
+            "question-response"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q9.m4a",
+      "transcript": "M: Would you like me to reserve the freight elevator for the furniture delivery tomorrow?\nW: (A) That would be wonderful, thank you so much. (B) On the twelfth floor executive suite. (C) Yes, three heavy mahogany desks.",
+      "_speech": "Number 9. Would you like me to reserve the freight elevator for the furniture delivery tomorrow? (A) That would be wonderful, thank you so much. (B) On the twelfth floor executive suite. (C) Yes, three heavy mahogany desks.",
+      "questions": [
+        {
+          "number": 9,
+          "content": "Would you like me to reserve the freight elevator for the furniture delivery tomorrow?",
+          "options": [
+            "That would be wonderful, thank you so much.",
+            "On the twelfth floor executive suite.",
+            "Yes, three heavy mahogany desks."
+          ],
+          "answer": "A",
+          "explanation": "Lời đề nghị đặt trước thang máy chở hàng \"Would you like me to reserve...\" → nhận lời cảm ơn (A) \"That would be wonderful, thank you so much\".",
+          "tags": [
+            "listening",
+            "question-response"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "audio": "p3_q32-34.m4a",
+      "transcript": "W: Hello, Carlos. Has the fleet maintenance crew finished inspecting our delivery vans? We have thirty express shipments scheduled for delivery this afternoon.\nM: Good news, Elena. All five refrigerated vans passed their safety brake checks and are ready for loading. However, Van Number 3 needs a headlight bulb replaced before evening.\nW: That's a quick fix. I'll ask our mechanic to replace the bulb right now while the drivers load the parcels.\nM: Perfect. That way all drivers will be on the road before 1:00 P.M.",
+      "_speech": "Questions 32 through 34 refer to the following conversation. Hello, Carlos. Has the fleet maintenance crew finished inspecting our delivery vans? We have thirty express shipments scheduled for delivery this afternoon. Good news, Elena. All five refrigerated vans passed their safety brake checks and are ready for loading. However, Van Number 3 needs a headlight bulb replaced before evening. That's a quick fix. I'll ask our mechanic to replace the bulb right now while the drivers load the parcels. Perfect. That way all drivers will be on the road before 1:00 P.M.",
+      "questions": [
+        {
+          "number": 32,
+          "content": "What are the speakers discussing?",
+          "options": [
+            "The safety inspection of company delivery vans",
+            "The purchase of new freight transport vehicles",
+            "A delay in manufacturing automotive replacement parts",
+            "A customer complaint regarding late package deliveries"
+          ],
+          "answer": "A",
+          "explanation": "Người phụ nữ hỏi: \"Has the fleet maintenance crew finished inspecting our delivery vans?\" → Cuộc hội thoại nói về việc kiểm định xe tải giao hàng (A).",
+          "tags": [
+            "listening",
+            "conversation"
+          ]
+        },
+        {
+          "number": 33,
+          "content": "What minor issue does Carlos mention regarding Van Number 3?",
+          "options": [
+            "A headlight bulb needs to be replaced",
+            "Its refrigeration compressor is broken",
+            "Its side cargo door cannot be locked",
+            "Its windshield has a visible crack"
+          ],
+          "answer": "A",
+          "explanation": "Carlos cho biết: \"Van Number 3 needs a headlight bulb replaced before evening\" → Cần thay bóng đèn pha (A).",
+          "tags": [
+            "listening",
+            "conversation"
+          ]
+        },
+        {
+          "number": 34,
+          "content": "When do the speakers expect drivers to depart?",
+          "options": [
+            "Before 1:00 P.M.",
+            "Tomorrow morning at 8:00 A.M.",
+            "At 5:00 P.M.",
+            "Next Friday"
+          ],
+          "answer": "A",
+          "explanation": "Carlos nói: \"That way all drivers will be on the road before 1:00 P.M.\" → Chọn (A).",
+          "tags": [
+            "listening",
+            "conversation"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "audio": "p4_q71-73.m4a",
+      "transcript": "Attention all distribution center staff. This is a safety announcement from Facilities Operations. Beginning tomorrow morning at 7:00 A.M., contractors will be repainting safety pedestrian walkways and installing heavy-duty safety railings along the southern loading bays. As a result, Loading Bays 4 through 7 will be temporarily closed until Friday afternoon. All incoming freight carriers should be routed to Loading Bays 1 through 3 on the northern concourse. Please remember that high-visibility reflective vests and steel-toe work boots are mandatory in all active staging areas. Thank you for your continued dedication to workplace safety.",
+      "_speech": "Questions 71 through 73 refer to the following announcement. Attention all distribution center staff. This is a safety announcement from Facilities Operations. Beginning tomorrow morning at 7:00 A.M., contractors will be repainting safety pedestrian walkways and installing heavy-duty safety railings along the southern loading bays. As a result, Loading Bays 4 through 7 will be temporarily closed until Friday afternoon. All incoming freight carriers should be routed to Loading Bays 1 through 3 on the northern concourse. Please remember that high-visibility reflective vests and steel-toe work boots are mandatory in all active staging areas. Thank you for your continued dedication to workplace safety.",
+      "questions": [
+        {
+          "number": 71,
+          "content": "What work will contractors begin tomorrow morning?",
+          "options": [
+            "Repainting pedestrian walkways and installing safety railings",
+            "Replacing automated sorting conveyors",
+            "Re-roofing the primary distribution warehouse",
+            "Installing digital inventory scanning monitors"
+          ],
+          "answer": "A",
+          "explanation": "Thông báo nêu: \"contractors will be repainting safety pedestrian walkways and installing heavy-duty safety railings...\" → Chọn (A).",
+          "tags": [
+            "listening",
+            "talks"
+          ]
+        },
+        {
+          "number": 72,
+          "content": "Which loading bays will be closed until Friday afternoon?",
+          "options": [
+            "Loading Bays 4 through 7",
+            "Loading Bays 1 through 3",
+            "All bays on the northern concourse",
+            "Only the underground freight bay"
+          ],
+          "answer": "A",
+          "explanation": "Thông báo: \"As a result, Loading Bays 4 through 7 will be temporarily closed until Friday afternoon\" → Chọn (A).",
+          "tags": [
+            "listening",
+            "talks"
+          ]
+        },
+        {
+          "number": 73,
+          "content": "What safety equipment must all staff wear in staging areas?",
+          "options": [
+            "High-visibility vests and steel-toe boots",
+            "Full-face protective shields and earplugs",
+            "Waterproof rubber aprons and gloves",
+            "Insulated winter thermal jackets"
+          ],
+          "answer": "A",
+          "explanation": "Thông báo nhắc: \"...high-visibility reflective vests and steel-toe work boots are mandatory in all active staging areas\" → Chọn (A).",
+          "tags": [
+            "listening",
+            "talks"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "content": "Warehouse safety regulations will be ------- enforced across all regional logistics hubs beginning next Monday.",
+          "options": [
+            "strictly",
+            "strict",
+            "strictness",
+            "strictest"
+          ],
+          "answer": "A",
+          "explanation": "Đứng giữa trợ động từ \"will be\" và động từ phân từ hai \"enforced\" cần một phó từ (adverb) chỉ mức độ → chọn \"strictly\" (một cách nghiêm ngặt).",
+          "tags": [
+            "reading",
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "content": "The certified inspector will ------- the automated conveyor belt before regular production shifts resume.",
+          "options": [
+            "inspect",
+            "inspection",
+            "inspector",
+            "inspects"
+          ],
+          "answer": "A",
+          "explanation": "Sau động từ khuyết thiếu \"will\" cần một động từ nguyên mẫu không \"to\" (bare infinitive) → chọn \"inspect\" (thanh tra, kiểm tra).",
+          "tags": [
+            "reading",
+            "grammar"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "content": "Commercial truck drivers must submit ------- daily delivery mileage logs to dispatch every evening.",
+          "options": [
+            "their",
+            "they",
+            "them",
+            "theirs"
+          ],
+          "answer": "A",
+          "explanation": "Đứng trước cụm danh từ \"daily delivery mileage logs\" cần tính từ sở hữu số nhiều tương ứng với \"Commercial truck drivers\" → chọn \"their\" (của họ).",
+          "tags": [
+            "reading",
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "content": "The container vessel remained anchored outside the harbor ------- port customs officials reviewed the shipping manifests.",
+          "options": [
+            "while",
+            "during",
+            "despite",
+            "between"
+          ],
+          "answer": "A",
+          "explanation": "Theo sau là mệnh đề (\"port customs officials reviewed the shipping manifests\") diễn tả hành động diễn ra đồng thời → chọn liên từ thời gian \"while\" (trong khi).",
+          "tags": [
+            "reading",
+            "conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "content": "Perishable food supplies arriving at the fulfillment center must be placed ------- designated refrigeration rooms.",
+          "options": [
+            "inside",
+            "above",
+            "along",
+            "onto"
+          ],
+          "answer": "A",
+          "explanation": "Giới từ chỉ vị trí bên trong phòng lạnh bảo quản hàng tươi sống → chọn \"inside\" (bên trong).",
+          "tags": [
+            "reading",
+            "preposition"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "PACIFIC CARGO LOGISTICS\nCustomer Advisory: Shipment Tracking #PC-884920\nDate: October 18\nRecipient: Starlight Electronics Ltd.\n\nDear Valued Client,\n\nWe are writing to provide an important update regarding your shipment of precision semiconductor components (Tracking ID: PC-884920). Due to severe weather conditions along the Western Pacific maritime corridor, your container vessel was required to seek temporary anchorage outside Kaohsiung Harbor for maritime safety.\n\nAs a direct consequence of this necessary detour, the estimated arrival at the Port of Long Beach has been [131] ------- from October 22 to October 27. [132] -------. Our customs brokerage unit has already pre-filed all electronic import documentation to ensure cargo is discharged rapidly upon berthing.\n\nOnce the container is unloaded, our certified transport partner will deliver the freight [133] ------- to your Irvine assembly facility. We sincerely regret any inconvenience caused by this unavoidable maritime delay. For continuous real-time container updates, please log in to your account dashboard or [134] ------- with your dedicated client manager.",
+      "questions": [
+        {
+          "number": 131,
+          "content": "Choose the best verb form to fill in blank [131].",
+          "options": [
+            "rescheduled",
+            "rescheduling",
+            "reschedule",
+            "reschedules"
+          ],
+          "answer": "A",
+          "explanation": "Cấu trúc bị động thì hiện tại hoàn thành: \"has been + V3/ed\" → chọn \"rescheduled\" (đã được dời lịch từ 22 sang 27 tháng 10).",
+          "tags": [
+            "reading",
+            "grammar"
+          ]
+        },
+        {
+          "number": 132,
+          "content": "Choose the best sentence to fill in blank [132].",
+          "options": [
+            "We are monitoring maritime advisories closely and will alert you to further updates.",
+            "Our corporate headquarters will host an executive banquet this weekend.",
+            "Please ensure all personal luggage is tagged before boarding the flight.",
+            "The annual software subscription fee has already been deducted."
+          ],
+          "answer": "A",
+          "explanation": "Câu trước vừa thông báo lùi ngày giao hàng do bão. Câu (A) nối tiếp thông tin trấn an và theo dõi sát sao (\"Chúng tôi đang theo dõi sát sao và sẽ thông báo cho bạn\").",
+          "tags": [
+            "reading",
+            "context"
+          ]
+        },
+        {
+          "number": 133,
+          "content": "Choose the best adverb to fill in blank [133].",
+          "options": [
+            "directly",
+            "direct",
+            "direction",
+            "directness"
+          ],
+          "answer": "A",
+          "explanation": "Bổ nghĩa cho động từ \"will deliver the freight\" cần phó từ chỉ thể cách → chọn \"directly\" (giao hàng trực tiếp tới cơ sở lắp ráp của bạn).",
+          "tags": [
+            "reading",
+            "word-form"
+          ]
+        },
+        {
+          "number": 134,
+          "content": "Choose the best verb to fill in blank [134].",
+          "options": [
+            "consult",
+            "consulting",
+            "consultation",
+            "consulted"
+          ],
+          "answer": "A",
+          "explanation": "Cấu trúc song hành với động từ nguyên mẫu đứng trước liên từ \"or\": \"please log in ... or consult with ...\".",
+          "tags": [
+            "reading",
+            "grammar"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "METRO TOWER MANAGEMENT\nTenant Advisory: Ground Lobby & Passenger Elevator Modernization\nDate: July 15\nTo: All Building Occupants & Visitors\n\nPlease be advised that Metro Tower Management will begin comprehensive modernization work on our ground-floor entrance lobby and high-rise passenger elevator system starting Saturday, August 1.\n\nProject Phases & Work Scope:\n• Phase 1 (August 1 – August 14): Lobby flooring replacement and energy-efficient lighting installation. The main revolving entrance will be inaccessible; all tenants and guests must enter through the West Plaza side doors.\n• Phase 2 (August 15 – August 31): High-rise elevator cab overhaul. Elevators 1 and 2 will be temporarily suspended, while Elevators 3 and 4 will operate express service servicing floors 12 through 25.\n\nNoise & After-Hours Schedule:\nTo minimize business disruption, all noisy tile drilling and structural removal will occur strictly between 7:00 P.M. and 5:00 A.M. on weekdays, and throughout the weekend. Security officers will remain on duty at the West Plaza entrance 24 hours a day to assist guests and verify electronic access cards.",
+      "questions": [
+        {
+          "number": 147,
+          "content": "What is the primary objective of this notice?",
+          "options": [
+            "To inform tenants about scheduled lobby and elevator renovations",
+            "To announce an increase in monthly parking stall fees",
+            "To invite building occupants to an annual social reception",
+            "To warn employees about unexpected electrical power cuts"
+          ],
+          "answer": "A",
+          "explanation": "Tiêu đề và nội dung thông báo đều tập trung vào việc hiện đại hóa sảnh chính tầng trệt và thang máy tòa nhà Metro Tower → Chọn (A).",
+          "tags": [
+            "reading",
+            "main-idea"
+          ]
+        },
+        {
+          "number": 148,
+          "content": "Where must tenants enter the building during Phase 1?",
+          "options": [
+            "Through the West Plaza side doors",
+            "Through the main revolving entrance",
+            "Via the underground parking loading dock",
+            "Through the fire escape stairwell"
+          ],
+          "answer": "A",
+          "explanation": "Mục Phase 1: \"The main revolving entrance will be inaccessible; all tenants and guests must enter through the West Plaza side doors\" → Chọn (A).",
+          "tags": [
+            "reading",
+            "detail"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "MEMORANDUM 1\nTo: Distribution Center Personnel\nFrom: Kenji Sato, Operations Director, QuickFreight Logistics\nDate: November 10\nSubject: Implementation of Autonomous Guided Vehicles (AGVs)\n\nBeginning December 1, our primary fulfillment center in Indianapolis will integrate twelve Autonomous Guided Vehicles (AGVs) into our warehouse pallet transport operations. These robotic units are engineered to transport loaded pallets from the packaging lines directly to the dispatch staging lanes, reducing manual forklift transit by forty percent.\n\nTo ensure smooth integration and maintain workplace safety, all warehouse associates must attend a mandatory 45-minute training session on AGV navigation sensors and emergency-stop protocols. Training sessions will be held daily in the main training room from November 20 to November 24.\n\n────────────────────────────────────────────────────────\n\nMEMORANDUM 2\nTo: Kenji Sato, Operations Director\nFrom: Maria Hernandez, Shift Supervisor\nDate: November 25\nSubject: AGV Training Attendance Completion\n\nDear Kenji,\nI am pleased to report that 100% of our 85 shift workers have completed the AGV safety certification course as of this morning. Technician Davis from the robotics supplier conducted thorough demonstrations on battery charging docks and safety beacon indicators.\n\nOur shift leads noted that the designated transit lanes for the AGVs along Corridor B are somewhat narrow. We suggest repainting the floor markings to give human foot traffic an extra two feet of clearance before the robots go live on December 1. Please let me know if maintenance can proceed with this adjustment over the holiday weekend.\n\nBest regards,\nMaria Hernandez",
+      "questions": [
+        {
+          "number": 152,
+          "content": "What is the purpose of introducing Autonomous Guided Vehicles (AGVs)?",
+          "options": [
+            "To transport pallets from packaging lines to dispatch staging areas",
+            "To replace the warehouse security guard personnel",
+            "To package delicate glass items for international air freight",
+            "To inspect incoming freight delivery vehicles"
+          ],
+          "answer": "A",
+          "explanation": "Mục đích AGVs: \"transport loaded pallets from the packaging lines directly to the dispatch staging lanes\" → Chọn (A).",
+          "tags": [
+            "reading",
+            "detail"
+          ]
+        },
+        {
+          "number": 153,
+          "content": "What did Maria Hernandez report regarding the safety training?",
+          "options": [
+            "All 85 shift associates successfully completed the course",
+            "The training sessions were postponed until December",
+            "The robotics technician failed to attend the demonstration",
+            "Half of the workers requested additional training sessions"
+          ],
+          "answer": "A",
+          "explanation": "Maria Hernandez báo cáo: \"100% of our 85 shift workers have completed the AGV safety certification course as of this morning\" → Chọn (A).",
+          "tags": [
+            "reading",
+            "detail"
+          ]
+        },
+        {
+          "number": 154,
+          "content": "What modification did Maria suggest before December 1?",
+          "options": [
+            "Repainting floor markings in Corridor B to widen pedestrian clearance",
+            "Purchasing six additional robotic units from the supplier",
+            "Canceling the forklift maintenance contracts",
+            "Extending the battery charging time of the vehicles"
+          ],
+          "answer": "A",
+          "explanation": "Maria đề xuất: \"We suggest repainting the floor markings to give human foot traffic an extra two feet of clearance...\" → Chọn (A).",
+          "tags": [
+            "reading",
+            "detail"
+          ]
+        }
+      ]
+    }
+  ]
+}

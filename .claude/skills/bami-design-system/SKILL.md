@@ -135,7 +135,7 @@ Cần giá trị chưa có thì **thêm token**, không viết số trực tiế
 | `StreakBadge(count, active?)` | Huy hiệu chuỗi ngày học liên tục (icon flame + số ngày) |
 | `DailyMissionCard(completed, total, tasks, onTap?)` | Thẻ nhiệm vụ duy trì thói quen học tập hôm nay |
 | `UpgradeBanner(title, description, onUpgrade, onDismiss?)` | Banner quảng bá nâng cấp Bami PRO tinh tế, không chướng mắt |
-| `TestTag(label, isSource?, difficulty?)` | Thẻ tag nguồn đề (ETS 2024) hoặc độ khó (Dễ / Trung bình / Khó) |
+| `TestTag(label, isSource?, difficulty?)` | Thẻ tag nguồn đề (ETS 2026) hoặc độ khó (Dễ / Trung bình / Khó) |
 
 ---
 

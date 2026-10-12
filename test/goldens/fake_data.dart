@@ -32,12 +32,17 @@ class FakeAuth extends AuthController {
 final _tests = [
   const TestSummary(
     id: 't1',
-    title: 'ETS 2024 – Test 1',
-    source: 'ETS 2024',
+    title: 'ETS 2026 – Test 1',
+    source: 'ETS 2026',
     questionCount: 200,
     isFree: true,
   ),
-  const TestSummary(id: 't2', title: 'ETS 2024 – Test 2', source: 'ETS 2024', questionCount: 200),
+  const TestSummary(
+    id: 't2',
+    title: 'ETS 2026 – Test 2',
+    source: 'ETS 2026',
+    questionCount: 200,
+  ),
   const TestSummary(
     id: 't3',
     title: 'Mini Test 01 (mẫu)',
@@ -48,16 +53,22 @@ final _tests = [
   ),
 ];
 
-Question _q(int n, int part, String content, List<String> opts, String ans, [String? exp]) =>
-    Question(
-      id: 'q$n',
-      part: part,
-      number: n,
-      content: content,
-      options: opts,
-      answer: ans,
-      explanation: exp,
-    );
+Question _q(
+  int n,
+  int part,
+  String content,
+  List<String> opts,
+  String ans, [
+  String? exp,
+]) => Question(
+  id: 'q$n',
+  part: part,
+  number: n,
+  content: content,
+  options: opts,
+  answer: ans,
+  explanation: exp,
+);
 
 final _groups = [
   QuestionGroup(
@@ -80,12 +91,13 @@ final _groups = [
     part: 5,
     orderNo: 2,
     questions: [
-      _q(102, 5, 'The new software has made the billing process significantly more -------.', [
-        'efficiency',
-        'efficient',
-        'efficiently',
-        'efficiencies',
-      ], 'B'),
+      _q(
+        102,
+        5,
+        'The new software has made the billing process significantly more -------.',
+        ['efficiency', 'efficient', 'efficiently', 'efficiencies'],
+        'B',
+      ),
     ],
   ),
   QuestionGroup(
@@ -116,7 +128,7 @@ final _attempts = [
   Attempt(
     id: 'a1',
     testId: 't1',
-    testTitle: 'ETS 2024 – Test 1',
+    testTitle: 'ETS 2026 – Test 1',
     mode: 'exam',
     parts: const [1, 2, 3, 4, 5, 6, 7],
     startedAt: now.subtract(const Duration(hours: 2)),
@@ -218,14 +230,18 @@ class FakeTestRepository implements TestRepository {
   ];
 
   @override
-  Future<OfflineEntry> downloadTest(String id, {void Function(double)? onProgress}) async =>
+  Future<OfflineEntry> downloadTest(
+    String id, {
+    void Function(double)? onProgress,
+  }) async =>
       OfflineEntry(bytes: 0, savedAt: DateTime(2026, 10, 1), files: const {});
 
   @override
   Future<void> removeOffline(String id) async {}
 
   @override
-  Future<List<InProgressRow>> fetchInProgress({String? testId}) async => const [];
+  Future<List<InProgressRow>> fetchInProgress({String? testId}) async =>
+      const [];
 
   @override
   Future<void> saveInProgress(
@@ -238,7 +254,9 @@ class FakeTestRepository implements TestRepository {
   Future<void> deleteInProgress(String testId) async {}
 
   @override
-  Future<List<QuestionGroup>> fetchMistakeGroups(List<LatestAnswer> mistakes) async => _groups;
+  Future<List<QuestionGroup>> fetchMistakeGroups(
+    List<LatestAnswer> mistakes,
+  ) async => _groups;
 
   @override
   Future<(int, int)> submitMistakePractice({
@@ -313,7 +331,15 @@ final _vocab = [
       dueAt: _today.subtract(const Duration(hours: 2)),
     ),
   ),
-  _v('v4', 'postpone', '/poʊstˈpoʊn/', 'v', 'hoãn lại', 'Office', src: 'ETS 2026 Test 2 · câu 12'),
+  _v(
+    'v4',
+    'postpone',
+    '/poʊstˈpoʊn/',
+    'v',
+    'hoãn lại',
+    'Office',
+    src: 'ETS 2026 Test 2 · câu 12',
+  ),
   _v(
     'v5',
     'reimburse',
@@ -346,7 +372,10 @@ class FakeVocabRepository implements VocabRepository {
   Future<void> delete(String id) async {}
 
   @override
-  Future<void> markKnown({required String userId, required VocabItem item}) async {}
+  Future<void> markKnown({
+    required String userId,
+    required VocabItem item,
+  }) async {}
 
   @override
   Future<void> resetWord(String vocabId) async {}
@@ -361,7 +390,8 @@ class FakeVocabRepository implements VocabRepository {
 
 class FakeGoalsRepository implements GoalsRepository {
   @override
-  Future<GoalSettings?> fetchGoals() async => const GoalSettings(targetScore: 800);
+  Future<GoalSettings?> fetchGoals() async =>
+      const GoalSettings(targetScore: 800);
 
   @override
   Future<void> saveGoals(GoalSettings g) async {}
@@ -377,60 +407,62 @@ class FakeGoalsRepository implements GoalsRepository {
 
 class FakeLeaderboardRepository implements LeaderboardRepository {
   @override
-  Future<List<LeaderboardEntry>> fetchBoard(LeaderboardBoard board) async => const [
-    LeaderboardEntry(
-      rank: 1,
-      userId: 'a',
-      displayName: 'Lâm Phong',
-      bestScore: 905,
-      bestListening: 470,
-      bestReading: 435,
-      fullTests: 6,
-      weekQuestions: 420,
-      weekCorrect: 371,
-      streak: 21,
-      lastWeekRank: 1,
-    ),
-    LeaderboardEntry(
-      rank: 2,
-      userId: 'b',
-      displayName: 'Tiểu Vy',
-      bestScore: 785,
-      bestListening: 420,
-      bestReading: 365,
-      fullTests: 3,
-      weekQuestions: 260,
-      weekCorrect: 198,
-    ),
-    LeaderboardEntry(
-      rank: 3,
-      userId: 'me',
-      displayName: 'Bami',
-      isMe: true,
-      bestScore: 690,
-      bestListening: 375,
-      bestReading: 315,
-      fullTests: 2,
-      weekQuestions: 180,
-      weekCorrect: 129,
-      streak: 5,
-      lastWeekRank: 3,
-    ),
-    LeaderboardEntry(
-      rank: 4,
-      userId: 'c',
-      displayName: 'Học viên 7F2A',
-      bestScore: 455,
-      bestListening: 260,
-      bestReading: 195,
-      fullTests: 1,
-      weekQuestions: 40,
-      weekCorrect: 22,
-    ),
-  ];
+  Future<List<LeaderboardEntry>> fetchBoard(LeaderboardBoard board) async =>
+      const [
+        LeaderboardEntry(
+          rank: 1,
+          userId: 'a',
+          displayName: 'Lâm Phong',
+          bestScore: 905,
+          bestListening: 470,
+          bestReading: 435,
+          fullTests: 6,
+          weekQuestions: 420,
+          weekCorrect: 371,
+          streak: 21,
+          lastWeekRank: 1,
+        ),
+        LeaderboardEntry(
+          rank: 2,
+          userId: 'b',
+          displayName: 'Tiểu Vy',
+          bestScore: 785,
+          bestListening: 420,
+          bestReading: 365,
+          fullTests: 3,
+          weekQuestions: 260,
+          weekCorrect: 198,
+        ),
+        LeaderboardEntry(
+          rank: 3,
+          userId: 'me',
+          displayName: 'Bami',
+          isMe: true,
+          bestScore: 690,
+          bestListening: 375,
+          bestReading: 315,
+          fullTests: 2,
+          weekQuestions: 180,
+          weekCorrect: 129,
+          streak: 5,
+          lastWeekRank: 3,
+        ),
+        LeaderboardEntry(
+          rank: 4,
+          userId: 'c',
+          displayName: 'Học viên 7F2A',
+          bestScore: 455,
+          bestListening: 260,
+          bestReading: 195,
+          fullTests: 1,
+          weekQuestions: 40,
+          weekCorrect: 22,
+        ),
+      ];
 
   @override
-  Future<LeaderboardProfile> fetchProfile() async => const LeaderboardProfile(displayName: 'Bami');
+  Future<LeaderboardProfile> fetchProfile() async =>
+      const LeaderboardProfile(displayName: 'Bami');
 
   @override
   Future<void> saveProfile(LeaderboardProfile p) async {}

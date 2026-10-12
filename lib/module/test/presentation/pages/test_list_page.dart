@@ -73,7 +73,10 @@ class _TestListPageState extends ConsumerState<TestListPage> {
                   Gaps.v16,
                   const _QuickActions(),
                   Gaps.v16,
-                  if (plan != null && !plan.isPro) ...[const _CommercialUpgradeBanner(), Gaps.v8],
+                  if (plan != null && !plan.isPro) ...[
+                    const _CommercialUpgradeBanner(),
+                    Gaps.v8,
+                  ],
                   Gaps.v16,
                   SectionHeader(
                     title: 'Đề thi ETS & Luyện tập',
@@ -96,7 +99,7 @@ class _TestListPageState extends ConsumerState<TestListPage> {
                         ),
                         Gaps.h8,
                         ChoiceChip(
-                          label: const Text('🔥 ETS 2024 Hot'),
+                          label: const Text('🔥 ETS 2026 Hot'),
                           selected: _filter == 'ets',
                           onSelected: (_) => setState(() => _filter = 'ets'),
                         ),
@@ -122,7 +125,9 @@ class _TestListPageState extends ConsumerState<TestListPage> {
                       _TestCard(
                         test: t,
                         lastAttempt: attempts
-                            .where((a) => a.testId == t.id && !a.isMistakeReview)
+                            .where(
+                              (a) => a.testId == t.id && !a.isMistakeReview,
+                            )
                             .firstOrNull,
                         inProgress: inProgress[t.id],
                         locked: isTestLocked(t, plan),
@@ -153,7 +158,9 @@ class _Greeting extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final email = ref.watch(authControllerProvider).value?.user.email;
     final progress = ref.watch(studyProgressProvider).value;
-    final initial = (email == null || email.isEmpty) ? 'B' : email[0].toUpperCase();
+    final initial = (email == null || email.isEmpty)
+        ? 'B'
+        : email[0].toUpperCase();
     final streak = progress?.streak ?? 0;
     final isStreakActive = progress?.activeToday ?? false;
 
@@ -175,7 +182,9 @@ class _Greeting extends ConsumerWidget {
                   AppSpacing.s4,
                 ),
                 decoration: BoxDecoration(
-                  color: context.colors.surfaceContainerHighest.withValues(alpha: 0.6),
+                  color: context.colors.surfaceContainerHighest.withValues(
+                    alpha: 0.6,
+                  ),
                   borderRadius: AppRadius.brMd,
                 ),
                 child: Row(
@@ -200,7 +209,9 @@ class _Greeting extends ConsumerWidget {
                         _displayName(email),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
-                        style: context.textStyles.labelLarge?.copyWith(fontWeight: FontWeight.w700),
+                        style: context.textStyles.labelLarge?.copyWith(
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
                     ),
                     Gaps.h4,
@@ -302,7 +313,9 @@ class _OverviewHero extends ConsumerWidget {
                             borderRadius: AppRadius.brFull,
                           ),
                           child: Text(
-                            target == null ? 'Đặt mục tiêu' : 'Mục tiêu $target',
+                            target == null
+                                ? 'Đặt mục tiêu'
+                                : 'Mục tiêu $target',
                             style: context.textStyles.labelSmall?.copyWith(
                               color: fg,
                               fontWeight: FontWeight.w700,
@@ -537,7 +550,9 @@ class _QuickAction extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: context.textStyles.titleSmall?.copyWith(fontWeight: FontWeight.w600),
+                  style: context.textStyles.titleSmall?.copyWith(
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
                 Text(
                   subtitle,
@@ -570,7 +585,12 @@ class _CommercialUpgradeBanner extends StatelessWidget {
 }
 
 class _TestCard extends StatelessWidget {
-  const _TestCard({required this.test, this.lastAttempt, this.inProgress, this.locked = false});
+  const _TestCard({
+    required this.test,
+    this.lastAttempt,
+    this.inProgress,
+    this.locked = false,
+  });
 
   final TestSummary test;
   final Attempt? lastAttempt;
@@ -590,7 +610,8 @@ class _TestCard extends StatelessWidget {
 
     final isFullTest = test.questionCount >= 100;
 
-    void open() => locked ? showProSheet(context) : context.go(Routes.testDetail(test.id));
+    void open() =>
+        locked ? showProSheet(context) : context.go(Routes.testDetail(test.id));
 
     return AppCard(
       onTap: open,
@@ -605,7 +626,9 @@ class _TestCard extends StatelessWidget {
                 height: AppSizes.badgeLg,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    colors: isFullTest ? context.surfaces.hero : context.surfaces.cyan,
+                    colors: isFullTest
+                        ? context.surfaces.hero
+                        : context.surfaces.cyan,
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
@@ -675,7 +698,9 @@ class _TestCard extends StatelessWidget {
                   children: [
                     TestTag(
                       label: isFullTest ? 'Chuẩn ETS' : 'Mini Test',
-                      tone: isFullTest ? TestTagTone.success : TestTagTone.neutral,
+                      tone: isFullTest
+                          ? TestTagTone.success
+                          : TestTagTone.neutral,
                     ),
                     if (test.isFree)
                       const StatusBadge(
@@ -685,7 +710,8 @@ class _TestCard extends StatelessWidget {
                       ),
                     if (inProgress case final p?)
                       StatusBadge(
-                        label: 'Làm dở · ${p.answers.length}/${p.totalQuestions}',
+                        label:
+                            'Làm dở · ${p.answers.length}/${p.totalQuestions}',
                         tone: AppTone.info,
                         icon: Icons.pause_circle_outline_rounded,
                       ),
@@ -703,7 +729,9 @@ class _TestCard extends StatelessWidget {
                 onPressed: open,
                 style: FilledButton.styleFrom(
                   visualDensity: VisualDensity.compact,
-                  padding: const EdgeInsets.symmetric(horizontal: AppSpacing.s12),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: AppSpacing.s12,
+                  ),
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -711,7 +739,9 @@ class _TestCard extends StatelessWidget {
                     Text(locked ? 'Mở khoá' : 'Làm bài'),
                     Gaps.h4,
                     Icon(
-                      locked ? Icons.lock_outline_rounded : Icons.arrow_forward_rounded,
+                      locked
+                          ? Icons.lock_outline_rounded
+                          : Icons.arrow_forward_rounded,
                       size: AppSizes.iconXs,
                     ),
                   ],

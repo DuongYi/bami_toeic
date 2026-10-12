@@ -1,0 +1,508 @@
+{
+  "title": "Mini Test 25Q - Đề 04",
+  "source": "Bami TOEIC - Mini Test 25Q",
+  "description": "Chủ đề Tài chính, Ngân sách, Mua sắm trang thiết bị & Hợp đồng dịch vụ: 25 câu đủ 7 phần kiểm tra ngữ pháp, phản xạ nghe và đọc hiểu chuyên sâu.",
+  "is_free": true,
+  "groups": [
+    {
+      "part": 1,
+      "image": "p1_q1.png",
+      "audio": "p1_q1.m4a",
+      "transcript": "(A) An accountant is reviewing spreadsheets on multiple monitors. (B) File cabinets are being loaded into an elevator. (C) An office desk is being disassembled by movers. (D) A banker is counting cash at a teller window.",
+      "_speech": "Number 1. Look at the picture marked number 1 in your test book. (A) An accountant is reviewing spreadsheets on multiple monitors. (B) File cabinets are being loaded into an elevator. (C) An office desk is being disassembled by movers. (D) A banker is counting cash at a teller window.",
+      "_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"600\" viewBox=\"0 0 800 600\">\n  <rect width=\"800\" height=\"600\" fill=\"#F8FAFC\"/>\n  <rect y=\"400\" width=\"800\" height=\"200\" fill=\"#E2E8F0\"/>\n  <rect x=\"140\" y=\"220\" width=\"240\" height=\"160\" rx=\"8\" fill=\"#1E293B\"/>\n  <rect x=\"150\" y=\"230\" width=\"220\" height=\"140\" rx=\"4\" fill=\"#38BDF8\"/>\n  <rect x=\"420\" y=\"220\" width=\"240\" height=\"160\" rx=\"8\" fill=\"#1E293B\"/>\n  <rect x=\"430\" y=\"230\" width=\"220\" height=\"140\" rx=\"4\" fill=\"#34D399\"/>\n  <rect x=\"240\" y=\"380\" width=\"40\" height=\"40\" fill=\"#0F172A\"/>\n  <rect x=\"520\" y=\"380\" width=\"40\" height=\"40\" fill=\"#0F172A\"/>\n  <circle cx=\"400\" cy=\"460\" r=\"40\" fill=\"#64748B\"/>\n</svg>",
+      "questions": [
+        {
+          "number": 1,
+          "content": "Choose the statement that best describes the picture.",
+          "options": [
+            "An accountant is reviewing spreadsheets on multiple monitors.",
+            "File cabinets are being loaded into an elevator.",
+            "An office desk is being disassembled by movers.",
+            "A banker is counting cash at a teller window."
+          ],
+          "answer": "A",
+          "explanation": "Bàn làm việc với nhiều màn hình hiển thị bảng tính tài chính → Chọn (A).",
+          "tags": [
+            "listening",
+            "photographs"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "image": "p1_q2.png",
+      "audio": "p1_q2.m4a",
+      "transcript": "(A) Guests are seated in rows facing a conference podium. (B) Banquet tables are being folded and stored away. (C) Microphones are being installed on the ceiling. (D) Waiters are clearing dinner plates from tables.",
+      "_speech": "Number 2. Look at the picture marked number 2 in your test book. (A) Guests are seated in rows facing a conference podium. (B) Banquet tables are being folded and stored away. (C) Microphones are being installed on the ceiling. (D) Waiters are clearing dinner plates from tables.",
+      "_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"600\" viewBox=\"0 0 800 600\">\n  <rect width=\"800\" height=\"600\" fill=\"#EFF6FF\"/>\n  <rect y=\"420\" width=\"800\" height=\"180\" fill=\"#DBEAFE\"/>\n  <rect x=\"340\" y=\"240\" width=\"120\" height=\"180\" fill=\"#475569\"/>\n  <circle cx=\"360\" cy=\"480\" r=\"30\" fill=\"#1E40AF\"/>\n  <circle cx=\"440\" cy=\"480\" r=\"30\" fill=\"#1E40AF\"/>\n  <circle cx=\"280\" cy=\"480\" r=\"30\" fill=\"#1E40AF\"/>\n  <circle cx=\"520\" cy=\"480\" r=\"30\" fill=\"#1E40AF\"/>\n  <circle cx=\"320\" cy=\"540\" r=\"30\" fill=\"#1E3A8A\"/>\n  <circle cx=\"480\" cy=\"540\" r=\"30\" fill=\"#1E3A8A\"/>\n</svg>",
+      "questions": [
+        {
+          "number": 2,
+          "content": "Choose the statement that best describes the picture.",
+          "options": [
+            "Guests are seated in rows facing a conference podium.",
+            "Banquet tables are being folded and stored away.",
+            "Microphones are being installed on the ceiling.",
+            "Waiters are clearing dinner plates from tables."
+          ],
+          "answer": "A",
+          "explanation": "Người tham dự ngồi theo hàng hướng về bục phát biểu của phòng hội nghị → Chọn (A).",
+          "tags": [
+            "listening",
+            "photographs"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q7.m4a",
+      "transcript": "W: Where should I submit my travel reimbursement form?\nM: (A) Directly to the accounting department on the second floor. (B) Yes, the flight was fully reimbursed. (C) Within thirty calendar days.",
+      "_speech": "Number 7. Where should I submit my travel reimbursement form? (A) Directly to the accounting department on the second floor. (B) Yes, the flight was fully reimbursed. (C) Within thirty calendar days.",
+      "questions": [
+        {
+          "number": 7,
+          "content": "Where should I submit my travel reimbursement form?",
+          "options": [
+            "Directly to the accounting department on the second floor.",
+            "Yes, the flight was fully reimbursed.",
+            "Within thirty calendar days."
+          ],
+          "answer": "A",
+          "explanation": "Hỏi \"Where\" về nơi nộp đơn hoàn tiền công tác → Chọn (A) \"Trực tiếp cho phòng kế toán tại tầng 2\".",
+          "tags": [
+            "listening",
+            "question-response"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q8.m4a",
+      "transcript": "M: Has the finance director approved our revised quarterly budget yet?\nW: (A) She is still reviewing the travel line items. (B) In the corporate conference room. (C) About fifteen percent higher.",
+      "_speech": "Number 8. Has the finance director approved our revised quarterly budget yet? (A) She is still reviewing the travel line items. (B) In the corporate conference room. (C) About fifteen percent higher.",
+      "questions": [
+        {
+          "number": 8,
+          "content": "Has the finance director approved our revised quarterly budget yet?",
+          "options": [
+            "She is still reviewing the travel line items.",
+            "In the corporate conference room.",
+            "About fifteen percent higher."
+          ],
+          "answer": "A",
+          "explanation": "Câu hỏi trạng thái phê duyệt ngân sách → trả lời tình trạng bà ấy vẫn đang xem xét các mục công tác phí (A).",
+          "tags": [
+            "listening",
+            "question-response"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q9.m4a",
+      "transcript": "W: Would you prefer paying with a company credit card or via wire transfer?\nM: (A) A wire transfer will be much easier for our audit records. (B) The card expired last month. (C) Yes, twenty percent off.",
+      "_speech": "Number 9. Would you prefer paying with a company credit card or via wire transfer? (A) A wire transfer will be much easier for our audit records. (B) The card expired last month. (C) Yes, twenty percent off.",
+      "questions": [
+        {
+          "number": 9,
+          "content": "Would you prefer paying with a company credit card or via wire transfer?",
+          "options": [
+            "A wire transfer will be much easier for our audit records.",
+            "The card expired last month.",
+            "Yes, twenty percent off."
+          ],
+          "answer": "A",
+          "explanation": "Câu hỏi lựa chọn (Credit card hay Wire transfer) → chọn hình thức chuyển khoản (A) \"A wire transfer will be much easier...\".",
+          "tags": [
+            "listening",
+            "question-response"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "audio": "p3_q32-34.m4a",
+      "transcript": "W: Good afternoon, Jason. Have you received the updated catering invoice from Grand Oak Convention Center for our awards banquet?\nM: Yes, Lisa, but I noticed they charged us for two hundred dinner plates when our confirmed attendee count was only one hundred and seventy.\nW: Oh, that's a difference of over one thousand dollars. Did you call their banquet manager to verify the count?\nM: I called her office twenty minutes ago, and she apologized for the administrative error. She promised to send an amended invoice with the correct amount before 4:00 P.M.",
+      "_speech": "Questions 32 through 34 refer to the following conversation. Good afternoon, Jason. Have you received the updated catering invoice from Grand Oak Convention Center for our awards banquet? Yes, Lisa, but I noticed they charged us for two hundred dinner plates when our confirmed attendee count was only one hundred and seventy. Oh, that's a difference of over one thousand dollars. Did you call their banquet manager to verify the count? I called her office twenty minutes ago, and she apologized for the administrative error. She promised to send an amended invoice with the correct amount before 4:00 P.M.",
+      "questions": [
+        {
+          "number": 32,
+          "content": "What discrepancy did Jason discover on the banquet invoice?",
+          "options": [
+            "The company was charged for thirty extra dinner plates",
+            "The event hall rental fee was doubled",
+            "The date of the awards banquet was incorrect",
+            "A mandatory gratuity fee was omitted"
+          ],
+          "answer": "A",
+          "explanation": "Jason phát hiện hóa đơn tính tiền 200 suất trong khi chỉ có 170 khách (chênh lệch 30 suất) → Chọn (A).",
+          "tags": [
+            "listening",
+            "conversation"
+          ]
+        },
+        {
+          "number": 33,
+          "content": "How much is the cost discrepancy approximately?",
+          "options": [
+            "Over one thousand dollars",
+            "Five hundred dollars",
+            "Two hundred dollars",
+            "Three thousand dollars"
+          ],
+          "answer": "A",
+          "explanation": "Lisa nói: \"Oh, that's a difference of over one thousand dollars\" → Chọn (A).",
+          "tags": [
+            "listening",
+            "conversation"
+          ]
+        },
+        {
+          "number": 34,
+          "content": "What did the banquet manager promise to do before 4:00 P.M.?",
+          "options": [
+            "Send an amended invoice with the correct figure",
+            "Cancel the banquet reservation",
+            "Provide free floral centerpieces for all tables",
+            "Visit the company headquarters in person"
+          ],
+          "answer": "A",
+          "explanation": "Jason cho biết quản lý hứa gửi hóa đơn sửa đổi trước 4 giờ chiều (\"She promised to send an amended invoice with the correct amount before 4:00 P.M.\") → Chọn (A).",
+          "tags": [
+            "listening",
+            "conversation"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "audio": "p4_q71-73.m4a",
+      "transcript": "Good morning, department supervisors. This is Gregory Simmons from corporate finance with an important announcement regarding our year-end budgeting deadlines. All department heads must submit their finalized budget proposals for the upcoming fiscal year no later than Friday, November 18 at 5:00 P.M. Please remember to use the updated spreadsheet template available in the corporate intranet portal, as legacy formats will not be accepted by our automated accounting system. In addition, the executive board will host an open financial briefing on Wednesday morning to answer questions regarding capital expenditure limits. Attendance is strongly recommended.",
+      "_speech": "Questions 71 through 73 refer to the following talk. Good morning, department supervisors. This is Gregory Simmons from corporate finance with an important announcement regarding our year-end budgeting deadlines. All department heads must submit their finalized budget proposals for the upcoming fiscal year no later than Friday, November 18 at 5:00 P.M. Please remember to use the updated spreadsheet template available in the corporate intranet portal, as legacy formats will not be accepted by our automated accounting system. In addition, the executive board will host an open financial briefing on Wednesday morning to answer questions regarding capital expenditure limits. Attendance is strongly recommended.",
+      "questions": [
+        {
+          "number": 71,
+          "content": "What is the speaker mainly announcing?",
+          "options": [
+            "Deadlines for year-end budget proposals",
+            "A reduction in travel reimbursement rates",
+            "A transition to a new corporate banking partner",
+            "The election of a new board of directors"
+          ],
+          "answer": "A",
+          "explanation": "Người nói thông báo về thời hạn nộp đề xuất ngân sách cuối năm (\"important announcement regarding our year-end budgeting deadlines\") → Chọn (A).",
+          "tags": [
+            "listening",
+            "talks"
+          ]
+        },
+        {
+          "number": 72,
+          "content": "What must supervisors use when preparing their submissions?",
+          "options": [
+            "The updated spreadsheet template on the intranet",
+            "A printed physical ledger from accounting",
+            "A proprietary mobile banking application",
+            "An external audit evaluation software"
+          ],
+          "answer": "A",
+          "explanation": "Người nói nhắc: \"Please remember to use the updated spreadsheet template available in the corporate intranet portal...\" → Chọn (A).",
+          "tags": [
+            "listening",
+            "talks"
+          ]
+        },
+        {
+          "number": 73,
+          "content": "What event is scheduled for Wednesday morning?",
+          "options": [
+            "An open financial briefing with the executive board",
+            "An annual shareholder voting session",
+            "A software training workshop on accounting tools",
+            "A retirement luncheon for senior accountants"
+          ],
+          "answer": "A",
+          "explanation": "Người nói nêu: \"...the executive board will host an open financial briefing on Wednesday morning...\" → Chọn (A).",
+          "tags": [
+            "listening",
+            "talks"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "content": "All travel expense reports must be submitted for managerial ------- by the final business day of the month.",
+          "options": [
+            "approval",
+            "approve",
+            "approving",
+            "approved"
+          ],
+          "answer": "A",
+          "explanation": "Sau tính từ \"managerial\" cần một danh từ để tạo thành cụm danh từ \"managerial approval\" (sự phê duyệt của cấp quản lý).",
+          "tags": [
+            "reading",
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "content": "The auditing committee emphasized that all client financial records must remain strictly -------.",
+          "options": [
+            "confidential",
+            "confidentially",
+            "confidence",
+            "confident"
+          ],
+          "answer": "A",
+          "explanation": "Động từ nối \"remain\" đi với tính từ chỉ tính chất. Sau phó từ bổ nghĩa \"strictly\" cần tính từ mang nghĩa bảo mật → chọn \"confidential\" (bảo mật, bí mật).",
+          "tags": [
+            "reading",
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "content": "The chief financial officer reviewed the balance sheet figures ------- before distributing them to investors.",
+          "options": [
+            "himself",
+            "he",
+            "his",
+            "him"
+          ],
+          "answer": "A",
+          "explanation": "Câu đã đầy đủ chủ ngữ, vị ngữ và tân ngữ. Đại từ phản thân \"himself\" đứng cuối mệnh đề để nhấn mạnh chính ông CFO làm hành động kiểm tra.",
+          "tags": [
+            "reading",
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "content": "Employees will be reimbursed for allowable travel expenses ------- they submit original itemized receipts.",
+          "options": [
+            "provided that",
+            "as well as",
+            "in case of",
+            "regardless of"
+          ],
+          "answer": "A",
+          "explanation": "Liên từ điều kiện \"Provided that\" mang nghĩa \"với điều kiện là / miễn là\" đi kèm một mệnh đề hoàn chỉnh.",
+          "tags": [
+            "reading",
+            "conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "content": "Reimbursement checks will be deposited into employees' bank accounts ------- ten business days.",
+          "options": [
+            "within",
+            "among",
+            "toward",
+            "along"
+          ],
+          "answer": "A",
+          "explanation": "Giới từ \"within\" + khoảng thời gian mang nghĩa \"trong vòng / không quá mười ngày làm việc\".",
+          "tags": [
+            "reading",
+            "preposition"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "MEMORANDUM\nTo: All Department Supervisors\nFrom: Gregory Simmons, Chief Financial Officer\nDate: November 3\nSubject: Updated Corporate Travel Guidelines\n\nEffective December 1, all staff members traveling on corporate business must adhere strictly to our revised travel reimbursement guidelines. Under this updated protocol, all flight and hotel arrangements must be booked [131] ------- our designated corporate travel management portal to secure negotiated corporate rates.\n\nEmployees will no longer receive reimbursement for personal incidental charges, such as hotel minibar purchases or dry-cleaning services. [132] -------. Itemized expense claims, accompanied by scanned copies of official receipts, must be submitted within 14 calendar days of returning from travel.\n\nFailure to provide documented receipts on time will lead to reimbursement [133] -------. Should you have questions regarding allowable per-diem meals, please check the intranet directory or [134] ------- the finance department directly.",
+      "questions": [
+        {
+          "number": 131,
+          "content": "Choose the best preposition to fill in blank [131].",
+          "options": [
+            "through",
+            "across",
+            "between",
+            "toward"
+          ],
+          "answer": "A",
+          "explanation": "Giới từ \"through\" mang nghĩa \"thông qua cổng quản lý công tác được chỉ định\" (\"through our designated corporate travel management portal\").",
+          "tags": [
+            "reading",
+            "preposition"
+          ]
+        },
+        {
+          "number": 132,
+          "content": "Choose the best sentence to fill in blank [132].",
+          "options": [
+            "Such personal charges must be settled directly by the individual traveler.",
+            "Our annual product demonstration was well attended by international guests.",
+            "The customer service hotline operates twenty-four hours a day.",
+            "Parking permits will be issued at the security booth tomorrow."
+          ],
+          "answer": "A",
+          "explanation": "Câu trước nói về việc công ty không hoàn tiền cho chi phí cá nhân (mini-bar, giặt ủi). Câu (A) nối tiếp logic: \"Các chi phí cá nhân như vậy phải do chính người đi công tác thanh toán\".",
+          "tags": [
+            "reading",
+            "context"
+          ]
+        },
+        {
+          "number": 133,
+          "content": "Choose the best noun form to fill in blank [133].",
+          "options": [
+            "delays",
+            "delayed",
+            "deliberate",
+            "delaying"
+          ],
+          "answer": "A",
+          "explanation": "Sau danh từ \"reimbursement\" cần danh từ để tạo thành cụm danh từ ghép \"reimbursement delays\" (sự chậm trễ trong hoàn trả chi phí).",
+          "tags": [
+            "reading",
+            "word-form"
+          ]
+        },
+        {
+          "number": 134,
+          "content": "Choose the best verb form to fill in blank [134].",
+          "options": [
+            "contact",
+            "contacting",
+            "contacted",
+            "contactable"
+          ],
+          "answer": "A",
+          "explanation": "Cấu trúc song hành với động từ nguyên mẫu đứng trước liên từ \"or\": \"please check ... or contact ... directly\".",
+          "tags": [
+            "reading",
+            "grammar"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "GRAND OAK CONVENTION CENTER\nEvent Catering Agreement & Banquet Confirmation\nClient: Pinnacle Financial Group | Event: Annual Corporate Honors Banquet\nEvent Date: December 12 | Client Contact: Ms. Rachel Adams, Events Director\n\nEvent Specifications:\n• Venue: Grand Ballroom (Third Floor)\n• Confirmed Guests: 180 attendees\n• Service Package: Executive Three-Course Plated Banquet\n• Staff Setup: 4:30 P.M. | Guest Arrival: 6:00 P.M. | Meal Service: 7:00 P.M.\n\nFinancial Terms & Payment Schedule:\n• Total Contract Value: $14,400 (includes catering, audio-visual suite, and service gratuity)\n• Initial Deposit: $4,000 (received October 5)\n• Remaining Balance Due: $10,400 payable on or before November 28\n\nCancellation Policy:\nCancellations received at least 30 calendar days prior to December 12 will receive a full deposit refund, less a standard $250 administrative fee. Cancellations made within 30 days are non-refundable. Final meal selections and dietary requirements (vegetarian, kosher, gluten-free) must be submitted in writing to catering coordinator Mark Evans by December 1.",
+      "questions": [
+        {
+          "number": 147,
+          "content": "What type of event is being held at the Grand Oak Convention Center?",
+          "options": [
+            "An annual corporate honors banquet",
+            "A computer hardware manufacturing expo",
+            "A public shareholder election meeting",
+            "A software engineering certification class"
+          ],
+          "answer": "A",
+          "explanation": "Mục tiêu đề hợp đồng: \"Event: Annual Corporate Honors Banquet\" (tiệc vinh danh doanh nghiệp hàng năm) → Chọn (A).",
+          "tags": [
+            "reading",
+            "detail"
+          ]
+        },
+        {
+          "number": 148,
+          "content": "When must the remaining balance of $10,400 be settled?",
+          "options": [
+            "On or before November 28",
+            "On October 5",
+            "By December 1",
+            "On December 12"
+          ],
+          "answer": "A",
+          "explanation": "Trong mục Financial Terms: \"Remaining Balance Due: $10,400 payable on or before November 28\" → Chọn (A).",
+          "tags": [
+            "reading",
+            "detail"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "MEMORANDUM 1\nTo: Senior Management Team\nFrom: Teresa Alvarez, Chief Procurement Officer\nDate: October 15\nSubject: Office Printer Fleet Replacement Bids\n\nOur current leasing contract for multi-function office copiers with Lexmark Office Solutions expires on December 31. Over the past three months, the procurement committee solicited bids from three commercial vendors to replace our fleet of 24 copiers across three regional branches.\n\nAfter evaluating print quality, monthly maintenance turnaround, and volume pricing, the committee recommends partnering with Apex Imaging Services. Apex offers high-speed laser printers with integrated cloud scanning at a monthly lease rate of $3,800, which is 12% lower than our current contract. In addition, Apex guarantees a four-hour on-site maintenance response time.\n\n────────────────────────────────────────────────────────\n\nMEMORANDUM 2\nTo: Teresa Alvarez, Chief Procurement Officer\nFrom: Marcus Sterling, Chief Executive Officer\nDate: October 17\nSubject: RE: Office Printer Fleet Replacement Bids\n\nDear Teresa,\nThank you for the thorough comparative analysis. Given the cost savings and the four-hour service response guarantee, I fully approve the committee's recommendation to award the leasing contract to Apex Imaging Services.\n\nPlease proceed with drafting the formal five-year agreement with their legal team. Prior to signing, ensure that the contract includes complimentary installation and staff training during the first week of January so our daily workflow remains uninterrupted.\n\nBest regards,\nMarcus Sterling",
+      "questions": [
+        {
+          "number": 152,
+          "content": "Why did the procurement committee recommend Apex Imaging Services?",
+          "options": [
+            "Lower monthly lease pricing and a rapid maintenance guarantee",
+            "They are the only vendor offering color photocopy machines",
+            "Their corporate headquarters is located next to Apex Studio",
+            "They agreed to buy back old office furniture"
+          ],
+          "answer": "A",
+          "explanation": "Ủy ban đề xuất Apex vì chi phí thuê hàng tháng thấp hơn 12% và cam kết phản hồi kỹ thuật trong vòng 4 tiếng (\"monthly lease rate ... 12% lower ... guarantees a four-hour on-site maintenance response time\") → Chọn (A).",
+          "tags": [
+            "reading",
+            "detail"
+          ]
+        },
+        {
+          "number": 153,
+          "content": "What condition does Mr. Sterling require before signing the agreement?",
+          "options": [
+            "Complimentary installation and staff training in early January",
+            "A further five percent discount on paper supplies",
+            "Replacement of all office desktop computers",
+            "An option to terminate the lease within six months"
+          ],
+          "answer": "A",
+          "explanation": "CEO Marcus Sterling yêu cầu: \"ensure that the contract includes complimentary installation and staff training during the first week of January\" → Chọn (A).",
+          "tags": [
+            "reading",
+            "detail"
+          ]
+        },
+        {
+          "number": 154,
+          "content": "What is the duration of the proposed contract?",
+          "options": [
+            "Five years",
+            "Three months",
+            "One year",
+            "Twelve months"
+          ],
+          "answer": "A",
+          "explanation": "CEO chỉ đạo: \"Please proceed with drafting the formal five-year agreement...\" → Chọn (A).",
+          "tags": [
+            "reading",
+            "detail"
+          ]
+        }
+      ]
+    }
+  ]
+}

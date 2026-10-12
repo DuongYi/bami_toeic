@@ -23,7 +23,10 @@ class DsGalleryPage extends StatelessWidget {
           _Section('ChoiceCard · IconBadge · AppListGroup', _ChoiceDemo()),
           _Section('Trạng thái màn hình', _StatesDemo()),
           _Section('Phản hồi (dialog, snackbar, sheet)', _FeedbackDemo()),
-          _Section('Thương mại hoá (Commercial · PRO · Streaks)', _CommercialDemo()),
+          _Section(
+            'Thương mại hoá (Commercial · PRO · Streaks)',
+            _CommercialDemo(),
+          ),
         ],
       ),
     );
@@ -58,7 +61,10 @@ class _ColorsDemo extends StatelessWidget {
     Widget swatch(String name, Color bg, Color fg) => Container(
       padding: const EdgeInsets.all(AppSpacing.s8),
       decoration: BoxDecoration(color: bg, borderRadius: AppRadius.brSm),
-      child: Text(name, style: context.textStyles.labelSmall?.copyWith(color: fg)),
+      child: Text(
+        name,
+        style: context.textStyles.labelSmall?.copyWith(color: fg),
+      ),
     );
     return Wrap(
       spacing: AppSpacing.s8,
@@ -102,7 +108,10 @@ class _TypographyDemo extends StatelessWidget {
     };
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [for (final e in styles.entries) Text('${e.key} · Ấ Ễ Ộ Ữ ợ', style: e.value)],
+      children: [
+        for (final e in styles.entries)
+          Text('${e.key} · Ấ Ễ Ộ Ữ ợ', style: e.value),
+      ],
     );
   }
 }
@@ -121,7 +130,11 @@ class _ButtonsDemo extends StatelessWidget {
           onPressed: () {},
         ),
         Gaps.v8,
-        const AppPrimaryButton(label: 'Loading', loading: true, onPressed: null),
+        const AppPrimaryButton(
+          label: 'Loading',
+          loading: true,
+          onPressed: null,
+        ),
         Gaps.v8,
         Wrap(
           spacing: AppSpacing.s8,
@@ -161,13 +174,22 @@ class _CardsDemo extends StatelessWidget {
           spacing: AppSpacing.s8,
           runSpacing: AppSpacing.s8,
           children: [
-            for (final t in AppTone.values) StatusBadge(label: t.name, tone: t, icon: t.icon),
+            for (final t in AppTone.values)
+              StatusBadge(label: t.name, tone: t, icon: t.icon),
           ],
         ),
         Gaps.v12,
-        const LabeledProgress(label: 'Tốt (≥ 70%)', value: 0.82, trailing: '82%'),
+        const LabeledProgress(
+          label: 'Tốt (≥ 70%)',
+          value: 0.82,
+          trailing: '82%',
+        ),
         Gaps.v8,
-        const LabeledProgress(label: 'Trung bình (≥ 50%)', value: 0.6, trailing: '60%'),
+        const LabeledProgress(
+          label: 'Trung bình (≥ 50%)',
+          value: 0.6,
+          trailing: '60%',
+        ),
         Gaps.v8,
         const LabeledProgress(label: 'Yếu', value: 0.3, trailing: '30%'),
       ],
@@ -218,8 +240,14 @@ class _StatesDemo extends StatelessWidget {
     return const Column(
       children: [
         SizedBox(height: AppSizes.imagePlaceholder, child: AppLoadingView()),
-        AppEmptyView(icon: Icons.inbox_outlined, message: 'AppEmptyView: chưa có dữ liệu.'),
-        AppErrorView(message: 'AppErrorView: không có kết nối mạng.', onRetry: _noop),
+        AppEmptyView(
+          icon: Icons.inbox_outlined,
+          message: 'AppEmptyView: chưa có dữ liệu.',
+        ),
+        AppErrorView(
+          message: 'AppErrorView: không có kết nối mạng.',
+          onRetry: _noop,
+        ),
       ],
     );
   }
@@ -247,7 +275,8 @@ class _FeedbackDemo extends StatelessWidget {
           child: const Text('Confirm (destructive)'),
         ),
         OutlinedButton(
-          onPressed: () => showAppSnackBar(context, 'Đã lưu', tone: AppTone.success),
+          onPressed: () =>
+              showAppSnackBar(context, 'Đã lưu', tone: AppTone.success),
           child: const Text('Snackbar success'),
         ),
         OutlinedButton(
@@ -263,8 +292,10 @@ class _FeedbackDemo extends StatelessWidget {
         OutlinedButton(
           onPressed: () => showAppBottomSheet<void>(
             context,
-            builder: (_) =>
-                const Padding(padding: AppInsets.cardLarge, child: Text('Nội dung bottom sheet')),
+            builder: (_) => const Padding(
+              padding: AppInsets.cardLarge,
+              child: Text('Nội dung bottom sheet'),
+            ),
           ),
           child: const Text('Bottom sheet'),
         ),
@@ -297,19 +328,29 @@ class _HeroDemo extends StatelessWidget {
                 strokeWidth: AppSizes.ringStrokeSm,
                 color: fg,
                 trackColor: fg.withValues(alpha: 0.25),
-                child: Text('72%', style: context.textStyles.labelLarge?.copyWith(color: fg)),
+                child: Text(
+                  '72%',
+                  style: context.textStyles.labelLarge?.copyWith(color: fg),
+                ),
               ),
             ],
           ),
         ),
         Gaps.v12,
         Center(
-          child: ScoreRing(value: 0.75, child: Text('75%', style: context.textStyles.displaySmall)),
+          child: ScoreRing(
+            value: 0.75,
+            child: Text('75%', style: context.textStyles.displaySmall),
+          ),
         ),
         Gaps.v12,
         const StatGrid(
           children: [
-            StatCard(icon: Icons.assignment_turned_in_outlined, value: '12', label: 'Lượt làm'),
+            StatCard(
+              icon: Icons.assignment_turned_in_outlined,
+              value: '12',
+              label: 'Lượt làm',
+            ),
             StatCard(
               icon: Icons.emoji_events_outlined,
               value: '850',
@@ -364,7 +405,10 @@ class _ChoiceDemoState extends State<_ChoiceDemo> {
               subtitle: Text('Item 1'),
             ),
             ListTile(
-              leading: IconBadge(icon: Icons.timer_outlined, tone: AppTone.warning),
+              leading: IconBadge(
+                icon: Icons.timer_outlined,
+                tone: AppTone.warning,
+              ),
               title: Text('Item 2'),
             ),
           ],
@@ -391,7 +435,7 @@ class _CommercialDemo extends StatelessWidget {
             ProBadge(label: 'VIP', mini: true),
             StreakBadge(count: 7),
             CoinBadge(amount: 150),
-            TestTag(label: 'ETS 2024', tone: TestTagTone.info),
+            TestTag(label: 'ETS 2026', tone: TestTagTone.info),
             TestTag(label: 'Chuẩn đề thi', tone: TestTagTone.success),
             TestTag(label: 'Nâng cao', tone: TestTagTone.danger),
           ],
@@ -401,9 +445,21 @@ class _CommercialDemo extends StatelessWidget {
           completed: 2,
           total: 3,
           items: const [
-            DailyMissionItem(title: 'Luyện 1 Part đề thi', isDone: true, trailing: 'Part 5'),
-            DailyMissionItem(title: 'Ôn 10 từ vựng SRS', isDone: true, trailing: '10/10'),
-            DailyMissionItem(title: 'Giải quyết 5 câu làm sai', isDone: false, trailing: '0/5'),
+            DailyMissionItem(
+              title: 'Luyện 1 Part đề thi',
+              isDone: true,
+              trailing: 'Part 5',
+            ),
+            DailyMissionItem(
+              title: 'Ôn 10 từ vựng SRS',
+              isDone: true,
+              trailing: '10/10',
+            ),
+            DailyMissionItem(
+              title: 'Giải quyết 5 câu làm sai',
+              isDone: false,
+              trailing: '0/5',
+            ),
           ],
           onTap: () {},
         ),

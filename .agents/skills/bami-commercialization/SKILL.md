@@ -58,8 +58,8 @@ Không ép người dùng mua gói trả phí ngay từ lần đầu mở app. T
 - **Thương mại hoá:** Hiển thị nút "Hỏi gia sư AI Bami" hoặc tag giải thích chuyên sâu có huy hiệu `ProBadge`.
 
 ### Điểm 3: Màn hình Đề thi (Kho Đề ETS Mới Nhất)
-- **Khoảnh khắc:** Người dùng tìm kiếm các bộ đề mới nhất (ETS 2024, ETS 2025, Đề thi thật theo format mới).
-- **Thương mại hoá:** Gắn nhãn `TestTag` ("ETS 2024", "VIP", "Đề chọn lọc") kèm nút bắt đầu thi thử mô phỏng phòng thi thật.
+- **Khoảnh khắc:** Người dùng tìm kiếm các bộ đề mới nhất (ETS 2026, ETS 2025, Đề thi thật theo format mới).
+- **Thương mại hoá:** Gắn nhãn `TestTag` ("ETS 2026", "VIP", "Đề chọn lọc") kèm nút bắt đầu thi thử mô phỏng phòng thi thật.
 
 ---
 
@@ -73,7 +73,7 @@ Tất cả các thành phần này được tích hợp trong thư viện `lib/c
 | `ProBadge` | Huy hiệu nhận diện thành viên PRO / Tính năng nâng cao | Cạnh avatar, cạnh đề thi độc quyền |
 | `DailyMissionCard` | Bảng nhiệm vụ học tập hôm nay (thanh tiến độ 2/3) | Ngay dưới thẻ Hero màn hình chủ |
 | `UpgradeBanner` | Banner giới thiệu đặc quyền Bami PRO tinh tế, cho phép đóng | Xen kẽ danh sách đề thi |
-| `TestTag` | Gắn nhãn độ khó (`Dễ`, `Chuẩn ETS`, `Khó`) & nguồn đề (`ETS 2024`) | Thẻ đề thi (`_TestCard`), chi tiết đề |
+| `TestTag` | Gắn nhãn độ khó (`Dễ`, `Chuẩn ETS`, `Khó`) & nguồn đề (`ETS 2026`) | Thẻ đề thi (`_TestCard`), chi tiết đề |
 | `ScorePredictor` | Vòng tính điểm TOEIC dự đoán so với điểm mục tiêu | Thẻ `AppHeroCard` màn hình chính |
 
 ---

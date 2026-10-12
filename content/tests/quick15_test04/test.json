@@ -1,0 +1,200 @@
+{
+  "title": "Quick Test 15m - Đề 04",
+  "source": "Bami TOEIC - Quick 15m",
+  "description": "Thử thách 15 phút: 15 câu chọn lọc Part 5 (8 câu), Part 6 (4 câu), Part 7 (3 câu) chủ đề Tài chính, Ngân sách, Thu mua & Hợp đồng thương mại.",
+  "is_free": true,
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "content": "All travel expense reports must be submitted for managerial ------- by the final business day of the month.",
+          "options": ["approval", "approve", "approving", "approved"],
+          "answer": "A",
+          "explanation": "Sau tính từ \"managerial\" (thuộc về quản lý) cần một danh từ để tạo thành cụm danh từ \"managerial approval\" (sự phê duyệt của cấp quản lý) làm tân ngữ cho giới từ \"for\".",
+          "tags": ["word-form"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "content": "The auditing team emphasized that all client taxation records must remain strictly -------.",
+          "options": ["confidential", "confidentially", "confidence", "confident"],
+          "answer": "A",
+          "explanation": "Động từ liên kết \"remain\" đi với tính từ để chỉ trạng thái. Sau phó từ bổ nghĩa \"strictly\" cần tính từ mang nghĩa bảo mật → chọn \"confidential\" (bí mật, bảo mật).",
+          "tags": ["vocabulary", "word-form"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "content": "The chief financial officer reviewed the quarterly financial statements ------- before the shareholder meeting.",
+          "options": ["himself", "he", "his", "him"],
+          "answer": "A",
+          "explanation": "Chủ ngữ là \"The chief financial officer\", câu đã đầy đủ chủ ngữ, động từ, tân ngữ. Cần đại từ phản thân \"himself\" đứng ở cuối mệnh đề để nhấn mạnh chính ông ấy làm hành động đó.",
+          "tags": ["pronoun"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "content": "Employees will be reimbursed for conference lodging costs ------- they provide itemized original receipts.",
+          "options": ["provided that", "as well as", "in case of", "regardless of"],
+          "answer": "A",
+          "explanation": "\"Provided that\" là liên từ điều kiện mang nghĩa \"với điều kiện là / miễn là\" theo sau là mệnh đề. Các phương án khác là giới từ / liên từ nối không phù hợp ngữ pháp.",
+          "tags": ["conjunction"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "content": "Approved travel reimbursements will be deposited into employees' bank accounts ------- ten business days.",
+          "options": ["within", "among", "toward", "along"],
+          "answer": "A",
+          "explanation": "Giới từ \"within\" + khoảng thời gian (\"within ten business days\") biểu thị hành động diễn ra trong vòng / không quá khoảng thời gian đó.",
+          "tags": ["preposition"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "content": "Due to recent market volatility, procurement agents are negotiating more ------- pricing agreements with vendors.",
+          "options": ["favorable", "favorably", "favorite", "favoritism"],
+          "answer": "A",
+          "explanation": "Trước danh từ \"pricing agreements\" cần tính từ bổ nghĩa cho hợp đồng giá cả thuận lợi, có lợi → chọn \"favorable\" (thuận lợi).",
+          "tags": ["word-form", "vocabulary"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "content": "Corporate revenue grew ------- following the successful deployment of the cloud subscription service.",
+          "options": ["substantially", "substantial", "substance", "substantiate"],
+          "answer": "A",
+          "explanation": "Bổ nghĩa cho nội động từ quá khứ đơn \"grew\" cần một phó từ (adverb) → chọn \"substantially\" (một cách đáng kể, vượt bậc).",
+          "tags": ["word-form"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "content": "Neither the procurement manager ------- the inventory supervisor anticipated the unexpected delivery delay.",
+          "options": ["nor", "and", "or", "either"],
+          "answer": "A",
+          "explanation": "Cặp liên từ tương quan bắt buộc: \"Neither ... nor\" = Cả ... và ... đều không.",
+          "tags": ["conjunction"]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "MEMORANDUM\nTo: All Department Supervisors\nFrom: Gregory Simmons, Chief Financial Officer\nDate: November 3\nSubject: Updated Corporate Travel Policy\n\nEffective December 1, all staff members traveling on corporate business must adhere strictly to our revised travel reimbursement guidelines. Under this updated protocol, all flight and hotel arrangements must be booked [131] ------- our designated corporate travel management portal to secure corporate discount rates.\n\nEmployees will no longer receive reimbursement for personal incidental charges, such as hotel mini-bar purchases or laundry services. [132] -------. Itemized expense claims, accompanied by scanned copies of official receipts, must be submitted within 14 calendar days of returning from travel.\n\nFailure to provide documented receipts on time will lead to reimbursement [133] -------. Should you have questions regarding allowable per-diem meals, please check the intranet directory or [134] ------- the finance department directly.",
+      "questions": [
+        {
+          "number": 131,
+          "content": "Choose the best preposition to fill in blank [131].",
+          "options": ["through", "across", "between", "toward"],
+          "answer": "A",
+          "explanation": "Giới từ \"through\" mang nghĩa \"thông qua cổng thông tin / qua đối tác được chỉ định\" (\"through our designated corporate travel management portal\").",
+          "tags": ["preposition"]
+        },
+        {
+          "number": 132,
+          "content": "Choose the best sentence to fill in blank [132].",
+          "options": [
+            "Such non-essential expenses must be settled directly by the individual traveler.",
+            "Our annual product demonstration attracted hundreds of international investors.",
+            "The customer service hotline operates twenty-four hours a day.",
+            "Parking permits will be issued at the main security booth tomorrow."
+          ],
+          "answer": "A",
+          "explanation": "Câu trước nêu rõ công ty sẽ không hoàn tiền cho chi phí cá nhân (mini-bar, giặt ủi). Câu (A) nối tiếp hoàn hảo: \"Các chi phí không thiết yếu như vậy phải do chính người đi công tác thanh toán trực tiếp\".",
+          "tags": ["context"]
+        },
+        {
+          "number": 133,
+          "content": "Choose the best word to fill in blank [133].",
+          "options": ["delays", "deliberate", "delayed", "delaying"],
+          "answer": "A",
+          "explanation": "Sau danh từ \"reimbursement\" cần một danh từ để tạo thành cụm danh từ kép \"reimbursement delays\" (sự chậm trễ trong việc hoàn tiền).",
+          "tags": ["word-form"]
+        },
+        {
+          "number": 134,
+          "content": "Choose the best form of the verb to fill in blank [134].",
+          "options": ["contact", "contacting", "contacted", "contactable"],
+          "answer": "A",
+          "explanation": "Cấu trúc song hành với động từ nguyên mẫu đứng trước liên từ \"or\": \"please check ... or contact ... directly\".",
+          "tags": ["grammar"]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "GRAND OAK CONVENTION CENTER\nEvent Catering Agreement & Banquet Confirmation\nClient: Pinnacle Financial Group\nEvent: Annual Corporate Honors Banquet\nEvent Date: December 12\nClient Contact: Ms. Rachel Adams, Events Director\n\nEvent Specifications:\n• Venue: Grand Ballroom (Level 3)\n• Confirmed Guests: 180 attendees\n• Service Package: Executive Three-Course Plated Banquet\n• Staff Setup: 4:30 P.M. | Guest Arrival: 6:00 P.M. | Meal Service: 7:00 P.M.\n\nFinancial Terms & Payment Schedule:\n• Total Contract Value: $14,400 (includes catering, audio-visual suite, and 18% service gratuity)\n• Initial Deposit: $4,000 (received October 5)\n• Remaining Balance Due: $10,400 payable on or before November 28\n\nCancellation & Modification Terms:\nCancellations received at least 30 calendar days prior to December 12 will receive a full deposit refund, less a standard $250 administrative fee. Cancellations made within 30 days are non-refundable. Final meal selections and dietary requirements (vegetarian, kosher, gluten-free) must be submitted in writing to catering coordinator Mark Evans by December 1.\n\nAuthorizations:\nClient Representative: Rachel Adams (Signed Oct 6)\nBanquet General Manager: Teresa Moreno (Signed Oct 6)",
+      "questions": [
+        {
+          "number": 147,
+          "content": "What type of event is being hosted at the Grand Oak Convention Center?",
+          "options": [
+            "An annual corporate honors banquet",
+            "An international computer technology expo",
+            "A public shareholder voting assembly",
+            "A quarterly regional sales training workshop"
+          ],
+          "answer": "A",
+          "explanation": "Mục \"Event: Annual Corporate Honors Banquet\" trong hợp đồng thể hiện rõ đây là tiệc tôn vinh vinh danh doanh nghiệp hàng năm → chọn A.",
+          "tags": ["detail"]
+        },
+        {
+          "number": 148,
+          "content": "When must the remaining payment of $10,400 be settled?",
+          "options": [
+            "On or before November 28",
+            "On October 5",
+            "By December 1",
+            "On December 12"
+          ],
+          "answer": "A",
+          "explanation": "Trong phần Financial Terms: \"Remaining Balance Due: $10,400 payable on or before November 28\" → chọn A.",
+          "tags": ["detail"]
+        },
+        {
+          "number": 149,
+          "content": "What deadline is set for submitting special dietary preferences?",
+          "options": [
+            "December 1",
+            "November 28",
+            "October 6",
+            "December 12"
+          ],
+          "answer": "A",
+          "explanation": "Đoạn Cancellation & Modification Terms: \"Final meal selections and dietary requirements ... must be submitted in writing to catering coordinator Mark Evans by December 1\" → chọn A.",
+          "tags": ["detail"]
+        }
+      ]
+    }
+  ]
+}

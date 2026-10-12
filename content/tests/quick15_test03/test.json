@@ -1,0 +1,200 @@
+{
+  "title": "Quick Test 15m - Đề 03",
+  "source": "Bami TOEIC - Quick 15m",
+  "description": "Thử thách 15 phút: 15 câu chọn lọc Part 5 (8 câu), Part 6 (4 câu), Part 7 (3 câu) chủ đề Tiếp thị, Dịch vụ khách hàng & Hoạt động bảo trì.",
+  "is_free": true,
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "content": "Attendees found the keynote presentation on sustainable architecture extremely -------.",
+          "options": ["informative", "inform", "information", "informatively"],
+          "answer": "A",
+          "explanation": "Cấu trúc \"find + O + adj\": nhận thấy cái gì như thế nào. Sau phó từ chỉ mức độ \"extremely\" cần tính từ → chọn \"informative\" (bổ ích, nhiều thông tin).",
+          "tags": ["word-form"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "content": "Registered hotel guests are entitled to a complimentary breakfast ------- every morning in the dining hall.",
+          "options": ["buffet", "permit", "remedy", "appliance"],
+          "answer": "A",
+          "explanation": "Cụm danh từ thông dụng trong khách sạn: \"breakfast buffet\" = tiệc ăn sáng tự chọn. Các từ khác không phù hợp ngữ cảnh.",
+          "tags": ["vocabulary"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "content": "Conference delegates are urged to register ------- on the official event portal prior to Friday noon.",
+          "options": ["themselves", "they", "them", "theirs"],
+          "answer": "A",
+          "explanation": "Hành động đăng ký áp dụng lên chính chủ thể \"delegates\" (đại biểu tự đăng ký) → chọn đại từ phản thân \"themselves\".",
+          "tags": ["pronoun"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "content": "The technical workshop was rescheduled ------- the guest lecturer experienced unexpected flight delays.",
+          "options": ["because", "due to", "in spite of", "as though"],
+          "answer": "A",
+          "explanation": "Theo sau là một mệnh đề chỉ nguyên nhân có chủ ngữ và động từ (\"the guest lecturer experienced...\") → chọn liên từ \"because\". \"Due to\" chỉ đi với cụm danh từ.",
+          "tags": ["conjunction"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "content": "Dedicated customer parking spaces are situated directly ------- the main supermarket entrance.",
+          "options": ["behind", "into", "onto", "during"],
+          "answer": "A",
+          "explanation": "Vị trí không gian của bãi đậu xe so với cổng siêu thị → chọn giới từ nơi chốn \"behind\" (phía sau). Các giới từ khác không chỉ vị trí tĩnh phù hợp.",
+          "tags": ["preposition"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "content": "The marketing agency submitted a revised cost ------- before commencing production on the television advertisement.",
+          "options": ["estimate", "estimating", "estimated", "estimable"],
+          "answer": "A",
+          "explanation": "Cụm danh từ ghép \"cost estimate\" = bảng ước tính chi phí / dự toán chi phí. Cần danh từ sau tính từ \"revised\".",
+          "tags": ["word-form", "vocabulary"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "content": "Customer satisfaction scores have risen ------- since the company launched its 24-hour instant messaging support.",
+          "options": ["significantly", "significant", "significance", "signify"],
+          "answer": "A",
+          "explanation": "Bổ nghĩa cho nội động từ ở thì hiện tại hoàn thành \"have risen\" cần phó từ (adverb) → chọn \"significantly\" (một cách đáng kể).",
+          "tags": ["word-form"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "content": "Both the chief executive officer ------- the board of directors endorsed the expansion strategy.",
+          "options": ["and", "or", "nor", "but"],
+          "answer": "A",
+          "explanation": "Cặp liên từ tương quan bắt buộc: \"Both A and B\" = cả A và B.",
+          "tags": ["conjunction"]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "NOTICE TO ALL SYSTEM USERS\nFrom: IT Infrastructure Team\nDate: September 5\nSubject: Scheduled CRM System Maintenance\n\nPlease be advised that our central Customer Relationship Management (CRM) platform will undergo routine maintenance this Saturday, September 9, beginning at 11:00 P.M. and concluding at 4:00 A.M. on Sunday morning.\n\nDuring this five-hour period, the platform will be temporarily [131] ------- to all personnel. This maintenance is essential to deploy critical security patches and enhance server performance. [132] -------. We advise all sales and support representatives to finalize and save all active transaction records before logging off on Friday afternoon.\n\nIf you require client contact records during the outage, please export the necessary files [133] ------- Saturday noon. Regular database operations will resume [134] ------- at 4:30 A.M. on Sunday.",
+      "questions": [
+        {
+          "number": 131,
+          "content": "Choose the best word to fill in blank [131].",
+          "options": ["inaccessible", "accessible", "inaccessibility", "accessing"],
+          "answer": "A",
+          "explanation": "Trong thời gian bảo trì máy chủ, nền tảng sẽ tạm thời \"không thể truy cập được\" → chọn tính từ có tiền tố phủ định \"inaccessible\".",
+          "tags": ["vocabulary"]
+        },
+        {
+          "number": 132,
+          "content": "Choose the best sentence to fill in blank [132].",
+          "options": [
+            "These enhancements will ensure faster query times and improved data safety.",
+            "The client rejected our proposal for the advertising campaign.",
+            "All flight reservations must be confirmed two weeks in advance.",
+            "Parking permits are available at the human resources office."
+          ],
+          "answer": "A",
+          "explanation": "Câu trước nói về mục đích nâng cấp (bảo mật và hiệu năng máy chủ). Câu (A) nối tiếp logic nêu kết quả tích cực (\"Những cải tiến này sẽ đảm bảo thời gian truy vấn nhanh hơn và an toàn dữ liệu hơn\").",
+          "tags": ["context"]
+        },
+        {
+          "number": 133,
+          "content": "Choose the best preposition to fill in blank [133].",
+          "options": ["before", "among", "between", "toward"],
+          "answer": "A",
+          "explanation": "Chỉ mốc thời gian hoàn thành trước khi diễn ra sự kiện → chọn \"before Saturday noon\" (trước trưa Thứ Bảy).",
+          "tags": ["preposition"]
+        },
+        {
+          "number": 134,
+          "content": "Choose the best adverb to fill in blank [134].",
+          "options": ["promptly", "prompt", "prompting", "promptness"],
+          "answer": "A",
+          "explanation": "Bổ nghĩa cho động từ \"will resume\" ở mốc thời gian cụ thể cần trạng từ → chọn \"promptly\" (đúng giờ, lập tức).",
+          "tags": ["word-form"]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "APEX AUTOMOTIVE REPAIR\nCustomer Feedback & Service Evaluation\nDate of Service: August 18\nCustomer: David Miller\nVehicle: 2021 Silverton Sedan\n\nService Ratings:\n• Punctuality: Excellent (5/5)\n• Work Quality: Excellent (5/5)\n• Facility Comfort: Good (3/5)\n• Pricing Transparency: Excellent (5/5)\n\nCustomer Remarks:\n\"I brought my sedan in for the scheduled 30,000-mile inspection and front brake pad replacement. Technician Carlos did a wonderful job walking me through the rotor measurements and finished the job thirty minutes ahead of schedule. My only minor suggestion pertains to the customer lounge: seating was limited, and the guest Wi-Fi was quite spotty. Aside from that, the mechanical work was top-notch, and I will certainly return for future oil changes.\"\n\nManager Response:\nDate: August 20\nFrom: Brenda Larson, Service Manager\n\nDear Mr. Miller,\nThank you for sharing your experience. We are delighted that Carlos provided prompt, transparent service for your brake inspection. Regarding our waiting area, we are actually scheduled to expand the customer lounge next month with extra workstations and high-speed fiber internet. To show our appreciation for your loyalty, please present the coupon code APEX-15OFF during your next visit to receive 15% off any standard maintenance service.",
+      "questions": [
+        {
+          "number": 147,
+          "content": "Why did Mr. Miller bring his vehicle to Apex Automotive?",
+          "options": [
+            "For a 30,000-mile inspection and brake pad replacement",
+            "To repair severe body damage caused by an accident",
+            "To purchase a newly released 2021 Silverton sedan",
+            "To replace an old battery and install new tires"
+          ],
+          "answer": "A",
+          "explanation": "Trong phần nhận xét của khách: \"I brought my sedan in for the scheduled 30,000-mile inspection and front brake pad replacement\" → chọn A.",
+          "tags": ["detail"]
+        },
+        {
+          "number": 148,
+          "content": "What area of improvement did Mr. Miller suggest?",
+          "options": [
+            "The technician's communication style",
+            "The customer lounge seating and wireless connection",
+            "The warranty policy on installed brake pads",
+            "The pricing of routine oil change services"
+          ],
+          "answer": "B",
+          "explanation": "Mr. Miller nhận xét: \"My only minor suggestion pertains to the customer lounge: seating was limited, and the guest Wi-Fi was quite spotty\" → chọn B.",
+          "tags": ["detail"]
+        },
+        {
+          "number": 149,
+          "content": "What will Apex Automotive do next month?",
+          "options": [
+            "Enlarge the waiting area and install faster internet",
+            "Hire additional certified automotive technicians",
+            "Permanently close the service center for remodeling",
+            "Offer complimentary rental cars to all customers"
+          ],
+          "answer": "A",
+          "explanation": "Quản lý Brenda Larson phản hồi: \"we are actually scheduled to expand the customer lounge next month with extra workstations and high-speed fiber internet\" → chọn A.",
+          "tags": ["detail"]
+        }
+      ]
+    }
+  ]
+}

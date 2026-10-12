@@ -58,7 +58,9 @@ class ProfilePage extends ConsumerWidget {
     final isStreakActive = progress?.activeToday ?? false;
 
     // Tính điểm cao nhất từ các bài thi
-    final completedAttempts = attempts.where((a) => !a.isMistakeReview).toList();
+    final completedAttempts = attempts
+        .where((a) => !a.isMistakeReview)
+        .toList();
     final highestScore = completedAttempts.isEmpty
         ? null
         : completedAttempts.map((a) => a.totalScore).reduce(math.max);
@@ -128,9 +130,10 @@ class ProfilePage extends ConsumerWidget {
                                   Flexible(
                                     child: Text(
                                       displayName,
-                                      style: context.textStyles.titleLarge?.copyWith(
-                                        fontWeight: FontWeight.w700,
-                                      ),
+                                      style: context.textStyles.titleLarge
+                                          ?.copyWith(
+                                            fontWeight: FontWeight.w700,
+                                          ),
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
                                     ),
@@ -138,8 +141,12 @@ class ProfilePage extends ConsumerWidget {
                                   Gaps.h8,
                                   IconButton(
                                     tooltip: 'Đổi tên hiển thị',
-                                    icon: const Icon(Icons.edit_outlined, size: AppSizes.iconSm),
-                                    onPressed: () => showLeaderboardProfileSheet(context),
+                                    icon: const Icon(
+                                      Icons.edit_outlined,
+                                      size: AppSizes.iconSm,
+                                    ),
+                                    onPressed: () =>
+                                        showLeaderboardProfileSheet(context),
                                     visualDensity: VisualDensity.compact,
                                   ),
                                 ],
@@ -270,8 +277,7 @@ class ProfilePage extends ConsumerWidget {
               else
                 UpgradeBanner(
                   title: 'Nâng cấp Bami PRO',
-                  description:
-                      'Mở khoá toàn bộ đề ETS 2024, giải thích chi tiết câu hỏi và phân tích bẫy đề thi AI.',
+                  description: 'Mở khoá toàn bộ đề ETS 2026, giải thích chi tiết câu hỏi và phân tích bẫy đề thi AI.',
                   onUpgrade: () => showProSheet(context),
                 ),
               Gaps.v24,
@@ -442,7 +448,9 @@ class ProfilePage extends ConsumerWidget {
                       tone: AppTone.danger,
                     ),
                     title: const Text('Sổ câu sai & Bẫy đề thi'),
-                    subtitle: const Text('Xem lại và luyện lại các câu hỏi đã chọn sai'),
+                    subtitle: const Text(
+                      'Xem lại và luyện lại các câu hỏi đã chọn sai',
+                    ),
                     trailing: const Icon(Icons.chevron_right_rounded),
                     onTap: () => context.push(Routes.mistakes),
                   ),
@@ -452,7 +460,9 @@ class ProfilePage extends ConsumerWidget {
                       tone: AppTone.info,
                     ),
                     title: const Text('Luyện chép chính tả Listening'),
-                    subtitle: const Text('Rèn phản xạ nghe từng từ Part 1 & Part 2'),
+                    subtitle: const Text(
+                      'Rèn phản xạ nghe từng từ Part 1 & Part 2',
+                    ),
                     trailing: const Icon(Icons.chevron_right_rounded),
                     onTap: () => context.push(Routes.listening),
                   ),
@@ -462,7 +472,9 @@ class ProfilePage extends ConsumerWidget {
                       tone: AppTone.success,
                     ),
                     title: const Text('Kho từ vựng cá nhân'),
-                    subtitle: const Text('Danh sách từ vựng theo chủ đề và bộ đề ETS'),
+                    subtitle: const Text(
+                      'Danh sách từ vựng theo chủ đề và bộ đề ETS',
+                    ),
                     trailing: const Icon(Icons.chevron_right_rounded),
                     onTap: () => context.push(Routes.vocabWords()),
                   ),
@@ -471,9 +483,7 @@ class ProfilePage extends ConsumerWidget {
               Gaps.v24,
 
               // 6. Tài khoản & Cài đặt
-              const SectionHeader(
-                title: 'Tài khoản & ứng dụng',
-              ),
+              const SectionHeader(title: 'Tài khoản & ứng dụng'),
               AppListGroup(
                 children: [
                   ListTile(
@@ -482,7 +492,9 @@ class ProfilePage extends ConsumerWidget {
                       tone: AppTone.neutral,
                     ),
                     title: const Text('Cài đặt ứng dụng'),
-                    subtitle: const Text('Giao diện, âm thanh, thông báo nhắc học'),
+                    subtitle: const Text(
+                      'Giao diện, âm thanh, thông báo nhắc học',
+                    ),
                     trailing: const Icon(Icons.chevron_right_rounded),
                     onTap: () => context.push(Routes.settings),
                   ),
@@ -492,7 +504,9 @@ class ProfilePage extends ConsumerWidget {
                       tone: AppTone.neutral,
                     ),
                     title: const Text('Hồ sơ bảng xếp hạng'),
-                    subtitle: const Text('Cấu hình đạo hiệu và quyền hiển thị thứ hạng'),
+                    subtitle: const Text(
+                      'Cấu hình đạo hiệu và quyền hiển thị thứ hạng',
+                    ),
                     trailing: const Icon(Icons.chevron_right_rounded),
                     onTap: () => showLeaderboardProfileSheet(context),
                   ),

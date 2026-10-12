@@ -1,0 +1,200 @@
+{
+  "title": "Quick Test 15m - Đề 01",
+  "source": "Bami TOEIC - Quick 15m",
+  "description": "Thử thách 15 phút: 15 câu chọn lọc Part 5 (8 câu), Part 6 (4 câu), Part 7 (3 câu) rèn luyện phản xạ và tốc độ làm bài.",
+  "is_free": true,
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "content": "All expense invoices must be submitted ------- to the accounting department for prompt reimbursement.",
+          "options": ["promptly", "prompt", "promptness", "prompted"],
+          "answer": "A",
+          "explanation": "Sau động từ bị động \"must be submitted\" cần một trạng từ (adverb) bổ nghĩa cho hành động nộp → chọn \"promptly\" (ngay lập tức, kịp thời).",
+          "tags": ["word-form"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "content": "Ms. Gomez confirmed her flight ------- for the upcoming international marketing summit in Tokyo.",
+          "options": ["reservation", "reserve", "reserved", "reserving"],
+          "answer": "A",
+          "explanation": "Cụm danh từ \"flight reservation\" = việc đặt chỗ chuyến bay. Sau danh từ \"flight\" đóng vai trò định ngữ cần danh từ chính → \"reservation\".",
+          "tags": ["word-form", "vocabulary"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "content": "Mr. Henderson presented ------- quarterly sales report during the regional executive meeting.",
+          "options": ["he", "him", "his", "himself"],
+          "answer": "C",
+          "explanation": "Đứng trước cụm danh từ \"quarterly sales report\" cần tính từ sở hữu bổ nghĩa → chọn \"his\" (của anh ấy).",
+          "tags": ["pronoun"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "content": "The outdoor ribbon-cutting ceremony was delayed ------- unexpected inclement weather in the harbor area.",
+          "options": ["because", "due to", "although", "in spite"],
+          "answer": "B",
+          "explanation": "Theo sau chỗ trống là cụm danh từ (\"unexpected inclement weather\") chỉ lý do → chọn giới từ \"due to\" (bởi vì). \"Because\" cần mệnh đề; \"in spite\" thiếu \"of\".",
+          "tags": ["preposition"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "content": "Apex Solutions ------- a lucrative multi-year contract to modernize the city's mass transit system.",
+          "options": ["was awarded", "awarded", "awarding", "were awarded"],
+          "answer": "A",
+          "explanation": "Chủ ngữ số ít \"Apex Solutions\" (tên công ty) được trao hợp đồng → dùng dạng bị động số ít thì quá khứ đơn: \"was awarded\".",
+          "tags": ["grammar"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "content": "To maintain customer trust, the firm needs to partner with a more ------- logistics provider.",
+          "options": ["reliable", "reliant", "relying", "reliably"],
+          "answer": "A",
+          "explanation": "Trước danh từ \"logistics provider\" cần tính từ mang nghĩa \"đáng tin cậy\" → chọn \"reliable\". \"Reliant\" mang nghĩa phụ thuộc vào ai đó.",
+          "tags": ["vocabulary", "word-form"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "content": "------- the renovation budget was finalized late, the construction crew completed the lobby ahead of schedule.",
+          "options": ["Although", "Despite", "However", "Therefore"],
+          "answer": "A",
+          "explanation": "Theo sau là mệnh đề đầy đủ (S + V) có ý nghĩa tương phản đối lập → chọn liên từ \"Although\" (Mặc dù). \"Despite\" cần danh từ/cụm danh từ.",
+          "tags": ["conjunction"]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "content": "The regional director commended the hospitality team for providing consistently ------- service to guests.",
+          "options": ["exceptional", "exceptionally", "exception", "excepting"],
+          "answer": "A",
+          "explanation": "Bổ nghĩa cho danh từ \"service\" đứng sau và được bổ nghĩa bởi trạng từ \"consistently\" cần một tính từ → chọn \"exceptional\" (xuất sắc, đặc biệt tốt).",
+          "tags": ["word-form"]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "MEMORANDUM\n\nTo: All Headquarters Staff\nFrom: Facilities & Operations\nDate: October 14\nSubject: Upcoming Corporate Relocation\n\nAs previously announced, our headquarters will be relocating to the new Diamond Tower complex over the upcoming weekend. The moving process will begin on Friday at 5:00 PM and continue ---(131)--- Sunday evening.\n\nAll personnel are requested to pack their desktop computers and personal belongings into the provided crates before departing on Friday. ---(132)--- by the facilities team in the third-floor conference room starting tomorrow morning.\n\nPlease note that the new building features an automated security badge system. You ---(133)--- your new access card from the reception desk upon arrival on Monday morning. We appreciate your ---(134)--- and patience during this transition.",
+      "questions": [
+        {
+          "number": 131,
+          "content": "Choose the best preposition to fill in blank [131].",
+          "options": ["through", "across", "between", "among"],
+          "answer": "A",
+          "explanation": "Cụm \"continue through + mốc thời gian\" = tiếp diễn liên tục suốt đến tận (chủ nhật).",
+          "tags": ["preposition"]
+        },
+        {
+          "number": 132,
+          "content": "Choose the best sentence to fill in blank [132].",
+          "options": [
+            "Cardboard boxes and color-coded labels will be distributed",
+            "The cafeteria menu will be upgraded next month",
+            "Parking permits must be renewed annually by all drivers",
+            "Annual vacation requests should be submitted via the portal"
+          ],
+          "answer": "A",
+          "explanation": "Câu trước nhắc đến việc nhân viên đóng gói đồ đạc (\"pack their desktop computers...\"), do đó câu nối phù hợp nhất là phát hộp và nhãn dán.",
+          "tags": ["context"]
+        },
+        {
+          "number": 133,
+          "content": "Choose the best verb tense to fill in blank [133].",
+          "options": ["will receive", "received", "have received", "are receiving"],
+          "answer": "A",
+          "explanation": "Diễn tả hành động sẽ xảy ra trong tương lai vào sáng thứ Hai (\"on Monday morning\") → chọn thì tương lai đơn \"will receive\".",
+          "tags": ["grammar"]
+        },
+        {
+          "number": 134,
+          "content": "Choose the best word form to fill in blank [134].",
+          "options": ["cooperation", "cooperate", "cooperative", "cooperatively"],
+          "answer": "A",
+          "explanation": "Sau tính từ sở hữu \"your\" và trước liên từ \"and patience\" (danh từ) cần một danh từ song hành → chọn \"cooperation\" (sự hợp tác).",
+          "tags": ["word-form"]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "ORDER CONFIRMATION\nOfficePro Equipment Ltd.\n104 Broadway, New York, NY\n\nOrder Number: OP-84920\nCustomer: Laura Chen, Operations Manager, Apex Design\nDate: October 12\n\nItems Ordered:\n- 12 Ergonomic Mesh Office Chairs (Model EC-200): $2,400.00\n- 6 Adjustable Standing Desks (Model SD-50): $1,800.00\nSubtotal: $4,200.00\nCorporate Discount (10% on orders over $3,000): -$420.00\nStandard Delivery: Free\nTotal Paid: $3,780.00\n\nDelivery Information:\nYour order will be shipped via Metro Freight and is scheduled to arrive at your office on Thursday, October 16, between 9:00 AM and 1:00 PM. An authorized representative must be present to sign the delivery manifest.\n\nNeed to reschedule?\nPlease notify our dispatch department at support@officepro.com at least 24 hours prior to the scheduled delivery time to avoid a rescheduling fee.",
+      "questions": [
+        {
+          "number": 147,
+          "content": "Why was the corporate discount applied to this order?",
+          "options": [
+            "The customer purchased standing desks",
+            "The total order value exceeded $3,000",
+            "The order was placed before October 10",
+            "The items were paid for in cash"
+          ],
+          "answer": "B",
+          "explanation": "Trong hoá đơn ghi rõ: \"Corporate Discount (10% on orders over $3,000)\" → đơn hàng trên 3,000 USD được giảm giá.",
+          "tags": ["detail"]
+        },
+        {
+          "number": 148,
+          "content": "What is required at the time of delivery?",
+          "options": [
+            "Payment of remaining balance",
+            "Assembly of all office furniture",
+            "A signature from an authorized representative",
+            "Inspection by a certified technician"
+          ],
+          "answer": "C",
+          "explanation": "Văn bản nêu: \"An authorized representative must be present to sign the delivery manifest.\"",
+          "tags": ["detail"]
+        },
+        {
+          "number": 149,
+          "content": "What should Ms. Chen do if she wants to change the delivery date without a penalty?",
+          "options": [
+            "Call the driver directly on Thursday morning",
+            "Email customer support at least 24 hours in advance",
+            "Return the items within 30 business days",
+            "Submit a written request by postal mail"
+          ],
+          "answer": "B",
+          "explanation": "Mục 'Need to reschedule?' yêu cầu: \"Please notify our dispatch department at support@officepro.com at least 24 hours prior to the scheduled delivery time\".",
+          "tags": ["inference"]
+        }
+      ]
+    }
+  ]
+}
