@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+<rect width="800" height="500" fill="#ffffff"/>
+<text x="400" y="60" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#000">Greenleaf Market – Weekly Deals</text>
+<g font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#000">
+<rect x="120" y="95" width="560" height="60" fill="#e6e6e6" stroke="#000" stroke-width="2"/>
+<text x="160" y="135" font-weight="bold">Item</text><text x="520" y="135" font-weight="bold">Discount</text>
+<rect x="120" y="155" width="560" height="300" fill="none" stroke="#000" stroke-width="2"/>
+<text x="160" y="215">Baked goods</text><text x="540" y="215">15%</text>
+<text x="160" y="285">Orange juice</text><text x="540" y="285">10%</text>
+<text x="160" y="355">Strawberries</text><text x="540" y="355">20%</text>
+<text x="160" y="425">Cheese</text><text x="540" y="425">25%</text>
+</g>
+</svg>

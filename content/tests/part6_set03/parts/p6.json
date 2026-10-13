@@ -1,0 +1,250 @@
+[
+  {
+    "part": 6,
+    "passage": "To: Purchasing Department\nFrom: Mei Tanaka, Operations Director\nDate: November 18\nSubject: Change of packaging supplier\n\nTeam,\n\nAs many of you know, we have experienced repeated delays with shipments from Corvex Packaging over the past several months. After reviewing proposals from three other firms, the management team has decided to ---(131)--- our contract with Corvex when it expires at the end of December. Starting in January, our cardboard boxes and protective materials will be supplied by Halden Industries. ---(132)--- Halden's prices are slightly higher than those we currently pay. ---(133)---, the company has guaranteed delivery within 48 hours of every order, which should allow us to reduce the amount of stock we keep in our warehouse. Lena Ortiz will be responsible for managing the transition. Please direct any questions about pending orders to ---(134)---.\n\nMei",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "B",
+        "options": [
+          "renew",
+          "end",
+          "sign",
+          "honor"
+        ],
+        "explanation": "Công ty chuyển sang Halden từ tháng 1 vì Corvex giao trễ → quyết định 'chấm dứt' hợp đồng với Corvex khi hết hạn → (B) 'end'. (A) gia hạn ngược nghĩa; (C) ký mới và (D) tuân thủ không hợp với 'when it expires' và việc đổi nhà cung cấp.",
+        "tags": [
+          "vocabulary"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "A",
+        "options": [
+          "Admittedly, the decision was not based on cost alone.",
+          "Corvex has promised to improve its delivery times next year.",
+          "Our warehouse will be closed for inventory in January.",
+          "Halden Industries is also our largest customer."
+        ],
+        "explanation": "Câu sau thừa nhận giá Halden cao hơn, rồi câu tiếp theo nêu lợi ích giao hàng 48 giờ. (A) 'Admittedly, the decision was not based on cost alone' dẫn dắt đúng mạch: thừa nhận đắt hơn nhưng có lợi thế khác → (A). (B) làm yếu quyết định đổi nhà cung cấp; (C) mâu thuẫn với việc nhận hàng từ tháng 1; (D) không có căn cứ.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "A",
+        "options": [
+          "Even so",
+          "As a result",
+          "Likewise",
+          "In other words"
+        ],
+        "explanation": "Giá cao hơn (bất lợi) → nhưng được bảo đảm giao trong 48 giờ (lợi thế bù lại) – quan hệ nhượng bộ → (A) 'Even so'. (B) kết quả, (C) tương đồng, (D) diễn đạt lại – đều sai quan hệ ý.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "A",
+        "options": [
+          "her",
+          "hers",
+          "herself",
+          "she"
+        ],
+        "explanation": "Sau giới từ 'to' cần đại từ tân ngữ chỉ Lena Ortiz → (A) 'her'. (B) đại từ sở hữu sai nghĩa; (C) phản thân chỉ dùng khi chủ ngữ là cùng người; (D) đại từ chủ ngữ không đứng sau giới từ.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 6,
+    "passage": "FOR IMMEDIATE RELEASE\nContact: Tomás Reyes, Communications Office, 555-0172\n\nASHFORD (March 3) — The Ashford City Council has approved a plan to convert the former Kellerman textile factory into a center for small businesses. The building, which has stood empty since 2015, ---(135)--- to provide affordable office and workshop space for up to 40 companies. Construction is scheduled to begin in May. ---(136)--- City officials expect the project to create more than 200 jobs within three years. \"This plan gives new life to a building that many residents feared would be torn down,\" said Mayor Grace Holloway. Businesses interested in leasing space can attend an information session on April 2 at City Hall. ---(137)--- seating is limited, those planning to attend are asked to register online in ---(138)---.",
+    "questions": [
+      {
+        "number": 135,
+        "answer": "B",
+        "options": [
+          "renovated",
+          "will be renovated",
+          "has renovated",
+          "is renovating"
+        ],
+        "explanation": "Kế hoạch vừa được thông qua, thi công bắt đầu vào tháng 5 → việc cải tạo tòa nhà sẽ diễn ra trong tương lai, tòa nhà 'được cải tạo' (bị động) → (B) 'will be renovated'. (A) thiếu trợ động từ; (C), (D) chủ động – tòa nhà không tự cải tạo.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 136,
+        "answer": "A",
+        "options": [
+          "Funding will come from a combination of state grants and private investment.",
+          "The factory closed because demand for its products increased.",
+          "Residents voted to demolish the building last year.",
+          "The new tenants have already moved into their offices."
+        ],
+        "explanation": "Sau lịch khởi công, (A) nêu nguồn vốn dự án – thông tin cùng loại, dẫn tới dự báo việc làm → (A). (C) mâu thuẫn với lời thị trưởng ('feared would be torn down' – tòa nhà không bị phá); (D) mâu thuẫn với 'Construction is scheduled to begin in May'; (B) phi logic (nhu cầu tăng mà lại đóng cửa).",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 137,
+        "answer": "A",
+        "options": [
+          "Because",
+          "Despite",
+          "Unless",
+          "So that"
+        ],
+        "explanation": "Mệnh đề 'seating is limited' là lý do phải đăng ký trước → liên từ chỉ nguyên nhân (A) 'Because'. (B) giới từ, không đi với mệnh đề; (C) 'trừ khi' sai nghĩa; (D) chỉ mục đích, không đứng ở vị trí nêu lý do này.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 138,
+        "answer": "A",
+        "options": [
+          "advance",
+          "detail",
+          "fact",
+          "charge"
+        ],
+        "explanation": "Cụm cố định 'register … in advance' = đăng ký trước → (A). 'in detail' (chi tiết), 'in fact' (thực tế), 'in charge' (phụ trách) không hợp nghĩa ở cuối câu này.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 6,
+    "passage": "Returning Your Rental Equipment\n\nThank you for renting from ProGear Event Supply. To avoid late fees, please return all items by 5:00 P.M. on the date shown on your rental agreement. Items may be returned to any of our three locations, ---(139)--- of where you picked them up. Before returning any equipment, check that all parts and accessories are included. ---(140)--- If an item is damaged, please do not attempt to repair it ---(141)---. Instead, describe the problem on the return form so that our technicians can assess it. Customers who return equipment in good condition and on time will receive a 10 percent discount on their next ---(142)---. The addresses and hours of all three locations are listed on our Web site.",
+    "questions": [
+      {
+        "number": 139,
+        "answer": "A",
+        "options": [
+          "regardless",
+          "instead",
+          "because",
+          "in spite"
+        ],
+        "explanation": "'any of our three locations' = trả ở bất kỳ cửa hàng nào, 'bất kể' đã nhận hàng ở đâu → cụm 'regardless of' (A). 'instead of', 'because of', 'in spite of' đều sai nghĩa với 'where you picked them up'.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 140,
+        "answer": "A",
+        "options": [
+          "Missing pieces will be charged at full replacement cost.",
+          "Our technicians are available to deliver items to your venue.",
+          "Rental prices are listed on the back of this page.",
+          "Please keep the equipment for at least one week."
+        ],
+        "explanation": "Câu trước dặn kiểm tra đủ phụ kiện; (A) giải thích hậu quả nếu thiếu (tính phí thay thế) → (A). (D) mâu thuẫn với yêu cầu trả đúng hạn; (B), (C) không liên quan việc kiểm tra phụ kiện.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 141,
+        "answer": "D",
+        "options": [
+          "you",
+          "your",
+          "yours",
+          "yourself"
+        ],
+        "explanation": "Câu mệnh lệnh có chủ ngữ ngầm 'you'; 'tự mình sửa' → đại từ phản thân (D) 'yourself', đối lập với 'Instead … our technicians can assess it'. (A) thừa tân ngữ; (B), (C) không đứng một mình ở vị trí này.",
+        "tags": [
+          "pronoun"
+        ]
+      },
+      {
+        "number": 142,
+        "answer": "A",
+        "options": [
+          "rental",
+          "refund",
+          "repair",
+          "receipt"
+        ],
+        "explanation": "Ưu đãi cho khách trả đúng hạn: giảm 10% cho 'lần thuê tiếp theo' → (A) 'rental'. (B) hoàn tiền, (C) sửa chữa, (D) biên lai không phải thứ được giảm giá trong ngữ cảnh cho thuê.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 6,
+    "passage": "Dear Ms. Delacroix,\n\nThank you for your e-mail regarding your stay at the Harborview Inn last weekend. I was sorry to read that the room you reserved was not available when you arrived and that you ---(143)--- to a smaller room on a lower floor. Your experience does not reflect the level of service we aim to provide. ---(144)--- A software error caused the same room to be assigned to two guests. Our front desk staff should have explained the situation to you ---(145)--- than simply giving you a different key. As an apology, I have refunded the full cost of your stay to your credit card. I hope you will give us another opportunity to welcome you to Harborview. ---(146)--- you plan your next visit, please contact me directly and I will make sure your preferences are noted.\n\nSincerely,\nNoah Brandt\nGuest Services Manager",
+    "questions": [
+      {
+        "number": 143,
+        "answer": "A",
+        "options": [
+          "were moved",
+          "will be moved",
+          "are moving",
+          "have been moving"
+        ],
+        "explanation": "Sự việc xảy ra 'last weekend' và khách 'bị chuyển' sang phòng nhỏ hơn (bị động) → (A) 'were moved'. (B) tương lai, (C), (D) chủ động và sai thời điểm.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 144,
+        "answer": "A",
+        "options": [
+          "We have looked into what happened.",
+          "Our restaurant offers a special weekend brunch.",
+          "Thank you for recommending us to your colleagues.",
+          "Unfortunately, we are fully booked next weekend."
+        ],
+        "explanation": "Câu sau giải thích nguyên nhân ('A software error caused…') → câu trước phải dẫn vào việc tìm hiểu sự cố: (A) 'We have looked into what happened' → (A). (B), (C), (D) không dẫn tới lời giải thích lỗi phần mềm.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 145,
+        "answer": "A",
+        "options": [
+          "rather",
+          "more",
+          "better",
+          "other"
+        ],
+        "explanation": "Cấu trúc 'A rather than B' = A thay vì B: giải thích tình huống thay vì chỉ đưa chìa khóa khác → (A) 'rather'. (B), (C) là so sánh hơn cần đối tượng so sánh tương ứng; (D) 'other than' (ngoài ra) không hợp nghĩa.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 146,
+        "answer": "A",
+        "options": [
+          "When",
+          "Although",
+          "Unless",
+          "Because"
+        ],
+        "explanation": "'Khi bạn lên kế hoạch cho lần đến tiếp theo, hãy liên hệ trực tiếp với tôi' → liên từ thời gian (A) 'When'. (B) nhượng bộ, (C) 'trừ khi', (D) nguyên nhân – đều sai quan hệ ý.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  }
+]

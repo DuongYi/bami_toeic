@@ -1,0 +1,705 @@
+{
+  "title": "Luyện nghe Part 2–4 · Đề 03",
+  "source": "Bami TOEIC",
+  "description": "Đề luyện nghe 42 câu Part 2–4 (band 850+): sản xuất – kho vận, bất động sản, tổ chức sự kiện, phòng khám; có câu hàm ý và câu đọc biểu đồ.",
+  "is_free": false,
+  "groups": [
+    {
+      "part": 2,
+      "audio": "p2_q7.m4a",
+      "transcript": "Where should we store the extra pallets from this morning's delivery?\n(A) About thirty of them.\n(B) Bay 4 was cleared out yesterday.\n(C) The delivery truck left at nine.",
+      "questions": [
+        {
+          "number": 7,
+          "answer": "B",
+          "explanation": "Hỏi 'Where' (để ở đâu) → trả lời gián tiếp: khu 'Bay 4' vừa được dọn trống hôm qua, ngụ ý để ở đó → (B). (C) lặp từ 'delivery' nhưng nói về giờ xe đi, (A) trả lời số lượng.",
+          "tags": [
+            "wh-question"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q8.m4a",
+      "transcript": "Haven't the contractors finished the lobby renovation yet?\n(A) A renovation budget.\n(B) Yes, the lobby is on the first floor.\n(C) They're waiting on the floor tiles.",
+      "questions": [
+        {
+          "number": 8,
+          "answer": "C",
+          "explanation": "Câu hỏi phủ định về việc đã xong chưa → 'They're waiting on the floor tiles' (còn chờ gạch lát sàn) ngụ ý chưa xong → (C). (B) lặp 'lobby' nhưng nói vị trí, (A) chỉ lặp 'renovation'.",
+          "tags": [
+            "yes-no"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q9.m4a",
+      "transcript": "When does the venue need our final guest count?\n(A) In the main ballroom.\n(B) About two hundred guests.\n(C) I'll check the contract tonight.",
+      "questions": [
+        {
+          "number": 9,
+          "answer": "C",
+          "explanation": "Hỏi 'When' → người trả lời chưa biết, sẽ xem lại hợp đồng tối nay → (C). (B) trả lời số khách (bẫy lặp 'guest'), (A) trả lời địa điểm.",
+          "tags": [
+            "wh-question"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q10.m4a",
+      "transcript": "The new forklift operators start on Monday, don't they?\n(A) Every Monday morning.\n(B) Their training was pushed back a week.\n(C) No, the forklift is in the warehouse.",
+      "questions": [
+        {
+          "number": 10,
+          "answer": "B",
+          "explanation": "Câu hỏi đuôi xác nhận ngày bắt đầu → 'Their training was pushed back a week' (khoá đào tạo bị lùi 1 tuần) ngụ ý không phải thứ Hai này → (B). (C) lặp 'forklift' nói vị trí xe, (A) lặp 'Monday'.",
+          "tags": [
+            "tag-question"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q11.m4a",
+      "transcript": "Who's handling the open house for the Elm Street property?\n(A) It's open until six.\n(B) Diane volunteered at yesterday's meeting.\n(C) A three-bedroom house.",
+      "questions": [
+        {
+          "number": 11,
+          "answer": "B",
+          "explanation": "Hỏi 'Who' phụ trách buổi mở cửa xem nhà → 'Diane volunteered…' (Diane đã nhận làm) → (B). (A) lặp 'open' nói giờ mở cửa, (C) lặp 'house' mô tả căn nhà.",
+          "tags": [
+            "wh-question"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q12.m4a",
+      "transcript": "Should we ship the samples by air or by ground?\n(A) The shipping department is downstairs.\n(B) Yes, they arrived this morning.\n(C) The client isn't in a hurry.",
+      "questions": [
+        {
+          "number": 12,
+          "answer": "C",
+          "explanation": "Câu hỏi lựa chọn → 'The client isn't in a hurry' (khách không gấp) ngụ ý gửi đường bộ cho rẻ → (C). (B) trả lời Yes cho câu lựa chọn, (A) lặp 'ship' nói vị trí phòng.",
+          "tags": [
+            "choice"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q13.m4a",
+      "transcript": "Could you reschedule my appointment for Thursday afternoon?\n(A) Dr. Patel only sees patients in the mornings that week.\n(B) It takes about thirty minutes.\n(C) Yes, I made it last Thursday.",
+      "questions": [
+        {
+          "number": 13,
+          "answer": "A",
+          "explanation": "Lời đề nghị đổi lịch sang chiều thứ Năm → 'Dr. Patel only sees patients in the mornings that week' ngụ ý không đổi sang buổi chiều được → (A). (C) lặp 'Thursday' nói chuyện quá khứ, (B) nói thời lượng.",
+          "tags": [
+            "request"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q14.m4a",
+      "transcript": "Why is the loading dock closed off?\n(A) Around four o'clock.\n(B) Please close the door behind you.\n(C) They're repainting the lines this afternoon.",
+      "questions": [
+        {
+          "number": 14,
+          "answer": "C",
+          "explanation": "Hỏi 'Why' bãi bốc dỡ bị chặn → 'They're repainting the lines this afternoon' (đang sơn lại vạch kẻ) → (C). (A) trả lời thời gian, (B) lặp âm 'close'.",
+          "tags": [
+            "wh-question"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q15.m4a",
+      "transcript": "Is the projector in Conference Room B working again?\n(A) The technician hasn't come by yet.\n(B) No, it's in Conference Room A.\n(C) Yes, I'm working late tonight.",
+      "questions": [
+        {
+          "number": 15,
+          "answer": "A",
+          "explanation": "Hỏi Yes/No máy chiếu đã chạy lại chưa → 'The technician hasn't come by yet' (thợ chưa tới) ngụ ý vẫn hỏng → (A). (B) lặp 'Conference Room' nói vị trí, (C) lặp 'working' với nghĩa khác.",
+          "tags": [
+            "yes-no"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q16.m4a",
+      "transcript": "The caterer just called to say they're running late.\n(A) Let's move the welcome speech up, then.\n(B) She called yesterday.\n(C) A three-course dinner.",
+      "questions": [
+        {
+          "number": 16,
+          "answer": "A",
+          "explanation": "Câu trần thuật báo bên phục vụ ăn uống đến trễ → phản hồi hợp lý là đề xuất đẩy bài phát biểu chào mừng lên trước → (A). (C) liên tưởng tới đồ ăn, (B) lặp 'called' nhưng sai thời gian.",
+          "tags": [
+            "statement"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q17.m4a",
+      "transcript": "How long will the warehouse inventory take?\n(A) Last year it took the whole weekend.\n(B) In the north warehouse.\n(C) Every item on the list.",
+      "questions": [
+        {
+          "number": 17,
+          "answer": "A",
+          "explanation": "Hỏi 'How long' → trả lời gián tiếp bằng kinh nghiệm năm ngoái mất trọn cuối tuần → (A). (B) lặp 'warehouse' nói địa điểm, (C) nói phạm vi kiểm kê chứ không nói thời gian.",
+          "tags": [
+            "wh-question"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q18.m4a",
+      "transcript": "You've already sent the lease agreement to the tenants, haven't you?\n(A) Yes, they're very good tenants.\n(B) Legal is still reviewing one clause.\n(C) A two-year lease.",
+      "questions": [
+        {
+          "number": 18,
+          "answer": "B",
+          "explanation": "Câu hỏi đuôi xác nhận đã gửi hợp đồng thuê chưa → 'Legal is still reviewing one clause' (pháp chế còn xem 1 điều khoản) ngụ ý chưa gửi → (B). (A) lặp 'tenants' với nội dung không liên quan, (C) lặp 'lease'.",
+          "tags": [
+            "tag-question"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q19.m4a",
+      "transcript": "Why don't we hire a shuttle service for the conference attendees?\n(A) The hotel is right next to the convention center.\n(B) About fifty attendees.\n(C) Because the bus was too slow.",
+      "questions": [
+        {
+          "number": 19,
+          "answer": "A",
+          "explanation": "Lời đề xuất thuê xe đưa đón → 'The hotel is right next to the convention center' (khách sạn ngay cạnh trung tâm hội nghị) ngụ ý không cần → (A). (B) lặp 'attendees' nói số lượng, (C) trả lời 'Because' như thể 'Why' là câu hỏi lý do.",
+          "tags": [
+            "request"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q20.m4a",
+      "transcript": "Which floor plan did the buyers prefer?\n(A) Yes, they did.\n(B) On the second floor.\n(C) They're coming back on Saturday to decide.",
+      "questions": [
+        {
+          "number": 20,
+          "answer": "C",
+          "explanation": "Hỏi 'Which' mặt bằng người mua thích → họ chưa quyết, thứ Bảy quay lại mới chọn → (C). (B) lặp 'floor' nói tầng, (A) trả lời Yes cho câu Wh-.",
+          "tags": [
+            "wh-question"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "audio": "p2_q21.m4a",
+      "transcript": "Patients have been complaining about the long wait at the front desk.\n(A) The front door is locked.\n(B) We're adding a self-check-in kiosk next month.\n(C) About twenty minutes ago.",
+      "questions": [
+        {
+          "number": 21,
+          "answer": "B",
+          "explanation": "Câu trần thuật nêu vấn đề chờ lâu ở quầy lễ tân → phản hồi đưa giải pháp: tháng sau lắp máy tự làm thủ tục → (B). (A) lặp 'front', (C) trả lời thời điểm.",
+          "tags": [
+            "statement"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "audio": "p3_q32-34.m4a",
+      "transcript": "W: Hi, Tom. The shipment of packaging materials from Northfield Supplies just came in, but about half the boxes are the wrong size.\nM: Really? We need those for the Ridgeway order that goes out on Friday.\nW: I know. I called Northfield, and they said they can't send the correct boxes until next Wednesday.\nM: Next Wednesday? That's cutting it close.\nW: Actually, I was thinking we could ask Lakeside Packaging. They're more expensive, but they deliver within two days.\nM: Let's do that. I'll get approval from the finance manager for the extra cost this afternoon.\nW: Great. I'll call Lakeside and request a quote right away.",
+      "questions": [
+        {
+          "number": 32,
+          "answer": "C",
+          "content": "What problem does the woman report?",
+          "options": [
+            "A supplier increased its prices",
+            "An order was sent to another warehouse",
+            "Some boxes have incorrect measurements",
+            "A shipment was damaged during transport"
+          ],
+          "explanation": "Người phụ nữ nói 'about half the boxes are the wrong size' (một nửa số hộp sai kích thước) → (C). Hàng không bị hỏng (D), không giao nhầm kho (B); 'more expensive' nói về nhà cung cấp khác chứ không phải tăng giá (A).",
+          "tags": [
+            "main-idea"
+          ]
+        },
+        {
+          "number": 33,
+          "answer": "B",
+          "content": "Why does the man say, \"That's cutting it close\"?",
+          "options": [
+            "He thinks the new boxes are far too small",
+            "He is worried about meeting a deadline",
+            "He doubts the supplier's reliability",
+            "He wants to cancel an order"
+          ],
+          "explanation": "Đơn Ridgeway phải gửi thứ Sáu nhưng hộp đúng cỡ thứ Tư tuần sau mới tới → 'That's cutting it close' (sát nút quá) thể hiện lo trễ hạn → (B). (A) lặp ý 'wrong size', (D) và (C) không được nhắc.",
+          "tags": [
+            "implied-meaning"
+          ]
+        },
+        {
+          "number": 34,
+          "answer": "A",
+          "content": "What will the man do this afternoon?",
+          "options": [
+            "Seek authorization for an expense",
+            "Inspect the damaged boxes",
+            "Contact a different supplier",
+            "Revise the delivery schedule for Friday"
+          ],
+          "explanation": "Người đàn ông nói 'I'll get approval from the finance manager for the extra cost this afternoon' → xin duyệt chi phí → (A). Gọi Lakeside là việc của người phụ nữ (C); hộp không bị hỏng (B); không nói sửa lịch giao (D).",
+          "tags": [
+            "next-action"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "audio": "p3_q35-37.m4a",
+      "transcript": "M1: Thanks for coming in, Ms. Alvarez. This is my colleague Ken, who manages our commercial listings.\nW: Nice to meet you both. As I mentioned on the phone, my bakery has outgrown its current space, so I'm looking for somewhere bigger downtown.\nM2: We have a former restaurant on Harbor Street that might suit you. The kitchen equipment is already installed.\nW: That sounds promising. What about parking, though? Most of my customers drive in.\nM2: There's a public garage across the street, and we could negotiate validated parking with the owner.\nM1: The landlord is also offering three months of reduced rent to new tenants who sign before the end of June.\nW: In that case, I'd like to see the space this week if possible.\nM2: I can take you there tomorrow at ten.",
+      "questions": [
+        {
+          "number": 35,
+          "answer": "B",
+          "content": "Who most likely is the woman?",
+          "options": [
+            "A restaurant critic",
+            "A business owner",
+            "A building inspector",
+            "A real estate agent"
+          ],
+          "explanation": "Cô nói 'my bakery has outgrown its current space' → chủ một tiệm bánh đang tìm mặt bằng → (B). Hai người đàn ông mới là môi giới (D); 'restaurant' chỉ là mặt bằng cũ (A).",
+          "tags": [
+            "speaker-identity"
+          ]
+        },
+        {
+          "number": 36,
+          "answer": "D",
+          "content": "What does the woman ask about?",
+          "options": [
+            "How large the kitchen is",
+            "How much the monthly rent is",
+            "How long the lease lasts",
+            "Parking availability"
+          ],
+          "explanation": "Cô hỏi 'What about parking, though?' vì khách thường lái xe tới → (D). 'Kitchen' được nhắc nhưng cô không hỏi kích thước (A); tiền thuê do người đàn ông tự nói (B).",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 37,
+          "answer": "C",
+          "content": "What does one of the men say the landlord is offering?",
+          "options": [
+            "A year of free parking in a garage",
+            "Free kitchen equipment",
+            "A temporary discount on rent",
+            "A shorter lease term"
+          ],
+          "explanation": "'three months of reduced rent to new tenants who sign before the end of June' → giảm tiền thuê có thời hạn → (C). Thiết bị bếp đã có sẵn chứ không phải ưu đãi (B); vé giữ xe chỉ là 'could negotiate' (A).",
+          "tags": [
+            "detail"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "audio": "p3_q38-40.m4a",
+      "transcript": "M: Lauren, have you finalized the seating chart for the Kensington awards dinner?\nW: Almost. But I just found out the hotel double-booked the Grand Ballroom, so we've been moved to Riverside Hall.\nM: Isn't that room quite a bit smaller?\nW: It is. It holds a hundred and eighty, and we've got two hundred guests confirmed.\nM: Hmm. Well, the client did say the awards ceremony should be the focus.\nW: Good point. We could set up the cocktail reception on the terrace instead, which would free up space inside.\nM: I'll call the hotel and make sure the terrace is available that evening.\nW: And ask whether they can provide outdoor heaters, just in case.",
+      "questions": [
+        {
+          "number": 38,
+          "answer": "A",
+          "content": "What problem does the woman mention?",
+          "options": [
+            "An event has been moved to a smaller space",
+            "An award has not been delivered",
+            "A guest list has not been confirmed",
+            "A client has decided to change the event date"
+          ],
+          "explanation": "Khách sạn đặt trùng Grand Ballroom nên chuyển sang Riverside Hall, chỉ chứa 180 người trong khi có 200 khách → (A). Danh sách khách đã xác nhận (C); không nói tới giải thưởng bị giao trễ (B) hay đổi ngày (D).",
+          "tags": [
+            "main-idea"
+          ]
+        },
+        {
+          "number": 39,
+          "answer": "D",
+          "content": "What does the man imply when he says, \"the client did say the awards ceremony should be the focus\"?",
+          "options": [
+            "The ceremony should be shortened",
+            "Fewer guests should be invited to the dinner",
+            "The seating chart is no longer needed",
+            "Other parts of the event could be adjusted"
+          ],
+          "explanation": "Ý anh: phần chính là lễ trao giải, các phần khác có thể linh hoạt; ngay sau đó cô đề xuất dời tiệc cocktail ra sân hiên → (D). Không có ý rút ngắn lễ (A) hay cắt khách (B).",
+          "tags": [
+            "implied-meaning"
+          ]
+        },
+        {
+          "number": 40,
+          "answer": "D",
+          "content": "What does the woman ask the man to find out about?",
+          "options": [
+            "Additional catering staff",
+            "Extra chairs for the hall",
+            "The price of a larger ballroom",
+            "Equipment to keep guests warm"
+          ],
+          "explanation": "Cô nhờ hỏi 'whether they can provide outdoor heaters' (máy sưởi ngoài trời) → thiết bị giữ ấm cho khách → (D). Các phương án khác không được nhắc.",
+          "tags": [
+            "request-suggestion"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "audio": "p3_q41-43.m4a",
+      "transcript": "W: Good morning, Westbrook Family Clinic. How can I help you?\nM: Hi, this is Raymond Cho. I have an appointment with Dr. Lin at eleven, but my train's been delayed, so I might be about twenty minutes late.\nW: Let me take a look. Dr. Lin's next patient is at eleven thirty, so I'm afraid that wouldn't leave enough time.\nM: Oh, I see. Is there anything later today?\nW: She has an opening at four fifteen. Alternatively, Dr. Mensah could see you at eleven forty-five.\nM: I'd rather stay with Dr. Lin. I'll take the four fifteen.\nW: All right, you're booked. And since it's been over a year since your last visit, please bring your updated insurance card.\nM: Will do. Thanks.",
+      "questions": [
+        {
+          "number": 41,
+          "answer": "A",
+          "content": "Why is the man calling?",
+          "options": [
+            "To explain that he may not arrive on time",
+            "To update his insurance information",
+            "To ask about the schedule for the morning train",
+            "To make his first appointment"
+          ],
+          "explanation": "Anh nói tàu bị trễ nên 'I might be about twenty minutes late' → báo có thể đến không đúng giờ → (A). 'train' chỉ là lý do (C); thẻ bảo hiểm do lễ tân nhắc (B); anh đã có lịch hẹn sẵn (D).",
+          "tags": [
+            "main-idea"
+          ]
+        },
+        {
+          "number": 42,
+          "answer": "D",
+          "content": "What does the man decide to do?",
+          "options": [
+            "Come back the following day",
+            "Take an earlier train",
+            "See another doctor later that same morning",
+            "See his regular doctor later in the day"
+          ],
+          "explanation": "'I'd rather stay with Dr. Lin. I'll take the four fifteen.' → gặp bác sĩ quen vào chiều cùng ngày → (D). Bác sĩ Mensah lúc 11:45 là phương án bị từ chối (C).",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 43,
+          "answer": "C",
+          "content": "What does the woman ask the man to bring?",
+          "options": [
+            "A form of photo identification",
+            "A list of his medications",
+            "A current insurance document",
+            "A payment for a missed visit"
+          ],
+          "explanation": "'please bring your updated insurance card' → giấy tờ bảo hiểm mới nhất → (C). Các giấy tờ khác không được nhắc.",
+          "tags": [
+            "detail"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "audio": "p3_q44-46.m4a",
+      "transcript": "M: Priya, the Hartwell order was just increased by two thousand units, and they still want it by the end of next week.\nW: That's a big jump. Which line are we running it on?\nM: Line 3. But according to the schedule, it's down for maintenance one day this week.\nW: Could we push that maintenance to next month?\nM: Not really. The inspection has already been postponed once, and it's required by the safety code.\nW: OK, then let's add a Saturday shift on Line 3 to make up for the lost day.\nM: Good idea. I'll ask the floor supervisor to find out who's available to work overtime.",
+      "image": "p3_q44-46_graphic.png",
+      "questions": [
+        {
+          "number": 44,
+          "answer": "B",
+          "content": "What has changed about the Hartwell order?",
+          "options": [
+            "Part of the order has been canceled",
+            "The number of units has gone up",
+            "The product design has been revised",
+            "The deadline has been moved earlier"
+          ],
+          "explanation": "'the Hartwell order was just increased by two thousand units' → số lượng tăng → (B). Hạn chót vẫn giữ nguyên 'still want it by the end of next week' (D).",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 45,
+          "answer": "C",
+          "content": "Look at the graphic. On which day will the production line for the Hartwell order be unavailable?",
+          "options": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ],
+          "explanation": "Đơn chạy trên 'Line 3'; theo lịch, Line 3 bảo trì vào thứ Tư → (C). Thứ Hai, thứ Ba, thứ Năm là lịch bảo trì của các dây chuyền khác.",
+          "tags": [
+            "graphic",
+            "detail"
+          ]
+        },
+        {
+          "number": 46,
+          "answer": "B",
+          "content": "What will the man most likely do next?",
+          "options": [
+            "Call the client to extend the deadline",
+            "Find workers willing to work extra hours",
+            "Move the maintenance to next month",
+            "Ask the inspector to come by at a later date"
+          ],
+          "explanation": "'I'll ask the floor supervisor to find out who's available to work overtime' → tìm người làm thêm giờ → (B). Việc dời bảo trì đã bị bác (B, C).",
+          "tags": [
+            "next-action"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "audio": "p4_q71-73.m4a",
+      "transcript": "Hello, Ms. Brennan, this is Victor from Ashford Builders calling about the kitchen remodel at your home on Pine Avenue. I'm afraid the countertops you picked out won't arrive until the twentieth, which is about a week later than we'd planned. The supplier had a problem at its factory. Now, our crew could start installing the cabinets and the flooring in the meantime, so the overall project would only be delayed by two or three days. If that works for you, there's nothing you need to do. But if you'd prefer to choose a different countertop that's in stock, I can bring some samples by on Thursday. Just give me a call back at 555-0142.",
+      "questions": [
+        {
+          "number": 71,
+          "answer": "D",
+          "content": "Who most likely is the speaker?",
+          "options": [
+            "A real estate agent",
+            "A furniture salesperson",
+            "A factory manager",
+            "A contractor"
+          ],
+          "explanation": "Người nói gọi từ 'Ashford Builders' về việc cải tạo bếp nhà khách, nhắc đội thợ lắp tủ và sàn → nhà thầu → (D). 'factory' là của nhà cung cấp (C).",
+          "tags": [
+            "speaker-identity"
+          ]
+        },
+        {
+          "number": 72,
+          "answer": "A",
+          "content": "What problem does the speaker mention?",
+          "options": [
+            "Some materials will arrive late",
+            "The cost of a project has increased",
+            "A crew member is not available",
+            "Some cabinets were damaged"
+          ],
+          "explanation": "'the countertops you picked out won't arrive until the twentieth, which is about a week later than we'd planned' → vật liệu về trễ → (A). Tủ bếp vẫn lắp được, không hỏng (D).",
+          "tags": [
+            "main-idea"
+          ]
+        },
+        {
+          "number": 73,
+          "answer": "A",
+          "content": "Why would the listener return the call?",
+          "options": [
+            "To consider alternatives to a product",
+            "To cancel the remodel",
+            "To confirm when work will start",
+            "To approve an additional charge for labor"
+          ],
+          "explanation": "Chỉ cần gọi lại nếu muốn 'choose a different countertop that's in stock' → xem lựa chọn khác → (A). Nếu đồng ý kế hoạch thì 'there's nothing you need to do'.",
+          "tags": [
+            "detail"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "audio": "p4_q74-76.m4a",
+      "transcript": "Good morning, everyone, and welcome to the third day of the Pacific Logistics Expo. Before today's sessions begin, I have a couple of updates. First, the panel discussion on warehouse automation, originally scheduled for Hall C, has been moved to the main auditorium. We received far more registrations than we expected. Second, the shuttle buses to the downtown hotels will leave from the east entrance this evening, not the north entrance, because of road construction. Finally, don't forget to stop by the registration desk to pick up your attendance certificate before you leave. Certificates won't be mailed out afterward. And as always, free coffee is available in the main lobby all morning.",
+      "questions": [
+        {
+          "number": 74,
+          "answer": "A",
+          "content": "Where is the announcement being made?",
+          "options": [
+            "At a trade exhibition",
+            "At a hotel lobby",
+            "At a distribution warehouse",
+            "At a bus terminal"
+          ],
+          "explanation": "'welcome to the third day of the Pacific Logistics Expo' → hội chợ / triển lãm ngành → (A). 'hotels', 'warehouse', 'shuttle buses' chỉ là từ được nhắc.",
+          "tags": [
+            "speaker-identity"
+          ]
+        },
+        {
+          "number": 75,
+          "answer": "D",
+          "content": "Why has a session been moved?",
+          "options": [
+            "Some audio equipment stopped working",
+            "A presenter arrived late",
+            "Hall C is being repaired",
+            "It is more popular than expected"
+          ],
+          "explanation": "'We received far more registrations than we expected' → đông hơn dự kiến → (D). Công trình đường là lý do đổi chỗ đón xe buýt, không phải đổi phòng (C).",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 76,
+          "answer": "C",
+          "content": "What does the speaker remind listeners to do?",
+          "options": [
+            "Mail a form after the event",
+            "Sign up for tomorrow's sessions",
+            "Collect a document before departing",
+            "Wait for the bus at the north entrance"
+          ],
+          "explanation": "'pick up your attendance certificate before you leave. Certificates won't be mailed out' → lấy giấy chứng nhận trước khi về → (C). Xe đón ở cổng phía đông, không phải phía bắc (D).",
+          "tags": [
+            "request-suggestion"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "audio": "p4_q77-79.m4a",
+      "transcript": "Thanks for staying a few minutes after your shift. As you know, starting next month, our clinic will open on Saturday mornings. Several of you have already signed up to work those hours, and I really appreciate it. We still need one more receptionist, though. Now, I know weekends aren't ideal for everyone. Anyone who works a Saturday will get the following Monday off. Also, we're switching to a new online booking system on the first. Patients will be able to schedule and cancel appointments themselves, which should cut down on phone calls. The software company is running a training session for us on Wednesday. It's only an hour.",
+      "questions": [
+        {
+          "number": 77,
+          "answer": "B",
+          "content": "What will change next month?",
+          "options": [
+            "The clinic will move to a new building downtown",
+            "The clinic will be open on an additional day",
+            "The clinic will hire more doctors",
+            "The clinic will raise its fees"
+          ],
+          "explanation": "'starting next month, our clinic will open on Saturday mornings' → mở thêm ngày thứ Bảy → (B). Chỉ thiếu thêm một lễ tân, không phải bác sĩ (C).",
+          "tags": [
+            "main-idea"
+          ]
+        },
+        {
+          "number": 78,
+          "answer": "D",
+          "content": "Why does the speaker say, \"Anyone who works a Saturday will get the following Monday off\"?",
+          "options": [
+            "To correct an error in a schedule",
+            "To explain a new appointment policy for patients",
+            "To announce a public holiday",
+            "To encourage staff to volunteer for a shift"
+          ],
+          "explanation": "Ngay trước đó người nói cần thêm 1 lễ tân và thừa nhận cuối tuần không tiện → nêu quyền lợi nghỉ thứ Hai để khuyến khích nhận ca → (D).",
+          "tags": [
+            "implied-meaning"
+          ]
+        },
+        {
+          "number": 79,
+          "answer": "B",
+          "content": "What does the speaker imply about the training session?",
+          "options": [
+            "It will take place online",
+            "It will not take long",
+            "It is not mandatory",
+            "It has been postponed"
+          ],
+          "explanation": "'It's only an hour.' → buổi đào tạo ngắn → (B). Không có thông tin về việc tự nguyện (C), dời lịch (D) hay học trực tuyến (A).",
+          "tags": [
+            "inference"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "audio": "p4_q80-82.m4a",
+      "transcript": "Good morning, and welcome to the Dalton Industries regional managers' training day. You should each have a copy of today's room assignments. We'll begin with the safety briefing in about fifteen minutes. Please note one change, though. The projector in the room listed for the budget workshop isn't working, so that session and the safety briefing will switch rooms. Lunch will be served in the cafeteria on the ground floor at twelve thirty. And if you drove here today, please give your license plate number to the front desk so that you don't receive a parking ticket. Visitor permits are only valid until five.",
+      "image": "p4_q80-82_graphic.png",
+      "questions": [
+        {
+          "number": 80,
+          "answer": "C",
+          "content": "Look at the graphic. In which room will the safety briefing be held?",
+          "options": [
+            "Room 120",
+            "Room 104",
+            "Room 210",
+            "Room 215"
+          ],
+          "explanation": "Buổi an toàn đổi phòng với hội thảo ngân sách; theo bảng, hội thảo ngân sách ở Room 210 → buổi an toàn sang Room 210 → (C). Room 104 là phòng cũ của buổi an toàn (B).",
+          "tags": [
+            "graphic",
+            "detail"
+          ]
+        },
+        {
+          "number": 81,
+          "answer": "C",
+          "content": "What does the speaker say about lunch?",
+          "options": [
+            "It requires a meal ticket",
+            "It will be provided by an outside caterer",
+            "It will be served on the ground floor",
+            "It will begin at noon"
+          ],
+          "explanation": "'Lunch will be served in the cafeteria on the ground floor at twelve thirty' → (C). Giờ ăn là 12:30 chứ không phải 12:00 (D).",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 82,
+          "answer": "B",
+          "content": "What are drivers asked to do?",
+          "options": [
+            "Purchase a parking permit",
+            "Provide vehicle information",
+            "Park in a nearby garage",
+            "Leave the building before five"
+          ],
+          "explanation": "'please give your license plate number to the front desk' → khai biển số xe ở quầy → (B). 'until five' là hạn của giấy phép, không yêu cầu rời đi (D).",
+          "tags": [
+            "request-suggestion"
+          ]
+        }
+      ]
+    }
+  ]
+}

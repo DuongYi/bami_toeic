@@ -1,0 +1,227 @@
+[
+  {
+    "part": 2,
+    "audio": "p2_q7.m4a",
+    "transcript": "Where can I find the return desk?\n(A) It's next to the main entrance.\n(B) Yes, I returned it yesterday.\n(C) About fifteen minutes.",
+    "questions": [
+      {
+        "number": 7,
+        "answer": "A",
+        "explanation": "Hỏi 'Where' (ở đâu) → chỉ vị trí 'next to the main entrance' (A). (B) lặp từ 'return' và trả lời Yes cho câu Wh-, (C) nói thời gian.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q8.m4a",
+    "transcript": "When does the hotel restaurant open for breakfast?\n(A) The buffet was delicious.\n(B) At six thirty every morning.\n(C) On the second floor.",
+    "questions": [
+      {
+        "number": 8,
+        "answer": "B",
+        "explanation": "Hỏi 'When' (khi nào) → giờ mở cửa 'At six thirty every morning' (B). (A) nói về món ăn, (C) nói địa điểm.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q9.m4a",
+    "transcript": "Who's in charge of the holiday window display?\n(A) Melissa from the design team.\n(B) Yes, it looks great.\n(C) Until the end of December.",
+    "questions": [
+      {
+        "number": 9,
+        "answer": "A",
+        "explanation": "Hỏi 'Who' (ai phụ trách) → 'Melissa from the design team' (A). (B) trả lời Yes cho câu Wh-, (C) nói thời gian.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q10.m4a",
+    "transcript": "Why was the flight to Denver delayed?\n(A) Gate twelve, I think.\n(B) There's a problem with the weather.\n(C) I'll fly there next week.",
+    "questions": [
+      {
+        "number": 10,
+        "answer": "B",
+        "explanation": "Hỏi 'Why' (tại sao) → lý do 'a problem with the weather' (B). (A) nói cổng ra máy bay, (C) lặp từ 'fly'.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q11.m4a",
+    "transcript": "How much does it cost to upgrade to a suite?\n(A) The front desk can give you the rates.\n(B) A wonderful view of the bay.\n(C) For three nights.",
+    "questions": [
+      {
+        "number": 11,
+        "answer": "A",
+        "explanation": "Hỏi 'How much' (giá bao nhiêu) → trả lời gián tiếp: 'The front desk can give you the rates' (A). (B) nói về cảnh, (C) nói số đêm.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q12.m4a",
+    "transcript": "What time should we leave for the airport?\n(A) Terminal B.\n(B) A taxi, probably.\n(C) Our flight boards at four, so around one.",
+    "questions": [
+      {
+        "number": 12,
+        "answer": "C",
+        "explanation": "Hỏi 'What time' (mấy giờ) → 'around one' kèm lý do giờ lên máy bay (C). (A) nói nhà ga, (B) nói phương tiện.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q13.m4a",
+    "transcript": "Which size would you like to try on?\n(A) Do you have it in a medium?\n(B) It fits in my bag.\n(C) The fitting rooms are busy.",
+    "questions": [
+      {
+        "number": 13,
+        "answer": "A",
+        "explanation": "Hỏi 'Which size' → khách hỏi lại có cỡ medium không, ngầm chọn cỡ M (A). (B) lặp ý 'fit', (C) lặp 'fitting/try on' nhưng không trả lời.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q14.m4a",
+    "transcript": "Has the new shipment of shoes arrived?\n(A) Yes, a pair of running shoes.\n(B) The truck is running late today.\n(C) At the shipping counter.",
+    "questions": [
+      {
+        "number": 14,
+        "answer": "B",
+        "explanation": "Câu Yes/No hỏi hàng đã về chưa → trả lời gián tiếp 'The truck is running late' = chưa về (B). (A) lặp từ 'shoes', (C) gần âm 'shipping'.",
+        "tags": [
+          "yes-no"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q15.m4a",
+    "transcript": "Didn't you book a table for six people?\n(A) I booked it for eight, actually.\n(B) A nice table by the window.\n(C) At six o'clock.",
+    "questions": [
+      {
+        "number": 15,
+        "answer": "A",
+        "explanation": "Câu hỏi phủ định → 'I booked it for eight, actually' (thực ra đặt cho 8 người) (A). (B) lặp 'table', (C) lặp 'six' nhưng là giờ.",
+        "tags": [
+          "yes-no"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q16.m4a",
+    "transcript": "The customer survey results are ready, aren't they?\n(A) I'll survey the customers.\n(B) Mr. Kato is reviewing them now.\n(C) They're ready to order.",
+    "questions": [
+      {
+        "number": 16,
+        "answer": "B",
+        "explanation": "Câu hỏi đuôi về kết quả khảo sát → 'Mr. Kato is reviewing them now' (đang xem, gần như sẵn sàng) (B). (A) lặp 'survey', (C) lặp 'ready'.",
+        "tags": [
+          "tag-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q17.m4a",
+    "transcript": "Would you prefer a window seat or an aisle seat?\n(A) Whichever is closer to the front.\n(B) Yes, I would.\n(C) The seat belt sign is on.",
+    "questions": [
+      {
+        "number": 17,
+        "answer": "A",
+        "explanation": "Câu hỏi lựa chọn → 'Whichever is closer to the front' (chỗ nào gần phía trước cũng được) (A). (B) trả lời Yes cho câu lựa chọn, (C) lặp 'seat'.",
+        "tags": [
+          "choice"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q18.m4a",
+    "transcript": "Should we pay by credit card or ask the hotel to send an invoice?\n(A) The company prefers invoices.\n(B) A pay raise next month.\n(C) Sure, I'll send it to you.",
+    "questions": [
+      {
+        "number": 18,
+        "answer": "A",
+        "explanation": "Câu hỏi lựa chọn hai cách thanh toán → 'The company prefers invoices' (A). (B) gần âm 'pay', (C) lặp 'send' nhưng không chọn.",
+        "tags": [
+          "choice"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q19.m4a",
+    "transcript": "Could you help me carry these boxes to the stockroom?\n(A) They're in stock.\n(B) Sure, just give me a minute.\n(C) Yes, a large box.",
+    "questions": [
+      {
+        "number": 19,
+        "answer": "B",
+        "explanation": "Lời nhờ giúp → đồng ý 'Sure, just give me a minute' (B). (A) gần âm 'stock', (C) lặp 'box'.",
+        "tags": [
+          "request"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q20.m4a",
+    "transcript": "Why don't we offer customers a free gift with every purchase?\n(A) That might be too expensive.\n(B) Because it was free.\n(C) I purchased it online.",
+    "questions": [
+      {
+        "number": 20,
+        "answer": "A",
+        "explanation": "'Why don't we…' là lời đề nghị → phản hồi về đề nghị: 'That might be too expensive' (A). (B) hiểu nhầm là câu hỏi lý do, (C) lặp 'purchase'.",
+        "tags": [
+          "request"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q21.m4a",
+    "transcript": "The shuttle bus to the convention center leaves every twenty minutes.\n(A) Then we can still catch the next one.\n(B) Twenty conference rooms.\n(C) No, he left yesterday.",
+    "questions": [
+      {
+        "number": 21,
+        "answer": "A",
+        "explanation": "Câu trần thuật về lịch xe đưa đón → phản hồi hợp lý 'Then we can still catch the next one' (A). (B) lặp 'twenty', (C) lặp 'left'.",
+        "tags": [
+          "statement"
+        ]
+      }
+    ]
+  }
+]

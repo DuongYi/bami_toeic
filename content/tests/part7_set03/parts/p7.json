@@ -1,0 +1,372 @@
+[
+  {
+    "part": 7,
+    "passage": "Nadia Rossi (4:15 P.M.)\nThe caterer can still do a tasting for the awards dinner, but only on Thursday at 3:00.\nFelix Grant (4:17 P.M.)\nI'm presenting the quarterly figures to the board then.\nNadia Rossi (4:18 P.M.)\nCould Amira go in your place? She planned last year's dinner.\nFelix Grant (4:20 P.M.)\nShe'd be perfect. Just make sure she knows the budget has gone down since then.\nNadia Rossi (4:21 P.M.)\nWill do. I'll forward her the caterer's menu tonight.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "B",
+        "content": "What is indicated about this year's awards dinner?",
+        "options": [
+          "It will be held on Thursday.",
+          "It has less money allocated than last year's.",
+          "It is being organized for the very first time this year.",
+          "Ms. Rossi will give a speech at it."
+        ],
+        "explanation": "Mr. Grant (4:20): 'the budget has gone down since then' – 'then' là bữa tối năm ngoái → ngân sách năm nay thấp hơn (B). Thứ Năm là buổi nếm thử, không phải bữa tối; Amira đã lo bữa năm ngoái nên đây không phải lần đầu.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "A",
+        "content": "At 4:17 P.M., what does Mr. Grant most likely mean when he writes, \"I'm presenting the quarterly figures to the board then\"?",
+        "options": [
+          "He will not be available at the proposed time.",
+          "He wants the tasting held in the boardroom.",
+          "He needs the caterer's price list for his quarterly report.",
+          "He expects the board to approve the menu."
+        ],
+        "explanation": "Ms. Rossi nói buổi nếm thử chỉ có thể vào thứ Năm 3 giờ; Mr. Grant đáp lúc đó ông thuyết trình cho ban giám đốc, và Ms. Rossi lập tức đề nghị người khác đi thay → ông bận vào giờ đó (A).",
+        "tags": [
+          "implied-meaning"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 7,
+    "passage": "IMPORTANT SAFETY NOTICE\nKelvara Appliances is voluntarily recalling its Model KX-40 countertop blenders manufactured between January and April of this year. In rare cases, the locking mechanism on the lid may fail, allowing the blade to operate while the lid is not fully secured. No injuries have been reported.\nCustomers can determine whether their unit is affected by checking the serial number printed on the underside of the base: affected units begin with the letters \"KJ\" or \"KA.\" Owners of affected blenders should stop using them immediately and visit www.kelvara.com/recall to request a free replacement lid assembly, which will be shipped within ten business days.\nUnits purchased after May 1 already contain the redesigned lid and do not need to be replaced. Retailers have been instructed to remove any remaining KX-40 stock with \"KJ\" or \"KA\" serial numbers from their shelves.",
+    "questions": [
+      {
+        "number": 149,
+        "answer": "A",
+        "content": "Why is the product being recalled?",
+        "options": [
+          "A safety feature might not work properly.",
+          "The motor tends to overheat.",
+          "The blades wear out quickly.",
+          "Several customers were injured while using it."
+        ],
+        "explanation": "Đoạn 1: 'the locking mechanism on the lid may fail' – cơ chế khoá nắp (tính năng an toàn) có thể hỏng → (A). 'No injuries have been reported' loại phương án về người bị thương.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 150,
+        "answer": "B",
+        "content": "How can customers find out whether their blender is affected?",
+        "options": [
+          "By contacting the store where they bought it",
+          "By examining a code on the appliance",
+          "By reading the instruction manual",
+          "By calling a customer service line"
+        ],
+        "explanation": "Đoạn 2: kiểm tra 'the serial number printed on the underside of the base' (bắt đầu bằng KJ/KA) → xem mã trên máy (B).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 151,
+        "answer": "C",
+        "content": "What is NOT stated about the recall?",
+        "options": [
+          "Replacement parts will be sent free of charge.",
+          "Stores must remove certain units from sale.",
+          "Customers will receive a full refund.",
+          "Newer units are not affected."
+        ],
+        "explanation": "Thông báo chỉ nói gửi 'a free replacement lid assembly' (thay nắp miễn phí), cửa hàng phải gỡ hàng, máy mua sau 1/5 không cần thay; không hề nhắc hoàn tiền → (C).",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 7,
+    "passage": "Marcus Webb [10:02 A.M.]\nThe packaging supplier says the new labels won't arrive until the 18th.\nElena Sorokina [10:04 A.M.]\nThe 18th? The launch event is on the 20th, and stores need two days to stock the shelves.\nMarcus Webb [10:05 A.M.]\nExactly. It doesn't leave us any room for error.\nTariq Hussain [10:07 A.M.]\nWhat if we ship the first batch with the old labels and a sticker covering the outdated nutrition panel? Legal approved that approach for the spring line.\nElena Sorokina [10:08 A.M.]\nThat worked, but customers complained that the stickers peeled off.\nJoanne Park [10:10 A.M.]\nI can ask our second supplier in Leeds. They charged more last time, but they've never missed a deadline.\nMarcus Webb [10:11 A.M.]\nPlease do. If they can deliver by the 15th, the extra cost is worth it.",
+    "questions": [
+      {
+        "number": 152,
+        "answer": "B",
+        "content": "What problem are the writers discussing?",
+        "options": [
+          "A product launch event has been canceled by the stores.",
+          "Some packaging materials may arrive too late.",
+          "Stores have run out of shelf space.",
+          "A product failed a legal review."
+        ],
+        "explanation": "Mr. Webb (10:02): nhãn mới 'won't arrive until the 18th' trong khi sự kiện ra mắt ngày 20 và cửa hàng cần 2 ngày → vật liệu đóng gói có thể tới quá muộn (B).",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 153,
+        "answer": "C",
+        "content": "At 10:05 A.M., what does Mr. Webb most likely mean when he writes, \"It doesn't leave us any room for error\"?",
+        "options": [
+          "The stores have made mistakes in the past.",
+          "The labels contain incorrect information.",
+          "Any further delay would affect the launch.",
+          "The event venue is too small."
+        ],
+        "explanation": "Nhãn tới ngày 18 + 2 ngày lên kệ = vừa kịp ngày 20; Mr. Webb đồng ý 'Exactly' → chỉ cần trễ thêm là hỏng kế hoạch ra mắt (C).",
+        "tags": [
+          "implied-meaning"
+        ]
+      },
+      {
+        "number": 154,
+        "answer": "A",
+        "content": "What is suggested about the spring product line?",
+        "options": [
+          "It was shipped with temporary labeling.",
+          "It was manufactured by the supplier in Leeds last year.",
+          "It did not require legal approval.",
+          "It sold better than expected."
+        ],
+        "explanation": "Mr. Hussain đề xuất dán sticker che bảng dinh dưỡng cũ – 'Legal approved that approach for the spring line'; Ms. Sorokina xác nhận 'That worked' → dòng mùa xuân từng dùng nhãn tạm (A).",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 155,
+        "answer": "D",
+        "content": "What will Ms. Park most likely do next?",
+        "options": [
+          "Order more stickers",
+          "Postpone the launch event",
+          "Negotiate with the current supplier",
+          "Contact an alternative supplier"
+        ],
+        "explanation": "Ms. Park: 'I can ask our second supplier in Leeds'; Mr. Webb: 'Please do' → chị sẽ liên hệ nhà cung cấp khác (D).",
+        "tags": [
+          "next-action"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 7,
+    "passage": "Riverton Library Turns Unused Space into Business Hub\nRIVERTON (August 3) — The basement of the Riverton Public Library, which for decades held little more than old periodicals, has been converted into a shared workspace for local entrepreneurs. — [1] — The space, called The Ledger, offers twelve desks, two meeting rooms, and high-speed Internet access.\nMembership is free for residents with a library card, although desks must be reserved online in advance. — [2] — Library director Paul Mensah said the idea came from patrons who were already using the reading room to conduct business calls. \"We realized we had an underused asset beneath our feet,\" he said.\nThe project was funded largely through a grant from the Riverton Economic Council, which hopes the hub will encourage new businesses to stay in the area. — [3] — Workshops on topics such as bookkeeping and marketing will be offered monthly. — [4] — The first session, on securing small-business loans, is scheduled for September 10.",
+    "questions": [
+      {
+        "number": 156,
+        "answer": "C",
+        "content": "What is the article mainly about?",
+        "options": [
+          "The renovation of a reading room",
+          "A grant program designed to help public libraries",
+          "A new purpose for part of a public building",
+          "The retirement of a library director"
+        ],
+        "explanation": "Tiêu đề và câu đầu: tầng hầm thư viện 'has been converted into a shared workspace' → khu vực của toà nhà công cộng được dùng vào mục đích mới (C).",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 157,
+        "answer": "B",
+        "content": "The word \"asset\" in paragraph 2, line 5, is closest in meaning to",
+        "options": [
+          "payment",
+          "resource",
+          "expense",
+          "owner"
+        ],
+        "explanation": "'an underused asset beneath our feet' = một tài nguyên (tầng hầm) chưa được tận dụng → resource (B).",
+        "tags": [
+          "vocab-in-context"
+        ]
+      },
+      {
+        "number": 158,
+        "answer": "B",
+        "content": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"Reservations can be made for up to four hours at a time.\"",
+        "options": [
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
+        ],
+        "explanation": "Câu chèn nói về thời lượng đặt chỗ, nối tiếp 'desks must be reserved online in advance' → vị trí [2] (B).",
+        "tags": [
+          "sentence-insertion"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 7,
+    "passage": "Online Review\nSeaview Inn — Rating: 3 out of 5\nPosted by Gregory Halsey on June 12\nI stayed at the Seaview Inn for three nights during a business trip. The location is ideal — a five-minute walk from the convention center — and the front desk staff were helpful. However, the Wi-Fi in my room was so slow that I had to work from the lobby every evening. I was also disappointed that the breakfast advertised on the hotel's Web site was not included in my rate, which I booked through a travel site. I would stay here again only if these issues were addressed.\n\nResponse from Management\nPosted by Lila Moreau, Guest Relations Manager, on June 14\nDear Mr. Halsey,\nThank you for your feedback. We are pleased that you found our location convenient. Regarding the Internet connection, we upgraded the network in all guest rooms on June 10, the day after your departure, and guests have since reported much faster speeds. As for breakfast, it is included only in reservations made directly through our Web site or by phone; rates offered by third-party sites do not include it. To thank you for sharing your experience, I have added 2,000 points to your Seaview Rewards account, which can be used toward a future stay.",
+    "questions": [
+      {
+        "number": 176,
+        "answer": "B",
+        "content": "Why did Mr. Halsey stay at the Seaview Inn?",
+        "options": [
+          "He was on vacation with his family.",
+          "He was traveling for work.",
+          "He was attending a friend's wedding.",
+          "He was relocating to the area."
+        ],
+        "explanation": "Bài đánh giá: 'during a business trip' → đi công tác (B).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 177,
+        "answer": "C",
+        "content": "What does Mr. Halsey complain about?",
+        "options": [
+          "The front desk staff",
+          "The distance to the convention center",
+          "The Internet service",
+          "The size of his room"
+        ],
+        "explanation": "Ông phàn nàn 'the Wi-Fi in my room was so slow' (và bữa sáng); vị trí và lễ tân được khen → (C).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 178,
+        "answer": "A",
+        "content": "When did Mr. Halsey most likely check in?",
+        "options": [
+          "June 6",
+          "June 9",
+          "June 10",
+          "June 12"
+        ],
+        "explanation": "Phản hồi: nâng cấp mạng 'on June 10, the day after your departure' → ông trả phòng 9/6; ở 3 đêm → nhận phòng 6/6 (A).",
+        "tags": [
+          "inference",
+          "multi-passage"
+        ]
+      },
+      {
+        "number": 179,
+        "answer": "D",
+        "content": "Why was breakfast not included in Mr. Halsey's stay?",
+        "options": [
+          "He checked in after the breakfast service had ended.",
+          "He chose a discounted room type.",
+          "The kitchen was closed for repairs.",
+          "He did not book directly with the hotel."
+        ],
+        "explanation": "Ông đặt 'through a travel site'; quản lý giải thích bữa sáng chỉ kèm khi đặt trực tiếp, giá từ 'third-party sites' không bao gồm → (D).",
+        "tags": [
+          "inference",
+          "multi-passage"
+        ]
+      },
+      {
+        "number": 180,
+        "answer": "B",
+        "content": "What does Ms. Moreau offer Mr. Halsey?",
+        "options": [
+          "A partial refund",
+          "Credit toward a future visit",
+          "A voucher for a free breakfast",
+          "An upgrade on his next stay"
+        ],
+        "explanation": "Phản hồi: 'added 2,000 points to your Seaview Rewards account, which can be used toward a future stay' → điểm dùng cho lần ở sau (B).",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 7,
+    "passage": "Job Posting\nOstrava Analytics — Data Analyst (Prague office)\nRequirements: a degree in statistics, mathematics, or a related field; at least three years of experience with data visualization tools; fluency in English. Knowledge of Czech is an advantage.\nCandidates who do not yet hold an EU work permit will be considered only for the remote version of this role, based at our partner office in Lisbon. Applications close on November 30.\n\nE-mail\nFrom: Priya Venkatesh\nTo: hr@ostrava-analytics.com\nDate: November 22\nSubject: Data Analyst application\nDear Hiring Team,\nI am writing to apply for the Data Analyst position advertised on your Web site. I hold a master's degree in applied mathematics and have spent the past four years building dashboards for a logistics firm in Toronto. Although I am a Canadian citizen and currently require sponsorship to work in the EU, I would be happy to relocate to whichever office best suits your needs. My résumé is attached.\nSincerely,\nPriya Venkatesh\n\nInterview Schedule — December 4\n9:00 A.M. — Tomas Novak — Prague\n10:30 A.M. — Priya Venkatesh — Lisbon (video call)\n1:00 P.M. — Ana Ferreira — Lisbon\n2:30 P.M. — Jan Dvorak — Prague\nPrague interviews: Eva Horakova, in person. Lisbon interviews: Rui Santos, by video.",
+    "questions": [
+      {
+        "number": 186,
+        "answer": "C",
+        "content": "What is NOT listed as a requirement for the position?",
+        "options": [
+          "A relevant university degree",
+          "Experience with certain software tools",
+          "The ability to speak Czech",
+          "Fluency in English"
+        ],
+        "explanation": "Tin tuyển dụng: tiếng Séc chỉ là 'an advantage' (lợi thế), không phải yêu cầu → (C).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 187,
+        "answer": "A",
+        "content": "What is indicated about Ms. Venkatesh?",
+        "options": [
+          "She has more experience than the job requires.",
+          "She currently lives in Lisbon.",
+          "She speaks Czech fluently, which is an advantage.",
+          "She applied after the deadline."
+        ],
+        "explanation": "Yêu cầu 'at least three years'; e-mail: 'the past four years building dashboards' → nhiều hơn yêu cầu (A). Cô nộp 22/11, trước hạn 30/11, và đang ở Toronto.",
+        "tags": [
+          "inference",
+          "multi-passage"
+        ]
+      },
+      {
+        "number": 188,
+        "answer": "C",
+        "content": "Why is Ms. Venkatesh being interviewed for the Lisbon role?",
+        "options": [
+          "She asked to work in Portugal.",
+          "The position in Prague has already been filled by someone else.",
+          "She does not yet have permission to work in the EU.",
+          "She prefers to work from home."
+        ],
+        "explanation": "Cô 'currently require[s] sponsorship to work in the EU'; tin tuyển dụng: ứng viên chưa có giấy phép lao động EU chỉ được xét cho vị trí làm từ xa ở Lisbon → (C). Cô sẵn sàng chuyển tới bất kỳ văn phòng nào.",
+        "tags": [
+          "inference",
+          "multi-passage"
+        ]
+      },
+      {
+        "number": 189,
+        "answer": "B",
+        "content": "Who will most likely conduct Ms. Venkatesh's interview?",
+        "options": [
+          "Eva Horakova",
+          "Rui Santos",
+          "Tomas Novak",
+          "Ana Ferreira"
+        ],
+        "explanation": "Lịch: buổi 10:30 của Ms. Venkatesh thuộc nhóm Lisbon; ghi chú 'Lisbon interviews: Rui Santos, by video' → (B). Tomas Novak và Ana Ferreira là ứng viên khác.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 190,
+        "answer": "B",
+        "content": "In the e-mail, the word \"suits\" in paragraph 1, line 5, is closest in meaning to",
+        "options": [
+          "dresses",
+          "meets",
+          "requests",
+          "follows"
+        ],
+        "explanation": "'whichever office best suits your needs' = văn phòng nào đáp ứng tốt nhất nhu cầu → suits = meets (B).",
+        "tags": [
+          "vocab-in-context"
+        ]
+      }
+    ]
+  }
+]

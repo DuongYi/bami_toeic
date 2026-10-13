@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+<rect width="800" height="500" fill="#ffffff"/>
+<text x="400" y="55" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#000">DEPARTURES</text>
+<g font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#000">
+<rect x="60" y="85" width="680" height="55" fill="#e6e6e6" stroke="#000" stroke-width="2"/>
+<text x="90" y="122" font-weight="bold">Flight</text><text x="290" y="122" font-weight="bold">Destination</text><text x="580" y="122" font-weight="bold">Gate</text>
+<rect x="60" y="140" width="680" height="320" fill="none" stroke="#000" stroke-width="2"/>
+<text x="90" y="190">AC 117</text><text x="290" y="190">Toronto</text><text x="580" y="190">14</text>
+<text x="90" y="255">KL 602</text><text x="290" y="255">Amsterdam</text><text x="580" y="255">16</text>
+<text x="90" y="320">UA 845</text><text x="290" y="320">Chicago</text><text x="580" y="320">21</text>
+<text x="90" y="385">KE 652</text><text x="290" y="385">Seoul</text><text x="580" y="385">22</text>
+<text x="90" y="440">QF 31</text><text x="290" y="440">Sydney</text><text x="580" y="440">25</text>
+</g>
+</svg>

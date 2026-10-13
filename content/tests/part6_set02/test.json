@@ -1,0 +1,256 @@
+{
+  "title": "Luyện Part 6 · Đề 02",
+  "source": "Bami TOEIC",
+  "description": "Luyện Part 6 mức 700–800: 4 đoạn văn (thư khách hàng, thông báo toà nhà, e-mail mời diễn giả, bài đánh giá) – suy luận thì, từ nối tương phản, từ vựng ngữ cảnh và câu chèn câu.",
+  "is_free": false,
+  "groups": [
+    {
+      "part": 6,
+      "passage": "Dear Mr. Kowalski,\n\nThank you for being a loyal subscriber to Greenleaf Monthly, the magazine for home gardeners. We are writing to let you know about a change to our subscription rates. Beginning with the September issue, the annual price ---(131)--- from $36 to $42. This is the first price change in five years. ---(132)--- Over that period, our printing and mailing costs have risen considerably. ---(133)---, we are committed to keeping the magazine affordable for our readers. As a current subscriber, you can renew at the old rate if you do so before August 31. Simply return the enclosed form or visit our Web site. Payment can be made by check or credit card. We appreciate your continued ---(134)---.\n\nSincerely,\nHelen Ashby\nCustomer Relations",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "C",
+          "options": [
+            "was increasing",
+            "increased",
+            "will increase",
+            "has increased"
+          ],
+          "explanation": "'Beginning with the September issue' và khách vẫn được gia hạn giá cũ 'before August 31' → thay đổi chưa xảy ra → (C) 'will increase'. (B), (D), (A) đều diễn tả việc đã/đang xảy ra trong quá khứ.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "D",
+          "options": [
+            "Your subscription will be canceled automatically.",
+            "Our editorial office has moved to a new building.",
+            "Many readers have sent us photos of their gardens.",
+            "We have worked hard to keep our rates the same for as long as possible."
+          ],
+          "explanation": "Câu sau mở đầu bằng 'Over that period' – vẫn phải chỉ khoảng 'five years'. (D) nói đã cố giữ giá lâu nhất có thể, nối tự nhiên giữa 'first price change in five years' và lý do chi phí tăng → (D). (A) mâu thuẫn với lời mời gia hạn; (C), (B) cắt đứt mạch giải thích giá.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "C",
+          "options": [
+            "Therefore",
+            "Similarly",
+            "Nevertheless",
+            "For instance"
+          ],
+          "explanation": "Chi phí tăng mạnh (lý do phải tăng giá) nhưng tòa soạn vẫn cam kết giữ giá phải chăng và cho gia hạn giá cũ – quan hệ nhượng bộ/tương phản → (C) 'Nevertheless'. (A) chỉ kết quả, (B) so sánh tương đồng, (D) ví dụ – đều sai quan hệ ý.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "B",
+          "options": [
+            "supported",
+            "support",
+            "supportive",
+            "supporter"
+          ],
+          "explanation": "Sau tính từ sở hữu + tính từ 'your continued' cần danh từ chỉ sự việc → (B) 'support' (sự ủng hộ). (D) 'supporter' là người, không hợp với 'appreciate your continued …'; (A), (C) không phải danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "NOTICE TO TENANTS\nMarlowe Tower — Lobby Renovation\n\nWork on the renovation of the main lobby will begin on Monday, October 6, and is expected to last three weeks. While the work is under way, the main entrance on Grant Avenue will be closed. Tenants and visitors should use the side entrance on Pine Street ---(135)---. Directional signs will be posted throughout the ground floor. ---(136)--- The building management office, which is normally located off the lobby, will move ---(137)--- to Suite 210 on the second floor. Mail and package deliveries will not be affected. We ask that you share this information with your employees and any clients who may be visiting during this period. Thank you for your patience as we work to make Marlowe Tower a more ---(138)--- place to work.",
+      "questions": [
+        {
+          "number": 135,
+          "answer": "A",
+          "options": [
+            "instead",
+            "otherwise",
+            "besides",
+            "therefore"
+          ],
+          "explanation": "Lối chính bị đóng nên mọi người dùng lối bên 'thay vào đó' – trạng từ đứng cuối câu → (A) 'instead'. (B) 'otherwise' = nếu không thì; (D) chỉ kết quả, phải đứng đầu mệnh đề; (C) 'besides' = ngoài ra, sai nghĩa.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 136,
+          "answer": "B",
+          "options": [
+            "Applications for the position are due on October 1.",
+            "The elevators will remain in service throughout the project.",
+            "The renovation was completed ahead of schedule.",
+            "Please renew your parking permit by Friday."
+          ],
+          "explanation": "Đoạn đang liệt kê những gì thay đổi/không thay đổi trong thời gian thi công (lối vào, biển chỉ dẫn, văn phòng, thư từ); (B) thang máy vẫn hoạt động là thông tin cùng loại → (B). (C) mâu thuẫn ('will begin on October 6'); (D), (A) không liên quan.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 137,
+          "answer": "D",
+          "options": [
+            "temporariness",
+            "temporaries",
+            "temporary",
+            "temporarily"
+          ],
+          "explanation": "Bổ nghĩa cho động từ 'will move' cần trạng từ → (D) 'temporarily' (chuyển tạm thời trong 3 tuần). (C) tính từ, (A), (B) danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        },
+        {
+          "number": 138,
+          "answer": "A",
+          "options": [
+            "comfortable",
+            "comfortably",
+            "comfort",
+            "comforts"
+          ],
+          "explanation": "Cấu trúc 'a more + tính từ + place' → (A) 'comfortable'. (C), (D) danh từ; (B) trạng từ không bổ nghĩa cho danh từ 'place'.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "To: Dr. Amara Okonkwo <aokonkwo@westbridge.edu>\nFrom: Peter Lindqvist <plindqvist@nfsa.org>\nDate: February 11\nSubject: Invitation to speak\n\nDear Dr. Okonkwo,\n\nOn behalf of the National Food Safety Association, I am pleased to invite you to speak at our annual conference, which will take place in Denver from May 7 to 9. Your recent research on packaging materials ---(139)--- considerable interest among our members since it was published last fall. We would be honored if you could share your findings in a 45-minute presentation. ---(140)--- In addition, the association would cover your travel and hotel expenses. ---(141)--- you accept our invitation, our events team will contact you to arrange your schedule. Kindly let me know your decision by March 1 so that we can include your session in the printed ---(142)---.\n\nBest regards,\nPeter Lindqvist\nConference Chair",
+      "questions": [
+        {
+          "number": 139,
+          "answer": "B",
+          "options": [
+            "attracts",
+            "has attracted",
+            "had attracted",
+            "will attract"
+          ],
+          "explanation": "'since it was published last fall' – sự quan tâm bắt đầu từ quá khứ kéo dài đến nay → hiện tại hoàn thành (B) 'has attracted'. (A) hiện tại đơn và (D) tương lai không đi với 'since'; (C) quá khứ hoàn thành cần một mốc quá khứ khác.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 140,
+          "answer": "C",
+          "options": [
+            "Unfortunately, all sessions are already fully booked.",
+            "Our members voted to change the conference location last year.",
+            "Speakers receive an honorarium of $1,500.",
+            "Your article was rejected by the review committee."
+          ],
+          "explanation": "Câu sau 'In addition, the association would cover your travel and hotel expenses' là quyền lợi thứ hai → câu trước phải là quyền lợi thứ nhất: (C) thù lao 1.500 đô → (C). (A), (D) mâu thuẫn với lời mời; (B) không tạo được 'in addition'.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 141,
+          "answer": "A",
+          "options": [
+            "Once",
+            "Unless",
+            "Despite",
+            "Whereas"
+          ],
+          "explanation": "'Ngay khi bạn nhận lời, nhóm sự kiện sẽ liên hệ' – liên từ thời gian + mệnh đề → (A) 'Once'. (C) là giới từ, không đi với mệnh đề; (B) 'Unless' (trừ khi) đảo ngược nghĩa; (D) 'Whereas' chỉ đối lập.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 142,
+          "answer": "B",
+          "options": [
+            "contract",
+            "program",
+            "budget",
+            "receipt"
+          ],
+          "explanation": "Thêm phiên trình bày vào 'tài liệu in sẵn' của hội nghị = chương trình hội nghị → (B) 'program'. (D) biên lai, (A) hợp đồng, (C) ngân sách không chứa danh sách các phiên.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "Workspace Review: The Hive at Calder Street\n\nFreelancers looking for an alternative to working from home should consider The Hive, a co-working space that opened on Calder Street in January. Members can choose from private offices, shared desks, and small meeting rooms that can be ---(143)--- by the hour. The building is open from 7:00 A.M. to 10:00 P.M. on weekdays and offers free bicycle parking. The space is bright and quiet, and the Internet connection is ---(144)--- fast. ---(145)--- On my last visit, the coffee machine was out of order, and the staff did not seem to know when it would be repaired. Still, at $180 a month for a shared desk, The Hive is one of the most ---(146)--- options in the downtown area.",
+      "questions": [
+        {
+          "number": 143,
+          "answer": "A",
+          "options": [
+            "reserved",
+            "deserved",
+            "observed",
+            "preserved"
+          ],
+          "explanation": "Phòng họp nhỏ có thể 'được đặt theo giờ' → (A) 'reserved'. (B) xứng đáng, (D) bảo tồn, (C) quan sát – không đi với 'by the hour'.",
+          "tags": [
+            "vocabulary"
+          ]
+        },
+        {
+          "number": 144,
+          "answer": "C",
+          "options": [
+            "remarked",
+            "remark",
+            "remarkably",
+            "remarkable"
+          ],
+          "explanation": "Bổ nghĩa cho tính từ 'fast' cần trạng từ → (C) 'remarkably' (nhanh đáng kể). (D) tính từ, (B) danh từ/động từ, (A) phân từ.",
+          "tags": [
+            "word-form"
+          ]
+        },
+        {
+          "number": 145,
+          "answer": "D",
+          "options": [
+            "The building also houses a popular bakery.",
+            "As a result, membership fees have doubled since January.",
+            "In fact, it is the largest co-working space in the country.",
+            "However, the kitchen area could use some improvements."
+          ],
+          "explanation": "Trước đó toàn lời khen; câu sau kể máy pha cà phê hỏng – cần câu chuyển sang nhược điểm và nhắc khu bếp → (D) 'However, the kitchen area could use some improvements'. (B) không có nguyên nhân; (C) không dẫn tới lời phàn nàn; (A) không nối với chuyện máy cà phê.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 146,
+          "answer": "D",
+          "options": [
+            "affordably",
+            "afford",
+            "affordability",
+            "affordable"
+          ],
+          "explanation": "'one of the most + tính từ + danh từ số nhiều' → (D) 'affordable' (giá phải chăng), khớp với chi tiết '$180 a month'. (B) động từ, (A) trạng từ, (C) danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    }
+  ]
+}

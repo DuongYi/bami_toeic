@@ -1,0 +1,264 @@
+[
+  {
+    "part": 3,
+    "audio": "p3_q32-34.m4a",
+    "transcript": "W: Hi, I bought this coffee maker here last week, but it stopped heating the water after two days.\nM: I'm sorry to hear that. Do you have your receipt with you?\nW: Yes, here it is. I'd like to exchange it for the same model if possible.\nM: Let me check our stock. Hmm, it looks like we're sold out of that model at the moment.\nW: That's disappointing. I really liked the size of it.\nM: We're expecting a delivery on Thursday. I can put one aside for you and call you when it arrives.\nW: That works. My number is on the receipt.",
+    "questions": [
+      {
+        "number": 32,
+        "answer": "A",
+        "content": "Where most likely are the speakers?",
+        "options": [
+          "At an appliance store",
+          "At a coffee shop",
+          "At a repair center",
+          "At a shipping office"
+        ],
+        "explanation": "Người phụ nữ nói 'I bought this coffee maker here last week' và người đàn ông kiểm tra kho hàng → họ ở cửa hàng đồ gia dụng (A). (B) bẫy từ 'coffee', (C) không ai nhắc sửa chữa.",
+        "tags": [
+          "speaker-identity"
+        ]
+      },
+      {
+        "number": 33,
+        "answer": "B",
+        "content": "What problem does the man mention?",
+        "options": [
+          "A receipt is missing.",
+          "An item is out of stock.",
+          "A delivery was damaged.",
+          "A price is incorrect."
+        ],
+        "explanation": "Người đàn ông nói 'we're sold out of that model at the moment' → hết hàng (B). (A) sai vì người phụ nữ có hóa đơn, (C), (D) không được nhắc.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 34,
+        "answer": "C",
+        "content": "What does the man offer to do?",
+        "options": [
+          "Give the woman a refund",
+          "Repair the product",
+          "Reserve an item for the woman",
+          "Recommend a different model"
+        ],
+        "explanation": "'I can put one aside for you and call you when it arrives' = giữ lại một chiếc cho cô ấy (C). (A), (B), (D) không được đề nghị.",
+        "tags": [
+          "request-suggestion"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "audio": "p3_q35-37.m4a",
+    "transcript": "M: Good evening. Welcome to the Harbor View Hotel. Checking in?\nW: Yes, the reservation is under Sato. I booked a double room for two nights.\nM: Thank you, Ms. Sato. I see your reservation here. Unfortunately, the room isn't quite ready yet. Housekeeping is finishing it now.\nW: Oh, I was hoping to change for a dinner meeting at seven.\nM: It should be ready in about twenty minutes. In the meantime, you're welcome to wait in our lounge. Coffee and tea are complimentary.\nW: All right. Could you also send my suitcase up when the room is ready?\nM: Of course. I'll have it taken up right away.",
+    "questions": [
+      {
+        "number": 35,
+        "answer": "C",
+        "content": "Why is the woman unable to go to her room?",
+        "options": [
+          "She arrived on the wrong date.",
+          "Her reservation cannot be found.",
+          "The room is still being cleaned.",
+          "Her key card does not work."
+        ],
+        "explanation": "Lễ tân nói 'the room isn't quite ready yet. Housekeeping is finishing it now' → phòng đang được dọn (C). (B) sai vì đã tìm thấy đặt phòng, (A), (D) không nhắc.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 36,
+        "answer": "A",
+        "content": "What does the woman say she will do at seven o'clock?",
+        "options": [
+          "Attend a dinner meeting",
+          "Take a flight",
+          "Check out of the hotel",
+          "Meet a friend in the lounge"
+        ],
+        "explanation": "'I was hoping to change for a dinner meeting at seven' → tham dự bữa tối công việc (A). (D) bẫy từ 'lounge' (chỗ chờ phòng).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 37,
+        "answer": "A",
+        "content": "What does the man say the woman can do while she waits?",
+        "options": [
+          "Have a free drink",
+          "Use the business center",
+          "Store her luggage in a locker",
+          "Book a table at a restaurant"
+        ],
+        "explanation": "'you're welcome to wait in our lounge. Coffee and tea are complimentary' → được uống miễn phí (A). (C) sai vì hành lý sẽ được mang lên phòng, (B), (D) không nhắc.",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "audio": "p3_q38-40.m4a",
+    "transcript": "M1: Thanks for meeting with us, Ms. Rivera. I'm Daniel, and this is my colleague Pavel from the travel desk.\nW: Nice to meet you both. You said you need help planning a company trip?\nM2: That's right. We're taking forty employees to the regional sales conference in Lisbon next month.\nM1: We'd like one agency to handle the flights, the hotel, and transportation from the airport.\nW: We can certainly do that. Have you set a budget yet?\nM2: Not exactly. Our director wants to see a few options first.\nW: Then I'll prepare three packages at different price levels. I can send them to you by Friday.",
+    "questions": [
+      {
+        "number": 38,
+        "answer": "B",
+        "content": "Who most likely is the woman?",
+        "options": [
+          "A conference organizer",
+          "A travel agent",
+          "A hotel manager",
+          "A sales director"
+        ],
+        "explanation": "Hai người đàn ông nhờ cô ấy lo vé máy bay, khách sạn và đưa đón cho chuyến đi ('one agency to handle the flights, the hotel…') → nhân viên đại lý du lịch (B). (A), (D) bẫy từ 'conference', 'director'.",
+        "tags": [
+          "speaker-identity"
+        ]
+      },
+      {
+        "number": 39,
+        "answer": "C",
+        "content": "What are the men planning?",
+        "options": [
+          "A product launch",
+          "An office relocation",
+          "A trip for employees",
+          "A training workshop"
+        ],
+        "explanation": "'We're taking forty employees to the regional sales conference in Lisbon' → chuyến đi cho nhân viên (C). (A), (B), (D) không được nhắc.",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 40,
+        "answer": "D",
+        "content": "What does the woman say she will do by Friday?",
+        "options": [
+          "Visit the men's office",
+          "Confirm a hotel reservation",
+          "Contact a director",
+          "Send several options"
+        ],
+        "explanation": "'I'll prepare three packages at different price levels. I can send them to you by Friday' → gửi vài lựa chọn (D). (B) chưa đặt gì, (C) bẫy từ 'director'.",
+        "tags": [
+          "next-action"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "audio": "p3_q41-43.m4a",
+    "transcript": "W: Hi, Marco. Did you see the new customer comment cards from the weekend?\nM: I did. Most of them were positive, but several people said they waited too long to be seated.\nW: Saturday nights are always busy. We had only two hosts at the front.\nM: Maybe we should start taking reservations through our Web site. Customers could choose a time in advance.\nW: The owner has talked about that before. It's not a bad idea.\nM: Great. I'll look into some online booking services and compare their prices.\nW: Good. Let's discuss it at Monday's staff meeting.",
+    "questions": [
+      {
+        "number": 41,
+        "answer": "B",
+        "content": "What did some customers complain about?",
+        "options": [
+          "High prices",
+          "Long wait times",
+          "Small portions",
+          "Rude servers"
+        ],
+        "explanation": "'several people said they waited too long to be seated' → chờ lâu (B). (A), (C), (D) không được nhắc.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 42,
+        "answer": "A",
+        "content": "What does the woman mean when she says, \"It's not a bad idea\"?",
+        "options": [
+          "She thinks the man's suggestion is worth trying.",
+          "She prefers a different solution.",
+          "She believes the owner will disagree.",
+          "She wants to hire more hosts."
+        ],
+        "explanation": "Người đàn ông đề xuất nhận đặt bàn qua website; cô ấy nói 'It's not a bad idea' và sau đó đồng ý bàn tiếp → cô ấy thấy đề xuất đáng thử (A). (C) trái ý vì chủ quán từng nhắc tới việc này.",
+        "tags": [
+          "implied-meaning"
+        ]
+      },
+      {
+        "number": 43,
+        "answer": "C",
+        "content": "What will the man do next?",
+        "options": [
+          "Call the restaurant owner",
+          "Update the menu",
+          "Research online booking services",
+          "Schedule extra staff"
+        ],
+        "explanation": "'I'll look into some online booking services and compare their prices' → tìm hiểu dịch vụ đặt bàn trực tuyến (C). (A) không nói sẽ gọi, (D) bẫy từ 'staff meeting'.",
+        "tags": [
+          "next-action"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "audio": "p3_q44-46.m4a",
+    "image": "p3_q44-46_graphic.png",
+    "transcript": "M: Excuse me, I'm flying to Singapore, but I think I missed the announcement. Has my gate changed?\nW: Let me check. Your flight number is SG 208?\nM: Yes, that's right. It was supposed to leave from Gate 14.\nW: It's been moved. It's now leaving from the same gate as the Chicago flight, which departed an hour ago.\nM: Oh, I see. Is it far from here?\nW: About a ten-minute walk. If you'd prefer, you can take the electric cart at the end of this hallway.\nM: Thanks. I'll take the cart. I'm carrying a heavy bag.",
+    "questions": [
+      {
+        "number": 44,
+        "answer": "B",
+        "content": "What is the man concerned about?",
+        "options": [
+          "He lost his boarding pass.",
+          "He may have missed some information.",
+          "His flight has been canceled.",
+          "His luggage is too heavy to check in."
+        ],
+        "explanation": "'I think I missed the announcement. Has my gate changed?' → lo đã bỏ lỡ thông tin (B). (C) sai vì chuyến bay chỉ đổi cổng, (D) bẫy từ 'heavy bag'.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 45,
+        "answer": "C",
+        "content": "Look at the graphic. Which gate will the man go to?",
+        "options": [
+          "Gate 14",
+          "Gate 16",
+          "Gate 21",
+          "Gate 22"
+        ],
+        "explanation": "Chuyến bay của anh ấy dời sang 'the same gate as the Chicago flight'; theo bảng, chuyến đi Chicago dùng Gate 21 → (C). (A) là cổng cũ, (D) là cổng của chuyến đi Seoul.",
+        "tags": [
+          "graphic",
+          "detail"
+        ]
+      },
+      {
+        "number": 46,
+        "answer": "A",
+        "content": "What does the man decide to do?",
+        "options": [
+          "Take an electric cart",
+          "Walk to the gate",
+          "Change his flight",
+          "Buy a new bag"
+        ],
+        "explanation": "'I'll take the cart. I'm carrying a heavy bag' → đi xe điện (A). (B) là phương án anh ấy không chọn.",
+        "tags": [
+          "next-action"
+        ]
+      }
+    ]
+  }
+]

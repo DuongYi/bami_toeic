@@ -1,0 +1,212 @@
+[
+  {
+    "part": 4,
+    "audio": "p4_q71-73.m4a",
+    "transcript": "Hello, Ms. Brennan, this is Victor from Ashford Builders calling about the kitchen remodel at your home on Pine Avenue. I'm afraid the countertops you picked out won't arrive until the twentieth, which is about a week later than we'd planned. The supplier had a problem at its factory. Now, our crew could start installing the cabinets and the flooring in the meantime, so the overall project would only be delayed by two or three days. If that works for you, there's nothing you need to do. But if you'd prefer to choose a different countertop that's in stock, I can bring some samples by on Thursday. Just give me a call back at 555-0142.",
+    "questions": [
+      {
+        "number": 71,
+        "answer": "A",
+        "content": "Who most likely is the speaker?",
+        "options": [
+          "A contractor",
+          "A factory manager",
+          "A real estate agent",
+          "A furniture salesperson"
+        ],
+        "explanation": "Người nói gọi từ 'Ashford Builders' về việc cải tạo bếp nhà khách, nhắc đội thợ lắp tủ và sàn → nhà thầu → (A). 'factory' là của nhà cung cấp (B).",
+        "tags": [
+          "speaker-identity"
+        ]
+      },
+      {
+        "number": 72,
+        "answer": "A",
+        "content": "What problem does the speaker mention?",
+        "options": [
+          "Some materials will arrive late",
+          "A crew member is not available",
+          "The cost of a project has increased",
+          "Some cabinets were damaged"
+        ],
+        "explanation": "'the countertops you picked out won't arrive until the twentieth, which is about a week later than we'd planned' → vật liệu về trễ → (A). Tủ bếp vẫn lắp được, không hỏng (D).",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 73,
+        "answer": "A",
+        "content": "Why would the listener return the call?",
+        "options": [
+          "To consider alternatives to a product",
+          "To approve an additional charge for labor",
+          "To confirm when work will start",
+          "To cancel the remodel"
+        ],
+        "explanation": "Chỉ cần gọi lại nếu muốn 'choose a different countertop that's in stock' → xem lựa chọn khác → (A). Nếu đồng ý kế hoạch thì 'there's nothing you need to do'.",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 4,
+    "audio": "p4_q74-76.m4a",
+    "transcript": "Good morning, everyone, and welcome to the third day of the Pacific Logistics Expo. Before today's sessions begin, I have a couple of updates. First, the panel discussion on warehouse automation, originally scheduled for Hall C, has been moved to the main auditorium. We received far more registrations than we expected. Second, the shuttle buses to the downtown hotels will leave from the east entrance this evening, not the north entrance, because of road construction. Finally, don't forget to stop by the registration desk to pick up your attendance certificate before you leave. Certificates won't be mailed out afterward. And as always, free coffee is available in the main lobby all morning.",
+    "questions": [
+      {
+        "number": 74,
+        "answer": "A",
+        "content": "Where is the announcement being made?",
+        "options": [
+          "At a trade exhibition",
+          "At a hotel lobby",
+          "At a distribution warehouse",
+          "At a bus terminal"
+        ],
+        "explanation": "'welcome to the third day of the Pacific Logistics Expo' → hội chợ / triển lãm ngành → (A). 'hotels', 'warehouse', 'shuttle buses' chỉ là từ được nhắc.",
+        "tags": [
+          "speaker-identity"
+        ]
+      },
+      {
+        "number": 75,
+        "answer": "A",
+        "content": "Why has a session been moved?",
+        "options": [
+          "It is more popular than expected",
+          "Hall C is being repaired",
+          "A presenter arrived late",
+          "Some audio equipment stopped working"
+        ],
+        "explanation": "'We received far more registrations than we expected' → đông hơn dự kiến → (A). Công trình đường là lý do đổi chỗ đón xe buýt, không phải đổi phòng (B).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 76,
+        "answer": "A",
+        "content": "What does the speaker remind listeners to do?",
+        "options": [
+          "Collect a document before departing",
+          "Sign up for tomorrow's sessions",
+          "Wait for the bus at the north entrance",
+          "Mail a form after the event"
+        ],
+        "explanation": "'pick up your attendance certificate before you leave. Certificates won't be mailed out' → lấy giấy chứng nhận trước khi về → (A). Xe đón ở cổng phía đông, không phải phía bắc (C).",
+        "tags": [
+          "request-suggestion"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 4,
+    "audio": "p4_q77-79.m4a",
+    "transcript": "Thanks for staying a few minutes after your shift. As you know, starting next month, our clinic will open on Saturday mornings. Several of you have already signed up to work those hours, and I really appreciate it. We still need one more receptionist, though. Now, I know weekends aren't ideal for everyone. Anyone who works a Saturday will get the following Monday off. Also, we're switching to a new online booking system on the first. Patients will be able to schedule and cancel appointments themselves, which should cut down on phone calls. The software company is running a training session for us on Wednesday. It's only an hour.",
+    "questions": [
+      {
+        "number": 77,
+        "answer": "A",
+        "content": "What will change next month?",
+        "options": [
+          "The clinic will be open on an additional day",
+          "The clinic will hire more doctors",
+          "The clinic will raise its fees",
+          "The clinic will move to a new building downtown"
+        ],
+        "explanation": "'starting next month, our clinic will open on Saturday mornings' → mở thêm ngày thứ Bảy → (A). Chỉ thiếu thêm một lễ tân, không phải bác sĩ (B).",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 78,
+        "answer": "A",
+        "content": "Why does the speaker say, \"Anyone who works a Saturday will get the following Monday off\"?",
+        "options": [
+          "To encourage staff to volunteer for a shift",
+          "To announce a public holiday",
+          "To explain a new appointment policy for patients",
+          "To correct an error in a schedule"
+        ],
+        "explanation": "Ngay trước đó người nói cần thêm 1 lễ tân và thừa nhận cuối tuần không tiện → nêu quyền lợi nghỉ thứ Hai để khuyến khích nhận ca → (A).",
+        "tags": [
+          "implied-meaning"
+        ]
+      },
+      {
+        "number": 79,
+        "answer": "A",
+        "content": "What does the speaker imply about the training session?",
+        "options": [
+          "It will not take long",
+          "It is not mandatory",
+          "It has been postponed",
+          "It will take place online"
+        ],
+        "explanation": "'It's only an hour.' → buổi đào tạo ngắn → (A). Không có thông tin về việc tự nguyện (B), dời lịch (C) hay học trực tuyến (D).",
+        "tags": [
+          "inference"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 4,
+    "audio": "p4_q80-82.m4a",
+    "transcript": "Good morning, and welcome to the Dalton Industries regional managers' training day. You should each have a copy of today's room assignments. We'll begin with the safety briefing in about fifteen minutes. Please note one change, though. The projector in the room listed for the budget workshop isn't working, so that session and the safety briefing will switch rooms. Lunch will be served in the cafeteria on the ground floor at twelve thirty. And if you drove here today, please give your license plate number to the front desk so that you don't receive a parking ticket. Visitor permits are only valid until five.",
+    "image": "p4_q80-82_graphic.png",
+    "questions": [
+      {
+        "number": 80,
+        "answer": "A",
+        "content": "Look at the graphic. In which room will the safety briefing be held?",
+        "options": [
+          "Room 210",
+          "Room 104",
+          "Room 215",
+          "Room 120"
+        ],
+        "explanation": "Buổi an toàn đổi phòng với hội thảo ngân sách; theo bảng, hội thảo ngân sách ở Room 210 → buổi an toàn sang Room 210 → (A). Room 104 là phòng cũ của buổi an toàn (B).",
+        "tags": [
+          "graphic",
+          "detail"
+        ]
+      },
+      {
+        "number": 81,
+        "answer": "A",
+        "content": "What does the speaker say about lunch?",
+        "options": [
+          "It will be served on the ground floor",
+          "It will be provided by an outside caterer",
+          "It will begin at noon",
+          "It requires a meal ticket"
+        ],
+        "explanation": "'Lunch will be served in the cafeteria on the ground floor at twelve thirty' → (A). Giờ ăn là 12:30 chứ không phải 12:00 (C).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 82,
+        "answer": "A",
+        "content": "What are drivers asked to do?",
+        "options": [
+          "Provide vehicle information",
+          "Park in a nearby garage",
+          "Leave the building before five",
+          "Purchase a parking permit"
+        ],
+        "explanation": "'please give your license plate number to the front desk' → khai biển số xe ở quầy → (A). 'until five' là hạn của giấy phép, không yêu cầu rời đi (C).",
+        "tags": [
+          "request-suggestion"
+        ]
+      }
+    ]
+  }
+]

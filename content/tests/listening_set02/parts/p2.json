@@ -1,0 +1,227 @@
+[
+  {
+    "part": 2,
+    "audio": "p2_q7.m4a",
+    "transcript": "Where should I submit my reimbursement forms?\n(A) To Ms. Chen in accounting.\n(B) About two hundred dollars.\n(C) Yes, I formed a new team.",
+    "questions": [
+      {
+        "number": 7,
+        "answer": "A",
+        "explanation": "Hỏi 'Where' (nộp ở đâu) → trả lời nơi/người nhận 'To Ms. Chen in accounting' (A). (B) nói số tiền, (C) trả lời Yes cho câu Wh- và lặp âm 'form'.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q8.m4a",
+    "transcript": "When is the new payroll system going live?\n(A) It's been pushed back to April.\n(B) In the payroll office.\n(C) A live demonstration.",
+    "questions": [
+      {
+        "number": 8,
+        "answer": "A",
+        "explanation": "Hỏi 'When' → đáp gián tiếp: hệ thống bị lùi sang tháng Tư 'pushed back to April' (A). (B) trả lời nơi chốn, (C) lặp từ 'live'.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q9.m4a",
+    "transcript": "Who's interviewing the candidates for the analyst position?\n(A) The position was posted online.\n(B) Mr. Patel and two managers from finance.\n(C) Yes, at ten o'clock.",
+    "questions": [
+      {
+        "number": 9,
+        "answer": "B",
+        "explanation": "Hỏi 'Who' (ai phỏng vấn) → 'Mr. Patel and two managers from finance' (B). (A) lặp từ 'position', (C) trả lời Yes cho câu Wh-.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q10.m4a",
+    "transcript": "Why is the printer on the third floor out of service?\n(A) Three copies, please.\n(B) Its paper tray is broken.\n(C) On the second floor.",
+    "questions": [
+      {
+        "number": 10,
+        "answer": "B",
+        "explanation": "Hỏi 'Why' (vì sao máy in hỏng) → nêu lý do 'Its paper tray is broken' (B). (A) gần âm 'three/third', (C) trả lời nơi chốn.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q11.m4a",
+    "transcript": "How long will the software update take?\n(A) About twenty minutes.\n(B) I'd rather take the train.\n(C) Yes, it's up to date.",
+    "questions": [
+      {
+        "number": 11,
+        "answer": "A",
+        "explanation": "Hỏi 'How long' (bao lâu) → khoảng thời gian 'About twenty minutes' (A). (B) lặp từ 'take', (C) trả lời Yes và lặp âm 'update/up to date'.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q12.m4a",
+    "transcript": "Which spreadsheet has the updated budget figures?\n(A) Sure, I'll update it.\n(B) The one Kevin sent this morning.\n(C) The budget meeting is on Friday.",
+    "questions": [
+      {
+        "number": 12,
+        "answer": "B",
+        "explanation": "Hỏi 'Which' (bảng tính nào) → 'The one Kevin sent this morning' (B). (A) lặp 'update' và không trả lời câu hỏi, (C) lặp 'budget' nhưng nói về cuộc họp.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q13.m4a",
+    "transcript": "Have you finished reviewing the job applications?\n(A) An application form.\n(B) She finished first.\n(C) I still have about ten left.",
+    "questions": [
+      {
+        "number": 13,
+        "answer": "C",
+        "explanation": "Câu Yes/No hỏi đã xem xong hồ sơ chưa → đáp gián tiếp 'chưa, còn khoảng mười bộ' (C). (A) lặp 'application', (B) lặp 'finished' nhưng sai chủ ngữ.",
+        "tags": [
+          "yes-no"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q14.m4a",
+    "transcript": "Isn't the IT department moving to the new building?\n(A) Only the help desk staff.\n(B) The building manager.\n(C) Move it to the left.",
+    "questions": [
+      {
+        "number": 14,
+        "answer": "A",
+        "explanation": "Câu hỏi phủ định → đáp gián tiếp: chỉ nhân viên help desk chuyển đi (A). (B) lặp 'building', (C) lặp 'move'.",
+        "tags": [
+          "yes-no"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q15.m4a",
+    "transcript": "Do you know if the quarterly report has been approved?\n(A) Every three months.\n(B) The director is still reviewing it.\n(C) I approve of the new design.",
+    "questions": [
+      {
+        "number": 15,
+        "answer": "B",
+        "explanation": "Hỏi báo cáo quý đã được duyệt chưa → 'giám đốc vẫn đang xem' tức là chưa (B). (A) liên tưởng 'quarterly', (C) lặp 'approve'.",
+        "tags": [
+          "yes-no"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q16.m4a",
+    "transcript": "You've met our new accounting manager, haven't you?\n(A) Our account number is on the invoice.\n(B) No, but I'm having lunch with her tomorrow.\n(C) Yes, the meeting was moved.",
+    "questions": [
+      {
+        "number": 16,
+        "answer": "B",
+        "explanation": "Câu hỏi đuôi hỏi đã gặp quản lý kế toán mới chưa → 'chưa, nhưng mai tôi ăn trưa với cô ấy' (B). (A) gần âm 'accounting/account', (C) gần âm 'met/meeting'.",
+        "tags": [
+          "tag-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q17.m4a",
+    "transcript": "Should we hold the training session online or in the conference room?\n(A) Yes, the session was useful.\n(B) It holds about forty people.\n(C) Several employees are working from home that week.",
+    "questions": [
+      {
+        "number": 17,
+        "answer": "C",
+        "explanation": "Câu hỏi lựa chọn (trực tuyến hay phòng họp) → đáp gián tiếp: nhiều người làm ở nhà tuần đó, nên tổ chức trực tuyến (C). (A) trả lời Yes cho câu lựa chọn, (B) lặp 'hold'.",
+        "tags": [
+          "choice"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q18.m4a",
+    "transcript": "Would you like the report printed or sent by e-mail?\n(A) An electronic copy is fine.\n(B) I reported it yesterday.\n(C) Yes, I'd like that.",
+    "questions": [
+      {
+        "number": 18,
+        "answer": "A",
+        "explanation": "Câu hỏi lựa chọn (in hay gửi e-mail) → 'bản điện tử là được' = gửi e-mail (A). (B) gần âm 'report', (C) trả lời Yes cho câu lựa chọn.",
+        "tags": [
+          "choice"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q19.m4a",
+    "transcript": "Could you help me set up the projector before the presentation?\n(A) It was a good presentation.\n(B) Sure, I'll be there in five minutes.\n(C) He's setting the table.",
+    "questions": [
+      {
+        "number": 19,
+        "answer": "B",
+        "explanation": "Lời nhờ giúp lắp máy chiếu → đồng ý 'Sure, I'll be there in five minutes' (B). (A) lặp 'presentation' nhưng sai thì, (C) gần âm 'set up/setting'.",
+        "tags": [
+          "request"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q20.m4a",
+    "transcript": "Why don't we ask Ms. Garcia to lead the budget review?\n(A) Because the budget was approved.\n(B) The review was positive.\n(C) She's on vacation until next week.",
+    "questions": [
+      {
+        "number": 20,
+        "answer": "C",
+        "explanation": "'Why don't we…' là lời đề nghị, không hỏi lý do → đáp gián tiếp: cô ấy nghỉ phép đến tuần sau (C). (A) bẫy trả lời 'Because', (B) lặp 'review'.",
+        "tags": [
+          "request"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q21.m4a",
+    "transcript": "The new laptops for the sales team arrived this morning.\n(A) Great, I'll start setting them up.\n(B) The sales figures are higher.\n(C) No, I'll arrive tomorrow.",
+    "questions": [
+      {
+        "number": 21,
+        "answer": "A",
+        "explanation": "Câu trần thuật báo laptop mới đã đến → phản hồi hợp lý 'tôi sẽ bắt đầu cài đặt' (A). (B) lặp 'sales', (C) lặp 'arrive'.",
+        "tags": [
+          "statement"
+        ]
+      }
+    ]
+  }
+]

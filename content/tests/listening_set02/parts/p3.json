@@ -1,0 +1,264 @@
+[
+  {
+    "part": 3,
+    "audio": "p3_q32-34.m4a",
+    "transcript": "W: Hi, Daniel. It's Rachel from human resources. I'm calling about the receptionist position you asked us to fill.\nM: Thanks, Rachel. Have you found anyone yet? Our current receptionist leaves at the end of the month.\nW: We've narrowed it down to two candidates. Both have strong customer service experience, but one of them also speaks Japanese.\nM: That would be really helpful. We get a lot of calls from our Tokyo office.\nW: I thought so. Would you be available to interview her on Thursday afternoon?\nM: I have a client meeting until three, but I'm free after that.\nW: Great. I'll schedule the interview for three thirty and send you her résumé right away.",
+    "questions": [
+      {
+        "number": 32,
+        "answer": "A",
+        "content": "Where does the woman most likely work?",
+        "options": [
+          "In a human resources department",
+          "At a language school",
+          "At a travel agency",
+          "In a customer service call center"
+        ],
+        "explanation": "Người phụ nữ tự giới thiệu 'It's Rachel from human resources' → (A). Các nơi khác chỉ là từ liên tưởng (tiếng Nhật, dịch vụ khách hàng).",
+        "tags": [
+          "speaker-identity"
+        ]
+      },
+      {
+        "number": 33,
+        "answer": "B",
+        "content": "What does the man say about his company?",
+        "options": [
+          "It is opening a branch in Tokyo.",
+          "Another office calls it often.",
+          "It recently hired a receptionist.",
+          "It is moving at the end of the month."
+        ],
+        "explanation": "Người đàn ông nói 'We get a lot of calls from our Tokyo office' → thường nhận cuộc gọi từ văn phòng khác (B). Công ty không mở chi nhánh (A); lễ tân hiện tại sắp nghỉ chứ không phải mới tuyển (C).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 34,
+        "answer": "C",
+        "content": "What will the woman do next?",
+        "options": [
+          "Contact a candidate's references",
+          "Reserve a meeting room",
+          "Send the man a document",
+          "Post a job advertisement"
+        ],
+        "explanation": "Cuối hội thoại: 'send you her résumé right away' → gửi tài liệu (hồ sơ) cho người đàn ông (C).",
+        "tags": [
+          "next-action"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "audio": "p3_q35-37.m4a",
+    "transcript": "M: Linda, do you have a minute? I'm going over the invoice from Brightline Office Supplies, and the total seems high.\nW: Let me see. They charged us for fifty boxes of printer paper, but we only ordered thirty.\nM: That's what I thought. Should I call them, or would you like to handle it?\nW: Honestly, I'm buried in the quarterly tax filings this week.\nM: No problem, I'll take care of it. Do you know who our contact there is?\nW: Yes, it's Mark Fischer. His number is in the vendor database. Ask him to send a corrected invoice before we process the payment.",
+    "questions": [
+      {
+        "number": 35,
+        "answer": "B",
+        "content": "What problem does the man mention?",
+        "options": [
+          "A shipment arrived late.",
+          "An invoice is wrong.",
+          "A product is out of stock.",
+          "A payment was declined."
+        ],
+        "explanation": "Người đàn ông nói hoá đơn 'the total seems high', người phụ nữ xác nhận bị tính 50 hộp thay vì 30 → tổng tiền hoá đơn sai (B).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 36,
+        "answer": "B",
+        "content": "What does the woman mean when she says, \"I'm buried in the quarterly tax filings this week\"?",
+        "options": [
+          "She would like help with the tax filings.",
+          "She is too busy to deal with the problem.",
+          "She disagrees with the man's calculation.",
+          "She will finish the filings by today."
+        ],
+        "explanation": "Người đàn ông hỏi ai sẽ gọi nhà cung cấp; cô ấy nói đang ngập trong hồ sơ thuế → hàm ý quá bận, không xử lý được (B). Ngay sau đó anh ấy nhận 'I'll take care of it'.",
+        "tags": [
+          "implied-meaning"
+        ]
+      },
+      {
+        "number": 37,
+        "answer": "A",
+        "content": "What does the woman ask the man to do?",
+        "options": [
+          "Request a revised invoice",
+          "Cancel the order",
+          "Update the vendor database",
+          "Pay the remaining balance"
+        ],
+        "explanation": "'Ask him to send a corrected invoice before we process the payment' → yêu cầu hoá đơn đã sửa (A). Cô ấy dặn chưa thanh toán nên (D) sai.",
+        "tags": [
+          "request-suggestion"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "audio": "p3_q38-40.m4a",
+    "transcript": "W1: Thanks for coming, everyone. As you know, we're switching to the new project management software on Monday.\nM: I tried the test version last week. It's much faster than our current system, but some of the menus are confusing.\nW2: That's why I've arranged two training sessions with the vendor. One is tomorrow at ten, and the other is on Friday at two.\nW1: Great. Paul, could you make sure everyone on your team signs up for one of them?\nM: Sure. I'll send out a reminder this afternoon.\nW2: And if anyone can't attend, the vendor will also post a recording of the session on the company intranet.",
+    "questions": [
+      {
+        "number": 38,
+        "answer": "A",
+        "content": "What are the speakers mainly discussing?",
+        "options": [
+          "A change in company software",
+          "A client project deadline",
+          "A decision about hiring new staff",
+          "An office renovation"
+        ],
+        "explanation": "Mở đầu: 'we're switching to the new project management software on Monday' → thay đổi phần mềm công ty (A).",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 39,
+        "answer": "B",
+        "content": "What does the man say about the test version?",
+        "options": [
+          "It was difficult to install.",
+          "Some menus are unclear.",
+          "It costs more than expected.",
+          "It has fewer features."
+        ],
+        "explanation": "'some of the menus are confusing' → một số phần khó hiểu (B). Anh ấy còn khen nó nhanh hơn, không nhắc cài đặt hay giá.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 40,
+        "answer": "C",
+        "content": "According to the second woman, what will be available on the intranet?",
+        "options": [
+          "A user manual",
+          "A sign-up sheet",
+          "A session recording",
+          "An updated project schedule"
+        ],
+        "explanation": "Người phụ nữ thứ hai: 'the vendor will also post a recording of the session on the company intranet' → bản ghi buổi đào tạo (C).",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "audio": "p3_q41-43.m4a",
+    "transcript": "M: Hello, Ms. Okafor. This is Sam Lee from Westbrook Consulting. I'm calling about our meeting next Tuesday to review your company's budget plan.\nW: Hi, Sam. Is there a problem?\nM: I'm afraid my flight back from Singapore has been delayed, so I won't be in the office until Wednesday. Could we move the meeting to Thursday morning?\nW: Thursday morning works for me. But my finance director wants to join, and he's only free after eleven.\nM: Then how about eleven thirty? I could bring lunch for everyone.\nW: That sounds perfect. I'll reserve the large conference room on the fifth floor.",
+    "questions": [
+      {
+        "number": 41,
+        "answer": "A",
+        "content": "Why is the man calling?",
+        "options": [
+          "To reschedule a meeting",
+          "To confirm a flight",
+          "To request a budget increase",
+          "To introduce a new consultant"
+        ],
+        "explanation": "Anh ấy gọi về cuộc họp thứ Ba và hỏi 'Could we move the meeting to Thursday morning?' → dời lịch họp (A).",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 42,
+        "answer": "B",
+        "content": "Why is the man unable to meet on Tuesday?",
+        "options": [
+          "He has a conflicting appointment.",
+          "His return trip has been delayed.",
+          "He has not finished a report.",
+          "His office is closed."
+        ],
+        "explanation": "'my flight back from Singapore has been delayed' → chuyến về bị hoãn (B), diễn đạt lại 'flight back' thành 'return trip'.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 43,
+        "answer": "C",
+        "content": "What does the man offer to do?",
+        "options": [
+          "Send a revised budget",
+          "Book a conference room",
+          "Provide a meal",
+          "Pick up the finance director"
+        ],
+        "explanation": "'I could bring lunch for everyone' → cung cấp bữa ăn (C). Đặt phòng họp là việc người phụ nữ làm (B).",
+        "tags": [
+          "request-suggestion"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "audio": "p3_q44-46.m4a",
+    "image": "p3_q44-46_graphic.png",
+    "transcript": "W: Excuse me, I'm starting in the accounting department today, and I'm here for the orientation. Am I in the right place?\nM: Yes, welcome! The overview session in this room is about to begin. Did you get a copy of the schedule?\nW: I did, thanks. But I have a question. I was told to bring my bank details for the payroll session, and I left them at home.\nM: That's fine. You can submit that information online by the end of the week.\nW: Oh, good. And will the IT session cover how to access the accounting software?\nM: Not exactly. They'll set up your e-mail and network account. Your supervisor will give you access to the accounting software later.",
+    "questions": [
+      {
+        "number": 44,
+        "answer": "A",
+        "content": "Who most likely is the woman?",
+        "options": [
+          "A new employee",
+          "A software trainer",
+          "A bank representative",
+          "A safety inspector"
+        ],
+        "explanation": "'I'm starting in the accounting department today, and I'm here for the orientation' → nhân viên mới (A).",
+        "tags": [
+          "speaker-identity"
+        ]
+      },
+      {
+        "number": 45,
+        "answer": "C",
+        "content": "Look at the graphic. In which room will the woman discuss her payroll information?",
+        "options": [
+          "Room 101",
+          "Room 204",
+          "Room 305",
+          "Room 110"
+        ],
+        "explanation": "Cô ấy nhắc 'the payroll session'; theo lịch, buổi Benefits & Payroll diễn ra ở Room 305 → (C).",
+        "tags": [
+          "graphic",
+          "detail"
+        ]
+      },
+      {
+        "number": 46,
+        "answer": "B",
+        "content": "According to the man, who will give the woman access to the accounting software?",
+        "options": [
+          "An IT technician",
+          "Her supervisor",
+          "A payroll specialist",
+          "The orientation leader"
+        ],
+        "explanation": "'Your supervisor will give you access to the accounting software later' → người giám sát của cô ấy (B). Bộ phận IT chỉ cài e-mail và mạng (A).",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,602 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "A",
+        "content": "Please read the safety ------- carefully before using the new machine.",
+        "options": [
+          "instructions",
+          "instruct",
+          "instructive",
+          "instructed"
+        ],
+        "explanation": "Sau danh từ bổ nghĩa \"safety\" và là tân ngữ của \"read\" cần danh từ → \"safety instructions\" (hướng dẫn an toàn) (A). (B) là động từ, (C) là tính từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "B",
+        "content": "Ms. Tanaka answered all of the customers' questions -------.",
+        "options": [
+          "polite",
+          "politely",
+          "politeness",
+          "more polite"
+        ],
+        "explanation": "Câu đã đủ chủ ngữ – động từ – tân ngữ; chỗ trống bổ nghĩa cho động từ \"answered\" → cần trạng từ (B). (A) là tính từ, (C) là danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "C",
+        "content": "The new cafeteria offers a ------- selection of salads and sandwiches.",
+        "options": [
+          "widely",
+          "width",
+          "wide",
+          "widen"
+        ],
+        "explanation": "Giữa mạo từ \"a\" và danh từ \"selection\" cần tính từ → \"a wide selection\" (nhiều lựa chọn) (C). (A) là trạng từ, (D) là động từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "D",
+        "content": "Mr. Okafor gave an ------- presentation about the company's history.",
+        "options": [
+          "interest",
+          "interested",
+          "interestingly",
+          "interesting"
+        ],
+        "explanation": "Trước danh từ \"presentation\" cần tính từ; bài thuyết trình gây hứng thú cho người nghe → dùng đuôi -ing (D). (B) chỉ cảm xúc của người, (C) là trạng từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "A",
+        "content": "The store manager spoke ------- about the upcoming sale.",
+        "options": [
+          "enthusiastically",
+          "enthusiastic",
+          "enthusiasm",
+          "enthusiast"
+        ],
+        "explanation": "Chỗ trống đứng sau động từ \"spoke\" để bổ nghĩa cho cách nói → trạng từ (A). (B) là tính từ, (C) là danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "B",
+        "content": "Hotel guests can make a ------- for dinner at the front desk.",
+        "options": [
+          "reserve",
+          "reservation",
+          "reserved",
+          "reserving"
+        ],
+        "explanation": "Sau mạo từ \"a\" cần danh từ; cụm cố định \"make a reservation\" = đặt chỗ → (B). (A) là động từ, (C) là tính từ/quá khứ phân từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "C",
+        "content": "The ------- of the new branch is scheduled for next Friday.",
+        "options": [
+          "open",
+          "opened",
+          "opening",
+          "opens"
+        ],
+        "explanation": "Sau \"The\" và trước \"of\" cần danh từ làm chủ ngữ → \"the opening\" (lễ khai trương) (C). (D) là động từ chia, (B) là quá khứ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "D",
+        "content": "Visitors should keep their identification badges ------- at all times.",
+        "options": [
+          "visibly",
+          "visibility",
+          "vision",
+          "visible"
+        ],
+        "explanation": "Cấu trúc keep + tân ngữ + tính từ (giữ cho cái gì ở trạng thái nào) → \"keep their badges visible\" (D). (A) là trạng từ, (B) là danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 109,
+        "answer": "A",
+        "content": "Customers were very ------- with the quick delivery service.",
+        "options": [
+          "satisfied",
+          "satisfying",
+          "satisfaction",
+          "satisfy"
+        ],
+        "explanation": "Sau \"were very\" cần tính từ chỉ cảm xúc của người (khách hàng hài lòng) → đuôi -ed (A). (B) mô tả sự vật gây hài lòng, (C) là danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 110,
+        "answer": "B",
+        "content": "Please ------- the attached form and return it by Friday.",
+        "options": [
+          "arrive",
+          "complete",
+          "happen",
+          "remain"
+        ],
+        "explanation": "\"complete a form\" = điền (hoàn tất) mẫu đơn → (B). (A) và (C) là nội động từ, không có tân ngữ \"the form\".",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 111,
+        "answer": "C",
+        "content": "The museum is closed on Mondays for regular -------.",
+        "options": [
+          "attention",
+          "agreement",
+          "maintenance",
+          "permission"
+        ],
+        "explanation": "Bảo tàng đóng cửa để bảo trì định kỳ → \"regular maintenance\" (C). (B) (thoả thuận) và (D) (sự cho phép) không hợp nghĩa.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 112,
+        "answer": "D",
+        "content": "Mr. Garcia will ------- the sales team while Ms. Lee is on vacation.",
+        "options": [
+          "arrive",
+          "occur",
+          "belong",
+          "supervise"
+        ],
+        "explanation": "Cần ngoại động từ có tân ngữ \"the sales team\", nghĩa \"giám sát, quản lý\" → (D). (B) và (C) không đi trực tiếp với tân ngữ.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 113,
+        "answer": "A",
+        "content": "The train to Busan was ------- because of heavy snow.",
+        "options": [
+          "delayed",
+          "repaired",
+          "invited",
+          "ordered"
+        ],
+        "explanation": "Tuyết dày khiến tàu bị trễ → \"was delayed\" (A). (B) (được sửa) và (C) (được mời) không hợp với nguyên nhân \"heavy snow\".",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 114,
+        "answer": "B",
+        "content": "Our company offers a 10 percent ------- to students and seniors.",
+        "options": [
+          "charge",
+          "discount",
+          "receipt",
+          "payment"
+        ],
+        "explanation": "\"a 10 percent discount\" = giảm giá 10% cho sinh viên và người cao tuổi → (B). (A) (phí) và (C) (biên lai) không hợp nghĩa \"offers … to students\".",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 115,
+        "answer": "C",
+        "content": "Please call our customer service ------- if you have any questions.",
+        "options": [
+          "furniture",
+          "equipment",
+          "department",
+          "schedule"
+        ],
+        "explanation": "\"customer service department\" = phòng chăm sóc khách hàng, có thể gọi điện tới → (C). (A) và (B) là đồ vật, không thể gọi.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 116,
+        "answer": "D",
+        "content": "The conference room can ------- up to fifty people.",
+        "options": [
+          "hire",
+          "hand",
+          "hope",
+          "hold"
+        ],
+        "explanation": "\"hold up to fifty people\" = chứa được tối đa 50 người → (D). (A) (thuê người) và (C) (hy vọng) sai nghĩa.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 117,
+        "answer": "A",
+        "content": "Applicants must have at least two years of ------- in sales.",
+        "options": [
+          "experience",
+          "exercise",
+          "expense",
+          "expression"
+        ],
+        "explanation": "\"two years of experience in sales\" = 2 năm kinh nghiệm bán hàng → (A). (C) (chi phí) và (B) (bài tập) là bẫy gần âm.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 118,
+        "answer": "B",
+        "content": "The new printer is easy to use and very -------.",
+        "options": [
+          "hungry",
+          "reliable",
+          "curious",
+          "grateful"
+        ],
+        "explanation": "Mô tả máy in: dễ dùng và rất đáng tin cậy (bền, ít hỏng) → (B). (A), (D) chỉ trạng thái của người.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 119,
+        "answer": "C",
+        "content": "The office will be closed ------- Monday, May 3.",
+        "options": [
+          "in",
+          "at",
+          "on",
+          "since"
+        ],
+        "explanation": "Trước thứ / ngày cụ thể dùng \"on\" → \"on Monday, May 3\" (C). (A) dùng cho tháng, năm; (B) dùng cho giờ.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 120,
+        "answer": "D",
+        "content": "The meeting will start ------- 10:00 A.M.",
+        "options": [
+          "on",
+          "in",
+          "during",
+          "at"
+        ],
+        "explanation": "Trước giờ cụ thể dùng \"at\" → \"at 10:00 A.M.\" (D). (A) dùng cho ngày, (C) + khoảng thời gian.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 121,
+        "answer": "A",
+        "content": "Please submit your report ------- the end of the month.",
+        "options": [
+          "by",
+          "until",
+          "since",
+          "during"
+        ],
+        "explanation": "\"submit\" là hành động xảy ra một lần trước hạn chót → \"by the end of the month\" (chậm nhất là) (A). (B) dùng với hành động kéo dài; (C) đi với thì hoàn thành.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 122,
+        "answer": "B",
+        "content": "Ms. Kim was late for work ------- her train was delayed.",
+        "options": [
+          "because of",
+          "because",
+          "despite",
+          "although"
+        ],
+        "explanation": "Sau chỗ trống là mệnh đề (her train was delayed) chỉ nguyên nhân → liên từ (B). (A) và (C) là giới từ, không đi với mệnh đề; (D) mang nghĩa nhượng bộ.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 123,
+        "answer": "C",
+        "content": "Employees can park ------- the building or across the street.",
+        "options": [
+          "during",
+          "until",
+          "behind",
+          "among"
+        ],
+        "explanation": "Cần giới từ chỉ nơi chốn → \"behind the building\" (phía sau toà nhà) (C). (A) và (B) chỉ thời gian; (D) dùng cho nhóm từ ba người/vật trở lên.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 124,
+        "answer": "D",
+        "content": "Mr. Chen ------- the budget report yesterday.",
+        "options": [
+          "submits",
+          "will submit",
+          "submitting",
+          "submitted"
+        ],
+        "explanation": "\"yesterday\" là dấu hiệu quá khứ đơn → (D). (B) là tương lai; (C) không làm động từ chính được.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 125,
+        "answer": "A",
+        "content": "The new manager ------- next Monday.",
+        "options": [
+          "will start",
+          "started",
+          "has started",
+          "starting"
+        ],
+        "explanation": "\"next Monday\" chỉ tương lai → (A). (B) và (C) diễn tả việc đã xảy ra.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 126,
+        "answer": "B",
+        "content": "Our team ------- on the project right now.",
+        "options": [
+          "works",
+          "is working",
+          "worked",
+          "has worked"
+        ],
+        "explanation": "\"right now\" là dấu hiệu hiện tại tiếp diễn → (B). (C) là quá khứ, (A) chỉ thói quen.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 127,
+        "answer": "C",
+        "content": "All packages ------- before noon every day.",
+        "options": [
+          "deliver",
+          "delivering",
+          "are delivered",
+          "is delivered"
+        ],
+        "explanation": "Gói hàng được giao (bị động), chủ ngữ số nhiều \"All packages\", việc lặp lại mỗi ngày → hiện tại đơn bị động (C). (D) sai số; (A) là chủ động.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 128,
+        "answer": "D",
+        "content": "Ms. Park forgot ------- umbrella in the meeting room.",
+        "options": [
+          "she",
+          "hers",
+          "herself",
+          "her"
+        ],
+        "explanation": "Trước danh từ \"umbrella\" cần tính từ sở hữu → \"her umbrella\" (D). (B) là đại từ sở hữu, đứng một mình; (A) là chủ ngữ.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 129,
+        "answer": "A",
+        "content": "If you have any questions, please contact ------- at extension 204.",
+        "options": [
+          "me",
+          "I",
+          "my",
+          "mine"
+        ],
+        "explanation": "Sau động từ \"contact\" cần đại từ tân ngữ → (A). (B) là chủ ngữ, (C) phải đi kèm danh từ.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 130,
+        "answer": "B",
+        "content": "The workers finished the repairs by -------.",
+        "options": [
+          "them",
+          "themselves",
+          "their",
+          "they"
+        ],
+        "explanation": "\"by + đại từ phản thân\" = tự làm, không ai giúp → \"by themselves\" (B). (A) và (C) không dùng trong cụm này.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  }
+]

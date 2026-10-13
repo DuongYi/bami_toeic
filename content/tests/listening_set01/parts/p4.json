@@ -1,0 +1,212 @@
+[
+  {
+    "part": 4,
+    "audio": "p4_q71-73.m4a",
+    "transcript": "Hello, this is Grace calling from Brightway Electronics with a message for Mr. Hamid. You recently ordered a laptop from our online store, and I'm sorry to tell you that the model you chose is temporarily unavailable from the manufacturer. We expect new stock in about three weeks. In the meantime, we can offer you a similar model with a larger screen for the same price. If you'd like to switch, simply reply to the e-mail we sent you this morning. Otherwise, we'll keep your original order and ship it as soon as it arrives. Thank you for your patience, and again, we apologize for the delay.",
+    "questions": [
+      {
+        "number": 71,
+        "answer": "A",
+        "content": "Where does the speaker most likely work?",
+        "options": [
+          "At an electronics retailer",
+          "At a shipping company",
+          "At a computer repair shop",
+          "At a software developer"
+        ],
+        "explanation": "'Grace calling from Brightway Electronics… ordered a laptop from our online store' → nhà bán lẻ đồ điện tử (A). (B), (C), (D) không phù hợp.",
+        "tags": [
+          "speaker-identity"
+        ]
+      },
+      {
+        "number": 72,
+        "answer": "B",
+        "content": "What problem does the speaker mention?",
+        "options": [
+          "A payment was declined.",
+          "An item is not currently available.",
+          "A delivery address is incomplete.",
+          "A product was damaged during shipping."
+        ],
+        "explanation": "'the model you chose is temporarily unavailable from the manufacturer' → sản phẩm tạm hết (B). (A), (C), (D) không nhắc.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 73,
+        "answer": "C",
+        "content": "How can the listener accept the speaker's offer?",
+        "options": [
+          "By visiting a store",
+          "By calling a hotline",
+          "By responding to an e-mail",
+          "By completing an online form"
+        ],
+        "explanation": "'If you'd like to switch, simply reply to the e-mail we sent you this morning' → trả lời e-mail (C).",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 4,
+    "audio": "p4_q74-76.m4a",
+    "transcript": "Attention, passengers on Flight 517 to Toronto. We are now ready to begin boarding. Passengers traveling with small children or needing extra assistance are invited to board first. After that, we will board by group number, which you can find printed on your boarding pass. Please note that this is a full flight, and overhead storage space is limited. If you have a large carry-on bag, our staff at the gate can check it for you free of charge, and you can collect it at the baggage claim in Toronto. We appreciate your cooperation and wish you a pleasant flight.",
+    "questions": [
+      {
+        "number": 74,
+        "answer": "B",
+        "content": "Where is the announcement being made?",
+        "options": [
+          "On a train",
+          "At an airport gate",
+          "In a hotel lobby",
+          "At a bus terminal"
+        ],
+        "explanation": "'passengers on Flight 517… ready to begin boarding… our staff at the gate' → tại cổng ra máy bay (B).",
+        "tags": [
+          "speaker-identity"
+        ]
+      },
+      {
+        "number": 75,
+        "answer": "B",
+        "content": "Why does the speaker say, \"this is a full flight\"?",
+        "options": [
+          "To apologize for a delay",
+          "To explain why there may not be enough space for bags",
+          "To ask passengers to change seats",
+          "To announce that tickets are sold out for the next flight"
+        ],
+        "explanation": "Ngay sau đó người nói thêm 'overhead storage space is limited' và đề nghị gửi hành lý lớn → câu này để giải thích có thể thiếu chỗ để hành lý (B). (D) hiểu nhầm nghĩa đen.",
+        "tags": [
+          "implied-meaning"
+        ]
+      },
+      {
+        "number": 76,
+        "answer": "C",
+        "content": "What does the speaker offer to do for some passengers?",
+        "options": [
+          "Upgrade their seats",
+          "Provide a meal voucher",
+          "Check their bags at no cost",
+          "Print a new boarding pass"
+        ],
+        "explanation": "'staff at the gate can check it for you free of charge' → gửi hành lý miễn phí (C). (D) bẫy từ 'boarding pass'.",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 4,
+    "audio": "p4_q77-79.m4a",
+    "transcript": "Good morning, everyone, and welcome to the Oakridge Historic Inn. My name is Leo, and I'll be your guide this morning. This building first opened as a hotel in 1905, and it still has many of its original features, including the marble staircase you see behind me. Our tour will last about forty-five minutes. We'll start in the ballroom, then visit the restored guest rooms on the third floor, and finish in the garden. Photographs are allowed everywhere except in the library, where we keep some very old documents. At the end of the tour, please stop by the gift shop near the front desk. Tour guests receive ten percent off any purchase.",
+    "questions": [
+      {
+        "number": 77,
+        "answer": "B",
+        "content": "What is mentioned about the building?",
+        "options": [
+          "It was recently built.",
+          "It has some original features.",
+          "It is closed in the winter.",
+          "It used to be a library."
+        ],
+        "explanation": "'it still has many of its original features, including the marble staircase' → (B). (D) bẫy từ 'library' (một phòng trong tòa nhà).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 78,
+        "answer": "C",
+        "content": "Where are listeners asked not to take photographs?",
+        "options": [
+          "In the ballroom",
+          "In the guest rooms",
+          "In the library",
+          "In the garden"
+        ],
+        "explanation": "'Photographs are allowed everywhere except in the library' → (C).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 79,
+        "answer": "B",
+        "content": "What will tour participants receive?",
+        "options": [
+          "A free drink",
+          "A discount at a shop",
+          "A souvenir photo",
+          "A guidebook"
+        ],
+        "explanation": "'Tour guests receive ten percent off any purchase' tại cửa hàng quà tặng → giảm giá (B).",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 4,
+    "audio": "p4_q80-82.m4a",
+    "image": "p4_q80-82_graphic.png",
+    "transcript": "Thank you for shopping at Greenleaf Market. We'd like to remind customers about this week's special offers. Fresh strawberries and all baked goods are discounted until Sunday, so stock up for the weekend. Also, we're excited to announce that our new coffee bar is now open near the front entrance. To celebrate, every customer who spends more than thirty dollars today will receive a free cup of coffee. Just show your receipt to the staff at the coffee bar. And don't forget, our store hours are changing next month. Please check the updated schedule posted at the customer service counter.",
+    "questions": [
+      {
+        "number": 80,
+        "answer": "A",
+        "content": "What is the purpose of the announcement?",
+        "options": [
+          "To describe special offers",
+          "To introduce a new manager",
+          "To apologize for a closure",
+          "To ask for customer feedback"
+        ],
+        "explanation": "Người nói nhắc 'this week's special offers', quầy cà phê mới và quà tặng → giới thiệu ưu đãi (A).",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 81,
+        "answer": "C",
+        "content": "Look at the graphic. What percentage discount is offered on strawberries?",
+        "options": [
+          "10%",
+          "15%",
+          "20%",
+          "25%"
+        ],
+        "explanation": "Thông báo nói dâu tây đang giảm giá; theo bảng ưu đãi, Strawberries giảm 20% → (C). Các mức khác thuộc mặt hàng khác.",
+        "tags": [
+          "graphic",
+          "detail"
+        ]
+      },
+      {
+        "number": 82,
+        "answer": "B",
+        "content": "How can customers get a free cup of coffee?",
+        "options": [
+          "By joining a membership program",
+          "By spending a certain amount",
+          "By completing a survey",
+          "By arriving before noon"
+        ],
+        "explanation": "'every customer who spends more than thirty dollars today will receive a free cup of coffee' → chi tiêu đủ số tiền (B).",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  }
+]

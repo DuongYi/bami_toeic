@@ -1,0 +1,372 @@
+[
+  {
+    "part": 7,
+    "passage": "Linda Park (9:05 A.M.)\nOmar, are you already at the Westfield office? The client meeting was moved up to 10:00.\nOmar Haddad (9:08 A.M.)\nNot yet. I'm stuck behind a stalled truck on Route 9. I've barely moved in fifteen minutes.\nLinda Park (9:10 A.M.)\nShould I ask Ms. Ortiz to start the presentation without you?\nOmar Haddad (9:12 A.M.)\nI'd rather you didn't. The pricing slides are on my laptop.\nLinda Park (9:13 A.M.)\nUnderstood. I'll offer the clients coffee and a tour of the showroom first. Text me when you park.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "Why is Mr. Haddad late?",
+        "options": [
+          "He is caught in traffic.",
+          "His car would not start.",
+          "He went to the wrong office.",
+          "He is waiting for a client."
+        ],
+        "explanation": "Lúc 9:08 Mr. Haddad viết 'I'm stuck behind a stalled truck on Route 9' – kẹt xe → (A). Không có chi tiết xe hỏng, đi nhầm văn phòng hay đang chờ khách.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "A",
+        "content": "At 9:12 A.M., what does Mr. Haddad most likely mean when he writes, \"I'd rather you didn't\"?",
+        "options": [
+          "He prefers that the presentation wait for him.",
+          "He does not want Ms. Park to call him.",
+          "He thinks the meeting should be canceled.",
+          "He would like Ms. Ortiz to discuss the prices."
+        ],
+        "explanation": "Ms. Park hỏi có nên để Ms. Ortiz bắt đầu thuyết trình không; anh trả lời 'I'd rather you didn't' và giải thích slide giá nằm trong laptop của mình → muốn chờ anh tới (A). Ms. Park sau đó cho khách đi xem showroom trước, nên cuộc họp không bị huỷ.",
+        "tags": [
+          "implied-meaning"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 7,
+    "passage": "Brightwater Fitness Center\nNotice to Members\nThe indoor pool will be closed from June 3 to June 21 while new tiles and a heating system are installed. During this period, members may use the pool at our Harbor Street location at no extra charge; simply show your membership card at the front desk.\nGroup swimming lessons scheduled for June will be moved to July, and instructors will contact participants directly. The locker rooms, sauna, and weight room will remain open throughout the renovation.\nWe apologize for the inconvenience and thank you for your patience.\nBrightwater Management",
+    "questions": [
+      {
+        "number": 149,
+        "answer": "A",
+        "content": "What is the purpose of the notice?",
+        "options": [
+          "To announce a temporary closure",
+          "To introduce new swimming instructors",
+          "To advertise a membership discount",
+          "To explain a change in opening hours"
+        ],
+        "explanation": "Câu đầu: 'The indoor pool will be closed from June 3 to June 21' – thông báo đóng cửa tạm thời → (A).",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 150,
+        "answer": "C",
+        "content": "What are members who want to swim in June advised to do?",
+        "options": [
+          "Sign up for lessons in July",
+          "Pay a small additional fee",
+          "Go to a different branch",
+          "Call the front desk in advance"
+        ],
+        "explanation": "Đoạn 1: 'members may use the pool at our Harbor Street location at no extra charge' → sang cơ sở khác (C). 'no extra charge' nên không phải trả thêm phí.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 151,
+        "answer": "D",
+        "content": "What is NOT mentioned as remaining available during the renovation?",
+        "options": [
+          "The sauna",
+          "The weight room",
+          "The locker rooms",
+          "The juice bar"
+        ],
+        "explanation": "Đoạn 2 liệt kê 'The locker rooms, sauna, and weight room will remain open'; quầy nước ép không được nhắc tới → (D).",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 7,
+    "passage": "Grace Liu [2:01 P.M.]\nQuick update on the Midwest Home Expo: the organizers just moved our booth from Hall A to Hall C.\nTomas Varga [2:03 P.M.]\nHall C is next to the food court, isn't it? That should bring a lot more visitors past our display.\nPriya Nair [2:04 P.M.]\nMaybe, but the booths there are smaller. Will our new sofa models still fit?\nGrace Liu [2:06 P.M.]\nI checked. The space is about two meters narrower, so we can bring only three of the four models.\nBen Adler [2:07 P.M.]\nLeave the recliner here, then. It's the bulkiest piece, and it's already featured in our catalog.\nPriya Nair [2:08 P.M.]\nFine by me. I'll update the floor plan and send it to the shipping company this afternoon.\nGrace Liu [2:09 P.M.]\nThanks, Priya. The truck is scheduled to leave our warehouse on Thursday morning.",
+    "questions": [
+      {
+        "number": 152,
+        "answer": "B",
+        "content": "What did the expo organizers recently do?",
+        "options": [
+          "They changed the dates of the expo.",
+          "They assigned the company a different space.",
+          "They increased the booth rental fee.",
+          "They moved the food court next to the main entrance."
+        ],
+        "explanation": "Ms. Liu (2:01): 'the organizers just moved our booth from Hall A to Hall C' → đổi vị trí gian hàng (B).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 153,
+        "answer": "C",
+        "content": "At 2:07 P.M., what does Mr. Adler most likely mean when he writes, \"Leave the recliner here, then\"?",
+        "options": [
+          "A customer has already bought the recliner.",
+          "The recliner should be placed near the entrance.",
+          "One product should not be sent to the expo.",
+          "The catalog should be reprinted."
+        ],
+        "explanation": "Gian hàng mới chỉ chứa được 3 trong 4 mẫu; Mr. Adler đề nghị để chiếc recliner lại kho vì cồng kềnh nhất → không mang sản phẩm này đi hội chợ (C).",
+        "tags": [
+          "implied-meaning"
+        ]
+      },
+      {
+        "number": 154,
+        "answer": "A",
+        "content": "What type of business do the writers most likely work for?",
+        "options": [
+          "A furniture company",
+          "A catering service",
+          "A trade show organizer",
+          "A shipping firm"
+        ],
+        "explanation": "Họ bàn về 'our new sofa models' và chiếc recliner trong catalog của công ty → công ty nội thất (A). Ban tổ chức và công ty vận chuyển là bên khác được nhắc tới.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 155,
+        "answer": "B",
+        "content": "What will Ms. Nair do this afternoon?",
+        "options": [
+          "Measure the booth in Hall C",
+          "Revise a layout and share it with a carrier",
+          "Update the product catalog",
+          "Load the truck at the warehouse"
+        ],
+        "explanation": "Ms. Nair (2:08): 'I'll update the floor plan and send it to the shipping company this afternoon' → sửa sơ đồ và gửi cho bên vận chuyển (B).",
+        "tags": [
+          "next-action"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 7,
+    "passage": "Local Bakery Expands to Second Location\nGREENVILLE (May 14) — Rosemary Lane Bakery, known for its sourdough loaves and seasonal fruit tarts, will open a second shop on Clifton Avenue next month. — [1] — Owner Hannah Brooks started the business eight years ago in a small kitchen behind her home.\n\"Demand has grown steadily, especially from cafés and restaurants that buy our bread wholesale,\" said Ms. Brooks. — [2] — The new shop will contain a larger oven that will allow the bakery to triple its daily output.\nThe Clifton Avenue location will also have seating for about twenty customers, something the original shop lacks. — [3] — Ms. Brooks plans to hire six additional bakers and two counter staff before the opening. — [4] — Applications can be submitted through the bakery's Web site.",
+    "questions": [
+      {
+        "number": 156,
+        "answer": "C",
+        "content": "What is the article mainly about?",
+        "options": [
+          "A baking competition",
+          "A change in ownership",
+          "A business expansion",
+          "A new restaurant review"
+        ],
+        "explanation": "Tiêu đề và câu đầu: tiệm bánh 'will open a second shop on Clifton Avenue' → mở rộng kinh doanh (C).",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 157,
+        "answer": "B",
+        "content": "The word \"output\" in paragraph 2, line 3, is closest in meaning to",
+        "options": [
+          "income",
+          "production",
+          "staff",
+          "waste"
+        ],
+        "explanation": "'triple its daily output' = tăng gấp ba sản lượng mỗi ngày (lò lớn hơn) → output = production (B).",
+        "tags": [
+          "vocab-in-context"
+        ]
+      },
+      {
+        "number": 158,
+        "answer": "C",
+        "content": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"Customers will be able to enjoy coffee and pastries there as well.\"",
+        "options": [
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
+        ],
+        "explanation": "Câu chèn nói khách có thể dùng cà phê, bánh 'there' – nối tiếp câu về khu ghế ngồi cho 20 khách ở cửa hàng mới → vị trí [3] (C).",
+        "tags": [
+          "sentence-insertion"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 7,
+    "passage": "Web page\nCorvel Learning Center — Spring Workshops\nSpreadsheet Basics — April 4 — $60 per person\nEffective Presentations — April 11 — $75 per person\nProject Planning Essentials — April 18 — $90 per person\nBusiness Writing — April 25 — $75 per person\nAll workshops run from 9:00 A.M. to 1:00 P.M. Groups of five or more from the same company receive 15 percent off the total fee. Registration closes three days before each workshop.\n\nE-mail\nFrom: Daniel Okoro <dokoro@halvorsensupplies.com>\nTo: registration@corvel.org\nDate: April 2\nSubject: Group registration\nHello,\nI would like to register six members of my sales team for the workshop on presentations. We are preparing for a series of client pitches next month, so the timing is ideal.\nCould you also tell me whether parking is available at your center? One of our team members will be driving from our branch office in Lakewood.\nDaniel Okoro, Sales Manager, Halvorsen Supplies",
+    "questions": [
+      {
+        "number": 176,
+        "answer": "B",
+        "content": "What is indicated about the workshops?",
+        "options": [
+          "They are held on weekends.",
+          "They last four hours.",
+          "They are taught online.",
+          "They all cost the same."
+        ],
+        "explanation": "Trang web: 'All workshops run from 9:00 A.M. to 1:00 P.M.' → kéo dài 4 tiếng (B). Học phí khác nhau ($60–$90).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 177,
+        "answer": "D",
+        "content": "Which workshop does Mr. Okoro want his team to attend?",
+        "options": [
+          "Spreadsheet Basics",
+          "Project Planning Essentials",
+          "Business Writing",
+          "Effective Presentations"
+        ],
+        "explanation": "E-mail: 'the workshop on presentations' → Effective Presentations (D).",
+        "tags": [
+          "detail",
+          "multi-passage"
+        ]
+      },
+      {
+        "number": 178,
+        "answer": "A",
+        "content": "What will Mr. Okoro's company most likely receive?",
+        "options": [
+          "A discount on the fee",
+          "Free parking",
+          "Printed course materials",
+          "A later registration deadline"
+        ],
+        "explanation": "Ông đăng ký 6 người; trang web: 'Groups of five or more from the same company receive 15 percent off' → được giảm giá (A). Bãi đỗ xe chỉ là câu hỏi, chưa được xác nhận.",
+        "tags": [
+          "inference",
+          "multi-passage"
+        ]
+      },
+      {
+        "number": 179,
+        "answer": "C",
+        "content": "Why is Mr. Okoro's team taking the workshop?",
+        "options": [
+          "To learn how to use the new accounting software tools",
+          "To meet a company requirement",
+          "To prepare for meetings with potential customers",
+          "To train recently hired staff"
+        ],
+        "explanation": "E-mail: 'We are preparing for a series of client pitches next month' → chuẩn bị thuyết trình với khách hàng (C).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 180,
+        "answer": "B",
+        "content": "What does Mr. Okoro ask about?",
+        "options": [
+          "The location of the Lakewood office",
+          "A place to leave a vehicle",
+          "The start time of the workshop",
+          "Ways to pay the fee"
+        ],
+        "explanation": "E-mail: 'Could you also tell me whether parking is available at your center?' → hỏi về chỗ đỗ xe (B).",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 7,
+    "passage": "Advertisement\nSunrise Catering — Office Lunch Packages\nBasic: sandwiches and salad — $12 per person\nDeluxe: hot entrée, salad, and dessert — $18 per person\nPremium: hot entrée, salad, dessert, and fresh juice bar — $24 per person\nFree delivery for orders of 20 or more people within the city limits. All orders must be placed at least 48 hours in advance.\n\nOrder Form\nCustomer: Mei Tanaka, Fairmont Architects\nDate of event: October 9\nNumber of guests: 25\nPackage: Deluxe\nDelivery address: 410 Pine Street, Suite 300\nSpecial requests: Please include two vegetarian entrées.\n\nE-mail\nFrom: Mei Tanaka <mtanaka@fairmontarch.com>\nTo: orders@sunrisecatering.com\nDate: October 10\nSubject: Yesterday's lunch\nThank you for the excellent lunch yesterday. Our clients especially enjoyed the dessert. I did notice, however, that we were charged a delivery fee, even though our order qualified for free delivery. Could you please review the invoice and refund that amount? We plan to order from you again for our year-end party in December.",
+    "questions": [
+      {
+        "number": 186,
+        "answer": "A",
+        "content": "What is indicated about Sunrise Catering?",
+        "options": [
+          "It requires orders two days ahead.",
+          "It serves only vegetarian food.",
+          "It charges extra for desserts.",
+          "It delivers to any location free of charge."
+        ],
+        "explanation": "Quảng cáo: 'All orders must be placed at least 48 hours in advance' → đặt trước 2 ngày (A). Giao miễn phí chỉ trong thành phố và từ 20 người.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 187,
+        "answer": "B",
+        "content": "How much per person did Fairmont Architects' lunch cost?",
+        "options": [
+          "$12",
+          "$18",
+          "$24",
+          "$25"
+        ],
+        "explanation": "Phiếu đặt chọn gói 'Deluxe'; quảng cáo: Deluxe – $18 per person → (B). $25 là số khách, không phải giá.",
+        "tags": [
+          "detail",
+          "multi-passage"
+        ]
+      },
+      {
+        "number": 188,
+        "answer": "D",
+        "content": "Why did Ms. Tanaka's order qualify for free delivery?",
+        "options": [
+          "It was placed a week early.",
+          "Fairmont Architects is a regular customer.",
+          "It included the Premium package.",
+          "It was for more than twenty people."
+        ],
+        "explanation": "Quảng cáo: miễn phí giao 'for orders of 20 or more people'; phiếu đặt ghi 'Number of guests: 25' → (D).",
+        "tags": [
+          "inference",
+          "multi-passage"
+        ]
+      },
+      {
+        "number": 189,
+        "answer": "C",
+        "content": "What did Ms. Tanaka's clients particularly like?",
+        "options": [
+          "The juice bar",
+          "The vegetarian entrées",
+          "The dessert",
+          "The sandwiches"
+        ],
+        "explanation": "E-mail: 'Our clients especially enjoyed the dessert' → (C). Gói Deluxe không có quầy nước ép.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 190,
+        "answer": "B",
+        "content": "What does Ms. Tanaka request?",
+        "options": [
+          "A menu for a December event",
+          "The return of a charge",
+          "Additional vegetarian dishes",
+          "A change to a delivery address"
+        ],
+        "explanation": "E-mail: bị tính phí giao hàng dù đủ điều kiện miễn phí – 'Could you please ... refund that amount?' → đề nghị hoàn lại khoản phí (B). Tiệc tháng 12 chỉ là dự định đặt tiếp.",
+        "tags": [
+          "request-suggestion"
+        ]
+      }
+    ]
+  }
+]

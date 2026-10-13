@@ -1,0 +1,602 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "B",
+        "content": "The marketing team has developed an ------- strategy to attract younger customers.",
+        "options": [
+          "innovation",
+          "innovative",
+          "innovate",
+          "innovatively"
+        ],
+        "explanation": "Giữa \"an\" và danh từ \"strategy\" cần tính từ → \"an innovative strategy\" (chiến lược sáng tạo) (B). (A) là danh từ, (D) là trạng từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "C",
+        "content": "Sales of the new laptop increased ------- after the price reduction.",
+        "options": [
+          "significant",
+          "significance",
+          "significantly",
+          "signify"
+        ],
+        "explanation": "Bổ nghĩa cho nội động từ \"increased\" cần trạng từ → (C). (A) là tính từ, (B) là danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "D",
+        "content": "Ms. Rossi is ------- for organizing the annual awards dinner.",
+        "options": [
+          "responsibility",
+          "responsibly",
+          "respond",
+          "responsible"
+        ],
+        "explanation": "Sau \"is\" cần tính từ; cụm \"be responsible for + V-ing\" = chịu trách nhiệm → (D). (A) là danh từ, (B) là trạng từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "A",
+        "content": "Please direct all ------- about the job opening to Mr. Haddad in human resources.",
+        "options": [
+          "inquiries",
+          "inquire",
+          "inquired",
+          "inquiring"
+        ],
+        "explanation": "Sau \"all\" và làm tân ngữ của \"direct\" cần danh từ số nhiều → \"all inquiries\" (mọi câu hỏi) (A). (B) là động từ nguyên mẫu.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "B",
+        "content": "The ------- of the warehouse will allow us to store twice as much inventory.",
+        "options": [
+          "expand",
+          "expansion",
+          "expansive",
+          "expanded"
+        ],
+        "explanation": "Sau \"The\", trước \"of\", làm chủ ngữ → danh từ (B). (A) là động từ, (C) là tính từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "C",
+        "content": "Thanks to its ------- location near the subway, the hotel is popular with business travelers.",
+        "options": [
+          "convenience",
+          "conveniently",
+          "convenient",
+          "convene"
+        ],
+        "explanation": "Giữa tính từ sở hữu \"its\" và danh từ \"location\" cần tính từ → (C). (B) là trạng từ, (A) là danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "D",
+        "content": "Participants found the workshop extremely -------.",
+        "options": [
+          "inform",
+          "information",
+          "informatively",
+          "informative"
+        ],
+        "explanation": "Cấu trúc find + tân ngữ + tính từ; \"extremely\" bổ nghĩa cho tính từ → \"extremely informative\" (rất bổ ích) (D). (B) là danh từ, (C) là trạng từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "A",
+        "content": "The two companies have worked ------- on several construction projects.",
+        "options": [
+          "collaboratively",
+          "collaborative",
+          "collaboration",
+          "collaborate"
+        ],
+        "explanation": "Bổ nghĩa cho động từ \"have worked\" cần trạng từ → (A). (B) là tính từ, (C) là danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 109,
+        "answer": "B",
+        "content": "Each ------- must bring a valid photo ID to the testing center.",
+        "options": [
+          "application",
+          "applicant",
+          "applying",
+          "applied"
+        ],
+        "explanation": "Sau \"Each\" cần danh từ đếm được số ít chỉ người (người mang giấy tờ) → (B). (A) là đơn xin, là vật – không thể \"bring a photo ID\".",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 110,
+        "answer": "C",
+        "content": "The CEO will ------- the opening ceremony on behalf of the board.",
+        "options": [
+          "accompany",
+          "approve",
+          "attend",
+          "admit"
+        ],
+        "explanation": "\"attend the ceremony\" = tham dự buổi lễ → (C). (A) (đi cùng ai) và (D) (thừa nhận, cho vào) không hợp với \"ceremony\".",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 111,
+        "answer": "D",
+        "content": "All travel expenses must be ------- by a department manager before reimbursement.",
+        "options": [
+          "applied",
+          "appealed",
+          "aligned",
+          "approved"
+        ],
+        "explanation": "Chi phí phải được trưởng phòng duyệt trước khi hoàn tiền → \"be approved by\" (D). (A) và (B) không dùng với \"expenses\" theo nghĩa này.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 112,
+        "answer": "A",
+        "content": "The hotel offers ------- shuttle service to and from the airport.",
+        "options": [
+          "complimentary",
+          "complementary",
+          "compulsory",
+          "comparable"
+        ],
+        "explanation": "\"complimentary\" = miễn phí (dịch vụ tặng kèm) → (A). (B) (bổ sung) là bẫy gần âm; (C) (bắt buộc) không hợp nghĩa \"offers\".",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 113,
+        "answer": "B",
+        "content": "Due to high -------, the concert has been moved to a larger venue.",
+        "options": [
+          "request",
+          "demand",
+          "order",
+          "question"
+        ],
+        "explanation": "\"high demand\" = nhu cầu cao (nhiều người muốn mua vé) → chuyển sang địa điểm lớn hơn (B). \"high request\" và \"high order\" không phải cụm tự nhiên.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 114,
+        "answer": "C",
+        "content": "Ms. Abara has been ------- to regional sales director.",
+        "options": [
+          "rewarded",
+          "upgraded",
+          "promoted",
+          "enrolled"
+        ],
+        "explanation": "\"be promoted to + chức vụ\" = được thăng chức → (C). (B) dùng cho thiết bị, hạng vé; (D) dùng cho khoá học.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 115,
+        "answer": "D",
+        "content": "Please make sure the shipment ------- the customer's order before sending it.",
+        "options": [
+          "joins",
+          "meets",
+          "suits",
+          "matches"
+        ],
+        "explanation": "\"match the order\" = khớp với đơn đặt hàng → (D). (C) (hợp với sở thích) và (A) (tham gia, nối) không diễn tả việc đối chiếu.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 116,
+        "answer": "A",
+        "content": "The renovation project was completed two weeks ahead of -------.",
+        "options": [
+          "schedule",
+          "agenda",
+          "calendar",
+          "program"
+        ],
+        "explanation": "Cụm cố định \"ahead of schedule\" = sớm hơn kế hoạch → (A). (B) là chương trình cuộc họp; \"ahead of calendar\" không tồn tại.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 117,
+        "answer": "B",
+        "content": "Our firm has a strong ------- for delivering high-quality work on time.",
+        "options": [
+          "recognition",
+          "reputation",
+          "reference",
+          "requirement"
+        ],
+        "explanation": "\"have a reputation for + V-ing\" = nổi tiếng về → (B). (D) (yêu cầu) và (C) (thư giới thiệu) không đi với \"strong … for delivering\".",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 118,
+        "answer": "C",
+        "content": "Customers can ------- their orders online until 5 P.M. on the day before delivery.",
+        "options": [
+          "modernize",
+          "moderate",
+          "modify",
+          "model"
+        ],
+        "explanation": "\"modify an order\" = thay đổi đơn hàng → (C). (A) (hiện đại hoá) và (B) (điều tiết) sai nghĩa.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 119,
+        "answer": "D",
+        "content": "------- the heavy rain, the outdoor festival attracted thousands of visitors.",
+        "options": [
+          "Although",
+          "Because",
+          "However",
+          "Despite"
+        ],
+        "explanation": "Sau chỗ trống là cụm danh từ \"the heavy rain\", ý nhượng bộ → giới từ (D). (A) và (B) là liên từ, cần mệnh đề; (C) là trạng từ liên kết.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 120,
+        "answer": "A",
+        "content": "The library will remain open ------- 9 P.M. during the exam period.",
+        "options": [
+          "until",
+          "by",
+          "since",
+          "within"
+        ],
+        "explanation": "\"remain open\" là trạng thái kéo dài đến một mốc → \"until 9 P.M.\" (A). (B) dùng với hành động hoàn tất trước hạn; (C) cần thì hoàn thành.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 121,
+        "answer": "B",
+        "content": "Please return the signed contract ------- Friday so that we can process it on time.",
+        "options": [
+          "until",
+          "by",
+          "during",
+          "since"
+        ],
+        "explanation": "\"return\" là hành động một lần, cần làm trước hạn chót → \"by Friday\" (B). (A) đi với hành động kéo dài; (C) + khoảng thời gian.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 122,
+        "answer": "C",
+        "content": "------- the new software is installed, employees will receive training.",
+        "options": [
+          "During",
+          "Despite",
+          "Once",
+          "Unless"
+        ],
+        "explanation": "Sau chỗ trống là mệnh đề, nghĩa \"một khi … xong thì …\" → (C). (A) và (B) là giới từ; (D) (trừ khi) làm câu vô lý.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 123,
+        "answer": "D",
+        "content": "Mr. Dubois will lead the meeting ------- Ms. Clarke is away on business.",
+        "options": [
+          "during",
+          "meanwhile",
+          "despite",
+          "while"
+        ],
+        "explanation": "Sau chỗ trống là mệnh đề \"Ms. Clarke is away\" → liên từ thời gian (D). (A) là giới từ (+ danh từ); (B) là trạng từ, không nối hai mệnh đề.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 124,
+        "answer": "A",
+        "content": "The quarterly report ------- by the accounting department last week.",
+        "options": [
+          "was prepared",
+          "prepared",
+          "has prepared",
+          "is preparing"
+        ],
+        "explanation": "Báo cáo được chuẩn bị (có \"by the accounting department\") → bị động; \"last week\" → quá khứ (A). (B) và (C) là chủ động.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 125,
+        "answer": "B",
+        "content": "By the time the guests arrived, the staff ------- all the tables.",
+        "options": [
+          "set",
+          "had set",
+          "have set",
+          "will set"
+        ],
+        "explanation": "\"By the time + quá khứ đơn\" → hành động hoàn tất trước đó dùng quá khứ hoàn thành (B). (C) và (D) sai mốc thời gian.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 126,
+        "answer": "C",
+        "content": "Ms. Yamada ------- at Hilltop Bank since 2018.",
+        "options": [
+          "works",
+          "worked",
+          "has worked",
+          "is working"
+        ],
+        "explanation": "\"since 2018\" → hành động kéo dài từ quá khứ đến nay, dùng hiện tại hoàn thành (C). (B) là quá khứ đơn, không đi với \"since\".",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 127,
+        "answer": "D",
+        "content": "The board recommended that the new policy ------- immediately.",
+        "options": [
+          "is implemented",
+          "implementing",
+          "was implemented",
+          "be implemented"
+        ],
+        "explanation": "Sau \"recommend that\" dùng giả định: động từ nguyên mẫu; chính sách được thực hiện → bị động \"be implemented\" (D). (A) và (C) không đúng cấu trúc giả định.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 128,
+        "answer": "A",
+        "content": "Mr. Nguyen prefers to review the contracts -------.",
+        "options": [
+          "himself",
+          "him",
+          "his",
+          "he"
+        ],
+        "explanation": "Câu đã đủ thành phần; đại từ phản thân đứng cuối để nhấn mạnh \"tự mình\" → (A). (B) là tân ngữ, câu đã có tân ngữ \"the contracts\".",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 129,
+        "answer": "B",
+        "content": "The company thanked ------- employees for their hard work this year.",
+        "options": [
+          "it",
+          "its",
+          "itself",
+          "it's"
+        ],
+        "explanation": "Trước danh từ \"employees\" cần tính từ sở hữu; chủ thể là \"The company\" (số ít) → (B). (D) là viết tắt của \"it is\".",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 130,
+        "answer": "C",
+        "content": "Ms. Lopez's proposal was more detailed than -------.",
+        "options": [
+          "our",
+          "us",
+          "ours",
+          "ourselves"
+        ],
+        "explanation": "So sánh với đề xuất của chúng tôi → đại từ sở hữu thay cho \"our proposal\" (C). (A) phải đi kèm danh từ; (B) so sánh với người, không phải đề xuất.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  }
+]

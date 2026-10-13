@@ -65,11 +65,19 @@ def blueprint_groups(name):
         add(2, _range(7, 17))
         add(3, _range(32, 49, 3), graphic=(47,))
         add(4, _range(71, 88, 3), graphic=(86,))
+    elif name == 'reading7':
+        # Part 7 rút gọn: chuỗi tin nhắn, đoạn đơn, chat 4 câu, đoạn đơn có chèn câu, đoạn kép, đoạn ba.
+        add(7, [[147, 148], [149, 150, 151], [152, 153, 154, 155], [156, 157, 158],
+                list(range(176, 181)), list(range(186, 191))])
+    elif name == 'listening234':
+        add(2, _range(7, 21))
+        add(3, _range(32, 46, 3), graphic=(44,))
+        add(4, _range(71, 82, 3), graphic=(80,))
     elif name.startswith('part:'):
         part = int(name.split(':')[1])
         g = [x for x in blueprint_groups('full') if x[0] == part]
     else:
-        raise SystemExit(f'Blueprint không hợp lệ: {name} (full | mini25 | quick15 | listening50 | part:N)')
+        raise SystemExit(f'Blueprint không hợp lệ: {name} (full | mini25 | quick15 | listening50 | listening234 | reading7 | part:N)')
     return g
 
 

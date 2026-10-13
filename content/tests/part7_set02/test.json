@@ -1,0 +1,384 @@
+{
+  "title": "Luyện Part 7 · Đề 02",
+  "source": "Bami TOEIC",
+  "description": "Đề luyện Part 7 (22 câu, mức 700–850): câu hàm ý, câu NOT, chèn câu, từ đồng nghĩa và suy luận kết hợp nhiều văn bản.",
+  "is_free": false,
+  "groups": [
+    {
+      "part": 7,
+      "passage": "Carla Mendes (11:40 A.M.)\nThe print shop just called. They can't finish the brochures by Friday because their main press broke down.\nJun Park (11:42 A.M.)\nThat's a problem. We need them for the trade show on Saturday morning.\nCarla Mendes (11:44 A.M.)\nThey offered to send the job to their partner shop in Dayton, but it would cost $150 more.\nJun Park (11:46 A.M.)\nGo ahead. Showing up empty-handed would cost us far more than that.\nCarla Mendes (11:47 A.M.)\nOK. I'll confirm with them and ask for delivery straight to the convention center.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "D",
+          "content": "Why did the print shop contact Ms. Mendes?",
+          "options": [
+            "To offer a discount on a future order",
+            "To confirm a delivery address",
+            "To request an advance payment",
+            "To report a problem with a machine"
+          ],
+          "explanation": "Ms. Mendes (11:40): 'their main press broke down' → máy in hỏng (D).",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "A",
+          "content": "At 11:46 A.M., what does Mr. Park most likely mean when he writes, \"Go ahead\"?",
+          "options": [
+            "He agrees to the additional expense.",
+            "He will pick up the brochures in Dayton.",
+            "He wants the order to be canceled.",
+            "He plans to print the brochures in the office."
+          ],
+          "explanation": "Ms. Mendes vừa nói chuyển việc in sang Dayton 'would cost $150 more'; Mr. Park đáp 'Go ahead' và cho rằng đến hội chợ tay không còn tốn hơn → đồng ý chi thêm (A).",
+          "tags": [
+            "implied-meaning"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Harlow Medical Supplies is seeking a Customer Account Coordinator for its regional office in Bristow. The successful candidate will respond to inquiries from hospitals and clinics, process orders, and resolve billing discrepancies.\nApplicants should have at least two years of experience in customer service and be comfortable using inventory software. Familiarity with medical terminology is preferred but not required.\nThe position is full-time, Monday through Friday, with occasional Saturday shifts during the end-of-quarter inventory count. Harlow offers a competitive salary, a transportation allowance, and tuition reimbursement for job-related courses.\nTo apply, send a résumé and two references to careers@harlowmed.com by March 15.",
+      "questions": [
+        {
+          "number": 149,
+          "answer": "A",
+          "content": "What is one responsibility of the position?",
+          "options": [
+            "Settling problems with invoices",
+            "Training hospital staff",
+            "Delivering medical supplies to clinics",
+            "Designing inventory software"
+          ],
+          "explanation": "Đoạn 1: 'resolve billing discrepancies' = xử lý sai lệch hoá đơn (A).",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 150,
+          "answer": "C",
+          "content": "What is NOT listed as a benefit of the job?",
+          "options": [
+            "Help with the cost of education",
+            "A competitive wage",
+            "Additional vacation days",
+            "Support for commuting expenses"
+          ],
+          "explanation": "Đoạn 3 liệt kê 'competitive salary, a transportation allowance, and tuition reimbursement'; không nhắc ngày nghỉ phép thêm → (C).",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 151,
+          "answer": "D",
+          "content": "What is suggested about the position?",
+          "options": [
+            "It is based inside a hospital.",
+            "It requires a degree in a medical field.",
+            "It is a temporary assignment.",
+            "It sometimes involves weekend work."
+          ],
+          "explanation": "Đoạn 3: 'occasional Saturday shifts during the end-of-quarter inventory count' → đôi khi làm cuối tuần (D). Kiến thức y khoa chỉ là 'preferred but not required'.",
+          "tags": [
+            "inference"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Ahmed Rahimi [8:52 A.M.]\nHas everyone received the login details for the new expense system? It goes live on Monday.\nSofia Bianchi [8:54 A.M.]\nI got mine, but the link in the e-mail takes me to an error page.\nKenji Watanabe [8:55 A.M.]\nSame here. I assumed the site just wasn't open yet.\nAhmed Rahimi [8:57 A.M.]\nThat's my fault. I sent the test address instead of the live one. I'll send a corrected message within the hour.\nOlga Petrova [8:58 A.M.]\nWhile you're at it, could you attach the user guide? The training session moved so fast that I missed half of it.\nAhmed Rahimi [9:00 A.M.]\nWill do. And remember, receipts from this month still go through the old forms.\nSofia Bianchi [9:01 A.M.]\nGood to know. I have a stack of taxi receipts from the Denver trip.",
+      "questions": [
+        {
+          "number": 152,
+          "answer": "C",
+          "content": "What is the discussion mainly about?",
+          "options": [
+            "Travel arrangements for a trip to Denver",
+            "The schedule for an upcoming training session",
+            "The launch of a new reimbursement system",
+            "The redesign of a company Web site"
+          ],
+          "explanation": "Cả cuộc chat xoay quanh 'the new expense system' sắp vận hành (đăng nhập, hướng dẫn, biên lai) → (C).",
+          "tags": [
+            "main-idea"
+          ]
+        },
+        {
+          "number": 153,
+          "answer": "B",
+          "content": "At 8:57 A.M., what does Mr. Rahimi most likely mean when he writes, \"That's my fault\"?",
+          "options": [
+            "He forgot to schedule the training.",
+            "He sent an incorrect link.",
+            "He launched the system too early.",
+            "He misplaced some receipts."
+          ],
+          "explanation": "Ngay sau đó anh viết 'I sent the test address instead of the live one' → anh đã gửi nhầm đường link (B).",
+          "tags": [
+            "implied-meaning"
+          ]
+        },
+        {
+          "number": 154,
+          "answer": "A",
+          "content": "What does Ms. Petrova ask for?",
+          "options": [
+            "Written instructions",
+            "An extended deadline",
+            "A new password",
+            "A second training session"
+          ],
+          "explanation": "Ms. Petrova (8:58): 'could you attach the user guide?' → tài liệu hướng dẫn (A).",
+          "tags": [
+            "request-suggestion"
+          ]
+        },
+        {
+          "number": 155,
+          "answer": "B",
+          "content": "What will Ms. Bianchi most likely do with her taxi receipts?",
+          "options": [
+            "Throw them away",
+            "Submit them using the old forms",
+            "Enter them into the new expense system on Monday",
+            "Give them to Mr. Watanabe"
+          ],
+          "explanation": "Mr. Rahimi nhắc biên lai tháng này vẫn dùng mẫu cũ; Ms. Bianchi đáp 'Good to know' và nhắc tới biên lai taxi chuyến Denver → chị sẽ nộp bằng mẫu cũ (B).",
+          "tags": [
+            "inference"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "To: All Tenants, Ridgeview Business Park\nFrom: Facilities Management\nDate: September 2\nSubject: Parking lot resurfacing\nBeginning Monday, September 15, the north parking lot will be resurfaced. — [1] — The work is expected to take five business days, weather permitting.\nDuring this time, tenants and visitors may park in the south lot or in the overflow area behind Building D. — [2] — A shuttle will run between the overflow area and the main entrance every ten minutes from 7:00 A.M. to 7:00 P.M.\nVehicles left in the north lot after 6:00 P.M. on Friday, September 12, will be towed at the owner's expense. — [3] — We appreciate your cooperation and apologize for any inconvenience. — [4] —",
+      "questions": [
+        {
+          "number": 156,
+          "answer": "B",
+          "content": "What is the purpose of the e-mail?",
+          "options": [
+            "To introduce a new facilities manager",
+            "To notify tenants of upcoming maintenance work",
+            "To announce a new shuttle route to the downtown area",
+            "To request feedback on parking fees"
+          ],
+          "explanation": "Câu đầu: 'the north parking lot will be resurfaced' từ 15/9 → báo trước công việc bảo trì (B).",
+          "tags": [
+            "main-idea"
+          ]
+        },
+        {
+          "number": 157,
+          "answer": "B",
+          "content": "The word \"run\" in paragraph 2, line 2, is closest in meaning to",
+          "options": [
+            "extend",
+            "operate",
+            "hurry",
+            "manage"
+          ],
+          "explanation": "'A shuttle will run ... every ten minutes' = xe đưa đón sẽ chạy/hoạt động → operate (B). 'manage' là nghĩa của run khi nói về điều hành công ty.",
+          "tags": [
+            "vocab-in-context"
+          ]
+        },
+        {
+          "number": 158,
+          "answer": "C",
+          "content": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"Signs will be posted to remind drivers of this deadline.\"",
+          "options": [
+            "[1]",
+            "[2]",
+            "[3]",
+            "[4]"
+          ],
+          "explanation": "'this deadline' phải nối với mốc '6:00 P.M. on Friday, September 12' ngay trước đó (xe để lại sẽ bị kéo) → vị trí [3] (C).",
+          "tags": [
+            "sentence-insertion"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Web page\nLakeshore Grand Hotel — Meeting Rooms\nWillow Room — up to 20 guests — half day $250\nCedar Room — up to 40 guests — half day $400\nMaple Hall — up to 80 guests — half day $650\nBirch Ballroom — up to 150 guests — half day $1,100\nAll rates include a projector and screen. Catering is available from our on-site kitchen.\nPlease note: Maple Hall will be closed for renovation from May 1 to June 15.\n\nE-mail\nFrom: Rachel Kim <rkim@nortonbiotech.com>\nTo: events@lakeshoregrand.com\nDate: April 20\nSubject: Room inquiry\nHello,\nWe are organizing a half-day product briefing for about 70 sales representatives on May 22. Ideally, we would hold it in a single room so that everyone can watch the demonstration at once.\nPlease let me know which options are available and whether your kitchen can provide a light breakfast for the group. We will also need a microphone for the speaker.\nRachel Kim, Event Planner, Norton Biotech",
+      "questions": [
+        {
+          "number": 176,
+          "answer": "C",
+          "content": "What is indicated about the meeting rooms?",
+          "options": [
+            "They can be rented only for full-day events.",
+            "They are located in separate buildings.",
+            "Their rates include presentation equipment.",
+            "All of them are available in May."
+          ],
+          "explanation": "Trang web: 'All rates include a projector and screen' → giá đã gồm thiết bị trình chiếu (C). Maple Hall đóng cửa tháng 5 nên không phải mọi phòng đều trống.",
+          "tags": [
+            "detail",
+            "multi-passage"
+          ]
+        },
+        {
+          "number": 177,
+          "answer": "D",
+          "content": "What is the purpose of Ms. Kim's e-mail?",
+          "options": [
+            "To confirm a reservation",
+            "To request a refund",
+            "To complain about a meal served at the hotel",
+            "To ask about hosting an event"
+          ],
+          "explanation": "Ms. Kim mô tả buổi giới thiệu sản phẩm và hỏi 'which options are available' → hỏi về việc tổ chức sự kiện (D).",
+          "tags": [
+            "main-idea",
+            "multi-passage"
+          ]
+        },
+        {
+          "number": 178,
+          "answer": "D",
+          "content": "Which room will the hotel most likely offer Ms. Kim?",
+          "options": [
+            "Willow Room",
+            "Maple Hall",
+            "Cedar Room",
+            "Birch Ballroom"
+          ],
+          "explanation": "Cần 1 phòng cho khoảng 70 người ngày 22/5. Maple Hall (80 khách) đóng cửa 1/5–15/6, nên chỉ còn Birch Ballroom (150 khách) → (D).",
+          "tags": [
+            "inference",
+            "multi-passage"
+          ]
+        },
+        {
+          "number": 179,
+          "answer": "A",
+          "content": "What is suggested about Norton Biotech's event?",
+          "options": [
+            "It will include a product demonstration.",
+            "It will take place in June.",
+            "It will last two days.",
+            "It will be open to members of the public."
+          ],
+          "explanation": "E-mail: 'so that everyone can watch the demonstration at once' → sự kiện có phần trình diễn (A).",
+          "tags": [
+            "inference",
+            "multi-passage"
+          ]
+        },
+        {
+          "number": 180,
+          "answer": "A",
+          "content": "What does Ms. Kim ask about?",
+          "options": [
+            "Whether food can be provided",
+            "The hotel's policy on cancellations",
+            "Directions to the hotel",
+            "The cost of parking"
+          ],
+          "explanation": "E-mail: 'whether your kitchen can provide a light breakfast for the group' → hỏi về đồ ăn (A).",
+          "tags": [
+            "detail",
+            "multi-passage"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "E-mail\nFrom: Victor Hale\nTo: All Staff, Dunmore Legal\nDate: February 3\nSubject: Office move\nAs many of you know, our lease on the third-floor office ends on March 31, and we will be moving to the Kessler Building on Grant Avenue. To make the move go smoothly, I have requested quotes from three moving companies. Please label all personal items with your name and department by March 25. IT equipment will be packed separately by our technology team.\n\nMoving Quotes\nSwiftMove — $4,800 — weekend moves cost an extra $500\nCarter & Sons — $5,200 — packing materials included\nMetro Relocation — $4,500 — first available date: April 10\n\nE-mail\nFrom: Victor Hale\nTo: Linda Grey, Managing Partner\nDate: February 10\nSubject: Mover recommendation\nLinda,\nI recommend that we hire the least expensive company that can complete the move before our lease expires. They have also agreed to do the job on Saturday, March 29, so that no client appointments will be disrupted. With the weekend charge, the total ends up $100 higher than another quote we received, but this company's customer reviews are far better.\nVictor",
+      "questions": [
+        {
+          "number": 186,
+          "answer": "A",
+          "content": "Why is Dunmore Legal moving?",
+          "options": [
+            "Its lease is about to end.",
+            "It is hiring more staff.",
+            "Its current building is being renovated.",
+            "It has merged with another firm."
+          ],
+          "explanation": "E-mail 1: 'our lease on the third-floor office ends on March 31' → hợp đồng thuê sắp hết (A).",
+          "tags": [
+            "detail",
+            "multi-passage"
+          ]
+        },
+        {
+          "number": 187,
+          "answer": "C",
+          "content": "What are employees asked to do?",
+          "options": [
+            "Work on a Saturday",
+            "Pack the computer equipment",
+            "Mark their belongings",
+            "Collect quotes from movers"
+          ],
+          "explanation": "E-mail 1: 'Please label all personal items with your name and department' → dán nhãn đồ cá nhân (C). Thiết bị IT do đội công nghệ đóng gói.",
+          "tags": [
+            "request-suggestion",
+            "multi-passage"
+          ]
+        },
+        {
+          "number": 188,
+          "answer": "B",
+          "content": "Which company does Mr. Hale recommend?",
+          "options": [
+            "Metro Relocation",
+            "SwiftMove",
+            "Grant Avenue Movers",
+            "Carter & Sons"
+          ],
+          "explanation": "Công ty rẻ nhất là Metro Relocation nhưng sớm nhất 10/4, sau ngày hết hợp đồng 31/3. Trong hai công ty còn lại, SwiftMove rẻ hơn ($4,800) và có phụ phí cuối tuần đúng như e-mail 2 nhắc → (B).",
+          "tags": [
+            "inference",
+            "multi-passage"
+          ]
+        },
+        {
+          "number": 189,
+          "answer": "D",
+          "content": "How much will the recommended move cost in total?",
+          "options": [
+            "$4,500",
+            "$4,800",
+            "$5,200",
+            "$5,300"
+          ],
+          "explanation": "SwiftMove $4,800 + phụ phí cuối tuần $500 (chuyển vào thứ Bảy 29/3) = $5,300, đúng là cao hơn báo giá Carter & Sons $100 → (D).",
+          "tags": [
+            "detail",
+            "multi-passage"
+          ]
+        },
+        {
+          "number": 190,
+          "answer": "C",
+          "content": "Why does Mr. Hale want the move to take place on a Saturday?",
+          "options": [
+            "Because the new building is closed on weekdays",
+            "To receive a lower price",
+            "To avoid interfering with client meetings",
+            "Because the IT team is free that day"
+          ],
+          "explanation": "E-mail 2: 'so that no client appointments will be disrupted' → tránh ảnh hưởng lịch hẹn với khách (C). Làm cuối tuần còn tốn thêm $500 nên không rẻ hơn.",
+          "tags": [
+            "detail",
+            "multi-passage"
+          ]
+        }
+      ]
+    }
+  ]
+}

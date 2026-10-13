@@ -1,0 +1,212 @@
+[
+  {
+    "part": 4,
+    "audio": "p4_q71-73.m4a",
+    "transcript": "Hello, this message is for Gina Romano. This is Victor from the IT help desk returning your call about your laptop. I understand that it's been shutting down unexpectedly whenever you open large spreadsheets. Based on what you described, the problem is most likely the battery, which is over four years old. We have replacement batteries in stock, so I can install a new one today. The repair takes about thirty minutes, but you'll need to back up your files first, just in case. Please bring the laptop to our office on the second floor any time before five. If that's not convenient, call me back at extension two-two-one-six and we'll find another time.",
+    "questions": [
+      {
+        "number": 71,
+        "answer": "A",
+        "content": "What problem does the speaker mention?",
+        "options": [
+          "A computer shuts down.",
+          "A password has expired.",
+          "A spreadsheet contains errors.",
+          "A printer is not connected."
+        ],
+        "explanation": "'it's been shutting down unexpectedly' → máy tính tự tắt bất ngờ (A). 'spreadsheets' chỉ là lúc lỗi xảy ra, không phải bảng tính bị lỗi (C).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 72,
+        "answer": "B",
+        "content": "What does the speaker ask the listener to do before the repair?",
+        "options": [
+          "Purchase a new battery",
+          "Back up her files",
+          "Fill out a request form",
+          "Restart her computer"
+        ],
+        "explanation": "'you'll need to back up your files first' → sao lưu (lưu bản sao) tệp (B). Pin đã có sẵn trong kho nên không cần mua (A).",
+        "tags": [
+          "request-suggestion"
+        ]
+      },
+      {
+        "number": 73,
+        "answer": "B",
+        "content": "According to the speaker, what is the likely cause of the problem?",
+        "options": [
+          "A software update",
+          "An old battery",
+          "A damaged screen",
+          "A virus"
+        ],
+        "explanation": "'the problem is most likely the battery, which is over four years old' → pin cũ (B).",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 4,
+    "audio": "p4_q74-76.m4a",
+    "transcript": "Good evening, and welcome to the third session of our Small Business Finance series. Tonight's speaker is Dr. Helen Park, who has advised hundreds of start-up companies on managing cash flow. Dr. Park's book on budgeting for new businesses was published last spring, and it's already in its fourth printing. That tells you something. After her talk, Dr. Park will take questions from the audience, so please write yours on the cards that were handed out at the entrance. Copies of her book are also available at the table in the back, and she's kindly agreed to sign them at the end of the evening.",
+    "questions": [
+      {
+        "number": 74,
+        "answer": "B",
+        "content": "What is the topic of the seminar series?",
+        "options": [
+          "Marketing for start-up companies",
+          "Finances for small companies",
+          "Hiring new employees",
+          "Publishing a book"
+        ],
+        "explanation": "'our Small Business Finance series' → quản lý tài chính cho doanh nghiệp nhỏ (B).",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 75,
+        "answer": "A",
+        "content": "Why does the speaker say, \"That tells you something\"?",
+        "options": [
+          "To show that a book sells well",
+          "To ask the audience for feedback",
+          "To explain a printing error",
+          "To introduce the evening's speaker"
+        ],
+        "explanation": "Ngay trước đó: sách xuất bản mùa xuân năm ngoái đã in lần thứ tư → câu nói hàm ý cuốn sách rất được ưa chuộng (A).",
+        "tags": [
+          "implied-meaning"
+        ]
+      },
+      {
+        "number": 76,
+        "answer": "A",
+        "content": "What are listeners asked to do?",
+        "options": [
+          "Write down their questions",
+          "Buy tickets at the entrance",
+          "Sign up for the next session",
+          "Turn off their mobile phones"
+        ],
+        "explanation": "'please write yours on the cards that were handed out at the entrance' → viết câu hỏi lên thẻ (A). 'entrance' chỉ là nơi phát thẻ (B).",
+        "tags": [
+          "request-suggestion"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 4,
+    "audio": "p4_q77-79.m4a",
+    "transcript": "Before we wrap up today's staff meeting, I have an update about business travel. Starting next month, all travel expenses will be submitted through our new online system instead of on paper forms. The system automatically checks receipts against company policy, so reimbursements should be processed within five business days rather than three weeks. To help everyone get used to it, the finance team will hold a short demonstration this Thursday at two in the main conference room. If you have any trips planned for next month, please book them through our approved travel agency, because the system will only accept bookings made there. I'll e-mail you the agency's contact details after the meeting.",
+    "questions": [
+      {
+        "number": 77,
+        "answer": "A",
+        "content": "What is the main purpose of the announcement?",
+        "options": [
+          "To introduce a new expense system",
+          "To approve a travel budget",
+          "To announce a promotion",
+          "To reschedule the next staff meeting"
+        ],
+        "explanation": "Nội dung chính: chi phí công tác sẽ nộp qua 'our new online system' → giới thiệu hệ thống chi phí mới (A).",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 78,
+        "answer": "B",
+        "content": "According to the speaker, what benefit will the change bring?",
+        "options": [
+          "Lower travel costs",
+          "Quicker reimbursement",
+          "More flexible schedules",
+          "Fewer business trips"
+        ],
+        "explanation": "'reimbursements should be processed within five business days rather than three weeks' → hoàn tiền nhanh hơn (B).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 79,
+        "answer": "B",
+        "content": "What will the speaker send after the meeting?",
+        "options": [
+          "A training manual",
+          "An agency's contact details",
+          "A list of company-approved hotels",
+          "Copies of receipts"
+        ],
+        "explanation": "'I'll e-mail you the agency's contact details after the meeting' → thông tin liên hệ của đại lý (B).",
+        "tags": [
+          "next-action"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 4,
+    "audio": "p4_q80-82.m4a",
+    "image": "p4_q80-82_graphic.png",
+    "transcript": "Thanks for joining this quick meeting. I've put up a chart showing the average number of calls our help desk received each day last month. As you can see, demand varies quite a bit across the week. To reduce wait times, management has approved hiring a part-time technician, who will work only on our busiest day. Interviews start next week. In the meantime, I'd like to try something else. Many of our calls are about resetting passwords, so I've asked Kenji to write a short guide that employees can follow on their own. He'll post it on the intranet by Wednesday. If it works, it should cut the number of calls significantly.",
+    "questions": [
+      {
+        "number": 80,
+        "answer": "A",
+        "content": "Who most likely are the listeners?",
+        "options": [
+          "Help desk staff",
+          "Sales representatives",
+          "Job applicants",
+          "Software developers"
+        ],
+        "explanation": "Người nói trình bày số cuộc gọi 'our help desk received' và cách giảm thời gian chờ → người nghe là nhân viên bộ phận hỗ trợ (A).",
+        "tags": [
+          "speaker-identity"
+        ]
+      },
+      {
+        "number": 81,
+        "answer": "D",
+        "content": "Look at the graphic. On which day will the part-time technician work?",
+        "options": [
+          "Monday",
+          "Tuesday",
+          "Thursday",
+          "Friday"
+        ],
+        "explanation": "Kỹ thuật viên bán thời gian 'will work only on our busiest day'; theo biểu đồ, thứ Sáu có nhiều cuộc gọi nhất (140) → (D).",
+        "tags": [
+          "graphic",
+          "inference"
+        ]
+      },
+      {
+        "number": 82,
+        "answer": "B",
+        "content": "What will Kenji do by Wednesday?",
+        "options": [
+          "Interview a candidate",
+          "Post a guide online",
+          "Reset employee passwords",
+          "Update a work schedule"
+        ],
+        "explanation": "Kenji viết hướng dẫn tự đặt lại mật khẩu và 'He'll post it on the intranet by Wednesday' → đăng hướng dẫn lên mạng nội bộ (B).",
+        "tags": [
+          "next-action"
+        ]
+      }
+    ]
+  }
+]

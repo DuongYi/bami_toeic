@@ -1,0 +1,264 @@
+[
+  {
+    "part": 3,
+    "audio": "p3_q32-34.m4a",
+    "transcript": "W: Hi, Tom. The shipment of packaging materials from Northfield Supplies just came in, but about half the boxes are the wrong size.\nM: Really? We need those for the Ridgeway order that goes out on Friday.\nW: I know. I called Northfield, and they said they can't send the correct boxes until next Wednesday.\nM: Next Wednesday? That's cutting it close.\nW: Actually, I was thinking we could ask Lakeside Packaging. They're more expensive, but they deliver within two days.\nM: Let's do that. I'll get approval from the finance manager for the extra cost this afternoon.\nW: Great. I'll call Lakeside and request a quote right away.",
+    "questions": [
+      {
+        "number": 32,
+        "answer": "A",
+        "content": "What problem does the woman report?",
+        "options": [
+          "Some boxes have incorrect measurements",
+          "A shipment was damaged during transport",
+          "An order was sent to another warehouse",
+          "A supplier increased its prices"
+        ],
+        "explanation": "Người phụ nữ nói 'about half the boxes are the wrong size' (một nửa số hộp sai kích thước) → (A). Hàng không bị hỏng (B), không giao nhầm kho (C); 'more expensive' nói về nhà cung cấp khác chứ không phải tăng giá (D).",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 33,
+        "answer": "A",
+        "content": "Why does the man say, \"That's cutting it close\"?",
+        "options": [
+          "He is worried about meeting a deadline",
+          "He thinks the new boxes are far too small",
+          "He wants to cancel an order",
+          "He doubts the supplier's reliability"
+        ],
+        "explanation": "Đơn Ridgeway phải gửi thứ Sáu nhưng hộp đúng cỡ thứ Tư tuần sau mới tới → 'That's cutting it close' (sát nút quá) thể hiện lo trễ hạn → (A). (B) lặp ý 'wrong size', (C) và (D) không được nhắc.",
+        "tags": [
+          "implied-meaning"
+        ]
+      },
+      {
+        "number": 34,
+        "answer": "A",
+        "content": "What will the man do this afternoon?",
+        "options": [
+          "Seek authorization for an expense",
+          "Contact a different supplier",
+          "Inspect the damaged boxes",
+          "Revise the delivery schedule for Friday"
+        ],
+        "explanation": "Người đàn ông nói 'I'll get approval from the finance manager for the extra cost this afternoon' → xin duyệt chi phí → (A). Gọi Lakeside là việc của người phụ nữ (B); hộp không bị hỏng (C); không nói sửa lịch giao (D).",
+        "tags": [
+          "next-action"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "audio": "p3_q35-37.m4a",
+    "transcript": "M1: Thanks for coming in, Ms. Alvarez. This is my colleague Ken, who manages our commercial listings.\nW: Nice to meet you both. As I mentioned on the phone, my bakery has outgrown its current space, so I'm looking for somewhere bigger downtown.\nM2: We have a former restaurant on Harbor Street that might suit you. The kitchen equipment is already installed.\nW: That sounds promising. What about parking, though? Most of my customers drive in.\nM2: There's a public garage across the street, and we could negotiate validated parking with the owner.\nM1: The landlord is also offering three months of reduced rent to new tenants who sign before the end of June.\nW: In that case, I'd like to see the space this week if possible.\nM2: I can take you there tomorrow at ten.",
+    "questions": [
+      {
+        "number": 35,
+        "answer": "A",
+        "content": "Who most likely is the woman?",
+        "options": [
+          "A business owner",
+          "A real estate agent",
+          "A restaurant critic",
+          "A building inspector"
+        ],
+        "explanation": "Cô nói 'my bakery has outgrown its current space' → chủ một tiệm bánh đang tìm mặt bằng → (A). Hai người đàn ông mới là môi giới (B); 'restaurant' chỉ là mặt bằng cũ (C).",
+        "tags": [
+          "speaker-identity"
+        ]
+      },
+      {
+        "number": 36,
+        "answer": "A",
+        "content": "What does the woman ask about?",
+        "options": [
+          "Parking availability",
+          "How large the kitchen is",
+          "How much the monthly rent is",
+          "How long the lease lasts"
+        ],
+        "explanation": "Cô hỏi 'What about parking, though?' vì khách thường lái xe tới → (A). 'Kitchen' được nhắc nhưng cô không hỏi kích thước (B); tiền thuê do người đàn ông tự nói (C).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 37,
+        "answer": "A",
+        "content": "What does one of the men say the landlord is offering?",
+        "options": [
+          "A temporary discount on rent",
+          "Free kitchen equipment",
+          "A year of free parking in a garage",
+          "A shorter lease term"
+        ],
+        "explanation": "'three months of reduced rent to new tenants who sign before the end of June' → giảm tiền thuê có thời hạn → (A). Thiết bị bếp đã có sẵn chứ không phải ưu đãi (B); vé giữ xe chỉ là 'could negotiate' (C).",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "audio": "p3_q38-40.m4a",
+    "transcript": "M: Lauren, have you finalized the seating chart for the Kensington awards dinner?\nW: Almost. But I just found out the hotel double-booked the Grand Ballroom, so we've been moved to Riverside Hall.\nM: Isn't that room quite a bit smaller?\nW: It is. It holds a hundred and eighty, and we've got two hundred guests confirmed.\nM: Hmm. Well, the client did say the awards ceremony should be the focus.\nW: Good point. We could set up the cocktail reception on the terrace instead, which would free up space inside.\nM: I'll call the hotel and make sure the terrace is available that evening.\nW: And ask whether they can provide outdoor heaters, just in case.",
+    "questions": [
+      {
+        "number": 38,
+        "answer": "A",
+        "content": "What problem does the woman mention?",
+        "options": [
+          "An event has been moved to a smaller space",
+          "A guest list has not been confirmed",
+          "An award has not been delivered",
+          "A client has decided to change the event date"
+        ],
+        "explanation": "Khách sạn đặt trùng Grand Ballroom nên chuyển sang Riverside Hall, chỉ chứa 180 người trong khi có 200 khách → (A). Danh sách khách đã xác nhận (B); không nói tới giải thưởng bị giao trễ (C) hay đổi ngày (D).",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 39,
+        "answer": "A",
+        "content": "What does the man imply when he says, \"the client did say the awards ceremony should be the focus\"?",
+        "options": [
+          "Other parts of the event could be adjusted",
+          "The ceremony should be shortened",
+          "Fewer guests should be invited to the dinner",
+          "The seating chart is no longer needed"
+        ],
+        "explanation": "Ý anh: phần chính là lễ trao giải, các phần khác có thể linh hoạt; ngay sau đó cô đề xuất dời tiệc cocktail ra sân hiên → (A). Không có ý rút ngắn lễ (B) hay cắt khách (C).",
+        "tags": [
+          "implied-meaning"
+        ]
+      },
+      {
+        "number": 40,
+        "answer": "A",
+        "content": "What does the woman ask the man to find out about?",
+        "options": [
+          "Equipment to keep guests warm",
+          "Extra chairs for the hall",
+          "The price of a larger ballroom",
+          "Additional catering staff"
+        ],
+        "explanation": "Cô nhờ hỏi 'whether they can provide outdoor heaters' (máy sưởi ngoài trời) → thiết bị giữ ấm cho khách → (A). Các phương án khác không được nhắc.",
+        "tags": [
+          "request-suggestion"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "audio": "p3_q41-43.m4a",
+    "transcript": "W: Good morning, Westbrook Family Clinic. How can I help you?\nM: Hi, this is Raymond Cho. I have an appointment with Dr. Lin at eleven, but my train's been delayed, so I might be about twenty minutes late.\nW: Let me take a look. Dr. Lin's next patient is at eleven thirty, so I'm afraid that wouldn't leave enough time.\nM: Oh, I see. Is there anything later today?\nW: She has an opening at four fifteen. Alternatively, Dr. Mensah could see you at eleven forty-five.\nM: I'd rather stay with Dr. Lin. I'll take the four fifteen.\nW: All right, you're booked. And since it's been over a year since your last visit, please bring your updated insurance card.\nM: Will do. Thanks.",
+    "questions": [
+      {
+        "number": 41,
+        "answer": "A",
+        "content": "Why is the man calling?",
+        "options": [
+          "To explain that he may not arrive on time",
+          "To ask about the schedule for the morning train",
+          "To update his insurance information",
+          "To make his first appointment"
+        ],
+        "explanation": "Anh nói tàu bị trễ nên 'I might be about twenty minutes late' → báo có thể đến không đúng giờ → (A). 'train' chỉ là lý do (B); thẻ bảo hiểm do lễ tân nhắc (C); anh đã có lịch hẹn sẵn (D).",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 42,
+        "answer": "A",
+        "content": "What does the man decide to do?",
+        "options": [
+          "See his regular doctor later in the day",
+          "See another doctor later that same morning",
+          "Come back the following day",
+          "Take an earlier train"
+        ],
+        "explanation": "'I'd rather stay with Dr. Lin. I'll take the four fifteen.' → gặp bác sĩ quen vào chiều cùng ngày → (A). Bác sĩ Mensah lúc 11:45 là phương án bị từ chối (B).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 43,
+        "answer": "A",
+        "content": "What does the woman ask the man to bring?",
+        "options": [
+          "A current insurance document",
+          "A form of photo identification",
+          "A list of his medications",
+          "A payment for a missed visit"
+        ],
+        "explanation": "'please bring your updated insurance card' → giấy tờ bảo hiểm mới nhất → (A). Các giấy tờ khác không được nhắc.",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "audio": "p3_q44-46.m4a",
+    "transcript": "M: Priya, the Hartwell order was just increased by two thousand units, and they still want it by the end of next week.\nW: That's a big jump. Which line are we running it on?\nM: Line 3. But according to the schedule, it's down for maintenance one day this week.\nW: Could we push that maintenance to next month?\nM: Not really. The inspection has already been postponed once, and it's required by the safety code.\nW: OK, then let's add a Saturday shift on Line 3 to make up for the lost day.\nM: Good idea. I'll ask the floor supervisor to find out who's available to work overtime.",
+    "image": "p3_q44-46_graphic.png",
+    "questions": [
+      {
+        "number": 44,
+        "answer": "A",
+        "content": "What has changed about the Hartwell order?",
+        "options": [
+          "The number of units has gone up",
+          "The deadline has been moved earlier",
+          "The product design has been revised",
+          "Part of the order has been canceled"
+        ],
+        "explanation": "'the Hartwell order was just increased by two thousand units' → số lượng tăng → (A). Hạn chót vẫn giữ nguyên 'still want it by the end of next week' (B).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 45,
+        "answer": "C",
+        "content": "Look at the graphic. On which day will the production line for the Hartwell order be unavailable?",
+        "options": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday"
+        ],
+        "explanation": "Đơn chạy trên 'Line 3'; theo lịch, Line 3 bảo trì vào thứ Tư → (C). Thứ Hai, thứ Ba, thứ Năm là lịch bảo trì của các dây chuyền khác.",
+        "tags": [
+          "graphic",
+          "detail"
+        ]
+      },
+      {
+        "number": 46,
+        "answer": "A",
+        "content": "What will the man most likely do next?",
+        "options": [
+          "Find workers willing to work extra hours",
+          "Ask the inspector to come by at a later date",
+          "Move the maintenance to next month",
+          "Call the client to extend the deadline"
+        ],
+        "explanation": "'I'll ask the floor supervisor to find out who's available to work overtime' → tìm người làm thêm giờ → (A). Việc dời bảo trì đã bị bác (B, C).",
+        "tags": [
+          "next-action"
+        ]
+      }
+    ]
+  }
+]

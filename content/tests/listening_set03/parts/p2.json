@@ -1,0 +1,227 @@
+[
+  {
+    "part": 2,
+    "audio": "p2_q7.m4a",
+    "transcript": "Where should we store the extra pallets from this morning's delivery?\n(A) The delivery truck left at nine.\n(B) Bay 4 was cleared out yesterday.\n(C) About thirty of them.",
+    "questions": [
+      {
+        "number": 7,
+        "answer": "B",
+        "explanation": "Hỏi 'Where' (để ở đâu) → trả lời gián tiếp: khu 'Bay 4' vừa được dọn trống hôm qua, ngụ ý để ở đó → (B). (A) lặp từ 'delivery' nhưng nói về giờ xe đi, (C) trả lời số lượng.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q8.m4a",
+    "transcript": "Haven't the contractors finished the lobby renovation yet?\n(A) They're waiting on the floor tiles.\n(B) Yes, the lobby is on the first floor.\n(C) A renovation budget.",
+    "questions": [
+      {
+        "number": 8,
+        "answer": "A",
+        "explanation": "Câu hỏi phủ định về việc đã xong chưa → 'They're waiting on the floor tiles' (còn chờ gạch lát sàn) ngụ ý chưa xong → (A). (B) lặp 'lobby' nhưng nói vị trí, (C) chỉ lặp 'renovation'.",
+        "tags": [
+          "yes-no"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q9.m4a",
+    "transcript": "When does the venue need our final guest count?\n(A) About two hundred guests.\n(B) In the main ballroom.\n(C) I'll check the contract tonight.",
+    "questions": [
+      {
+        "number": 9,
+        "answer": "C",
+        "explanation": "Hỏi 'When' → người trả lời chưa biết, sẽ xem lại hợp đồng tối nay → (C). (A) trả lời số khách (bẫy lặp 'guest'), (B) trả lời địa điểm.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q10.m4a",
+    "transcript": "The new forklift operators start on Monday, don't they?\n(A) Their training was pushed back a week.\n(B) No, the forklift is in the warehouse.\n(C) Every Monday morning.",
+    "questions": [
+      {
+        "number": 10,
+        "answer": "A",
+        "explanation": "Câu hỏi đuôi xác nhận ngày bắt đầu → 'Their training was pushed back a week' (khoá đào tạo bị lùi 1 tuần) ngụ ý không phải thứ Hai này → (A). (B) lặp 'forklift' nói vị trí xe, (C) lặp 'Monday'.",
+        "tags": [
+          "tag-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q11.m4a",
+    "transcript": "Who's handling the open house for the Elm Street property?\n(A) Diane volunteered at yesterday's meeting.\n(B) It's open until six.\n(C) A three-bedroom house.",
+    "questions": [
+      {
+        "number": 11,
+        "answer": "A",
+        "explanation": "Hỏi 'Who' phụ trách buổi mở cửa xem nhà → 'Diane volunteered…' (Diane đã nhận làm) → (A). (B) lặp 'open' nói giờ mở cửa, (C) lặp 'house' mô tả căn nhà.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q12.m4a",
+    "transcript": "Should we ship the samples by air or by ground?\n(A) The client isn't in a hurry.\n(B) Yes, they arrived this morning.\n(C) The shipping department is downstairs.",
+    "questions": [
+      {
+        "number": 12,
+        "answer": "A",
+        "explanation": "Câu hỏi lựa chọn → 'The client isn't in a hurry' (khách không gấp) ngụ ý gửi đường bộ cho rẻ → (A). (B) trả lời Yes cho câu lựa chọn, (C) lặp 'ship' nói vị trí phòng.",
+        "tags": [
+          "choice"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q13.m4a",
+    "transcript": "Could you reschedule my appointment for Thursday afternoon?\n(A) Dr. Patel only sees patients in the mornings that week.\n(B) Yes, I made it last Thursday.\n(C) It takes about thirty minutes.",
+    "questions": [
+      {
+        "number": 13,
+        "answer": "A",
+        "explanation": "Lời đề nghị đổi lịch sang chiều thứ Năm → 'Dr. Patel only sees patients in the mornings that week' ngụ ý không đổi sang buổi chiều được → (A). (B) lặp 'Thursday' nói chuyện quá khứ, (C) nói thời lượng.",
+        "tags": [
+          "request"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q14.m4a",
+    "transcript": "Why is the loading dock closed off?\n(A) Around four o'clock.\n(B) They're repainting the lines this afternoon.\n(C) Please close the door behind you.",
+    "questions": [
+      {
+        "number": 14,
+        "answer": "B",
+        "explanation": "Hỏi 'Why' bãi bốc dỡ bị chặn → 'They're repainting the lines this afternoon' (đang sơn lại vạch kẻ) → (B). (A) trả lời thời gian, (C) lặp âm 'close'.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q15.m4a",
+    "transcript": "Is the projector in Conference Room B working again?\n(A) The technician hasn't come by yet.\n(B) No, it's in Conference Room A.\n(C) Yes, I'm working late tonight.",
+    "questions": [
+      {
+        "number": 15,
+        "answer": "A",
+        "explanation": "Hỏi Yes/No máy chiếu đã chạy lại chưa → 'The technician hasn't come by yet' (thợ chưa tới) ngụ ý vẫn hỏng → (A). (B) lặp 'Conference Room' nói vị trí, (C) lặp 'working' với nghĩa khác.",
+        "tags": [
+          "yes-no"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q16.m4a",
+    "transcript": "The caterer just called to say they're running late.\n(A) Let's move the welcome speech up, then.\n(B) A three-course dinner.\n(C) She called yesterday.",
+    "questions": [
+      {
+        "number": 16,
+        "answer": "A",
+        "explanation": "Câu trần thuật báo bên phục vụ ăn uống đến trễ → phản hồi hợp lý là đề xuất đẩy bài phát biểu chào mừng lên trước → (A). (B) liên tưởng tới đồ ăn, (C) lặp 'called' nhưng sai thời gian.",
+        "tags": [
+          "statement"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q17.m4a",
+    "transcript": "How long will the warehouse inventory take?\n(A) Last year it took the whole weekend.\n(B) In the north warehouse.\n(C) Every item on the list.",
+    "questions": [
+      {
+        "number": 17,
+        "answer": "A",
+        "explanation": "Hỏi 'How long' → trả lời gián tiếp bằng kinh nghiệm năm ngoái mất trọn cuối tuần → (A). (B) lặp 'warehouse' nói địa điểm, (C) nói phạm vi kiểm kê chứ không nói thời gian.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q18.m4a",
+    "transcript": "You've already sent the lease agreement to the tenants, haven't you?\n(A) Legal is still reviewing one clause.\n(B) Yes, they're very good tenants.\n(C) A two-year lease.",
+    "questions": [
+      {
+        "number": 18,
+        "answer": "A",
+        "explanation": "Câu hỏi đuôi xác nhận đã gửi hợp đồng thuê chưa → 'Legal is still reviewing one clause' (pháp chế còn xem 1 điều khoản) ngụ ý chưa gửi → (A). (B) lặp 'tenants' với nội dung không liên quan, (C) lặp 'lease'.",
+        "tags": [
+          "tag-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q19.m4a",
+    "transcript": "Why don't we hire a shuttle service for the conference attendees?\n(A) The hotel is right next to the convention center.\n(B) About fifty attendees.\n(C) Because the bus was too slow.",
+    "questions": [
+      {
+        "number": 19,
+        "answer": "A",
+        "explanation": "Lời đề xuất thuê xe đưa đón → 'The hotel is right next to the convention center' (khách sạn ngay cạnh trung tâm hội nghị) ngụ ý không cần → (A). (B) lặp 'attendees' nói số lượng, (C) trả lời 'Because' như thể 'Why' là câu hỏi lý do.",
+        "tags": [
+          "request"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q20.m4a",
+    "transcript": "Which floor plan did the buyers prefer?\n(A) They're coming back on Saturday to decide.\n(B) On the second floor.\n(C) Yes, they did.",
+    "questions": [
+      {
+        "number": 20,
+        "answer": "A",
+        "explanation": "Hỏi 'Which' mặt bằng người mua thích → họ chưa quyết, thứ Bảy quay lại mới chọn → (A). (B) lặp 'floor' nói tầng, (C) trả lời Yes cho câu Wh-.",
+        "tags": [
+          "wh-question"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "audio": "p2_q21.m4a",
+    "transcript": "Patients have been complaining about the long wait at the front desk.\n(A) We're adding a self-check-in kiosk next month.\n(B) The front door is locked.\n(C) About twenty minutes ago.",
+    "questions": [
+      {
+        "number": 21,
+        "answer": "A",
+        "explanation": "Câu trần thuật nêu vấn đề chờ lâu ở quầy lễ tân → phản hồi đưa giải pháp: tháng sau lắp máy tự làm thủ tục → (A). (B) lặp 'front', (C) trả lời thời điểm.",
+        "tags": [
+          "statement"
+        ]
+      }
+    ]
+  }
+]

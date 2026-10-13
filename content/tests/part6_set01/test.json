@@ -1,0 +1,256 @@
+{
+  "title": "Luyện Part 6 · Đề 01",
+  "source": "Bami TOEIC",
+  "description": "Luyện Part 6 mức 600–700: 4 đoạn văn (email, quảng cáo, memo, bài báo) – thì động từ, từ nối, từ loại, đại từ và câu chèn câu.",
+  "is_free": true,
+  "groups": [
+    {
+      "part": 6,
+      "passage": "To: New Volunteers\nFrom: Dana Whitfield, Volunteer Coordinator\nDate: April 3\nSubject: Orientation session\n\nThank you for signing up to volunteer at Fernwood Public Library. Your first orientation session ---(131)--- on Saturday, April 12, from 10:00 A.M. to noon in the Community Room. During the session, our staff will explain how to check out books and assist visitors at the information desk. ---(132)--- Please bring a photo ID so that we can issue your volunteer badge. ---(133)---, parking is limited on weekends, so we encourage you to take the bus or walk if possible. If you are unable to attend, please contact me by April 10 so that I can schedule ---(134)--- for another session. We look forward to working with you.",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "A",
+          "options": [
+            "will be held",
+            "is holding",
+            "was held",
+            "has been held"
+          ],
+          "explanation": "Thư viết ngày April 3, buổi định hướng diễn ra 'on Saturday, April 12' – sự kiện sắp tới và buổi họp 'được tổ chức' (bị động) → (A) 'will be held'. (C), (D) là quá khứ/hoàn thành; (B) chủ động, sai nghĩa.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "C",
+          "options": [
+            "The library was founded more than a century ago.",
+            "Thank you again for your generous donation.",
+            "You will also receive a brief tour of the building.",
+            "Your membership card has been renewed for another year."
+          ],
+          "explanation": "Câu trước liệt kê nội dung buổi định hướng ('our staff will explain how to check out books…'); câu (C) 'also receive a brief tour' bổ sung thêm hoạt động trong buổi đó → (C). (A) lịch sử thư viện, (B) nói về khoản quyên góp, (D) thẻ thành viên – đều lạc mạch thư gửi tình nguyện viên.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "C",
+          "options": [
+            "For example",
+            "However",
+            "In addition",
+            "Therefore"
+          ],
+          "explanation": "Câu trước dặn mang giấy tờ tùy thân, câu sau đưa thêm một lưu ý khác (bãi đỗ xe hạn chế) – quan hệ bổ sung → (C) 'In addition'. Không có ý tương phản (B), quan hệ nguyên nhân – kết quả (D) hay ví dụ (A).",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "B",
+          "options": [
+            "yourself",
+            "you",
+            "your",
+            "yours"
+          ],
+          "explanation": "Sau động từ 'schedule' cần tân ngữ chỉ người nhận lịch: 'schedule you for another session' → (B) 'you'. (C) tính từ sở hữu cần danh từ theo sau; (D) đại từ sở hữu sai nghĩa; (A) phản thân chỉ dùng khi chủ ngữ và tân ngữ là một (chủ ngữ là 'I').",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "Brightline Office Cleaning\n\nIs your workplace ready to impress clients? Brightline Office Cleaning has served businesses in the Lakeview area for over fifteen years. Our clients include law firms, medical clinics, and real estate agencies. Our trained crews work in the evenings, so your employees can work without ---(135)---. We offer daily, weekly, and monthly service plans that can be ---(136)--- to fit any budget. ---(137)--- All of our cleaning products are environmentally friendly and safe for people with allergies. Call 555-0148 today to request a free estimate. New customers who sign a six-month contract ---(138)--- a 15 percent discount on their first month of service. This offer is valid until December 31.",
+      "questions": [
+        {
+          "number": 135,
+          "answer": "B",
+          "options": [
+            "interrupt",
+            "interruption",
+            "interrupted",
+            "interruptive"
+          ],
+          "explanation": "Sau giới từ 'without' cần danh từ → (B) 'interruption' (làm việc mà không bị gián đoạn). (A) động từ, (C) phân từ, (D) tính từ đều không làm tân ngữ của giới từ được.",
+          "tags": [
+            "word-form"
+          ]
+        },
+        {
+          "number": 136,
+          "answer": "B",
+          "options": [
+            "postponed",
+            "adjusted",
+            "reminded",
+            "objected"
+          ],
+          "explanation": "Các gói dịch vụ có thể 'được điều chỉnh để phù hợp với mọi ngân sách' → (B) 'adjusted'. (C) nhắc nhở người, (D) 'object' là nội động từ (object to), (A) hoãn lại – không hợp nghĩa 'to fit any budget'.",
+          "tags": [
+            "vocabulary"
+          ]
+        },
+        {
+          "number": 137,
+          "answer": "A",
+          "options": [
+            "For example, a small office may need only one visit per week.",
+            "Please return the completed survey by Friday.",
+            "Our office will be closed for the national holiday.",
+            "Unfortunately, the position has already been filled."
+          ],
+          "explanation": "Câu trước nêu các gói 'daily, weekly, and monthly'; câu (A) 'For example, a small office may need only one visit per week' minh họa việc chọn gói phù hợp → (A). (C) thông báo nghỉ lễ, (D) tuyển dụng, (B) khảo sát – không liên quan quảng cáo.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 138,
+          "answer": "D",
+          "options": [
+            "receiving",
+            "received",
+            "have received",
+            "will receive"
+          ],
+          "explanation": "Đây là ưu đãi dành cho khách mới sẽ ký hợp đồng – kết quả trong tương lai → (D) 'will receive'. Câu thiếu động từ chính nên (A) V-ing không dùng được; (B), (C) chỉ việc đã xảy ra, sai với lời mời 'Call … today'.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "MEMO\nTo: All Staff, Harlow & Pierce Accounting\nFrom: Raj Mehta, IT Manager\nDate: Monday, June 9\nSubject: E-mail system upgrade\n\nOur company e-mail system will be upgraded this Friday evening. The work will begin at 7:00 P.M. and should be completed ---(139)--- midnight. During this time, you will not be able to send or receive messages. ---(140)--- Before you leave on Friday, please save any important drafts to your computer. When you log in on Monday morning, you ---(141)--- to create a new password. The new system offers more storage space and ---(142)--- spam filtering. A short guide to the new features will be sent to you by e-mail next week. If you have any questions, please contact the IT help desk at extension 204.",
+      "questions": [
+        {
+          "number": 139,
+          "answer": "D",
+          "options": [
+            "since",
+            "among",
+            "during",
+            "by"
+          ],
+          "explanation": "'be completed by + mốc thời gian' = hoàn tất chậm nhất vào lúc đó → (D) 'by midnight'. (A) 'since' cần thì hoàn thành và mốc quá khứ; (C) 'during' đi với khoảng thời gian; (B) 'among' chỉ nhóm người/vật.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 140,
+          "answer": "A",
+          "options": [
+            "We apologize for any inconvenience this may cause.",
+            "Please submit your vacation requests by Friday.",
+            "Your expense report was approved yesterday.",
+            "The new printers have arrived in the supply room."
+          ],
+          "explanation": "Câu trước báo không gửi/nhận được e-mail trong thời gian nâng cấp; câu (A) xin lỗi vì sự bất tiện 'this may cause' – 'this' chỉ đúng việc gián đoạn đó → (A). (D) máy in, (C) báo cáo chi phí, (B) nghỉ phép không liên quan.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 141,
+          "answer": "C",
+          "options": [
+            "have asked",
+            "asking",
+            "will be asked",
+            "were asked"
+          ],
+          "explanation": "'When you log in on Monday morning' là việc sau đợt nâng cấp (tương lai) và nhân viên 'được yêu cầu' tạo mật khẩu (bị động) → (C) 'will be asked'. (D) quá khứ, (A) chủ động hoàn thành, (B) V-ing không làm động từ chính.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 142,
+          "answer": "A",
+          "options": [
+            "improved",
+            "improvement",
+            "improve",
+            "improves"
+          ],
+          "explanation": "Chỗ trống đứng trước danh từ 'spam filtering' và song hành với 'more storage space' → cần tính từ: (A) 'improved' (được cải tiến). (C), (D) động từ; (B) danh từ không bổ nghĩa cho 'filtering' trong cụm này.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "RIVERTON (May 20) — Sunrise Bakery, a family-owned business on Elm Street, will open a second location next month. The new shop, which is located near Riverton Station, will offer the same breads and pastries that have made the original store so popular. ---(143)--- Owner Lucia Moreno said that commuters had often asked her to open a shop closer to the train station. \"Many of our customers pass the station every morning,\" she explained. \"Now they can pick up breakfast on ---(144)--- way to work.\" The new location will also have a small seating area where customers can enjoy coffee. To celebrate the opening, the bakery ---(145)--- free coffee to the first 100 customers on June 14. Ms. Moreno plans to hire ten new employees and is currently ---(146)--- applications.",
+      "questions": [
+        {
+          "number": 143,
+          "answer": "D",
+          "options": [
+            "The train station was built in 1925.",
+            "Ms. Moreno studied finance at a local university.",
+            "However, the original store will close permanently.",
+            "In addition, it will sell sandwiches and salads at lunchtime."
+          ],
+          "explanation": "Câu trước nói cửa hàng mới bán cùng loại bánh như cửa hàng cũ; (D) 'In addition, it will sell sandwiches…' bổ sung thêm mặt hàng, 'it' = the new shop → (D). (C) mâu thuẫn với 'second location' (cửa hàng thứ hai, không đóng cửa hàng cũ); (A), (B) lạc ý.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 144,
+          "answer": "C",
+          "options": [
+            "his",
+            "its",
+            "their",
+            "our"
+          ],
+          "explanation": "Chủ ngữ là 'they' (khách hàng) → 'on their way to work' → (C). (A) số ít nam, (B) chỉ vật, (D) 'our' lệch với chủ ngữ 'they'.",
+          "tags": [
+            "pronoun"
+          ]
+        },
+        {
+          "number": 145,
+          "answer": "B",
+          "options": [
+            "gave",
+            "will give",
+            "is given",
+            "has given"
+          ],
+          "explanation": "Bài báo ngày May 20, lễ khai trương 'on June 14' – sự kiện tương lai, tiệm bánh chủ động tặng cà phê → (B) 'will give'. (A), (D) chỉ việc đã xảy ra; (C) bị động sai nghĩa.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 146,
+          "answer": "D",
+          "options": [
+            "delivering",
+            "attending",
+            "excusing",
+            "accepting"
+          ],
+          "explanation": "Cô Moreno định tuyển 10 nhân viên và 'đang nhận hồ sơ ứng tuyển' → (D) 'accepting applications'. (B) tham dự, (A) giao hàng, (C) tha thứ – không đi với 'applications' theo nghĩa này.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    }
+  ]
+}

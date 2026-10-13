@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+<rect width="800" height="500" fill="#ffffff"/>
+<text x="400" y="60" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="middle" fill="#000">Assembly Line Maintenance Schedule</text>
+<rect x="80" y="90" width="640" height="50" fill="#e6e6e6" stroke="#000" stroke-width="2"/>
+<text x="240" y="124" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#000">Line</text>
+<text x="560" y="124" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#000">Maintenance Day</text>
+<rect x="80" y="140" width="640" height="72" fill="#ffffff" stroke="#000" stroke-width="2"/>
+<line x1="400" y1="140" x2="400" y2="212" stroke="#000" stroke-width="2"/>
+<text x="240" y="186" font-family="Helvetica, Arial, sans-serif" font-size="26" text-anchor="middle" fill="#000">Line 1</text>
+<text x="560" y="186" font-family="Helvetica, Arial, sans-serif" font-size="26" text-anchor="middle" fill="#000">Monday</text>
+<rect x="80" y="212" width="640" height="72" fill="#ffffff" stroke="#000" stroke-width="2"/>
+<line x1="400" y1="212" x2="400" y2="284" stroke="#000" stroke-width="2"/>
+<text x="240" y="258" font-family="Helvetica, Arial, sans-serif" font-size="26" text-anchor="middle" fill="#000">Line 2</text>
+<text x="560" y="258" font-family="Helvetica, Arial, sans-serif" font-size="26" text-anchor="middle" fill="#000">Tuesday</text>
+<rect x="80" y="284" width="640" height="72" fill="#ffffff" stroke="#000" stroke-width="2"/>
+<line x1="400" y1="284" x2="400" y2="356" stroke="#000" stroke-width="2"/>
+<text x="240" y="330" font-family="Helvetica, Arial, sans-serif" font-size="26" text-anchor="middle" fill="#000">Line 3</text>
+<text x="560" y="330" font-family="Helvetica, Arial, sans-serif" font-size="26" text-anchor="middle" fill="#000">Wednesday</text>
+<rect x="80" y="356" width="640" height="72" fill="#ffffff" stroke="#000" stroke-width="2"/>
+<line x1="400" y1="356" x2="400" y2="428" stroke="#000" stroke-width="2"/>
+<text x="240" y="402" font-family="Helvetica, Arial, sans-serif" font-size="26" text-anchor="middle" fill="#000">Line 4</text>
+<text x="560" y="402" font-family="Helvetica, Arial, sans-serif" font-size="26" text-anchor="middle" fill="#000">Thursday</text>
+<line x1="400" y1="90" x2="400" y2="140" stroke="#000" stroke-width="2"/>
+</svg>
