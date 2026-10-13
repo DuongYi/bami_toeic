@@ -4,7 +4,7 @@
     "category": "strategy",
     "title": "Mẹo thi Part 1 (Mô tả tranh & Bẫy Being)",
     "subtitle": "Chiến thuật quan sát, bẫy hành động vs trạng thái & Bẫy vật không tự di chuyển",
-    "read_time_minutes": 7,
+    "read_time_minutes": 9,
     "difficulty": "Cơ bản",
     "tags": [
       "part1",
@@ -20,7 +20,7 @@
         "bullet_points": [
           "Cấu trúc \"is/are being + V3\" diễn tả hành động đang được một NGƯỜI tác động lên đồ vật (ví dụ: \"The car is being repaired\").",
           "Nếu trong tranh KHÔNG có bóng dáng con người mà nghe thấy \"being\" -> loại ngay lập tức!",
-          "Ngoại lệ hiếm hoi: \"The display is being shown\" hoặc cây cối đổ bóng \"Trees are casting shadows\"."
+          "Ngoại lệ: khi trong tranh CÓ người đang làm đúng hành động đó, \"being + V3\" lại đúng (người đang rửa xe -> \"The car is being washed\")."
         ],
         "tips": [
           "Phân biệt: \"is displayed\" (đang được trưng bày sẵn - trạng thái tĩnh) vs \"is being displayed\" (đang có người mang ra trưng bày)."
@@ -37,6 +37,34 @@
         "tips": [
           "Bẫy âm tương đồng: Từ phát âm na ná các vật trong hình nhưng sai nghĩa (vd: \"coffee\" vs \"copy\")."
         ]
+      },
+      {
+        "title": "3. Quy trình làm 1 câu Part 1 (khoảng 5 giây/câu)",
+        "content": "Đề không in sẵn đáp án – bạn chỉ có bức tranh. Quan sát có hệ thống trước khi băng đọc.",
+        "formula": "Trước khi nghe: Ai? – Làm gì? – Đồ vật nổi bật? – Ở đâu?\nTrong khi nghe: đánh dấu đúng / sai cho từng câu (A)–(D)",
+        "bullet_points": [
+          "Tranh 1 người: chú ý động tác tay (holding, reaching for, examining, typing, pointing at).",
+          "Tranh nhiều người: tư thế chung (seated, facing each other, gathered around, walking in a line).",
+          "Tranh không người: vị trí và trạng thái đồ vật (stacked, lined up, hanging, propped against, positioned near).",
+          "Vừa nghe vừa loại: câu nào sai một chi tiết (người, động từ, vật, vị trí) là loại."
+        ],
+        "tips": [
+          "Không nghe được cả câu? Chỉ cần bắt được động từ và danh từ chính rồi so với tranh."
+        ]
+      },
+      {
+        "title": "4. Bẫy thường gặp & cấu trúc mô tả cảnh vật",
+        "content": "Đáp án sai thường đúng một phần: đúng vật nhưng sai hành động, hoặc đúng hành động nhưng sai vật.",
+        "formula": "Cảnh vật (không người): S + have/has been + V3 | There is/are + N + giới từ vị trí",
+        "bullet_points": [
+          "\"Some boxes have been stacked on a cart.\" – trạng thái đã xong, hợp tranh không người.",
+          "Bẫy từ không có trong tranh: nghe \"ladder\" nhưng tranh không có thang -> loại.",
+          "Bẫy âm gần giống: \"walk\" / \"work\", \"copy\" / \"coffee\", \"file\" / \"pile\".",
+          "Bẫy động từ suy diễn: tranh người cầm cốc -> \"He's drinking coffee\" chưa chắc đúng; chỉ mô tả những gì THẤY."
+        ],
+        "tips": [
+          "Ưu tiên câu mô tả trung tính, chắc chắn thấy được; tránh câu suy đoán cảm xúc, ý định hay việc sắp xảy ra."
+        ]
       }
     ],
     "examples": [
@@ -45,6 +73,34 @@
         "vietnamese": "Tranh chỉ có sách xếp ngăn nắp trên kệ, không có người. Đáp án: \"Sách đang được xếp lên kệ.\"",
         "explanation": "Không có người thì không thể có hành động \"being placed\" -> loại ngay đáp án này.",
         "highlight": "being placed on the shelf -> LOẠI",
+        "part_tag": "Part 1"
+      },
+      {
+        "english": "Picture: a woman reaching for a binder on a top shelf. Options include \"She's reaching for a binder.\" and \"She's filing documents into a drawer.\"",
+        "vietnamese": "Tranh: người phụ nữ với tay lấy bìa hồ sơ trên kệ cao. Đáp án gồm \"Cô ấy đang với lấy bìa hồ sơ\" và \"Cô ấy đang cất tài liệu vào ngăn kéo\".",
+        "explanation": "Động tác tay khớp tranh là \"reaching for\"; ngăn kéo không xuất hiện -> loại câu thứ hai.",
+        "highlight": "reaching for -> đúng động tác tay",
+        "part_tag": "Part 1"
+      },
+      {
+        "english": "Picture: chairs stacked against a wall in an empty room. Option: \"Some chairs have been stacked against a wall.\"",
+        "vietnamese": "Tranh: ghế xếp chồng sát tường trong phòng trống. Đáp án: \"Một số ghế đã được xếp chồng sát tường.\"",
+        "explanation": "Hiện tại hoàn thành bị động mô tả trạng thái đã xong -> hợp với tranh không người.",
+        "highlight": "have been stacked -> trạng thái, hợp tranh không người",
+        "part_tag": "Part 1"
+      },
+      {
+        "english": "Picture: a man already wearing a safety helmet. Option: \"He's putting on a helmet.\"",
+        "vietnamese": "Tranh: người đàn ông đã đội sẵn mũ bảo hộ. Đáp án: \"Anh ấy đang đội mũ bảo hộ vào.\"",
+        "explanation": "\"putting on\" là hành động đang đội vào; người trong tranh đã đội rồi -> phải là \"wearing\".",
+        "highlight": "putting on -> sai, đang ở trạng thái wearing",
+        "part_tag": "Part 1"
+      },
+      {
+        "english": "Picture: two people sitting across a desk from each other. Option: \"They're shaking hands.\"",
+        "vietnamese": "Tranh: hai người ngồi đối diện nhau qua bàn làm việc. Đáp án: \"Họ đang bắt tay.\"",
+        "explanation": "Không thấy hành động bắt tay -> loại; câu đúng có thể là \"They're seated across from each other.\"",
+        "highlight": "Sai hành động – chỉ đang ngồi đối diện",
         "part_tag": "Part 1"
       }
     ],
@@ -60,6 +116,66 @@
         ],
         "answer_index": 1,
         "explanation": "\"Being washed\" đòi hỏi phải có người đang rửa xe. Tranh không có người thì loại ngay câu chứa \"being\"."
+      },
+      {
+        "id": "q-strat-p1-2",
+        "question": "Tranh: một người đàn ông đội mũ bảo hộ đang quan sát một cỗ máy. Câu nào mô tả ĐÚNG?",
+        "options": [
+          "He's putting on a helmet.",
+          "He's examining some machinery.",
+          "He's removing his helmet.",
+          "He's repairing a vehicle."
+        ],
+        "answer_index": 1,
+        "explanation": "Người đàn ông đang quan sát máy -> \"examining some machinery\". Anh ấy đã đội mũ (không phải putting on / removing), và không có xe."
+      },
+      {
+        "id": "q-strat-p1-3",
+        "question": "Tranh: nhiều chiếc ghế xếp chồng sát tường, không có người. Câu nào đúng?",
+        "options": [
+          "Some chairs are being stacked.",
+          "Some people are sitting in a row.",
+          "Some chairs have been stacked against a wall.",
+          "A worker is moving some furniture."
+        ],
+        "answer_index": 2,
+        "explanation": "Tranh không người -> loại \"are being stacked\" và các câu có người. \"have been stacked\" mô tả trạng thái -> đúng."
+      },
+      {
+        "id": "q-strat-p1-4",
+        "question": "Trước khi băng đọc các phương án của một bức tranh, việc nên làm nhất là gì?",
+        "options": [
+          "Đọc trước các đáp án in trong đề",
+          "Tô sẵn đáp án A rồi sửa sau",
+          "Nhắm mắt để tập trung nghe",
+          "Quan sát nhanh người, hành động, đồ vật chính và vị trí trong tranh"
+        ],
+        "answer_index": 3,
+        "explanation": "Part 1 không in đáp án; cách hiệu quả là quan sát có hệ thống (ai – làm gì – vật gì – ở đâu) để so khi nghe."
+      },
+      {
+        "id": "q-strat-p1-5",
+        "question": "Tranh: người phụ nữ đang cầm cặp kính trên tay. Bạn nghe: \"The woman is wearing glasses.\" Đánh giá câu này thế nào?",
+        "options": [
+          "Sai, vì kính đang ở trên tay, chưa đeo lên mặt (wearing là trạng thái đã đeo)",
+          "Đúng, vì trong tranh có kính",
+          "Đúng, vì wearing và putting on cùng nghĩa",
+          "Không thể loại vì chủ ngữ đúng"
+        ],
+        "answer_index": 0,
+        "explanation": "\"wearing\" = đang đeo trên người. Kính đang cầm trên tay -> câu sai dù có đúng vật."
+      },
+      {
+        "id": "q-strat-p1-6",
+        "question": "Tranh: một chiếc thuyền buộc ở bến, mặt nước phẳng lặng, không có người. Câu nào khả năng ĐÚNG cao nhất?",
+        "options": [
+          "A boat is being tied to a dock.",
+          "A boat is docked at a pier.",
+          "Passengers are boarding a boat.",
+          "A boat is sailing across the water."
+        ],
+        "answer_index": 1,
+        "explanation": "Không có người -> loại \"is being tied\" và \"Passengers are boarding\". Thuyền đang đậu, không chạy -> \"is docked at a pier\"."
       }
     ]
   },
@@ -68,7 +184,7 @@
     "category": "strategy",
     "title": "Mẹo thi Part 2 (Hỏi - Đáp 25 câu & Bẫy Yes/No)",
     "subtitle": "Quy tắc loại suy câu hỏi Wh-, bẫy từ đồng âm & Mẹo câu trả lời gián tiếp",
-    "read_time_minutes": 7,
+    "read_time_minutes": 9,
     "difficulty": "Trung cấp",
     "tags": [
       "part2",
@@ -90,7 +206,7 @@
         ]
       },
       {
-        "title": "2. Mẹo \"Câu trả lời gián tiếp\" luôn đúng 90%",
+        "title": "2. Câu trả lời gián tiếp – dạng đáp án đúng rất hay gặp",
         "content": "Dạng đáp án né tránh hoặc không biết thông tin.",
         "formula": "I have no idea / Let me check / It hasn’t been decided yet",
         "bullet_points": [
@@ -102,6 +218,36 @@
         "tips": [
           "Khi nghe thấy đáp án thể hiện việc hỏi người khác hoặc thông tin chưa chốt, thường đó là đáp án đúng."
         ]
+      },
+      {
+        "title": "3. Nhận diện 6 dạng câu hỏi Part 2",
+        "content": "25 câu Part 2 gồm 6 dạng; mỗi dạng có kiểu đáp án quen thuộc. Tập trung tối đa vào 3–4 từ đầu câu hỏi.",
+        "formula": "Wh- | Yes/No | Câu hỏi đuôi | Lựa chọn (A or B) | Đề nghị / Yêu cầu | Câu trần thuật",
+        "bullet_points": [
+          "Wh- (Who, When, Where, Why, How, What, Which): trả lời đúng loại thông tin hỏi; không dùng Yes/No.",
+          "Yes/No (Do, Did, Is, Have, Can…): có thể trả lời Yes/No hoặc gián tiếp (\"I haven't checked yet\").",
+          "Câu hỏi đuôi (…, isn't it? / …, didn't you?): xử lý như câu Yes/No.",
+          "Lựa chọn (A or B?): chọn một bên, chọn cả hai (\"Either is fine\") hoặc phương án thứ ba – không trả lời Yes/No.",
+          "Đề nghị / Yêu cầu (Would you like…?, Could you…?, Why don't we…?, Let's…): đồng ý / từ chối lịch sự (\"Sure, I'd be happy to\", \"Thanks, but…\").",
+          "Câu trần thuật (nêu sự việc, vấn đề): phản hồi bằng giải pháp, thông tin bổ sung hoặc cảm thán."
+        ],
+        "tips": [
+          "\"Why don't we…?\" là lời đề nghị, KHÔNG hỏi lý do -> đáp án bắt đầu bằng \"Because\" thường là bẫy."
+        ]
+      },
+      {
+        "title": "4. Bẫy thường gặp",
+        "content": "Đáp án sai được thiết kế để \"nghe quen tai\".",
+        "formula": "Lặp từ / âm gần giống | Từ cùng chủ đề | Sai loại thông tin | Sai thì / sai người",
+        "bullet_points": [
+          "Lặp từ / âm: hỏi \"copy\" – đáp án có \"coffee\"; hỏi \"contract\" – đáp án có \"contact\".",
+          "Từ cùng chủ đề: hỏi về chuyến bay, đáp án nhắc \"airport\" nhưng không trả lời câu hỏi.",
+          "Sai loại thông tin: hỏi When mà đáp án nêu địa điểm; hỏi Who mà đáp án nêu thời gian.",
+          "Sai thì / sai người: hỏi về việc sắp tới, đáp án dùng quá khứ; hỏi \"she\" mà đáp án nói \"he\"."
+        ],
+        "tips": [
+          "Không chắc đáp án nào đúng? Loại những câu lặp từ của câu hỏi trước, khả năng đúng của câu còn lại tăng mạnh."
+        ]
       }
     ],
     "examples": [
@@ -110,6 +256,34 @@
         "vietnamese": "Câu hỏi: \"Tôi nên lưu các hóa đơn khách hàng này ở đâu?\" - Đáp án: \"Hỏi cô Gomez ở phòng kế toán nhé.\"",
         "explanation": "Câu hỏi Where không chọn \"Yes\". Đáp án chỉ dẫn hỏi người khác là câu trả lời gián tiếp chuẩn xác.",
         "highlight": "Where ... -> Ask Ms. Gomez",
+        "part_tag": "Part 2"
+      },
+      {
+        "english": "Question: \"Would you like me to print the agenda?\" – Option: \"Thanks, that would be helpful.\"",
+        "vietnamese": "Câu hỏi: \"Anh có muốn tôi in chương trình họp không?\" – Đáp án: \"Cảm ơn, vậy thì tốt quá.\"",
+        "explanation": "Lời đề nghị giúp đỡ -> đáp án nhận lời lịch sự.",
+        "highlight": "Đề nghị -> nhận / từ chối lịch sự",
+        "part_tag": "Part 2"
+      },
+      {
+        "english": "Question: \"Should we take a taxi or the subway to the airport?\" – Option: \"The subway is faster at this hour.\"",
+        "vietnamese": "Câu hỏi: \"Ta nên đi taxi hay tàu điện ngầm ra sân bay?\" – Đáp án: \"Giờ này đi tàu điện ngầm nhanh hơn.\"",
+        "explanation": "Câu hỏi lựa chọn -> chọn một phương án, không trả lời Yes/No.",
+        "highlight": "Lựa chọn -> chọn 1, không Yes/No",
+        "part_tag": "Part 2"
+      },
+      {
+        "english": "Statement: \"The printer on the second floor is out of order again.\" – Option: \"I'll call the technician.\"",
+        "vietnamese": "Câu nói: \"Máy in tầng hai lại hỏng rồi.\" – Đáp án: \"Tôi sẽ gọi thợ sửa.\"",
+        "explanation": "Câu trần thuật nêu vấn đề -> phản hồi bằng giải pháp.",
+        "highlight": "Câu trần thuật -> đưa giải pháp",
+        "part_tag": "Part 2"
+      },
+      {
+        "english": "Question: \"You've already submitted the expense report, haven't you?\" – Option: \"Yes, last Friday.\"",
+        "vietnamese": "Câu hỏi: \"Anh nộp báo cáo chi phí rồi phải không?\" – Đáp án: \"Rồi, hôm thứ Sáu tuần trước.\"",
+        "explanation": "Câu hỏi đuôi xử lý như câu Yes/No; \"Yes\" kèm thông tin bổ sung là đáp án tự nhiên.",
+        "highlight": "Câu hỏi đuôi -> trả lời như Yes/No",
         "part_tag": "Part 2"
       }
     ],
@@ -125,6 +299,66 @@
         ],
         "answer_index": 1,
         "explanation": "Câu hỏi When không chọn \"Yes\" (loại A). C & D là bẫy lặp từ. Đáp án gián tiếp \"It hasn’t been scheduled yet\" là đáp án đúng."
+      },
+      {
+        "id": "q-strat-p2-2",
+        "question": "Question: \"Who's in charge of ordering office supplies?\" – Đáp án nào phù hợp nhất?",
+        "options": [
+          "Yes, I ordered them.",
+          "Ms. Patel handles that.",
+          "In the supply closet.",
+          "Every Monday morning."
+        ],
+        "answer_index": 1,
+        "explanation": "Hỏi Who -> cần người. \"Yes\" bị loại với câu Wh-; \"In the supply closet\" trả lời Where; \"Every Monday\" trả lời When."
+      },
+      {
+        "id": "q-strat-p2-3",
+        "question": "Question: \"Do you want to hold the meeting on Tuesday or Wednesday?\" – Đáp án nào phù hợp nhất?",
+        "options": [
+          "Yes, I want it.",
+          "The meeting room is large.",
+          "Wednesday works better for me.",
+          "It was very productive."
+        ],
+        "answer_index": 2,
+        "explanation": "Câu hỏi lựa chọn -> chọn một ngày. \"Yes\" không trả lời câu hỏi lựa chọn; hai đáp án còn lại lạc đề / sai thì."
+      },
+      {
+        "id": "q-strat-p2-4",
+        "question": "Question: \"Why don't we hire a temporary assistant?\" – Đáp án nào phù hợp nhất?",
+        "options": [
+          "That's a good idea.",
+          "Because it's too late.",
+          "He was hired last year.",
+          "At the front desk."
+        ],
+        "answer_index": 0,
+        "explanation": "\"Why don't we…?\" là lời đề nghị -> đồng ý \"That's a good idea\". \"Because…\" là bẫy hiểu nhầm thành câu hỏi lý do; \"hired\" là bẫy lặp từ."
+      },
+      {
+        "id": "q-strat-p2-5",
+        "question": "Statement: \"The sales figures for May haven't been released yet.\" – Phản hồi nào phù hợp nhất?",
+        "options": [
+          "Yes, they've been released.",
+          "He sold his car last May.",
+          "The figure skating show.",
+          "They should be available by Friday."
+        ],
+        "answer_index": 3,
+        "explanation": "Câu trần thuật về việc chưa công bố số liệu -> phản hồi đưa thông tin bổ sung. Các đáp án khác mâu thuẫn hoặc là bẫy lặp từ (sold, May, figure)."
+      },
+      {
+        "id": "q-strat-p2-6",
+        "question": "Nghe câu hỏi \"Where is the closest bank?\", đáp án \"Sorry, I'm new here, too.\" nên được đánh giá thế nào?",
+        "options": [
+          "Có thể đúng – đây là câu trả lời gián tiếp (không biết thông tin)",
+          "Chắc chắn sai vì không nêu địa điểm",
+          "Sai vì không bắt đầu bằng Yes / No",
+          "Sai vì lặp lại từ của câu hỏi"
+        ],
+        "answer_index": 0,
+        "explanation": "Câu trả lời gián tiếp kiểu \"không biết / hỏi người khác\" là dạng đáp án đúng rất phổ biến của Part 2."
       }
     ]
   },
@@ -133,7 +367,7 @@
     "category": "strategy",
     "title": "Chiến thuật Part 3 & 4 (Đọc trước đề & 8 giây vàng)",
     "subtitle": "Kỹ thuật đọc trước 3 câu hỏi, bắt từ khóa & Câu hỏi nhìn bảng biểu Graphics",
-    "read_time_minutes": 8,
+    "read_time_minutes": 10,
     "difficulty": "Trung cấp",
     "tags": [
       "part3",
@@ -165,6 +399,35 @@
         "tips": [
           "Nguyên tắc đối chiếu chéo thông tin giúp bắt trọn điểm câu hỏi hình ảnh trong Part 3 & 4."
         ]
+      },
+      {
+        "title": "3. Các dạng câu hỏi đặc biệt",
+        "content": "Mỗi đoạn có 3 câu hỏi, thường theo thứ tự thông tin trong bài: câu 1 – ý chính / người nói, câu 2 – chi tiết, câu 3 – việc tiếp theo / đề nghị.",
+        "formula": "Câu hỏi chung -> 1–2 lượt lời đầu\nCâu chi tiết -> theo thứ tự xuất hiện\nCâu \"next / request / suggest\" -> cuối bài",
+        "bullet_points": [
+          "Câu hàm ý: \"Why does the man say, '…'?\" / \"What does the woman mean when she says…?\" – nghe ngữ cảnh trước và sau câu trích; hỏi Ý ĐỊNH, không phải nghĩa đen.",
+          "Hội thoại 3 người (đề ghi \"with three speakers\"): theo dõi tên gọi và vai trò; câu hỏi có thể hỏi về \"the men\" hoặc một người cụ thể.",
+          "Câu hỏi về nghề nghiệp / địa điểm: dựa vào từ vựng đặc trưng (patients -> phòng khám, boarding pass -> sân bay).",
+          "Câu hỏi biểu đồ: xem mục 2 – nghe thông tin ở cột KHÔNG in trong đáp án."
+        ],
+        "tips": [
+          "Mỗi hội thoại thường có 1 câu hàm ý hoặc biểu đồ: đánh dấu câu đó khi đọc trước để biết phải nghe kỹ đoạn nào."
+        ]
+      },
+      {
+        "title": "4. Part 4 – nhận diện theo loại bài nói",
+        "content": "Part 4 là bài nói một người; nắm cấu trúc từng loại giúp đoán trước vị trí thông tin.",
+        "formula": "Voicemail | Thông báo | Quảng cáo | Tin tức / Radio | Hướng dẫn tham quan | Trích đoạn cuộc họp | Giới thiệu diễn giả",
+        "bullet_points": [
+          "Voicemail: người gọi là ai -> lý do gọi -> yêu cầu (thường \"please call me back at…\").",
+          "Thông báo (sân bay, cửa hàng, văn phòng): sự việc -> thay đổi -> hướng dẫn người nghe.",
+          "Quảng cáo: sản phẩm / dịch vụ -> ưu điểm -> ưu đãi và cách nhận (mã giảm giá, thời hạn).",
+          "Trích đoạn cuộc họp: chủ đề -> vấn đề -> việc người nghe cần làm.",
+          "Câu hỏi \"Who is the audience / most likely listening?\" dựa vào lời chào mở đầu (\"Welcome, shoppers…\", \"Good morning, staff…\")."
+        ],
+        "tips": [
+          "Nghe lời mở đầu của Part 4 thật kỹ: loại bài nói quyết định gần như cả 3 câu hỏi."
+        ]
       }
     ],
     "examples": [
@@ -173,6 +436,34 @@
         "vietnamese": "Bảng biểu hiển thị tên hội thảo và số phòng. Câu hỏi: \"Người phụ nữ sẽ đến phòng nào?\"",
         "explanation": "Người nói sẽ nhắc đến tên buổi hội thảo \"Digital Marketing\", nhìn vào bảng thấy phòng 304 -> chọn phòng 304.",
         "highlight": "Cross-reference audio clue with chart column",
+        "part_tag": "Part 3"
+      },
+      {
+        "english": "Woman: \"The projector in Room B isn't working.\" Man: \"I've got a spare one in my office.\" Question: Why does the man say \"I've got a spare one in my office\"?",
+        "vietnamese": "Nữ: \"Máy chiếu phòng B không hoạt động.\" Nam: \"Tôi có một cái dự phòng ở văn phòng.\" Câu hỏi: Vì sao người đàn ông nói vậy?",
+        "explanation": "Ý định của câu nói là đề nghị cho mượn máy chiếu, không phải chỉ thông báo vị trí máy.",
+        "highlight": "Hàm ý -> đề nghị cho mượn máy chiếu",
+        "part_tag": "Part 3"
+      },
+      {
+        "english": "Conversation opens: \"Hi, I'm calling about the apartment listed on your website.\" Question: What is the conversation mainly about?",
+        "vietnamese": "Hội thoại mở đầu: \"Chào chị, tôi gọi về căn hộ đăng trên website của chị.\" Câu hỏi: Hội thoại chủ yếu nói về gì?",
+        "explanation": "Câu hỏi chung được trả lời ngay ở lượt lời đầu: hỏi thông tin thuê căn hộ.",
+        "highlight": "Câu hỏi chung -> nghe 1–2 câu đầu",
+        "part_tag": "Part 3"
+      },
+      {
+        "english": "Voicemail: \"Hello, this is Rita from Lakeview Dental calling to confirm your appointment on Thursday. Please call us back at 555-0142.\" Question: What is the listener asked to do?",
+        "vietnamese": "Tin nhắn thoại: \"Xin chào, tôi là Rita từ Nha khoa Lakeview gọi để xác nhận lịch hẹn thứ Năm của anh. Vui lòng gọi lại số 555-0142.\" Câu hỏi: Người nghe được yêu cầu làm gì?",
+        "explanation": "Yêu cầu nằm ở cuối tin nhắn: gọi lại để xác nhận lịch hẹn.",
+        "highlight": "Yêu cầu ở cuối voicemail -> gọi lại",
+        "part_tag": "Part 4"
+      },
+      {
+        "english": "Questions 59–61 refer to the following conversation with three speakers: two men from the warehouse and a woman who manages the store.",
+        "vietnamese": "Câu 59–61: hội thoại ba người – hai nhân viên kho (nam) và một quản lý cửa hàng (nữ).",
+        "explanation": "Đề báo trước có 3 người nói -> theo dõi tên gọi và ai nói câu nào để trả lời câu hỏi về từng người.",
+        "highlight": "3 người nói -> theo dõi tên và vai",
         "part_tag": "Part 3"
       }
     ],
@@ -188,6 +479,66 @@
         ],
         "answer_index": 1,
         "explanation": "Tận dụng lúc băng đọc lại các câu hỏi của đoạn vừa xong để tranh thủ đọc trước 3 câu của bài tiếp theo."
+      },
+      {
+        "id": "q-strat-p3-2",
+        "question": "Câu hỏi: 'Why does the woman say, \"That's the third time this week\"?' cần xử lý thế nào?",
+        "options": [
+          "Dịch nghĩa đen của câu nói rồi chọn",
+          "Chọn đáp án có chứa con số \"three\"",
+          "Nghe ngữ cảnh trước và sau câu đó để hiểu ý định người nói",
+          "Bỏ qua vì không thể đoán"
+        ],
+        "answer_index": 2,
+        "explanation": "Câu hàm ý hỏi ý định (vd. phàn nàn vì sự cố lặp lại). Chọn đáp án có \"three\" là bẫy lặp từ."
+      },
+      {
+        "id": "q-strat-p3-3",
+        "question": "Câu hỏi \"What is the conversation mainly about?\" thường được trả lời ở đâu?",
+        "options": [
+          "Ở 1–2 lượt lời đầu tiên",
+          "Ở câu cuối cùng của hội thoại",
+          "Trong phần băng đọc câu hỏi",
+          "Không có quy luật nào"
+        ],
+        "answer_index": 0,
+        "explanation": "Câu hỏi chung (chủ đề, mục đích) hầu như luôn được nêu ngay ở phần mở đầu hội thoại."
+      },
+      {
+        "id": "q-strat-p3-4",
+        "question": "Đề ghi \"conversation and price list\". Câu hỏi: \"Look at the graphic. How much will the man pay?\" – 4 đáp án là số tiền. Bạn nên nghe gì?",
+        "options": [
+          "Chờ người nói đọc đúng con số in trong đáp án",
+          "Chọn mức giá cao nhất trong bảng",
+          "Chọn mức giá thấp nhất trong bảng",
+          "Nghe tên gói / sản phẩm được nhắc tới rồi dò sang cột giá tương ứng"
+        ],
+        "answer_index": 3,
+        "explanation": "Với câu biểu đồ, người nói thường nhắc thông tin ở cột KHÔNG in trong đáp án (tên gói), bạn phải đối chiếu sang cột giá."
+      },
+      {
+        "id": "q-strat-p3-5",
+        "question": "Bài Part 4 là một tin nhắn thoại. Câu hỏi \"What does the speaker ask the listener to do?\" thường nằm ở đâu trong bài?",
+        "options": [
+          "Ngay câu chào đầu tiên",
+          "Gần cuối tin nhắn, sau phần nêu lý do gọi",
+          "Không bao giờ được nói rõ",
+          "Trong tên công ty của người gọi"
+        ],
+        "answer_index": 1,
+        "explanation": "Cấu trúc voicemail: người gọi -> lý do -> yêu cầu ở cuối (gọi lại, gửi tài liệu, xác nhận…)."
+      },
+      {
+        "id": "q-strat-p3-6",
+        "question": "Đáp án đúng ở Part 3/4 thường có đặc điểm gì so với lời thoại?",
+        "options": [
+          "Lặp lại nguyên văn từ trong bài",
+          "Diễn đạt lại (paraphrase) ý trong bài bằng từ khác",
+          "Luôn là đáp án dài nhất",
+          "Luôn chứa tên riêng"
+        ],
+        "answer_index": 1,
+        "explanation": "ETS dùng paraphrase cho đáp án đúng (vd. \"car\" -> \"vehicle\"); đáp án lặp nguyên văn thường là bẫy."
       }
     ]
   },
@@ -196,7 +547,7 @@
     "category": "strategy",
     "title": "Chiến thuật Part 5 (Hoàn thành câu trong 10-15 giây)",
     "subtitle": "Phân loại câu ngữ pháp vs từ vựng & Kỹ thuật canh giờ 10 phút",
-    "read_time_minutes": 7,
+    "read_time_minutes": 10,
     "difficulty": "Cơ bản",
     "tags": [
       "part5",
@@ -216,6 +567,49 @@
         "tips": [
           "Nếu gặp câu từ vựng lạ quá 30 giây không nghĩ ra -> chọn đáp án cảm tính và ĐI TIẾP, không được dừng lại quá lâu."
         ]
+      },
+      {
+        "title": "2. Nhận diện nhanh 5 dạng câu ngữ pháp",
+        "content": "Sau khi biết là câu ngữ pháp, xác định dạng để áp đúng quy tắc vị trí.",
+        "formula": "a / the / sở hữu + ___ + N -> Tính từ\nbe / have + ___ + V3 / V-ing -> Trạng từ\n___ + V (chia) -> Danh từ / Đại từ chủ ngữ\nV / giới từ + ___ -> Danh từ / Đại từ tân ngữ",
+        "bullet_points": [
+          "Từ loại: dựa vào từ ngay trước / sau chỗ trống (vị trí quyết định loại từ).",
+          "Thì / dạng động từ: tìm dấu hiệu thời gian; có tân ngữ sau chỗ trống -> chủ động, không có -> thường là bị động.",
+          "Đại từ: chủ ngữ (she), tân ngữ (her), sở hữu (her / hers), phản thân (herself – \"by herself\", nhấn mạnh).",
+          "Liên từ vs giới từ: sau chỗ trống là mệnh đề hay cụm danh từ.",
+          "Mệnh đề quan hệ: who (người), which (vật), whose (sở hữu), that."
+        ],
+        "tips": [
+          "Chi tiết từng dạng: xem các chủ điểm trong nhóm \"Từ loại & Ngữ pháp\" và \"Mẫu câu & Cấu trúc\"."
+        ]
+      },
+      {
+        "title": "3. Câu từ vựng: collocation và ngữ cảnh",
+        "content": "Câu từ vựng chiếm khoảng 1/3 Part 5; 4 đáp án cùng loại từ nhưng khác nghĩa.",
+        "formula": "Tìm cụm cố định (collocation) quanh chỗ trống -> loại đáp án không kết hợp được",
+        "bullet_points": [
+          "Cụm động từ + danh từ: meet a deadline, place an order, conduct a survey, make a reservation, submit an application.",
+          "Từ + giới từ đi kèm: comply WITH, adhere TO, be eligible FOR, be responsible FOR (xem chủ điểm \"Cụm đi với giới từ\").",
+          "Nghĩa theo ngữ cảnh công sở: \"address a problem\" = giải quyết vấn đề, không phải \"địa chỉ\".",
+          "Nếu chỉ một đáp án đi được với giới từ / tân ngữ phía sau, đó là đáp án đúng dù các từ khác cùng nghĩa."
+        ],
+        "tips": [
+          "Ghi sổ các collocation gặp trong đề ETS – chúng lặp lại rất nhiều giữa các đề."
+        ]
+      },
+      {
+        "title": "4. Canh giờ và thứ tự làm bài",
+        "content": "Mục tiêu: 30 câu trong 10–12 phút.",
+        "formula": "Câu ngữ pháp: 5–10 giây | Câu từ vựng: 20–30 giây | Tối đa 30 giây cho 1 câu",
+        "bullet_points": [
+          "Làm tuần tự, không nhảy câu – tránh tô lệch phiếu.",
+          "Câu chưa chắc: chọn đáp án hợp lý nhất, đánh dấu và đi tiếp.",
+          "Chỉ quay lại câu đã đánh dấu khi làm xong toàn bộ Reading.",
+          "Sau Part 5 nên còn khoảng 63 phút cho Part 6 (8–10 phút) và Part 7 (khoảng 55 phút)."
+        ],
+        "tips": [
+          "Đeo đồng hồ và ghi mốc: bắt đầu Part 5 lúc mấy giờ, phải sang Part 6 trước mấy giờ."
+        ]
       }
     ],
     "examples": [
@@ -224,6 +618,34 @@
         "vietnamese": "Tổng giám đốc vừa mới công bố việc mở trung tâm nghiên cứu mới.",
         "explanation": "4 đáp án cùng gốc từ \"recent\". Chỗ trống đứng giữa chủ ngữ \"The CEO\" và động từ \"announced\" -> cần trạng từ \"recently\" (giải quyết trong 5s).",
         "highlight": "The CEO [recently] announced",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Please submit your _______ by Friday. (Options: apply, application, applicant, applicable)",
+        "vietnamese": "Vui lòng nộp đơn đăng ký của bạn trước thứ Sáu.",
+        "explanation": "Sau tính từ sở hữu \"your\" cần danh từ; \"applicant\" là người nộp đơn – không hợp nghĩa \"nộp\" -> \"application\".",
+        "highlight": "your + ___ -> danh từ (application)",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The contract _______ by both parties last week. (Options: signed, was signed, signs, is signing)",
+        "vietnamese": "Hợp đồng đã được hai bên ký vào tuần trước.",
+        "explanation": "Có \"by both parties\", không có tân ngữ sau chỗ trống và \"last week\" -> bị động quá khứ \"was signed\".",
+        "highlight": "không có tân ngữ + last week -> bị động quá khứ",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "All technicians must _______ with the updated safety guidelines. (Options: follow, comply, observe, respect)",
+        "vietnamese": "Tất cả kỹ thuật viên phải tuân thủ hướng dẫn an toàn mới cập nhật.",
+        "explanation": "Bốn từ đều có nghĩa \"tuân theo\" nhưng chỉ \"comply\" đi với giới từ \"with\" phía sau.",
+        "highlight": "collocation: comply WITH",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Ms. Kim prepared the entire report _______. (Options: she, her, herself, hers)",
+        "vietnamese": "Cô Kim tự mình chuẩn bị toàn bộ báo cáo.",
+        "explanation": "Đứng cuối câu nhấn mạnh \"tự mình làm\" -> đại từ phản thân \"herself\".",
+        "highlight": "nhấn mạnh tự làm -> herself",
         "part_tag": "Part 5"
       }
     ],
@@ -239,6 +661,66 @@
         ],
         "answer_index": 0,
         "explanation": "30 câu Part 5 nên làm trong 10-12 phút (khoảng 20s/câu) để dành trọn vẹn 55 phút cho Part 7."
+      },
+      {
+        "id": "q-strat-p5-2",
+        "question": "Nhìn 4 đáp án \"efficient / efficiently / efficiency / efficiencies\". Đây là dạng câu gì và nên làm thế nào?",
+        "options": [
+          "Câu từ vựng – đọc kỹ cả câu",
+          "Câu từ loại – xem từ ngay trước / sau chỗ trống để chọn loại từ",
+          "Câu thì động từ – tìm dấu hiệu thời gian",
+          "Câu đại từ – xác định người được nhắc tới"
+        ],
+        "answer_index": 1,
+        "explanation": "4 đáp án cùng gốc \"effici-\" khác đuôi -> câu từ loại, chỉ cần xét vị trí chỗ trống."
+      },
+      {
+        "id": "q-strat-p5-3",
+        "question": "Câu: \"The manager _______ approved the budget proposal.\" Chỗ trống đứng giữa chủ ngữ và động từ chia. Cần loại từ nào?",
+        "options": [
+          "Danh từ",
+          "Tính từ",
+          "Trạng từ",
+          "Động từ nguyên mẫu"
+        ],
+        "answer_index": 2,
+        "explanation": "Vị trí giữa chủ ngữ và động từ chính dành cho trạng từ (vd. \"recently / quickly approved\")."
+      },
+      {
+        "id": "q-strat-p5-4",
+        "question": "Câu: \"All packages must be _______ before 5 P.M.\" (deliver / delivered / delivering / deliverer). Dựa vào đâu để chọn?",
+        "options": [
+          "Chọn V-ing vì đứng sau \"be\"",
+          "Chọn danh từ vì đứng sau \"be\"",
+          "Chọn nguyên mẫu vì đứng sau \"must\"",
+          "Chủ ngữ là vật, sau chỗ trống không có tân ngữ -> bị động \"delivered\""
+        ],
+        "answer_index": 3,
+        "explanation": "Gói hàng được giao (bị động): must be + V3. Không có tân ngữ sau chỗ trống xác nhận dạng bị động."
+      },
+      {
+        "id": "q-strat-p5-5",
+        "question": "Gặp một câu từ vựng khó, đã nghĩ hơn 30 giây vẫn chưa chắc. Nên làm gì?",
+        "options": [
+          "Chọn đáp án hợp lý nhất, đánh dấu rồi chuyển câu",
+          "Tiếp tục nghĩ đến khi chắc chắn",
+          "Bỏ trống phiếu trả lời",
+          "Đọc lại cả câu thêm 3 lần"
+        ],
+        "answer_index": 0,
+        "explanation": "TOEIC không trừ điểm câu sai; dừng quá lâu ở Part 5 làm thiếu giờ cho Part 7."
+      },
+      {
+        "id": "q-strat-p5-6",
+        "question": "Câu: \"Employees must _______ with the new safety regulations.\" (follow / obey / comply / observe). Chọn đáp án nào và vì sao?",
+        "options": [
+          "follow – vì phổ biến nhất",
+          "comply – vì chỉ \"comply\" đi với giới từ \"with\" phía sau",
+          "observe – vì trang trọng nhất",
+          "obey – vì nghĩa là tuân theo"
+        ],
+        "answer_index": 1,
+        "explanation": "follow / obey / observe đi trực tiếp với tân ngữ; chỉ \"comply\" cần \"with\" -> \"comply with\"."
       }
     ]
   },
@@ -247,7 +729,7 @@
     "category": "strategy",
     "title": "Chiến thuật Part 6 (Điền đoạn văn & Câu điền nguyên câu)",
     "subtitle": "Kỹ thuật định vị câu điền nguyên câu & Dấu hiệu liên từ nối logic",
-    "read_time_minutes": 7,
+    "read_time_minutes": 9,
     "difficulty": "Trung cấp",
     "tags": [
       "part6",
@@ -267,6 +749,47 @@
         "tips": [
           "Nếu câu sau chỗ trống bắt đầu bằng \"Please contact...\", câu điền vào thường là thông báo về sự cố hoặc thông tin cần liên hệ."
         ]
+      },
+      {
+        "title": "2. Bốn dạng câu hỏi trong Part 6",
+        "content": "Mỗi đoạn có 4 chỗ trống, trong đó đúng 1 câu chèn câu. Ba câu còn lại thuộc các dạng sau.",
+        "formula": "Từ loại / ngữ pháp | Thì động từ theo ngữ cảnh | Từ vựng theo ngữ cảnh | Từ nối | Câu chèn câu",
+        "bullet_points": [
+          "Từ loại / ngữ pháp: xử lý như Part 5.",
+          "Thì động từ: thường KHÔNG đoán được trong một câu – nhìn ngày gửi thư, sự kiện đã xảy ra hay sắp tới.",
+          "Từ vựng: cả 4 đáp án có thể hợp trong một câu, chỉ một đáp án hợp với ý cả đoạn.",
+          "Từ nối đầu câu: xác định quan hệ ý với câu trước (xem chủ điểm \"Từ nối Part 6\")."
+        ],
+        "tips": [
+          "Ví dụ: email gửi ngày 2/6 nói về hội thảo ngày 10/6 -> các động từ về hội thảo dùng tương lai."
+        ]
+      },
+      {
+        "title": "3. Quy trình đọc một đoạn Part 6",
+        "content": "Đọc liền mạch thay vì nhảy từng câu có chỗ trống.",
+        "formula": "Đọc tiêu đề / loại văn bản -> đọc từ đầu tới từng chỗ trống -> chọn -> đọc tiếp",
+        "bullet_points": [
+          "Xác định loại văn bản (email, thông báo, quảng cáo, bài báo) và người viết – người nhận.",
+          "Đọc từ đầu đoạn, dừng ở mỗi chỗ trống để chọn ngay khi đủ thông tin.",
+          "Câu chèn câu có thể để sau cùng khi đã hiểu cả đoạn.",
+          "Thời gian: khoảng 2–2,5 phút mỗi đoạn, tổng 8–10 phút cho Part 6."
+        ],
+        "tips": [
+          "Câu cuối email thường là lời kết (\"We look forward to…\", \"Thank you for your patience\") – hữu ích khi chọn câu chèn ở cuối đoạn."
+        ]
+      },
+      {
+        "title": "4. Bẫy của câu chèn câu",
+        "content": "Ba câu sai thường cùng chủ đề với đoạn văn nhưng sai mạch.",
+        "formula": "Đáp án sai: đại từ không có gì để thay | nhắc thông tin chưa giới thiệu | lặp lại ý câu trước | trái với câu sau",
+        "bullet_points": [
+          "Câu bắt đầu bằng \"This / These / They / Such\" mà phía trước không có danh từ tương ứng -> loại.",
+          "Câu nhắc chi tiết mới (tên người, sản phẩm) chưa từng xuất hiện và câu sau cũng không nhắc lại -> nghi ngờ.",
+          "Câu đúng thường vừa nối với câu trước (đại từ, từ nối) vừa dẫn sang câu sau."
+        ],
+        "tips": [
+          "Thử đọc câu trước + đáp án + câu sau liền một mạch: câu nào đọc trôi chảy nhất là đáp án."
+        ]
       }
     ],
     "examples": [
@@ -275,6 +798,34 @@
         "vietnamese": "Câu trước: Ngân sách bị cắt giảm. Chỗ trống. Câu sau: Do đó chúng ta phải hoãn nâng cấp.",
         "explanation": "Câu điền vào giải thích lý do cần thắt chặt chi tiêu để logic với từ nối \"Consequently\" ở câu sau.",
         "highlight": "budget reduced -> consequently postpone",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "Email dated May 3 announces a workshop \"next Monday\". Blank: \"Participants _______ a certificate at the end of the session.\" (receive / received / will receive / have received)",
+        "vietnamese": "Email ngày 3/5 thông báo hội thảo \"thứ Hai tới\". Chỗ trống: \"Người tham dự _______ chứng nhận vào cuối buổi.\"",
+        "explanation": "Hội thảo chưa diễn ra -> hành động trong tương lai \"will receive\".",
+        "highlight": "Ngữ cảnh tương lai -> will receive",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "Notice: \"The parking garage will be closed for repairs on Saturday. _______, employees may park in Lot C.\"",
+        "vietnamese": "Thông báo: \"Bãi đỗ xe sẽ đóng cửa sửa chữa vào thứ Bảy. _______, nhân viên có thể đỗ xe ở bãi C.\"",
+        "explanation": "Câu sau đưa giải pháp thay thế cho bãi xe đóng cửa -> \"Instead\".",
+        "highlight": "Giải pháp thay thế -> Instead",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "Previous sentence introduces \"our new customer loyalty program\". Option: \"Members earn one point for every dollar they spend.\"",
+        "vietnamese": "Câu trước giới thiệu \"chương trình khách hàng thân thiết mới\". Đáp án: \"Thành viên tích một điểm cho mỗi đô la chi tiêu.\"",
+        "explanation": "Câu chèn tiếp tục chủ đề và đưa chi tiết cụ thể về chương trình -> mạch lạc.",
+        "highlight": "Câu chèn nối tiếp chủ đề + chi tiết cụ thể",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "Option to reject: \"This will be repaired by Thursday.\" – no device or problem has been mentioned before the blank.",
+        "vietnamese": "Đáp án cần loại: \"Cái này sẽ được sửa xong trước thứ Năm.\" – phía trước chưa nhắc thiết bị hay sự cố nào.",
+        "explanation": "Đại từ \"This\" không có danh từ nào để thay thế -> câu không khớp vị trí.",
+        "highlight": "Đại từ This không có gì để thay -> loại",
         "part_tag": "Part 6"
       }
     ],
@@ -290,6 +841,66 @@
         ],
         "answer_index": 1,
         "explanation": "Tính mạch lạc của đoạn văn dựa vào từ nối logic (Therefore, However) và đại từ liên kết (This, These) giữa các câu."
+      },
+      {
+        "id": "q-strat-p6-2",
+        "question": "Email gửi ngày 2/6 viết: \"The training session is scheduled for June 10.\" Chỗ trống sau đó: \"All new hires _______ to attend.\" Chọn dạng nào?",
+        "options": [
+          "were required",
+          "are required",
+          "had been required",
+          "have required"
+        ],
+        "answer_index": 1,
+        "explanation": "Yêu cầu áp dụng cho buổi đào tạo sắp tới -> hiện tại bị động \"are required\". Quá khứ không hợp; \"have required\" sai dạng (thiếu bị động)."
+      },
+      {
+        "id": "q-strat-p6-3",
+        "question": "Khi gặp câu chèn câu, đáp án nào thường bị LOẠI đầu tiên?",
+        "options": [
+          "Câu tiếp nối đúng chủ đề đoạn văn",
+          "Câu giải thích cho câu đứng trước",
+          "Câu có đại từ (this / they) nhưng phía trước không có danh từ nào để thay thế",
+          "Câu dẫn dắt hợp lý sang câu phía sau"
+        ],
+        "answer_index": 2,
+        "explanation": "Đại từ phải có danh từ được nhắc trước đó; không có thì câu chắc chắn sai mạch."
+      },
+      {
+        "id": "q-strat-p6-4",
+        "question": "Câu trước: \"The office will be closed on Friday for maintenance.\" Câu sau: \"_______, all staff should work from home that day.\" Từ nối phù hợp?",
+        "options": [
+          "However",
+          "For example",
+          "Similarly",
+          "Therefore"
+        ],
+        "answer_index": 3,
+        "explanation": "Văn phòng đóng cửa -> vì vậy làm việc tại nhà: quan hệ nguyên nhân – kết quả -> \"Therefore\"."
+      },
+      {
+        "id": "q-strat-p6-5",
+        "question": "Thời gian hợp lý cho toàn bộ Part 6 (4 đoạn, 16 câu) là khoảng bao nhiêu?",
+        "options": [
+          "2 phút",
+          "8–10 phút",
+          "25 phút",
+          "40 phút"
+        ],
+        "answer_index": 1,
+        "explanation": "Khoảng 2–2,5 phút mỗi đoạn để còn đủ khoảng 55 phút cho Part 7."
+      },
+      {
+        "id": "q-strat-p6-6",
+        "question": "Vì sao không nên chỉ đọc riêng câu có chỗ trống trong Part 6?",
+        "options": [
+          "Vì nhiều câu (thì, từ nối, câu chèn) cần ngữ cảnh câu trước / sau mới chọn đúng",
+          "Vì các câu Part 6 rất ngắn",
+          "Vì đáp án luôn nằm ở đoạn văn khác",
+          "Vì câu có chỗ trống luôn là câu đầu tiên"
+        ],
+        "answer_index": 0,
+        "explanation": "Part 6 kiểm tra khả năng hiểu mạch văn bản; nhiều đáp án chỉ đúng khi xét cả đoạn."
       }
     ]
   },
@@ -298,7 +909,7 @@
     "category": "strategy",
     "title": "Chiến thuật Part 7 (Đọc hiểu 54 câu - Quét bài & Móc xích)",
     "subtitle": "Phân bổ 55 phút vàng, kỹ thuật Paraphrase & Xử lý bài đọc kép/ba",
-    "read_time_minutes": 8,
+    "read_time_minutes": 11,
     "difficulty": "Nâng cao",
     "tags": [
       "part7",
@@ -331,6 +942,38 @@
         "tips": [
           "Bẫy Paraphrase: Đáp án ĐÚNG hầu như luôn dùng TỪ ĐỒNG NGHĨA. Từ nào trong bài đọc lặp lại y hệt 100% trong đáp án thường là bẫy đánh lừa!"
         ]
+      },
+      {
+        "title": "3. Các dạng câu hỏi Part 7 và cách xử lý",
+        "content": "Nhận diện dạng câu hỏi trước khi đọc bài giúp biết cần đọc kỹ hay chỉ quét.",
+        "formula": "Mục đích / ý chính | Chi tiết | Suy luận | NOT / True | Từ đồng nghĩa | Chèn câu [1]–[4] | Hàm ý trong chat",
+        "bullet_points": [
+          "Mục đích / ý chính (\"Why was the e-mail written?\"): đọc đoạn đầu.",
+          "Chi tiết: quét từ khóa (tên, số, ngày) rồi đọc kỹ câu chứa từ khóa.",
+          "Suy luận (\"most likely\", \"suggested\", \"implied\"): thông tin không nói thẳng, phải suy từ dữ kiện.",
+          "NOT / True: đối chiếu từng đáp án, loại 3 đáp án có trong bài.",
+          "Từ đồng nghĩa (\"closest in meaning to\"): thay từng đáp án vào câu gốc, chọn nghĩa hợp ngữ cảnh – không chọn nghĩa thông dụng nhất.",
+          "Chèn câu [1]–[4]: đọc câu cần chèn trước, tìm từ nối / đại từ để định vị.",
+          "Hàm ý trong chuỗi tin nhắn (\"At 10:15 A.M., what does … mean when she writes…?\"): đọc tin nhắn ngay trước và sau mốc giờ."
+        ],
+        "tips": [
+          "Câu hỏi đầu tiên của mỗi bài thường là câu mục đích / ý chính – trả lời ngay sau khi đọc đoạn mở đầu."
+        ]
+      },
+      {
+        "title": "4. Đọc theo loại văn bản",
+        "content": "Mỗi loại văn bản có vị trí thông tin quen thuộc.",
+        "formula": "E-mail / thư | Thông báo | Quảng cáo | Bài báo | Biểu mẫu / hóa đơn / lịch | Chuỗi tin nhắn / chat | Trang web",
+        "bullet_points": [
+          "E-mail / thư: đọc From – To – Subject – Date trước; mục đích ở đoạn đầu, yêu cầu ở đoạn cuối.",
+          "Biểu mẫu, hóa đơn, lịch trình: quét bảng tìm số liệu; chú ý ghi chú nhỏ (*, Note).",
+          "Chuỗi tin nhắn / chat nhiều người: theo dõi ai nói gì, lúc mấy giờ.",
+          "Bài báo: ý chính ở đoạn 1; trích dẫn của nhân vật thường chứa đáp án câu suy luận.",
+          "Đoạn kép / ba: mỗi câu hỏi kết hợp thường liên kết bằng tên, ngày, mã số, giá tiền chung giữa các văn bản."
+        ],
+        "tips": [
+          "Gặp hóa đơn hoặc lịch trình trong đoạn kép / ba: gần như chắc chắn có một câu hỏi ghép số liệu của nó với văn bản còn lại."
+        ]
       }
     ],
     "examples": [
@@ -339,6 +982,34 @@
         "vietnamese": "Đoạn 1 nói thành viên Vàng giảm 20%. Đoạn 2 hóa đơn $80. Hỏi: Giá gốc là bao nhiêu? -> $100.",
         "explanation": "Câu hỏi móc xích điển hình kết hợp thông tin mức giảm giá ở đoạn 1 và số tiền thanh toán ở đoạn 2.",
         "highlight": "Cross-passage inference (Móc xích 2 đoạn)",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "Question: \"What is NOT mentioned as a benefit of the membership?\" The passage lists free parking, a 10% discount, and a monthly newsletter.",
+        "vietnamese": "Câu hỏi: \"Lợi ích nào KHÔNG được nhắc tới?\" Bài liệt kê đỗ xe miễn phí, giảm giá 10% và bản tin hàng tháng.",
+        "explanation": "Đối chiếu từng đáp án: 3 đáp án khớp với 3 lợi ích trong bài bị loại, đáp án còn lại là câu trả lời.",
+        "highlight": "NOT -> loại 3 ý có trong bài",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "The word \"cover\" in paragraph 2, line 3, is closest in meaning to (A) protect (B) pay for (C) report (D) hide. Context: \"The company will cover all travel expenses.\"",
+        "vietnamese": "Từ \"cover\" ở đoạn 2, dòng 3 gần nghĩa nhất với… Ngữ cảnh: \"Công ty sẽ chi trả toàn bộ chi phí đi lại.\"",
+        "explanation": "Trong ngữ cảnh chi phí, \"cover\" = chi trả -> (B) pay for, dù \"protect\" là nghĩa quen thuộc hơn.",
+        "highlight": "Nghĩa theo ngữ cảnh -> pay for",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "Text chain: Lisa (10:02 A.M.): \"The client moved the meeting to 3 P.M.\" Tom (10:03 A.M.): \"No problem at all.\" Question: At 10:03 A.M., what does Tom mean when he writes \"No problem at all\"?",
+        "vietnamese": "Chuỗi tin nhắn: Lisa (10:02): \"Khách dời cuộc họp sang 3 giờ chiều.\" Tom (10:03): \"Không vấn đề gì.\" Câu hỏi: Tom muốn nói gì?",
+        "explanation": "Đặt câu trong ngữ cảnh tin nhắn trước: Tom sắp xếp được, vẫn tham gia vào giờ mới.",
+        "highlight": "Hàm ý -> đồng ý với giờ họp mới",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "Sentence to insert at [1]–[4]: \"As a result, we have extended our opening hours.\" It fits right after the sentence describing a sharp rise in customer demand.",
+        "vietnamese": "Câu cần chèn: \"Vì vậy, chúng tôi đã kéo dài giờ mở cửa.\" Phù hợp ngay sau câu mô tả nhu cầu khách hàng tăng mạnh.",
+        "explanation": "\"As a result\" chỉ kết quả -> đặt sau câu nêu nguyên nhân (nhu cầu tăng).",
+        "highlight": "Từ nối As a result -> đặt sau câu nêu nguyên nhân",
         "part_tag": "Part 7"
       }
     ],
@@ -354,6 +1025,66 @@
         ],
         "answer_index": 1,
         "explanation": "ETS luôn kiểm tra vốn từ vựng bằng cách dùng từ đồng nghĩa (paraphrase) trong đáp án đúng."
+      },
+      {
+        "id": "q-strat-p7-2",
+        "question": "Câu hỏi: 'The word \"run\" in paragraph 1, line 2, is closest in meaning to'. Ngữ cảnh: \"Ms. Ortiz has run the bakery for ten years.\" Chọn:",
+        "options": [
+          "jog",
+          "operate",
+          "hurry",
+          "flow"
+        ],
+        "answer_index": 1,
+        "explanation": "\"run a business\" = điều hành, vận hành -> \"operate\". Các nghĩa khác của \"run\" không hợp ngữ cảnh."
+      },
+      {
+        "id": "q-strat-p7-3",
+        "question": "Với câu hỏi dạng NOT (\"What is NOT stated about…\"), cách làm hiệu quả nhất là gì?",
+        "options": [
+          "Chọn đáp án xuất hiện nguyên văn trong bài",
+          "Chọn đáp án dài nhất",
+          "Chỉ đọc câu cuối của bài",
+          "Đối chiếu từng đáp án với bài, loại 3 đáp án có thông tin, chọn đáp án còn lại"
+        ],
+        "answer_index": 3,
+        "explanation": "Câu NOT có 3 đáp án đúng với bài; loại dần là cách chắc chắn nhất."
+      },
+      {
+        "id": "q-strat-p7-4",
+        "question": "Câu hỏi chèn câu [1]–[4] cho câu: \"This change will take effect on March 1.\" Vị trí phù hợp nhất thường là:",
+        "options": [
+          "Ngay sau câu mô tả thay đổi (vd. giá mới, quy định mới)",
+          "Trước lời chào đầu thư",
+          "Sau chữ ký người gửi",
+          "Bất kỳ vị trí nào"
+        ],
+        "answer_index": 0,
+        "explanation": "\"This change\" phải thay cho một thay đổi vừa được nêu ngay trước đó."
+      },
+      {
+        "id": "q-strat-p7-5",
+        "question": "Trong bài đọc ba (triple passage), câu hỏi kết hợp thông tin thường đòi hỏi gì?",
+        "options": [
+          "Chỉ đọc văn bản đầu tiên",
+          "Đọc tiêu đề là đủ",
+          "Ghép dữ kiện ở văn bản này với dữ kiện ở văn bản khác",
+          "Chọn đáp án có số lớn nhất"
+        ],
+        "answer_index": 2,
+        "explanation": "Câu hỏi kết hợp (cross-reference) chỉ trả lời được khi nối thông tin giữa hai văn bản."
+      },
+      {
+        "id": "q-strat-p7-6",
+        "question": "Bạn còn 5 phút và 10 câu Part 7 chưa làm. Nên làm gì?",
+        "options": [
+          "Bỏ trống để tránh sai",
+          "Ưu tiên các câu chi tiết ngắn, phần còn lại vẫn tô đáp án chứ không bỏ trống",
+          "Đọc kỹ từng bài từ đầu",
+          "Quay lại kiểm tra Part 5"
+        ],
+        "answer_index": 1,
+        "explanation": "TOEIC không trừ điểm câu sai; tô đủ phiếu luôn có lợi hơn bỏ trống."
       }
     ]
   }

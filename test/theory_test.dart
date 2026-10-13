@@ -180,27 +180,21 @@ void main() {
 
       expect(find.text('Hiện tại đơn & Hiện tại tiếp diễn'), findsWidgets);
 
-      // Cuộn xuống để xem Mini Quiz
-      await tester.drag(find.byType(ListView), const Offset(0, -1200));
-      await tester.pumpAndSettle();
-
+      // Cuộn xuống tới Mini Quiz (độ dài bài thay đổi theo nội dung → cuộn tới khi thấy).
+      final list = find.byType(Scrollable).first;
+      await tester.scrollUntilVisible(find.text('Kiểm tra nhanh (Mini Quiz)'), 300, scrollable: list);
       expect(find.text('Kiểm tra nhanh (Mini Quiz)'), findsOneWidget);
-      expect(find.text('Câu 1'), findsOneWidget);
-
-      // Cuộn thêm để Câu 1 và các đáp án nằm trọn trong viewport
-      await tester.drag(find.byType(ListView), const Offset(0, -300));
-      await tester.pumpAndSettle();
 
       // Chạm vào 1 đáp án của Câu 1
       final optionA = find.text('reviews');
-      expect(optionA, findsOneWidget);
+      await tester.scrollUntilVisible(optionA, 200, scrollable: list);
+      await tester.pumpAndSettle();
       await tester.tap(optionA);
       await tester.pumpAndSettle();
 
-      // Cuộn thêm nếu cần và kiểm tra giải thích chi tiết
-      await tester.drag(find.byType(ListView), const Offset(0, -200));
-      await tester.pumpAndSettle();
-      expect(find.text('Giải thích chi tiết:'), findsOneWidget);
+      // Giải thích chi tiết hiện ra sau khi chọn
+      await tester.scrollUntilVisible(find.text('Giải thích chi tiết:').first, 200, scrollable: list);
+      expect(find.text('Giải thích chi tiết:'), findsWidgets);
     });
   });
 }

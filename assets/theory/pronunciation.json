@@ -4,14 +4,14 @@
     "category": "pronunciation",
     "title": "Bảng Nguyên âm IPA (Nguyên âm đơn & Nguyên âm đôi)",
     "subtitle": "Phân biệt nguyên âm ngắn / dài & Sự khác biệt giọng US - UK",
-    "read_time_minutes": 7,
+    "read_time_minutes": 9,
     "difficulty": "Cơ bản",
     "tags": [
       "pronunciation",
       "ipa",
       "listening"
     ],
-    "overview": "Bảng 44 âm IPA là nền móng để nghe chuẩn từng từ trong đề thi TOEIC. Phân biệt được nguyên âm ngắn và dài giúp bạn tránh nghe nhầm các từ có nghĩa hoàn toàn khác nhau.",
+    "overview": "Bảng 44 âm IPA là nền móng để nghe chuẩn từng từ trong đề thi TOEIC. Phân biệt được nguyên âm ngắn – dài, âm /æ/ – /e/ và nhận ra khác biệt giọng Mỹ – Anh giúp bạn tránh nghe nhầm các từ có nghĩa hoàn toàn khác nhau ở Part 1 và Part 2.",
     "sections": [
       {
         "title": "1. Cặp nguyên âm ngắn vs dài",
@@ -20,10 +20,12 @@
         "bullet_points": [
           "/iː/ vs /ɪ/: sheep (con cừu) vs ship (tàu thủy); leave (rời đi) vs live (sống).",
           "/uː/ vs /ʊ/: fool (kẻ ngốc) vs full (đầy); pool (bể bơi) vs pull (kéo).",
-          "/ɔː/ vs /ɒ/: port (cảng) vs pot (nồi); caught (bắt) vs cot (giường cũi)."
+          "/ɔː/ vs /ɒ/ (giọng Anh): port (cảng) vs pot (nồi); caught (bắt) vs cot (giường cũi). Giọng Mỹ thường đọc /ɒ/ thành /ɑː/: pot /pɑːt/.",
+          "/ɑː/ vs /ʌ/: cart (xe đẩy) vs cut (cắt); heart (trái tim) vs hut (túp lều)."
         ],
         "tips": [
-          "Luyện tập khẩu hình miệng: Âm ngắn bật hơi nhanh, dứt khoát; âm dài giữ hơi ổn định trong cổ họng."
+          "Luyện tập khẩu hình miệng: Âm ngắn bật hơi nhanh, dứt khoát; âm dài giữ hơi ổn định trong cổ họng.",
+          "Bẫy Part 1 kinh điển: walk /wɔːk/ (đi bộ) vs work /wɜːk/ (US /wɜːrk/, làm việc). Nghe được nguyên âm mới chọn đúng tranh."
         ]
       },
       {
@@ -38,6 +40,34 @@
         "tips": [
           "Khác biệt US - UK: Giọng Mỹ phát âm rõ âm /r/ ở cuối từ (car, board, floor), trong khi giọng Anh kéo dài nguyên âm và nuốt âm /r/."
         ]
+      },
+      {
+        "title": "3. Âm /æ/, /e/, /ʌ/ và âm schwa /ə/",
+        "content": "Người Việt hay đọc lẫn /æ/ và /e/. Âm /æ/ mở miệng rộng, hạ hàm dưới; /e/ mở vừa. Âm schwa /ə/ là nguyên âm phổ biến nhất trong tiếng Anh, xuất hiện ở hầu hết âm tiết KHÔNG nhấn.",
+        "formula": "/æ/ (mở rộng) vs /e/ (mở vừa) vs /ʌ/ (ngắn, giữa miệng)\nÂm tiết không nhấn -> thường là /ə/",
+        "bullet_points": [
+          "/æ/ vs /e/: bad (tệ) vs bed (giường); man vs men; sat vs set; marry vs merry.",
+          "/ʌ/: cup, budget /ˈbʌdʒɪt/, discuss /dɪˈskʌs/, company /ˈkʌmpəni/.",
+          "Schwa /ə/: about /əˈbaʊt/, problem /ˈprɒbləm/, support /səˈpɔːt/, the agenda /ði əˈdʒendə/."
+        ],
+        "tips": [
+          "Part 1: \"The man is holding a bag /bæɡ/\" và \"…holding a bed sheet /bed/\" chỉ khác nguyên âm. Nhìn tranh trước để đoán từ khoá.",
+          "Không cố nghe rõ từng nguyên âm ở âm tiết yếu – chúng đều gần như /ə/. Hãy bám vào âm tiết được nhấn."
+        ]
+      },
+      {
+        "title": "4. Khác biệt giọng Mỹ – Anh hay gặp trong băng TOEIC",
+        "content": "Đề TOEIC dùng giọng Mỹ, Anh, Canada và Úc. Một số từ đổi nguyên âm hoặc cách đọc theo giọng; biết trước sẽ không bị \"đứng hình\" khi đổi người nói.",
+        "formula": "US: /æ/, /ɑː/, đọc rõ /r/  |  UK: /ɑː/, /ɒ/, không đọc /r/ cuối",
+        "bullet_points": [
+          "can't: US /kænt/ – UK /kɑːnt/; ask: US /æsk/ – UK /ɑːsk/.",
+          "job, stop, office: US /dʒɑːb/, /stɑːp/, /ˈɑːfɪs/ – UK /dʒɒb/, /stɒp/, /ˈɒfɪs/.",
+          "schedule: US /ˈskedʒuːl/ – UK (truyền thống) /ˈʃedjuːl/.",
+          "Âm /r/ cuối: floor, car, order – US đọc rõ /r/, UK kéo dài nguyên âm và bỏ /r/: /flɔː/, /kɑː/, /ˈɔːdə/."
+        ],
+        "tips": [
+          "Part 2: giọng Anh đọc \"can't\" /kɑːnt/ nghe gần \"cart\" – dựa vào ngữ cảnh câu phủ định để hiểu đúng."
+        ]
       }
     ],
     "examples": [
@@ -47,6 +77,41 @@
         "explanation": "Danh từ \"seat\" có âm /iː/ dài, khác với động từ \"sit\" có âm /ɪ/ ngắn.",
         "highlight": "seat /siːt/ vs sit /sɪt/",
         "part_tag": "Part 1 & 2"
+      },
+      {
+        "english": "The man is walking /ˈwɔːkɪŋ/ along the pier.",
+        "vietnamese": "Người đàn ông đang đi bộ dọc cầu tàu.",
+        "explanation": "\"walking\" có nguyên âm /ɔː/; phương án bẫy thường là \"working\" /ˈwɜːkɪŋ/ (đang làm việc).",
+        "highlight": "walking /ˈwɔːkɪŋ/",
+        "part_tag": "Part 1"
+      },
+      {
+        "english": "Please fill /fɪl/ out this form before the interview.",
+        "vietnamese": "Vui lòng điền vào mẫu đơn này trước buổi phỏng vấn.",
+        "explanation": "\"fill\" có /ɪ/ ngắn, khác \"feel\" /fiːl/ (cảm thấy) có /iː/ dài.",
+        "highlight": "fill /fɪl/",
+        "part_tag": "Part 2"
+      },
+      {
+        "english": "The bed /bed/ in each guest room has been made.",
+        "vietnamese": "Giường trong mỗi phòng khách đã được dọn.",
+        "explanation": "\"bed\" có âm /e/; nếu nghe thành /æ/ sẽ thành \"bad\" (tệ).",
+        "highlight": "bed /bed/",
+        "part_tag": "Part 1"
+      },
+      {
+        "english": "The meeting has been rescheduled /ˌriːˈskedʒuːld/ for Friday.",
+        "vietnamese": "Cuộc họp đã được dời sang thứ Sáu.",
+        "explanation": "Giọng Mỹ đọc /ˈskedʒuːl/; giọng Anh có thể đọc /ˌriːˈʃedjuːld/ – cùng một từ.",
+        "highlight": "rescheduled /ˌriːˈskedʒuːld/",
+        "part_tag": "Part 3 & 4"
+      },
+      {
+        "english": "I can't /kænt/ attend the workshop, but Ms. Lee can /kən/.",
+        "vietnamese": "Tôi không thể dự hội thảo, nhưng cô Lee thì có thể.",
+        "explanation": "\"can't\" giữ nguyên âm đầy đủ /æ/ và được nhấn; \"can\" khẳng định trong câu thường đọc yếu /kən/.",
+        "highlight": "can't /kænt/",
+        "part_tag": "Part 2"
       }
     ],
     "quiz": [
@@ -61,6 +126,78 @@
         ],
         "answer_index": 1,
         "explanation": "\"leave\" phát âm là /liːv/ với nguyên âm /iː/ dài, phân biệt với \"live\" /lɪv/ có nguyên âm /ɪ/ ngắn."
+      },
+      {
+        "id": "q-pron-v2",
+        "question": "Từ nào có nguyên âm GIỐNG từ \"full\" /fʊl/?",
+        "options": [
+          "put",
+          "pool",
+          "food",
+          "fuel"
+        ],
+        "answer_index": 0,
+        "explanation": "\"put\" /pʊt/ có /ʊ/ ngắn như \"full\". \"pool\" /puːl/, \"food\" /fuːd/, \"fuel\" /ˈfjuːəl/ đều có /uː/ dài."
+      },
+      {
+        "id": "q-pron-v3",
+        "question": "Cặp từ nào chỉ khác nhau ở nguyên âm /ɔː/ và /ɜː/ (bẫy hay gặp ở Part 1)?",
+        "options": [
+          "wall – well",
+          "law – low",
+          "walk – work",
+          "talk – took"
+        ],
+        "answer_index": 2,
+        "explanation": "walk /wɔːk/ – work /wɜːk/. wall – well là /ɔː/ – /e/; law – low là /ɔː/ – /əʊ/; talk – took là /ɔː/ – /ʊ/."
+      },
+      {
+        "id": "q-pron-v4",
+        "question": "Từ nào chứa âm /æ/?",
+        "options": [
+          "bed",
+          "bird",
+          "bud",
+          "bad"
+        ],
+        "answer_index": 3,
+        "explanation": "\"bad\" /bæd/. \"bed\" /bed/ có /e/, \"bird\" /bɜːd/ có /ɜː/, \"bud\" /bʌd/ có /ʌ/."
+      },
+      {
+        "id": "q-pron-v5",
+        "question": "Nguyên âm phổ biến nhất tiếng Anh, thường nằm ở âm tiết KHÔNG nhấn (vd. chữ \"a\" trong \"about\") là:",
+        "options": [
+          "/ʌ/",
+          "/ə/ (schwa)",
+          "/æ/",
+          "/ɑː/"
+        ],
+        "answer_index": 1,
+        "explanation": "Schwa /ə/ xuất hiện ở hầu hết âm tiết yếu: about /əˈbaʊt/, support /səˈpɔːt/. /ʌ/ là âm ngắn nhưng được nhấn (cup)."
+      },
+      {
+        "id": "q-pron-v6",
+        "question": "Cách đọc truyền thống của giọng Anh (UK) cho từ \"schedule\" là:",
+        "options": [
+          "/ˈskedʒuːl/",
+          "/ˈskeɪdʒuːl/",
+          "/ˈʃɪdjuːl/",
+          "/ˈʃedjuːl/"
+        ],
+        "answer_index": 3,
+        "explanation": "UK truyền thống: /ˈʃedjuːl/; US: /ˈskedʒuːl/. Hai phương án còn lại sai nguyên âm."
+      },
+      {
+        "id": "q-pron-v7",
+        "question": "Trong giọng Mỹ, người nghe phân biệt \"can't\" với \"can\" trong câu chủ yếu nhờ:",
+        "options": [
+          "\"can't\" giữ nguyên âm /æ/ đầy đủ và được nhấn, còn \"can\" khẳng định thường đọc yếu /kən/",
+          "\"can't\" luôn bật mạnh âm /t/ cuối",
+          "\"can't\" có nguyên âm /iː/",
+          "Hai từ khác nhau ở phụ âm đầu"
+        ],
+        "answer_index": 0,
+        "explanation": "Âm /t/ cuối của \"can't\" ở giọng Mỹ thường không bật hơi, nên dấu hiệu chính là nguyên âm /æ/ được nhấn so với /kən/ yếu."
       }
     ]
   },
@@ -69,14 +206,14 @@
     "category": "pronunciation",
     "title": "Cặp Phụ âm dễ nhầm lẫn trong đề nghe TOEIC",
     "subtitle": "Phụ âm vô thanh vs hữu thanh, cặp âm /s/ - /ʃ/ và /θ/ - /ð/",
-    "read_time_minutes": 7,
+    "read_time_minutes": 9,
     "difficulty": "Trung cấp",
     "tags": [
       "pronunciation",
       "ipa",
       "listening"
     ],
-    "overview": "Trong băng nghe TOEIC Part 1 & 2, người đọc thường dùng các từ có phụ âm na ná nhau để gài bẫy thí sinh không nghe rõ âm cuối hoặc cặp âm gió.",
+    "overview": "Trong băng nghe TOEIC Part 1 & 2, người ra đề thường dùng các từ có phụ âm na ná nhau (copy – coffee, contract – contact, collect – correct) và đuôi -s/-ed để gài bẫy thí sinh không nghe rõ âm cuối.",
     "sections": [
       {
         "title": "1. Phụ âm vô thanh vs hữu thanh",
@@ -84,7 +221,8 @@
         "formula": "/p/ - /b/ | /t/ - /d/ | /k/ - /g/ | /f/ - /v/",
         "bullet_points": [
           "/p/ vs /b/: pack (đóng gói) vs back (phía sau); copy vs coffee.",
-          "/t/ vs /d/: write (viết) vs ride (cưỡi xe); tie (cà vạt) vs die."
+          "/t/ vs /d/: write (viết) vs ride (cưỡi xe); tie (cà vạt) vs die.",
+          "/k/ vs /g/: coat (áo khoác) vs goat; /f/ vs /v/: fan vs van; ferry vs very."
         ],
         "tips": [
           "Đặt ngón tay lên cổ họng: khi phát âm /b/, /d/, /g/ cổ họng phải rung; khi phát âm /p/, /t/, /k/ cổ họng không rung."
@@ -102,6 +240,33 @@
         "tips": [
           "Phụ âm đuôi (Ending sounds) quyết định nghĩa: \"nice\" /naɪs/ vs \"nine\" /naɪn/ vs \"night\" /naɪt/."
         ]
+      },
+      {
+        "title": "3. Âm cuối: đuôi -s/-es và -ed",
+        "content": "Đuôi -s cho biết số nhiều hoặc ngôi thứ ba; đuôi -ed cho biết quá khứ / bị động. Phát âm đuôi phụ thuộc âm đứng trước nó (vô thanh hay hữu thanh).",
+        "formula": "-s/-es: /s/ sau âm vô thanh (p, t, k, f, θ) | /z/ sau âm hữu thanh & nguyên âm | /ɪz/ sau s, z, ʃ, tʃ, dʒ\n-ed: /t/ sau âm vô thanh | /d/ sau âm hữu thanh & nguyên âm | /ɪd/ sau t, d",
+        "bullet_points": [
+          "-s: works /wɜːks/, calls /kɔːlz/, offices /ˈɒfɪsɪz/, changes /ˈtʃeɪndʒɪz/.",
+          "-ed: worked /wɜːkt/, stopped /stɒpt/, called /kɔːld/, wanted /ˈwɒntɪd/, needed /ˈniːdɪd/.",
+          "Cụm phụ âm cuối hay bị nghe sót: desks /desks/, texts /teksts/, months /mʌnθs/."
+        ],
+        "tips": [
+          "Part 1: \"Boxes have been stacked /stækt/\" – âm /t/ cuối nhỏ nhưng quyết định thì bị động hoàn thành; đừng nghe thành \"stack\".",
+          "Part 2: nghe -s để biết câu hỏi về một hay nhiều thứ (the report vs the reports)."
+        ]
+      },
+      {
+        "title": "4. Cặp /l/ – /n/, /r/ – /l/ và bẫy gần âm Part 2",
+        "content": "Người Việt dễ lẫn /l/ – /n/ và /r/ – /l/. Đề Part 2 rất hay đặt một phương án chứa từ gần âm với từ trong câu hỏi – nghe giống nhưng nghĩa không liên quan.",
+        "formula": "/l/ (đầu lưỡi chạm lợi trên) vs /n/ (âm mũi) | /r/ (lưỡi cong, không chạm) vs /l/",
+        "bullet_points": [
+          "/l/ vs /n/: light – night; lose – news; low – no.",
+          "/r/ vs /l/: rate – late; right – light; collect – correct; glass – grass.",
+          "Bẫy gần âm Part 2: copy – coffee; contract – contact; lunch – launch; walk – work; fax – facts."
+        ],
+        "tips": [
+          "Phương án lặp lại hoặc gần âm với từ trong câu hỏi thường là bẫy – ưu tiên phương án trả lời đúng ý, dù không lặp từ."
+        ]
       }
     ],
     "examples": [
@@ -111,6 +276,41 @@
         "explanation": "\"sells\" có âm /s/, \"she\" và \"shell\" có âm /ʃ/.",
         "highlight": "/s/ (sells) vs /ʃ/ (she, shell)",
         "part_tag": "Part 1 & 2"
+      },
+      {
+        "english": "Please collect /kəˈlekt/ your badge at the front desk.",
+        "vietnamese": "Vui lòng nhận thẻ tên tại quầy lễ tân.",
+        "explanation": "\"collect\" có /l/; dễ nghe nhầm thành \"correct\" /kəˈrekt/ (sửa) nếu không phân biệt /l/ – /r/.",
+        "highlight": "collect /kəˈlekt/",
+        "part_tag": "Part 2"
+      },
+      {
+        "english": "Some boxes have been stacked /stækt/ near the door.",
+        "vietnamese": "Vài chiếc hộp đã được xếp chồng gần cửa.",
+        "explanation": "Đuôi -ed sau âm vô thanh /k/ đọc là /t/ – rất nhẹ nhưng cho biết đây là bị động hoàn thành.",
+        "highlight": "stacked /stækt/",
+        "part_tag": "Part 1"
+      },
+      {
+        "english": "Two new offices /ˈɒfɪsɪz/ opened this month.",
+        "vietnamese": "Hai văn phòng mới đã khai trương trong tháng này.",
+        "explanation": "Đuôi -es sau âm /s/ đọc là /ɪz/, tạo thêm một âm tiết (US: /ˈɑːfɪsɪz/).",
+        "highlight": "offices /ˈɒfɪsɪz/",
+        "part_tag": "Part 3 & 4"
+      },
+      {
+        "english": "The contract /ˈkɒntrækt/ was signed yesterday.",
+        "vietnamese": "Hợp đồng đã được ký hôm qua.",
+        "explanation": "\"contract\" có cụm /tr/; \"contact\" /ˈkɒntækt/ (liên hệ) không có /r/ – cặp bẫy quen thuộc ở Part 2.",
+        "highlight": "contract /ˈkɒntrækt/",
+        "part_tag": "Part 2"
+      },
+      {
+        "english": "The interest rate /reɪt/ will rise next month.",
+        "vietnamese": "Lãi suất sẽ tăng vào tháng tới.",
+        "explanation": "\"rate\" bắt đầu bằng /r/; nếu đọc /l/ sẽ thành \"late\" (muộn).",
+        "highlight": "rate /reɪt/",
+        "part_tag": "Part 4"
       }
     ],
     "quiz": [
@@ -125,6 +325,78 @@
         ],
         "answer_index": 2,
         "explanation": "\"think\" bắt đầu bằng âm vô thanh /θ/, phát âm bằng cách đặt đầu lưỡi giữa hai hàm răng và đẩy luồng hơi ra."
+      },
+      {
+        "id": "q-pron-c2",
+        "question": "Đuôi -ed trong \"needed\" được phát âm là:",
+        "options": [
+          "/t/",
+          "/d/",
+          "/ɪd/",
+          "Không phát âm"
+        ],
+        "answer_index": 2,
+        "explanation": "Sau âm /d/ (hoặc /t/), -ed đọc là /ɪd/: needed /ˈniːdɪd/, wanted /ˈwɒntɪd/."
+      },
+      {
+        "id": "q-pron-c3",
+        "question": "Đuôi -s trong \"calls\" được phát âm là:",
+        "options": [
+          "/s/",
+          "/z/",
+          "/ɪz/",
+          "/ʃ/"
+        ],
+        "answer_index": 1,
+        "explanation": "Âm trước là /l/ (hữu thanh) nên -s đọc /z/: calls /kɔːlz/. /s/ dùng sau âm vô thanh, /ɪz/ sau s, z, ʃ, tʃ, dʒ."
+      },
+      {
+        "id": "q-pron-c4",
+        "question": "Từ nào có đuôi -ed phát âm là /t/?",
+        "options": [
+          "played",
+          "needed",
+          "called",
+          "stopped"
+        ],
+        "answer_index": 3,
+        "explanation": "\"stopped\" /stɒpt/: âm trước là /p/ vô thanh -> /t/. played, called đọc /d/; needed đọc /ɪd/."
+      },
+      {
+        "id": "q-pron-c5",
+        "question": "Câu hỏi Part 2: \"Did you contact the supplier?\" – phương án gây bẫy gần âm thường chứa từ nào?",
+        "options": [
+          "contract",
+          "call",
+          "reach",
+          "e-mail"
+        ],
+        "answer_index": 0,
+        "explanation": "\"contract\" nghe gần giống \"contact\" nhưng nghĩa khác (hợp đồng) – kiểu bẫy gần âm điển hình."
+      },
+      {
+        "id": "q-pron-c6",
+        "question": "Cặp từ nào chỉ khác nhau ở âm /r/ và /l/?",
+        "options": [
+          "rice – nice",
+          "lead – need",
+          "right – light",
+          "red – bed"
+        ],
+        "answer_index": 2,
+        "explanation": "right /raɪt/ – light /laɪt/. rice – nice là /r/ – /n/; lead – need là /l/ – /n/; red – bed là /r/ – /b/."
+      },
+      {
+        "id": "q-pron-c7",
+        "question": "Từ nào kết thúc bằng âm /θ/?",
+        "options": [
+          "month",
+          "mouse",
+          "moss",
+          "much"
+        ],
+        "answer_index": 0,
+        "explanation": "month /mʌnθ/. mouse /maʊs/ và moss /mɒs/ kết thúc bằng /s/; much /mʌtʃ/ kết thúc bằng /tʃ/."
       }
     ]
   },
@@ -132,8 +404,8 @@
     "id": "pronunciation-stress",
     "category": "pronunciation",
     "title": "Quy tắc đánh Trọng âm từ 2-3 âm tiết",
-    "subtitle": "Quy tắc Danh - Động từ, hậu tố nhận trọng âm & Hậu tố dịch chuyển trọng âm",
-    "read_time_minutes": 7,
+    "subtitle": "Danh – Động từ, hậu tố, từ ghép & trọng âm câu để bắt từ khoá khi nghe",
+    "read_time_minutes": 9,
     "difficulty": "Trung cấp",
     "tags": [
       "pronunciation",
@@ -151,7 +423,8 @@
           "Động từ: con'tract (co lại), re'cord (ghi âm), pre'sent (thuyết trình), pro'ject (phóng ra)."
         ],
         "tips": [
-          "Các ngoại lệ thông dụng: ho'tel (danh từ nhưng nhấn âm 2), 'machine (danh từ nhấn âm 2)."
+          "Ngoại lệ thông dụng: ho'tel, ma'chine, ad'vice là danh từ nhưng nhấn âm 2.",
+          "Part 2/3: cùng chữ \"record\", \"present\", \"produce\" nhưng đổi trọng âm là đổi từ loại – nghe trọng âm để hiểu đúng vai trò trong câu."
         ]
       },
       {
@@ -160,11 +433,37 @@
         "formula": "-ic, -tion, -sion: Nhấn âm NGAY TRƯỚC nó\n-ee, -eer, -ese: Nhấn CHÍNH NÓ",
         "bullet_points": [
           "Hậu tố -ic, -tion, -sion: eco'nomic, prepa'ration, de'cision.",
-          "Hậu tố -ee, -eer: employ'ee, volunt'eer, engin'eer.",
+          "Hậu tố -ee, -eer, -ese: trai'nee, refu'gee, volun'teer, engi'neer, Japa'nese.",
           "Hậu tố không làm đổi trọng âm: -ful, -less, -ness, -ment, -ly (care -> 'careful, 'carefully)."
         ],
         "tips": [
           "Từ có đuôi -cy, -ty, -phy, -gy: Trọng âm rơi vào âm tiết thứ 3 tính từ cuối lên (e'conomy, pho'tography)."
+        ]
+      },
+      {
+        "title": "3. Từ ghép và cụm động từ",
+        "content": "Danh từ ghép thường nhấn từ ĐẦU; cụm động từ (phrasal verb) và tính từ ghép thường nhấn từ SAU. Cùng chữ nhưng đổi trọng âm sẽ đổi từ loại.",
+        "formula": "Danh từ ghép: 'parking lot, 'bookstore\nCụm động từ / tính từ ghép: check 'in, set 'up, well-'known",
+        "bullet_points": [
+          "Danh từ ghép: 'conference room, 'parking lot, 'bookstore, 'job fair.",
+          "Danh từ từ cụm động từ: 'check-in, 'setup, 'takeoff, 'printout.",
+          "Cụm động từ: check 'in, set 'up, take 'off, print 'out, sign 'up."
+        ],
+        "tips": [
+          "Nghe \"the 'setup\" (danh từ: sự sắp đặt) khác \"set 'up the room\" (động từ: sắp xếp). Part 3 hay hỏi ai sẽ làm việc gì -> cụm động từ."
+        ]
+      },
+      {
+        "title": "4. Trọng âm câu: nghe từ khoá",
+        "content": "Trong câu, từ nội dung (danh từ, động từ chính, tính từ, trạng từ, từ phủ định) được nhấn; từ chức năng (a, the, to, of, can…) đọc nhẹ. Người nói còn nhấn TƯƠNG PHẢN để sửa thông tin.",
+        "formula": "Từ nội dung -> nhấn | Từ chức năng -> đọc yếu\nNhấn tương phản: I said TUESDAY, not Thursday.",
+        "bullet_points": [
+          "\"I NEED the REPORT by FRIday\" – chỉ cần nghe 3 từ nhấn là nắm ý.",
+          "Nhấn tương phản thường mang hàm ý: \"I asked for the BLUE folder\" (không phải màu khác).",
+          "Câu hỏi hàm ý Part 3/4 (What does the man mean when he says…) thường dựa vào từ được nhấn."
+        ],
+        "tips": [
+          "Khi đọc trước câu hỏi Part 3/4, gạch chân từ khoá; lúc nghe chỉ cần bắt các từ được nhấn trùng hoặc đồng nghĩa với chúng."
         ]
       }
     ],
@@ -175,6 +474,41 @@
         "explanation": "Động từ \"pre'sent\" nhấn âm 2, danh từ \"present\" nhấn âm 1.",
         "highlight": "pre'sent (Verb) vs 'present (Noun)",
         "part_tag": "Part 2 & 3"
+      },
+      {
+        "english": "The 'parking lot behind the building is closed today.",
+        "vietnamese": "Bãi đỗ xe phía sau toà nhà hôm nay đóng cửa.",
+        "explanation": "Danh từ ghép \"parking lot\" nhấn vào từ đầu: 'parking lot.",
+        "highlight": "'parking lot",
+        "part_tag": "Part 1 & 4"
+      },
+      {
+        "english": "Please check 'in at the 'check-in counter on the first floor.",
+        "vietnamese": "Vui lòng làm thủ tục tại quầy check-in ở tầng một.",
+        "explanation": "Cụm động từ \"check 'in\" nhấn từ sau; danh từ \"'check-in\" nhấn từ đầu.",
+        "highlight": "check 'in at the 'check-in counter",
+        "part_tag": "Part 3"
+      },
+      {
+        "english": "Our farms pro'duce fresh vegetables for the 'produce section.",
+        "vietnamese": "Các trang trại của chúng tôi sản xuất rau tươi cho quầy nông sản.",
+        "explanation": "Động từ pro'duce nhấn âm 2; danh từ 'produce (nông sản) nhấn âm 1.",
+        "highlight": "pro'duce",
+        "part_tag": "Part 4"
+      },
+      {
+        "english": "Every trai'nee will receive a printed manual.",
+        "vietnamese": "Mỗi học viên sẽ nhận một cuốn sổ tay in sẵn.",
+        "explanation": "Hậu tố -ee nhận trọng âm: trai'nee /treɪˈniː/.",
+        "highlight": "trai'nee",
+        "part_tag": "Part 4"
+      },
+      {
+        "english": "I asked for the BLUE folder, not the black one.",
+        "vietnamese": "Tôi đã nhờ lấy tập hồ sơ màu XANH, không phải màu đen.",
+        "explanation": "Nhấn tương phản vào \"BLUE\" để sửa thông tin người nghe hiểu sai.",
+        "highlight": "BLUE",
+        "part_tag": "Part 3"
       }
     ],
     "quiz": [
@@ -189,6 +523,78 @@
         ],
         "answer_index": 1,
         "explanation": "Hậu tố \"-sion\" khiến trọng âm rơi vào âm tiết ngay trước nó -> de'ci.sion (âm tiết 2)."
+      },
+      {
+        "id": "q-pron-s2",
+        "question": "Danh từ \"record\" (hồ sơ, kỷ lục) có trọng âm ở:",
+        "options": [
+          "Âm tiết 1",
+          "Âm tiết 2",
+          "Âm tiết 3",
+          "Cả hai âm tiết"
+        ],
+        "answer_index": 0,
+        "explanation": "Danh từ 2 âm tiết thường nhấn âm 1: 'record. Động từ re'cord (ghi lại) nhấn âm 2."
+      },
+      {
+        "id": "q-pron-s3",
+        "question": "Từ nào có vị trí trọng âm KHÁC các từ còn lại?",
+        "options": [
+          "economic",
+          "engineer",
+          "decision",
+          "volunteer"
+        ],
+        "answer_index": 2,
+        "explanation": "de'cision nhấn âm 2; eco'nomic, engi'neer, volun'teer đều nhấn âm 3."
+      },
+      {
+        "id": "q-pron-s4",
+        "question": "Cụm nào được nhấn ở từ ĐẦU?",
+        "options": [
+          "well-known",
+          "check in (động từ)",
+          "set up (động từ)",
+          "parking lot"
+        ],
+        "answer_index": 3,
+        "explanation": "Danh từ ghép 'parking lot nhấn từ đầu. Tính từ ghép well-'known và cụm động từ check 'in, set 'up nhấn từ sau."
+      },
+      {
+        "id": "q-pron-s5",
+        "question": "Từ \"photography\" có trọng âm ở âm tiết thứ mấy?",
+        "options": [
+          "Âm tiết 1",
+          "Âm tiết 2",
+          "Âm tiết 3",
+          "Âm tiết 4"
+        ],
+        "answer_index": 1,
+        "explanation": "Đuôi -phy: trọng âm rơi vào âm tiết thứ 3 tính từ cuối -> pho'tography (âm tiết 2)."
+      },
+      {
+        "id": "q-pron-s6",
+        "question": "Theo quy tắc hậu tố, từ nào nhấn vào CHÍNH hậu tố?",
+        "options": [
+          "Japanese",
+          "careful",
+          "happiness",
+          "development"
+        ],
+        "answer_index": 0,
+        "explanation": "Hậu tố -ese nhận trọng âm: Japa'nese. -ful, -ness, -ment không nhận trọng âm và không làm đổi trọng âm."
+      },
+      {
+        "id": "q-pron-s7",
+        "question": "Trong câu \"I said Tuesday, not Thursday\", người nói nhấn mạnh \"Tuesday\" để:",
+        "options": [
+          "Hỏi lại người nghe",
+          "Thể hiện sự ngạc nhiên vui vẻ",
+          "Sửa lại thông tin bị hiểu sai (nhấn tương phản)",
+          "Đọc theo trọng âm từ thông thường"
+        ],
+        "answer_index": 2,
+        "explanation": "Đây là nhấn tương phản: người nói sửa lại thông tin \"Thursday\" mà người nghe đã hiểu sai."
       }
     ]
   },
@@ -197,7 +603,7 @@
     "category": "pronunciation",
     "title": "Nối âm, Nuốt âm & Biến âm Flap T thực chiến",
     "subtitle": "Linking sounds, Elision và kỹ thuật nghe âm lướt trong đề thi ETS",
-    "read_time_minutes": 8,
+    "read_time_minutes": 10,
     "difficulty": "Nâng cao",
     "tags": [
       "pronunciation",
@@ -229,7 +635,34 @@
           "Giảm âm (Weak forms): Các từ chức năng (of, for, can, to) được đọc thành âm schwa /ə/ rất nhẹ: \"cup of tea\" -> /kʌp əv tiː/."
         ],
         "tips": [
-          "Luyện tập kỹ thuật Shadowing (nói nhại theo băng) là cách duy nhất để tai bắt kịp hiện tượng Connected Speech."
+          "Luyện tập kỹ thuật Shadowing (nói nhại theo băng) là cách duy nhất để tai bắt kịp hiện tượng Connected Speech.",
+          "Flap T chỉ là đặc điểm giọng Mỹ/Canada; giọng Anh/Úc vẫn đọc /t/ rõ (water /ˈwɔːtə/). Đề TOEIC trộn cả hai – đừng hoang mang khi đổi người nói."
+        ]
+      },
+      {
+        "title": "3. Đồng hoá âm (Assimilation) & dạng rút gọn khẩu ngữ",
+        "content": "Khi /t/, /d/ đứng trước /j/ (you, your), hai âm hoà thành /tʃ/, /dʒ/. Trong hội thoại thân mật, một số cụm còn bị rút gọn hẳn – xuất hiện nhiều ở Part 3.",
+        "formula": "/t/ + /j/ -> /tʃ/ | /d/ + /j/ -> /dʒ/\ngoing to -> gonna | want to -> wanna | let me -> lemme",
+        "bullet_points": [
+          "Did you -> /dɪdʒə/; Would you -> /wʊdʒə/; Could you -> /kʊdʒə/.",
+          "meet you -> /miːtʃə/; Don't you -> /dəʊntʃə/; last year -> /lɑːstʃɪə/.",
+          "going to -> /ˈɡʌnə/; want to -> /ˈwɒnə/; have to -> /ˈhæftə/; let me -> /ˈlemi/."
+        ],
+        "tips": [
+          "Part 2 thường mở đầu bằng \"Did you…/Would you…/Could you…\" – nghe /dɪdʒə/, /wʊdʒə/ là biết ngay dạng câu hỏi Yes/No hoặc đề nghị."
+        ]
+      },
+      {
+        "title": "4. Dạng yếu của từ chức năng & bẫy con số",
+        "content": "Từ chức năng (to, for, and, can, was, have) gần như luôn đọc yếu với /ə/. Con số -teen và -ty chỉ khác nhau ở trọng âm và độ dài nguyên âm – bẫy rất hay gặp ở Part 3/4 khi hỏi giờ, giá, số lượng.",
+        "formula": "to /tə/, for /fə/, and /ən/, can /kən/, was /wəz/, have /əv/\nthir'teen (/iː/ dài, nhấn sau) vs 'thirty (nhấn trước)",
+        "bullet_points": [
+          "should have -> /ʃʊdəv/; could have -> /kʊdəv/; a cup of coffee -> /ə kʌp əv ˈkɒfi/.",
+          "fif'teen /fɪfˈtiːn/ vs 'fifty /ˈfɪfti/; eigh'teen vs 'eighty.",
+          "Giọng Mỹ: \"thirty\" có Flap T -> nghe như \"thir-dy\"."
+        ],
+        "tips": [
+          "Khi câu hỏi Part 3/4 có con số trong phương án, chú ý trọng âm: nhấn ở cuối và kéo dài /iː/ là -teen; nhấn ở đầu là -ty."
         ]
       }
     ],
@@ -240,6 +673,41 @@
         "explanation": "Nối âm \"pick it up\" và nối âm \"Could you\" -> /kʊdʒuː/.",
         "highlight": "pick it up /pɪ kɪ tʌp/",
         "part_tag": "Part 2 & 3"
+      },
+      {
+        "english": "Did you get my e-mail about the budget? -> /dɪdʒə ɡet maɪ ˈiːmeɪl/",
+        "vietnamese": "Bạn đã nhận được e-mail của tôi về ngân sách chưa?",
+        "explanation": "\"Did you\" đồng hoá thành /dɪdʒə/ – âm /d/ + /j/ hoà thành /dʒ/.",
+        "highlight": "Did you",
+        "part_tag": "Part 2"
+      },
+      {
+        "english": "The train leaves at seven fif'teen, not seven 'fifty.",
+        "vietnamese": "Chuyến tàu khởi hành lúc 7 giờ 15, không phải 7 giờ 50.",
+        "explanation": "fif'teen nhấn âm cuối với /iː/ dài; 'fifty nhấn âm đầu.",
+        "highlight": "fif'teen",
+        "part_tag": "Part 4"
+      },
+      {
+        "english": "We're going to need more chairs for the seminar. -> /wɪə ˈɡʌnə niːd/",
+        "vietnamese": "Chúng ta sẽ cần thêm ghế cho hội thảo.",
+        "explanation": "\"going to\" trong hội thoại nhanh rút gọn thành /ˈɡʌnə/ (gonna).",
+        "highlight": "going to",
+        "part_tag": "Part 3"
+      },
+      {
+        "english": "You should have called the supplier first. -> /ʃʊdəv/",
+        "vietnamese": "Lẽ ra bạn nên gọi cho nhà cung cấp trước.",
+        "explanation": "\"have\" sau động từ khuyết thiếu đọc yếu /əv/, nối liền: /ʃʊdəv/.",
+        "highlight": "should have",
+        "part_tag": "Part 3"
+      },
+      {
+        "english": "Let me check the schedule for you. -> /ˈlemi tʃek/",
+        "vietnamese": "Để tôi kiểm tra lịch giúp bạn.",
+        "explanation": "\"Let me\" rút gọn thành /ˈlemi/ – câu trả lời gián tiếp rất hay gặp ở Part 2.",
+        "highlight": "Let me",
+        "part_tag": "Part 2"
       }
     ],
     "quiz": [
@@ -254,6 +722,78 @@
         ],
         "answer_index": 1,
         "explanation": "Quy tắc Flap T trong giọng Mỹ biến âm /t/ giữa hai nguyên âm thành âm /d/ lướt nhẹ -> nghe như \"mee-ding\"."
+      },
+      {
+        "id": "q-pron-cs2",
+        "question": "Trong hội thoại nhanh, \"Did you\" thường nghe giống:",
+        "options": [
+          "/dɪd juː/ tách rời",
+          "/dɪdʒə/",
+          "/dɪ juː/",
+          "/daɪ juː/"
+        ],
+        "answer_index": 1,
+        "explanation": "/d/ + /j/ đồng hoá thành /dʒ/ và \"you\" đọc yếu /ə/ -> /dɪdʒə/."
+      },
+      {
+        "id": "q-pron-cs3",
+        "question": "Trong giọng Mỹ, âm /t/ trong \"thirty\" thường được đọc như thế nào?",
+        "options": [
+          "Bị nuốt hoàn toàn",
+          "Bật hơi thật mạnh",
+          "Thành Flap T, nghe như /d/ nhẹ",
+          "Đọc thành /θ/"
+        ],
+        "answer_index": 2,
+        "explanation": "/t/ đứng giữa hai nguyên âm (thirty) -> Flap T: \"thir-dy\"."
+      },
+      {
+        "id": "q-pron-cs4",
+        "question": "Phân biệt \"fifteen\" và \"fifty\" khi nghe chủ yếu dựa vào:",
+        "options": [
+          "Phụ âm đầu khác nhau",
+          "Số âm tiết khác nhau",
+          "\"fifteen\" có âm /v/",
+          "Trọng âm: fif'teen nhấn âm 2 với /iː/ dài, 'fifty nhấn âm 1"
+        ],
+        "answer_index": 3,
+        "explanation": "Hai từ cùng 2 âm tiết, cùng phụ âm đầu; khác biệt là trọng âm và độ dài nguyên âm cuối."
+      },
+      {
+        "id": "q-pron-cs5",
+        "question": "Trong \"next door\", âm nào thường bị nuốt?",
+        "options": [
+          "/t/",
+          "/n/",
+          "/k/",
+          "/d/"
+        ],
+        "answer_index": 0,
+        "explanation": "/t/ đứng giữa hai phụ âm (/ks/ và /d/) bị lược bỏ: /neks dɔː/."
+      },
+      {
+        "id": "q-pron-cs6",
+        "question": "Cụm \"should have\" trong câu \"You should have told me\" thường nghe là:",
+        "options": [
+          "/ʃʊdəv/",
+          "/ʃʊd hæv/",
+          "/ʃʊ hæv/",
+          "/ʃuːd/"
+        ],
+        "answer_index": 0,
+        "explanation": "\"have\" là trợ động từ nên đọc yếu /əv/ và nối với \"should\": /ʃʊdəv/."
+      },
+      {
+        "id": "q-pron-cs7",
+        "question": "Trong câu \"I'll be there for an hour\", từ \"for\" thường được đọc là:",
+        "options": [
+          "/fɔː/ đầy đủ",
+          "/fə/ (US /fər/), dạng yếu",
+          "/fʊə/",
+          "/fiː/"
+        ],
+        "answer_index": 1,
+        "explanation": "Giới từ không mang ý nhấn nên đọc dạng yếu với schwa: /fə/ (giọng Mỹ /fər/)."
       }
     ]
   }

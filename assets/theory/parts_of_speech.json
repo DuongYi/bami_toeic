@@ -4,7 +4,7 @@
     "category": "partsOfSpeech",
     "title": "Danh từ đếm được, không đếm được & Đuôi danh từ",
     "subtitle": "Nhận diện đuôi chỉ người/vật & Danh từ không đếm được kinh điển",
-    "read_time_minutes": 6,
+    "read_time_minutes": 8,
     "difficulty": "Cơ bản",
     "tags": [
       "nouns",
@@ -36,6 +36,32 @@
         "tips": [
           "Bẫy: Đề thi hay cho \"an equipment\" hoặc \"equipments\" là SAI. Đáp án đúng là \"equipment\" hoặc \"pieces of equipment\"."
         ]
+      },
+      {
+        "title": "3. Vị trí của danh từ trong câu",
+        "content": "Danh từ đứng sau từ hạn định, sau tính từ, sau giới từ và làm chủ ngữ / tân ngữ của động từ. (Danh từ ghép xem chủ điểm Danh từ ghép; mạo từ xem chủ điểm Mạo từ.)",
+        "formula": "(a / the / my / this) + (Adj) + [N]\nGiới từ + [N]\nV + [N] (tân ngữ) | [N] + V (chủ ngữ)",
+        "bullet_points": [
+          "\"Final approval is expected next week.\" (chủ ngữ).",
+          "\"The museum offers free admission on Sundays.\" (tân ngữ sau tính từ).",
+          "\"the approval of the budget\" (danh từ giữa the … of)."
+        ],
+        "tips": [
+          "Chỗ trống nằm giữa \"the\" và \"of\" gần như luôn cần danh từ: \"the _______ of the plan\" -> approval / completion / implementation."
+        ]
+      },
+      {
+        "title": "4. Danh từ số nhiều đặc biệt & hoà hợp",
+        "content": "Một số danh từ có hình thức số nhiều bất quy tắc hoặc luôn ở dạng số nhiều. (Lượng từ + danh từ xem chủ điểm Lượng từ.)",
+        "formula": "Luôn số nhiều: goods, belongings, earnings, premises, savings, surroundings\nTập hợp chỉ người: staff, personnel (động từ thường số nhiều)\nHình thức -s nhưng số ít: news, headquarters (có thể số ít)",
+        "bullet_points": [
+          "\"The goods were shipped yesterday.\"",
+          "\"The news is encouraging.\" (news không đếm được, động từ số ít).",
+          "\"All personnel are required to attend.\""
+        ],
+        "tips": [
+          "Không thêm \"-s\" cho staff khi nói về nhân viên của một công ty: \"our staff\" (không phải \"our staffs\")."
+        ]
       }
     ],
     "examples": [
@@ -45,6 +71,34 @@
         "explanation": "Chủ ngữ nhận email thông báo phải là người -> chọn \"applicant\" thay vì \"application\".",
         "highlight": "The successful applicant will be notified",
         "part_tag": "Part 5"
+      },
+      {
+        "english": "Please submit your application along with two letters of recommendation.",
+        "vietnamese": "Vui lòng nộp đơn ứng tuyển kèm hai thư giới thiệu.",
+        "explanation": "Sau tính từ sở hữu \"your\" và là vật được nộp -> danh từ chỉ vật \"application\".",
+        "highlight": "submit your application",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The supervisor's approval is required for all overtime requests.",
+        "vietnamese": "Mọi yêu cầu làm thêm giờ đều cần sự phê duyệt của người giám sát.",
+        "explanation": "Sau sở hữu cách \"supervisor's\" cần danh từ -> \"approval\" (đuôi -al là danh từ).",
+        "highlight": "The supervisor's approval",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The hotel staff will store your luggage until check-in time.",
+        "vietnamese": "Nhân viên khách sạn sẽ giữ hành lý của bạn đến giờ nhận phòng.",
+        "explanation": "\"luggage\" là danh từ không đếm được, không thêm -s.",
+        "highlight": "store your luggage",
+        "part_tag": "Part 4"
+      },
+      {
+        "english": "Our new headquarters is located near the central train station.",
+        "vietnamese": "Trụ sở chính mới của chúng tôi nằm gần ga tàu trung tâm.",
+        "explanation": "\"headquarters\" có đuôi -s nhưng có thể dùng như danh từ số ít khi chỉ một trụ sở.",
+        "highlight": "Our new headquarters is located",
+        "part_tag": "Part 7"
       }
     ],
     "quiz": [
@@ -71,6 +125,54 @@
         ],
         "answer_index": 2,
         "explanation": "Sau \"fifty\" (50) cần danh từ đếm được số nhiều chỉ người tham dự -> chọn \"attendees\"."
+      },
+      {
+        "id": "q-noun-3",
+        "question": "Final _______ of the merger is expected by the end of the month.",
+        "options": [
+          "approve",
+          "approval",
+          "approved",
+          "approvingly"
+        ],
+        "answer_index": 1,
+        "explanation": "Sau tính từ \"Final\" và trước \"of\", làm chủ ngữ -> danh từ \"approval\"."
+      },
+      {
+        "id": "q-noun-4",
+        "question": "The museum offers free _______ to visitors on the first Sunday of each month.",
+        "options": [
+          "admit",
+          "admitted",
+          "admitting",
+          "admission"
+        ],
+        "answer_index": 3,
+        "explanation": "Sau tính từ \"free\" và làm tân ngữ của \"offers\" -> danh từ \"admission\"."
+      },
+      {
+        "id": "q-noun-5",
+        "question": "Ms. Chen gave me some valuable _______ about preparing for the interview.",
+        "options": [
+          "advice",
+          "advices",
+          "advise",
+          "an advice"
+        ],
+        "answer_index": 0,
+        "explanation": "\"advice\" là danh từ không đếm được (không -s, không \"an\"); \"advise\" là động từ."
+      },
+      {
+        "id": "q-noun-6",
+        "question": "All _______ must wear identification badges inside the laboratory.",
+        "options": [
+          "personal",
+          "personality",
+          "personnel",
+          "personalize"
+        ],
+        "answer_index": 2,
+        "explanation": "Chủ ngữ chỉ người làm việc (phải đeo thẻ) -> \"personnel\" (nhân sự). \"personal\" là tính từ, \"personality\" là tính cách."
       }
     ]
   },
@@ -79,7 +181,7 @@
     "category": "partsOfSpeech",
     "title": "Vị trí Tính từ & Trạng từ và Bẫy vị trí",
     "subtitle": "Trật tự Adv + Adj + Noun & Vị trí vàng của Trạng từ trong câu",
-    "read_time_minutes": 6,
+    "read_time_minutes": 8,
     "difficulty": "Cơ bản",
     "tags": [
       "adjective",
@@ -111,6 +213,31 @@
         "tips": [
           "Khi câu đã đầy đủ Chủ ngữ, Động từ và Tân ngữ (S + V + O) mà cuối câu còn chỗ trống -> 99% điền Trạng từ để bổ nghĩa cho hành động."
         ]
+      },
+      {
+        "title": "3. Tính từ sau động từ nối & sau tân ngữ",
+        "content": "Động từ nối mô tả trạng thái của chủ ngữ nên đi với tính từ. Một số động từ đi với \"tân ngữ + tính từ\".",
+        "formula": "S + be / become / remain / stay / seem / appear / prove / grow + ADJ\nS + keep / find / make / consider + O + ADJ",
+        "bullet_points": [
+          "\"Our prices remain competitive.\" (không phải \"competitively\").",
+          "\"The new method proved effective.\"",
+          "\"Customers found the checkout process convenient.\""
+        ],
+        "tips": [
+          "Thấy remain, become, prove, seem ngay trước chỗ trống -> chọn TÍNH TỪ, dù phương án trạng từ trông \"đẹp\" hơn."
+        ]
+      },
+      {
+        "title": "4. Trạng từ bổ nghĩa cho cả câu & cho con số",
+        "content": "Trạng từ đứng đầu câu (kèm dấu phẩy) bổ nghĩa cho cả câu. Trạng từ như approximately, nearly, almost, roughly đứng trước con số. (Cặp hard / hardly, near / nearly xem chủ điểm Trạng từ đặc biệt.)",
+        "formula": "[ADV], S + V … (Fortunately, Unfortunately, Consequently…)\n[ADV] + con số (approximately 300, nearly half)",
+        "bullet_points": [
+          "\"Unfortunately, the flight was canceled.\"",
+          "\"Approximately 300 guests attended the launch.\""
+        ],
+        "tips": [
+          "Trước một con số hoặc số lượng, chỗ trống cần trạng từ: approximately / roughly / nearly, không phải tính từ approximate."
+        ]
       }
     ],
     "examples": [
@@ -119,6 +246,34 @@
         "vietnamese": "Đội ngũ tiếp thị đã liên tục mang lại kết quả xuất sắc trong suốt cả năm.",
         "explanation": "Chỗ trống nằm kẹp giữa trợ động từ \"has\" và động từ chính \"delivered\" -> chọn trạng từ \"consistently\".",
         "highlight": "has consistently delivered",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The new branch has remained profitable despite the economic downturn.",
+        "vietnamese": "Chi nhánh mới vẫn có lãi bất chấp suy thoái kinh tế.",
+        "explanation": "Sau động từ nối \"remain\" dùng tính từ \"profitable\".",
+        "highlight": "remained profitable",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Approximately 300 guests attended the product launch.",
+        "vietnamese": "Khoảng 300 khách đã tham dự buổi ra mắt sản phẩm.",
+        "explanation": "Trạng từ \"Approximately\" đứng trước con số.",
+        "highlight": "Approximately 300 guests",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Unfortunately, the keynote speaker's flight was canceled.",
+        "vietnamese": "Rất tiếc, chuyến bay của diễn giả chính đã bị huỷ.",
+        "explanation": "Trạng từ đầu câu + dấu phẩy bổ nghĩa cho cả câu.",
+        "highlight": "Unfortunately,",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "The committee considered the proposal too risky to approve.",
+        "vietnamese": "Ủy ban cho rằng đề xuất quá rủi ro để phê duyệt.",
+        "explanation": "\"consider + O + tính từ\" -> \"too risky\" mô tả tân ngữ \"the proposal\".",
+        "highlight": "considered the proposal too risky",
         "part_tag": "Part 5"
       }
     ],
@@ -146,6 +301,54 @@
         ],
         "answer_index": 1,
         "explanation": "Kẹp giữa \"was\" và \"impressed\" (bị động) là vị trí vàng của trạng từ -> chọn \"deeply\"."
+      },
+      {
+        "id": "q-adjadv-3",
+        "question": "Despite strong competition, our prices remain highly _______.",
+        "options": [
+          "competitive",
+          "compete",
+          "competitively",
+          "competition"
+        ],
+        "answer_index": 0,
+        "explanation": "Sau động từ nối \"remain\" (và trạng từ \"highly\") cần tính từ -> \"competitive\"."
+      },
+      {
+        "id": "q-adjadv-4",
+        "question": "The training session was attended by _______ 150 employees.",
+        "options": [
+          "approximate",
+          "approximation",
+          "approximated",
+          "approximately"
+        ],
+        "answer_index": 3,
+        "explanation": "Trước con số \"150\" cần trạng từ -> \"approximately\"."
+      },
+      {
+        "id": "q-adjadv-5",
+        "question": "Customers found the new checkout process _______.",
+        "options": [
+          "convenience",
+          "conveniently",
+          "convenient",
+          "conveniences"
+        ],
+        "answer_index": 2,
+        "explanation": "\"find + O + tính từ\" -> \"convenient\"."
+      },
+      {
+        "id": "q-adjadv-6",
+        "question": "_______, the shipment arrived a day earlier than expected.",
+        "options": [
+          "Fortunate",
+          "Fortunately",
+          "Fortune",
+          "More fortunate"
+        ],
+        "answer_index": 1,
+        "explanation": "Đầu câu, trước dấu phẩy, bổ nghĩa cho cả câu -> trạng từ \"Fortunately\"."
       }
     ]
   },
@@ -154,7 +357,7 @@
     "category": "partsOfSpeech",
     "title": "Đại từ nhân xưng, sở hữu, phản thân & bất định",
     "subtitle": "Bẫy By oneself vs On one’s own & Phân biệt Another vs Other vs The other",
-    "read_time_minutes": 7,
+    "read_time_minutes": 9,
     "difficulty": "Trung cấp",
     "tags": [
       "pronouns",
@@ -185,6 +388,32 @@
         "tips": [
           "Bẫy: \"Every other + N\" nghĩa là \"cứ mỗi... một lần\" (every other week: 2 tuần 1 lần)."
         ]
+      },
+      {
+        "title": "3. Đại từ sở hữu & \"of + đại từ sở hữu\"",
+        "content": "Đại từ sở hữu (mine, yours, his, hers, ours, theirs) đứng một mình thay cho \"tính từ sở hữu + danh từ\". (Another / other xem thêm chủ điểm Lượng từ.)",
+        "formula": "Đại từ sở hữu = Tính từ sở hữu + N (theirs = their proposal)\na / an + N + of + đại từ sở hữu (a colleague of mine)",
+        "bullet_points": [
+          "\"Our proposal was accepted, but theirs was rejected.\"",
+          "\"Ms. Liu's presentation was shorter than mine.\"",
+          "\"Mr. Ford is a former colleague of mine.\""
+        ],
+        "tips": [
+          "Sau \"than\" khi so sánh vật sở hữu, dùng đại từ sở hữu: \"higher than theirs\" (không phải \"than their\")."
+        ]
+      },
+      {
+        "title": "4. Đại từ bất định & \"Those who\"",
+        "content": "Đại từ bất định (everyone, someone, anyone, nobody…) đi với động từ số ít. \"Those who\" nghĩa là \"những người mà\", động từ theo sau ở số nhiều.",
+        "formula": "everyone / someone / anybody / nobody + V số ít\nThose who + V số nhiều (những người mà)\neach other / one another (lẫn nhau)",
+        "bullet_points": [
+          "\"Everyone in the department has received the policy.\"",
+          "\"Those who wish to attend should register by Friday.\"",
+          "\"The two teams support each other during the transition.\""
+        ],
+        "tips": [
+          "\"Those who\" là cụm cực kỳ hay gặp ở Part 5; không dùng \"They who\" hay \"Them who\"."
+        ]
       }
     ],
     "examples": [
@@ -193,6 +422,34 @@
         "vietnamese": "Ông Davis đã tự mình hoàn thành toàn bộ bài phân tích tài chính phức tạp.",
         "explanation": "\"on his own\" = \"by himself\" mang nghĩa tự mình làm không cần ai giúp.",
         "highlight": "on his own",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The CEO herself welcomed the new interns on their first day.",
+        "vietnamese": "Chính giám đốc điều hành đã chào đón các thực tập sinh mới vào ngày đầu tiên.",
+        "explanation": "Đại từ phản thân \"herself\" đứng ngay sau chủ ngữ để nhấn mạnh.",
+        "highlight": "The CEO herself",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Our proposal was accepted, but theirs was rejected.",
+        "vietnamese": "Đề xuất của chúng tôi được chấp nhận, nhưng của họ bị từ chối.",
+        "explanation": "\"theirs\" = \"their proposal\", đứng một mình làm chủ ngữ.",
+        "highlight": "theirs was rejected",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Those who wish to attend the workshop should register by Friday.",
+        "vietnamese": "Những ai muốn tham dự hội thảo nên đăng ký trước thứ Sáu.",
+        "explanation": "\"Those who + V số nhiều\" = những người mà.",
+        "highlight": "Those who wish to attend",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "Everyone in the department has received a copy of the new policy.",
+        "vietnamese": "Mọi người trong phòng đều đã nhận bản sao chính sách mới.",
+        "explanation": "\"Everyone\" là đại từ bất định -> động từ số ít \"has received\".",
+        "highlight": "Everyone in the department has received",
         "part_tag": "Part 5"
       }
     ],
@@ -208,6 +465,66 @@
         ],
         "answer_index": 3,
         "explanation": "Cuối câu sau một hành động hoàn chỉnh chỉ sự tự lực của nhóm thực tập sinh -> chọn \"themselves\"."
+      },
+      {
+        "id": "q-pro-2",
+        "question": "Please make sure that all employees lock _______ computers before leaving.",
+        "options": [
+          "they",
+          "them",
+          "their",
+          "theirs"
+        ],
+        "answer_index": 2,
+        "explanation": "Trước danh từ \"computers\" cần tính từ sở hữu -> \"their\"."
+      },
+      {
+        "id": "q-pro-3",
+        "question": "Ms. Liu's presentation was shorter than _______, but it covered more topics.",
+        "options": [
+          "mine",
+          "my",
+          "me",
+          "myself"
+        ],
+        "answer_index": 0,
+        "explanation": "So sánh với \"bài thuyết trình của tôi\" -> đại từ sở hữu \"mine\" (= my presentation)."
+      },
+      {
+        "id": "q-pro-4",
+        "question": "_______ who completed the survey will receive a 10 percent discount coupon.",
+        "options": [
+          "They",
+          "Those",
+          "Them",
+          "These"
+        ],
+        "answer_index": 1,
+        "explanation": "Cụm cố định \"Those who\" (những người mà) -> \"Those\"."
+      },
+      {
+        "id": "q-pro-5",
+        "question": "Mr. Ford is a former colleague of _______.",
+        "options": [
+          "me",
+          "my",
+          "mine",
+          "myself"
+        ],
+        "answer_index": 2,
+        "explanation": "Cấu trúc \"a / an + N + of + đại từ sở hữu\" -> \"mine\"."
+      },
+      {
+        "id": "q-pro-6",
+        "question": "The two departments will share resources and support _______ during the transition.",
+        "options": [
+          "themselves",
+          "one",
+          "another",
+          "each other"
+        ],
+        "answer_index": 3,
+        "explanation": "Hai phòng ban hỗ trợ lẫn nhau -> \"each other\". \"themselves\" là tự mình, không mang nghĩa qua lại."
       }
     ]
   },
@@ -216,7 +533,7 @@
     "category": "partsOfSpeech",
     "title": "Sự hòa hợp Chủ ngữ - Vị ngữ (Subject-Verb Agreement)",
     "subtitle": "Each, Every, Either/Neither, The number of vs A number of",
-    "read_time_minutes": 7,
+    "read_time_minutes": 9,
     "difficulty": "Trung cấp",
     "tags": [
       "agreement",
@@ -250,6 +567,36 @@
         "tips": [
           "Gặp chủ ngữ có dạng \"N1 + of + N2\": 95% động từ chia theo N1 (ví dụ: The quality of the products is high)."
         ]
+      },
+      {
+        "title": "3. One of / Each of / A number of & danh từ đặc biệt",
+        "content": "Nhiều chủ ngữ trông như số nhiều nhưng động từ lại chia số ít, và ngược lại. Hãy tìm từ chính của cụm chủ ngữ.",
+        "formula": "One of the + N(số nhiều) -> V số ít\nEach of the + N(số nhiều) -> V số ít\nBoth A and B / A number of + N -> V số nhiều",
+        "bullet_points": [
+          "\"One of our suppliers IS late.\" – chia theo \"One\".",
+          "\"Each of the rooms HAS a projector.\" – chia theo \"Each\".",
+          "\"Both the manager and the assistant ARE away.\" – Both … and luôn số nhiều.",
+          "Danh từ tập thể (staff, team, committee, board) trong TOEIC thường xem là một khối -> số ít: \"The committee has approved the plan.\"",
+          "Danh từ tận cùng -s nhưng số ít: news, economics, statistics (môn học); luôn số nhiều: earnings, savings, belongings, goods, police."
+        ],
+        "tips": [
+          "Thấy \"One of the + N số nhiều\" trong câu -> loại ngay các đáp án động từ số nhiều (are, have, were)."
+        ]
+      },
+      {
+        "title": "4. Mệnh đề quan hệ, đại lượng & \"There is/are\"",
+        "content": "Động từ trong mệnh đề quan hệ chia theo danh từ đứng ngay trước who/which/that; đại lượng thời gian, tiền, khoảng cách xem như một khối.",
+        "formula": "N(số nhiều) + who/which/that + V số nhiều\nMost / Some / All / Half / % + of + N -> chia theo N\nThere is + N số ít | There are + N số nhiều",
+        "bullet_points": [
+          "\"The employees who WORK the night shift receive a bonus.\" – chia theo \"employees\".",
+          "\"Most of the equipment IS new.\" (equipment không đếm được) vs \"Most of the employees ARE new.\"",
+          "\"Five years IS a long time.\" / \"$500 IS required as a deposit.\" – đại lượng là một khối.",
+          "Mệnh đề danh từ / To-V / V-ing làm chủ ngữ -> số ít: \"What the clients want IS faster delivery.\"",
+          "\"There ARE several issues to discuss.\" – chia theo danh từ sau there is/are."
+        ],
+        "tips": [
+          "Với \"Most of / Some of / 30 percent of\", đừng nhìn \"of\" – hãy nhìn danh từ phía sau để biết đếm được hay không."
+        ]
       }
     ],
     "examples": [
@@ -259,6 +606,41 @@
         "explanation": "Chủ ngữ chính là \"The quality\" (danh từ số ít không đếm được), \"of components\" chỉ là cụm phụ -> chia \"has improved\".",
         "highlight": "The quality ... has improved",
         "part_tag": "Part 5"
+      },
+      {
+        "english": "Each of the new employees receives a laptop on the first day.",
+        "vietnamese": "Mỗi nhân viên mới đều nhận một máy tính xách tay vào ngày đầu tiên.",
+        "explanation": "\"Each of + N số nhiều\" chia động từ số ít -> \"receives\".",
+        "highlight": "Each of the new employees receives",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "One of our most experienced technicians is responsible for the repair.",
+        "vietnamese": "Một trong những kỹ thuật viên giàu kinh nghiệm nhất của chúng tôi chịu trách nhiệm sửa chữa.",
+        "explanation": "Chủ ngữ chính là \"One\" -> động từ số ít \"is\", dù đứng gần \"technicians\".",
+        "highlight": "One of our most experienced technicians is",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Most of the equipment in the lab was purchased last year.",
+        "vietnamese": "Phần lớn thiết bị trong phòng thí nghiệm được mua vào năm ngoái.",
+        "explanation": "\"equipment\" không đếm được nên \"Most of the equipment\" chia số ít -> \"was\".",
+        "highlight": "Most of the equipment in the lab was",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The applicants who submit their forms early are interviewed first.",
+        "vietnamese": "Những ứng viên nộp đơn sớm được phỏng vấn trước.",
+        "explanation": "Trong mệnh đề quan hệ, \"who\" thay cho \"applicants\" (số nhiều) -> \"submit\".",
+        "highlight": "applicants who submit",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "There are several issues that need to be addressed before the launch.",
+        "vietnamese": "Có một vài vấn đề cần được giải quyết trước khi ra mắt.",
+        "explanation": "\"several issues\" số nhiều -> \"There are\"; \"that need\" cũng chia theo \"issues\".",
+        "highlight": "There are several issues",
+        "part_tag": "Part 6"
       }
     ],
     "quiz": [
@@ -285,6 +667,66 @@
         ],
         "answer_index": 0,
         "explanation": "\"Neither of + N_plural\" chia động từ số ít -> chọn \"meets\"."
+      },
+      {
+        "id": "q-sva-3",
+        "question": "Each of the branch managers _______ required to submit a monthly sales report.",
+        "options": [
+          "are",
+          "is",
+          "were",
+          "have been"
+        ],
+        "answer_index": 1,
+        "explanation": "\"Each of + N số nhiều\" chia số ít -> \"is\". \"are/were/have been\" là dạng số nhiều."
+      },
+      {
+        "id": "q-sva-4",
+        "question": "The director, along with two of her assistants, _______ attending the trade show in Berlin.",
+        "options": [
+          "are",
+          "have been",
+          "were",
+          "is"
+        ],
+        "answer_index": 3,
+        "explanation": "\"along with …\" chỉ là cụm chen giữa, động từ chia theo chủ ngữ chính \"The director\" (số ít) -> \"is\"."
+      },
+      {
+        "id": "q-sva-5",
+        "question": "Most of the furniture in the reception area _______ replaced last month.",
+        "options": [
+          "was",
+          "were",
+          "have",
+          "are"
+        ],
+        "answer_index": 0,
+        "explanation": "\"furniture\" là danh từ không đếm được -> \"Most of the furniture\" chia số ít; \"last month\" -> quá khứ \"was\"."
+      },
+      {
+        "id": "q-sva-6",
+        "question": "The number of customers using our mobile app _______ doubled since January.",
+        "options": [
+          "have",
+          "are",
+          "has",
+          "were"
+        ],
+        "answer_index": 2,
+        "explanation": "\"The number of\" chia số ít; \"since January\" -> hiện tại hoàn thành -> \"has doubled\"."
+      },
+      {
+        "id": "q-sva-7",
+        "question": "Employees who _______ more than five years of service are eligible for additional leave.",
+        "options": [
+          "has",
+          "is having",
+          "having",
+          "have"
+        ],
+        "answer_index": 3,
+        "explanation": "\"who\" thay cho \"Employees\" (số nhiều) -> động từ số nhiều \"have\". \"having\" không làm động từ chính của mệnh đề."
       }
     ]
   },
@@ -293,7 +735,7 @@
     "category": "partsOfSpeech",
     "title": "Danh động từ (V-ing) và Động từ nguyên mẫu (To-V)",
     "subtitle": "Động từ đi với V-ing, Động từ đi với To-V & Cụm từ cố định",
-    "read_time_minutes": 7,
+    "read_time_minutes": 9,
     "difficulty": "Trung cấp",
     "tags": [
       "gerund",
@@ -312,7 +754,52 @@
           "Cấu trúc V + O + to V: allow, require, ask, encourage, remind, invite, enable, expect, permit."
         ],
         "tips": [
-          "Cụm từ đặc biệt có \"to\" nhưng theo sau là V-ing: look forward to V-ing, be used to V-ing, in addition to V-ing, prior to V-ing, object to V-ing."
+          "Cụm từ đặc biệt có \"to\" nhưng theo sau là V-ing: look forward to V-ing, be used to V-ing, in addition to V-ing, prior to V-ing, object to V-ing.",
+          "Cấu trúc V + tân ngữ + to V (ask/require/allow sb to V) và V + tân ngữ + from V-ing: xem chủ điểm \"Mẫu động từ + tân ngữ\"."
+        ]
+      },
+      {
+        "title": "2. Động từ đổi nghĩa khi đi với V-ing và to V",
+        "content": "Một số động từ đi được cả hai nhưng nghĩa khác nhau – đề hay hỏi bằng ngữ cảnh.",
+        "formula": "remember / forget + V-ing: nhớ / quên việc ĐÃ làm\nremember / forget + to V: nhớ / quên việc PHẢI làm\nstop + V-ing: ngừng làm | stop + to V: dừng lại ĐỂ làm việc khác",
+        "bullet_points": [
+          "try + V-ing: thử làm xem sao | try + to V: cố gắng làm.",
+          "regret + V-ing: hối tiếc đã làm | regret + to V: lấy làm tiếc phải (thông báo): \"We regret to inform you that…\"",
+          "mean + V-ing: có nghĩa là | mean + to V: định làm.",
+          "\"Please remember to lock the door.\" – việc cần làm sau này."
+        ],
+        "tips": [
+          "Câu thư từ chối chuẩn TOEIC: \"We regret to inform you that the position has been filled.\" – luôn là \"to inform\"."
+        ]
+      },
+      {
+        "title": "3. V-ing sau giới từ và V-ing làm chủ ngữ",
+        "content": "Sau mọi giới từ (before, after, by, without, instead of, upon, for, in addition to…) động từ phải ở dạng V-ing.",
+        "formula": "Giới từ + V-ing\nV-ing (làm chủ ngữ) + V số ít\nin order to / so as to + V (chỉ mục đích)",
+        "bullet_points": [
+          "\"Before leaving the office, please turn off the lights.\"",
+          "\"By automating the process, we saved time.\" – by + V-ing chỉ cách thức.",
+          "\"Upon arriving, guests should check in at the front desk.\"",
+          "\"Reviewing contracts takes time.\" – V-ing làm chủ ngữ chia số ít.",
+          "Chỉ mục đích dùng to V: \"We hired more staff to reduce waiting times.\""
+        ],
+        "tips": [
+          "Trước chỗ trống là giới từ -> chọn V-ing. Riêng \"to\" phải phân biệt: \"to\" của to-infinitive (decide to go) hay giới từ (look forward to going)."
+        ]
+      },
+      {
+        "title": "4. Danh từ / tính từ + to V và các cụm cố định với V-ing",
+        "content": "Nhiều danh từ và tính từ đi với to V; một số cụm cố định luôn đi với V-ing.",
+        "formula": "the decision / plan / ability / effort / opportunity + to V\nbe able / willing / eager / likely / pleased + to V\nspend time / have difficulty / be worth / be busy + V-ing",
+        "bullet_points": [
+          "\"The board announced its decision to merge with Alton Ltd.\"",
+          "\"We are pleased to welcome our new director.\"",
+          "\"The team spent three days testing the software.\"",
+          "\"Many applicants have difficulty completing the online form.\"",
+          "\"The exhibition is worth visiting.\""
+        ],
+        "tips": [
+          "Danh từ chỉ ý định / nỗ lực (decision, plan, attempt, effort, ability, opportunity) gần như luôn đi với \"to V\"."
         ]
       }
     ],
@@ -323,6 +810,41 @@
         "explanation": "Sau cụm cố định \"look forward to\" bắt buộc dùng V-ing -> \"receiving\".",
         "highlight": "looking forward to receiving",
         "part_tag": "Part 5"
+      },
+      {
+        "english": "Please remember to sign the visitor log before entering the laboratory.",
+        "vietnamese": "Vui lòng nhớ ký sổ khách trước khi vào phòng thí nghiệm.",
+        "explanation": "Việc cần làm (chưa làm) -> \"remember to sign\"; sau giới từ \"before\" dùng V-ing \"entering\".",
+        "highlight": "remember to sign",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "By automating the billing process, the company reduced errors by 40 percent.",
+        "vietnamese": "Bằng cách tự động hóa quy trình lập hóa đơn, công ty đã giảm 40% lỗi.",
+        "explanation": "\"By + V-ing\" diễn tả cách thức -> \"By automating\".",
+        "highlight": "By automating",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Ms. Chen spent two weeks preparing the annual budget report.",
+        "vietnamese": "Cô Chen đã dành hai tuần chuẩn bị báo cáo ngân sách năm.",
+        "explanation": "Cấu trúc \"spend + thời gian + V-ing\".",
+        "highlight": "spent two weeks preparing",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The board approved the decision to open a new branch in Singapore.",
+        "vietnamese": "Hội đồng quản trị đã thông qua quyết định mở chi nhánh mới tại Singapore.",
+        "explanation": "Danh từ \"decision\" đi với \"to V\" -> \"the decision to open\".",
+        "highlight": "the decision to open",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "Reviewing customer feedback regularly helps us improve our services.",
+        "vietnamese": "Việc thường xuyên xem xét phản hồi của khách hàng giúp chúng tôi cải thiện dịch vụ.",
+        "explanation": "Cụm V-ing làm chủ ngữ -> động từ chia số ít \"helps\".",
+        "highlight": "Reviewing customer feedback regularly helps",
+        "part_tag": "Part 7"
       }
     ],
     "quiz": [
@@ -349,6 +871,66 @@
         ],
         "answer_index": 2,
         "explanation": "Sau \"consider\" đi với V-ing -> chọn \"canceling\"."
+      },
+      {
+        "id": "q-gi-3",
+        "question": "Before _______ the contract, please read the terms and conditions carefully.",
+        "options": [
+          "signing",
+          "to sign",
+          "sign",
+          "signed"
+        ],
+        "answer_index": 0,
+        "explanation": "\"Before\" ở đây là giới từ, theo sau là V-ing -> \"signing\"."
+      },
+      {
+        "id": "q-gi-4",
+        "question": "The research team had difficulty _______ enough participants for the survey.",
+        "options": [
+          "to recruit",
+          "recruit",
+          "recruiting",
+          "recruited"
+        ],
+        "answer_index": 2,
+        "explanation": "Cụm cố định \"have difficulty + V-ing\" -> \"recruiting\"."
+      },
+      {
+        "id": "q-gi-5",
+        "question": "Mr. Lee stopped _______ an urgent call from a client and then continued his presentation.",
+        "options": [
+          "take",
+          "taking",
+          "taken",
+          "to take"
+        ],
+        "answer_index": 3,
+        "explanation": "\"stop to V\" = dừng lại để làm việc khác (nghe điện thoại), sau đó tiếp tục thuyết trình. \"stopped taking\" = ngừng hẳn việc nhận cuộc gọi – không hợp nghĩa."
+      },
+      {
+        "id": "q-gi-6",
+        "question": "The city council has made an effort _______ traffic congestion in the downtown area.",
+        "options": [
+          "reduce",
+          "to reduce",
+          "reducing",
+          "reduced"
+        ],
+        "answer_index": 1,
+        "explanation": "Danh từ \"effort\" đi với \"to V\" -> \"an effort to reduce\"."
+      },
+      {
+        "id": "q-gi-7",
+        "question": "_______ a good relationship with suppliers is essential for any manufacturer.",
+        "options": [
+          "Maintain",
+          "Maintained",
+          "Maintains",
+          "Maintaining"
+        ],
+        "answer_index": 3,
+        "explanation": "Chỗ trống đứng đầu câu làm chủ ngữ (trước động từ \"is\") -> cần V-ing \"Maintaining\"."
       }
     ]
   },
@@ -357,7 +939,7 @@
     "category": "partsOfSpeech",
     "title": "Liên từ vs Giới từ (Bẫy kinh điển Part 5)",
     "subtitle": "Although vs Despite, Because vs Due to, While vs During",
-    "read_time_minutes": 7,
+    "read_time_minutes": 9,
     "difficulty": "Cơ bản",
     "tags": [
       "conjunctions",
@@ -376,7 +958,35 @@
           "Trong khi: While (Liên từ) vs During (Giới từ)."
         ],
         "tips": [
-          "Trạng từ liên kết (Conjunctive adverbs) đứng đầu câu ngăn cách bởi dấu phẩy: However, Therefore, Furthermore, Moreover, Consequently."
+          "Trạng từ liên kết (However, Therefore, Moreover…) không nối hai mệnh đề bằng dấu phẩy – xem chủ điểm \"Từ nối Part 6\". Liên từ điều kiện (unless, provided that, in case): xem chủ điểm \"Liên từ điều kiện\"."
+        ]
+      },
+      {
+        "title": "2. Bảng mở rộng: thời gian, tương phản, mục đích",
+        "content": "Ngoài 3 cặp kinh điển, Part 5 còn hay hỏi các cặp sau. Một số từ vừa là liên từ vừa là giới từ.",
+        "formula": "Liên từ (+ S + V) | Giới từ (+ N / V-ing)\nwhereas / while | unlike\nso that / in order that | in order to / so as to (+ V)\nnow that | given / in light of\nexcept that | except (for)\nby the time | by",
+        "bullet_points": [
+          "Vừa là liên từ vừa là giới từ: before, after, since, until – chọn theo nghĩa.",
+          "\"once\" (một khi) và \"as soon as\" là liên từ; tương đương giới từ là \"upon + V-ing\".",
+          "\"Unlike its competitors, Gleam Corp. offers free installation.\" – \"unlike\" + cụm danh từ.",
+          "\"Now that the merger is complete, …\" – \"now that\" + mệnh đề (vì giờ đây)."
+        ],
+        "tips": [
+          "Nếu 4 đáp án đều đúng cấu trúc (vd. before / after / since / until + S + V), hãy chọn theo quan hệ thời gian trong câu."
+        ]
+      },
+      {
+        "title": "3. Quy trình 3 bước & dạng rút gọn",
+        "content": "Áp dụng cho mọi câu có đáp án là liên từ/giới từ.",
+        "formula": "B1: Sau chỗ trống là S + V hay N / V-ing?\nB2: Loại nhóm sai cấu trúc\nB3: Chọn theo nghĩa (nguyên nhân / nhượng bộ / thời gian / tương phản)",
+        "bullet_points": [
+          "\"Despite the fact that + S + V\" = Although + S + V.",
+          "\"Because of / Due to + V-ing\" vẫn là giới từ: \"Due to being understaffed, …\"",
+          "Mệnh đề rút gọn: \"While waiting for the client, …\", \"Although tired, she finished the report.\" – although / while / when + V-ing / tính từ khi cùng chủ ngữ.",
+          "Phân biệt \"during\" (+ khoảng thời gian / sự kiện) và \"for\" (+ độ dài thời gian): during the meeting / for two hours."
+        ],
+        "tips": [
+          "Thấy \"the fact that\" sau chỗ trống -> chọn giới từ (despite / in spite of / due to) vì \"the fact\" là danh từ."
         ]
       }
     ],
@@ -386,6 +996,41 @@
         "vietnamese": "Mặc dù giao thông đông đúc, chuyến giao hàng vẫn cập bến kho đúng giờ.",
         "explanation": "\"heavy traffic\" là cụm danh từ (không có động từ) -> dùng giới từ \"Despite\" thay vì \"Although\".",
         "highlight": "Despite heavy traffic",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Although the conference room was small, all thirty participants fit comfortably.",
+        "vietnamese": "Mặc dù phòng họp nhỏ, cả ba mươi người tham dự đều ngồi thoải mái.",
+        "explanation": "Sau chỗ trống là mệnh đề \"the conference room was small\" -> liên từ \"Although\".",
+        "highlight": "Although the conference room was small",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Due to a scheduling conflict, the board meeting has been moved to Thursday.",
+        "vietnamese": "Do trùng lịch, cuộc họp hội đồng quản trị đã được dời sang thứ Năm.",
+        "explanation": "\"a scheduling conflict\" là cụm danh từ -> giới từ \"Due to\".",
+        "highlight": "Due to a scheduling conflict",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Please turn off your mobile phones during the presentation.",
+        "vietnamese": "Vui lòng tắt điện thoại di động trong suốt bài thuyết trình.",
+        "explanation": "\"the presentation\" là cụm danh từ chỉ sự kiện -> \"during\" (không dùng \"while\").",
+        "highlight": "during the presentation",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "While Ms. Rossi was on vacation, Mr. Grant handled her clients.",
+        "vietnamese": "Trong khi cô Rossi đi nghỉ, anh Grant phụ trách khách hàng của cô ấy.",
+        "explanation": "Sau chỗ trống là mệnh đề -> liên từ \"While\".",
+        "highlight": "While Ms. Rossi was on vacation",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "Unlike its competitors, Gleam Corp. offers free installation on all orders.",
+        "vietnamese": "Không giống các đối thủ, Gleam Corp. lắp đặt miễn phí cho mọi đơn hàng.",
+        "explanation": "\"Unlike\" là giới từ + cụm danh từ \"its competitors\" (khác với \"whereas\" + mệnh đề).",
+        "highlight": "Unlike its competitors",
         "part_tag": "Part 5"
       }
     ],
@@ -413,6 +1058,66 @@
         ],
         "answer_index": 0,
         "explanation": "Phía sau là mệnh đề có chủ ngữ và vị ngữ \"there was dense fog\" -> chọn liên từ \"because\"."
+      },
+      {
+        "id": "q-cp-3",
+        "question": "_______ the store was closed for renovations, online orders continued to be processed.",
+        "options": [
+          "During",
+          "Despite",
+          "While",
+          "Because of"
+        ],
+        "answer_index": 2,
+        "explanation": "Sau chỗ trống là mệnh đề \"the store was closed\" -> cần liên từ; \"While\" (trong khi / trong lúc) hợp nghĩa. Ba đáp án còn lại là giới từ."
+      },
+      {
+        "id": "q-cp-4",
+        "question": "The shipment arrived two days late _______ a strike at the port.",
+        "options": [
+          "because",
+          "although",
+          "since",
+          "due to"
+        ],
+        "answer_index": 3,
+        "explanation": "\"a strike at the port\" là cụm danh từ, chỉ nguyên nhân -> \"due to\". \"because/although\" cần mệnh đề; \"since + mốc\" nghĩa là \"kể từ\" – không hợp."
+      },
+      {
+        "id": "q-cp-5",
+        "question": "_______ the proposal was well researched, the committee rejected it because of its high cost.",
+        "options": [
+          "Despite",
+          "Even though",
+          "In spite of",
+          "Regardless of"
+        ],
+        "answer_index": 1,
+        "explanation": "Sau chỗ trống là mệnh đề, nghĩa nhượng bộ -> liên từ \"Even though\". Ba đáp án kia là giới từ."
+      },
+      {
+        "id": "q-cp-6",
+        "question": "Visitors must wear safety helmets _______ they are inside the construction area.",
+        "options": [
+          "while",
+          "during",
+          "throughout",
+          "within"
+        ],
+        "answer_index": 0,
+        "explanation": "Phía sau là mệnh đề \"they are inside…\" -> liên từ \"while\". \"during/throughout/within\" là giới từ."
+      },
+      {
+        "id": "q-cp-7",
+        "question": "_______ its small size, the new printer can handle large print jobs quickly.",
+        "options": [
+          "Although",
+          "Even if",
+          "Despite",
+          "Whereas"
+        ],
+        "answer_index": 2,
+        "explanation": "\"its small size\" là cụm danh từ -> giới từ \"Despite\". Các đáp án còn lại là liên từ cần mệnh đề."
       }
     ]
   },

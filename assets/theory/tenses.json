@@ -4,7 +4,7 @@
     "category": "tenses",
     "title": "Hiện tại đơn & Hiện tại tiếp diễn",
     "subtitle": "Phân biệt thói quen, lịch trình cố định và hành động tạm thời",
-    "read_time_minutes": 6,
+    "read_time_minutes": 9,
     "difficulty": "Cơ bản",
     "tags": [
       "tenses",
@@ -21,7 +21,7 @@
           "Lịch trình cố định: \"The international flight departs at 8:00 AM tomorrow.\" (dù có \"tomorrow\" vẫn chia hiện tại đơn vì là lịch bay cố định)."
         ],
         "tips": [
-          "Bẫy TOEIC: Sau các liên từ chỉ thời gian (when, as soon as, once, until, before, after) trong mệnh đề trạng ngữ, dùng Hiện tại đơn để diễn tả hành động tương lai, KHÔNG dùng \"will\"."
+          "Bẫy TOEIC: Sau các liên từ chỉ thời gian (when, as soon as, once, until, before, after) trong mệnh đề trạng ngữ, dùng Hiện tại đơn để diễn tả hành động tương lai, KHÔNG dùng \"will\". (chi tiết: chủ điểm Hiện tại thay tương lai trong mệnh đề thời gian)."
         ]
       },
       {
@@ -35,6 +35,32 @@
         "tips": [
           "Từ \"currently\" trong đề TOEIC đi với Hiện tại tiếp diễn hoặc Hiện tại đơn: \"We are currently renovating the main lobby.\""
         ]
+      },
+      {
+        "title": "3. Tương lai với Hiện tại tiếp diễn & Động từ trạng thái",
+        "content": "Hiện tại tiếp diễn còn diễn tả kế hoạch tương lai đã sắp xếp (có thời gian, địa điểm cụ thể). Động từ trạng thái luôn chia thì đơn dù câu có now / currently.",
+        "formula": "S + am/is/are + V-ing + mốc tương lai (kế hoạch đã sắp xếp)\nĐộng từ trạng thái: S + V(s/es), không dùng V-ing",
+        "bullet_points": [
+          "Kế hoạch đã sắp xếp: \"We are meeting the suppliers on Thursday afternoon.\"",
+          "Động từ trạng thái hay gặp trong TOEIC: belong, consist of, contain, depend on, include, require, need, own, prefer, cost.",
+          "Một số động từ đổi nghĩa thì dùng được ở tiếp diễn: think (cân nhắc) – \"We are thinking about relocating.\"; have (tổ chức, ăn) – \"They are having a meeting.\""
+        ],
+        "tips": [
+          "Thấy require, contain, include, belong… ở chỗ trống thì loại ngay phương án V-ing: \"The package currently contains three items\" (không phải is containing)."
+        ]
+      },
+      {
+        "title": "4. Hòa hợp chủ ngữ với Hiện tại đơn",
+        "content": "Chủ ngữ số ít (kể cả danh từ không đếm được, tên công ty, cụm each/every + N) đi với V(s/es); chủ ngữ số nhiều đi với V nguyên mẫu.",
+        "formula": "Chủ ngữ số ít / không đếm được + V(s/es)\nChủ ngữ số nhiều + V_inf",
+        "bullet_points": [
+          "Chủ ngữ dài có cụm giới từ: \"The list of approved vendors is posted online\" – động từ chia theo \"list\".",
+          "Tên công ty dạng số nhiều vẫn coi là số ít: \"Harper Foods operates ten stores.\"",
+          "Danh từ không đếm được chia số ít: equipment, information, furniture, advice."
+        ],
+        "tips": [
+          "Gạch bỏ cụm \"of + N\" và mệnh đề quan hệ nằm giữa chủ ngữ và động từ để tìm đúng danh từ chính trước khi chọn V hay V(s/es)."
+        ]
       }
     ],
     "examples": [
@@ -42,7 +68,7 @@
         "english": "The train to Boston departs from Platform 4 at 9:30 AM every weekday.",
         "vietnamese": "Chuyến tàu đi Boston khởi hành từ Sân ga số 4 lúc 9:30 sáng các ngày trong tuần.",
         "explanation": "Lịch trình tàu xe cố định kèm \"every weekday\" -> chia Hiện tại đơn \"departs\".",
-        "highlight": "departs ... at 9:30 AM every weekday",
+        "highlight": "departs from Platform 4 at 9:30 AM every weekday",
         "part_tag": "Part 5"
       },
       {
@@ -50,6 +76,27 @@
         "vietnamese": "Ngay khi Tổng giám đốc đến địa điểm, bài thuyết trình chính sẽ bắt đầu.",
         "explanation": "Mệnh đề sau \"As soon as\" dùng Hiện tại đơn \"arrives\" để chỉ hành động tương lai.",
         "highlight": "As soon as the CEO arrives",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "We are hosting a client dinner at the Grand Hotel next Friday.",
+        "vietnamese": "Chúng tôi sẽ tổ chức một bữa tối với khách hàng tại khách sạn Grand vào thứ Sáu tới.",
+        "explanation": "Kế hoạch đã sắp xếp cụ thể (địa điểm, thời gian) -> Hiện tại tiếp diễn \"are hosting\" diễn tả tương lai.",
+        "highlight": "are hosting a client dinner",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "The new service package includes free installation and two years of maintenance.",
+        "vietnamese": "Gói dịch vụ mới bao gồm lắp đặt miễn phí và hai năm bảo trì.",
+        "explanation": "\"include\" là động từ trạng thái nên dùng hiện tại đơn, không dùng \"is including\"; chủ ngữ \"package\" số ít -> \"includes\".",
+        "highlight": "includes free installation",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Our sales figures are rising steadily this quarter thanks to the new campaign.",
+        "vietnamese": "Doanh số của chúng tôi đang tăng đều trong quý này nhờ chiến dịch mới.",
+        "explanation": "Xu hướng đang thay đổi trong một giai đoạn tạm thời (this quarter) -> Hiện tại tiếp diễn \"are rising\".",
+        "highlight": "are rising steadily this quarter",
         "part_tag": "Part 5"
       }
     ],
@@ -89,6 +136,42 @@
         ],
         "answer_index": 2,
         "explanation": "Sau \"is currently\" cần một V-ing để tạo thành thì hiện tại tiếp diễn -> chọn \"installing\"."
+      },
+      {
+        "id": "q-pres-4",
+        "question": "The updated employee manual _______ detailed instructions for submitting travel requests.",
+        "options": [
+          "is containing",
+          "contains",
+          "contain",
+          "are containing"
+        ],
+        "answer_index": 1,
+        "explanation": "\"contain\" là động từ trạng thái nên không chia tiếp diễn; chủ ngữ \"manual\" số ít -> \"contains\". \"contain\" thiếu -s, hai phương án tiếp diễn sai."
+      },
+      {
+        "id": "q-pres-5",
+        "question": "Please keep your voice down because Mr. Lim _______ an important call with a client right now.",
+        "options": [
+          "has",
+          "had",
+          "have",
+          "is having"
+        ],
+        "answer_index": 3,
+        "explanation": "\"right now\" -> hành động đang diễn ra; \"have\" ở đây nghĩa là \"tiến hành (cuộc gọi)\" nên dùng được ở tiếp diễn -> \"is having\". \"has\" chỉ sự sở hữu, \"had\" là quá khứ, \"have\" sai chủ ngữ."
+      },
+      {
+        "id": "q-pres-6",
+        "question": "The list of approved suppliers _______ updated on the company intranet every month.",
+        "options": [
+          "are",
+          "being",
+          "is",
+          "were"
+        ],
+        "answer_index": 2,
+        "explanation": "Chủ ngữ chính là \"The list\" (số ít), \"of approved suppliers\" chỉ bổ nghĩa; \"every month\" -> hiện tại đơn bị động số ít \"is updated\". \"are/were\" sai số, \"being\" không làm vị ngữ được."
       }
     ]
   },
@@ -97,7 +180,7 @@
     "category": "tenses",
     "title": "Hiện tại hoàn thành & Hoàn thành tiếp diễn",
     "subtitle": "Dấu hiệu Since, For, Over the past years & Sự kéo dài đến hiện tại",
-    "read_time_minutes": 7,
+    "read_time_minutes": 9,
     "difficulty": "Cơ bản",
     "tags": [
       "tenses",
@@ -128,6 +211,32 @@
         "tips": [
           "Trong TOEIC nếu có cả 2 phương án, đề bài thường kiểm tra Hiện tại hoàn thành đơn hơn, trừ khi muốn nhấn mạnh quá trình liên tục."
         ]
+      },
+      {
+        "title": "3. Hiện tại hoàn thành vs Quá khứ đơn",
+        "content": "Quá khứ đơn gắn với mốc thời gian đã kết thúc; Hiện tại hoàn thành gắn với khoảng thời gian còn kéo dài đến nay hoặc không nêu thời điểm.",
+        "formula": "Mốc đã kết thúc (yesterday, last year, in 2021, ago) -> V2/ed\nKhoảng kéo dài / không nêu thời điểm -> have/has + V3",
+        "bullet_points": [
+          "\"This year / this month / today\" (chưa kết thúc) thường đi với Hiện tại hoàn thành: \"We have hired 20 new staff this year.\"",
+          "\"ever / never / before\" chỉ trải nghiệm -> Hiện tại hoàn thành.",
+          "Câu hỏi \"When…?\" luôn dùng Quá khứ đơn, không dùng Hiện tại hoàn thành."
+        ],
+        "tips": [
+          "Thấy cả \"since\" lẫn mốc quá khứ: vế có since chia quá khứ đơn, vế chính chia hiện tại hoàn thành – đề hay đảo vị trí hai vế để gây nhiễu."
+        ]
+      },
+      {
+        "title": "4. Already, yet, just & cấu trúc It has been … since",
+        "content": "Các trạng từ này quyết định cả thì lẫn vị trí trong câu (xem thêm chủ điểm Trạng từ đặc biệt).",
+        "formula": "have/has + already/just + V3\nhave/has not + V3 + yet\nIt has been + khoảng thời gian + since + S + V2",
+        "bullet_points": [
+          "already, just đứng giữa have/has và V3; yet đứng cuối câu phủ định / nghi vấn.",
+          "\"have yet to + V\" = vẫn chưa làm: \"The committee has yet to approve the plan.\"",
+          "\"It has been three years since we opened the Tokyo office.\""
+        ],
+        "tips": [
+          "Câu có \"yet\" ở cuối và chỗ trống ở động từ -> chọn \"has not + V3\", đừng chọn quá khứ đơn."
+        ]
       }
     ],
     "examples": [
@@ -135,8 +244,36 @@
         "english": "Mr. Tanaka has worked at our branch for more than ten years.",
         "vietnamese": "Ông Tanaka đã làm việc tại chi nhánh của chúng tôi hơn mười năm rồi.",
         "explanation": "Dấu hiệu \"for more than ten years\" chỉ khoảng thời gian kéo dài đến hiện tại -> chia \"has worked\".",
-        "highlight": "has worked ... for more than ten years",
+        "highlight": "has worked at our branch for more than ten years",
         "part_tag": "Part 5"
+      },
+      {
+        "english": "Since the new manager took over, customer complaints have dropped by half.",
+        "vietnamese": "Kể từ khi quản lý mới tiếp quản, khiếu nại của khách hàng đã giảm một nửa.",
+        "explanation": "Vế có since chia quá khứ đơn (took over), vế chính chia hiện tại hoàn thành (have dropped).",
+        "highlight": "have dropped by half",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The marketing team has been preparing the product launch for six weeks.",
+        "vietnamese": "Nhóm marketing đã chuẩn bị cho buổi ra mắt sản phẩm suốt sáu tuần nay.",
+        "explanation": "Nhấn mạnh quá trình kéo dài liên tục đến hiện tại -> hiện tại hoàn thành tiếp diễn.",
+        "highlight": "has been preparing the product launch for six weeks",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "We have not received the signed contract from the client yet.",
+        "vietnamese": "Chúng tôi vẫn chưa nhận được hợp đồng đã ký từ khách hàng.",
+        "explanation": "\"yet\" cuối câu phủ định -> \"have not received\".",
+        "highlight": "have not received",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "Over the past five years, Lumen Tech has expanded into twelve countries.",
+        "vietnamese": "Trong năm năm qua, Lumen Tech đã mở rộng sang mười hai quốc gia.",
+        "explanation": "\"Over the past five years\" -> hiện tại hoàn thành; chủ ngữ là tên công ty (số ít) -> \"has expanded\".",
+        "highlight": "Over the past five years",
+        "part_tag": "Part 7"
       }
     ],
     "quiz": [
@@ -163,6 +300,54 @@
         ],
         "answer_index": 1,
         "explanation": "Sau \"since\" là mốc thời gian quá khứ nên chia Quá khứ đơn -> chọn \"joined\"."
+      },
+      {
+        "id": "q-perf-3",
+        "question": "The regional director _______ the new branch two weeks ago.",
+        "options": [
+          "visited",
+          "has visited",
+          "has been visiting",
+          "visits"
+        ],
+        "answer_index": 0,
+        "explanation": "\"two weeks ago\" là mốc quá khứ đã kết thúc -> quá khứ đơn \"visited\". Hiện tại hoàn thành (đơn hoặc tiếp diễn) không đi với \"ago\"."
+      },
+      {
+        "id": "q-perf-4",
+        "question": "The finance committee has _______ to approve next year's budget, so the purchase is on hold.",
+        "options": [
+          "already",
+          "yet",
+          "ever",
+          "never"
+        ],
+        "answer_index": 1,
+        "explanation": "\"have yet to + V\" = vẫn chưa làm, khớp với \"the purchase is on hold\". already / ever / never không đi với cấu trúc \"has … to + V\"."
+      },
+      {
+        "id": "q-perf-5",
+        "question": "It has been three years since Ms. Park _______ the Singapore office.",
+        "options": [
+          "opens",
+          "has opened",
+          "opened",
+          "will open"
+        ],
+        "answer_index": 2,
+        "explanation": "Cấu trúc \"It has been + khoảng thời gian + since + quá khứ đơn\" -> \"opened\"."
+      },
+      {
+        "id": "q-perf-6",
+        "question": "Our technicians _______ on the network upgrade all morning, and they still need another hour.",
+        "options": [
+          "worked",
+          "work",
+          "will work",
+          "have been working"
+        ],
+        "answer_index": 3,
+        "explanation": "\"all morning\" + việc vẫn đang tiếp tục (still need another hour) -> hiện tại hoàn thành tiếp diễn \"have been working\". Quá khứ đơn ngụ ý việc đã xong."
       }
     ]
   },
@@ -171,7 +356,7 @@
     "category": "tenses",
     "title": "Quá khứ đơn & Quá khứ tiếp diễn",
     "subtitle": "Mốc thời gian xác định & Phối thì hành động cắt ngang",
-    "read_time_minutes": 6,
+    "read_time_minutes": 9,
     "difficulty": "Cơ bản",
     "tags": [
       "tenses",
@@ -202,6 +387,32 @@
         "tips": [
           "Trong bài đọc Part 7: thường dùng miêu tả ngữ cảnh sự cố phát sinh (\"While technicians were repairing the server, power went out\")."
         ]
+      },
+      {
+        "title": "3. Quá khứ đơn với động từ bất quy tắc hay gặp",
+        "content": "Part 5 hay cho cả V1, V2, V3 của động từ bất quy tắc; khi câu có mốc quá khứ phải chọn đúng V2.",
+        "formula": "Mốc quá khứ + V2 (rise -> rose, choose -> chose, lead -> led, seek -> sought)",
+        "bullet_points": [
+          "Cặp dễ nhầm: rise – rose – risen (tự tăng, không có tân ngữ); raise – raised – raised (nâng, cần tân ngữ).",
+          "fall – fell – fallen; grow – grew – grown; hold – held – held; spend – spent – spent.",
+          "\"previously, formerly, originally\" cũng là dấu hiệu quá khứ đơn."
+        ],
+        "tips": [
+          "Thấy \"last quarter\" và bốn phương án rise / rose / risen / raised: chủ ngữ là doanh số tự tăng (không có tân ngữ) -> \"rose\"."
+        ]
+      },
+      {
+        "title": "4. When vs While & used to",
+        "content": "When thường đi với hành động ngắn, cắt ngang (quá khứ đơn); While đi với hành động kéo dài (quá khứ tiếp diễn). \"used to + V\" diễn tả thói quen trong quá khứ nay không còn.",
+        "formula": "While + S + was/were V-ing, S + V2\nWhen + S + V2, S + was/were V-ing\nS + used to + V_inf",
+        "bullet_points": [
+          "Hai hành động nối tiếp nhau trong quá khứ dùng quá khứ đơn cho cả hai: \"When the guests arrived, the manager welcomed them.\"",
+          "used to + V (thói quen cũ) khác be used to + V-ing (đã quen với) – xem chủ điểm Used to.",
+          "Mốc giờ cụ thể trong quá khứ: \"At 3 P.M. yesterday, we were testing the software.\""
+        ],
+        "tips": [
+          "Chỗ trống ngay sau While mà phía sau là chủ ngữ + was/were thì cần V-ing; nếu sau chỗ trống chỉ là cụm danh từ thì chọn During (giới từ)."
+        ]
       }
     ],
     "examples": [
@@ -209,8 +420,36 @@
         "english": "The board of directors approved the merger proposal two days ago.",
         "vietnamese": "Hội đồng quản trị đã thông qua đề xuất sáp nhập hai ngày trước.",
         "explanation": "Dấu hiệu \"two days ago\" chỉ mốc thời gian quá khứ chấm dứt hoàn toàn -> dùng \"approved\".",
-        "highlight": "approved ... two days ago",
+        "highlight": "approved the merger proposal two days ago",
         "part_tag": "Part 5"
+      },
+      {
+        "english": "While the technicians were updating the system, the website was temporarily unavailable.",
+        "vietnamese": "Trong lúc các kỹ thuật viên đang cập nhật hệ thống, trang web tạm thời không truy cập được.",
+        "explanation": "Hành động kéo dài sau While -> quá khứ tiếp diễn \"were updating\".",
+        "highlight": "were updating the system",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Company profits rose by 12 percent last quarter.",
+        "vietnamese": "Lợi nhuận công ty đã tăng 12% trong quý trước.",
+        "explanation": "\"last quarter\" -> quá khứ đơn; \"rise\" là nội động từ bất quy tắc, V2 là \"rose\".",
+        "highlight": "rose by 12 percent last quarter",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Ms. Chen was reviewing the contract when the client called.",
+        "vietnamese": "Bà Chen đang xem xét hợp đồng thì khách hàng gọi đến.",
+        "explanation": "Hành động đang diễn ra (was reviewing) bị một hành động ngắn cắt ngang (called).",
+        "highlight": "was reviewing the contract when the client called",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The company previously used paper time sheets, but it switched to an online system in 2023.",
+        "vietnamese": "Trước đây công ty dùng bảng chấm công giấy, nhưng đã chuyển sang hệ thống trực tuyến vào năm 2023.",
+        "explanation": "\"previously\" và \"in 2023\" là dấu hiệu quá khứ đơn.",
+        "highlight": "switched to an online system in 2023",
+        "part_tag": "Part 7"
       }
     ],
     "quiz": [
@@ -237,6 +476,54 @@
         ],
         "answer_index": 2,
         "explanation": "Hành động đang diễn ra trong quá khứ bị hành động khác xen vào -> chọn \"was giving\"."
+      },
+      {
+        "id": "q-past-3",
+        "question": "Sales of the new smartphone _______ sharply after the price reduction last month.",
+        "options": [
+          "rose",
+          "raised",
+          "risen",
+          "rising"
+        ],
+        "answer_index": 0,
+        "explanation": "\"last month\" -> quá khứ đơn; doanh số tự tăng, không có tân ngữ -> nội động từ \"rise\", V2 là \"rose\". \"raised\" cần tân ngữ, \"risen\" thiếu trợ động từ, \"rising\" không làm vị ngữ được."
+      },
+      {
+        "id": "q-past-4",
+        "question": "At 10 A.M. yesterday, the maintenance crew _______ the air-conditioning units on the third floor.",
+        "options": [
+          "inspects",
+          "was inspecting",
+          "has inspected",
+          "will inspect"
+        ],
+        "answer_index": 1,
+        "explanation": "Mốc giờ cụ thể trong quá khứ (At 10 A.M. yesterday) -> hành động đang diễn ra lúc đó: quá khứ tiếp diễn \"was inspecting\"."
+      },
+      {
+        "id": "q-past-5",
+        "question": "The company _______ its headquarters to Chicago in 2019.",
+        "options": [
+          "has moved",
+          "moves",
+          "moved",
+          "has been moving"
+        ],
+        "answer_index": 2,
+        "explanation": "\"in 2019\" là mốc năm quá khứ -> quá khứ đơn \"moved\"; hiện tại hoàn thành không đi với mốc thời gian cụ thể đã kết thúc."
+      },
+      {
+        "id": "q-past-6",
+        "question": "The power went out _______ the board members were discussing the merger.",
+        "options": [
+          "during",
+          "because of",
+          "despite",
+          "while"
+        ],
+        "answer_index": 3,
+        "explanation": "Sau chỗ trống là mệnh đề (the board members were discussing) -> cần liên từ \"while\". during, because of, despite là giới từ, chỉ đi với cụm danh từ."
       }
     ]
   },
@@ -245,7 +532,7 @@
     "category": "tenses",
     "title": "Quá khứ hoàn thành (Past Perfect)",
     "subtitle": "Hành động xảy ra trước một hành động khác trong quá khứ",
-    "read_time_minutes": 5,
+    "read_time_minutes": 9,
     "difficulty": "Trung cấp",
     "tags": [
       "tenses",
@@ -265,6 +552,45 @@
         "tips": [
           "Bẫy TOEIC: Nếu cả câu chỉ có 1 hành động trong quá khứ có mốc thời gian, KHÔNG dùng Quá khứ hoàn thành mà chỉ dùng Quá khứ đơn!"
         ]
+      },
+      {
+        "title": "2. Quá khứ hoàn thành với before / after / when / already",
+        "content": "Khi có liên từ chỉ thứ tự, quá khứ hoàn thành nhấn mạnh việc xảy ra trước; với when, hai cách chia thì cho hai nghĩa khác nhau.",
+        "formula": "When + S + V2, S + had + V3 (việc kia đã xong trước)\nWhen + S + V2, S + V2 (hai việc nối tiếp nhau)",
+        "bullet_points": [
+          "\"When we arrived, the meeting had started\" = lúc chúng tôi đến thì cuộc họp đã bắt đầu rồi.",
+          "\"When we arrived, the meeting started\" = chúng tôi đến rồi cuộc họp mới bắt đầu.",
+          "already / never / just thường đứng giữa had và V3: \"had already left\"."
+        ],
+        "tips": [
+          "Với after / before, quá khứ đơn ở cả hai vế nhiều khi vẫn đúng; nhưng nếu một vế đã là quá khứ đơn và phương án có had + V3 cho việc xảy ra trước, đề thường muốn had + V3."
+        ]
+      },
+      {
+        "title": "3. Quá khứ hoàn thành bị động & trong câu tường thuật",
+        "content": "Bị động ở quá khứ hoàn thành và câu tường thuật lùi thì là hai dạng hay gặp trong Part 6 và Part 7.",
+        "formula": "S + had been + V3 (bị động)\nS + said / reported / explained + that + S + had + V3",
+        "bullet_points": [
+          "\"The shipment had been delivered before the store opened.\"",
+          "Tường thuật: \"She said that the report had been finalized.\"",
+          "Quá khứ hoàn thành tiếp diễn (had been V-ing) – xem chủ điểm Thì hoàn thành tiếp diễn."
+        ],
+        "tips": [
+          "Động từ tường thuật ở quá khứ (said, announced, explained, confirmed) và hành động trong mệnh đề that xảy ra trước đó -> chọn had + V3."
+        ]
+      },
+      {
+        "title": "4. Mẫu câu đặc biệt: No sooner … than / Hardly … when",
+        "content": "Hai cấu trúc đảo ngữ \"vừa mới … thì\" dùng quá khứ hoàn thành ở vế đầu, xuất hiện trong Part 5 mức nâng cao.",
+        "formula": "No sooner had + S + V3 + than + S + V2\nHardly / Scarcely had + S + V3 + when + S + V2",
+        "bullet_points": [
+          "\"No sooner had the CEO finished her speech than reporters began asking questions.\"",
+          "Không đảo ngữ: \"The CEO had no sooner finished her speech than …\"",
+          "No sooner đi với than; Hardly / Scarcely đi với when – đề hay tráo hai liên từ này."
+        ],
+        "tips": [
+          "Câu mở đầu bằng \"No sooner\" -> chỗ trống ngay sau là \"had\"; chỗ trống nối hai vế là \"than\", không phải \"when\" hay \"then\"."
+        ]
       }
     ],
     "examples": [
@@ -272,7 +598,35 @@
         "english": "By the time the conference began, all participants had received their badges.",
         "vietnamese": "Vào thời điểm hội nghị bắt đầu, tất cả người tham gia đều đã nhận được thẻ đeo của họ.",
         "explanation": "Việc nhận thẻ diễn ra trước khi hội nghị bắt đầu trong quá khứ -> \"had received\".",
-        "highlight": "had received ... By the time ... began",
+        "highlight": "had received their badges",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "When we reached the airport, the flight to Seoul had already departed.",
+        "vietnamese": "Khi chúng tôi đến sân bay, chuyến bay đi Seoul đã cất cánh rồi.",
+        "explanation": "Máy bay cất cánh trước lúc chúng tôi đến -> \"had already departed\".",
+        "highlight": "had already departed",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The spokesperson explained that the factory had been closed for safety inspections.",
+        "vietnamese": "Người phát ngôn giải thích rằng nhà máy đã bị đóng cửa để kiểm tra an toàn.",
+        "explanation": "Động từ tường thuật ở quá khứ + hành động xảy ra trước, ở dạng bị động -> \"had been closed\".",
+        "highlight": "had been closed for safety inspections",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "After the committee had reviewed all the proposals, it selected Brightway Design.",
+        "vietnamese": "Sau khi ủy ban đã xem xét tất cả đề xuất, họ chọn Brightway Design.",
+        "explanation": "Việc xem xét xảy ra trước việc lựa chọn -> \"had reviewed\" rồi \"selected\".",
+        "highlight": "After the committee had reviewed all the proposals",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "No sooner had the store opened than customers lined up at the registers.",
+        "vietnamese": "Cửa hàng vừa mở cửa thì khách đã xếp hàng ở quầy thu ngân.",
+        "explanation": "Cấu trúc No sooner had + S + V3 + than + S + V2.",
+        "highlight": "No sooner had the store opened than",
         "part_tag": "Part 5"
       }
     ],
@@ -288,6 +642,66 @@
         ],
         "answer_index": 2,
         "explanation": "Cấu trúc \"By the time + V2/ed, S + had V3/ed\" -> chọn \"had cleaned\"."
+      },
+      {
+        "id": "q-pastperf-2",
+        "question": "Before the new software was installed, the staff _______ all customer files to an external server.",
+        "options": [
+          "had backed up",
+          "back up",
+          "have backed up",
+          "will back up"
+        ],
+        "answer_index": 0,
+        "explanation": "Việc sao lưu xảy ra trước việc cài đặt (đã ở quá khứ \"was installed\") -> quá khứ hoàn thành \"had backed up\". Các phương án hiện tại / tương lai sai mốc thời gian."
+      },
+      {
+        "id": "q-pastperf-3",
+        "question": "Mr. Ito said that he _______ the invoice to the accounting department the previous day.",
+        "options": [
+          "sends",
+          "had sent",
+          "has sent",
+          "will send"
+        ],
+        "answer_index": 1,
+        "explanation": "Câu tường thuật với \"said\" ở quá khứ, việc gửi xảy ra trước đó (\"the previous day\") -> \"had sent\"."
+      },
+      {
+        "id": "q-pastperf-4",
+        "question": "No sooner had the meeting begun _______ the fire alarm went off.",
+        "options": [
+          "when",
+          "then",
+          "than",
+          "that"
+        ],
+        "answer_index": 2,
+        "explanation": "Cấu trúc cố định \"No sooner had + S + V3 + than + S + V2\" -> \"than\". \"when\" đi với Hardly / Scarcely, \"then\" và \"that\" không dùng ở đây."
+      },
+      {
+        "id": "q-pastperf-5",
+        "question": "By the time the auditors arrived last Monday, the records _______ carefully organized.",
+        "options": [
+          "are",
+          "have been",
+          "will be",
+          "had been"
+        ],
+        "answer_index": 3,
+        "explanation": "\"By the time + quá khứ đơn\" -> mệnh đề chính chia quá khứ hoàn thành; chủ ngữ \"records\" là vật -> bị động \"had been organized\"."
+      },
+      {
+        "id": "q-pastperf-6",
+        "question": "The hotel staff _______ the conference hall before the guests arrived, so everything was ready on time.",
+        "options": [
+          "prepares",
+          "had prepared",
+          "has prepared",
+          "will have prepared"
+        ],
+        "answer_index": 1,
+        "explanation": "Việc chuẩn bị xảy ra trước khi khách đến (arrived, quá khứ) -> \"had prepared\"."
       }
     ]
   },
@@ -296,7 +710,7 @@
     "category": "tenses",
     "title": "Tương lai đơn (Will) & Tương lai gần (Be going to)",
     "subtitle": "Dự đoán, quyết định tức thời và kế hoạch định sẵn",
-    "read_time_minutes": 5,
+    "read_time_minutes": 9,
     "difficulty": "Cơ bản",
     "tags": [
       "tenses",
@@ -325,6 +739,33 @@
         "tips": [
           "Trong văn bản email thương mại TOEIC, cấu trúc \"be scheduled to + V\" hoặc \"plan to + V\" cũng thường được dùng thay cho thì tương lai."
         ]
+      },
+      {
+        "title": "3. Các cách diễn đạt tương lai trong email thương mại",
+        "content": "Ngoài will và be going to, TOEIC dùng nhiều cấu trúc khác để nói về lịch trình, kế hoạch.",
+        "formula": "be scheduled / due / expected / set + to V\nbe about to + V (sắp sửa)\nbe + to V (theo kế hoạch / yêu cầu chính thức)",
+        "bullet_points": [
+          "\"The new branch is scheduled to open in May.\"",
+          "\"The shipment is due to arrive on Thursday.\"",
+          "\"The ceremony is about to begin; please take your seats.\"",
+          "\"All employees are to complete the training by June 30.\" (yêu cầu chính thức)"
+        ],
+        "tips": [
+          "Sau scheduled / expected / due / set là \"to + V nguyên mẫu\": loại ngay phương án V-ing hoặc V3."
+        ]
+      },
+      {
+        "title": "4. Will trong lời đề nghị, hứa hẹn & mệnh đề thời gian",
+        "content": "Will dùng cho lời đề nghị, lời hứa trong thư từ; nhưng không dùng will trong mệnh đề sau when / if / once (xem chủ điểm Hiện tại thay tương lai).",
+        "formula": "I will + V (đề nghị / hứa)\nWill you + V …? (yêu cầu lịch sự)\nMệnh đề chính: will + V; mệnh đề sau when / if: V hiện tại",
+        "bullet_points": [
+          "\"I will send you the revised quote by noon.\" (lời hứa)",
+          "\"Will you please confirm your attendance?\" (yêu cầu)",
+          "\"Our team will contact you as soon as your order ships.\" (ships, không phải will ship)"
+        ],
+        "tips": [
+          "Hai chỗ trống trong cùng một câu (một ở mệnh đề chính, một sau when / if): mệnh đề chính nhận will, mệnh đề phụ nhận hiện tại đơn."
+        ]
       }
     ],
     "examples": [
@@ -332,8 +773,36 @@
         "english": "The revised employee handbook will be distributed to all staff shortly.",
         "vietnamese": "Cuốn sổ tay nhân viên sửa đổi sẽ sớm được gửi đến toàn thể nhân viên.",
         "explanation": "Dấu hiệu \"shortly\" đi cùng thì tương lai bị động -> \"will be distributed\".",
-        "highlight": "will be distributed ... shortly",
+        "highlight": "will be distributed to all staff shortly",
         "part_tag": "Part 5"
+      },
+      {
+        "english": "Look at those dark clouds; the outdoor reception is going to be cancelled.",
+        "vietnamese": "Nhìn những đám mây đen kia kìa; buổi tiệc ngoài trời có lẽ sẽ bị hủy.",
+        "explanation": "Dự đoán dựa trên bằng chứng ở hiện tại (mây đen) -> be going to.",
+        "highlight": "is going to be cancelled",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The renovated lobby is scheduled to reopen on March 3.",
+        "vietnamese": "Sảnh được cải tạo dự kiến sẽ mở cửa lại vào ngày 3 tháng 3.",
+        "explanation": "be scheduled + to V diễn tả lịch trình trong tương lai.",
+        "highlight": "is scheduled to reopen",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "I will forward the meeting agenda to everyone this afternoon.",
+        "vietnamese": "Tôi sẽ chuyển chương trình họp cho mọi người vào chiều nay.",
+        "explanation": "Lời hứa / quyết định của người viết -> will + V.",
+        "highlight": "will forward the meeting agenda",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "The company is going to launch its new loyalty program next month.",
+        "vietnamese": "Công ty sẽ ra mắt chương trình khách hàng thân thiết mới vào tháng tới.",
+        "explanation": "Kế hoạch đã được chuẩn bị từ trước -> be going to + V.",
+        "highlight": "is going to launch",
+        "part_tag": "Part 7"
       }
     ],
     "quiz": [
@@ -348,6 +817,66 @@
         ],
         "answer_index": 2,
         "explanation": "Dấu hiệu \"at next Monday’s meeting\" chỉ sự kiện trong tương lai -> chọn \"will announce\"."
+      },
+      {
+        "id": "q-fut-2",
+        "question": "The new warehouse is expected _______ fully operational by the end of the year.",
+        "options": [
+          "to be",
+          "being",
+          "be",
+          "been"
+        ],
+        "answer_index": 0,
+        "explanation": "Cấu trúc \"be expected + to V\" -> \"to be\". being / be / been không đi trực tiếp sau \"expected\" trong nghĩa này."
+      },
+      {
+        "id": "q-fut-3",
+        "question": "Ms. Grant _______ the quarterly report to the board as soon as she receives the final figures.",
+        "options": [
+          "submits",
+          "will submit",
+          "submitted",
+          "has submitted"
+        ],
+        "answer_index": 1,
+        "explanation": "Mệnh đề sau \"as soon as\" dùng hiện tại (receives) cho tương lai, nên mệnh đề chính dùng tương lai đơn \"will submit\"."
+      },
+      {
+        "id": "q-fut-4",
+        "question": "Please take your seats, as the keynote speech is _______ to begin.",
+        "options": [
+          "near",
+          "close",
+          "about",
+          "soon"
+        ],
+        "answer_index": 2,
+        "explanation": "\"be about to + V\" = sắp sửa -> \"about\". near / close / soon không tạo thành cấu trúc này với \"to begin\"."
+      },
+      {
+        "id": "q-fut-5",
+        "question": "Our technicians _______ the faulty printer tomorrow morning, so you can use it again by noon.",
+        "options": [
+          "repaired",
+          "have repaired",
+          "repairing",
+          "will repair"
+        ],
+        "answer_index": 3,
+        "explanation": "\"tomorrow morning\" -> hành động tương lai: \"will repair\". Quá khứ và hiện tại hoàn thành sai mốc, \"repairing\" không làm vị ngữ được."
+      },
+      {
+        "id": "q-fut-6",
+        "question": "The shipment of office chairs is due _______ at our headquarters on Thursday.",
+        "options": [
+          "arrive",
+          "arriving",
+          "to arrive",
+          "arrived"
+        ],
+        "answer_index": 2,
+        "explanation": "Cấu trúc \"be due + to V\" (dự kiến) -> \"to arrive\"."
       }
     ]
   },
@@ -356,7 +885,7 @@
     "category": "tenses",
     "title": "Tương lai hoàn thành (Future Perfect)",
     "subtitle": "Dấu hiệu By + mốc tương lai & Hoàn thành trước một thời điểm",
-    "read_time_minutes": 5,
+    "read_time_minutes": 8,
     "difficulty": "Trung cấp",
     "tags": [
       "tenses",
@@ -375,6 +904,32 @@
         "tips": [
           "Bẫy: Nhầm lẫn giữa \"By the time + V(hiện tại)\" (đi với will have V3) và \"By the time + V(quá khứ)\" (đi với had V3)."
         ]
+      },
+      {
+        "title": "2. By vs By the time vs Until",
+        "content": "Chọn đúng giới từ / liên từ để đi với tương lai hoàn thành.",
+        "formula": "By + mốc thời gian (N)\nBy the time + S + V(hiện tại đơn)\nUntil + mốc / mệnh đề: hành động kéo dài đến mốc (thường dùng tương lai đơn, không dùng will have V3)",
+        "bullet_points": [
+          "\"By Friday, we will have finished the audit.\" (xong trước / muộn nhất là thứ Sáu)",
+          "\"We will work on the audit until Friday.\" (làm liên tục đến thứ Sáu)",
+          "Không dùng will sau By the time: \"By the time you read this, I will have left.\""
+        ],
+        "tips": [
+          "Câu có \"by + mốc tương lai\" và động từ chỉ sự hoàn tất (complete, finish, submit, reach) -> chọn will have + V3."
+        ]
+      },
+      {
+        "title": "3. Tương lai hoàn thành bị động & với khoảng thời gian",
+        "content": "Dạng bị động và dạng đi với \"for + khoảng thời gian\" giúp nói về thành tích, cột mốc trong tương lai.",
+        "formula": "S + will have been + V3 (bị động)\nBy + mốc, S + will have + V3 + for + khoảng thời gian",
+        "bullet_points": [
+          "\"By next week, all invoices will have been processed.\"",
+          "\"By 2030, Ms. Rao will have worked here for twenty years.\"",
+          "Nhấn mạnh quá trình liên tục: will have been V-ing – xem chủ điểm Thì hoàn thành tiếp diễn."
+        ],
+        "tips": [
+          "Chủ ngữ là vật (orders, reports, invoices) không tự làm hành động -> chọn will have been + V3 thay vì will have + V3."
+        ]
       }
     ],
     "examples": [
@@ -382,7 +937,35 @@
         "english": "By next December, our lead engineer will have completed his overseas assignment.",
         "vietnamese": "Trước tháng 12 tới, kỹ sư trưởng của chúng ta sẽ hoàn thành nhiệm vụ công tác nước ngoài.",
         "explanation": "Dấu hiệu \"By next December\" chỉ mốc thời gian tương lai -> chọn \"will have completed\".",
-        "highlight": "By next December ... will have completed",
+        "highlight": "will have completed his overseas assignment",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "By the end of this quarter, we will have opened three new stores in Vietnam.",
+        "vietnamese": "Đến cuối quý này, chúng tôi sẽ mở xong ba cửa hàng mới tại Việt Nam.",
+        "explanation": "By + mốc tương lai -> \"will have opened\".",
+        "highlight": "will have opened three new stores",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "By the time the client arrives, the conference room will have been prepared.",
+        "vietnamese": "Khi khách hàng đến, phòng họp sẽ được chuẩn bị xong.",
+        "explanation": "By the time + hiện tại đơn; chủ ngữ là căn phòng (bị động) -> \"will have been prepared\".",
+        "highlight": "will have been prepared",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "By next June, Mr. Diaz will have managed the Lima branch for a decade.",
+        "vietnamese": "Đến tháng 6 năm sau, ông Diaz sẽ quản lý chi nhánh Lima tròn mười năm.",
+        "explanation": "By + mốc tương lai và for + khoảng thời gian -> \"will have managed\".",
+        "highlight": "will have managed the Lima branch for a decade",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "The renovation will continue until the end of May.",
+        "vietnamese": "Việc cải tạo sẽ tiếp tục cho đến cuối tháng 5.",
+        "explanation": "Until chỉ hành động kéo dài đến một mốc -> tương lai đơn, không cần will have V3.",
+        "highlight": "will continue until the end of May",
         "part_tag": "Part 5"
       }
     ],
@@ -398,6 +981,66 @@
         ],
         "answer_index": 1,
         "explanation": "Cấu trúc \"By the time + Hiện tại đơn, S + will have V3\" -> chọn \"will have partnered\"."
+      },
+      {
+        "id": "q-futperf-2",
+        "question": "By the end of next month, the engineering team _______ the prototype.",
+        "options": [
+          "will have completed",
+          "completes",
+          "completed",
+          "has completed"
+        ],
+        "answer_index": 0,
+        "explanation": "\"By the end of next month\" là mốc tương lai -> tương lai hoàn thành \"will have completed\"."
+      },
+      {
+        "id": "q-futperf-3",
+        "question": "By the time the new manager _______, the hiring process will have been finalized.",
+        "options": [
+          "will start",
+          "starts",
+          "started",
+          "had started"
+        ],
+        "answer_index": 1,
+        "explanation": "Mệnh đề sau \"By the time\" dùng hiện tại đơn khi mệnh đề chính ở tương lai -> \"starts\"; không dùng will trong mệnh đề thời gian."
+      },
+      {
+        "id": "q-futperf-4",
+        "question": "All invoices _______ by Friday, so the accounting team can close the books.",
+        "options": [
+          "will have processed",
+          "have processed",
+          "will have been processed",
+          "had processed"
+        ],
+        "answer_index": 2,
+        "explanation": "Chủ ngữ \"invoices\" là vật, không tự xử lý -> bị động; \"by Friday\" (tương lai) -> \"will have been processed\"."
+      },
+      {
+        "id": "q-futperf-5",
+        "question": "The training sessions will continue _______ the end of the month.",
+        "options": [
+          "by",
+          "by the time",
+          "since",
+          "until"
+        ],
+        "answer_index": 3,
+        "explanation": "\"continue\" là hành động kéo dài đến một mốc -> \"until\". \"by\" chỉ hạn chót hoàn tất, \"by the time\" cần mệnh đề, \"since\" đi với hiện tại hoàn thành."
+      },
+      {
+        "id": "q-futperf-6",
+        "question": "By 2028, Ms. Novak _______ at the firm for twenty-five years.",
+        "options": [
+          "works",
+          "will have worked",
+          "has worked",
+          "worked"
+        ],
+        "answer_index": 1,
+        "explanation": "By + mốc tương lai (2028) và for + khoảng thời gian -> \"will have worked\"."
       }
     ]
   },
@@ -406,7 +1049,7 @@
     "category": "tenses",
     "title": "Bảng tổng hợp Quy tắc Phối hợp thì trong TOEIC",
     "subtitle": "Mệnh đề chính vs Mệnh đề phụ & Sự ăn khớp thì logic",
-    "read_time_minutes": 6,
+    "read_time_minutes": 9,
     "difficulty": "Trung cấp",
     "tags": [
       "tenses",
@@ -428,6 +1071,45 @@
         "tips": [
           "Quy tắc vàng: Nếu mệnh đề chính ở thì Quá khứ thì mệnh đề phụ hầu như chỉ có thể ở Quá khứ hoặc Quá khứ hoàn thành (không nhảy sang hiện tại/tương lai)."
         ]
+      },
+      {
+        "title": "2. Phối thì trong câu tường thuật (Reported speech)",
+        "content": "Khi động từ tường thuật ở quá khứ, động từ trong mệnh đề that thường lùi một thì.",
+        "formula": "Hiện tại đơn -> Quá khứ đơn\nHiện tại hoàn thành / Quá khứ đơn -> Quá khứ hoàn thành\nwill -> would; can -> could; may -> might",
+        "bullet_points": [
+          "\"The manager said that the report was ready.\"",
+          "\"She announced that the company would open a new office.\"",
+          "Không lùi thì khi nói về sự thật luôn đúng hoặc lịch trình vẫn còn hiệu lực: \"He said the store opens at 9 A.M.\""
+        ],
+        "tips": [
+          "Động từ chính said / announced / confirmed / stated ở quá khứ -> chỗ trống trong mệnh đề that ưu tiên would / could / had + V3, không chọn will / can."
+        ]
+      },
+      {
+        "title": "3. Phối thì với mệnh đề thời gian & điều kiện",
+        "content": "Mệnh đề chính ở tương lai thì mệnh đề thời gian / điều kiện dùng hiện tại; mệnh đề chính ở quá khứ thì mệnh đề phụ dùng quá khứ.",
+        "formula": "will + V … when / before / after / until + S + V(hiện tại)\nwould + V … if + S + V2 (điều kiện loại 2)\nV2 … when / before / after + S + V2 / had V3",
+        "bullet_points": [
+          "\"The manager will call you after she reviews the file.\"",
+          "\"The manager called you after she had reviewed the file.\"",
+          "Chi tiết: xem chủ điểm Hiện tại thay tương lai và Câu điều kiện."
+        ],
+        "tips": [
+          "Xác định thì của mệnh đề chính trước, rồi mới chọn thì cho chỗ trống ở mệnh đề phụ."
+        ]
+      },
+      {
+        "title": "4. Quy trình 3 bước xử lý câu phức trong Part 5",
+        "content": "Áp dụng cùng một quy trình cho mọi câu có hai mệnh đề.",
+        "formula": "Bước 1: tìm động từ của mệnh đề còn lại\nBước 2: xác định quan hệ thời gian (trước / đồng thời / sau)\nBước 3: chọn thì phù hợp, kiểm tra chủ động / bị động",
+        "bullet_points": [
+          "Đồng thời trong quá khứ: quá khứ đơn + quá khứ tiếp diễn.",
+          "Xảy ra trước một mốc quá khứ: had + V3.",
+          "Xảy ra trước một mốc tương lai: will have + V3."
+        ],
+        "tips": [
+          "Dấu hiệu thời gian ở một vế quyết định thì của cả câu: \"last year\" ở vế này kéo vế kia về quá khứ."
+        ]
       }
     ],
     "examples": [
@@ -435,7 +1117,35 @@
         "english": "Mr. Vance explained that the delivery had been delayed due to severe weather.",
         "vietnamese": "Ông Vance giải thích rằng việc giao hàng đã bị chậm trễ do thời tiết khắc nghiệt.",
         "explanation": "Mệnh đề chính \"explained\" (quá khứ) kéo theo mệnh đề sau lùi thì thành quá khứ hoàn thành \"had been delayed\".",
-        "highlight": "explained that ... had been delayed",
+        "highlight": "explained that the delivery had been delayed",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "The director announced that the company would hire fifty new employees.",
+        "vietnamese": "Giám đốc đã thông báo rằng công ty sẽ tuyển năm mươi nhân viên mới.",
+        "explanation": "Động từ tường thuật ở quá khứ -> will lùi thành would.",
+        "highlight": "would hire fifty new employees",
+        "part_tag": "Part 7"
+      },
+      {
+        "english": "The technician will replace the parts after the new shipment arrives.",
+        "vietnamese": "Kỹ thuật viên sẽ thay linh kiện sau khi lô hàng mới đến.",
+        "explanation": "Mệnh đề chính ở tương lai, mệnh đề sau after dùng hiện tại đơn.",
+        "highlight": "after the new shipment arrives",
+        "part_tag": "Part 5"
+      },
+      {
+        "english": "Ms. Ruiz told us that she could not attend the workshop.",
+        "vietnamese": "Bà Ruiz nói với chúng tôi rằng bà ấy không thể tham dự hội thảo.",
+        "explanation": "\"told\" ở quá khứ -> can lùi thành could.",
+        "highlight": "she could not attend the workshop",
+        "part_tag": "Part 6"
+      },
+      {
+        "english": "While the CEO was speaking, the audience listened carefully.",
+        "vietnamese": "Trong khi Tổng giám đốc đang phát biểu, khán giả lắng nghe chăm chú.",
+        "explanation": "Hai hành động đồng thời trong quá khứ: quá khứ tiếp diễn + quá khứ đơn.",
+        "highlight": "While the CEO was speaking",
         "part_tag": "Part 5"
       }
     ],
@@ -451,6 +1161,66 @@
         ],
         "answer_index": 2,
         "explanation": "Mệnh đề chính \"confirmed\" ở quá khứ, hành động duyệt ngân sách diễn ra trước đó -> chọn \"had been\"."
+      },
+      {
+        "id": "q-seq-2",
+        "question": "The spokesperson stated that the factory _______ production in early April.",
+        "options": [
+          "would resume",
+          "resumes",
+          "resuming",
+          "has resumed"
+        ],
+        "answer_index": 0,
+        "explanation": "\"stated\" ở quá khứ -> mệnh đề that lùi thì, will thành would: \"would resume\" (A). \"resumes\" / \"has resumed\" không lùi thì; \"resuming\" là V-ing, không làm động từ chính của mệnh đề được."
+      },
+      {
+        "id": "q-seq-3",
+        "question": "Our sales representative will contact you after she _______ your request.",
+        "options": [
+          "will review",
+          "reviews",
+          "reviewed",
+          "had reviewed"
+        ],
+        "answer_index": 1,
+        "explanation": "Mệnh đề chính ở tương lai (will contact), mệnh đề sau after dùng hiện tại đơn -> \"reviews\"."
+      },
+      {
+        "id": "q-seq-4",
+        "question": "Mr. Lee said that he _______ finish the report by Friday if he received the data in time.",
+        "options": [
+          "can",
+          "will",
+          "could",
+          "has"
+        ],
+        "answer_index": 2,
+        "explanation": "\"said\" ở quá khứ và mệnh đề if dùng \"received\" -> can lùi thành could: \"could finish\". can / will không lùi thì, \"has\" sai cấu trúc."
+      },
+      {
+        "id": "q-seq-5",
+        "question": "When the inspectors arrived yesterday, the workers _______ the new safety equipment.",
+        "options": [
+          "test",
+          "will test",
+          "have tested",
+          "were testing"
+        ],
+        "answer_index": 3,
+        "explanation": "Hành động đang diễn ra khi một hành động khác xảy ra trong quá khứ (arrived yesterday) -> quá khứ tiếp diễn \"were testing\"."
+      },
+      {
+        "id": "q-seq-6",
+        "question": "The client confirmed that the payment _______ the previous week.",
+        "options": [
+          "has been sent",
+          "had been sent",
+          "is sent",
+          "will be sent"
+        ],
+        "answer_index": 1,
+        "explanation": "\"confirmed\" ở quá khứ, việc gửi xảy ra trước đó (the previous week) và payment là vật -> \"had been sent\"."
       }
     ]
   },
