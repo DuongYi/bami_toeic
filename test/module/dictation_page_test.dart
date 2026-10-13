@@ -1,4 +1,5 @@
 import 'package:bami_toeic/core/design_system/design_system.dart';
+import 'package:bami_toeic/core/handwriting/handwriting_recognizer.dart';
 import 'package:bami_toeic/module/listening/presentation/controllers/dictation_providers.dart';
 import 'package:bami_toeic/module/listening/presentation/pages/dictation_page.dart';
 import 'package:bami_toeic/module/test/data/models/test_models.dart';
@@ -146,4 +147,84 @@ void main() {
       expect(find.byType(TextField), findsOneWidget);
     });
   });
+
+  group('Viết tay trên bảng vẽ', () {
+    Future<void> openCanvas(WidgetTester tester, _FakeRecognizer fake) async {
+      tester.view.physicalSize = const Size(1170, 3200);
+      tester.view.devicePixelRatio = 3;
+      addTearDown(tester.view.reset);
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            dictationClipsProvider('test1', 2).overrideWith((ref) => Future.value([sampleGroup])),
+            handwritingRecognizerProvider.overrideWithValue(fake),
+          ],
+          child: MaterialApp(
+            theme: AppTheme.light(),
+            home: const DictationPage(testId: 'test1', part: 2),
+          ),
+        ),
+      );
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Viết tay (Pencil)'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Bảng vẽ nét (Canvas)'));
+      await tester.pumpAndSettle();
+      // Vẽ 1 nét và 1 chấm (chạm không di chuyển) – cả hai phải được ghi.
+      final pad = find.byType(HandwritingPad);
+      await tester.ensureVisible(pad);
+      final center = tester.getCenter(pad);
+      await tester.dragFrom(center, const Offset(60, 4));
+      await tester.tapAt(center + const Offset(90, -20));
+      await tester.pumpAndSettle();
+    }
+
+    testWidgets('chữ nhận dạng được đưa vào ô trả lời, không chép đáp án', (tester) async {
+      final fake = _FakeRecognizer('hall way');
+      await openCanvas(tester, fake);
+      await tester.tap(find.text('Chuyển nét vẽ thành văn bản (A→Text)'));
+      await tester.pumpAndSettle();
+
+      expect(fake.lastStrokes, 2, reason: 'nét kéo + dấu chấm đều phải được ghi');
+      expect(find.text('Chữ đã nhận dạng (sửa nếu sai)'), findsOneWidget);
+      expect(find.text('hall way'), findsOneWidget);
+      expect(find.textContaining('Where is the meeting room'), findsNothing);
+    });
+
+    testWidgets('không đọc được chữ → báo, ô trả lời vẫn trống', (tester) async {
+      await openCanvas(tester, _FakeRecognizer(''));
+      await tester.tap(find.text('Chuyển nét vẽ thành văn bản (A→Text)'));
+      await tester.pumpAndSettle();
+
+      expect(find.textContaining('Chưa đọc được chữ'), findsOneWidget);
+      expect(find.text('Chữ đã nhận dạng (sửa nếu sai)'), findsNothing);
+    });
+  });
+
+  test('dựng ảnh PNG từ nét vẽ để gửi nhận dạng', () async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    final png = await HandwritingRecognizer.renderStrokes(const [
+      DrawStroke(points: [Offset(0, 0), Offset(40, 30)], color: Color(0xFF000000)),
+      DrawStroke(points: [Offset(60, 10)], color: Color(0xFF000000)),
+    ]);
+    expect(png, isNotNull);
+    expect(png!.sublist(1, 4), 'PNG'.codeUnits);
+    expect(await HandwritingRecognizer.renderStrokes(const []), isNull);
+  });
+}
+
+class _FakeRecognizer extends HandwritingRecognizer {
+  _FakeRecognizer(this.result);
+
+  final String result;
+  int? lastStrokes;
+
+  @override
+  bool get isSupported => true;
+
+  @override
+  Future<String> recognize(List<DrawStroke> strokes) async {
+    lastStrokes = strokes.length;
+    return result;
+  }
 }

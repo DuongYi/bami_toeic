@@ -4,6 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 
 import '../../../../core/design_system/design_system.dart';
+import '../../../../core/handwriting/handwriting_recognizer.dart';
+import '../../../../core/network/app_exception.dart';
 import '../../../../helper/dictation.dart';
 import '../../../../helper/format.dart';
 import '../../../goals/data/study_store.dart';
@@ -67,6 +69,7 @@ class _DictationSessionState extends ConsumerState<_DictationSession> {
 
   bool _useHandwriting = false;
   bool _useCanvasMode = false;
+  bool _recognizing = false;
   final _handwritingStrokes = <int, List<DrawStroke>>{};
 
   /// Điểm từng đoạn đã chấm (index → tỉ lệ đúng).
@@ -157,78 +160,59 @@ class _DictationSessionState extends ConsumerState<_DictationSession> {
     await _player.play();
   }
 
-  void _convertHandwritingToText({bool silent = false}) {
+  /// Nhận dạng chữ viết tay trên bảng vẽ bằng Vision (iOS) rồi đưa vào ô trả lời để người học soát lại.
+  Future<void> _convertHandwritingToText({bool silent = false}) async {
     final strokes = _handwritingStrokes[_index] ?? const [];
     if (strokes.isEmpty) {
-      if (!silent && mounted) {
-        showAppSnackBar(
-          context,
-          'Vui lòng viết nét từ lên trang vở trước khi chuyển đổi.',
-          tone: AppTone.warning,
-        );
+      if (!silent) {
+        showAppSnackBar(context, 'Hãy viết lên bảng trước khi chuyển thành chữ.', tone: AppTone.warning);
       }
       return;
     }
-
-    final transcript = _clip.transcript;
-    if (transcript == null || transcript.isEmpty) return;
-
-    // Lọc bỏ toàn bộ nhãn người nói M:, W:, (A), (B), (C) để không bao giờ bị ra chữ 'm'!
-    final cleanLines = Dictation.lines(transcript);
-    final cleanText = cleanLines.join(' ');
-    final targetWords = Dictation.words(cleanText);
-    if (targetWords.isEmpty) return;
-
-    // Phân tích các cụm nét vẽ theo trục X
-    final strokeBounds = <Rect>[];
-    for (final s in strokes) {
-      if (s.points.isEmpty) continue;
-      double minX = s.points.first.dx, maxX = s.points.first.dx;
-      double minY = s.points.first.dy, maxY = s.points.first.dy;
-      for (final p in s.points) {
-        if (p.dx < minX) minX = p.dx;
-        if (p.dx > maxX) maxX = p.dx;
-        if (p.dy < minY) minY = p.dy;
-        if (p.dy > maxY) maxY = p.dy;
-      }
-      strokeBounds.add(Rect.fromLTRB(minX, minY, maxX, maxY));
-    }
-
-    strokeBounds.sort((a, b) => a.left.compareTo(b.left));
-    int wordClusters = 0;
-    double lastRight = -100;
-    for (final b in strokeBounds) {
-      if (b.left - lastRight > 32.0) {
-        wordClusters++;
-      }
-      if (b.right > lastRight) lastRight = b.right;
-    }
-    if (wordClusters == 0) wordClusters = 1;
-
-    final count = wordClusters.clamp(1, targetWords.length);
-    final recognizedText = targetWords.take(count).join(' ');
-
-    setState(() {
-      _input.text = recognizedText;
-    });
-
-    if (!silent && mounted) {
+    final recognizer = ref.read(handwritingRecognizerProvider);
+    if (!recognizer.isSupported) {
       showAppSnackBar(
         context,
-        'Đã nhận diện chữ viết tay: "$recognizedText"',
-        tone: AppTone.success,
+        'Nhận dạng nét vẽ chỉ có trên iPad / iPhone. Hãy dùng "Vở Scribble" hoặc gõ phím.',
+        tone: AppTone.warning,
       );
+      return;
+    }
+    setState(() => _recognizing = true);
+    try {
+      final text = await recognizer.recognize(strokes);
+      if (!mounted) return;
+      if (text.isEmpty) {
+        showAppSnackBar(
+          context,
+          'Chưa đọc được chữ. Viết to, rõ, mỗi từ cách nhau một chút rồi thử lại.',
+          tone: AppTone.warning,
+        );
+        return;
+      }
+      _input.text = text;
+      if (!silent) {
+        showAppSnackBar(context, 'Đã nhận dạng – soát và sửa lại nếu sai trước khi kiểm tra.', tone: AppTone.success);
+      }
+    } catch (e) {
+      if (mounted) showAppSnackBar(context, AppException.from(e).message, tone: AppTone.danger);
+    } finally {
+      if (mounted) setState(() => _recognizing = false);
     }
   }
 
-  void _check() {
+  Future<void> _check() async {
     final transcript = _clip.transcript;
     if (transcript == null || transcript.isEmpty) return;
     final target = Dictation.lines(transcript).join(' ');
 
-    // Tự động nhận diện chữ viết tay thành văn bản nếu người dùng viết mà chưa bấm nút convert
-    if (_useHandwriting && _input.text.trim().isEmpty && (_handwritingStrokes[_index]?.isNotEmpty ?? false)) {
-      _convertHandwritingToText(silent: true);
+    // Viết trên bảng vẽ mà chưa chuyển thành chữ → nhận dạng trước rồi mới chấm.
+    if (_useHandwriting &&
+        _useCanvasMode &&
+        _input.text.trim().isEmpty &&
+        (_handwritingStrokes[_index]?.isNotEmpty ?? false)) {
+      await _convertHandwritingToText(silent: true);
+      if (!mounted) return;
     }
 
     final hasTyped = _input.text.trim().isNotEmpty;
@@ -559,20 +543,27 @@ class _DictationSessionState extends ConsumerState<_DictationSession> {
                 icon: const Icon(Icons.first_page_rounded),
                 onPressed: _replayFromStart,
               ),
-              const Spacer(),
-              // Thời gian phát
-              StreamBuilder<Duration>(
-                stream: _player.positionStream,
-                builder: (context, snap) {
-                  final pos = snap.data ?? Duration.zero;
-                  final total = _player.duration ?? Duration.zero;
-                  return Text(
-                    '${Fmt.clock(pos)} / ${Fmt.clock(total)}',
-                    style: context.textStyles.labelSmall?.copyWith(
-                      fontWeight: FontWeight.w600,
+              // Thời gian phát – co lại khi màn hẹp (điện thoại) thay vì tràn hàng.
+              Expanded(
+                child: Align(
+                  alignment: AlignmentDirectional.centerEnd,
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: StreamBuilder<Duration>(
+                      stream: _player.positionStream,
+                      builder: (context, snap) {
+                        final pos = snap.data ?? Duration.zero;
+                        final total = _player.duration ?? Duration.zero;
+                        return Text(
+                          '${Fmt.clock(pos)} / ${Fmt.clock(total)}',
+                          style: context.textStyles.labelSmall?.copyWith(
+                            fontWeight: FontWeight.w600,
+                          ),
+                        );
+                      },
                     ),
-                  );
-                },
+                  ),
+                ),
               ),
             ],
           ),
@@ -780,56 +771,35 @@ class _DictationSessionState extends ConsumerState<_DictationSession> {
                   children: [
                     Expanded(
                       child: OutlinedButton.icon(
-                        icon: const Icon(Icons.auto_fix_high_rounded, size: AppSizes.iconSm),
-                        label: const Text('Chuyển nét vẽ thành văn bản (A→Text)'),
-                        onPressed: strokes.isEmpty ? null : () => _convertHandwritingToText(silent: false),
+                        icon: _recognizing
+                            ? const AppInlineSpinner()
+                            : const Icon(Icons.auto_fix_high_rounded, size: AppSizes.iconSm),
+                        label: Text(_recognizing ? 'Đang nhận dạng…' : 'Chuyển nét vẽ thành văn bản (A→Text)'),
+                        onPressed: strokes.isEmpty || _recognizing ? null : () => _convertHandwritingToText(),
                       ),
                     ),
                   ],
                 ),
                 Gaps.v8,
               ],
-              // Khung hiển thị văn bản đã chuyển đổi từ nét viết
+              // Chữ đã nhận dạng – sửa được (gõ phím hoặc viết Scribble) trước khi kiểm tra.
               if (_input.text.trim().isNotEmpty) ...[
-                Container(
-                  padding: const EdgeInsets.all(AppSpacing.s12),
-                  decoration: BoxDecoration(
-                    color: context.colors.primaryContainer.withValues(alpha: 0.25),
-                    borderRadius: AppRadius.brMd,
-                    border: Border.all(color: context.colors.primary.withValues(alpha: 0.3)),
-                  ),
-                  child: Row(
-                    children: [
-                      Icon(Icons.text_fields_rounded, size: AppSizes.iconSm, color: context.colors.primary),
-                      Gaps.h8,
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Văn bản đã nhận diện:',
-                              style: context.textStyles.labelSmall?.copyWith(
-                                color: context.colors.primary,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Text(
-                              _input.text.trim(),
-                              style: context.textStyles.bodyMedium?.copyWith(
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      if (r == null)
-                        IconButton(
-                          tooltip: 'Xoá văn bản',
-                          iconSize: AppSizes.iconSm,
-                          icon: const Icon(Icons.clear_rounded),
-                          onPressed: () => _input.clear(),
-                        ),
-                    ],
+                TextField(
+                  controller: _input,
+                  minLines: 2,
+                  maxLines: 5,
+                  enabled: r == null,
+                  autocorrect: false,
+                  decoration: InputDecoration(
+                    labelText: 'Chữ đã nhận dạng (sửa nếu sai)',
+                    prefixIcon: const Icon(Icons.text_fields_rounded),
+                    suffixIcon: r == null
+                        ? IconButton(
+                            tooltip: 'Xoá chữ',
+                            icon: const Icon(Icons.clear_rounded),
+                            onPressed: _input.clear,
+                          )
+                        : null,
                   ),
                 ),
                 Gaps.v8,
@@ -856,14 +826,15 @@ class _DictationSessionState extends ConsumerState<_DictationSession> {
           ],
           if (r == null && !_useHandwriting) ...[
             Gaps.v12,
-            Row(
+            Wrap(
+              spacing: AppSpacing.s8,
+              runSpacing: AppSpacing.s8,
               children: [
                 OutlinedButton.icon(
                   icon: const Icon(Icons.replay_rounded, size: AppSizes.iconSm),
                   label: const Text('Nghe lại 3s'),
                   onPressed: _replay3Seconds,
                 ),
-                Gaps.h8,
                 OutlinedButton.icon(
                   icon: const Icon(Icons.play_circle_outline_rounded, size: AppSizes.iconSm),
                   label: const Text('Phát / Dừng'),
@@ -877,9 +848,14 @@ class _DictationSessionState extends ConsumerState<_DictationSession> {
     );
   }
 
+  /// Chiều cao 1 dòng vở Scribble = khoảng cách dòng kẻ; chữ được ép đúng chiều cao này để nằm trên dòng.
+  static const _notebookLine = 38.0;
+
   Widget _buildScribbleNotebook(BuildContext context, DictationResult? r) {
     final colors = context.colors;
     final surfaces = context.surfaces;
+    final textStyle = context.textStyles.titleMedium!;
+    final fontSize = textStyle.fontSize ?? 16;
 
     return Container(
       decoration: BoxDecoration(
@@ -958,8 +934,10 @@ class _DictationSessionState extends ConsumerState<_DictationSession> {
                 Positioned.fill(
                   child: CustomPaint(
                     painter: RuledLinesPainter(
-                      lineColor: colors.outlineVariant.withValues(alpha: 0.25),
-                      lineSpacing: 38.0,
+                      lineColor: colors.outlineVariant.withValues(alpha: 0.45),
+                      lineSpacing: _notebookLine,
+                      // Lề trên của ô chữ + chân chữ trong dòng 1 (chữ đứng ngay trên dòng kẻ).
+                      firstLine: AppSpacing.s8 + _notebookLine * 0.78,
                     ),
                   ),
                 ),
@@ -976,12 +954,15 @@ class _DictationSessionState extends ConsumerState<_DictationSession> {
                     stylusHandwritingEnabled: true,
                     textCapitalization: TextCapitalization.sentences,
                     autocorrect: false,
-                    style: context.textStyles.titleMedium?.copyWith(
-                      height: 2.11,
-                      letterSpacing: 0.4,
+                    style: textStyle.copyWith(letterSpacing: 0.4),
+                    strutStyle: StrutStyle(
+                      fontSize: fontSize, // ds-ignore: lấy từ textStyles.titleMedium, chỉ để ép chiều cao dòng
+                      height: _notebookLine / fontSize,
+                      forceStrutHeight: true,
                     ),
                     decoration: const InputDecoration(
                       hintText: 'Cầm Apple Pencil viết trực tiếp lên dòng kẻ vở (Scribble)...',
+                      filled: false, // nền trong suốt để thấy dòng kẻ vở phía sau
                       border: InputBorder.none,
                       enabledBorder: InputBorder.none,
                       focusedBorder: InputBorder.none,

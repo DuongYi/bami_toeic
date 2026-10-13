@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../tokens/app_dimens.dart';
@@ -165,10 +166,18 @@ class _AnnotationOverlayState extends State<AnnotationOverlay> {
     widget.onStrokesChanged?.call(List.unmodifiable(_strokes));
   }
 
-  void _onPanStart(DragStartDetails details) {
+  /// Đã thấy Apple Pencil → bỏ qua chạm bằng tay khi đang vẽ (lòng bàn tay tì màn hình).
+  bool _stylusSeen = false;
+
+  bool _acceptPointer(PointerDownEvent e) {
+    final stylus = e.kind == PointerDeviceKind.stylus || e.kind == PointerDeviceKind.invertedStylus;
+    if (stylus) _stylusSeen = true;
+    return stylus || !_stylusSeen;
+  }
+
+  void _onPanStart(Offset pos) {
     if (_tool == AnnotationTool.select) return;
 
-    final pos = details.localPosition;
     if (_tool == AnnotationTool.eraser) {
       _eraseAt(pos);
       return;
@@ -190,10 +199,9 @@ class _AnnotationOverlayState extends State<AnnotationOverlay> {
     });
   }
 
-  void _onPanUpdate(DragUpdateDetails details) {
+  void _onPanUpdate(Offset pos) {
     if (_tool == AnnotationTool.select) return;
 
-    final pos = details.localPosition;
     if (_tool == AnnotationTool.eraser) {
       _eraseAt(pos);
       return;
@@ -208,7 +216,7 @@ class _AnnotationOverlayState extends State<AnnotationOverlay> {
     }
   }
 
-  void _onPanEnd(DragEndDetails details) {
+  void _onPanEnd() {
     if (_tool == AnnotationTool.select) return;
     if (_currentStroke != null) {
       setState(() {
@@ -279,11 +287,19 @@ class _AnnotationOverlayState extends State<AnnotationOverlay> {
                       ),
                     ),
                   )
-                : GestureDetector(
+                : RawGestureDetector(
                     behavior: HitTestBehavior.opaque,
-                    onPanStart: _onPanStart,
-                    onPanUpdate: _onPanUpdate,
-                    onPanEnd: _onPanEnd,
+                    gestures: {
+                      StrokeGestureRecognizer:
+                          GestureRecognizerFactoryWithHandlers<StrokeGestureRecognizer>(
+                            StrokeGestureRecognizer.new,
+                            (r) => r
+                              ..acceptPointer = _acceptPointer
+                              ..onStart = _onPanStart
+                              ..onUpdate = _onPanUpdate
+                              ..onEnd = _onPanEnd,
+                          ),
+                    },
                     child: RepaintBoundary(
                       child: CustomPaint(
                         painter: AnnotationPainter(
@@ -480,7 +496,10 @@ class RuledLinesPainter extends CustomPainter {
   final Color lineColor;
   final double lineSpacing;
 
-  const RuledLinesPainter({required this.lineColor, this.lineSpacing = 32.0});
+  /// Vị trí dòng kẻ đầu tiên (mặc định = [lineSpacing]); đặt bằng chân chữ dòng 1 để chữ nằm trên dòng.
+  final double? firstLine;
+
+  const RuledLinesPainter({required this.lineColor, this.lineSpacing = 32.0, this.firstLine});
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -488,7 +507,7 @@ class RuledLinesPainter extends CustomPainter {
       ..color = lineColor
       ..strokeWidth = 1.0;
 
-    double y = lineSpacing;
+    double y = firstLine ?? lineSpacing;
     while (y < size.height) {
       canvas.drawLine(Offset(0, y), Offset(size.width, y), paint);
       y += lineSpacing;
@@ -497,7 +516,48 @@ class RuledLinesPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant RuledLinesPainter oldDelegate) =>
-      oldDelegate.lineColor != lineColor || oldDelegate.lineSpacing != lineSpacing;
+      oldDelegate.lineColor != lineColor ||
+      oldDelegate.lineSpacing != lineSpacing ||
+      oldDelegate.firstLine != firstLine;
+}
+
+/// Bắt nét vẽ NGAY khi chạm (không chờ ngưỡng kéo ~18px như Pan) và giành quyền với thanh cuộn.
+/// Nhờ vậy đầu nét, dấu chấm (i, j, .) không bị mất và trang không cuộn khi viết nét dọc.
+class StrokeGestureRecognizer extends OneSequenceGestureRecognizer {
+  StrokeGestureRecognizer({super.debugOwner});
+
+  bool Function(PointerDownEvent event) acceptPointer = _always;
+  ValueChanged<Offset>? onStart;
+  ValueChanged<Offset>? onUpdate;
+  VoidCallback? onEnd;
+
+  static bool _always(PointerDownEvent _) => true;
+
+  @override
+  bool isPointerAllowed(PointerDownEvent event) => super.isPointerAllowed(event) && acceptPointer(event);
+
+  @override
+  void addAllowedPointer(PointerDownEvent event) {
+    startTrackingPointer(event.pointer, event.transform);
+    resolve(GestureDisposition.accepted);
+    onStart?.call(event.localPosition);
+  }
+
+  @override
+  void handleEvent(PointerEvent event) {
+    if (event is PointerMoveEvent) {
+      onUpdate?.call(event.localPosition);
+    } else if (event is PointerUpEvent || event is PointerCancelEvent) {
+      onEnd?.call();
+      stopTrackingPointer(event.pointer);
+    }
+  }
+
+  @override
+  void didStopTrackingLastPointer(int pointer) {}
+
+  @override
+  String get debugDescription => 'stroke';
 }
 
 /// Khung viết tay chép chính tả (Handwriting Notebook Pad) với dòng kẻ tập
@@ -526,6 +586,15 @@ class _HandwritingPadState extends State<HandwritingPad> {
   DrawStroke? _currentStroke;
   bool _isEraser = false;
 
+  /// Đã thấy Apple Pencil trên bảng → từ đó bỏ qua chạm bằng tay (lòng bàn tay tì lên màn hình).
+  bool _stylusSeen = false;
+
+  bool _acceptPointer(PointerDownEvent e) {
+    final stylus = e.kind == PointerDeviceKind.stylus || e.kind == PointerDeviceKind.invertedStylus;
+    if (stylus) _stylusSeen = true;
+    return stylus || !_stylusSeen;
+  }
+
   @override
   void initState() {
     super.initState();
@@ -544,8 +613,7 @@ class _HandwritingPadState extends State<HandwritingPad> {
     widget.onStrokesChanged?.call(List.unmodifiable(_strokes));
   }
 
-  void _onPanStart(DragStartDetails details) {
-    final pos = details.localPosition;
+  void _onPanStart(Offset pos) {
     if (_isEraser) {
       _eraseAt(pos);
       return;
@@ -559,8 +627,7 @@ class _HandwritingPadState extends State<HandwritingPad> {
     });
   }
 
-  void _onPanUpdate(DragUpdateDetails details) {
-    final pos = details.localPosition;
+  void _onPanUpdate(Offset pos) {
     if (_isEraser) {
       _eraseAt(pos);
       return;
@@ -574,7 +641,7 @@ class _HandwritingPadState extends State<HandwritingPad> {
     }
   }
 
-  void _onPanEnd(DragEndDetails details) {
+  void _onPanEnd() {
     if (_currentStroke != null) {
       setState(() {
         _strokes.add(_currentStroke!);
@@ -645,14 +712,18 @@ class _HandwritingPadState extends State<HandwritingPad> {
               children: [
                 Icon(Icons.edit_note_rounded, size: AppSizes.iconSm, color: colors.primary),
                 Gaps.h8,
-                Text(
-                  'Vở viết tay (Apple Pencil)',
-                  style: context.textStyles.labelSmall?.copyWith(
-                    fontWeight: FontWeight.w600,
-                    color: colors.primary,
+                // Co lại (…) trên màn hẹp để các nút bút/tẩy/hoàn tác luôn bấm được.
+                Expanded(
+                  child: Text(
+                    'Vở viết tay (Apple Pencil)',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: context.textStyles.labelSmall?.copyWith(
+                      fontWeight: FontWeight.w600,
+                      color: colors.primary,
+                    ),
                   ),
                 ),
-                const Spacer(),
                 if (widget.onReplay3s != null) ...[
                   OutlinedButton.icon(
                     style: OutlinedButton.styleFrom(
@@ -718,11 +789,19 @@ class _HandwritingPadState extends State<HandwritingPad> {
                   Positioned.fill(
                     child: IgnorePointer(
                       ignoring: !widget.enabled,
-                      child: GestureDetector(
+                      child: RawGestureDetector(
                         behavior: HitTestBehavior.opaque,
-                        onPanStart: _onPanStart,
-                        onPanUpdate: _onPanUpdate,
-                        onPanEnd: _onPanEnd,
+                        gestures: {
+                          StrokeGestureRecognizer:
+                              GestureRecognizerFactoryWithHandlers<StrokeGestureRecognizer>(
+                                StrokeGestureRecognizer.new,
+                                (r) => r
+                                  ..acceptPointer = _acceptPointer
+                                  ..onStart = _onPanStart
+                                  ..onUpdate = _onPanUpdate
+                                  ..onEnd = _onPanEnd,
+                              ),
+                        },
                         child: RepaintBoundary(
                           child: CustomPaint(
                             painter: AnnotationPainter(
