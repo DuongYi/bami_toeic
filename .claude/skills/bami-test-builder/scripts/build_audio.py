@@ -24,8 +24,14 @@ sys.path.insert(0, str(Path(__file__).parent))
 from _common import SPEAKER, load, save, split_listening_transcript, test_dir  # noqa: E402
 
 # Đổi khi cách dựng audio thay đổi → mọi file được tạo lại (manifest lưu hash kèm ENGINE).
-ENGINE = 'say-hq-2'
+ENGINE = 'say-hq-3'
 RATE = 165          # từ/phút – đề thật đọc chậm, rõ
+# Khoảng nghỉ (giây), gần với audio đề ETS: tách rõ từng phương án để người nghe kịp xử lý.
+GAP_OPTION_P1 = 1.8   # giữa (A) (B) (C) (D) Part 1
+GAP_AFTER_Q_P2 = 1.5  # sau câu hỏi Part 2, trước (A)
+GAP_OPTION_P2 = 1.6   # giữa các phương án Part 2
+GAP_TURN = 0.7        # giữa các lượt thoại Part 3 / câu Part 4
+GAP_INTRO = 1.5       # sau lời dẫn "Questions … refer to …"
 SAMPLE = 'LEI16@24000'
 TARGET_RMS = 3000   # mức âm lượng chung của mọi câu (int16)
 
@@ -58,12 +64,18 @@ def available_voices():
 
 
 def pools(voices):
-    """Giọng nam / nữ tốt nhất hiện có (chỉ lấy mức chất lượng cao nhất của từng giới)."""
+    """Giọng nam / nữ tốt nhất hiện có: mọi giọng Premium + Enhanced (thêm giọng vùng miền), không có thì mức cao nhất."""
     out = {}
     for g in ('m', 'f'):
         mine = {n: v for n, v in voices.items() if v[0] == g}
         best = max((v[2] for v in mine.values()), default=None)
-        out[g] = sorted(n for n, v in mine.items() if v[2] == best)
+        floor = min(best, 2) if best is not None else None
+        chosen = {}
+        for n, v in mine.items():  # mỗi giọng (Ava, Zoe…) chỉ giữ bản tốt nhất: Premium > Enhanced
+            base = n.split(' (')[0]
+            if floor is not None and v[2] >= floor and v[2] > chosen.get(base, (None, -1))[1]:
+                chosen[base] = (n, v[2])
+        out[g] = sorted(n for n, _ in chosen.values())
     return out
 
 
@@ -76,15 +88,15 @@ def script_for(g, gap=5.0):
     if part == 1:
         _, opts = split_listening_transcript(g.get('transcript'))
         s += [('narrator', f'Number {n0}.'), ('pause', 0.6),
-              ('narrator', f'Look at the picture marked number {n0} in your test book.'), ('pause', 1.0)]
+              ('narrator', f'Look at the picture marked number {n0} in your test book.'), ('pause', GAP_INTRO)]
         for c in sorted(opts):
-            s += [('speaker', f'{c}. {opts[c]}'), ('pause', 1.0)]
+            s += [('speaker', f'{c}. {opts[c]}'), ('pause', GAP_OPTION_P1)]
         s.append(('pause', gap))
     elif part == 2:
         head, opts = split_listening_transcript(g.get('transcript'))
-        s += [('narrator', f'Number {n0}.'), ('pause', 0.6), ('asker', head), ('pause', 1.0)]
+        s += [('narrator', f'Number {n0}.'), ('pause', 0.6), ('asker', head), ('pause', GAP_AFTER_Q_P2)]
         for c in sorted(opts):
-            s += [('responder', f'{c}. {opts[c]}'), ('pause', 0.8)]
+            s += [('responder', f'{c}. {opts[c]}'), ('pause', GAP_OPTION_P2)]
         s.append(('pause', gap))
     else:
         lines = [l.strip() for l in (g.get('transcript') or '').splitlines() if l.strip()]
@@ -95,10 +107,10 @@ def script_for(g, gap=5.0):
             intro += ' with three speakers'
         if g.get('image'):
             intro += ' and graphic'
-        s += [('narrator', intro + '.'), ('pause', 1.2)]
+        s += [('narrator', intro + '.'), ('pause', GAP_INTRO)]
         for l in lines:
             m = SPEAKER.match(l)
-            s += [(m.group(1).lower(), m.group(2)) if m else ('speaker', l), ('pause', 0.5)]
+            s += [(m.group(1).lower(), m.group(2)) if m else ('speaker', l), ('pause', GAP_TURN)]
         s.append(('pause', 1.0))
         for q in qs:
             content = q.get('content') or ''
