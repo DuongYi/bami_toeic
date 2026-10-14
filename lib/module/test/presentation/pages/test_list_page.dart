@@ -280,12 +280,28 @@ class _OverviewHero extends ConsumerWidget {
                               color: fg.withValues(alpha: 0.18),
                               borderRadius: AppRadius.brFull,
                             ),
-                            child: Text(
-                              '🎧 ${prediction.listening} · 📖 ${prediction.reading}',
-                              style: context.textStyles.labelSmall?.copyWith(
-                                color: fg,
-                                fontWeight: FontWeight.w600,
-                              ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                for (final (icon, value, name) in [
+                                  (Icons.headphones_rounded, prediction.listening, 'Nghe'),
+                                  (Icons.menu_book_rounded, prediction.reading, 'Đọc'),
+                                ]) ...[
+                                  if (name == 'Đọc') Gaps.h8,
+                                  Semantics(
+                                    label: '$name $value',
+                                    excludeSemantics: true,
+                                    child: IconLabel(
+                                      icon: icon,
+                                      label: '$value',
+                                      color: fg,
+                                      style: context.textStyles.labelSmall?.copyWith(
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ],
                             ),
                           ),
                       ],

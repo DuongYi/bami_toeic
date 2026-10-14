@@ -20,7 +20,7 @@ class DsGalleryPage extends StatelessWidget {
           _Section('Card · Badge · Progress', _CardsDemo()),
           _Section('StatTile · NumberCell', _NumbersDemo()),
           _Section('Hero · ScoreRing · StatCard', _HeroDemo()),
-          _Section('ChoiceCard · IconBadge · AppListGroup', _ChoiceDemo()),
+          _Section('ChoiceCard · IconBadge · IconLabel · AppListGroup', _ChoiceDemo()),
           _Section('Trạng thái màn hình', _StatesDemo()),
           _Section('Phản hồi (dialog, snackbar, sheet)', _FeedbackDemo()),
           _Section(
@@ -395,6 +395,14 @@ class _ChoiceDemoState extends State<_ChoiceDemo> {
           subtitle: 'Chọn nhiều',
           selected: _b,
           onTap: () => setState(() => _b = !_b),
+        ),
+        Gaps.v12,
+        const Wrap(
+          spacing: AppSpacing.s12,
+          children: [
+            IconLabel(icon: Icons.schedule_rounded, label: '120 phút'),
+            IconLabel(icon: Icons.quiz_outlined, label: '200 câu'),
+          ],
         ),
         Gaps.v12,
         const AppListGroup(

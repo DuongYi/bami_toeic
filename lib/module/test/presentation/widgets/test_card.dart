@@ -92,19 +92,13 @@ class TestCard extends StatelessWidget {
                       spacing: AppSpacing.s12,
                       runSpacing: AppSpacing.s4,
                       children: [
-                        Text(
-                          '⏱ ${test.examMinutes} phút',
-                          style: context.textStyles.bodySmall?.copyWith(
-                            color: context.colors.onSurfaceVariant,
-                            fontWeight: FontWeight.w500,
-                          ),
+                        IconLabel(
+                          icon: Icons.schedule_rounded,
+                          label: '${test.examMinutes} phút',
                         ),
-                        Text(
-                          '📝 ${test.questionCount} câu',
-                          style: context.textStyles.bodySmall?.copyWith(
-                            color: context.colors.onSurfaceVariant,
-                            fontWeight: FontWeight.w500,
-                          ),
+                        IconLabel(
+                          icon: Icons.quiz_outlined,
+                          label: '${test.questionCount} câu',
                         ),
                       ],
                     ),

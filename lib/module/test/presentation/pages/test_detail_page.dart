@@ -113,10 +113,11 @@ class _DetailBodyState extends ConsumerState<_DetailBody> {
                               width: 1,
                             ),
                           ),
-                          child: Text(
-                            '★ ${(s.source ?? 'Bami TOEIC').toUpperCase()}',
+                          child: IconLabel(
+                            icon: Icons.star_rounded,
+                            label: (s.source ?? 'Bami TOEIC').toUpperCase(),
+                            color: context.surfaces.onHero,
                             style: context.textStyles.labelSmall?.copyWith(
-                              color: context.surfaces.onHero,
                               fontWeight: FontWeight.w800,
                               letterSpacing: 0.5,
                             ),
@@ -154,10 +155,11 @@ class _DetailBodyState extends ConsumerState<_DetailBody> {
                               width: 1,
                             ),
                           ),
-                          child: Text(
-                            '⏱ ${s.examMinutes} phút',
+                          child: IconLabel(
+                            icon: Icons.schedule_rounded,
+                            label: '${s.examMinutes} phút',
+                            color: context.surfaces.onHero,
                             style: context.textStyles.labelSmall?.copyWith(
-                              color: context.surfaces.onHero,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -175,10 +177,11 @@ class _DetailBodyState extends ConsumerState<_DetailBody> {
                               width: 1,
                             ),
                           ),
-                          child: Text(
-                            '📝 ${s.questionCount} câu hỏi',
+                          child: IconLabel(
+                            icon: Icons.quiz_outlined,
+                            label: '${s.questionCount} câu hỏi',
+                            color: context.surfaces.onHero,
                             style: context.textStyles.labelSmall?.copyWith(
-                              color: context.surfaces.onHero,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -196,10 +199,11 @@ class _DetailBodyState extends ConsumerState<_DetailBody> {
                               width: 1,
                             ),
                           ),
-                          child: Text(
-                            '📚 ${parts.length} Part đầy đủ',
+                          child: IconLabel(
+                            icon: Icons.layers_outlined,
+                            label: '${parts.length} Part đầy đủ',
+                            color: context.surfaces.onHero,
                             style: context.textStyles.labelSmall?.copyWith(
-                              color: context.surfaces.onHero,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -504,7 +508,7 @@ class _OfflineTile extends ConsumerWidget {
             leading: const IconBadge(icon: Icons.offline_pin_rounded, tone: AppTone.success),
             title: const Text('Đã tải về máy'),
             subtitle: Text(
-              '${(entry.bytes / 1024 / 1024).toStringAsFixed(1)} MB · ${Fmt.date(entry.savedAt)}',
+              '${Fmt.bytes(entry.bytes)} · ${Fmt.date(entry.savedAt)}',
             ),
             trailing: IconButton(
               tooltip: 'Xoá bản offline',

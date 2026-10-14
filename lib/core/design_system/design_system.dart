@@ -22,6 +22,7 @@ export 'components/choice_card.dart';
 export 'components/coin_badge.dart';
 export 'components/daily_mission_card.dart';
 export 'components/icon_badge.dart';
+export 'components/icon_label.dart';
 export 'components/number_cell.dart';
 export 'components/pro_badge.dart';
 export 'components/score_ring.dart';
