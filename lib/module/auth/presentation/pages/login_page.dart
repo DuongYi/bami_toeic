@@ -6,6 +6,8 @@ import 'package:go_router/go_router.dart';
 import '../../../../core/design_system/design_system.dart';
 import '../../../../core/network/app_exception.dart';
 import '../../../../routes/app_router.dart';
+import '../../../../core/biometric/biometric_auth.dart';
+import '../controllers/biometric_login_controller.dart';
 import '../controllers/login_controller.dart';
 
 final _emailPattern = RegExp(r'^[^@\s]+@[^@\s]+\.[^@\s]+$');
@@ -24,6 +26,9 @@ class _LoginPageState extends ConsumerState<LoginPage> {
   final _passwordFocus = FocusNode();
   bool _obscure = true;
   bool _submitted = false;
+
+  /// Tick "Đăng nhập bằng Face ID lần sau" (chỉ hiện khi máy có sinh trắc và chưa bật).
+  bool _enableBiometric = false;
 
   /// false = đăng nhập, true = tạo tài khoản.
   bool _register = false;
@@ -49,7 +54,12 @@ class _LoginPageState extends ConsumerState<LoginPage> {
     final controller = ref.read(loginControllerProvider.notifier);
     if (!_register) {
       setState(() => _pendingConfirm = null);
-      return controller.submit(email: email, password: _password.text);
+      final status = ref.read(biometricLoginProvider).value;
+      return controller.submit(
+        email: email,
+        password: _password.text,
+        enableBiometric: _enableBiometric && status != null && status.available,
+      );
     }
     final needsConfirm = await controller.register(email: email, password: _password.text);
     if (needsConfirm && mounted) {
@@ -60,6 +70,12 @@ class _LoginPageState extends ConsumerState<LoginPage> {
         _submitted = false;
       });
     }
+  }
+
+  void _submitBiometric() {
+    FocusScope.of(context).unfocus();
+    setState(() => _pendingConfirm = null);
+    ref.read(loginControllerProvider.notifier).submitBiometric();
   }
 
   void _toggleMode() {
@@ -90,6 +106,11 @@ class _LoginPageState extends ConsumerState<LoginPage> {
     final login = ref.watch(loginControllerProvider);
     final loading = login.isLoading;
     final error = login.hasError ? AppException.from(login.error!).message : null;
+    final biometric = ref.watch(biometricLoginProvider).value ?? const BiometricStatus();
+    final biometricIcon = switch (biometric.kind) {
+      BiometricKind.faceId || BiometricKind.face => Icons.face_rounded,
+      _ => Icons.fingerprint_rounded,
+    };
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light,
@@ -208,6 +229,18 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                                   child: const Text('Quên mật khẩu?'),
                                 ),
                               ),
+                            if (!_register && biometric.available && !biometric.enabled)
+                              CheckboxListTile(
+                                value: _enableBiometric,
+                                onChanged: loading
+                                    ? null
+                                    : (v) => setState(() => _enableBiometric = v ?? false),
+                                controlAffinity: ListTileControlAffinity.leading,
+                                contentPadding: EdgeInsets.zero,
+                                dense: true,
+                                title: Text('Đăng nhập bằng ${biometric.label} lần sau'),
+                                subtitle: const Text('Mật khẩu được lưu an toàn trong máy'),
+                              ),
                             Gaps.v12,
                             AppPrimaryButton(
                               label: _register ? 'Tạo tài khoản' : 'Đăng nhập',
@@ -215,6 +248,22 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                               loading: loading,
                               onPressed: _submit,
                             ),
+                            if (!_register && biometric.enabled) ...[
+                              Gaps.v12,
+                              FilledButton.tonalIcon(
+                                onPressed: loading ? null : _submitBiometric,
+                                icon: Icon(biometricIcon),
+                                label: Text('Đăng nhập bằng ${biometric.label}'),
+                              ),
+                              Gaps.v4,
+                              Text(
+                                biometric.email!,
+                                textAlign: TextAlign.center,
+                                style: context.textStyles.bodySmall?.copyWith(
+                                  color: context.colors.onSurfaceVariant,
+                                ),
+                              ),
+                            ],
                             Gaps.v16,
                             OutlinedButton(
                               onPressed: loading ? null : _toggleMode,

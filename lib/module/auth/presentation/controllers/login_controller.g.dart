@@ -36,7 +36,7 @@ final class LoginControllerProvider
   LoginController create() => LoginController();
 }
 
-String _$loginControllerHash() => r'd9b43d94ef3263108d89d96896d7c96b7ac60f1b';
+String _$loginControllerHash() => r'850e90a1aa6506412fc5354cd6beb3780fc2a251';
 
 /// Trạng thái gửi form đăng nhập (loading / lỗi).
 

@@ -6,6 +6,8 @@
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Dùng Face ID để đăng nhập Bami TOEIC nhanh, không cần nhập mật khẩu.</string>
 	<key>CFBundleDisplayName</key>
 	<string>Bami Toeic</string>
 	<key>CFBundleExecutable</key>

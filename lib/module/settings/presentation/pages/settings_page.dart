@@ -9,6 +9,8 @@ import '../../../../core/notifications/reminder_service.dart';
 import '../../../../core/tts/tts_service.dart';
 import '../../../../routes/app_router.dart';
 import '../../../auth/presentation/controllers/auth_controller.dart';
+import '../../../auth/presentation/controllers/biometric_login_controller.dart';
+import '../../../auth/presentation/widgets/biometric_enable_sheet.dart';
 import '../../../goals/data/study_store.dart';
 import '../../../goals/presentation/widgets/goal_sheet.dart';
 import '../../../leaderboard/data/models/leaderboard_models.dart';
@@ -20,15 +22,32 @@ class SettingsPage extends ConsumerWidget {
   const SettingsPage({super.key});
 
   Future<void> _signOut(BuildContext context, WidgetRef ref) async {
+    final biometric = ref.read(biometricLoginProvider).value;
     final ok = await showAppConfirmDialog(
       context,
       title: 'Đăng xuất?',
-      message: 'Bạn sẽ cần nhập lại email và mật khẩu để tiếp tục học.',
+      message: biometric != null && biometric.enabled
+          ? 'Lần sau đăng nhập lại nhanh bằng ${biometric.label}.'
+          : 'Bạn sẽ cần nhập lại email và mật khẩu để tiếp tục học.',
       confirmLabel: 'Đăng xuất',
       destructive: true,
     );
     if (!ok || !context.mounted) return;
     await ref.read(authControllerProvider.notifier).signOut();
+  }
+
+  Future<void> _toggleBiometric(BuildContext context, WidgetRef ref, BiometricStatus status, bool on) async {
+    if (!on) {
+      await ref.read(biometricLoginProvider.notifier).disable();
+      if (context.mounted) {
+        showAppSnackBar(context, 'Đã tắt đăng nhập bằng ${status.label} và xoá mật khẩu đã lưu');
+      }
+      return;
+    }
+    final enabled = await showBiometricEnableSheet(context, status);
+    if (enabled && context.mounted) {
+      showAppSnackBar(context, 'Đã bật đăng nhập bằng ${status.label}', tone: AppTone.success);
+    }
   }
 
   Future<void> _deleteAccount(BuildContext context, WidgetRef ref) async {
@@ -112,6 +131,7 @@ class SettingsPage extends ConsumerWidget {
     final ttsSpeed = ref.watch(ttsSpeedProvider);
     final autoPlay = ref.watch(autoPlayAudioProvider);
     final lbProfile = ref.watch(myLeaderboardProfileProvider).value;
+    final biometric = ref.watch(biometricLoginProvider).value;
 
     return Scaffold(
       appBar: AppBar(
@@ -426,6 +446,17 @@ class SettingsPage extends ConsumerWidget {
               ),
               AppListGroup(
                 children: [
+                  if (biometric != null && biometric.available)
+                    SwitchListTile(
+                      secondary: const IconBadge(
+                        icon: Icons.fingerprint_rounded,
+                        tone: AppTone.info,
+                      ),
+                      title: Text('Đăng nhập bằng ${biometric.label}'),
+                      subtitle: const Text('Không cần nhập mật khẩu khi đăng nhập lại'),
+                      value: biometric.enabled,
+                      onChanged: (v) => _toggleBiometric(context, ref, biometric, v),
+                    ),
                   ListTile(
                     leading: const IconBadge(
                       icon: Icons.logout_rounded,

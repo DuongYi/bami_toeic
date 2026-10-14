@@ -36,7 +36,7 @@ final class AuthControllerProvider
   AuthController create() => AuthController();
 }
 
-String _$authControllerHash() => r'33af536cdcf6dc924abcbfd5a9b309574477a719';
+String _$authControllerHash() => r'df534558cdcca370275d3df04d45164787bcfffd';
 
 /// Nguồn sự thật duy nhất về trạng thái đăng nhập. `null` = chưa đăng nhập.
 
