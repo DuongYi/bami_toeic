@@ -28,7 +28,7 @@ void main() {
     final testDir = 'content/tests/quick15_test0$i';
     final testFile = File('$testDir/test.json');
     if (!testFile.existsSync()) {
-      print('File not found: ${testFile.path}');
+      stdout.writeln('File not found: ${testFile.path}');
       continue;
     }
 
@@ -120,5 +120,5 @@ void main() {
   buffer.writeln("ORDER BY t.title;");
 
   File('supabase/seed_quick15_tests.sql').writeAsStringSync(buffer.toString());
-  print('✅ Generated supabase/seed_quick15_tests.sql successfully!');
+  stdout.writeln('✅ Generated supabase/seed_quick15_tests.sql successfully!');
 }

@@ -19,7 +19,7 @@ class MiniTestData {
 }
 
 void main() async {
-  print('🚀 Bắt đầu tạo 5 bộ đề Mini Test (25 câu, đủ Part 1 - 7)...');
+  stdout.writeln('🚀 Bắt đầu tạo 5 bộ đề Mini Test (25 câu, đủ Part 1 - 7)...');
 
   final tests = [
     _buildMiniTest01(),
@@ -45,7 +45,7 @@ void main() async {
     };
     final jsonFile = File('${dir.path}/test.json');
     jsonFile.writeAsStringSync(const JsonEncoder.withIndent('  ').convert(testJson));
-    print('  ✓ Đã ghi: ${jsonFile.path}');
+    stdout.writeln('  ✓ Đã ghi: ${jsonFile.path}');
 
     // 2. Tạo hình ảnh Part 1 và audio Part 1 - 4
     for (final g in t.groups) {
@@ -81,7 +81,7 @@ void main() async {
   // 3. Tạo file master SQL cho Supabase SQL Editor
   _generateSqlSeed(tests);
 
-  print('🎉 Hoàn tất tạo 5 bộ đề Mini Test 25 câu!');
+  stdout.writeln('🎉 Hoàn tất tạo 5 bộ đề Mini Test 25 câu!');
 }
 
 void _generateSqlSeed(List<MiniTestData> tests) {
@@ -180,7 +180,7 @@ void _generateSqlSeed(List<MiniTestData> tests) {
   buffer.writeln("ORDER BY t.title;");
 
   File('supabase/seed_mini_tests.sql').writeAsStringSync(buffer.toString());
-  print('  ✓ Đã sinh master SQL: supabase/seed_mini_tests.sql');
+  stdout.writeln('  ✓ Đã sinh master SQL: supabase/seed_mini_tests.sql');
 }
 
 String _escape(String text) => text.replaceAll("'", "''");
