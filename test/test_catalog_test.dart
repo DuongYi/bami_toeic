@@ -49,6 +49,17 @@ void main() {
     expect(collectionOf(_t('ETS 2025', 'ETS 2025 – Test 1', 200)).id, 'ets-2025');
   });
 
+  test('cột collection gán sẵn được ưu tiên', () {
+    TestSummary withCol(String col, {String title = 'Đề X', String source = 'Bami TOEIC'}) =>
+        TestSummary(id: col, title: title, source: source, questionCount: 30, collection: col);
+    expect(collectionOf(withCol('part-6', title: 'Luyện Part 5 · Đề 09')).id, 'part-6');
+    expect(collectionOf(withCol('ets-2025')).title, 'ETS 2025');
+    expect(collectionOf(withCol('quick-15')).kind, CollectionKind.quick);
+    final custom = collectionOf(withCol('toeic-speaking'));
+    expect(custom.id, 'toeic-speaking');
+    expect(custom.kind, CollectionKind.other);
+  });
+
   test('tiến độ: đề làm dở được ưu tiên, rồi đề chưa làm đầu tiên', () {
     final set = groupTests(tests).first.tests; // ETS 2026: Test 1, 2, 9, 10
     Attempt done(String id, int l, int r) => Attempt(

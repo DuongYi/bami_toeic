@@ -50,6 +50,37 @@ class TestCollection {
 /// Bộ đề của một đề, suy ra từ `source` + `title` (giữ cố định khi import thêm đề cùng loại).
 /// Bộ ETS mới (vd. "ETS 2025") tự thành bộ riêng, năm mới đứng trước.
 TestCollection collectionOf(TestSummary t) {
+  final explicit = t.collection;
+  if (explicit != null && explicit.isNotEmpty) return _byId(explicit) ?? _derive(t);
+  return _derive(t);
+}
+
+/// Bộ đề theo khoá gán sẵn ở cột `tests.collection`. Khoá lạ → bộ riêng mang đúng tên khoá.
+TestCollection? _byId(String id) {
+  final ets = RegExp(r'^ets-(\d{4})$').firstMatch(id);
+  if (ets != null) return _derive(TestSummary(id: '', title: '', source: 'ETS ${ets.group(1)}'));
+  final known = _derive(TestSummary(id: '', title: _sampleTitle[id] ?? '', source: _sampleSource[id]));
+  if (known.id == id) return known;
+  return TestCollection(
+    id: id,
+    title: id,
+    subtitle: 'Bộ đề luyện thêm',
+    shelf: TestShelf.short,
+    kind: CollectionKind.other,
+    order: 25000,
+  );
+}
+
+// Tiêu đề / nguồn mẫu để dựng lại bộ đề cố định từ khoá (giữ một nơi định nghĩa trong _derive).
+const _sampleTitle = {
+  'listening': 'Luyện nghe',
+  'part-5': 'Luyện Part 5',
+  'part-6': 'Luyện Part 6',
+  'part-7': 'Luyện Part 7',
+};
+const _sampleSource = {'extreme': 'Extreme', 'quick-15': 'Quick', 'mini': 'Mini'};
+
+TestCollection _derive(TestSummary t) {
   final source = t.source ?? '';
   final title = t.title;
   final ets = RegExp(r'^ETS (\d{4})$').firstMatch(source);

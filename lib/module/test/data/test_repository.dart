@@ -43,8 +43,8 @@ class TestRepository {
     ];
   }
 
-  static const _testSelect =
-      'id,title,source,description,is_free,time_limit_minutes,question_total';
+  // `*` thay vì liệt kê cột: cột mới (vd. `collection`, migration 010) có thì đọc, chưa có cũng không lỗi.
+  static const _testSelect = '*,question_total';
   static const _attemptSelect = '*,tests(title,score_table)';
 
   /// Mất mạng → trả về các đề đã tải offline (nếu có).

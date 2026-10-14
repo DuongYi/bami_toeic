@@ -11,6 +11,7 @@
   "description": "…",
   "is_free": true,                      // tuỳ chọn: user chưa có PRO làm được (mặc định false = đề PRO)
   "time_limit_minutes": 15,             // tuỳ chọn: thời gian chế độ thi; bỏ trống = 120 phút × số câu / 200
+  "collection": "part-5",               // tuỳ chọn: bộ đề trên màn chủ (ets-2026, extreme, quick-15, mini, listening, part-5/6/7…); bỏ trống = app tự suy ra (cần migration 010)
   // tuỳ chọn: bảng quy đổi điểm của đề, mỗi dòng [minĐúng, maxĐúng, minĐiểm, maxĐiểm]
   "score_table": {"listening": [[96, 100, 475, 495], …], "reading": [[96, 100, 460, 495], …]},
   "groups": [                           // theo đúng thứ tự trong đề

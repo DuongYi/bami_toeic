@@ -89,6 +89,8 @@ Future<void> main(List<String> args) async {
         // Không gửi = đề PRO (mặc định của bảng). --replace tạo lại dòng nên phải gửi lại mỗi lần.
         'is_free': data['is_free'] == true,
         if (data['time_limit_minutes'] != null) 'time_limit_minutes': data['time_limit_minutes'],
+        // Bộ đề trên màn chủ (cột của migration 010); bỏ trống thì app tự suy ra từ source + title.
+        if (data['collection'] != null) 'collection': data['collection'],
       })
       .select('id')
       .single();
@@ -141,6 +143,10 @@ void _validate(Map<String, dynamic> data, List<Map<String, dynamic>> groups) {
   final limit = data['time_limit_minutes'];
   if (limit != null && (limit is! int || limit < 1 || limit > 240)) {
     _fail('"time_limit_minutes" phải là số phút 1–240');
+  }
+  final collection = data['collection'];
+  if (collection != null && (collection is! String || !RegExp(r'^[a-z0-9-]+$').hasMatch(collection))) {
+    _fail('"collection" chỉ gồm chữ thường, số, gạch ngang (vd. "ets-2024", "part-5")');
   }
   final numbers = <int>{};
   for (final g in groups) {

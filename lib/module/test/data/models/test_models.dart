@@ -27,6 +27,9 @@ abstract class TestSummary with _$TestSummary {
 
     /// Thời gian chế độ thi của cả đề (phút); null = 120 phút × số câu / 200.
     int? timeLimitMinutes,
+
+    /// Khoá bộ đề ('ets-2026', 'part-5'…); null = suy ra từ source + title (test_catalog.dart).
+    String? collection,
   }) = _TestSummary;
 
   factory TestSummary.fromJson(Map<String, dynamic> json) => _$TestSummaryFromJson(json);

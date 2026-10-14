@@ -44,6 +44,7 @@ _TestSummary _$TestSummaryFromJson(Map<String, dynamic> json) => _TestSummary(
       : _readCount(json['question_total']),
   isFree: json['is_free'] as bool? ?? false,
   timeLimitMinutes: (json['time_limit_minutes'] as num?)?.toInt(),
+  collection: json['collection'] as String?,
 );
 
 Map<String, dynamic> _$TestSummaryToJson(_TestSummary instance) =>
@@ -54,6 +55,7 @@ Map<String, dynamic> _$TestSummaryToJson(_TestSummary instance) =>
       'description': instance.description,
       'is_free': instance.isFree,
       'time_limit_minutes': instance.timeLimitMinutes,
+      'collection': instance.collection,
     };
 
 _Question _$QuestionFromJson(Map<String, dynamic> json) => _Question(

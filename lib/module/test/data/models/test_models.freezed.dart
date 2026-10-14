@@ -19,7 +19,8 @@ mixin _$TestSummary {
  String get id; String get title; String? get source; String? get description;/// Cột tính toán `question_total` (đếm được cả khi đề bị khoá với user free).
 @JsonKey(name: 'question_total', fromJson: _readCount, includeToJson: false) int get questionCount;/// Đề miễn phí: user chưa có PRO vẫn làm được.
  bool get isFree;/// Thời gian chế độ thi của cả đề (phút); null = 120 phút × số câu / 200.
- int? get timeLimitMinutes;
+ int? get timeLimitMinutes;/// Khoá bộ đề ('ets-2026', 'part-5'…); null = suy ra từ source + title (test_catalog.dart).
+ String? get collection;
 /// Create a copy of TestSummary
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -33,20 +34,20 @@ $TestSummaryCopyWith<TestSummary> get copyWith => _$TestSummaryCopyWithImpl<Test
 @override
 bool operator ==(Object other) {
   final _this = this as TestSummary;
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is TestSummary&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.title, _this.title) || other.title == _this.title)&&(identical(other.source, _this.source) || other.source == _this.source)&&(identical(other.description, _this.description) || other.description == _this.description)&&(identical(other.questionCount, _this.questionCount) || other.questionCount == _this.questionCount)&&(identical(other.isFree, _this.isFree) || other.isFree == _this.isFree)&&(identical(other.timeLimitMinutes, _this.timeLimitMinutes) || other.timeLimitMinutes == _this.timeLimitMinutes));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is TestSummary&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.title, _this.title) || other.title == _this.title)&&(identical(other.source, _this.source) || other.source == _this.source)&&(identical(other.description, _this.description) || other.description == _this.description)&&(identical(other.questionCount, _this.questionCount) || other.questionCount == _this.questionCount)&&(identical(other.isFree, _this.isFree) || other.isFree == _this.isFree)&&(identical(other.timeLimitMinutes, _this.timeLimitMinutes) || other.timeLimitMinutes == _this.timeLimitMinutes)&&(identical(other.collection, _this.collection) || other.collection == _this.collection));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
   final _this = this as TestSummary;
-  return Object.hash(runtimeType,_this.id,_this.title,_this.source,_this.description,_this.questionCount,_this.isFree,_this.timeLimitMinutes);
+  return Object.hash(runtimeType,_this.id,_this.title,_this.source,_this.description,_this.questionCount,_this.isFree,_this.timeLimitMinutes,_this.collection);
 }
 
 @override
 String toString() {
   final _this = this as TestSummary;
-  return 'TestSummary(id: ${_this.id}, title: ${_this.title}, source: ${_this.source}, description: ${_this.description}, questionCount: ${_this.questionCount}, isFree: ${_this.isFree}, timeLimitMinutes: ${_this.timeLimitMinutes})';
+  return 'TestSummary(id: ${_this.id}, title: ${_this.title}, source: ${_this.source}, description: ${_this.description}, questionCount: ${_this.questionCount}, isFree: ${_this.isFree}, timeLimitMinutes: ${_this.timeLimitMinutes}, collection: ${_this.collection})';
 }
 
 
@@ -57,7 +58,7 @@ abstract mixin class $TestSummaryCopyWith<$Res>  {
   factory $TestSummaryCopyWith(TestSummary value, $Res Function(TestSummary) _then) = _$TestSummaryCopyWithImpl;
 @useResult
 $Res call({
- String id, String title, String? source, String? description,@JsonKey(name: 'question_total', fromJson: _readCount, includeToJson: false) int questionCount, bool isFree, int? timeLimitMinutes
+ String id, String title, String? source, String? description,@JsonKey(name: 'question_total', fromJson: _readCount, includeToJson: false) int questionCount, bool isFree, int? timeLimitMinutes, String? collection
 });
 
 
@@ -74,7 +75,7 @@ class _$TestSummaryCopyWithImpl<$Res>
 
 /// Create a copy of TestSummary
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? title = null,Object? source = freezed,Object? description = freezed,Object? questionCount = null,Object? isFree = null,Object? timeLimitMinutes = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? title = null,Object? source = freezed,Object? description = freezed,Object? questionCount = null,Object? isFree = null,Object? timeLimitMinutes = freezed,Object? collection = freezed,}) {
   return _then(TestSummary(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
@@ -83,7 +84,8 @@ as String?,description: freezed == description ? _self.description : description
 as String?,questionCount: null == questionCount ? _self.questionCount : questionCount // ignore: cast_nullable_to_non_nullable
 as int,isFree: null == isFree ? _self.isFree : isFree // ignore: cast_nullable_to_non_nullable
 as bool,timeLimitMinutes: freezed == timeLimitMinutes ? _self.timeLimitMinutes : timeLimitMinutes // ignore: cast_nullable_to_non_nullable
-as int?,
+as int?,collection: freezed == collection ? _self.collection : collection // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 
@@ -168,10 +170,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String title,  String? source,  String? description, @JsonKey(name: 'question_total', fromJson: _readCount, includeToJson: false)  int questionCount,  bool isFree,  int? timeLimitMinutes)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String title,  String? source,  String? description, @JsonKey(name: 'question_total', fromJson: _readCount, includeToJson: false)  int questionCount,  bool isFree,  int? timeLimitMinutes,  String? collection)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _TestSummary() when $default != null:
-return $default(_that.id,_that.title,_that.source,_that.description,_that.questionCount,_that.isFree,_that.timeLimitMinutes);case _:
+return $default(_that.id,_that.title,_that.source,_that.description,_that.questionCount,_that.isFree,_that.timeLimitMinutes,_that.collection);case _:
   return orElse();
 
 }
@@ -189,10 +191,10 @@ return $default(_that.id,_that.title,_that.source,_that.description,_that.questi
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String title,  String? source,  String? description, @JsonKey(name: 'question_total', fromJson: _readCount, includeToJson: false)  int questionCount,  bool isFree,  int? timeLimitMinutes)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String title,  String? source,  String? description, @JsonKey(name: 'question_total', fromJson: _readCount, includeToJson: false)  int questionCount,  bool isFree,  int? timeLimitMinutes,  String? collection)  $default,) {final _that = this;
 switch (_that) {
 case _TestSummary():
-return $default(_that.id,_that.title,_that.source,_that.description,_that.questionCount,_that.isFree,_that.timeLimitMinutes);case _:
+return $default(_that.id,_that.title,_that.source,_that.description,_that.questionCount,_that.isFree,_that.timeLimitMinutes,_that.collection);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -209,10 +211,10 @@ return $default(_that.id,_that.title,_that.source,_that.description,_that.questi
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String title,  String? source,  String? description, @JsonKey(name: 'question_total', fromJson: _readCount, includeToJson: false)  int questionCount,  bool isFree,  int? timeLimitMinutes)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String title,  String? source,  String? description, @JsonKey(name: 'question_total', fromJson: _readCount, includeToJson: false)  int questionCount,  bool isFree,  int? timeLimitMinutes,  String? collection)?  $default,) {final _that = this;
 switch (_that) {
 case _TestSummary() when $default != null:
-return $default(_that.id,_that.title,_that.source,_that.description,_that.questionCount,_that.isFree,_that.timeLimitMinutes);case _:
+return $default(_that.id,_that.title,_that.source,_that.description,_that.questionCount,_that.isFree,_that.timeLimitMinutes,_that.collection);case _:
   return null;
 
 }
@@ -224,7 +226,7 @@ return $default(_that.id,_that.title,_that.source,_that.description,_that.questi
 @JsonSerializable()
 
 class _TestSummary extends TestSummary {
-  const _TestSummary({required this.id, required this.title, this.source, this.description, @JsonKey(name: 'question_total', fromJson: _readCount, includeToJson: false) this.questionCount = 0, this.isFree = false, this.timeLimitMinutes}): super._();
+  const _TestSummary({required this.id, required this.title, this.source, this.description, @JsonKey(name: 'question_total', fromJson: _readCount, includeToJson: false) this.questionCount = 0, this.isFree = false, this.timeLimitMinutes, this.collection}): super._();
   factory _TestSummary.fromJson(Map<String, dynamic> json) => _$TestSummaryFromJson(json);
 
 @override final  String id;
@@ -237,6 +239,8 @@ class _TestSummary extends TestSummary {
 @override@JsonKey() final  bool isFree;
 /// Thời gian chế độ thi của cả đề (phút); null = 120 phút × số câu / 200.
 @override final  int? timeLimitMinutes;
+/// Khoá bộ đề ('ets-2026', 'part-5'…); null = suy ra từ source + title (test_catalog.dart).
+@override final  String? collection;
 
 /// Create a copy of TestSummary
 /// with the given fields replaced by the non-null parameter values.
@@ -251,18 +255,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _TestSummary&&(identical(other.id, id) || other.id == id)&&(identical(other.title, title) || other.title == title)&&(identical(other.source, source) || other.source == source)&&(identical(other.description, description) || other.description == description)&&(identical(other.questionCount, questionCount) || other.questionCount == questionCount)&&(identical(other.isFree, isFree) || other.isFree == isFree)&&(identical(other.timeLimitMinutes, timeLimitMinutes) || other.timeLimitMinutes == timeLimitMinutes));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _TestSummary&&(identical(other.id, id) || other.id == id)&&(identical(other.title, title) || other.title == title)&&(identical(other.source, source) || other.source == source)&&(identical(other.description, description) || other.description == description)&&(identical(other.questionCount, questionCount) || other.questionCount == questionCount)&&(identical(other.isFree, isFree) || other.isFree == isFree)&&(identical(other.timeLimitMinutes, timeLimitMinutes) || other.timeLimitMinutes == timeLimitMinutes)&&(identical(other.collection, collection) || other.collection == collection));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
-    return Object.hash(runtimeType,id,title,source,description,questionCount,isFree,timeLimitMinutes);
+    return Object.hash(runtimeType,id,title,source,description,questionCount,isFree,timeLimitMinutes,collection);
 }
 
 @override
 String toString() {
-    return 'TestSummary(id: $id, title: $title, source: $source, description: $description, questionCount: $questionCount, isFree: $isFree, timeLimitMinutes: $timeLimitMinutes)';
+    return 'TestSummary(id: $id, title: $title, source: $source, description: $description, questionCount: $questionCount, isFree: $isFree, timeLimitMinutes: $timeLimitMinutes, collection: $collection)';
 }
 
 
@@ -273,7 +277,7 @@ abstract mixin class _$TestSummaryCopyWith<$Res> implements $TestSummaryCopyWith
   factory _$TestSummaryCopyWith(_TestSummary value, $Res Function(_TestSummary) _then) = __$TestSummaryCopyWithImpl;
 @override @useResult
 $Res call({
- String id, String title, String? source, String? description,@JsonKey(name: 'question_total', fromJson: _readCount, includeToJson: false) int questionCount, bool isFree, int? timeLimitMinutes
+ String id, String title, String? source, String? description,@JsonKey(name: 'question_total', fromJson: _readCount, includeToJson: false) int questionCount, bool isFree, int? timeLimitMinutes, String? collection
 });
 
 
@@ -290,7 +294,7 @@ class __$TestSummaryCopyWithImpl<$Res>
 
 /// Create a copy of TestSummary
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? title = null,Object? source = freezed,Object? description = freezed,Object? questionCount = null,Object? isFree = null,Object? timeLimitMinutes = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? title = null,Object? source = freezed,Object? description = freezed,Object? questionCount = null,Object? isFree = null,Object? timeLimitMinutes = freezed,Object? collection = freezed,}) {
   return _then(_TestSummary(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
@@ -299,7 +303,8 @@ as String?,description: freezed == description ? _self.description : description
 as String?,questionCount: null == questionCount ? _self.questionCount : questionCount // ignore: cast_nullable_to_non_nullable
 as int,isFree: null == isFree ? _self.isFree : isFree // ignore: cast_nullable_to_non_nullable
 as bool,timeLimitMinutes: freezed == timeLimitMinutes ? _self.timeLimitMinutes : timeLimitMinutes // ignore: cast_nullable_to_non_nullable
-as int?,
+as int?,collection: freezed == collection ? _self.collection : collection // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 
