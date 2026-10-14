@@ -20,6 +20,8 @@ const topicLabels = {
   'Transportation': 'Giao thông',
   'Customer Service': 'Chăm sóc khách hàng',
   'General': 'Thông dụng',
+  'YBM LC 100': 'YBM · Từ vựng Nghe',
+  'YBM RC 200': 'YBM · Từ vựng Đọc',
   ownTopic: 'Sổ từ của tôi',
 };
 

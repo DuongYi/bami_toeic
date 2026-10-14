@@ -54,6 +54,8 @@ env.json
 content/raw/
 content/LISTENING/
 content/READING/
+content/ETS2024/
 # Đề ETS đã chuyển đổi (có bản quyền, nặng) – không commit
 content/tests/ets2026_*/
+content/tests/ets2024_*/
 test/goldens/failures/
