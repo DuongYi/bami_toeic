@@ -3,11 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../core/app_version.dart';
 import '../../../../core/design_system/design_system.dart';
+import '../../../../core/media/storage_cleaner.dart';
 import '../../../../core/network/app_exception.dart';
 import '../../../../core/notifications/reminder_service.dart';
 import '../../../../core/tts/tts_service.dart';
+import '../../../../helper/format.dart';
 import '../../../../routes/app_router.dart';
+import '../../../test/presentation/controllers/offline_controller.dart';
 import '../../../auth/presentation/controllers/auth_controller.dart';
 import '../../../auth/presentation/controllers/biometric_login_controller.dart';
 import '../../../auth/presentation/widgets/biometric_enable_sheet.dart';
@@ -47,6 +51,36 @@ class SettingsPage extends ConsumerWidget {
     final enabled = await showBiometricEnableSheet(context, status);
     if (enabled && context.mounted) {
       showAppSnackBar(context, 'Đã bật đăng nhập bằng ${status.label}', tone: AppTone.success);
+    }
+  }
+
+  Future<void> _clearCache(BuildContext context, WidgetRef ref) async {
+    final freed = await ref.read(storageCleanerProvider).clearCache();
+    ref.invalidate(storageUsageProvider);
+    if (context.mounted) {
+      showAppSnackBar(
+        context,
+        freed > 0 ? 'Đã giải phóng ${Fmt.bytes(freed)}' : 'Bộ nhớ đệm đã trống',
+        tone: AppTone.success,
+      );
+    }
+  }
+
+  Future<void> _clearOffline(BuildContext context, WidgetRef ref, StorageUsage usage) async {
+    final ok = await showAppConfirmDialog(
+      context,
+      title: 'Xoá ${usage.offlineTests} đề đã tải?',
+      message: 'Giải phóng ${Fmt.bytes(usage.offlineBytes)}. Khi có mạng, bạn tải lại được bất cứ lúc nào.',
+      confirmLabel: 'Xoá',
+      destructive: true,
+    );
+    if (!ok || !context.mounted) return;
+    final freed = await ref.read(storageCleanerProvider).clearOffline();
+    ref
+      ..invalidate(storageUsageProvider)
+      ..invalidate(offlineTestProvider);
+    if (context.mounted) {
+      showAppSnackBar(context, 'Đã xoá đề offline, giải phóng ${Fmt.bytes(freed)}', tone: AppTone.success);
     }
   }
 
@@ -132,6 +166,7 @@ class SettingsPage extends ConsumerWidget {
     final autoPlay = ref.watch(autoPlayAudioProvider);
     final lbProfile = ref.watch(myLeaderboardProfileProvider).value;
     final biometric = ref.watch(biometricLoginProvider).value;
+    final storage = ref.watch(storageUsageProvider).value;
 
     return Scaffold(
       appBar: AppBar(
@@ -380,16 +415,31 @@ class SettingsPage extends ConsumerWidget {
                       icon: Icons.cleaning_services_outlined,
                       tone: AppTone.neutral,
                     ),
-                    title: const Text('Dọn dẹp bộ nhớ đệm'),
-                    subtitle: const Text('Giải phóng dung lượng ảnh và audio tạm thời'),
+                    title: const Text('Dọn bộ nhớ đệm'),
+                    subtitle: Text(switch (storage) {
+                      null => 'Ảnh, audio và file tạm',
+                      final u => 'Ảnh, audio và file tạm · ${Fmt.bytes(u.cacheBytes)}',
+                    }),
                     trailing: const Icon(Icons.chevron_right_rounded),
-                    onTap: () {
-                      showAppSnackBar(
-                        context,
-                        'Đã dọn dẹp bộ nhớ đệm an toàn',
-                        tone: AppTone.success,
-                      );
-                    },
+                    onTap: () => _clearCache(context, ref),
+                  ),
+                  ListTile(
+                    leading: const IconBadge(
+                      icon: Icons.download_done_rounded,
+                      tone: AppTone.neutral,
+                    ),
+                    title: const Text('Đề đã tải offline'),
+                    subtitle: Text(switch (storage) {
+                      null => 'Đề lưu trên máy để làm khi mất mạng',
+                      StorageUsage(offlineTests: 0) => 'Chưa tải đề nào',
+                      final u => '${u.offlineTests} đề · ${Fmt.bytes(u.offlineBytes)}',
+                    }),
+                    trailing: storage == null || storage.offlineTests == 0
+                        ? null
+                        : TextButton(
+                            onPressed: () => _clearOffline(context, ref, storage),
+                            child: const Text('Xoá'),
+                          ),
                   ),
                 ],
               ),
@@ -408,7 +458,10 @@ class SettingsPage extends ConsumerWidget {
                     ),
                     title: const Text('Phiên bản Bami TOEIC'),
                     trailing: Text(
-                      'v1.0.0 (Build 3)',
+                      switch (ref.watch(appVersionProvider).value) {
+                        null => '',
+                        final v => 'v${v.version} (Build ${v.buildNumber})',
+                      },
                       style: context.textStyles.bodyMedium?.copyWith(
                         color: context.colors.onSurfaceVariant,
                       ),

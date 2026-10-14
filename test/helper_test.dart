@@ -1,3 +1,4 @@
+import 'package:bami_toeic/helper/format.dart';
 import 'package:bami_toeic/helper/dictation.dart';
 import 'package:bami_toeic/helper/score.dart';
 import 'package:bami_toeic/helper/srs.dart';
@@ -112,5 +113,12 @@ void main() {
       expect(r.correct, 4);
       expect(r.tokens.where((t) => !t.$2).map((t) => t.$1), ['the', 'being']);
     });
+  });
+
+  test('Fmt.bytes', () {
+    expect(Fmt.bytes(0), '0 KB');
+    expect(Fmt.bytes(340 * 1024), '340 KB');
+    expect(Fmt.bytes((12.3 * 1024 * 1024).round()), '12,3 MB');
+    expect(Fmt.bytes((1.2 * 1024 * 1024 * 1024).round()), '1,2 GB');
   });
 }

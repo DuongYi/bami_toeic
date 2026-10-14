@@ -16,4 +16,13 @@ abstract final class Fmt {
 
   /// 75%
   static String percent(double ratio) => '${(ratio * 100).round()}%';
+
+  /// 0 KB · 340 KB · 12,3 MB · 1,2 GB (dấu phẩy thập phân kiểu Việt).
+  static String bytes(int n) {
+    const kb = 1024, mb = kb * 1024, gb = mb * 1024;
+    String one(double v) => v.toStringAsFixed(1).replaceAll('.', ',');
+    if (n >= gb) return '${one(n / gb)} GB';
+    if (n >= mb) return '${one(n / mb)} MB';
+    return '${(n / kb).round()} KB';
+  }
 }
