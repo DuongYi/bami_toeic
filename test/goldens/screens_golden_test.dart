@@ -101,6 +101,22 @@ void main() {
     await _teardown(tester);
   });
 
+  testWidgets('Thư viện đề (màn chủ cuộn xuống)', (tester) async {
+    await _boot(tester);
+    await tester.scrollUntilVisible(find.text('Thư viện đề'), 300, scrollable: find.byType(Scrollable).first);
+    await tester.drag(find.byType(Scrollable).first, const Offset(0, -200));
+    await tester.pumpAndSettle();
+    await _shot(tester, '01b_test_library');
+    await _teardown(tester);
+  });
+
+  testWidgets('Trang bộ đề', (tester) async {
+    final c = await _boot(tester);
+    await _go(tester, c, Routes.testCollection('ets-2026'));
+    await _shot(tester, '01c_test_collection');
+    await _teardown(tester);
+  });
+
   testWidgets('Chi tiết đề', (tester) async {
     final c = await _boot(tester);
     await _go(tester, c, Routes.testDetail('t3'));

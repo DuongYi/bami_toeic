@@ -20,6 +20,7 @@ import '../module/shell/home_shell.dart';
 import '../module/test/presentation/controllers/test_taking_controller.dart';
 import '../module/test/presentation/pages/mistakes_page.dart';
 import '../module/test/presentation/pages/result_page.dart';
+import '../module/test/presentation/pages/test_collection_page.dart';
 import '../module/test/presentation/pages/test_detail_page.dart';
 import '../module/test/presentation/pages/test_list_page.dart';
 import '../module/test/presentation/pages/test_taking_page.dart';
@@ -58,6 +59,7 @@ abstract final class Routes {
       ? forgotPasswordPath
       : '$forgotPasswordPath?email=${Uri.encodeQueryComponent(email)}';
   static String testDetail(String id) => '/tests/$id';
+  static String testCollection(String id) => '/tests/set/$id';
   static String take(String testId, {required String mode, required List<int> parts}) =>
       '/take/$testId?mode=$mode&parts=${parts.join(',')}';
 
@@ -131,6 +133,11 @@ GoRouter router(Ref ref) {
                 path: Routes.tests,
                 builder: (_, _) => const TestListPage(),
                 routes: [
+                  // Khai báo trước ':id' để '/tests/set/…' không bị hiểu là id đề.
+                  GoRoute(
+                    path: 'set/:collection',
+                    builder: (_, s) => TestCollectionPage(collectionId: s.pathParameters['collection']!),
+                  ),
                   GoRoute(
                     path: ':id',
                     builder: (_, s) => TestDetailPage(testId: s.pathParameters['id']!),

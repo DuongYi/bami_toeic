@@ -54,6 +54,28 @@ final _tests = [
     questionCount: 12,
     isFree: true,
   ),
+  const TestSummary(id: 't4', title: 'ETS 2024 – Test 1', source: 'ETS 2024', questionCount: 200),
+  const TestSummary(
+    id: 't5',
+    title: 'Quick Test 15m - Đề 01',
+    source: 'Bami TOEIC - Quick 15m',
+    questionCount: 15,
+    isFree: true,
+    timeLimitMinutes: 15,
+  ),
+  const TestSummary(
+    id: 't6',
+    title: 'Luyện Part 5 · Band 450–600',
+    source: 'Bami TOEIC',
+    questionCount: 30,
+    isFree: true,
+  ),
+  const TestSummary(
+    id: 't7',
+    title: 'Luyện nghe Part 2–4 · Đề 01',
+    source: 'Bami TOEIC',
+    questionCount: 42,
+  ),
 ];
 
 Question _q(

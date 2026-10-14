@@ -9,15 +9,18 @@ import '../../../auth/presentation/controllers/auth_controller.dart';
 import '../../../dictionary/presentation/widgets/dictionary_sheet.dart';
 import '../../../goals/presentation/controllers/study_progress.dart';
 import '../../../goals/presentation/widgets/goal_sheet.dart';
+import '../../../plan/data/models/plan_models.dart';
 import '../../../plan/presentation/controllers/plan_controller.dart';
 import '../../../plan/presentation/widgets/pro_sheet.dart';
 import '../../../vocab/presentation/controllers/vocab_controller.dart';
 import '../../data/in_progress_store.dart';
 import '../../data/models/test_models.dart';
+import '../../data/test_catalog.dart';
 import '../controllers/test_providers.dart';
+import '../widgets/test_collection_card.dart';
 
 /// Màn chủ: lời chào kèm chuỗi học tập, thẻ dự đoán điểm TOEIC, nhiệm vụ ngày,
-/// bento lối tắt luyện tập và danh sách đề thi chuẩn hóa ETS.
+/// bento lối tắt luyện tập và thư viện đề chia theo bộ (ETS, rút gọn, luyện Part).
 class TestListPage extends ConsumerStatefulWidget {
   const TestListPage({super.key});
 
@@ -26,8 +29,6 @@ class TestListPage extends ConsumerStatefulWidget {
 }
 
 class _TestListPageState extends ConsumerState<TestListPage> {
-  String _filter = 'all';
-
   Future<void> _refresh() {
     ref
       ..invalidate(attemptsProvider)
@@ -55,12 +56,6 @@ class _TestListPageState extends ConsumerState<TestListPage> {
             loading: (_) => const TestListSkeleton(),
             onRetry: () => ref.invalidate(testListProvider),
             data: (list) {
-              final filtered = switch (_filter) {
-                'ets' => list.where((t) => t.questionCount >= 100).toList(),
-                'mini' => list.where((t) => t.questionCount < 100).toList(),
-                _ => list,
-              };
-
               return ListView(
                 // Chừa chỗ cho thanh tab nổi (nội dung cuộn chạy dưới thanh kính)
                 padding: AppInsets.screen.copyWith(
@@ -79,62 +74,12 @@ class _TestListPageState extends ConsumerState<TestListPage> {
                     Gaps.v8,
                   ],
                   Gaps.v16,
-                  SectionHeader(
-                    title: 'Đề thi ETS & Luyện tập',
-                    subtitle: 'Được biên soạn chuẩn theo format đề thi thật',
-                    trailing: Text(
-                      '${list.length} đề',
-                      style: context.textStyles.labelLarge?.copyWith(
-                        color: context.colors.onSurfaceVariant,
-                      ),
-                    ),
+                  _TestLibrary(
+                    tests: list,
+                    attempts: attempts,
+                    inProgress: inProgress,
+                    plan: plan,
                   ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        ChoiceChip(
-                          label: Text('Tất cả (${list.length})'),
-                          selected: _filter == 'all',
-                          onSelected: (_) => setState(() => _filter = 'all'),
-                        ),
-                        Gaps.h8,
-                        ChoiceChip(
-                          label: const Text('🔥 ETS 2026 Hot'),
-                          selected: _filter == 'ets',
-                          onSelected: (_) => setState(() => _filter = 'ets'),
-                        ),
-                        Gaps.h8,
-                        ChoiceChip(
-                          label: const Text('⚡️ Mini Test 15p'),
-                          selected: _filter == 'mini',
-                          onSelected: (_) => setState(() => _filter = 'mini'),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Gaps.v16,
-                  if (filtered.isEmpty)
-                    const AppCard(
-                      child: AppEmptyView(
-                        icon: Icons.inbox_outlined,
-                        message: 'Không tìm thấy đề thi phù hợp với bộ lọc.',
-                      ),
-                    )
-                  else
-                    for (final t in filtered) ...[
-                      _TestCard(
-                        test: t,
-                        lastAttempt: attempts
-                            .where(
-                              (a) => a.testId == t.id && !a.isMistakeReview,
-                            )
-                            .firstOrNull,
-                        inProgress: inProgress[t.id],
-                        locked: isTestLocked(t, plan),
-                      ),
-                      Gaps.v12,
-                    ],
                 ],
               );
             },
@@ -587,170 +532,147 @@ class _CommercialUpgradeBanner extends StatelessWidget {
   }
 }
 
-class _TestCard extends StatelessWidget {
-  const _TestCard({
-    required this.test,
-    this.lastAttempt,
-    this.inProgress,
-    this.locked = false,
+/// Thư viện đề: thẻ "Làm tiếp" (đề làm dở gần nhất) + các bộ đề chia theo nhóm, lưới 2 cột.
+class _TestLibrary extends StatelessWidget {
+  const _TestLibrary({
+    required this.tests,
+    required this.attempts,
+    required this.inProgress,
+    required this.plan,
   });
 
-  final TestSummary test;
-  final Attempt? lastAttempt;
-  final TakingSnapshot? inProgress;
-
-  /// Đề PRO, user chưa có PRO → chạm mở giới thiệu PRO.
-  final bool locked;
+  final List<TestSummary> tests;
+  final List<Attempt> attempts;
+  final Map<String, TakingSnapshot> inProgress;
+  final MyPlan? plan;
 
   @override
   Widget build(BuildContext context) {
-    final a = lastAttempt;
-    final done = a == null
-        ? null
-        : a.isFullTest
-        ? '${a.totalScore} điểm'
-        : '${a.correct}/${a.totalQuestions} đúng';
+    final entries = groupTests(tests);
+    final resume = inProgress.values
+        .where((s) => tests.any((t) => t.id == s.testId))
+        .fold<TakingSnapshot?>(
+          null,
+          (best, s) =>
+              best == null || s.savedAt.isAfter(best.savedAt) ? s : best,
+        );
 
-    final isFullTest = test.questionCount >= 100;
-
-    void open() =>
-        locked ? showProSheet(context) : context.go(Routes.testDetail(test.id));
-
-    return AppCard(
-      onTap: open,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                width: AppSizes.badgeLg,
-                height: AppSizes.badgeLg,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: isFullTest
-                        ? context.surfaces.hero
-                        : context.surfaces.cyan,
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                  borderRadius: AppRadius.brMd,
-                ),
-                child: Center(
-                  child: Icon(
-                    isFullTest ? Icons.menu_book_rounded : Icons.bolt_rounded,
-                    color: context.surfaces.onHero,
-                    size: AppSizes.iconMd,
-                  ),
-                ),
-              ),
-              Gaps.h12,
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Expanded(
-                          child: Text(
-                            test.title,
-                            style: context.textStyles.titleMedium?.copyWith(
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                        ),
-                        if (locked) const ProBadge(label: 'PRO', mini: true),
-                      ],
-                    ),
-                    Gaps.v4,
-                    Wrap(
-                      spacing: AppSpacing.s12,
-                      runSpacing: AppSpacing.s4,
-                      children: [
-                        Text(
-                          '⏱ ${test.examMinutes} phút',
-                          style: context.textStyles.bodySmall?.copyWith(
-                            color: context.colors.onSurfaceVariant,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Text(
-                          '📝 ${test.questionCount} câu',
-                          style: context.textStyles.bodySmall?.copyWith(
-                            color: context.colors.onSurfaceVariant,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ],
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        SectionHeader(
+          title: 'Thư viện đề',
+          subtitle: 'Chia theo bộ, làm lần lượt từ đề 1',
+          trailing: Text(
+            '${tests.length} đề',
+            style: context.textStyles.labelLarge?.copyWith(
+              color: context.colors.onSurfaceVariant,
+            ),
           ),
-          Gaps.v12,
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                child: Wrap(
-                  spacing: AppSpacing.s8,
-                  runSpacing: AppSpacing.s4,
+        ),
+        if (tests.isEmpty)
+          const AppCard(
+            child: AppEmptyView(
+              icon: Icons.inbox_outlined,
+              message: 'Chưa có đề nào. Kéo xuống để tải lại.',
+            ),
+          ),
+        if (resume != null) ...[
+          _ResumeCard(
+            snapshot: resume,
+            test: tests.firstWhere((t) => t.id == resume.testId),
+          ),
+          Gaps.v16,
+        ],
+        for (final shelf in TestShelf.values)
+          if (entries.where((e) => e.collection.shelf == shelf).toList()
+              case final shelfEntries when shelfEntries.isNotEmpty) ...[
+            Text(
+              shelf.title.toUpperCase(),
+              style: context.textStyles.labelMedium?.copyWith(
+                color: context.colors.onSurfaceVariant,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            Gaps.v8,
+            for (var i = 0; i < shelfEntries.length; i += 2) ...[
+              IntrinsicHeight(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    TestTag(
-                      label: isFullTest ? 'Chuẩn ETS' : 'Mini Test',
-                      tone: isFullTest
-                          ? TestTagTone.success
-                          : TestTagTone.neutral,
+                    Expanded(child: _card(context, shelfEntries[i])),
+                    Gaps.h12,
+                    Expanded(
+                      child: i + 1 < shelfEntries.length
+                          ? _card(context, shelfEntries[i + 1])
+                          : const SizedBox.shrink(),
                     ),
-                    if (test.isFree)
-                      const StatusBadge(
-                        label: 'Miễn phí',
-                        tone: AppTone.success,
-                        icon: Icons.lock_open_rounded,
-                      ),
-                    if (inProgress case final p?)
-                      StatusBadge(
-                        label:
-                            'Làm dở · ${p.answers.length}/${p.totalQuestions}',
-                        tone: AppTone.info,
-                        icon: Icons.pause_circle_outline_rounded,
-                      ),
-                    if (done != null)
-                      StatusBadge(
-                        label: 'Đã làm · $done',
-                        tone: AppTone.success,
-                        icon: Icons.check_rounded,
-                      ),
                   ],
                 ),
               ),
-              Gaps.h8,
-              FilledButton.tonal(
-                onPressed: open,
-                style: FilledButton.styleFrom(
-                  visualDensity: VisualDensity.compact,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: AppSpacing.s12,
+              Gaps.v12,
+            ],
+            Gaps.v8,
+          ],
+      ],
+    );
+  }
+
+  Widget _card(BuildContext context, CollectionEntry e) => TestCollectionCard(
+    collection: e.collection,
+    progress: CollectionProgress.of(e.tests, attempts, inProgress.keys.toSet()),
+    locked: e.tests.every((t) => isTestLocked(t, plan)),
+    onTap: () => context.go(Routes.testCollection(e.collection.id)),
+  );
+}
+
+/// Đề đang làm dở gần nhất: chạm để mở lại.
+class _ResumeCard extends StatelessWidget {
+  const _ResumeCard({required this.snapshot, required this.test});
+
+  final TakingSnapshot snapshot;
+  final TestSummary test;
+
+  @override
+  Widget build(BuildContext context) {
+    return AppCard(
+      tone: AppTone.info,
+      onTap: () => context.go(Routes.testDetail(test.id)),
+      child: Row(
+        children: [
+          const IconBadge(icon: Icons.play_arrow_rounded, tone: AppTone.info),
+          Gaps.h12,
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Làm tiếp',
+                  style: context.textStyles.labelMedium?.copyWith(
+                    color: context.colors.onSurfaceVariant,
                   ),
                 ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(locked ? 'Mở khoá' : 'Làm bài'),
-                    Gaps.h4,
-                    Icon(
-                      locked
-                          ? Icons.lock_outline_rounded
-                          : Icons.arrow_forward_rounded,
-                      size: AppSizes.iconXs,
-                    ),
-                  ],
+                Text(
+                  test.title,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: context.textStyles.titleSmall?.copyWith(
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
-              ),
-            ],
+                Text(
+                  '${snapshot.answers.length}/${snapshot.totalQuestions} câu · '
+                  '${snapshot.isExam ? 'Thi thử' : 'Luyện tập'}',
+                  style: context.textStyles.bodySmall?.copyWith(
+                    color: context.colors.onSurfaceVariant,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Icon(
+            Icons.chevron_right_rounded,
+            color: context.colors.onSurfaceVariant,
           ),
         ],
       ),
