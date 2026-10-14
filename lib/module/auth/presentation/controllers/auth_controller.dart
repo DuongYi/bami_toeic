@@ -3,6 +3,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../../goals/data/study_store.dart';
 import '../../data/auth_repository.dart';
 import '../../data/models/session.dart';
+import 'biometric_login_controller.dart';
 
 part 'auth_controller.g.dart';
 
@@ -40,10 +41,12 @@ class AuthController extends _$AuthController {
         .read(authRepositoryProvider)
         .resetPassword(email: email, code: code, password: password);
     state = AsyncData(session);
+    await ref.read(biometricLoginProvider.notifier).onPasswordChanged(email: email, password: password);
   }
 
   Future<void> deleteAccount() async {
     await ref.read(authRepositoryProvider).deleteAccount();
+    await ref.read(biometricLoginProvider.notifier).disable();
     await ref.read(studyStoreProvider).onSignOut();
     state = const AsyncData(null);
   }
