@@ -14,11 +14,15 @@ class _FakeBiometric extends BiometricAuth {
   _FakeBiometric() : super(LocalAuthentication());
 
   BiometricKind? kind = BiometricKind.faceId;
+  bool hardware = false;
   bool approve = true;
   int prompts = 0;
 
   @override
   Future<BiometricKind?> availableKind() async => kind;
+
+  @override
+  Future<bool> hasHardware() async => hardware || kind != null;
 
   @override
   Future<bool> authenticate(String reason) async {
@@ -67,6 +71,7 @@ class _FakeAuth extends AuthController {
 }
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized(); // AppLifecycleListener cần binding
   late _FakeBiometric bio;
   late _MemoryCredentials store;
   late ProviderContainer c;
@@ -100,6 +105,16 @@ void main() {
     final s = await c.read(biometricLoginProvider.future);
     expect(s.available, isFalse);
     expect(s.enabled, isFalse);
+    expect(s.needsEnrollment, isFalse);
+  });
+
+  test('có phần cứng nhưng chưa cài Face ID → cần hướng dẫn cài', () async {
+    bio
+      ..kind = null
+      ..hardware = true;
+    final s = await c.read(biometricLoginProvider.future);
+    expect(s.available, isFalse);
+    expect(s.needsEnrollment, isTrue);
   });
 
   test('tick bật khi đăng nhập → lưu sau khi đăng nhập thành công', () async {

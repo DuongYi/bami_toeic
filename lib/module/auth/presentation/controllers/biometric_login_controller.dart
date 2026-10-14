@@ -1,3 +1,4 @@
+import 'package:flutter/widgets.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../../core/biometric/biometric_auth.dart';
@@ -9,13 +10,19 @@ part 'biometric_login_controller.g.dart';
 
 /// Trạng thái đăng nhập bằng sinh trắc trên máy này.
 class BiometricStatus {
-  const BiometricStatus({this.kind, this.email});
+  const BiometricStatus({this.kind, this.email, this.hasHardware = false});
 
   /// Loại sinh trắc có trên máy; null = không dùng được (ẩn mọi lối vào).
   final BiometricKind? kind;
 
   /// Email đã lưu để đăng nhập nhanh; null = chưa bật.
   final String? email;
+
+  /// Máy có Face ID / vân tay nhưng có thể chưa đăng ký → Cài đặt hiện công tắc bị khoá kèm hướng dẫn.
+  final bool hasHardware;
+
+  /// Có phần cứng nhưng chưa đăng ký khuôn mặt / vân tay trong Cài đặt của máy.
+  bool get needsEnrollment => hasHardware && !available;
 
   bool get available => kind != null;
   bool get enabled => available && email != null;
@@ -31,10 +38,14 @@ class BiometricStatus {
 class BiometricLogin extends _$BiometricLogin {
   @override
   Future<BiometricStatus> build() async {
-    final kind = await ref.read(biometricAuthProvider).availableKind();
-    if (kind == null) return const BiometricStatus();
+    // Quay lại app (vd. vừa cài Face ID trong Cài đặt của máy) → kiểm tra lại.
+    final lifecycle = AppLifecycleListener(onResume: ref.invalidateSelf);
+    ref.onDispose(lifecycle.dispose);
+    final bio = ref.read(biometricAuthProvider);
+    final kind = await bio.availableKind();
+    if (kind == null) return BiometricStatus(hasHardware: await bio.hasHardware());
     final saved = await ref.read(credentialStorageProvider).read();
-    return BiometricStatus(kind: kind, email: saved?.email);
+    return BiometricStatus(kind: kind, email: saved?.email, hasHardware: true);
   }
 
   /// Hỏi xác thực sinh trắc trước khi bật (cũng là lúc iOS xin quyền Face ID).
@@ -55,7 +66,7 @@ class BiometricLogin extends _$BiometricLogin {
   Future<void> save({required String email, required String password}) async {
     await ref.read(credentialStorageProvider).save(email: email, password: password);
     final status = await future;
-    state = AsyncData(BiometricStatus(kind: status.kind, email: email));
+    state = AsyncData(BiometricStatus(kind: status.kind, email: email, hasHardware: status.hasHardware));
   }
 
   /// Bật từ Cài đặt: kiểm tra mật khẩu của tài khoản đang đăng nhập với máy chủ, xác thực sinh trắc,
@@ -72,7 +83,7 @@ class BiometricLogin extends _$BiometricLogin {
   Future<void> disable() async {
     await ref.read(credentialStorageProvider).clear();
     final status = await future;
-    state = AsyncData(BiometricStatus(kind: status.kind));
+    state = AsyncData(BiometricStatus(kind: status.kind, hasHardware: status.hasHardware));
   }
 
   /// Đổi mật khẩu thành công → cập nhật mật khẩu đã lưu nếu đang bật cho đúng email đó.

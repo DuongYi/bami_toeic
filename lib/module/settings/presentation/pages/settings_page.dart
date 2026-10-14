@@ -446,6 +446,19 @@ class SettingsPage extends ConsumerWidget {
               ),
               AppListGroup(
                 children: [
+                  if (biometric != null && biometric.needsEnrollment)
+                    SwitchListTile(
+                      secondary: const IconBadge(
+                        icon: Icons.fingerprint_rounded,
+                        tone: AppTone.neutral,
+                      ),
+                      title: const Text('Đăng nhập bằng Face ID / vân tay'),
+                      subtitle: const Text(
+                        'Máy chưa cài Face ID / vân tay. Bật trong Cài đặt của máy rồi quay lại đây.',
+                      ),
+                      value: false,
+                      onChanged: null,
+                    ),
                   if (biometric != null && biometric.available)
                     SwitchListTile(
                       secondary: const IconBadge(

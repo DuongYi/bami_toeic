@@ -26,7 +26,18 @@ class BiometricAuth {
 
   final LocalAuthentication _auth;
 
-  /// Loại sinh trắc đã đăng ký trên máy; null = không có / chưa bật (khi đó ẩn mọi lối vào).
+  /// Máy có phần cứng sinh trắc (kể cả khi chưa đăng ký khuôn mặt / vân tay).
+  Future<bool> hasHardware() async {
+    try {
+      return await _auth.canCheckBiometrics;
+    } on PlatformException {
+      return false;
+    } on MissingPluginException {
+      return false;
+    }
+  }
+
+  /// Loại sinh trắc đã đăng ký trên máy; null = không có / chưa đăng ký.
   Future<BiometricKind?> availableKind() async {
     try {
       if (!await _auth.isDeviceSupported() || !await _auth.canCheckBiometrics) return null;

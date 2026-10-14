@@ -42,7 +42,7 @@ final class BiometricLoginProvider
   BiometricLogin create() => BiometricLogin();
 }
 
-String _$biometricLoginHash() => r'5e52bd2bbaceddba37dcfaacf98f6eaf8312c109';
+String _$biometricLoginHash() => r'3b59791da4648de6fefd053277e7c84f991989ac';
 
 /// Đăng nhập bằng Face ID / Touch ID / vân tay: lưu email + mật khẩu trong Keychain khi người dùng
 /// bật, lần sau xác thực sinh trắc rồi đăng nhập bằng thông tin đó. Đăng xuất vẫn giữ để đăng nhập
