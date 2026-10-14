@@ -1,4 +1,4 @@
-package com.example.bami_toeic
+package com.app.bami.toeic
 
 import io.flutter.embedding.android.FlutterFragmentActivity
 
