@@ -58,6 +58,8 @@ jobs:
           --dart-define-from-file=env.json
           --base-href "/${{ github.event.repository.name }}/"
 
+      - uses: actions/configure-pages@v5
+
       - uses: actions/upload-pages-artifact@v4
         with:
           path: build/web
