@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "Talverton Community College\nContinuing Education Department\n\nSpring Professional Skills Workshops\n\nOur evening workshops help working adults build practical skills in a relaxed, supportive setting. All sessions take place in the Harmon Building, Room 204, from 6:30 to 8:30 P.M.\n\n• Presenting with Confidence – Tuesdays, March 4–25. Instructor: Grace Kavanagh\n• Spreadsheet Basics – Wednesdays, March 5–26. Instructor: Daniel Eze\n• Writing for the Workplace – Thursdays, April 3–24. Instructor: Grace Kavanagh\n\nEach four-week workshop costs $120. Talverton employees and current students pay half price. Class sizes are kept small so that every participant receives individual attention; registration closes once fifteen people have enrolled. Laptops are available for loan during Spreadsheet Basics, but participants are encouraged to bring their own.\n\nTo register, visit www.talvertoncc.edu/ce or stop by the Continuing Education office.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "What is true about all of the workshops?",
+        "options": [
+          "They are held in the same room.",
+          "They are led by the same instructor.",
+          "They begin in the month of March.",
+          "They require participants to bring laptops."
+        ],
+        "explanation": "Đoạn 1: 'All sessions take place in the Harmon Building, Room 204' → cùng một phòng (A). (B) sai vì Spreadsheet Basics do Daniel Eze dạy; (C) sai vì Writing for the Workplace bắt đầu 3/4; (D) sai, laptop có cho mượn và chỉ 'encouraged'.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "D",
+        "content": "What is suggested about Ms. Kavanagh?",
+        "options": [
+          "She is currently a student at the college.",
+          "She works in the Continuing Education office.",
+          "She created the spreadsheet course.",
+          "She will teach on two different weekdays."
+        ],
+        "explanation": "Danh sách khoá học: Ms. Kavanagh dạy 'Presenting with Confidence – Tuesdays' và 'Writing for the Workplace – Thursdays' → bà dạy vào hai ngày khác nhau trong tuần (D). (A), (B) không có căn cứ; (C) khoá bảng tính do Daniel Eze phụ trách.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "B",
+        "content": "The word \"closes\" in paragraph 3, line 2, is closest in meaning to",
+        "options": [
+          "locks",
+          "ends",
+          "approaches",
+          "narrows"
+        ],
+        "explanation": "'registration closes once fifteen people have enrolled' = việc đăng ký 'kết thúc' khi đủ 15 người → 'ends' (B). (A) khoá (cửa) là nghĩa vật lý; (C) đến gần, (D) thu hẹp – không hợp ngữ cảnh.",
+        "tags": [
+          "vocab-in-context"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "part": 7,
+    "passage": "E-mail\n\nTo: Arjun Iyer <aiyer@tovaline-foods.com>\nFrom: Hana Fujita <hfujita@quellmont-packaging.com>\nDate: May 14\nSubject: Order #4471\n\nDear Mr. Iyer,\n\nThank you for your order of 20,000 plastic food containers. Unfortunately, one of the two molding machines at our Westbury factory stopped working on Monday, and a replacement part will not arrive until May 20. Because of this, we can produce only half of your order by the original delivery date of May 22.\n\nWe can offer you two options. First, we can send 10,000 containers on May 22 and the rest on May 29. Second, we can send the full order on May 29. In either case, we will not charge you for shipping.\n\nPlease let me know which option you prefer by Friday so that we can plan our production schedule. I am sorry for the trouble.\n\nSincerely,\nHana Fujita\nCustomer Accounts Manager, Quellmont Packaging",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "What is the purpose of the e-mail?",
+        "options": [
+          "To explain a problem with an order",
+          "To introduce a new type of container",
+          "To request payment for a shipment",
+          "To announce the opening of a factory"
+        ],
+        "explanation": "Đoạn 1: một máy ép khuôn bị hỏng nên 'we can produce only half of your order by the original delivery date' → mục đích là báo vấn đề với đơn hàng (A). Thư không giới thiệu sản phẩm mới (B), không đòi tiền (C), không nói mở nhà máy (D).",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "C",
+        "content": "When was the complete order originally scheduled to be delivered?",
+        "options": [
+          "On May 14",
+          "On May 20",
+          "On May 22",
+          "On May 29"
+        ],
+        "explanation": "Đoạn 1: 'the original delivery date of May 22' → (C). (A) là ngày gửi thư, (B) là ngày linh kiện thay thế đến, (D) là ngày giao mới được đề xuất.",
+        "tags": [
+          "detail"
+        ],
+        "fixed_order": true
+      },
+      {
+        "number": 149,
+        "answer": "A",
+        "content": "What is suggested about Quellmont Packaging?",
+        "options": [
+          "It usually charges customers for shipping.",
+          "It has recently bought a third molding machine.",
+          "It plans to close its Westbury factory.",
+          "It needs Mr. Iyer's answer by Monday."
+        ],
+        "explanation": "Đoạn 2: 'In either case, we will not charge you for shipping' – công ty miễn phí vận chuyển như một sự bù đắp, ngụ ý bình thường khách phải trả phí vận chuyển → (A). (B), (C) không được nhắc; (D) sai vì thư cần trả lời 'by Friday'.",
+        "tags": [
+          "inference"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "MEMO\n\nTo: Product Development Staff\nFrom: Lucas Moreira, Director of Research\nDate: March 12\nSubject: Volunteer testers needed\n\nWe are preparing to begin field trials of the Lumora 2 desk lamp, which features adjustable color temperature and a built-in wireless charger. We are looking for twenty employees to use a lamp at home for three weeks. ---(131)--- will be asked to complete a short online survey at the end of each week.\n\nUnlike our earlier trials, this one ---(132)--- in employees' homes rather than in our laboratory, so that we can see how the lamp performs under ordinary conditions. Volunteers may keep their lamp once the trial ends. ---(133)---\n\nTo sign up, please contact Hana Aoki in the research office by March 20. ---(134)--- more than twenty people volunteer, testers will be chosen at random.",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "A",
+        "options": [
+          "Participants",
+          "Applicants",
+          "Sponsors",
+          "Suppliers"
+        ],
+        "explanation": "Người phải làm khảo sát cuối mỗi tuần là các nhân viên dùng thử đèn tại nhà → 'Participants' (người tham gia) (A). (B) 'Applicants' chỉ người đăng ký – chưa chắc được chọn (đoạn cuối nói có thể chọn ngẫu nhiên); (C) nhà tài trợ, (D) nhà cung cấp không hợp.",
+        "tags": [
+          "vocabulary"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "A",
+        "options": [
+          "will take place",
+          "took place",
+          "has taken place",
+          "had taken place"
+        ],
+        "explanation": "Bản ghi nhớ mở đầu 'We are preparing to begin field trials' → thử nghiệm chưa diễn ra → tương lai 'will take place' (A). (B), (C), (D) là quá khứ / hoàn thành, mâu thuẫn với việc chưa bắt đầu.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "A",
+        "options": [
+          "We hope this serves as a small thank-you for their help.",
+          "The lamp has been sold in stores since last month.",
+          "Anyone who missed last week's survey should submit it today.",
+          "As a result, the laboratory will be closed until March 20."
+        ],
+        "explanation": "Câu trước: tình nguyện viên được giữ lại đèn; (A) dùng 'this' chỉ việc được giữ đèn và coi đó là lời cảm ơn → hợp mạch. (B) mâu thuẫn: đèn còn đang chuẩn bị thử nghiệm; (C) thử nghiệm chưa bắt đầu nên chưa có khảo sát nào; (D) 'As a result' không khớp với câu trước và bài không nói phòng thí nghiệm đóng cửa.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "A",
+        "options": [
+          "In the event that",
+          "In case of",
+          "Owing to",
+          "Even though"
+        ],
+        "explanation": "Sau chỗ trống là mệnh đề điều kiện (nếu có hơn 20 người đăng ký thì chọn ngẫu nhiên) → liên từ 'In the event that' (trong trường hợp) (A). (B), (C) là giới từ, cần danh từ; (D) 'mặc dù' sai logic.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  }
+]

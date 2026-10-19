@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "To: Daniel Okonkwo <dokonkwo@mailbridge.net>\nFrom: Reservations <reservations@bayviewcresthotel.com>\nDate: May 3\nSubject: Your upcoming stay\n\nDear Mr. Okonkwo,\n\nThank you for choosing the Bayview Crest Hotel. We are pleased to confirm your reservation for a deluxe room from May 14 to May 17. Check-in begins at 3:00 P.M., and check-out is at 11:00 A.M.\n\nDuring your stay, you ---(131)--- free access to our fitness center and swimming pool. ---(132)--- Simply show your room key to the staff member at the entrance.\n\nIf you plan to arrive after 10:00 P.M., please call us at 555-0142 ---(133)--- we can hold your room. We also offer an airport shuttle for a small fee. Please send us your flight number if you would like to ---(134)--- this service.\n\nWe look forward to welcoming you.\n\nSincerely,\n\nIngrid Lindqvist\nGuest Services Manager",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "A",
+        "options": [
+          "will have",
+          "had",
+          "have had",
+          "were having"
+        ],
+        "explanation": "E-mail gửi ngày 3/5 xác nhận kỳ nghỉ sắp tới (from May 14 to May 17) → hành động trong tương lai: 'will have' (sẽ được sử dụng) (A). (B), (D) là quá khứ; (C) hiện tại hoàn thành – đều sai mốc thời gian vì khách chưa đến.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "B",
+        "options": [
+          "Unfortunately, the hotel restaurant is closed this month.",
+          "Both facilities are located on the second floor.",
+          "Your flight has been moved to an earlier time.",
+          "We have received your payment for the meeting room."
+        ],
+        "explanation": "Câu trước nói về phòng tập và hồ bơi (fitness center and swimming pool); câu sau nói 'show your room key … at the entrance' → câu chèn phải tiếp tục nói về hai tiện ích này: 'Both facilities are located on the second floor' (B). (A) nói về nhà hàng, (C) về chuyến bay, (D) về phòng họp – không nối mạch.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "C",
+        "options": [
+          "even though",
+          "unless",
+          "so that",
+          "because of"
+        ],
+        "explanation": "Gọi điện để khách sạn có thể giữ phòng → mệnh đề chỉ mục đích: 'so that we can hold your room' (C). (A) 'even though' chỉ nhượng bộ, (B) 'unless' chỉ điều kiện phủ định – không hợp nghĩa; (D) 'because of' là giới từ, không đi với mệnh đề.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "D",
+        "options": [
+          "cancel",
+          "remove",
+          "spend",
+          "use"
+        ],
+        "explanation": "Khách gửi số hiệu chuyến bay nếu muốn dùng dịch vụ xe đưa đón → 'use this service' (D). (A) 'cancel' (huỷ) không hợp vì khách chưa đặt; (B) 'remove' và (C) 'spend' không đi với 'service'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  }
+]

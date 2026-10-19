@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "MEMO\nTo: All Corbel Lane Consulting staff\nFrom: Ines Romero, Managing Partner\nDate: 9 July\nRe: Second-quarter results\n\nI am pleased to share our results for the quarter ending June 30. Revenue rose 6 percent compared with the same period last year, driven mainly by our retail practice, which signed four new clients. Our manufacturing practice had a quieter quarter, as two long-term projects came to a planned end in April, but its list of proposals awaiting client decisions is the longest it has been since the firm opened its Kessington office.\n\nOne figure deserves particular attention. Billable hours per consultant fell slightly, even as revenue grew. This is largely because our newest team members spent much of the quarter in training, as we had anticipated. Even so, the partners will be reviewing how projects are staffed to make sure that our senior consultants are not carrying a disproportionate share of client work.\n\nFinally, thank you to everyone who contributed to the Larkmoor Fabrics engagement. The client has already asked us to submit a proposal for a second phase.\n\nA full breakdown of the figures will be posted on the intranet by Friday.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "What is suggested about the manufacturing practice?",
+        "options": [
+          "It may take on more work in the coming months.",
+          "It signed four new clients during the quarter.",
+          "It recently relocated to the Kessington office.",
+          "It accounted for most of the growth in revenue."
+        ],
+        "explanation": "Đoạn 1: mảng sản xuất có quý trầm lắng nhưng danh sách đề xuất đang chờ khách quyết định 'is the longest it has been' → nếu khách chấp thuận, mảng này sẽ có thêm việc (A). (B), (D) là thông tin của mảng bán lẻ (retail); (C) Kessington chỉ là mốc so sánh thời gian.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "C",
+        "content": "The word \"carrying\" in paragraph 2 is closest in meaning to",
+        "options": [
+          "transporting",
+          "displaying",
+          "handling",
+          "winning"
+        ],
+        "explanation": "'carrying a disproportionate share of client work' = gánh/đảm nhận phần việc quá nhiều → 'handling' (C). (A) 'transporting' là nghĩa đen 'mang vác, vận chuyển' – bẫy nghĩa gốc; (B), (D) không hợp ngữ cảnh.",
+        "tags": [
+          "vocab-in-context"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "B",
+        "content": "Why will the partners review project staffing?",
+        "options": [
+          "Two long-term projects ended earlier than planned.",
+          "Experienced staff may be shouldering too much client work.",
+          "Revenue growth fell short of the firm's expectations.",
+          "New team members asked for more time in training."
+        ],
+        "explanation": "Đoạn 2: 'the partners will be reviewing how projects are staffed to make sure that our senior consultants are not carrying a disproportionate share' → lo ngại nhân viên giàu kinh nghiệm đang gánh quá nhiều việc (B). (A) sai: dự án kết thúc 'planned' (theo kế hoạch); (C) trái bài – doanh thu tăng 6%; (D) không được nhắc.",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  }
+]

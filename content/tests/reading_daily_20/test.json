@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 20",
+  "source": "Bami TOEIC",
+  "description": "Luyện Reading 15 câu chủ đề hội nghị khách sạn và công tác, band 750–850.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "C",
+          "content": "Several participants found the conference shuttle timetable ------- confusing, so the organizers posted a simplified version in the lobby.",
+          "options": [
+            "surprise",
+            "surprised",
+            "surprisingly",
+            "surprising"
+          ],
+          "explanation": "Chỗ trống đứng trước tính từ 'confusing' (bổ ngữ của 'found the timetable') → cần trạng từ bổ nghĩa cho tính từ: 'surprisingly confusing' (khó hiểu một cách bất ngờ) (C). (D), (B) là tính từ, không bổ nghĩa cho tính từ khác; (A) là danh từ/động từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "A",
+          "content": "The banquet staff at the Corlane Hotel are known for their ------- to last-minute requests from event planners.",
+          "options": [
+            "responsiveness",
+            "responded",
+            "responsively",
+            "responsive"
+          ],
+          "explanation": "Sau tính từ sở hữu 'their' cần danh từ: 'their responsiveness to requests' (sự đáp ứng nhanh các yêu cầu) (A). (D) tính từ, (C) trạng từ, (B) động từ quá khứ – không đứng sau 'their' được.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "D",
+          "content": "The summit organizers have ------- a block of 60 rooms at the Westhaven Inn at a discounted group rate.",
+          "options": [
+            "ensured",
+            "insured",
+            "assured",
+            "secured"
+          ],
+          "explanation": "Từ dễ nhầm hình thức: 'secure a block of rooms' = giành/đặt được một số phòng (D). (C) 'assure' = cam đoan với ai (assure someone that…); (A) 'ensure' = bảo đảm một kết quả (ensure that…); (B) 'insure' = mua bảo hiểm – không hợp với 'a block of rooms at a discounted rate'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "A",
+          "content": "Dr. Okafor's keynote address was so well ------- that the organizers invited him back for next year's forum.",
+          "options": [
+            "received",
+            "acquired",
+            "earned",
+            "gained"
+          ],
+          "explanation": "Collocation: 'be well received' = được đón nhận nồng nhiệt (A), phù hợp với việc được mời lại năm sau. (C) 'earn', (B) 'acquire', (D) 'gain' đều mang nghĩa 'đạt được/thu được' nhưng không đi với 'well' để nói về phản ứng của khán giả.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "C",
+          "content": "Travel expenses will be reimbursed only if receipts are submitted ------- 30 days of the employee's return.",
+          "options": [
+            "during",
+            "until",
+            "within",
+            "by"
+          ],
+          "explanation": "'within + khoảng thời gian + of + mốc' = trong vòng 30 ngày kể từ… (C). (A) 'during' cần một giai đoạn cụ thể (during the trip); (B) 'until' và (D) 'by' đi với một mốc thời điểm, không đi với cấu trúc '30 days of'.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "B",
+          "content": "------- the hotel's complimentary shuttle, participants can travel between the airport and the venue at no cost.",
+          "options": [
+            "In case of",
+            "Thanks to",
+            "Regardless of",
+            "Instead of"
+          ],
+          "explanation": "Xe đưa đón miễn phí là nguyên nhân giúp đi lại không tốn tiền → 'Thanks to' (nhờ có) (B). (D) 'Instead of' (thay vì) mâu thuẫn vì chính xe này giúp đi miễn phí; (A) 'In case of' dùng cho tình huống bất ngờ (in case of rain); (C) 'Regardless of' (bất kể) làm mất quan hệ nhân quả.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "B",
+          "content": "Ms. Nishimura has asked that the projector in the Maple Room ------- before the morning session begins.",
+          "options": [
+            "is tested",
+            "be tested",
+            "was tested",
+            "tests"
+          ],
+          "explanation": "Sau 'ask that' (yêu cầu) mệnh đề dùng giả định cách: động từ nguyên mẫu không 'to'; máy chiếu được kiểm tra → bị động 'be tested' (B). (A), (C) chia thì thường, sai cấu trúc giả định; (D) chủ động, máy chiếu không tự kiểm tra.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "D",
+          "content": "The front desk will hold any packages delivered for conference guests until ------- are collected.",
+          "options": [
+            "themselves",
+            "them",
+            "theirs",
+            "they"
+          ],
+          "explanation": "Chỗ trống là chủ ngữ của mệnh đề 'until ------- are collected', thay cho 'packages' → đại từ chủ ngữ 'they' (D). (B) tân ngữ, (A) phản thân không làm chủ ngữ; (C) 'theirs' = của họ, không hợp nghĩa.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "NOTICE TO ALL ATTENDEES OF THE NORTHGATE REGIONAL SALES SUMMIT\n\nBecause of a scheduling conflict, Thursday afternoon's workshops will take place in the Harborview Ballroom on the second floor ---(131)--- in Lakeside Hall, as stated in the printed program. ---(132)--- Signs will also be posted near the elevators to direct participants to the new location.\n\nPlease note that seating in the ballroom is limited to 120 people. Attendees are therefore encouraged to arrive ---(133)--- to be sure of getting a seat. Those unable to find space may watch a live stream of the sessions in the business center on the ground floor.\n\nCoffee and light refreshments will be served in the ballroom foyer during the afternoon break. ---(134)---, attendees who have registered for the evening reception should keep their wristbands, as these will be required for entry. Questions may be directed to the event desk in the main lobby or by calling 555-0142.",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "A",
+          "options": [
+            "rather than",
+            "as well as",
+            "along with",
+            "in addition to"
+          ],
+          "explanation": "Thông báo nói có xung đột lịch nên hội thảo chuyển sang Harborview Ballroom, KHÔNG còn ở Lakeside Hall như chương trình in → 'rather than' (thay vì) (A). (B), (D), (C) đều mang nghĩa 'cũng như/thêm vào', ngụ ý tổ chức ở cả hai nơi – trái với việc đổi địa điểm.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "C",
+          "options": [
+            "Thank you for completing your registration for the summit online.",
+            "Workshop leaders will be chosen by a vote of the attendees.",
+            "An updated version of the program is available at the registration desk.",
+            "Lakeside Hall was recently renovated so that it can accommodate larger groups."
+          ],
+          "explanation": "Câu trước nhắc chương trình in đã sai; câu sau 'Signs will ALSO be posted' → câu chèn phải là một biện pháp thông báo khác: chương trình cập nhật có ở bàn đăng ký (C). (D) không giải thích vì sao phải chuyển phòng và không nối được với 'also'; (A) lời cảm ơn lạc mạch; (B) không liên quan đến việc đổi địa điểm.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "D",
+          "options": [
+            "recently",
+            "lately",
+            "nearly",
+            "early"
+          ],
+          "explanation": "Ngữ cảnh: chỗ ngồi giới hạn 120 người → nên 'arrive early' (đến sớm) để chắc có chỗ (D). (B) 'lately' và (A) 'recently' = gần đây, dùng cho quá khứ; (C) 'nearly' = gần như, không bổ nghĩa cho 'arrive' theo cách này.",
+          "tags": [
+            "vocabulary"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "B",
+          "options": [
+            "As a result",
+            "In addition",
+            "Nevertheless",
+            "For example"
+          ],
+          "explanation": "Câu trước nêu thông tin về giờ giải lao; câu này bổ sung một lưu ý khác (giữ vòng tay cho tiệc tối) → 'In addition' (ngoài ra) (B). (C) 'Nevertheless' cần ý đối lập; (A) 'As a result' cần quan hệ nhân quả – cà phê không dẫn tới việc giữ vòng tay; (D) 'For example' cần ví dụ minh hoạ cho câu trước.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "E-mail\n\nTo: All Field Consultants\nFrom: Daniel Rousseau, Travel Coordinator\nDate: 12 May\nSubject: Changes to booking procedures\n\nDear colleagues,\n\nBeginning 1 June, all hotel and flight reservations for client visits must be made through the new Tripwell portal rather than by contacting the travel office. The portal lists only hotels with which Ferrandine Consulting has negotiated corporate rates, so you will no longer have to compare prices yourselves.\n\nIf you need to stay at a property that is not listed (for example, because it is closer to a client's site), you may still do so, provided that your department manager approves the request in advance. Note that the nightly rate must not exceed the limit shown in the portal for that city.\n\nMeal allowances remain unchanged. However, receipts for taxis and airport trains must now be uploaded within ten days of your return; paper copies will no longer be accepted.\n\nA short training session on the portal will be held on 26 May at 3:00 P.M. Those who cannot attend will find a recording on the intranet the following day.\n\nBest regards,\nDaniel Rousseau",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "A",
+          "content": "What is implied about Ferrandine consultants before June 1?",
+          "options": [
+            "They were responsible for comparing hotel rates.",
+            "They needed approval for every trip they took.",
+            "They received a larger allowance for meals.",
+            "They were required to stay at hotels near client sites."
+          ],
+          "explanation": "Suy luận: đoạn 1 viết 'you will no longer have to compare prices yourselves' → trước đây nhân viên tự so sánh giá khách sạn (A). (B) chỉ khách sạn ngoài danh sách mới cần duyệt, và đó là quy định mới; (C) 'Meal allowances remain unchanged' – không lớn hơn; (D) ở gần khách hàng chỉ là ví dụ cho trường hợp ngoại lệ.",
+          "tags": [
+            "inference"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "B",
+          "content": "What is NOT mentioned as a requirement of the new procedures?",
+          "options": [
+            "Submitting transportation receipts electronically",
+            "Selecting the lowest-priced flight available",
+            "Obtaining prior approval to book an unlisted hotel",
+            "Keeping hotel costs within a set amount"
+          ],
+          "explanation": "Câu NOT: (C) có ở đoạn 2 'your department manager approves the request in advance'; (D) 'the nightly rate must not exceed the limit'; (A) đoạn 3 'receipts… must now be uploaded… paper copies will no longer be accepted'. Thư không hề yêu cầu chọn chuyến bay rẻ nhất → (B).",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "C",
+          "content": "The word \"property\" in paragraph 2, line 1, is closest in meaning to",
+          "options": [
+            "possession",
+            "quality",
+            "accommodation",
+            "land"
+          ],
+          "explanation": "Từ trong ngữ cảnh: 'stay at a property that is not listed' – nơi để ở qua đêm, tức khách sạn/cơ sở lưu trú → 'accommodation' (C). (A) 'possession' (tài sản sở hữu) và (D) 'land' (đất đai) là nghĩa thông thường của 'property' nhưng không hợp với 'stay at'; (B) 'quality' (đặc tính) là nghĩa khác của 'property'.",
+          "tags": [
+            "vocab-in-context"
+          ]
+        }
+      ]
+    }
+  ]
+}

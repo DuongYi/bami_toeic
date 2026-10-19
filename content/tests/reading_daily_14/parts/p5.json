@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "A",
+        "content": "Saffron Table Catering offers a ------- range of menus for weddings, conferences, and private parties.",
+        "options": [
+          "wide",
+          "widely",
+          "widen",
+          "width"
+        ],
+        "explanation": "Giữa mạo từ 'a' và danh từ 'range' cần tính từ → 'a wide range of' (nhiều loại) (A). (B) trạng từ, (C) động từ, (D) danh từ – không bổ nghĩa cho danh từ được.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "A",
+        "content": "Guests are asked to confirm their ------- at the awards dinner by April 2.",
+        "options": [
+          "attendance",
+          "attend",
+          "attendant",
+          "attended"
+        ],
+        "explanation": "Sau tính từ sở hữu 'their' cần danh từ; 'confirm their attendance' = xác nhận sự có mặt (A). (C) 'attendant' cũng là danh từ nhưng nghĩa 'người phục vụ' – không hợp; (B) động từ, (D) quá khứ phân từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "A",
+        "content": "The event planner recommended Lindmoor Hall because it can ------- up to 300 guests.",
+        "options": [
+          "accommodate",
+          "attend",
+          "arrange",
+          "reserve"
+        ],
+        "explanation": "Chủ ngữ là hội trường 'it' (Lindmoor Hall) → 'accommodate up to 300 guests' = chứa được tối đa 300 khách (A). (B) 'attend' (tham dự) cần chủ ngữ là người; (C) 'arrange' (sắp xếp) và (D) 'reserve' (đặt trước) không hợp với tân ngữ 'guests'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "A",
+        "content": "Ms. Fontaine was praised for her ------- planning, which ensured that every course was served on time.",
+        "options": [
+          "meticulous",
+          "frequent",
+          "eventual",
+          "temporary"
+        ],
+        "explanation": "Việc lên kế hoạch giúp mọi món được phục vụ đúng giờ → phải là kế hoạch 'tỉ mỉ, kỹ lưỡng' = 'meticulous' (A). (B) 'frequent' (thường xuyên), (C) 'eventual' (sau cùng), (D) 'temporary' (tạm thời) không giải thích được lời khen.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "A",
+        "content": "Desserts will be served ------- the keynote speech has ended.",
+        "options": [
+          "once",
+          "during",
+          "despite",
+          "unless"
+        ],
+        "explanation": "Sau chỗ trống là mệnh đề 'the keynote speech has ended' → cần liên từ chỉ thời gian 'once' (ngay khi) (A). (B) 'during' và (C) 'despite' là giới từ, cần danh từ; (D) 'unless' (trừ khi) sai nghĩa.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "A",
+        "content": "Mr. Mazur ------- the catering contract next week after reviewing the final guest count.",
+        "options": [
+          "will sign",
+          "signed",
+          "has signed",
+          "was signing"
+        ],
+        "explanation": "Trạng từ 'next week' chỉ tương lai → 'will sign' (A). (B) quá khứ đơn, (C) hiện tại hoàn thành, (D) quá khứ tiếp diễn đều không đi với 'next week'.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "A",
+        "content": "The clients were so pleased with the banquet that ------- requested the same menu for next year's event.",
+        "options": [
+          "they",
+          "them",
+          "their",
+          "themselves"
+        ],
+        "explanation": "Mệnh đề sau 'that' thiếu chủ ngữ cho động từ 'requested' → đại từ chủ ngữ 'they' (thay cho 'the clients') (A). (B) tân ngữ, (C) tính từ sở hữu, (D) phản thân không làm chủ ngữ được.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "A",
+        "content": "All food must be packed ------- before it is transported to the venue.",
+        "options": [
+          "carefully",
+          "careful",
+          "carefulness",
+          "cared"
+        ],
+        "explanation": "Sau động từ bị động 'must be packed' cần trạng từ chỉ cách thức → 'carefully' (cẩn thận) (A). (B) tính từ, (C) danh từ, (D) quá khứ phân từ – không bổ nghĩa cho động từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

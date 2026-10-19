@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 22",
+  "source": "Bami TOEIC",
+  "description": "Đọc hiểu chủ đề bảo tàng và nghệ thuật, mức 750–850 điểm.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "B",
+          "content": "The Halvorsen Gallery's new lighting system allows visitors to view the paintings more ------- than before.",
+          "options": [
+            "clear",
+            "clearly",
+            "clearest",
+            "clarity"
+          ],
+          "explanation": "Từ loại: sau động từ 'view' + 'more … than before' cần trạng từ bổ nghĩa cho động từ → (B) 'clearly' (rõ hơn). (A), (C) là tính từ; (D) là danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "B",
+          "content": "Ms. Tanaka has been ------- to curate the museum's autumn exhibition of contemporary ceramics.",
+          "options": [
+            "located",
+            "selected",
+            "admitted",
+            "attended"
+          ],
+          "explanation": "Từ vựng: 'be selected to + V' = được chọn để làm gì → (B): bà Tanaka được chọn để phụ trách triển lãm. (C) 'admitted' (được nhận vào), (D) 'attended' (tham dự), (A) 'located' (đặt ở) không hợp nghĩa.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "C",
+          "content": "------- the east wing is being renovated, special exhibits will be displayed in the lobby of the Brightwater Museum.",
+          "options": [
+            "Unless",
+            "During",
+            "While",
+            "Despite"
+          ],
+          "explanation": "Liên từ: chỗ trống đứng trước mệnh đề đầy đủ ('the east wing is being renovated') → cần liên từ. (C) 'While' (trong khi) hợp nghĩa. (D), (B) là giới từ, không đi với mệnh đề; (A) 'Unless' (trừ khi) sai nghĩa.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "D",
+          "content": "Artists whose work is chosen for the juried show will be contacted by e-mail, and ------- pieces must arrive at the gallery by May 3.",
+          "options": [
+            "themselves",
+            "theirs",
+            "them",
+            "their"
+          ],
+          "explanation": "Đại từ: trước danh từ 'pieces' cần tính từ sở hữu → (D) 'their' (tác phẩm của các nghệ sĩ). (C) tân ngữ, (B) đại từ sở hữu đứng một mình, (A) phản thân – đều không đứng trước danh từ.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "D",
+          "content": "Admission to the sculpture garden is free, but a small donation is always ------- appreciated.",
+          "options": [
+            "great",
+            "greater",
+            "greatness",
+            "greatly"
+          ],
+          "explanation": "Từ loại: chen giữa 'is' và quá khứ phân từ 'appreciated' cần trạng từ → (D) 'greatly' (rất được trân trọng). (A), (B) tính từ; (C) danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "A",
+          "content": "The museum's education department offers guided tours that are ------- to the interests of school groups.",
+          "options": [
+            "tailored",
+            "composed",
+            "informed",
+            "conducted"
+          ],
+          "explanation": "Từ vựng – collocation: 'be tailored to + N' = được thiết kế riêng cho → (A). (B) 'composed of' (gồm), (C) 'informed of' (được thông báo), (D) 'conducted' (được tiến hành) không đi với 'to the interests of'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "A",
+          "content": "By the time the Correia retrospective opens next month, the restoration team ------- work on all twelve canvases.",
+          "options": [
+            "will have completed",
+            "completes",
+            "has completed",
+            "had completed"
+          ],
+          "explanation": "Thì: 'By the time + hiện tại đơn (opens next month)' chỉ mốc tương lai → hành động hoàn tất trước mốc đó dùng tương lai hoàn thành (A) 'will have completed'. (D) quá khứ hoàn thành dùng với mốc quá khứ; (C), (B) không khớp mốc tương lai.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "C",
+          "content": "The Lindqvist Arts Council awards grants to emerging artists based on the ------- of their proposed projects.",
+          "options": [
+            "original",
+            "originate",
+            "originality",
+            "originally"
+          ],
+          "explanation": "Từ loại: sau mạo từ 'the' và trước 'of' cần danh từ → (C) 'originality' (tính độc đáo). (A) tính từ, (D) trạng từ, (B) động từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "To: Members of the Kestrel Hill Museum of Art\nFrom: Rosa Morales, Membership Coordinator\nDate: March 2\nSubject: Members' preview evening\n\nDear Member,\n\nWe are pleased to invite you to a private preview of Light and Harbor: Coastal Paintings 1880–1920, which opens to the public on Saturday, March 21. The preview ---(131)--- on Thursday, March 19, from 6:00 to 8:30 P.M. ---(132)--- Space is limited, so we ask that you reserve your place by calling 555-0137 no later than March 12.\n\nDuring the evening, guest curator Daniel Adebayo will give a short talk about how the exhibition was put together. Many of the works have been ---(133)--- from private collections for the duration of the exhibition and will be returned to their owners in June.\n\nAs always, members may bring one guest free of charge. ---(134)---, additional guests can be admitted for a reduced fee of $10 each.\n\nSincerely,\nRosa Morales",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "D",
+          "options": [
+            "has taken place",
+            "was taking place",
+            "took place",
+            "will take place"
+          ],
+          "explanation": "Thì: e-mail viết ngày 2/3, buổi xem trước diễn ra ngày 19/3 → sự kiện tương lai → (D) 'will take place'. (C), (A), (B) đều chỉ quá khứ.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "B",
+          "options": [
+            "The museum will therefore be closed to members that evening.",
+            "Light refreshments will be served in the atrium throughout the event.",
+            "However, the paintings were sent back to their owners in January.",
+            "Thank you to everyone who attended last week's preview."
+          ],
+          "explanation": "Chèn câu: câu trước nêu giờ của buổi xem trước, câu sau nói về giới hạn chỗ → cần thêm chi tiết về sự kiện sắp tới: (B) phục vụ đồ ăn nhẹ. (D) nói về sự kiện đã qua; (A) mâu thuẫn với lời mời; (C) mâu thuẫn với việc tranh sẽ được trả lại vào tháng 6.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "A",
+          "options": [
+            "borrowed",
+            "donated",
+            "acquired",
+            "sold"
+          ],
+          "explanation": "Từ vựng theo ngữ cảnh: tác phẩm lấy từ bộ sưu tập tư nhân 'trong thời gian triển lãm' và 'sẽ được trả lại cho chủ vào tháng 6' → là mượn: (A) 'borrowed'. (C) 'acquired' (mua lại) và (B) 'donated' (được tặng) là sở hữu vĩnh viễn; (D) 'sold' trái nghĩa.",
+          "tags": [
+            "vocabulary"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "C",
+          "options": [
+            "Instead",
+            "Otherwise",
+            "In addition",
+            "As a result"
+          ],
+          "explanation": "Từ nối: câu trước nói hội viên được dẫn 1 khách miễn phí, câu sau bổ sung khách thêm được giảm giá → thêm thông tin: (C) 'In addition'. (B) 'Otherwise' (nếu không thì), (A) 'Instead' (thay vào đó), (D) 'As a result' (kết quả là) không hợp quan hệ ý.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Article\n\nFairmont Textile Museum Extends Hours, Adds Studio Program\n\nCALDERWOOD (April 8) — The Fairmont Textile Museum will begin opening on Monday evenings starting May 4, the first change to its schedule in more than a decade. [1] Director Sunil Banerjee said the decision followed a visitor survey conducted last autumn, in which many respondents said that weekday working hours made it difficult for them to visit.\n\nAlong with the extended hours, the museum will launch a hands-on studio program in its newly converted basement space. [2] Sessions in weaving, dyeing, and embroidery will be led by local artists, and all materials will be provided. Each session is limited to twelve participants. [3]\n\nFunding for the conversion came largely from the Northgate Arts Foundation, which has supported the museum since it opened in 1987. \"We wanted to give people a reason to come back more than once,\" Mr. Banerjee said. [4] Registration for studio sessions opens on April 20 at www.fairmonttextile.org.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "D",
+          "content": "What is suggested about the Fairmont Textile Museum?",
+          "options": [
+            "Its basement was formerly an exhibition gallery.",
+            "It was founded by a group of local artists.",
+            "It plans to raise its admission prices in May.",
+            "It has kept the same opening hours for many years."
+          ],
+          "explanation": "Suy luận: đoạn 1 nói việc mở cửa tối thứ Hai là 'the first change to its schedule in more than a decade' → hơn 10 năm chưa đổi giờ → (D). (A) không nói tầng hầm trước đây dùng làm gì; (B) nghệ sĩ địa phương chỉ dạy lớp (đoạn 2); (C) không nhắc giá vé.",
+          "tags": [
+            "inference"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "B",
+          "content": "What is NOT mentioned about the studio sessions?",
+          "options": [
+            "How many people can join each one",
+            "How much they will cost",
+            "Who will teach them",
+            "Where they will be held"
+          ],
+          "explanation": "Câu NOT: đoạn 2 nêu người dạy – 'led by local artists' (C), số người – 'limited to twelve participants' (A), địa điểm – 'newly converted basement space' (D). Học phí không được nhắc → (B).",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "C",
+          "content": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?\n\"Because of this limit, the museum advises signing up as early as possible.\"",
+          "options": [
+            "[1]",
+            "[2]",
+            "[3]",
+            "[4]"
+          ],
+          "explanation": "Chèn câu: 'this limit' phải chỉ một giới hạn vừa nêu → ngay sau 'Each session is limited to twelve participants.' là vị trí [3] → (C). Các vị trí khác không có giới hạn nào để 'this limit' thay thế.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 29",
+  "source": "Bami TOEIC",
+  "description": "Đọc hiểu chủ đề quy hoạch đô thị và giao thông công cộng, độ khó band 850–990.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "C",
+          "content": "The city council has postponed its vote on the rezoning plan pending further ------- with neighborhood associations.",
+          "options": [
+            "consulted",
+            "consultant",
+            "consultation",
+            "consult"
+          ],
+          "explanation": "Sau tính từ 'further' và trước 'with' cần danh từ chỉ hoạt động → 'consultation' (sự tham vấn) (C). (B) cũng là danh từ nhưng chỉ người (chuyên gia tư vấn), sai nghĩa và thiếu mạo từ; (D) là động từ; (A) là quá khứ phân từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "C",
+          "content": "Ms. Nair's report offers a ------- assessment of how the new tram line has affected local businesses.",
+          "options": [
+            "balancing",
+            "balance",
+            "balanced",
+            "balances"
+          ],
+          "explanation": "Giữa mạo từ 'a' và danh từ 'assessment' cần tính từ; 'a balanced assessment' = đánh giá khách quan, cân bằng → (C). (A) 'balancing' mang nghĩa chủ động 'đang làm cân bằng', không hợp; (B), (D) là danh từ / động từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "B",
+          "content": "Ridership on the Harbor Line has risen ------- since off-peak fares were reduced.",
+          "options": [
+            "steadied",
+            "steadily",
+            "steady",
+            "steadiness"
+          ],
+          "explanation": "Bổ nghĩa cho động từ 'has risen' cần trạng từ → 'steadily' (đều đặn) (B). (C) là tính từ, (D) là danh từ, (A) là động từ quá khứ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "D",
+          "content": "Under the new zoning code, developers must ------- at least 15 percent of new residential units for low-income households.",
+          "options": [
+            "preserve",
+            "deserve",
+            "conserve",
+            "reserve"
+          ],
+          "explanation": "'reserve something for someone' = dành riêng cho ai → (D). (A) 'preserve' = bảo tồn; (C) 'conserve' = tiết kiệm (năng lượng, tài nguyên); (B) 'deserve' = xứng đáng – gần hình thức nhưng sai nghĩa.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "D",
+          "content": "The traffic study ------- that converting Main Street into a one-way road would ease congestion only slightly.",
+          "options": [
+            "persuaded",
+            "assured",
+            "convinced",
+            "concluded"
+          ],
+          "explanation": "'conclude that + mệnh đề' = đi đến kết luận rằng → (D). (A), (C), (B) đều cần tân ngữ chỉ người trước 'that' (persuade / convince / assure someone that …), nên không đứng trực tiếp trước mệnh đề 'that'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "A",
+          "content": "The Fulton Street bridge will remain open to pedestrians ------- it is closed to vehicles for resurfacing.",
+          "options": [
+            "while",
+            "so that",
+            "unless",
+            "during"
+          ],
+          "explanation": "Sau chỗ trống là mệnh đề; hai việc diễn ra đồng thời (mở cho người đi bộ / đóng với xe cộ) → 'while' (trong khi) (A). (D) 'during' cần danh từ; (C) 'unless' (trừ khi) sai logic; (B) 'so that' chỉ mục đích.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "A",
+          "content": "Since the light-rail extension opened in January, average weekday ridership ------- by nearly 20 percent.",
+          "options": [
+            "has grown",
+            "is growing",
+            "will grow",
+            "grew"
+          ],
+          "explanation": "'Since + mốc quá khứ' → mệnh đề chính dùng hiện tại hoàn thành 'has grown' (A). (D) quá khứ đơn không dùng với 'since' ở mệnh đề chính; (C), (B) không hợp vì mức tăng đã diễn ra từ tháng 1 đến nay.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "B",
+          "content": "After the consulting firm withdrew from the project, Ms. Habib and Mr. Mercier completed the downtown redevelopment proposal -------.",
+          "options": [
+            "theirs",
+            "themselves",
+            "their",
+            "them"
+          ],
+          "explanation": "Đại từ nhấn mạnh 'themselves' cuối câu = tự họ làm, không có ai trợ giúp – hợp với việc công ty tư vấn đã rút lui → (B). (D) tân ngữ không đứng sau một tân ngữ khác; (C) tính từ sở hữu cần danh từ theo sau; (A) đại từ sở hữu sai nghĩa.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "NOTICE TO RIDERS\nMetro Valley Transit Authority\n\nBeginning Monday, September 8, Route 14 buses will no longer stop at Corliss Avenue. The stop is being permanently removed ---(131)--- a protected bicycle lane that will run along this section of Granger Street.\n\nRiders who currently board at Corliss Avenue may use the stops at Penn Street or Dalton Square, each about a four-minute walk away. ---(132)---\n\nTo help riders adjust, Route 14 buses will run every eight minutes instead of every twelve during weekday rush hours. This schedule ---(133)--- through December 31, after which the Transit Authority will review ridership data on the route. Feedback from riders will also ---(134)--- that review. Comments can be submitted at www.metrovalleytransit.com/feedback or by calling 555-0167.",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "A",
+          "options": [
+            "to make way for",
+            "in exchange for",
+            "on behalf of",
+            "at the expense of"
+          ],
+          "explanation": "Trạm bị dỡ bỏ để dành chỗ cho làn xe đạp sắp xây ('will run') → 'to make way for' (nhường chỗ cho) (A). (B) 'đổi lấy', (C) 'thay mặt cho', (D) 'gây thiệt hại cho' (ngược chiều nghĩa) đều không hợp.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "C",
+          "options": [
+            "Buses will therefore stop at Corliss Avenue more often.",
+            "Each of them will also be closed for repairs during this same period.",
+            "Both are equipped with covered shelters and real-time arrival displays.",
+            "The bicycle lane was completed ahead of schedule last spring."
+          ],
+          "explanation": "Câu trước giới thiệu hai trạm thay thế; (C) dùng 'Both' chỉ hai trạm đó và mô tả tiện ích → hợp mạch. (D) mâu thuẫn vì làn xe đạp 'will run' (chưa xây); (A) trái với việc ngừng dừng ở Corliss Avenue; (B) vô lý vì hai trạm đang được đề xuất thay thế.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "B",
+          "options": [
+            "has continued",
+            "will continue",
+            "continued",
+            "had continued"
+          ],
+          "explanation": "Lịch mới chỉ bắt đầu từ 8/9 và kéo dài đến 31/12, sau đó 'will review' → hành động ở tương lai 'will continue' (B). (A), (C), (D) là các thì hoàn thành / quá khứ, mâu thuẫn với việc lịch chưa bắt đầu.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "D",
+          "options": [
+            "instruct",
+            "notify",
+            "advise",
+            "inform"
+          ],
+          "explanation": "'inform a review / decision' = cung cấp cơ sở, góp phần định hướng việc xem xét → (D). (B) 'notify', (C) 'advise', (A) 'instruct' đều cần tân ngữ chỉ người (notify / advise / instruct someone), không đi với 'that review'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "From: Priya Nair, Senior Planner, Ashford City Planning Department\nTo: Members of the Transportation Committee\nDate: May 9\nSubject: Survey results – Kellerman park-and-ride\n\nDear Committee Members,\n\nAs requested at last month's meeting, our department surveyed commuters at the Kellerman park-and-ride lot over two weeks in April. A total of 612 people responded.\n\nThe results largely support the proposal to add a second level to the parking structure. Nearly 70 percent of respondents said they had been unable to find a space at least once in the past month, and most of those people reported arriving after 8:15 A.M. Interestingly, only a small share said they would be willing to pay a daily fee for a guaranteed space.\n\nRespondents were less enthusiastic about the plan to reduce the number of morning express buses to the city center from six to four. Several noted that the buses are already crowded by the second stop. Given the projected increase in parking capacity, I would recommend that the committee postpone any reduction until ridership can be measured again after the expansion.\n\nA full report, including the survey questions and a breakdown of responses by arrival time, will be distributed before the June 3 meeting. Please let me know if you would like me to present the findings in person.\n\nPriya Nair",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "C",
+          "content": "What is the purpose of the e-mail?",
+          "options": [
+            "To request funding for additional morning express buses to the city center",
+            "To propose that commuters be charged a daily fee for parking spaces",
+            "To report the results of a study the committee asked for",
+            "To announce that a parking structure has been expanded"
+          ],
+          "explanation": "Đoạn 1: 'As requested at last month's meeting, our department surveyed commuters…' và toàn bộ e-mail trình bày kết quả khảo sát → (C). (B) sai: chỉ ít người sẵn sàng trả phí; (D) việc thêm tầng mới chỉ là đề xuất; (A) e-mail bàn về đề xuất giảm chuyến, không xin thêm kinh phí.",
+          "tags": [
+            "main-idea"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "A",
+          "content": "Why does Ms. Nair recommend delaying the reduction in express buses?",
+          "options": [
+            "She expects a larger lot to bring more riders onto the buses.",
+            "The express buses often fall behind their schedule.",
+            "Most respondents said they would gladly pay higher bus fares for faster trips.",
+            "The survey did not ask commuters about bus service."
+          ],
+          "explanation": "Đoạn 3: xe buýt đã 'already crowded by the second stop' và bà viện dẫn 'the projected increase in parking capacity' → bãi đỗ lớn hơn sẽ đưa thêm người lên xe buýt vốn đã đông, nên cần đo lại sau khi mở rộng (suy luận 2 bước) → (A). (C) bài chỉ nói ít người muốn trả phí đỗ xe, không nói về giá vé; (D) trái với bài vì người trả lời có góp ý về xe buýt; (B) không được nhắc.",
+          "tags": [
+            "inference"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "B",
+          "content": "The word \"share\" in paragraph 2 is closest in meaning to",
+          "options": [
+            "announcement",
+            "proportion",
+            "contribution",
+            "distribution"
+          ],
+          "explanation": "'only a small share said they would be willing to pay…' – 'share' ở đây là 'phần, tỉ lệ' (trong số người trả lời) → 'proportion' (B). (C) 'sự đóng góp' và (D) 'sự phân phối' là nghĩa khác gần với động từ 'share'; (A) không liên quan.",
+          "tags": [
+            "vocab-in-context"
+          ]
+        }
+      ]
+    }
+  ]
+}

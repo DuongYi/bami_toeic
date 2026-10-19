@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "A",
+        "content": "Membership at Peakline Fitness Club has grown ------- since the club began offering early-morning classes.",
+        "options": [
+          "steadily",
+          "steady",
+          "steadiness",
+          "steadied"
+        ],
+        "explanation": "Sau nội động từ 'has grown' cần trạng từ chỉ cách thức → 'steadily' (đều đặn) (A). (B) tính từ, (C) danh từ, (D) quá khứ phân từ không bổ nghĩa cho động từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "A",
+        "content": "Members who wish to ------- their membership for up to two months while traveling may do so at the front desk.",
+        "options": [
+          "suspend",
+          "postpone",
+          "delay",
+          "interrupt"
+        ],
+        "explanation": "Tạm ngưng tư cách hội viên một thời gian rồi tiếp tục → collocation 'suspend a membership' (A). (B) 'postpone' và (C) 'delay' dùng cho sự kiện/hành động chưa diễn ra (hoãn); (D) 'interrupt' (làm gián đoạn) không đi với 'membership'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "A",
+        "content": "Personal trainers at the club are ------- to update their certifications every two years.",
+        "options": [
+          "required",
+          "mandatory",
+          "essential",
+          "necessary"
+        ],
+        "explanation": "Chủ ngữ là người ('trainers') + 'be ~ to V' với nghĩa bị bắt buộc → 'are required to' (A). (B), (C), (D) cũng mang nghĩa 'bắt buộc/cần thiết' nhưng dùng với chủ ngữ giả 'It is mandatory/essential/necessary for sb to V', không dùng 'sb is mandatory to V'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "A",
+        "content": "------- the pool is being resurfaced, members may use the pool at our Harrowgate branch at no additional charge.",
+        "options": [
+          "While",
+          "Whereas",
+          "Unless",
+          "Provided that"
+        ],
+        "explanation": "Hai vế liên hệ về thời gian: trong khoảng thời gian hồ bơi đang được sửa ('is being resurfaced'), hội viên dùng hồ ở chi nhánh khác → 'While' (trong khi) (A). (B) 'Whereas' chỉ sự đối lập giữa hai sự việc, không chỉ thời gian; (C) 'Unless' (trừ khi) và (D) 'Provided that' (miễn là) sai logic.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "A",
+        "content": "Had the club ------- its new class schedule earlier, more members would have signed up for the spring session.",
+        "options": [
+          "announced",
+          "announce",
+          "announcing",
+          "been announced"
+        ],
+        "explanation": "Câu điều kiện loại 3 đảo ngữ: 'Had + S + V3' (= If the club had announced) → 'announced' (A). (B) nguyên mẫu, (C) V-ing sai cấu trúc; (D) bị động sai vì câu lạc bộ là chủ thể thông báo, tân ngữ 'its new class schedule' đã có.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "A",
+        "content": "Although several trainers applied for the manager position, Mr. Darko was the only one of ------- with experience running a business.",
+        "options": [
+          "them",
+          "they",
+          "their",
+          "themselves"
+        ],
+        "explanation": "Sau giới từ 'of' cần đại từ tân ngữ: 'the only one of them' (người duy nhất trong số họ) (A). (B) đại từ chủ ngữ, (C) tính từ sở hữu cần danh từ đi kèm; (D) phản thân không dùng khi chủ ngữ khác người được nhắc tới.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "A",
+        "content": "The survey results indicate that members are highly ------- of the extended evening hours.",
+        "options": [
+          "appreciative",
+          "appreciate",
+          "appreciation",
+          "appreciatively"
+        ],
+        "explanation": "Sau 'are highly' cần tính từ, và cấu trúc 'be appreciative of' (trân trọng, hài lòng với) (A). (B) động từ, (C) danh từ, (D) trạng từ không đứng sau 'be + highly' làm bổ ngữ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "A",
+        "content": "Peakline's trainers design ------- workout plans tailored to each member's goals.",
+        "options": [
+          "individualized",
+          "individually",
+          "individualize",
+          "individuality"
+        ],
+        "explanation": "Trước cụm danh từ 'workout plans' cần tính từ → 'individualized' (được cá nhân hoá) (A). (B) trạng từ, (C) động từ, (D) danh từ không bổ nghĩa cho danh từ theo sau.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "Fernhill Books Expands into Audio\n\nBRAYTON (June 12) — Fernhill Books, an independent publisher known primarily for its regional travel guides, announced on Tuesday that it will begin releasing audio versions of its titles this fall. The first six audiobooks, including the best-selling Walking the Coastal Path, will be available in September through the company's Web site and selected online retailers.\n\nAccording to publisher Daniel Mori, the decision followed several years of requests from readers who wanted to listen to the guides while driving or hiking. \"Our printed guides will always be at the heart of what we do,\" Mr. Mori said. \"But many of our readers are on the move, and we want to reach them wherever they are.\"\n\nRather than hire professional narrators for every title, Fernhill will invite several of its authors to record their own books. Mr. Mori explained that the authors' firsthand knowledge of the routes they describe gives the recordings a personal quality that listeners are likely to appreciate. Recording will take place at Tinmouth Sound, a studio in downtown Brayton that the company has contracted for the project.\n\nFernhill plans to add audio versions of its older titles gradually, starting with those that have sold the most copies. The company does not expect to raise the prices of its print editions as a result of the expansion.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "What is suggested about Fernhill Books' audiobooks?",
+        "options": [
+          "Some of them will be narrated by the people who wrote the books.",
+          "They will cost the same amount as the printed editions.",
+          "They will be sold only in bookstores at first.",
+          "They will cover the company's entire catalog by September."
+        ],
+        "explanation": "Suy luận: đoạn 3 'Rather than hire professional narrators for every title, Fernhill will invite several of its authors to record their own books' → một số sách nói do chính tác giả đọc → (A). (B) bài chỉ nói giá sách in không tăng, không so sánh giá; (C) trái với 'through the company's Web site and selected online retailers'; (D) sai vì tháng 9 chỉ có 'the first six audiobooks'.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "D",
+        "content": "What is NOT stated about Fernhill Books?",
+        "options": [
+          "It is mainly recognized for its travel publications.",
+          "It has arranged to use an outside recording facility.",
+          "It will choose which older titles to convert based on sales.",
+          "It intends to publish fewer printed guides in the future."
+        ],
+        "explanation": "Câu NOT: (A) đúng – 'known primarily for its regional travel guides' (đoạn 1); (B) đúng – 'Tinmouth Sound, a studio… that the company has contracted' (đoạn 3); (C) đúng – 'starting with those that have sold the most copies' (đoạn 4). Bài không hề nói sẽ giảm sách in, ngược lại 'Our printed guides will always be at the heart of what we do' → (D).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "A",
+        "content": "The word \"quality\" in paragraph 3, line 3, is closest in meaning to",
+        "options": [
+          "character",
+          "standard",
+          "grade",
+          "value"
+        ],
+        "explanation": "Từ trong ngữ cảnh: 'gives the recordings a personal quality' = mang lại cho bản ghi một nét riêng, đặc tính cá nhân → 'quality' ở đây nghĩa là đặc điểm, tính chất → (A) 'character'. (B) 'standard' và (C) 'grade' là nghĩa 'chất lượng/mức độ tốt' – bẫy nghĩa thường gặp của 'quality'; (D) 'value' (giá trị) không hợp.",
+        "tags": [
+          "vocab-in-context"
+        ]
+      }
+    ]
+  }
+]

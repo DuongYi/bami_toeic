@@ -1,0 +1,54 @@
+[
+  {
+    "part": 7,
+    "passage": "Corvane Auto to Open Second Service Center\n\nFAIRMONT (April 22) — Corvane Auto, which has sold vehicles on Delmar Avenue for more than two decades, will open a second service center on Route 9 in August. The new facility will be devoted entirely to maintenance and repairs; no vehicles will be sold on site. [1]\n\nAccording to general manager Tomás Gutierrez, the decision followed a steady rise in complaints about wait times. \"Customers were routinely being told that the earliest available appointment was ten days away,\" he said. \"That is not the kind of experience we want associated with our name.\" [2]\n\nThe Route 9 center will have fourteen service bays, twice the number at the Delmar Avenue location, and four of them will be equipped to handle electric vehicles. At present, Corvane sends electric models to a partner shop in Linwood for battery work. [3] Once the new center opens, that arrangement will end.\n\nMr. Gutierrez added that the Delmar Avenue location will keep its usual hours. However, its service department will gradually shift its focus to quick jobs such as oil changes and tire rotations. [4] Hiring for the new center, including six technicians and two service advisors, is already under way.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "Why did Corvane Auto decide to open the new facility?",
+        "options": [
+          "To shorten the wait for service appointments",
+          "To increase the number of vehicles it sells",
+          "To replace a partner shop that has closed",
+          "To comply with new rules for electric vehicles"
+        ],
+        "explanation": "Đoạn 2: quyết định xuất phát từ 'a steady rise in complaints about wait times', khách phải chờ 'ten days' mới có lịch → mục đích là rút ngắn thời gian chờ (A). (B) sai vì cơ sở mới 'no vehicles will be sold on site'; (C) xưởng đối tác không đóng cửa – chỉ là thỏa thuận sẽ chấm dứt; (D) bài không nhắc quy định nào.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "B",
+        "content": "How many service bays does the Delmar Avenue location most likely have?",
+        "options": [
+          "4",
+          "7",
+          "10",
+          "14"
+        ],
+        "explanation": "Đoạn 3: Route 9 có 'fourteen service bays, twice the number at the Delmar Avenue location' → Delmar có 14 ÷ 2 = 7 khoang (B). (A) là số khoang dành cho xe điện ở Route 9; (D) là số khoang của Route 9.",
+        "tags": [
+          "inference"
+        ],
+        "fixed_order": true
+      },
+      {
+        "number": 149,
+        "answer": "D",
+        "content": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"This means that more complex repairs will increasingly be handled on Route 9.\"",
+        "options": [
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
+        ],
+        "explanation": "Câu chèn nêu hệ quả của việc Delmar 'shift its focus to quick jobs such as oil changes and tire rotations' → việc sửa chữa phức tạp chuyển sang Route 9, nên đặt ở [4] (D). Đặt ở [3] sẽ cắt đứt liên kết giữa 'a partner shop in Linwood' và 'that arrangement'; ở [1], [2] bài chưa nói gì về việc phân chia công việc giữa hai cơ sở.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      }
+    ]
+  }
+]

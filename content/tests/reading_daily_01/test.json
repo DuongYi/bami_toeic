@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 01",
+  "source": "Bami TOEIC",
+  "description": "Ôn Reading 15 câu chủ đề nhà hàng – khách sạn, mức 450–600.",
+  "is_free": true,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "B",
+          "content": "Guests at the Harborlight Inn can ------- reserve a table at the rooftop restaurant through the front desk.",
+          "options": [
+            "easier",
+            "easily",
+            "ease",
+            "easy"
+          ],
+          "explanation": "Chỗ trống đứng giữa động từ khuyết thiếu 'can' và động từ 'reserve' → cần trạng từ bổ nghĩa cho động từ: 'easily' (dễ dàng) (B). (D) là tính từ, (C) là danh từ/động từ, (A) là tính từ so sánh hơn – không bổ nghĩa cho động từ được.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "D",
+          "content": "The new chef at Copperleaf Bistro has received many ------- reviews from local food critics.",
+          "options": [
+            "favoring",
+            "favorably",
+            "favor",
+            "favorable"
+          ],
+          "explanation": "Chỗ trống đứng trước danh từ 'reviews' → cần tính từ: 'favorable reviews' (những bài đánh giá tốt) (D). (B) là trạng từ, (C) là danh từ/động từ, (A) là V-ing không đi với 'reviews' theo nghĩa này.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "B",
+          "content": "Please ------- the kitchen staff if you have any food allergies.",
+          "options": [
+            "announce",
+            "inform",
+            "describe",
+            "explain"
+          ],
+          "explanation": "Cấu trúc 'inform + người' = thông báo cho ai (B). (D) 'explain' và (A) 'announce' phải đi với 'to + người' (explain to the staff); (C) 'describe the staff' nghĩa là miêu tả nhân viên – không hợp nghĩa.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "A",
+          "content": "Room service is ------- 24 hours a day for all guests staying on the executive floor.",
+          "options": [
+            "available",
+            "possible",
+            "eligible",
+            "capable"
+          ],
+          "explanation": "'be available' = có sẵn, phục vụ được → 'Room service is available 24 hours a day' (dịch vụ phòng phục vụ 24 giờ) (A). (D) 'capable' cần 'of' và chủ ngữ là người; (C) 'eligible' (đủ điều kiện) dùng cho người; (B) 'possible' không dùng để nói dịch vụ đang phục vụ.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "C",
+          "content": "The breakfast buffet is served ------- 6:30 A.M. and 10:00 A.M. every day.",
+          "options": [
+            "during",
+            "until",
+            "between",
+            "from"
+          ],
+          "explanation": "Cặp cố định 'between … and …' (trong khoảng từ … đến …) → (C). (D) 'from' phải đi với 'to/until'; (A) 'during' đi với khoảng thời gian (during breakfast); (B) 'until' không đi với 'and'.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "C",
+          "content": "Ms. Alvarez ------- the hotel's banquet hall for her company's dinner last week.",
+          "options": [
+            "books",
+            "will book",
+            "booked",
+            "booking"
+          ],
+          "explanation": "Dấu hiệu 'last week' (tuần trước) → thì quá khứ đơn 'booked' (C). (A) hiện tại, (B) tương lai không hợp mốc thời gian; (D) V-ing không thể làm động từ chính.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "A",
+          "content": "Guests are asked to return ------- room keys to the front desk at checkout.",
+          "options": [
+            "their",
+            "they",
+            "them",
+            "themselves"
+          ],
+          "explanation": "Chỗ trống đứng trước cụm danh từ 'room keys' → cần tính từ sở hữu 'their' (chìa khoá phòng của họ) (A). (B) là đại từ chủ ngữ, (C) là tân ngữ, (D) là đại từ phản thân – không đứng trước danh từ.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "D",
+          "content": "The restaurant manager thanked the staff for their ------- during the busy holiday season.",
+          "options": [
+            "dedicate",
+            "dedicates",
+            "dedicated",
+            "dedication"
+          ],
+          "explanation": "Sau tính từ sở hữu 'their' cần danh từ → 'dedication' (sự tận tâm) (D). (A), (B) là động từ; (C) là tính từ/quá khứ phân từ, không đứng một mình sau 'their'.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "To: Daniel Okonkwo <dokonkwo@mailbridge.net>\nFrom: Reservations <reservations@bayviewcresthotel.com>\nDate: May 3\nSubject: Your upcoming stay\n\nDear Mr. Okonkwo,\n\nThank you for choosing the Bayview Crest Hotel. We are pleased to confirm your reservation for a deluxe room from May 14 to May 17. Check-in begins at 3:00 P.M., and check-out is at 11:00 A.M.\n\nDuring your stay, you ---(131)--- free access to our fitness center and swimming pool. ---(132)--- Simply show your room key to the staff member at the entrance.\n\nIf you plan to arrive after 10:00 P.M., please call us at 555-0142 ---(133)--- we can hold your room. We also offer an airport shuttle for a small fee. Please send us your flight number if you would like to ---(134)--- this service.\n\nWe look forward to welcoming you.\n\nSincerely,\n\nIngrid Lindqvist\nGuest Services Manager",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "C",
+          "options": [
+            "were having",
+            "have had",
+            "will have",
+            "had"
+          ],
+          "explanation": "E-mail gửi ngày 3/5 xác nhận kỳ nghỉ sắp tới (from May 14 to May 17) → hành động trong tương lai: 'will have' (sẽ được sử dụng) (C). (D), (A) là quá khứ; (B) hiện tại hoàn thành – đều sai mốc thời gian vì khách chưa đến.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "B",
+          "options": [
+            "We have received your payment for the meeting room.",
+            "Both facilities are located on the second floor.",
+            "Your flight has been moved to an earlier time.",
+            "Unfortunately, the hotel restaurant is closed this month."
+          ],
+          "explanation": "Câu trước nói về phòng tập và hồ bơi (fitness center and swimming pool); câu sau nói 'show your room key … at the entrance' → câu chèn phải tiếp tục nói về hai tiện ích này: 'Both facilities are located on the second floor' (B). (D) nói về nhà hàng, (C) về chuyến bay, (A) về phòng họp – không nối mạch.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "A",
+          "options": [
+            "so that",
+            "even though",
+            "unless",
+            "because of"
+          ],
+          "explanation": "Gọi điện để khách sạn có thể giữ phòng → mệnh đề chỉ mục đích: 'so that we can hold your room' (A). (B) 'even though' chỉ nhượng bộ, (C) 'unless' chỉ điều kiện phủ định – không hợp nghĩa; (D) 'because of' là giới từ, không đi với mệnh đề.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "D",
+          "options": [
+            "spend",
+            "remove",
+            "cancel",
+            "use"
+          ],
+          "explanation": "Khách gửi số hiệu chuyến bay nếu muốn dùng dịch vụ xe đưa đón → 'use this service' (D). (C) 'cancel' (huỷ) không hợp vì khách chưa đặt; (B) 'remove' và (A) 'spend' không đi với 'service'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Copperleaf Bistro\nNotice to Customers\n\nStarting June 1, Copperleaf Bistro will be open for lunch on weekends. Weekend lunch will be served from 11:30 A.M. to 2:30 P.M. on Saturdays and Sundays. Our dinner hours will stay the same.\n\nThe weekend lunch menu will include soups, salads, and sandwiches, as well as several of our most popular dinner dishes in smaller portions. Head chef Kenji Nakamura created the new dishes using fresh vegetables from farms in the area.\n\nTo celebrate, every customer who orders lunch on June 1 or June 2 will receive a free dessert. Reservations are recommended but not required. To book a table, call 555-0167 or visit www.copperleafbistro.com.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "A",
+          "content": "What is the notice mainly about?",
+          "options": [
+            "The start of a weekend lunch service",
+            "The opening of a second location",
+            "The launch of a food delivery service",
+            "The hiring of a new head chef"
+          ],
+          "explanation": "Câu hỏi ý chính. Đoạn 1: 'Starting June 1, Copperleaf Bistro will be open for lunch on weekends' → thông báo về việc bắt đầu phục vụ bữa trưa cuối tuần (A). Bài có nhắc bếp trưởng nhưng không nói mới tuyển (D); không có chi nhánh mới (B) hay giao hàng (C).",
+          "tags": [
+            "main-idea"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "D",
+          "content": "What will customers who order lunch on June 1 or June 2 receive?",
+          "options": [
+            "A gift card for a later visit",
+            "A drink at no cost",
+            "A discount on dinner",
+            "A dessert at no cost"
+          ],
+          "explanation": "Đoạn 3: 'every customer who orders lunch on June 1 or June 2 will receive a free dessert' → món tráng miệng miễn phí (D). (B), (C), (A) không được nhắc trong bài.",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "B",
+          "content": "What is suggested about Copperleaf Bistro?",
+          "options": [
+            "It requires reservations for every meal.",
+            "It did not serve lunch on weekends before June.",
+            "It grows its own vegetables.",
+            "It is planning to change its dinner hours next month."
+          ],
+          "explanation": "Câu suy luận. Đoạn 1 nói 'Starting June 1 … will be open for lunch on weekends' → có thể suy ra trước tháng 6 nhà hàng chưa phục vụ bữa trưa cuối tuần (B). (A) trái với 'Reservations are recommended but not required'; (D) trái với 'Our dinner hours will stay the same'; (C) sai vì rau lấy 'from farms in the area'.",
+          "tags": [
+            "inference"
+          ]
+        }
+      ]
+    }
+  ]
+}

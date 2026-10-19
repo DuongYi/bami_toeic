@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "C",
+        "content": "Crestmoor Savings Bank customers can now transfer funds ------- between accounts using the updated mobile application.",
+        "options": [
+          "secure",
+          "security",
+          "securely",
+          "securest"
+        ],
+        "explanation": "Bổ nghĩa cho động từ 'transfer' cần trạng từ → 'securely' (một cách an toàn) (C). (A), (D) là tính từ, (B) là danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "A",
+        "content": "Account holders who maintain a minimum ------- of $1,000 will not be charged a monthly service fee.",
+        "options": [
+          "balance",
+          "receipt",
+          "payment",
+          "estimate"
+        ],
+        "explanation": "'maintain a minimum balance' = duy trì số dư tối thiểu, collocation ngân hàng (A). (B) biên lai, (C) khoản thanh toán, (D) ước tính – không đi với 'maintain' và nghĩa miễn phí dịch vụ.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "B",
+        "content": "Loan applications submitted ------- noon on Friday will not be reviewed until the following week.",
+        "options": [
+          "until",
+          "after",
+          "since",
+          "among"
+        ],
+        "explanation": "Hồ sơ nộp 'sau' trưa thứ Sáu sẽ được xét vào tuần sau → 'after' (B). (A) until đi với hành động kéo dài, không hợp 'submitted'; (C) since cần thì hoàn thành; (D) among dùng cho nhóm nhiều đối tượng.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "D",
+        "content": "Ms. Rao reminded new customers that the bank will never ask for ------- passwords by e-mail or phone.",
+        "options": [
+          "them",
+          "theirs",
+          "themselves",
+          "their"
+        ],
+        "explanation": "Trước danh từ 'passwords' cần tính từ sở hữu → 'their' (D). (A) tân ngữ, (B) đại từ sở hữu đứng một mình, (C) phản thân – không đứng trước danh từ.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "A",
+        "content": "Mr. Girard ------- his savings into a fixed-term deposit account after speaking with a financial advisor last Tuesday.",
+        "options": [
+          "moved",
+          "moves",
+          "will move",
+          "has been moving"
+        ],
+        "explanation": "Mốc 'last Tuesday' → hành động đã xong trong quá khứ → quá khứ đơn 'moved' (A). (B) hiện tại, (C) tương lai, (D) hiện tại hoàn thành tiếp diễn không đi với thời điểm quá khứ xác định.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "B",
+        "content": "The financial planning seminar helps participants create ------- monthly budgets that they can actually follow.",
+        "options": [
+          "realistically",
+          "realistic",
+          "realism",
+          "realist"
+        ],
+        "explanation": "Trước cụm danh từ 'monthly budgets' cần tính từ → 'realistic' (thực tế) (B). (A) trạng từ; (C), (D) là danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "C",
+        "content": "Customers are advised to review their monthly statements carefully and report any ------- transactions immediately.",
+        "options": [
+          "unemployed",
+          "unavailable",
+          "unauthorized",
+          "uninformed"
+        ],
+        "explanation": "Báo ngay các giao dịch 'không được phép' (giả mạo) → 'unauthorized transactions' (C). (A) thất nghiệp, (B) không có sẵn, (D) thiếu thông tin – không hợp với 'transactions'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "D",
+        "content": "Alderpoint Credit Union has become increasingly ------- among young professionals because of its low fees.",
+        "options": [
+          "popularly",
+          "popularity",
+          "popularize",
+          "popular"
+        ],
+        "explanation": "Sau 'become' (+ trạng từ 'increasingly') cần tính từ làm bổ ngữ → 'popular' (D). (A) trạng từ, (B) danh từ, (C) động từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

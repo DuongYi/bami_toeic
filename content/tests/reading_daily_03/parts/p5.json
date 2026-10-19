@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "C",
+        "content": "Fairway Home Goods offers a wide ------- of kitchen products at low prices.",
+        "options": [
+          "select",
+          "selective",
+          "selection",
+          "selectively"
+        ],
+        "explanation": "Sau mạo từ 'a' và tính từ 'wide', trước 'of' cần danh từ: 'a wide selection of' (nhiều lựa chọn) (C). (A) là động từ, (B) tính từ, (D) trạng từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "B",
+        "content": "Customers who are not ------- satisfied with their purchase may return it within 30 days.",
+        "options": [
+          "complete",
+          "completely",
+          "completion",
+          "completed"
+        ],
+        "explanation": "Chỗ trống đứng trước tính từ 'satisfied' → cần trạng từ bổ nghĩa cho tính từ: 'completely satisfied' (hoàn toàn hài lòng) (B). (A), (D) là tính từ/động từ, (C) là danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "A",
+        "content": "Shoppers can ------- 20 percent on all winter coats during this weekend's sale.",
+        "options": [
+          "save",
+          "reduce",
+          "lower",
+          "decrease"
+        ],
+        "explanation": "Cụm 'save + số tiền/phần trăm + on + món hàng' = tiết kiệm được bao nhiêu khi mua (A). (B), (C), (D) cần tân ngữ là giá (reduce the price), không có cấu trúc 'reduce 20 percent on coats' với chủ ngữ là người mua.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "D",
+        "content": "Please ask a sales ------- if you need help finding the right size.",
+        "options": [
+          "office",
+          "product",
+          "receipt",
+          "associate"
+        ],
+        "explanation": "'sales associate' = nhân viên bán hàng – người có thể giúp tìm cỡ phù hợp (D). (A) văn phòng, (B) sản phẩm, (C) hoá đơn – không thể 'hỏi' để được giúp.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "A",
+        "content": "The electronics department is located ------- the second floor, next to the café.",
+        "options": [
+          "on",
+          "at",
+          "in",
+          "by"
+        ],
+        "explanation": "Dùng 'on' với tầng của toà nhà: 'on the second floor' (A). (B) 'at', (C) 'in', (D) 'by' không đi với 'floor' trong nghĩa 'ở tầng'.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "C",
+        "content": "Mr. Brennan ------- for a new laptop for several weeks before he finally chose one.",
+        "options": [
+          "is looking",
+          "looks",
+          "had been looking",
+          "will look"
+        ],
+        "explanation": "Hành động kéo dài 'for several weeks' xảy ra trước một hành động quá khứ khác 'before he finally chose' → quá khứ hoàn thành tiếp diễn 'had been looking' (C). (A), (B) hiện tại, (D) tương lai – không hợp với 'chose'.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "B",
+        "content": "Ms. Takeda returned the blender to the store because ------- did not work properly.",
+        "options": [
+          "its",
+          "it",
+          "itself",
+          "they"
+        ],
+        "explanation": "Cần đại từ chủ ngữ số ít thay cho 'the blender' trong mệnh đề 'because … did not work' → 'it' (B). (A) là tính từ sở hữu, (C) đại từ phản thân, (D) số nhiều – không hợp với 'the blender'.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "D",
+        "content": "The store's new self-checkout machines are ------- to use, even for first-time shoppers.",
+        "options": [
+          "simplify",
+          "simply",
+          "simplicity",
+          "simple"
+        ],
+        "explanation": "Sau động từ 'are' cần tính từ làm bổ ngữ: 'be simple to use' (dễ sử dụng) (D). (A) động từ, (B) trạng từ, (C) danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

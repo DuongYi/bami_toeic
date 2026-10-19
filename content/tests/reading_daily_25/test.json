@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 25",
+  "source": "Bami TOEIC",
+  "description": "Ôn Reading chủ đề vận hành nhà thuốc bán lẻ và cửa hàng sức khoẻ, band 850–990.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "B",
+          "content": "The revised floor plan has made seasonal vitamins and herbal teas far more ------- accessible to shoppers entering from the parking lot.",
+          "options": [
+            "readiness",
+            "readily",
+            "ready",
+            "readied"
+          ],
+          "explanation": "Chỗ trống đứng giữa 'more' và tính từ 'accessible' → cần trạng từ bổ nghĩa cho tính từ: 'more readily accessible' (dễ tiếp cận hơn) → (B). (C) là tính từ, (A) danh từ, (D) quá khứ phân từ – không bổ nghĩa được cho tính từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "D",
+          "content": "Customers are reminded that refunds on beauty and personal-care items cannot be issued without ------- of purchase.",
+          "options": [
+            "proven",
+            "provable",
+            "prove",
+            "proof"
+          ],
+          "explanation": "Sau giới từ 'without' và trước 'of purchase' cần danh từ; cụm cố định 'proof of purchase' (bằng chứng mua hàng) → (D). (C) là động từ, (A) và (B) là tính từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "A",
+          "content": "The Harlow Street branch has seen a ------- increase in weekend foot traffic since it began opening an hour earlier on Saturdays.",
+          "options": [
+            "considerable",
+            "considerate",
+            "considerably",
+            "consideration"
+          ],
+          "explanation": "Trước danh từ 'increase' cần tính từ. Có hai tính từ: 'considerable' (đáng kể) và 'considerate' (chu đáo, ân cần – dùng cho người) → chỉ 'a considerable increase' hợp nghĩa → (A). (C) là trạng từ, (D) là danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "A",
+          "content": "Shift supervisors must ------- that every refrigerated display case is kept at the correct temperature throughout the day.",
+          "options": [
+            "ensure",
+            "assure",
+            "inform",
+            "remind"
+          ],
+          "explanation": "'Ensure that + mệnh đề' = bảo đảm rằng… → (A). (B) 'assure' cần tân ngữ chỉ người ('assure customers that…'); (D) 'remind' và (C) 'inform' cũng cần tân ngữ chỉ người trước 'that' – thiếu tân ngữ nên sai.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "C",
+          "content": "Under the new supplier agreement, Ofori Natural Goods has agreed to ------- the cost of installing branded display shelves in all twelve stores.",
+          "options": [
+            "exhaust",
+            "occupy",
+            "absorb",
+            "consume"
+          ],
+          "explanation": "Collocation 'absorb the cost' = gánh/chịu toàn bộ chi phí → (C). (A) 'exhaust' (dùng cạn), (D) 'consume' (tiêu thụ), (B) 'occupy' (chiếm chỗ) đều không đi với 'the cost' theo nghĩa nhận chi trả.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "C",
+          "content": "------- the new inventory software has been installed at every location, staff will continue to record stock counts on paper forms.",
+          "options": [
+            "Since",
+            "Once",
+            "Until",
+            "Provided"
+          ],
+          "explanation": "Ý câu: tiếp tục ghi tay trên giấy cho tới khi phần mềm được cài xong → liên từ chỉ thời điểm kết thúc 'Until' (C). (B) 'Once' (một khi đã cài) mâu thuẫn với việc vẫn ghi giấy; (D) 'Provided' (miễn là) và (A) 'Since' (vì/kể từ) tạo nghĩa phi lý.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "D",
+          "content": "By the time the Kingsbridge location reopens next month, its wellness section ------- to nearly twice its original size.",
+          "options": [
+            "was expanded",
+            "has expanded",
+            "will expand",
+            "will have been expanded"
+          ],
+          "explanation": "'By the time + hiện tại đơn (reopens next month)' → hành động hoàn tất trước một mốc tương lai cần tương lai hoàn thành; khu vực được mở rộng (bị động) → 'will have been expanded' (D). (C) tương lai đơn không thể hiện sự hoàn tất trước mốc; (B), (A) sai mốc thời gian.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "B",
+          "content": "Although several stores tested the self-checkout kiosks last spring, only the branch on Delmont Road has kept ------- in operation.",
+          "options": [
+            "itself",
+            "them",
+            "it",
+            "theirs"
+          ],
+          "explanation": "Đại từ tân ngữ thay cho 'the self-checkout kiosks' (số nhiều) sau 'kept … in operation' → 'them' (B). (C) 'it' số ít không khớp; (A) 'itself' chỉ dùng khi tân ngữ trùng chủ ngữ 'the branch'; (D) 'theirs' là đại từ sở hữu.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "MEMO\nTo: All Brightmeadow Wellness Mart staff\nFrom: Lena Sundberg, Operations Manager\nDate: March 3\nSubject: Order pickup lockers\n\nBeginning March 17, customers who place orders through our Web site will be able to collect them from self-service lockers near the main entrance. The lockers ---(131)--- at our Harlow Street and Delmont Road stores since January, and the results have been ---(132)---. Average wait times at the service desk fell by nearly a third during that period, and few customers reported any difficulty using the system.\n\nWhen an order is ready, the system will send the customer a text message containing a six-digit code. ---(133)--- Orders that are not collected within 72 hours will be returned to the shelves, and the customer will be refunded automatically.\n\nTeam leaders will attend a short training session next week. ---(134)---, all staff are encouraged to read the attached guide so that they can answer customers' questions with confidence.",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "B",
+          "options": [
+            "will be tested",
+            "have been tested",
+            "are testing",
+            "were being tested"
+          ],
+          "explanation": "Mốc 'since January' kéo dài đến hiện tại → hiện tại hoàn thành; tủ khoá được thử nghiệm (bị động) → 'have been tested' (B). (C) chủ động – tủ không tự thử nghiệm; (A) tương lai mâu thuẫn với 'since January'; (D) quá khứ tiếp diễn không đi với 'since'.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "D",
+          "options": [
+            "inconclusive",
+            "disappointing",
+            "unchanged",
+            "encouraging"
+          ],
+          "explanation": "Câu sau nêu thời gian chờ giảm gần một phần ba và ít khách gặp khó khăn, đồng thời hệ thống sắp được triển khai rộng → kết quả 'đáng khích lệ' (D). (A) 'chưa đi đến kết luận', (B) 'gây thất vọng', (C) 'không thay đổi' đều trái với số liệu tích cực.",
+          "tags": [
+            "vocabulary"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "A",
+          "options": [
+            "Entering this code on the locker's keypad will open the correct compartment.",
+            "Staff should therefore print a paper receipt for each locker at the counter.",
+            "Customers have praised the friendly service at both of these locations.",
+            "Please remind customers that the lockers are cleaned every evening."
+          ],
+          "explanation": "Câu trước nói khách nhận tin nhắn có mã 6 chữ số → câu chèn cần giải thích mã dùng để làm gì: nhập mã trên bàn phím tủ để mở đúng ngăn (A). (D) chuyện vệ sinh tủ lạc mạch; (C) quay lại hai cửa hàng thử nghiệm, không nối với 'code'; (B) 'therefore' không có quan hệ nhân quả và trái với tính tự phục vụ.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "C",
+          "options": [
+            "Instead",
+            "Consequently",
+            "In the meantime",
+            "Otherwise"
+          ],
+          "explanation": "Trưởng nhóm sẽ được đào tạo tuần sau; trong khoảng thời gian chờ đó, mọi nhân viên nên đọc tài liệu → 'In the meantime' (C). (A) 'Instead' ngụ ý thay thế buổi đào tạo; (B) 'Consequently' sai quan hệ nhân quả; (D) 'Otherwise' (nếu không thì) phi lý.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Paulo Ribeiro [9:02 A.M.]\nThe driver from Clearbrook Distribution just called. Our summer travel kits won't arrive until Thursday instead of today.\n\nAiko Kondo [9:04 A.M.]\nThat's a problem. The front-window display is supposed to go up tomorrow morning, and the flyers we mailed out last week feature the kits on the cover.\n\nDaniel Romero [9:05 A.M.]\nIs there anything left from last season's order in the back room?\n\nAiko Kondo [9:07 A.M.]\nAbout two cases. Not enough to fill the window, but enough to stock the stand by the registers.\n\nPaulo Ribeiro [9:09 A.M.]\nWhat if we put the insulated water bottles in the window for now? They came in on Monday, and they're part of the same summer promotion.\n\nDaniel Romero [9:10 A.M.]\nI can live with that. Aiko, could you ask the print shop whether they can add a line to the in-store signs saying the full kit selection arrives Thursday?\n\nAiko Kondo [9:12 A.M.]\nWill do. I'll also give the Delmont Road store a call, since they're using the same flyer.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "D",
+          "content": "What is suggested about the summer travel kits?",
+          "options": [
+            "They will be placed in the window tomorrow.",
+            "They are excluded from the current promotion.",
+            "They are shipped by a new supplier this year.",
+            "A small number are already in the store."
+          ],
+          "explanation": "Lúc 9:05 ông Romero hỏi còn hàng mùa trước trong kho không, bà Kondo đáp 'About two cases' – đủ cho kệ cạnh quầy thu ngân → cửa hàng đã có sẵn một ít bộ travel kit (D). (A) sai: cửa sổ sẽ trưng bình nước thay thế; (B) sai: bình nước 'part of the same summer promotion' nghĩa là kit cũng thuộc chương trình; (C) không được nhắc.",
+          "tags": [
+            "inference"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "C",
+          "content": "At 9:10 A.M., what does Mr. Romero most likely mean when he writes, \"I can live with that\"?",
+          "options": [
+            "He thinks the flyers should be reprinted before Thursday.",
+            "He is willing to work an additional shift on Thursday.",
+            "He accepts a temporary change to the window display.",
+            "He prefers to delay the display until the kits arrive."
+          ],
+          "explanation": "Ngay trước đó ông Ribeiro đề xuất 'put the insulated water bottles in the window for now'; ông Romero đáp 'I can live with that' rồi giao việc sửa biển hiệu → ông chấp nhận thay đổi tạm thời cho phần trưng bày cửa sổ (C). (D) trái ý; (A) ông chỉ nhờ thêm dòng trên biển trong cửa hàng, không in lại tờ rơi; (B) không liên quan.",
+          "tags": [
+            "implied-meaning"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "B",
+          "content": "What is indicated about the Delmont Road store?",
+          "options": [
+            "It plans to put up its window display on Thursday.",
+            "It is advertising the same products as Mr. Ribeiro's store.",
+            "It has extra cases of travel kits it could send over.",
+            "It received the travel kits earlier in the week."
+          ],
+          "explanation": "Bà Kondo viết sẽ gọi cho cửa hàng Delmont Road 'since they're using the same flyer' – tờ rơi có kit ở trang bìa → cửa hàng đó quảng cáo cùng sản phẩm (B). (D) 'came in on Monday' là bình nước của cửa hàng này; (C), (A) không có trong bài.",
+          "tags": [
+            "inference"
+          ]
+        }
+      ]
+    }
+  ]
+}

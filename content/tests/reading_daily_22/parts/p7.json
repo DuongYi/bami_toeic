@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "Article\n\nFairmont Textile Museum Extends Hours, Adds Studio Program\n\nCALDERWOOD (April 8) — The Fairmont Textile Museum will begin opening on Monday evenings starting May 4, the first change to its schedule in more than a decade. [1] Director Sunil Banerjee said the decision followed a visitor survey conducted last autumn, in which many respondents said that weekday working hours made it difficult for them to visit.\n\nAlong with the extended hours, the museum will launch a hands-on studio program in its newly converted basement space. [2] Sessions in weaving, dyeing, and embroidery will be led by local artists, and all materials will be provided. Each session is limited to twelve participants. [3]\n\nFunding for the conversion came largely from the Northgate Arts Foundation, which has supported the museum since it opened in 1987. \"We wanted to give people a reason to come back more than once,\" Mr. Banerjee said. [4] Registration for studio sessions opens on April 20 at www.fairmonttextile.org.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "What is suggested about the Fairmont Textile Museum?",
+        "options": [
+          "It has kept the same opening hours for many years.",
+          "Its basement was formerly an exhibition gallery.",
+          "It was founded by a group of local artists.",
+          "It plans to raise its admission prices in May."
+        ],
+        "explanation": "Suy luận: đoạn 1 nói việc mở cửa tối thứ Hai là 'the first change to its schedule in more than a decade' → hơn 10 năm chưa đổi giờ → (A). (B) không nói tầng hầm trước đây dùng làm gì; (C) nghệ sĩ địa phương chỉ dạy lớp (đoạn 2); (D) không nhắc giá vé.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "C",
+        "content": "What is NOT mentioned about the studio sessions?",
+        "options": [
+          "Who will teach them",
+          "How many people can join each one",
+          "How much they will cost",
+          "Where they will be held"
+        ],
+        "explanation": "Câu NOT: đoạn 2 nêu người dạy – 'led by local artists' (A), số người – 'limited to twelve participants' (B), địa điểm – 'newly converted basement space' (D). Học phí không được nhắc → (C).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "C",
+        "content": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?\n\"Because of this limit, the museum advises signing up as early as possible.\"",
+        "options": [
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
+        ],
+        "explanation": "Chèn câu: 'this limit' phải chỉ một giới hạn vừa nêu → ngay sau 'Each session is limited to twelve participants.' là vị trí [3] → (C). Các vị trí khác không có giới hạn nào để 'this limit' thay thế.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      }
+    ]
+  }
+]

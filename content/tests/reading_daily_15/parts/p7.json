@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "Local Gym Bets on Early Risers\n\nHARROWGATE (April 14) — When Kwame Darko opened Peakline Fitness Club in a former furniture warehouse on Delmont Street six years ago, he expected most members to come in after work. Instead, the club's busiest hours turned out to be between 5:30 and 7:30 A.M.\n\n\"We were caught off guard at first,\" Mr. Darko said. \"We had scheduled only one trainer for the morning shift, and the line at the front desk sometimes reached the door.\" Within a year, he had rearranged staff schedules and added three early classes.\n\nThat experience shaped his plans for the club's second location, which is set to open in June in the Westbrook Plaza shopping center. Rather than filling a large open floor with machines, the new site will devote nearly half of its space to small studios that members can book for twenty-minute sessions. \"Our members tell us that time, not price, is what keeps them from exercising,\" Mr. Darko explained. \"Short, focused sessions before work are what they're asking for.\"\n\nThe Westbrook location will also stay open around the clock on weekdays, a first for the company. After staffed hours end, members will enter using a code sent to their phones.\n\nEmi Kimura, who manages several properties at Westbrook Plaza, expects the gym to benefit its neighbors as well. \"A café two doors down has already asked to open at 6:00 A.M. instead of 8:00,\" she noted.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "What is suggested about Peakline Fitness Club when it first opened?",
+        "options": [
+          "It underestimated demand at a certain time of day.",
+          "It had difficulty attracting members after work.",
+          "It charged more than other gyms in the area.",
+          "It offered more classes than it could staff."
+        ],
+        "explanation": "Đoạn 1–2: ông Darko tưởng hội viên đến sau giờ làm nhưng giờ đông nhất lại là 5:30–7:30 sáng; khi đó chỉ xếp một huấn luyện viên ca sáng, hàng chờ kéo dài tới cửa ('We were caught off guard') → câu lạc bộ đã đánh giá thấp nhu cầu buổi sáng (A). (B) bài không nói thiếu khách buổi tối; (C) không nhắc giá; (D) ngược lại – thiếu lớp/nhân viên chứ không thừa lớp.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "A",
+        "content": "What is NOT mentioned as a feature of the Westbrook location?",
+        "options": [
+          "Free parking for members",
+          "Rooms that can be reserved for short workouts",
+          "Weekday access at all hours",
+          "Entry using a code sent by phone"
+        ],
+        "explanation": "Câu hỏi NOT. Đoạn 3: phòng tập nhỏ đặt trước cho buổi 20 phút (B); đoạn 4: mở cửa 24/24 các ngày trong tuần ('around the clock on weekdays') (C) và vào cửa bằng mã gửi qua điện thoại (D). Bãi đỗ xe miễn phí không được nhắc → (A).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "A",
+        "content": "Why does Ms. Kimura mention a café?",
+        "options": [
+          "To show that the gym may bring more customers to the area",
+          "To suggest a site for the club's next branch",
+          "To explain why the gym's opening date has changed",
+          "To point out that the café is a competitor of the gym"
+        ],
+        "explanation": "Đoạn 5: bà Kimura cho rằng phòng tập sẽ có lợi cho hàng xóm ('benefit its neighbors'), rồi dẫn ví dụ quán cà phê xin mở cửa sớm từ 6:00 → quán dự đoán sẽ có thêm khách từ phòng tập; ví dụ minh hoạ phòng tập kéo thêm khách cho khu vực (A). (B), (C) không có căn cứ; (D) trái nghĩa – quán được lợi chứ không cạnh tranh.",
+        "tags": [
+          "inference"
+        ]
+      }
+    ]
+  }
+]

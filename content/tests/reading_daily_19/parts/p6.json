@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "To: Ana Teixeira <ateixeira@corvelhome.com>\nFrom: Customer Service <support@brightmarrowfreight.com>\nDate: March 4\nSubject: Order #58217\n\nDear Ms. Teixeira,\n\nThank you for choosing Brightmarrow Freight. We are writing to let you know that your shipment of 40 dining chairs ---(131)--- our Lisbury distribution center yesterday afternoon. Unfortunately, a mechanical problem with one of our delivery trucks means that the final leg of the journey will take longer than originally ---(132)---. Your order is now scheduled to arrive on March 9 rather than March 6. ---(133)---\n\nTo make up for the inconvenience, we have waived the delivery fee on this order. ---(134)---, you may follow the progress of your shipment at any time at www.brightmarrowfreight.com/track.\n\nSincerely,\n\nKenji Inoue\nCustomer Service Team, Brightmarrow Freight",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "A",
+        "options": [
+          "reached",
+          "will reach",
+          "is reaching",
+          "reaches"
+        ],
+        "explanation": "Trạng từ thời gian 'yesterday afternoon' (chiều hôm qua) → hành động đã xảy ra, dùng quá khứ đơn 'reached' (A). (B) tương lai, (C) hiện tại tiếp diễn, (D) hiện tại đơn đều không khớp mốc quá khứ.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "A",
+        "options": [
+          "anticipated",
+          "considered",
+          "regarded",
+          "attended"
+        ],
+        "explanation": "'take longer than originally anticipated' = lâu hơn dự kiến ban đầu (A); ngữ cảnh là ngày giao bị lùi từ 6 sang 9/3. (B) 'considered' và (C) 'regarded' cần bổ ngữ (considered + adj/as…); (D) 'attended' = tham dự, không hợp nghĩa.",
+        "tags": [
+          "vocabulary"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "A",
+        "options": [
+          "We apologize for any disruption this may cause to your plans.",
+          "Our drivers have now delivered the chairs to your store.",
+          "Please confirm the number of chairs you would like to order.",
+          "That is why the order was sent to an incorrect delivery address."
+        ],
+        "explanation": "Câu trước báo hàng bị giao trễ 3 ngày; câu sau 'To make up for the inconvenience' (để bù cho sự bất tiện) → cần lời xin lỗi về sự gián đoạn (A). (B) trái với việc hàng chưa đến; (C) đơn hàng 40 ghế đã đặt rồi; (D) lý do trễ là xe hỏng, không phải sai địa chỉ.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "A",
+        "options": [
+          "In the meantime",
+          "Otherwise",
+          "Even so",
+          "Instead"
+        ],
+        "explanation": "Khách phải chờ đến 9/3; việc theo dõi đơn hàng diễn ra trong lúc chờ → 'In the meantime' (trong lúc chờ đợi) (A). (B) 'Otherwise' (nếu không thì) cần điều kiện; (C) 'Even so' (dù vậy) chỉ sự tương phản, nhưng miễn phí giao hàng và theo dõi đơn không đối lập; (D) 'Instead' (thay vào đó) không có gì bị thay thế.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  }
+]

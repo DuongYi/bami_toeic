@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "Pelham Street Agency\nwww.pelhamstreetagency.com/starter\n\nSocial Media Starter Package\n\nIs your business new to online advertising? Our Starter Package is designed for shops, cafés, and service providers with fewer than 25 employees. For a flat fee of $450 per month, our team will create twelve original posts, schedule them on two social media platforms of your choice, and respond to customer comments during business hours.\n\nEvery client is paired with a dedicated coordinator who meets with the owner once a month to review results and adjust the content plan. Clients who sign a six-month agreement receive one professional photo shoot at no additional charge.\n\n\"Before working with Pelham Street, we posted only when we had time, and few people noticed,\" says Amara Boateng, owner of Boateng Florals. \"Now our weekend orders have nearly doubled.\"\n\nTo schedule a free consultation, call 555-0137 or complete the form on this page. Please note that the Starter Package does not include paid advertisements; these can be added for an extra fee.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "For whom is the Starter Package most likely intended?",
+        "options": [
+          "Small businesses with limited online experience",
+          "Large companies with offices in several cities",
+          "Marketing students looking for internships",
+          "Photographers who want to sell their work"
+        ],
+        "explanation": "Đoạn 1: 'Is your business new to online advertising? … designed for shops, cafés, and service providers with fewer than 25 employees' → doanh nghiệp nhỏ, ít kinh nghiệm quảng cáo online (A). (B) trái với 'fewer than 25 employees'; (C), (D) không được nhắc.",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "C",
+        "content": "What is suggested about Boateng Florals?",
+        "options": [
+          "It has signed a six-month agreement.",
+          "It posts on more than two platforms.",
+          "Its sales have grown since it hired the agency.",
+          "It received a free photo shoot from the agency recently."
+        ],
+        "explanation": "Đoạn 3, bà Boateng: 'Before working with Pelham Street … Now our weekend orders have nearly doubled' → doanh số tăng từ khi dùng dịch vụ (C). (A), (D) chỉ là ưu đãi chung cho khách ký 6 tháng, bài không nói Boateng Florals đã ký; (B) không có căn cứ.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "B",
+        "content": "What is NOT included in the monthly fee?",
+        "options": [
+          "Responses to customer comments",
+          "Paid advertisements",
+          "Meetings with a coordinator",
+          "Twelve original posts"
+        ],
+        "explanation": "Đoạn cuối: 'the Starter Package does not include paid advertisements; these can be added for an extra fee' → (B). (A), (D) nằm trong đoạn 1 ('create twelve original posts … respond to customer comments'); (C) ở đoạn 2 ('meets with the owner once a month').",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "C",
+        "content": "The prototype performed ------- well in early testing, although engineers noticed some overheating during longer sessions.",
+        "options": [
+          "remark",
+          "remarkable",
+          "remarkably",
+          "remarked"
+        ],
+        "explanation": "Bổ nghĩa cho trạng từ 'well' cần trạng từ → 'remarkably' (đáng kể, nổi bật) (C). (B) là tính từ; (A), (D) là danh từ / động từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "C",
+        "content": "Ms. Aoki was recognized for her ------- to the development of the company's new water filtration system.",
+        "options": [
+          "contribute",
+          "contributor",
+          "contribution",
+          "contributing"
+        ],
+        "explanation": "Sau 'her' cần danh từ; 'contribution to' = sự đóng góp cho → (C). (B) là danh từ chỉ người, 'her contributor' sai nghĩa; (A) là động từ; (D) là danh động từ, không đi với 'to the development' theo nghĩa này.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "C",
+        "content": "The design team was ------- by the feedback from the consumer panel and decided to keep the original color options.",
+        "options": [
+          "encourage",
+          "encouraging",
+          "encouraged",
+          "encouragement"
+        ],
+        "explanation": "Sau 'was' và có tác nhân 'by the feedback' → dạng bị động / tính từ -ed chỉ cảm xúc của người: 'encouraged' (được khích lệ) (C). (B) dạng -ing mô tả vật gây cảm xúc, không đi với 'by'; (A) là động từ nguyên mẫu; (D) là danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "A",
+        "content": "The engineering department has ------- a request for additional funding to extend the testing phase by six weeks.",
+        "options": [
+          "submitted",
+          "permitted",
+          "admitted",
+          "committed"
+        ],
+        "explanation": "'submit a request' = nộp đề nghị → (A). (B) 'permit' = cho phép, (C) 'admit' = thừa nhận / cho vào, (D) 'commit' = cam kết – cùng gốc '-mit' nhưng không đi với 'a request'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "A",
+        "content": "The new adhesive is highly ------- to extreme temperatures, making it ideal for outdoor use.",
+        "options": [
+          "resistant",
+          "durable",
+          "sturdy",
+          "persistent"
+        ],
+        "explanation": "Collocation 'resistant to' (chịu được, kháng) → (A). (B) 'durable' và (C) 'sturdy' (bền, chắc) gần nghĩa nhưng không đi với giới từ 'to'; (D) 'persistent' (dai dẳng) sai nghĩa.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "A",
+        "content": "The product launch was moved to October ------- give the team time to fix the issues identified in user testing.",
+        "options": [
+          "so as to",
+          "so that",
+          "in order that",
+          "because of"
+        ],
+        "explanation": "Sau chỗ trống là động từ nguyên mẫu 'give' → 'so as to' (để) (A). (B), (C) cần mệnh đề có chủ ngữ; (D) cần danh từ và chỉ nguyên nhân.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "A",
+        "content": "Dr. Antwi has requested that each participant ------- the questionnaire before handling the device.",
+        "options": [
+          "complete",
+          "completes",
+          "completed",
+          "will complete"
+        ],
+        "explanation": "Sau 'request that' dùng thể giả định: động từ nguyên mẫu không chia → 'complete' (A) dù chủ ngữ 'each participant' số ít. (B), (C), (D) là dạng đã chia thì, không dùng trong cấu trúc này.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "A",
+        "content": "The two research groups agreed to share data with ------- so that no experiment would be repeated unnecessarily.",
+        "options": [
+          "each other",
+          "themselves",
+          "one",
+          "theirs"
+        ],
+        "explanation": "Hai nhóm trao đổi dữ liệu qua lại → đại từ hỗ tương 'each other' (A). (B) đại từ phản thân = chia sẻ với chính mình, vô nghĩa; (C) 'one' chỉ một người không xác định; (D) đại từ sở hữu sai nghĩa.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "MEMO\n\nTo: All Customer Service Staff\nFrom: Omar Mansour, Training Coordinator\nDate: April 18\nSubject: Communication skills workshop\n\nI am pleased to announce that Westbrook Learning Institute will hold a two-day workshop for our department on May 6 and 7. The sessions will focus on handling difficult phone calls and writing clear e-mail responses. ---(131)---, the instructor will share tips on using our new customer database more efficiently.\n\nAttendance is required for all team members who joined the company within the past year. Other employees are welcome to participate if their supervisors ---(132)--- the request. ---(133)---\n\nLunch will be provided on both days. Please inform me of any dietary restrictions by April 30 so that I can place an ---(134)--- order with the caterer.",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "A",
+        "options": [
+          "In addition",
+          "Instead",
+          "Otherwise",
+          "Nevertheless"
+        ],
+        "explanation": "Câu trước nêu nội dung chính của hội thảo, câu sau bổ sung thêm một nội dung (mẹo dùng cơ sở dữ liệu) → 'In addition' (A). (B) thay vào đó, (C) nếu không thì, (D) tuy nhiên – không diễn tả quan hệ bổ sung.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "D",
+        "options": [
+          "attend",
+          "deliver",
+          "install",
+          "approve"
+        ],
+        "explanation": "Nhân viên khác được tham gia nếu cấp trên 'chấp thuận' yêu cầu → 'approve the request' (D). (A) tham dự, (B) giao, (C) lắp đặt – không đi với 'the request'.",
+        "tags": [
+          "vocabulary"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "B",
+        "options": [
+          "The workshop was well received by everyone who attended it last week.",
+          "To do so, they should submit the online registration form by April 25.",
+          "Unfortunately, the caterer will not be able to provide meals that day.",
+          "Supervisors interviewed several candidates for the instructor position."
+        ],
+        "explanation": "Câu trước nói nhân viên khác có thể tham gia → câu chèn hướng dẫn cách đăng ký 'To do so, they should submit the online registration form by April 25' (B). (A) sai thời gian (hội thảo diễn ra tháng 5); (C) mâu thuẫn với 'Lunch will be provided'; (D) lạc mạch.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "C",
+        "options": [
+          "accurately",
+          "accuracy",
+          "accurate",
+          "accurateness"
+        ],
+        "explanation": "Giữa mạo từ 'an' và danh từ 'order' cần tính từ → 'accurate' (chính xác) (C). (A) trạng từ; (B), (D) danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

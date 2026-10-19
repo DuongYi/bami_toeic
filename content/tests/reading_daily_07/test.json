@@ -1,0 +1,284 @@
+{
+  "title": "Reading mỗi ngày · Ngày 07",
+  "source": "Bami TOEIC",
+  "description": "Đọc hiểu chủ đề sản xuất và vận hành nhà máy, band 450–600.",
+  "is_free": true,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "B",
+          "content": "The new packaging machine has made the production line at the Halston plant much more -------.",
+          "options": [
+            "efficiently",
+            "efficient",
+            "efficiencies",
+            "efficiency"
+          ],
+          "explanation": "Sau 'much more' và động từ 'has made the production line' (make + tân ngữ + tính từ) cần tính từ → (B) 'efficient' (hiệu quả). (A) là trạng từ, (D), (C) là danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "A",
+          "content": "Ms. Ramirez gave a clear ------- of the updated safety procedures to the night-shift workers.",
+          "options": [
+            "explanation",
+            "explain",
+            "explanatory",
+            "explained"
+          ],
+          "explanation": "Sau mạo từ 'a' và tính từ 'clear', trước giới từ 'of' cần danh từ → (A) 'explanation' (lời giải thích). (B), (D) là động từ, (C) là tính từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "D",
+          "content": "Brennick Metalworks will ------- production of its older drill model at the end of next month.",
+          "options": [
+            "disintegrate",
+            "dismiss",
+            "disagree",
+            "discontinue"
+          ],
+          "explanation": "Cụm 'discontinue production' = ngừng sản xuất → (D). (C) 'disagree' (không đồng ý) và (A) 'disintegrate' (tan rã) là nội động từ, không đi với tân ngữ; (B) 'dismiss' (sa thải, gạt bỏ) không hợp với 'production'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "B",
+          "content": "All machines on the factory floor receive regular ------- to prevent unexpected breakdowns.",
+          "options": [
+            "accommodation",
+            "maintenance",
+            "appearance",
+            "allowance"
+          ],
+          "explanation": "Máy móc được 'bảo trì' định kỳ để tránh hỏng hóc → (B) 'maintenance'. (A) 'accommodation' (chỗ ở), (C) 'appearance' (vẻ ngoài), (D) 'allowance' (trợ cấp) không hợp nghĩa.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "C",
+          "content": "Work on the assembly line was stopped for two hours ------- a power failure in the east building.",
+          "options": [
+            "unless",
+            "even though",
+            "because of",
+            "although"
+          ],
+          "explanation": "Sau chỗ trống là cụm danh từ 'a power failure' chỉ nguyên nhân → giới từ (C) 'because of' (vì). (D), (B), (A) là liên từ, phải theo sau bởi mệnh đề.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "A",
+          "content": "Mr. Kobayashi ------- the Lakeview plant since it first opened in 2015.",
+          "options": [
+            "has managed",
+            "manages",
+            "will be managing",
+            "is managing"
+          ],
+          "explanation": "'since it first opened in 2015' (từ năm 2015 đến nay) → thì hiện tại hoàn thành (A) 'has managed'. (B) hiện tại đơn, (D) hiện tại tiếp diễn, (C) tương lai không đi với 'since'.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "C",
+          "content": "The engineers repaired the conveyor belt -------, so they did not need to call the supplier.",
+          "options": [
+            "their",
+            "them",
+            "themselves",
+            "they"
+          ],
+          "explanation": "Câu đã đủ chủ ngữ 'The engineers' và tân ngữ 'the conveyor belt'; chỗ trống nhấn mạnh 'tự họ làm' → đại từ phản thân (C) 'themselves'. (B) tân ngữ, (A) tính từ sở hữu cần danh từ theo sau, (D) chủ ngữ.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "D",
+          "content": "The ------- of the storage area will give warehouse workers more room to move pallets safely.",
+          "options": [
+            "expansive",
+            "expanded",
+            "expand",
+            "expansion"
+          ],
+          "explanation": "Sau 'The' và trước 'of' cần danh từ làm chủ ngữ → (D) 'expansion' (việc mở rộng). (C) động từ, (B) động từ quá khứ/phân từ, (A) tính từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "NOTICE TO ALL PRODUCTION STAFF\n\nFrom: Plant Management, Brennick Metalworks\nDate: March 3\n\nThe main assembly line at our Halston plant ---(131)--- on Saturday, March 9, for its yearly safety inspection. During this time, a team from Delmont Safety Services will check every machine on the floor. ---(132)---\n\nStaff who normally work on the line on Saturdays will not operate any machines that day. ---(133)---, they will help with cleaning and organizing the storage rooms. They will still receive their regular pay. Please report to Room 4 at 8:00 A.M. to receive your tasks.\n\nIf you have any questions, please contact Ms. Nwosu in the operations office at 555-0142. Thank you for your ---(134)---.",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "A",
+          "options": [
+            "will be shut down",
+            "was shut down",
+            "has been shutting down",
+            "shutting down"
+          ],
+          "explanation": "Thông báo đề ngày 3/3, nói về việc sẽ xảy ra vào thứ Bảy 9/3 → cần thì tương lai; dây chuyền 'bị' dừng nên dùng bị động → (A) 'will be shut down'. (B) quá khứ, (C) hiện tại hoàn thành tiếp diễn chủ động, (D) V-ing không làm động từ chính được.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "B",
+          "options": [
+            "Our new line will produce twice as many parts.",
+            "The inspection is expected to take the whole day.",
+            "The parts were shipped to the customer yesterday.",
+            "Thank you for attending last week's training session."
+          ],
+          "explanation": "Câu trước nói đội kiểm tra sẽ kiểm tra mọi máy; câu sau nói nhân viên sẽ không vận hành máy cả ngày hôm đó → (B) 'việc kiểm tra dự kiến kéo dài cả ngày' nối mạch hợp lý. (A), (D), (C) lạc chủ đề kiểm tra an toàn.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "D",
+          "options": [
+            "In addition",
+            "For example",
+            "Similarly",
+            "Instead"
+          ],
+          "explanation": "Câu trước: nhân viên sẽ không vận hành máy; câu sau: họ sẽ dọn dẹp kho → làm việc khác thay thế → (D) 'Instead' (thay vào đó). (C) 'Similarly' (tương tự), (B) 'For example' (ví dụ), (A) 'In addition' (thêm vào đó) không thể hiện quan hệ thay thế.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "C",
+          "options": [
+            "cooperate",
+            "cooperative",
+            "cooperation",
+            "cooperatively"
+          ],
+          "explanation": "Sau tính từ sở hữu 'your' cần danh từ → (C) 'cooperation' (sự hợp tác). 'Thank you for your cooperation' là cách kết thúc thông báo quen thuộc. (A) động từ, (B) tính từ, (D) trạng từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "E-mail\n\nTo: Arjun Iyer <aiyer@tovaline-foods.com>\nFrom: Hana Fujita <hfujita@quellmont-packaging.com>\nDate: May 14\nSubject: Order #4471\n\nDear Mr. Iyer,\n\nThank you for your order of 20,000 plastic food containers. Unfortunately, one of the two molding machines at our Westbury factory stopped working on Monday, and a replacement part will not arrive until May 20. Because of this, we can produce only half of your order by the original delivery date of May 22.\n\nWe can offer you two options. First, we can send 10,000 containers on May 22 and the rest on May 29. Second, we can send the full order on May 29. In either case, we will not charge you for shipping.\n\nPlease let me know which option you prefer by Friday so that we can plan our production schedule. I am sorry for the trouble.\n\nSincerely,\nHana Fujita\nCustomer Accounts Manager, Quellmont Packaging",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "A",
+          "content": "What is the purpose of the e-mail?",
+          "options": [
+            "To explain a problem with an order",
+            "To introduce a new type of container",
+            "To announce the opening of a factory",
+            "To request payment for a shipment"
+          ],
+          "explanation": "Đoạn 1: một máy ép khuôn bị hỏng nên 'we can produce only half of your order by the original delivery date' → mục đích là báo vấn đề với đơn hàng (A). Thư không giới thiệu sản phẩm mới (B), không đòi tiền (D), không nói mở nhà máy (C).",
+          "tags": [
+            "main-idea"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "C",
+          "content": "When was the complete order originally scheduled to be delivered?",
+          "options": [
+            "On May 14",
+            "On May 20",
+            "On May 22",
+            "On May 29"
+          ],
+          "explanation": "Đoạn 1: 'the original delivery date of May 22' → (C). (A) là ngày gửi thư, (B) là ngày linh kiện thay thế đến, (D) là ngày giao mới được đề xuất.",
+          "tags": [
+            "detail"
+          ],
+          "fixed_order": true
+        },
+        {
+          "number": 149,
+          "answer": "D",
+          "content": "What is suggested about Quellmont Packaging?",
+          "options": [
+            "It needs Mr. Iyer's answer by Monday.",
+            "It plans to close its Westbury factory.",
+            "It has recently bought a third molding machine.",
+            "It usually charges customers for shipping."
+          ],
+          "explanation": "Đoạn 2: 'In either case, we will not charge you for shipping' – công ty miễn phí vận chuyển như một sự bù đắp, ngụ ý bình thường khách phải trả phí vận chuyển → (D). (C), (B) không được nhắc; (A) sai vì thư cần trả lời 'by Friday'.",
+          "tags": [
+            "inference"
+          ]
+        }
+      ]
+    }
+  ]
+}

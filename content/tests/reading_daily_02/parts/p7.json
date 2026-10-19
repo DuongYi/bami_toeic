@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "From: Ravi Patel <rpatel@northgateconsulting.com>\nTo: Sofia Moreau <smoreau@northgateconsulting.com>\nDate: October 2\nSubject: Supply order\n\nHi Sofia,\n\nI checked the supply closet this morning, and we are almost out of printer paper and blue ink cartridges. We also need more file folders for the three new employees who start next week.\n\nI have attached a list of the items and the amounts we usually order. Could you place the order with Greenmark Office Supply today? Orders made before 3:00 P.M. arrive the next morning.\n\nPlease note that Greenmark has moved its warehouse, so the driver will now come to the back entrance instead of the main lobby. I will let the security desk know.\n\nThanks,\nRavi",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "D",
+        "content": "Why did Mr. Patel write the e-mail?",
+        "options": [
+          "To welcome some new employees",
+          "To report a problem with the office printer",
+          "To complain about a late delivery",
+          "To ask a coworker to order supplies"
+        ],
+        "explanation": "Đoạn 2: 'Could you place the order with Greenmark Office Supply today?' → mục đích là nhờ đồng nghiệp đặt văn phòng phẩm (D). Nhân viên mới (A) chỉ là lý do cần thêm bìa hồ sơ; bài không nói máy in hỏng (B) hay giao hàng trễ (C).",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "B",
+        "content": "What is included with the e-mail?",
+        "options": [
+          "A delivery receipt",
+          "A list of needed items",
+          "A map of a warehouse",
+          "A training schedule"
+        ],
+        "explanation": "Đoạn 2: 'I have attached a list of the items and the amounts we usually order' → kèm theo danh sách các món cần đặt (B). (A), (C), (D) không được nhắc là tệp đính kèm.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "A",
+        "content": "What is suggested about Greenmark Office Supply?",
+        "options": [
+          "It used to deliver to the main lobby.",
+          "It is located next to Mr. Patel's office.",
+          "It has stopped selling ink cartridges.",
+          "It charges extra for morning deliveries."
+        ],
+        "explanation": "Câu suy luận. Đoạn 3: 'the driver will now come to the back entrance instead of the main lobby' → suy ra trước đây Greenmark giao hàng ở sảnh chính (A). (B) không có căn cứ (kho vừa chuyển đi); (C) trái với việc vẫn đặt mực in; (D) không được nhắc.",
+        "tags": [
+          "inference"
+        ]
+      }
+    ]
+  }
+]

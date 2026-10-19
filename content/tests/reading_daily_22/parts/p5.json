@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "A",
+        "content": "The Halvorsen Gallery's new lighting system allows visitors to view the paintings more ------- than before.",
+        "options": [
+          "clearly",
+          "clear",
+          "clarity",
+          "clearest"
+        ],
+        "explanation": "Từ loại: sau động từ 'view' + 'more … than before' cần trạng từ bổ nghĩa cho động từ → (A) 'clearly' (rõ hơn). (B), (D) là tính từ; (C) là danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "B",
+        "content": "Ms. Tanaka has been ------- to curate the museum's autumn exhibition of contemporary ceramics.",
+        "options": [
+          "admitted",
+          "selected",
+          "attended",
+          "located"
+        ],
+        "explanation": "Từ vựng: 'be selected to + V' = được chọn để làm gì → (B): bà Tanaka được chọn để phụ trách triển lãm. (A) 'admitted' (được nhận vào), (C) 'attended' (tham dự), (D) 'located' (đặt ở) không hợp nghĩa.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "C",
+        "content": "------- the east wing is being renovated, special exhibits will be displayed in the lobby of the Brightwater Museum.",
+        "options": [
+          "Despite",
+          "During",
+          "While",
+          "Unless"
+        ],
+        "explanation": "Liên từ: chỗ trống đứng trước mệnh đề đầy đủ ('the east wing is being renovated') → cần liên từ. (C) 'While' (trong khi) hợp nghĩa. (A), (B) là giới từ, không đi với mệnh đề; (D) 'Unless' (trừ khi) sai nghĩa.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "D",
+        "content": "Artists whose work is chosen for the juried show will be contacted by e-mail, and ------- pieces must arrive at the gallery by May 3.",
+        "options": [
+          "them",
+          "theirs",
+          "themselves",
+          "their"
+        ],
+        "explanation": "Đại từ: trước danh từ 'pieces' cần tính từ sở hữu → (D) 'their' (tác phẩm của các nghệ sĩ). (A) tân ngữ, (B) đại từ sở hữu đứng một mình, (C) phản thân – đều không đứng trước danh từ.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "B",
+        "content": "Admission to the sculpture garden is free, but a small donation is always ------- appreciated.",
+        "options": [
+          "great",
+          "greatly",
+          "greater",
+          "greatness"
+        ],
+        "explanation": "Từ loại: chen giữa 'is' và quá khứ phân từ 'appreciated' cần trạng từ → (B) 'greatly' (rất được trân trọng). (A), (C) tính từ; (D) danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "A",
+        "content": "The museum's education department offers guided tours that are ------- to the interests of school groups.",
+        "options": [
+          "tailored",
+          "composed",
+          "informed",
+          "conducted"
+        ],
+        "explanation": "Từ vựng – collocation: 'be tailored to + N' = được thiết kế riêng cho → (A). (B) 'composed of' (gồm), (C) 'informed of' (được thông báo), (D) 'conducted' (được tiến hành) không đi với 'to the interests of'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "C",
+        "content": "By the time the Correia retrospective opens next month, the restoration team ------- work on all twelve canvases.",
+        "options": [
+          "has completed",
+          "completes",
+          "will have completed",
+          "had completed"
+        ],
+        "explanation": "Thì: 'By the time + hiện tại đơn (opens next month)' chỉ mốc tương lai → hành động hoàn tất trước mốc đó dùng tương lai hoàn thành (C) 'will have completed'. (D) quá khứ hoàn thành dùng với mốc quá khứ; (A), (B) không khớp mốc tương lai.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "D",
+        "content": "The Lindqvist Arts Council awards grants to emerging artists based on the ------- of their proposed projects.",
+        "options": [
+          "original",
+          "originally",
+          "originate",
+          "originality"
+        ],
+        "explanation": "Từ loại: sau mạo từ 'the' và trước 'of' cần danh từ → (D) 'originality' (tính độc đáo). (A) tính từ, (B) trạng từ, (C) động từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

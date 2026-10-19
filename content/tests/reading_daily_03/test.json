@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 03",
+  "source": "Bami TOEIC",
+  "description": "Ôn Reading 15 câu chủ đề mua sắm bán lẻ, mức 450–600.",
+  "is_free": true,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "A",
+          "content": "Fairway Home Goods offers a wide ------- of kitchen products at low prices.",
+          "options": [
+            "selection",
+            "selectively",
+            "select",
+            "selective"
+          ],
+          "explanation": "Sau mạo từ 'a' và tính từ 'wide', trước 'of' cần danh từ: 'a wide selection of' (nhiều lựa chọn) (A). (C) là động từ, (D) tính từ, (B) trạng từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "B",
+          "content": "Customers who are not ------- satisfied with their purchase may return it within 30 days.",
+          "options": [
+            "completion",
+            "completely",
+            "completed",
+            "complete"
+          ],
+          "explanation": "Chỗ trống đứng trước tính từ 'satisfied' → cần trạng từ bổ nghĩa cho tính từ: 'completely satisfied' (hoàn toàn hài lòng) (B). (D), (C) là tính từ/động từ, (A) là danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "C",
+          "content": "Shoppers can ------- 20 percent on all winter coats during this weekend's sale.",
+          "options": [
+            "decrease",
+            "reduce",
+            "save",
+            "lower"
+          ],
+          "explanation": "Cụm 'save + số tiền/phần trăm + on + món hàng' = tiết kiệm được bao nhiêu khi mua (C). (B), (D), (A) cần tân ngữ là giá (reduce the price), không có cấu trúc 'reduce 20 percent on coats' với chủ ngữ là người mua.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "A",
+          "content": "Please ask a sales ------- if you need help finding the right size.",
+          "options": [
+            "associate",
+            "product",
+            "receipt",
+            "office"
+          ],
+          "explanation": "'sales associate' = nhân viên bán hàng – người có thể giúp tìm cỡ phù hợp (A). (D) văn phòng, (B) sản phẩm, (C) hoá đơn – không thể 'hỏi' để được giúp.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "B",
+          "content": "The electronics department is located ------- the second floor, next to the café.",
+          "options": [
+            "at",
+            "on",
+            "in",
+            "by"
+          ],
+          "explanation": "Dùng 'on' với tầng của toà nhà: 'on the second floor' (B). (A) 'at', (C) 'in', (D) 'by' không đi với 'floor' trong nghĩa 'ở tầng'.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "D",
+          "content": "Mr. Brennan ------- for a new laptop for several weeks before he finally chose one.",
+          "options": [
+            "looks",
+            "will look",
+            "is looking",
+            "had been looking"
+          ],
+          "explanation": "Hành động kéo dài 'for several weeks' xảy ra trước một hành động quá khứ khác 'before he finally chose' → quá khứ hoàn thành tiếp diễn 'had been looking' (D). (C), (A) hiện tại, (B) tương lai – không hợp với 'chose'.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "D",
+          "content": "Ms. Takeda returned the blender to the store because ------- did not work properly.",
+          "options": [
+            "its",
+            "itself",
+            "they",
+            "it"
+          ],
+          "explanation": "Cần đại từ chủ ngữ số ít thay cho 'the blender' trong mệnh đề 'because … did not work' → 'it' (D). (A) là tính từ sở hữu, (B) đại từ phản thân, (C) số nhiều – không hợp với 'the blender'.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "C",
+          "content": "The store's new self-checkout machines are ------- to use, even for first-time shoppers.",
+          "options": [
+            "simply",
+            "simplify",
+            "simple",
+            "simplicity"
+          ],
+          "explanation": "Sau động từ 'are' cần tính từ làm bổ ngữ: 'be simple to use' (dễ sử dụng) (C). (B) động từ, (A) trạng từ, (D) danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "Silva's Outdoor Outlet – Grand Reopening!\n\nAfter two months of renovation, Silva's Outdoor Outlet ---(131)--- its doors again on Saturday, April 12. Our store is now twice as large, with more room for camping gear, sports clothing, and bicycles. ---(132)---\n\nTo celebrate, all hiking boots will be sold at half price ---(133)--- the opening weekend. In addition, the first 50 shoppers on Saturday will receive a free water bottle. Members of our rewards program will also earn double points on every ---(134)---.\n\nVisit us at 82 Elm Street or call 555-0183 for more information.",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "B",
+          "options": [
+            "has opened",
+            "will open",
+            "opened",
+            "was opening"
+          ],
+          "explanation": "Quảng cáo mời khách đến dịp khai trương lại sắp diễn ra (các ưu đãi 'will be sold', 'will receive') → dùng tương lai 'will open' (B). (C), (D) quá khứ, (A) hiện tại hoàn thành – không hợp với sự kiện chưa diễn ra.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "D",
+          "options": [
+            "The store was closed for only one day.",
+            "The renovation work on the second floor will begin early next month.",
+            "Please return your camping gear by Friday.",
+            "We have also added a repair counter for bicycles and tents."
+          ],
+          "explanation": "Câu trước giới thiệu cửa hàng mới được mở rộng → câu chèn tiếp tục nêu điểm mới: 'also added a repair counter' (D). (A) mâu thuẫn với 'two months of renovation'; (B) mâu thuẫn vì việc cải tạo đã xong; (C) không liên quan.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "C",
+          "options": [
+            "since",
+            "while",
+            "during",
+            "among"
+          ],
+          "explanation": "Trước cụm danh từ chỉ khoảng thời gian 'the opening weekend' cần giới từ 'during' (trong suốt) (C). (B) 'while' là liên từ, cần mệnh đề; (A) 'since' (kể từ) cần thì hoàn thành; (D) 'among' (giữa) không chỉ thời gian.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "A",
+          "options": [
+            "purchase",
+            "purchased",
+            "purchasing",
+            "purchaser"
+          ],
+          "explanation": "Sau 'every' cần danh từ số ít; nghĩa 'nhân đôi điểm cho mỗi lần mua hàng' → 'purchase' (A). (B), (C) là dạng động từ; (D) 'purchaser' (người mua) không hợp nghĩa 'earn points on every …'.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Kwame Mensah (10:02 A.M.)\nHi Aiko, I'm at Lakeside Mall picking up the new printer for our shop. The store has the model we wanted, but only in gray, not white.\n\nAiko Takeda (10:04 A.M.)\nGray is fine. Is it still on sale?\n\nKwame Mensah (10:05 A.M.)\nYes, it's $40 off until Sunday. The clerk also said they can deliver it tomorrow at no charge.\n\nAiko Takeda (10:07 A.M.)\nGreat. Then you don't need to carry it to the car. Have them send it to the shop. I'll be there all day tomorrow to receive it.\n\nKwame Mensah (10:08 A.M.)\nSounds good. I'll pay now and give them our address.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "B",
+          "content": "According to Mr. Mensah, what will end on Sunday?",
+          "options": [
+            "A product warranty",
+            "A price discount",
+            "A store's opening hours",
+            "Free delivery"
+          ],
+          "explanation": "Lúc 10:05 Mr. Mensah viết: 'it's $40 off until Sunday' → mức giảm giá kết thúc vào Chủ nhật (B). (D) giao hàng miễn phí được nhắc nhưng không gắn với Chủ nhật; (C), (A) không được nhắc.",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "C",
+          "content": "At 10:04 A.M., what does Ms. Takeda most likely mean when she writes, \"Gray is fine\"?",
+          "options": [
+            "She prefers a different model.",
+            "She thinks the printer is too expensive.",
+            "She will accept a different color.",
+            "She wants to go to the mall herself."
+          ],
+          "explanation": "Mr. Mensah báo cửa hàng chỉ còn màu xám, không có màu trắng; Ms. Takeda trả lời 'Gray is fine' → bà chấp nhận màu khác (C). (B) sai vì bà hỏi tiếp về giảm giá, không chê đắt; (A) sai vì đây đúng mẫu họ muốn; (D) không có căn cứ.",
+          "tags": [
+            "implied-meaning"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "D",
+          "content": "What is suggested about Ms. Takeda?",
+          "options": [
+            "She wants to pick up the printer herself.",
+            "She is employed at Lakeside Mall.",
+            "She has already paid for the printer.",
+            "She plans to work at the shop tomorrow."
+          ],
+          "explanation": "Câu suy luận. Lúc 10:07 Ms. Takeda viết 'I'll be there all day tomorrow to receive it' (there = the shop) → suy ra ngày mai bà sẽ có mặt làm việc ở cửa hàng (D). (B) sai vì Mr. Mensah mới là người đang ở trung tâm thương mại; (A) trái với 'Have them send it to the shop'; (C) sai vì Mr. Mensah nói 'I'll pay now'.",
+          "tags": [
+            "inference"
+          ]
+        }
+      ]
+    }
+  ]
+}

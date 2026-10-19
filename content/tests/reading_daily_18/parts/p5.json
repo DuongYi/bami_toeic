@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "A",
+        "content": "Items purchased during the clearance sale are not ------- for a refund but may be exchanged for store credit.",
+        "options": [
+          "eligible",
+          "entitled",
+          "capable",
+          "possible"
+        ],
+        "explanation": "Từ vựng – kết hợp từ: 'be eligible for + danh từ' = đủ điều kiện được hưởng → (A). (B) 'entitled' đi với 'to'; (C) 'capable' đi với 'of'; (D) 'possible' không dùng với chủ ngữ là đồ vật theo nghĩa này.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "A",
+        "content": "If a replacement part does not arrive within ten days, customers may contact the manufacturer ------- or ask the store to do so on their behalf.",
+        "options": [
+          "themselves",
+          "their",
+          "them",
+          "theirs"
+        ],
+        "explanation": "Đại từ: vế sau 'or ask the store to do so on their behalf' (nhờ cửa hàng làm thay) đối lập với việc khách 'tự liên hệ' → đại từ phản thân nhấn mạnh (A) 'themselves'. (B) 'their' cần danh từ theo sau; (C) 'them' và (D) 'theirs' không có nghĩa 'tự mình'.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "A",
+        "content": "Ms. Kapoor handled the customer's complaint ------- and resolved the issue within an hour.",
+        "options": [
+          "professionally",
+          "professional",
+          "profession",
+          "professionalism"
+        ],
+        "explanation": "Từ loại: câu đã đủ 'handled the customer's complaint', chỗ trống bổ nghĩa cho động từ 'handled' → trạng từ (A) 'professionally'. (B) tính từ; (C), (D) là danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "A",
+        "content": "Returns will be accepted ------- the original receipt or order confirmation is presented at the counter.",
+        "options": [
+          "only if",
+          "even if",
+          "as if",
+          "so that"
+        ],
+        "explanation": "Liên từ: hóa đơn là điều kiện bắt buộc để nhận đổi trả → (A) 'only if' (chỉ khi). (B) 'even if' (ngay cả khi) làm mất ý điều kiện; (C) 'as if' (như thể) và (D) 'so that' (để mà) sai nghĩa.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "A",
+        "content": "All refund requests submitted through our Web site ------- within five business days of receipt.",
+        "options": [
+          "are processed",
+          "process",
+          "are processing",
+          "have processed"
+        ],
+        "explanation": "Dạng động từ: chủ ngữ 'All refund requests' (yêu cầu hoàn tiền) chịu tác động 'được xử lý' → bị động (A) 'are processed'. (B), (C), (D) đều là chủ động, ngụ ý yêu cầu tự xử lý việc khác.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "A",
+        "content": "Our representatives are trained to ------- customer concerns promptly and courteously.",
+        "options": [
+          "address",
+          "attend",
+          "respond",
+          "reply"
+        ],
+        "explanation": "Từ vựng – kết hợp từ: chỗ trống đi thẳng với tân ngữ 'customer concerns' → cần ngoại động từ (A) 'address' (giải quyết). (B) 'attend' (theo nghĩa xử lý) cần 'to'; (C) 'respond' và (D) 'reply' cũng cần 'to' trước tân ngữ.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "A",
+        "content": "Pinecrest Outfitters has received fewer complaints since it introduced a more ------- return policy.",
+        "options": [
+          "flexible",
+          "flexibly",
+          "flexibility",
+          "flexes"
+        ],
+        "explanation": "Từ loại: giữa 'a more' và danh từ 'return policy' cần tính từ → (A) 'flexible' (linh hoạt). (B) trạng từ, (C) danh từ, (D) động từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "A",
+        "content": "Mr. Barros was offered a full refund ------- a replacement, as the blender he ordered had been discontinued.",
+        "options": [
+          "instead of",
+          "as well as",
+          "because of",
+          "according to"
+        ],
+        "explanation": "Giới từ theo ngữ cảnh: vế sau cho biết máy xay đã ngừng sản xuất ('had been discontinued') nên không thể đổi máy mới → được hoàn tiền thay vì đổi hàng → (A) 'instead of'. (B) 'as well as' (cùng với) mâu thuẫn vì không còn hàng thay thế; (C) 'because of' và (D) 'according to' sai nghĩa.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "B",
+        "content": "Tenants are reminded that the freight elevator is reserved ------- for deliveries and furniture moves.",
+        "options": [
+          "exclusive",
+          "exclusively",
+          "exclusion",
+          "exclusiveness"
+        ],
+        "explanation": "Từ loại: sau quá khứ phân từ 'reserved' và trước cụm giới từ 'for deliveries' cần trạng từ → (B) 'exclusively' (chỉ dành riêng). (A) tính từ; (C), (D) danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "A",
+        "content": "Water service to the north tower will be ------- interrupted on Saturday morning while plumbers replace a main valve.",
+        "options": [
+          "briefly",
+          "shortly",
+          "soon",
+          "lately"
+        ],
+        "explanation": "Từ vựng cận nghĩa: 'briefly interrupted' = bị gián đoạn trong thời gian ngắn → (A). (B) 'shortly' và (C) 'soon' nghĩa là 'sắp, chẳng bao lâu nữa' (khoảng thời gian trước khi việc xảy ra) – thừa vì đã có 'on Saturday'; (D) 'lately' (gần đây) dùng với hiện tại hoàn thành.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "C",
+        "content": "The heating system will remain in winter mode ------- the outdoor temperature stays above 15 degrees for three consecutive days.",
+        "options": [
+          "by",
+          "since",
+          "until",
+          "whereas"
+        ],
+        "explanation": "Liên từ: vế sau là mệnh đề và nghĩa 'giữ chế độ hiện tại cho đến khi nhiệt độ tăng' → (C) 'until'. (A) 'by' là giới từ, không đi với mệnh đề; (B) 'since' (từ khi / vì) và (D) 'whereas' (trong khi đó – đối lập) sai nghĩa.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "D",
+        "content": "The building engineer asked that anyone noticing a drop in water pressure report it to ------- directly rather than to the front desk.",
+        "options": [
+          "he",
+          "his",
+          "himself",
+          "him"
+        ],
+        "explanation": "Đại từ: sau động từ 'report it to' cần tân ngữ → (D) 'him' (kỹ sư toà nhà). (A) chủ ngữ; (B) sở hữu; (C) phản thân chỉ dùng khi chủ ngữ và tân ngữ là một người – ở đây chủ ngữ của 'report' là 'anyone'.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "B",
+        "content": "Because the generator had not been tested in over a year, the facilities manager ------- a full inspection before the storm season.",
+        "options": [
+          "appointed",
+          "scheduled",
+          "reserved",
+          "occupied"
+        ],
+        "explanation": "Từ vựng: 'schedule an inspection' = lên lịch kiểm tra → (B). (A) 'appointed' dùng cho người (bổ nhiệm); (C) 'reserved' dùng cho chỗ/phòng; (D) 'occupied' (chiếm giữ) không hợp nghĩa.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "A",
+        "content": "The parking garage lights ------- with LED fixtures last month, and electricity costs for the garage have already fallen by 20 percent.",
+        "options": [
+          "were replaced",
+          "have been replaced",
+          "will be replaced",
+          "are replacing"
+        ],
+        "explanation": "Thì + thể: mốc 'last month' → quá khứ đơn; đèn được thay → bị động → (A) 'were replaced'. (B) hiện tại hoàn thành không đi với mốc quá khứ xác định; (C) tương lai mâu thuẫn với 'have already fallen'; (D) chủ động sai nghĩa.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "C",
+        "content": "Maintenance staff must wear protective gloves when handling certain cleaning products, which can be ------- to the skin.",
+        "options": [
+          "irritate",
+          "irritated",
+          "irritating",
+          "irritation"
+        ],
+        "explanation": "Từ loại: sau 'can be' cần tính từ; chủ ngữ 'cleaning products' là tác nhân gây kích ứng → tính từ đuôi -ing (C) 'irritating'. (B) 'irritated' mô tả thứ bị kích ứng; (A) động từ; (D) danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "D",
+        "content": "------- the recent upgrades to the ventilation system, some offices on the fifth floor still feel warm in the afternoon.",
+        "options": [
+          "Although",
+          "Because of",
+          "Even so",
+          "Despite"
+        ],
+        "explanation": "Giới từ: sau chỗ trống là cụm danh từ ('the recent upgrades…') và quan hệ tương phản với 'still feel warm' → (D) 'Despite'. (A) 'Although' cần mệnh đề; (B) 'Because of' sai nghĩa; (C) 'Even so' là trạng từ nối, không đứng trước cụm danh từ.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  }
+]

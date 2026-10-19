@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "B",
+        "content": "Guests at the Harborlight Inn can ------- reserve a table at the rooftop restaurant through the front desk.",
+        "options": [
+          "easy",
+          "easily",
+          "ease",
+          "easier"
+        ],
+        "explanation": "Chỗ trống đứng giữa động từ khuyết thiếu 'can' và động từ 'reserve' → cần trạng từ bổ nghĩa cho động từ: 'easily' (dễ dàng) (B). (A) là tính từ, (C) là danh từ/động từ, (D) là tính từ so sánh hơn – không bổ nghĩa cho động từ được.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "A",
+        "content": "The new chef at Copperleaf Bistro has received many ------- reviews from local food critics.",
+        "options": [
+          "favorable",
+          "favorably",
+          "favor",
+          "favoring"
+        ],
+        "explanation": "Chỗ trống đứng trước danh từ 'reviews' → cần tính từ: 'favorable reviews' (những bài đánh giá tốt) (A). (B) là trạng từ, (C) là danh từ/động từ, (D) là V-ing không đi với 'reviews' theo nghĩa này.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "C",
+        "content": "Please ------- the kitchen staff if you have any food allergies.",
+        "options": [
+          "explain",
+          "describe",
+          "inform",
+          "announce"
+        ],
+        "explanation": "Cấu trúc 'inform + người' = thông báo cho ai (C). (A) 'explain' và (D) 'announce' phải đi với 'to + người' (explain to the staff); (B) 'describe the staff' nghĩa là miêu tả nhân viên – không hợp nghĩa.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "D",
+        "content": "Room service is ------- 24 hours a day for all guests staying on the executive floor.",
+        "options": [
+          "possible",
+          "capable",
+          "eligible",
+          "available"
+        ],
+        "explanation": "'be available' = có sẵn, phục vụ được → 'Room service is available 24 hours a day' (dịch vụ phòng phục vụ 24 giờ) (D). (B) 'capable' cần 'of' và chủ ngữ là người; (C) 'eligible' (đủ điều kiện) dùng cho người; (A) 'possible' không dùng để nói dịch vụ đang phục vụ.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "A",
+        "content": "The breakfast buffet is served ------- 6:30 A.M. and 10:00 A.M. every day.",
+        "options": [
+          "between",
+          "from",
+          "during",
+          "until"
+        ],
+        "explanation": "Cặp cố định 'between … and …' (trong khoảng từ … đến …) → (A). (B) 'from' phải đi với 'to/until'; (C) 'during' đi với khoảng thời gian (during breakfast); (D) 'until' không đi với 'and'.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "B",
+        "content": "Ms. Alvarez ------- the hotel's banquet hall for her company's dinner last week.",
+        "options": [
+          "books",
+          "booked",
+          "will book",
+          "booking"
+        ],
+        "explanation": "Dấu hiệu 'last week' (tuần trước) → thì quá khứ đơn 'booked' (B). (A) hiện tại, (C) tương lai không hợp mốc thời gian; (D) V-ing không thể làm động từ chính.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "C",
+        "content": "Guests are asked to return ------- room keys to the front desk at checkout.",
+        "options": [
+          "they",
+          "them",
+          "their",
+          "themselves"
+        ],
+        "explanation": "Chỗ trống đứng trước cụm danh từ 'room keys' → cần tính từ sở hữu 'their' (chìa khoá phòng của họ) (C). (A) là đại từ chủ ngữ, (B) là tân ngữ, (D) là đại từ phản thân – không đứng trước danh từ.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "D",
+        "content": "The restaurant manager thanked the staff for their ------- during the busy holiday season.",
+        "options": [
+          "dedicate",
+          "dedicated",
+          "dedicates",
+          "dedication"
+        ],
+        "explanation": "Sau tính từ sở hữu 'their' cần danh từ → 'dedication' (sự tận tâm) (D). (A), (C) là động từ; (B) là tính từ/quá khứ phân từ, không đứng một mình sau 'their'.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

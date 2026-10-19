@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "MEMO\n\nTo: All Staff\nFrom: Leila Haddad, Office Manager\nDate: March 9\nSubject: New meeting room booking system\n\nBeginning March 16, all meeting rooms ---(131)--- through our new online calendar. Instead of writing your name on the paper sheet outside each room, you will simply choose a room and a time on the company intranet. The system will send you an e-mail ---(132)--- your booking is complete.\n\n---(133)--- This will give other employees a chance to use the room.\n\nA short training video is available on the staff page. If you have any ---(134)---, please contact me at extension 4021.",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "B",
+        "options": [
+          "were booked",
+          "must be booked",
+          "have been booked",
+          "had booked"
+        ],
+        "explanation": "'Beginning March 16' (bắt đầu từ 16/3, sau ngày gửi memo 9/3) → quy định áp dụng trong tương lai; phòng họp 'được đặt' → bị động: 'must be booked' (B). (A), (D) là quá khứ; (C) hiện tại hoàn thành – sai mốc thời gian.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "A",
+        "options": [
+          "once",
+          "unless",
+          "although",
+          "whether"
+        ],
+        "explanation": "Hệ thống gửi e-mail khi việc đặt phòng hoàn tất → 'once' (một khi, ngay khi) (A). (B) 'unless' (trừ khi), (C) 'although' (mặc dù) không hợp nghĩa; (D) 'whether' (liệu) không dùng trong mệnh đề thời gian.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "C",
+        "options": [
+          "The paper sheets have always worked well for us.",
+          "Our new branch office opened in another city last year.",
+          "Please cancel your booking if you no longer need a room.",
+          "All meeting rooms are cleaned every evening."
+        ],
+        "explanation": "Câu sau 'This will give other employees a chance to use the room' → câu chèn phải là hành động giúp người khác có phòng: huỷ đặt phòng khi không cần (C). (A) mâu thuẫn với việc đổi hệ thống; (B) và (D) không liên quan đến việc nhường phòng.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "D",
+        "options": [
+          "questioned",
+          "questioning",
+          "questionable",
+          "questions"
+        ],
+        "explanation": "Sau 'any' trong câu điều kiện cần danh từ → 'questions' (câu hỏi) (D). (A), (B) là dạng động từ; (C) là tính từ (đáng ngờ) – không làm tân ngữ của 'have'.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

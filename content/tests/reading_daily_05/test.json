@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 05",
+  "source": "Bami TOEIC",
+  "description": "Đề Reading 15 câu chủ đề nhân sự và tuyển dụng, band 450–600.",
+  "is_free": true,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "B",
+          "content": "All job applicants must include a letter of ------- from a former employer.",
+          "options": [
+            "recommended",
+            "recommendation",
+            "recommend",
+            "recommends"
+          ],
+          "explanation": "Sau giới từ \"of\" cần danh từ; \"a letter of recommendation\" = thư giới thiệu → (B). (C), (D) là động từ, (A) là quá khứ phân từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "C",
+          "content": "Ms. Adeyemi was hired for the position because she is highly ------- in data analysis.",
+          "options": [
+            "skill",
+            "skills",
+            "skilled",
+            "skillfully"
+          ],
+          "explanation": "Sau động từ \"is\" và trạng từ \"highly\" cần tính từ → (C) \"skilled\" (thành thạo). (A), (B) là danh từ, (D) là trạng từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "A",
+          "content": "The human resources team reviewed the résumés ------- before choosing five candidates for interviews.",
+          "options": [
+            "carefully",
+            "careful",
+            "careless",
+            "care"
+          ],
+          "explanation": "Câu đã đủ chủ ngữ – động từ – tân ngữ (\"reviewed the résumés\"), chỗ trống cần trạng từ bổ nghĩa cho động từ → (A) \"carefully\" (cẩn thận). (B), (C) là tính từ, (D) là danh từ/động từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "A",
+          "content": "New employees will ------- a two-day orientation session before starting their regular duties.",
+          "options": [
+            "attend",
+            "inform",
+            "assign",
+            "employ"
+          ],
+          "explanation": "\"Attend an orientation session\" = tham dự buổi định hướng → (A). (D) thuê, (C) giao việc, (B) thông báo cho ai đó – đều không đi với \"session\" ở đây.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "B",
+          "content": "Tamsworth Analytics offers a competitive ------- and generous vacation time to all full-time staff.",
+          "options": [
+            "interview",
+            "salary",
+            "deadline",
+            "applicant"
+          ],
+          "explanation": "Công ty \"offers\" cho nhân viên một thứ đi cùng \"vacation time\" (phúc lợi) → \"a competitive salary\" = mức lương cạnh tranh (B). (D) ứng viên, (A) buổi phỏng vấn, (C) hạn chót không phải thứ công ty cung cấp như phúc lợi.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "D",
+          "content": "Applications for the sales manager position must be received ------- Friday, June 12.",
+          "options": [
+            "since",
+            "about",
+            "among",
+            "by"
+          ],
+          "explanation": "Diễn tả hạn chót (chậm nhất là thứ Sáu) → giới từ (D) \"by\". (A) \"since\" đi với thì hoàn thành; (C) \"among\" chỉ giữa nhiều người/vật; (B) \"about\" không chỉ hạn chót.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "D",
+          "content": "The hiring committee ------- the final candidate for the accounting position next Tuesday.",
+          "options": [
+            "interviewed",
+            "interviewing",
+            "has interviewed",
+            "will interview"
+          ],
+          "explanation": "Trạng từ thời gian \"next Tuesday\" chỉ tương lai → (D) \"will interview\". (A), (C) chỉ quá khứ; (B) thiếu trợ động từ nên không làm động từ chính được.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "C",
+          "content": "Mr. Dubois asked the new interns to introduce ------- at the start of the team meeting.",
+          "options": [
+            "theirs",
+            "they",
+            "themselves",
+            "their"
+          ],
+          "explanation": "Chủ thể của \"introduce\" là \"the new interns\" và tân ngữ chính là họ → dùng đại từ phản thân (C) \"themselves\" (tự giới thiệu). (B) là đại từ chủ ngữ, (D) cần danh từ theo sau, (A) là đại từ sở hữu.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "Now Hiring: Customer Service Representative\n\nQuillon Home Goods is looking for a full-time customer service representative to join the team at our Ridgeway store. The successful candidate ---(131)--- customer questions in person and by phone, process returns, and help maintain store displays.\n\nApplicants should have at least one year of experience in retail. Strong communication skills are also ---(132)---. ---(133)---\n\nWe offer health insurance, paid vacation, and a 20 percent employee discount. ---(134)---, all new employees receive paid training during their first month.\n\nTo apply, please send your résumé to Ms. Anita Mehta at hiring@quillonhome.com.",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "A",
+          "options": [
+            "will answer",
+            "has answered",
+            "was answering",
+            "answered"
+          ],
+          "explanation": "Quảng cáo tuyển dụng mô tả công việc người được tuyển sẽ làm trong tương lai (vị trí chưa có người) → (A) \"will answer\". (D), (B), (C) đều chỉ việc đã xảy ra.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "B",
+          "options": [
+            "require",
+            "required",
+            "requirement",
+            "requiring"
+          ],
+          "explanation": "Sau \"are also\" cần quá khứ phân từ để tạo câu bị động: kỹ năng giao tiếp \"được yêu cầu\" → (B) \"required\". (A) là động từ nguyên thể; (C) là danh từ số ít không có mạo từ, không hợp với chủ ngữ số nhiều; (D) mang nghĩa chủ động.",
+          "tags": [
+            "word-form"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "D",
+          "options": [
+            "The new product catalog was mailed to all of our regular customers yesterday.",
+            "Our store will be closed for repairs next week.",
+            "Thank you for shopping at Quillon Home Goods.",
+            "Knowledge of our online ordering system is helpful but not necessary."
+          ],
+          "explanation": "Đoạn 2 liệt kê yêu cầu với ứng viên (kinh nghiệm bán lẻ, kỹ năng giao tiếp) → câu (D) tiếp tục nói về điều kiện ứng tuyển. (B), (C), (A) nói với khách hàng, không liên quan đến tuyển dụng.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "C",
+          "options": [
+            "However",
+            "Otherwise",
+            "In addition",
+            "Instead"
+          ],
+          "explanation": "Câu trước liệt kê phúc lợi, câu sau nêu thêm một phúc lợi nữa (đào tạo có lương) → từ nối bổ sung (C) \"In addition\". (A) chỉ tương phản, (B) \"nếu không thì\", (D) \"thay vào đó\" đều không hợp.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "E-mail\n\nTo: Lena Johansson\nFrom: Omar Khalil, Human Resources, Tamsworth Analytics\nDate: July 2\nSubject: Interview invitation\n\nDear Ms. Johansson,\n\nThank you for applying for the marketing assistant position at Tamsworth Analytics. We were impressed by your application, and we would like to invite you to an interview on Thursday, July 9, at 10:00 A.M. The interview will take place at our main office at 48 Garnet Avenue, Suite 300.\n\nYou will meet with me and with Ms. Yuki Sato, our marketing director. The interview will last about one hour. Please bring a copy of your résumé and two examples of marketing materials you have created.\n\nVisitor parking is available behind the building. When you arrive, please check in at the front desk on the first floor.\n\nPlease reply to this e-mail by July 6 to confirm that you can attend. If this time is not convenient for you, we will do our best to find another time.\n\nSincerely,\nOmar Khalil",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "A",
+          "content": "Why did Mr. Khalil send the e-mail?",
+          "options": [
+            "To schedule a job interview",
+            "To offer Ms. Johansson a job",
+            "To request a reference letter",
+            "To describe a training course"
+          ],
+          "explanation": "Đoạn 1: \"we would like to invite you to an interview on Thursday, July 9\" → mời và hẹn lịch phỏng vấn (A). (B) chưa nhận việc; (C), (D) không được nhắc.",
+          "tags": [
+            "main-idea"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "D",
+          "content": "What is Ms. Johansson asked to bring?",
+          "options": [
+            "A signed contract",
+            "A parking permit",
+            "A form of identification",
+            "Samples of her work"
+          ],
+          "explanation": "Đoạn 2: \"Please bring a copy of your résumé and two examples of marketing materials you have created\" → mang mẫu sản phẩm đã làm (D). (B) bãi đỗ cho khách có sẵn; (A), (C) không được yêu cầu.",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "B",
+          "content": "What is suggested about the interview?",
+          "options": [
+            "It will be held online.",
+            "Its time may be changed if needed.",
+            "It will last for half a day.",
+            "It will take place in the afternoon."
+          ],
+          "explanation": "Đoạn cuối: \"If this time is not convenient for you, we will do our best to find another time\" → giờ phỏng vấn có thể đổi (B). (A) phỏng vấn tại văn phòng; (D) lúc 10:00 sáng; (C) chỉ khoảng một giờ.",
+          "tags": [
+            "inference"
+          ]
+        }
+      ]
+    }
+  ]
+}

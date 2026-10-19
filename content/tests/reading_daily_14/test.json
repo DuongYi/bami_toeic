@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 14",
+  "source": "Bami TOEIC",
+  "description": "Đọc hiểu chủ đề dịch vụ ăn uống và tổ chức sự kiện, mức 600–750.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "C",
+          "content": "Saffron Table Catering offers a ------- range of menus for weddings, conferences, and private parties.",
+          "options": [
+            "widely",
+            "widen",
+            "wide",
+            "width"
+          ],
+          "explanation": "Giữa mạo từ 'a' và danh từ 'range' cần tính từ → 'a wide range of' (nhiều loại) (C). (A) trạng từ, (B) động từ, (D) danh từ – không bổ nghĩa cho danh từ được.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "A",
+          "content": "Guests are asked to confirm their ------- at the awards dinner by April 2.",
+          "options": [
+            "attendance",
+            "attendant",
+            "attend",
+            "attended"
+          ],
+          "explanation": "Sau tính từ sở hữu 'their' cần danh từ; 'confirm their attendance' = xác nhận sự có mặt (A). (B) 'attendant' cũng là danh từ nhưng nghĩa 'người phục vụ' – không hợp; (C) động từ, (D) quá khứ phân từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "A",
+          "content": "The event planner recommended Lindmoor Hall because it can ------- up to 300 guests.",
+          "options": [
+            "accommodate",
+            "arrange",
+            "reserve",
+            "attend"
+          ],
+          "explanation": "Chủ ngữ là hội trường 'it' (Lindmoor Hall) → 'accommodate up to 300 guests' = chứa được tối đa 300 khách (A). (D) 'attend' (tham dự) cần chủ ngữ là người; (B) 'arrange' (sắp xếp) và (C) 'reserve' (đặt trước) không hợp với tân ngữ 'guests'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "D",
+          "content": "Ms. Fontaine was praised for her ------- planning, which ensured that every course was served on time.",
+          "options": [
+            "eventual",
+            "temporary",
+            "frequent",
+            "meticulous"
+          ],
+          "explanation": "Việc lên kế hoạch giúp mọi món được phục vụ đúng giờ → phải là kế hoạch 'tỉ mỉ, kỹ lưỡng' = 'meticulous' (D). (C) 'frequent' (thường xuyên), (A) 'eventual' (sau cùng), (B) 'temporary' (tạm thời) không giải thích được lời khen.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "C",
+          "content": "Desserts will be served ------- the keynote speech has ended.",
+          "options": [
+            "unless",
+            "during",
+            "once",
+            "despite"
+          ],
+          "explanation": "Sau chỗ trống là mệnh đề 'the keynote speech has ended' → cần liên từ chỉ thời gian 'once' (ngay khi) (C). (B) 'during' và (D) 'despite' là giới từ, cần danh từ; (A) 'unless' (trừ khi) sai nghĩa.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "B",
+          "content": "Mr. Mazur ------- the catering contract next week after reviewing the final guest count.",
+          "options": [
+            "has signed",
+            "will sign",
+            "was signing",
+            "signed"
+          ],
+          "explanation": "Trạng từ 'next week' chỉ tương lai → 'will sign' (B). (D) quá khứ đơn, (A) hiện tại hoàn thành, (C) quá khứ tiếp diễn đều không đi với 'next week'.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "D",
+          "content": "The clients were so pleased with the banquet that ------- requested the same menu for next year's event.",
+          "options": [
+            "themselves",
+            "their",
+            "them",
+            "they"
+          ],
+          "explanation": "Mệnh đề sau 'that' thiếu chủ ngữ cho động từ 'requested' → đại từ chủ ngữ 'they' (thay cho 'the clients') (D). (C) tân ngữ, (B) tính từ sở hữu, (A) phản thân không làm chủ ngữ được.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "B",
+          "content": "All food must be packed ------- before it is transported to the venue.",
+          "options": [
+            "carefulness",
+            "carefully",
+            "careful",
+            "cared"
+          ],
+          "explanation": "Sau động từ bị động 'must be packed' cần trạng từ chỉ cách thức → 'carefully' (cẩn thận) (B). (C) tính từ, (A) danh từ, (D) quá khứ phân từ – không bổ nghĩa cho động từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "Saffron Table Catering\n\nPlanning a company event? Let Saffron Table take care of the food so that you can focus on your guests. For more than fifteen years, we ---(131)--- delicious meals for business lunches, product launches, and holiday parties throughout the Kessler Valley area.\n\nEvery menu is created by Chef Amira Aziz, who works closely with local farms to obtain the freshest ingredients. ---(132)--- In addition to food, we can ---(133)--- tables, linens, and serving staff for events of any size.\n\nBook before June 30 and receive a 10 percent discount on any package for 50 guests or more. To request a free tasting, call us at 555-0137 or visit www.saffrontablecatering.com. We look forward to making your next event a ---(134)---!",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "A",
+          "options": [
+            "have prepared",
+            "are preparing",
+            "were prepared",
+            "will prepare"
+          ],
+          "explanation": "'For more than fifteen years' diễn tả hành động kéo dài từ quá khứ đến hiện tại → hiện tại hoàn thành 'have prepared' (A). (D) tương lai, (B) hiện tại tiếp diễn không đi với 'for + khoảng thời gian'; (C) bị động sai nghĩa (chủ ngữ 'we' là người nấu).",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "B",
+          "options": [
+            "Unfortunately, she is no longer accepting new clients.",
+            "Vegetarian and gluten-free dishes can be added to any menu upon request.",
+            "Please return all rented equipment within two days.",
+            "Our second restaurant will open in the downtown business district early next spring."
+          ],
+          "explanation": "Câu trước giới thiệu thực đơn của Chef Aziz; câu chèn tiếp tục nói về thực đơn (thêm món chay, không gluten theo yêu cầu) trước khi chuyển sang dịch vụ khác ('In addition to food') (B). (D) lạc sang nhà hàng; (A) mâu thuẫn với mục đích quảng cáo; (C) nhắc đồ thuê trước khi bài giới thiệu dịch vụ cho thuê – sai mạch.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "D",
+          "options": [
+            "require",
+            "persuade",
+            "prevent",
+            "provide"
+          ],
+          "explanation": "'In addition to food, we can provide tables, linens, and serving staff' = ngoài đồ ăn, chúng tôi cung cấp bàn, khăn trải bàn và nhân viên phục vụ (D). (C) 'ngăn chặn', (B) 'thuyết phục', (A) 'yêu cầu' không hợp với một lời quảng cáo dịch vụ.",
+          "tags": [
+            "vocabulary"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "C",
+          "options": [
+            "successful",
+            "successfully",
+            "success",
+            "succeed"
+          ],
+          "explanation": "Sau mạo từ 'a' cuối câu cần danh từ: 'make your next event a success' (làm cho sự kiện thành công) (C). (D) động từ, (A) tính từ thiếu danh từ đi kèm, (B) trạng từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Text-message chain\n\nPriya Desai [10:02 A.M.]\nHi Luc, the florist just called. The centerpieces for Saturday's retirement dinner will arrive around 4:00 instead of 3:00.\n\nLuc Fontaine [10:05 A.M.]\nThat's cutting it close. Guests start arriving at 6:00.\n\nPriya Desai [10:06 A.M.]\nI know. But the servers can set the tables before then and add the flowers at the end.\n\nLuc Fontaine [10:09 A.M.]\nGood idea. Did the client approve the change to the dessert menu?\n\nPriya Desai [10:11 A.M.]\nYes, Ms. Mazur e-mailed this morning. She'd like the fruit tart instead of the chocolate cake.\n\nLuc Fontaine [10:12 A.M.]\nLeave that with me. The kitchen places its order on Friday, so they need to hear about it today.\n\nPriya Desai [10:13 A.M.]\nThanks. I'll update the printed menus, then.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "B",
+          "content": "What problem does Ms. Desai mention?",
+          "options": [
+            "A florist has run out of flowers.",
+            "A delivery will be later than planned.",
+            "Fewer guests will attend than expected.",
+            "A dinner has been moved to another day."
+          ],
+          "explanation": "Lúc 10:02, Ms. Desai báo hoa trang trí bàn sẽ đến lúc 4:00 thay vì 3:00 ('will arrive around 4:00 instead of 3:00') → giao hàng trễ hơn kế hoạch (B). (C), (D) không được nhắc; (A) sai – hoa vẫn được giao, chỉ muộn.",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "A",
+          "content": "At 10:05 A.M., what does Mr. Fontaine most likely mean when he writes, \"That's cutting it close\"?",
+          "options": [
+            "He is worried that there may not be enough time.",
+            "He thinks that the florist should be replaced.",
+            "He wants the guests to arrive earlier.",
+            "He believes that the venue is too small."
+          ],
+          "explanation": "Ngay sau câu 'That's cutting it close', Mr. Fontaine nói khách bắt đầu đến lúc 6:00 → hoa đến 4:00 thì chỉ còn ít thời gian, ông lo không kịp chuẩn bị (A). (B), (D) không có căn cứ; (C) ngược lại – khách đến sớm càng làm thiếu thời gian.",
+          "tags": [
+            "implied-meaning"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "D",
+          "content": "What will Mr. Fontaine most likely do next?",
+          "options": [
+            "Call the florist again",
+            "Reply to Ms. Mazur's e-mail",
+            "Print new menus",
+            "Contact the kitchen staff"
+          ],
+          "explanation": "Lúc 10:12, Mr. Fontaine nhận việc ('Leave that with me') và nói bếp đặt hàng vào thứ Sáu nên 'need to hear about it today' → ông sẽ báo cho nhân viên bếp về thay đổi món tráng miệng (D). (C) là việc Ms. Desai sẽ làm ('I'll update the printed menus'); (A), (B) không được nhắc.",
+          "tags": [
+            "inference"
+          ]
+        }
+      ]
+    }
+  ]
+}

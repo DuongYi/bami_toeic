@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "A",
+        "content": "The new video-conferencing equipment in Room 4B is ------- easy to set up, even for first-time users.",
+        "options": [
+          "surprisingly",
+          "surprising",
+          "surprise",
+          "surprised"
+        ],
+        "explanation": "Chỗ trống đứng trước tính từ 'easy' → cần trạng từ bổ nghĩa cho tính từ → 'surprisingly' (đáng ngạc nhiên là) (A). (B), (D) là tính từ, (C) là danh từ/động từ – không bổ nghĩa được cho tính từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "A",
+        "content": "Mr. Navarro's team is responsible for the ------- of all company laptops and mobile phones.",
+        "options": [
+          "maintenance",
+          "maintain",
+          "maintained",
+          "maintainable"
+        ],
+        "explanation": "Sau mạo từ 'the' và trước giới từ 'of' cần danh từ → 'maintenance' (việc bảo trì) (A). (B) là động từ, (C) là quá khứ phân từ, (D) là tính từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "A",
+        "content": "Staff members are reminded to ------- their passwords every ninety days to keep their accounts secure.",
+        "options": [
+          "update",
+          "inform",
+          "appoint",
+          "extend"
+        ],
+        "explanation": "Cụm 'update their passwords' = cập nhật/đổi mật khẩu định kỳ để bảo mật (A). (B) 'inform' (thông báo) cần tân ngữ là người; (C) 'appoint' (bổ nhiệm) và (D) 'extend' (gia hạn) không hợp nghĩa với 'passwords'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "A",
+        "content": "Ms. Hayashi has been asked to ------- the installation of the new scanners on the third floor.",
+        "options": [
+          "oversee",
+          "consist",
+          "depend",
+          "contribute"
+        ],
+        "explanation": "Cần ngoại động từ nhận tân ngữ 'the installation' với nghĩa 'giám sát' → 'oversee' (A). (B) 'consist' cần 'of', (C) 'depend' cần 'on', (D) 'contribute' (đóng góp) cần 'to' và không hợp nghĩa.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "A",
+        "content": "The help desk will be closed on Friday afternoon ------- the technicians can attend a training session.",
+        "options": [
+          "so that",
+          "in case of",
+          "as well as",
+          "rather than"
+        ],
+        "explanation": "Sau chỗ trống là mệnh đề (S + can + V) chỉ mục đích → liên từ 'so that' (để mà) (A). (B) 'in case of' là giới từ, cần danh từ; (C) 'as well as' và (D) 'rather than' không nối mệnh đề chỉ mục đích.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "A",
+        "content": "By the time the office reopens on Monday, the technicians ------- new cables in every meeting room.",
+        "options": [
+          "will have installed",
+          "have installed",
+          "installing",
+          "had been installed"
+        ],
+        "explanation": "'By the time + hiện tại đơn (reopens)' chỉ mốc tương lai → mệnh đề chính dùng tương lai hoàn thành 'will have installed' (A). (B) hiện tại hoàn thành sai mốc thời gian; (C) thiếu trợ động từ; (D) bị động quá khứ hoàn thành sai thì và sai dạng (technicians là người lắp).",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "A",
+        "content": "Before calling the help desk, employees should try to solve minor printer problems -------.",
+        "options": [
+          "themselves",
+          "them",
+          "their",
+          "theirs"
+        ],
+        "explanation": "Câu đã đủ thành phần; cần đại từ phản thân nhấn mạnh 'tự mình' cho chủ ngữ 'employees' → 'themselves' (A). (B) tân ngữ và (D) đại từ sở hữu không hợp nghĩa; (C) tính từ sở hữu phải đi kèm danh từ.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "A",
+        "content": "The instructions for the new phone system were written in simple language so that they would be ------- to all staff.",
+        "options": [
+          "accessible",
+          "access",
+          "accessibly",
+          "accessing"
+        ],
+        "explanation": "Sau động từ 'be' cần tính từ làm bổ ngữ → 'accessible to' (dễ tiếp cận/dễ hiểu với) (A). (B) danh từ/động từ, (C) trạng từ, (D) V-ing đều không phù hợp sau 'would be ... to all staff'.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

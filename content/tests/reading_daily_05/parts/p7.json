@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "E-mail\n\nTo: Lena Johansson\nFrom: Omar Khalil, Human Resources, Tamsworth Analytics\nDate: July 2\nSubject: Interview invitation\n\nDear Ms. Johansson,\n\nThank you for applying for the marketing assistant position at Tamsworth Analytics. We were impressed by your application, and we would like to invite you to an interview on Thursday, July 9, at 10:00 A.M. The interview will take place at our main office at 48 Garnet Avenue, Suite 300.\n\nYou will meet with me and with Ms. Yuki Sato, our marketing director. The interview will last about one hour. Please bring a copy of your résumé and two examples of marketing materials you have created.\n\nVisitor parking is available behind the building. When you arrive, please check in at the front desk on the first floor.\n\nPlease reply to this e-mail by July 6 to confirm that you can attend. If this time is not convenient for you, we will do our best to find another time.\n\nSincerely,\nOmar Khalil",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "B",
+        "content": "Why did Mr. Khalil send the e-mail?",
+        "options": [
+          "To offer Ms. Johansson a job",
+          "To schedule a job interview",
+          "To request a reference letter",
+          "To describe a training course"
+        ],
+        "explanation": "Đoạn 1: \"we would like to invite you to an interview on Thursday, July 9\" → mời và hẹn lịch phỏng vấn (B). (A) chưa nhận việc; (C), (D) không được nhắc.",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "A",
+        "content": "What is Ms. Johansson asked to bring?",
+        "options": [
+          "Samples of her work",
+          "A parking permit",
+          "A signed contract",
+          "A form of identification"
+        ],
+        "explanation": "Đoạn 2: \"Please bring a copy of your résumé and two examples of marketing materials you have created\" → mang mẫu sản phẩm đã làm (A). (B) bãi đỗ cho khách có sẵn; (C), (D) không được yêu cầu.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "C",
+        "content": "What is suggested about the interview?",
+        "options": [
+          "It will be held online.",
+          "It will take place in the afternoon.",
+          "Its time may be changed if needed.",
+          "It will last for half a day."
+        ],
+        "explanation": "Đoạn cuối: \"If this time is not convenient for you, we will do our best to find another time\" → giờ phỏng vấn có thể đổi (C). (A) phỏng vấn tại văn phòng; (B) lúc 10:00 sáng; (D) chỉ khoảng một giờ.",
+        "tags": [
+          "inference"
+        ]
+      }
+    ]
+  }
+]

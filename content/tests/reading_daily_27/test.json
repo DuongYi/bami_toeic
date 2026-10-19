@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 27",
+  "source": "Bami TOEIC",
+  "description": "Ôn Reading chủ đề tư vấn doanh nghiệp và báo cáo kinh doanh quý, band 850–990.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "A",
+          "content": "The third-quarter report attributes the rise in operating expenses ------- to higher freight charges at the Westmoor distribution center.",
+          "options": [
+            "primarily",
+            "primacy",
+            "prime",
+            "primary"
+          ],
+          "explanation": "Câu đã đủ 'attributes the rise … to …'; chỗ trống chen giữa tân ngữ và cụm 'to higher freight charges' cần trạng từ bổ nghĩa: 'primarily' (chủ yếu) → (A). (D), (C) là tính từ, (B) là danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "D",
+          "content": "Consultants from Corbel Lane will conduct a ------- review of the client's distribution network before making any recommendations.",
+          "options": [
+            "comprehend",
+            "comprehension",
+            "comprehensively",
+            "comprehensive"
+          ],
+          "explanation": "Giữa mạo từ 'a' và danh từ 'review' cần tính từ: 'a comprehensive review' (đánh giá toàn diện) → (D). (B) danh từ 'comprehension' (sự hiểu) không làm định ngữ hợp nghĩa; (C) trạng từ; (A) động từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "D",
+          "content": "Revenue from the online division ------- expectations for the second consecutive quarter, prompting the board to raise its annual forecast.",
+          "options": [
+            "outgrew",
+            "overcame",
+            "overtook",
+            "surpassed"
+          ],
+          "explanation": "Collocation 'surpass expectations' (vượt kỳ vọng) → (D). (B) 'overcome' đi với khó khăn/trở ngại; (A) 'outgrow' (lớn vượt khỏi) và (C) 'overtake' (vượt qua đối thủ/xe) không đi với 'expectations'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "C",
+          "content": "Ms. Bernard asked the analysts to ------- their findings into a two-page summary for the client's executive team.",
+          "options": [
+            "subtract",
+            "diminish",
+            "condense",
+            "abbreviate"
+          ],
+          "explanation": "'Condense A into B' = cô đọng nội dung thành bản ngắn hơn → (C). (D) 'abbreviate' dùng cho viết tắt từ/tên; (B) 'diminish' (giảm bớt) không đi với 'into a summary'; (A) 'subtract' (trừ đi) dùng cho con số.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "B",
+          "content": "Quarterly figures will be released to shareholders only ------- they have been reviewed by the external auditors.",
+          "options": [
+            "while",
+            "once",
+            "so that",
+            "whereas"
+          ],
+          "explanation": "'Only once + hiện tại hoàn thành' = chỉ sau khi đã được kiểm toán → (B). (A) 'while' (trong lúc) không hợp với hành động đã hoàn tất 'have been reviewed'; (D) 'whereas' chỉ đối lập; (C) 'so that' chỉ mục đích – đều sai logic.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "B",
+          "content": "The consultants' recommendations, though ------- in the short term, are expected to lower overhead considerably within two years.",
+          "options": [
+            "costing",
+            "costly",
+            "cost",
+            "costs"
+          ],
+          "explanation": "'Though + tính từ' là dạng rút gọn của 'though (they are) costly' → cần tính từ 'costly' (tốn kém) → (B), đối lập với 'lower overhead'. (D), (C) là danh từ/động từ; (A) 'costing' cần tân ngữ ('costing a lot').",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "C",
+          "content": "Mr. Donnelly ------- the client's sales data for nearly a week when he discovered that one region's figures had been entered twice.",
+          "options": [
+            "has reviewed",
+            "is reviewing",
+            "had been reviewing",
+            "will review"
+          ],
+          "explanation": "Hành động kéo dài 'for nearly a week' trước một thời điểm quá khứ ('when he discovered') → quá khứ hoàn thành tiếp diễn 'had been reviewing' (C). (A), (B), (D) là hiện tại/tương lai, không khớp mốc quá khứ của 'discovered'.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "A",
+          "content": "The client's finance team prepared the cost projections, but the revenue estimates were ------- of Corbel Lane's analysts.",
+          "options": [
+            "those",
+            "them",
+            "these",
+            "that"
+          ],
+          "explanation": "Đại từ thay cho danh từ số nhiều đã nhắc ('the revenue estimates') và có cụm 'of…' theo sau → 'those of Corbel Lane's analysts' (của các chuyên viên Corbel Lane) → (A). (D) 'that' chỉ thay danh từ số ít; (C) 'these' không dùng theo cấu trúc này; (B) 'them' là tân ngữ.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "To: Helena Uche <huche@pinewaterhome.com>\nFrom: Marco Nowicki <mnowicki@corbellane.com>\nDate: October 8\nSubject: Q3 review\n\nDear Ms. Uche,\n\nThank you for sending the third-quarter figures so promptly. My team has now had a chance to go through them, and I wanted to share a few initial observations before our meeting on October 15.\n\nOverall, sales were in line with your forecast. ---(131)---, the margin on furniture fell for the second quarter in a row, even though unit sales in that category rose. This ---(132)--- that seasonal discounts may be eroding profits more than your team anticipated.\n\nAt the meeting, we will present a detailed breakdown by store and product line. ---(133)--- That way, we can devote most of our time to the areas that matter most to you.\n\nI will send you the full report ---(134)--- Friday so that you have time to review it in advance.\n\nBest regards,\nMarco Nowicki\nCorbel Lane Consulting",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "D",
+          "options": [
+            "Therefore",
+            "For example",
+            "Similarly",
+            "However"
+          ],
+          "explanation": "Câu trước: doanh số nhìn chung đúng dự báo (tích cực); câu sau: biên lợi nhuận đồ nội thất giảm (tiêu cực) → cần từ nối đối lập 'However' (D). (C) 'Similarly' và (B) 'For example' hàm ý cùng chiều; (A) 'Therefore' sai quan hệ nhân quả.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "A",
+          "options": [
+            "suggests",
+            "recommends",
+            "advises",
+            "proposes"
+          ],
+          "explanation": "Chủ ngữ 'This' (hiện tượng biên lợi nhuận giảm dù bán nhiều hơn) 'cho thấy' một khả năng → 'suggests' mang nghĩa 'indicates' (A). (D), (B), (C) đều mang nghĩa 'đề xuất, khuyên' – cần người làm chủ ngữ và không hợp với mệnh đề 'that discounts may be eroding…'.",
+          "tags": [
+            "vocabulary"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "B",
+          "options": [
+            "Furniture remains your top-selling category by total revenue.",
+            "In the meantime, please let me know which issues you would like us to prioritize.",
+            "Our firm has advised retail clients for more than fifteen years.",
+            "Unfortunately, we were unable to obtain any figures at the store level."
+          ],
+          "explanation": "Câu sau 'That way, we can devote most of our time to the areas that matter most to you' → câu chèn phải là việc khách hàng làm để buổi họp tập trung: cho biết vấn đề muốn ưu tiên (B). (D) mâu thuẫn với 'breakdown by store'; (C), (A) không giải thích được 'That way'.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "C",
+          "options": [
+            "within",
+            "since",
+            "by",
+            "until"
+          ],
+          "explanation": "Hạn chót cho hành động tức thời 'send' → 'by Friday' (chậm nhất thứ Sáu) (C). (D) 'until' dùng với hành động kéo dài; (B) 'since' đi với hiện tại hoàn thành; (A) 'within' cần khoảng thời gian ('within two days').",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "MEMO\nTo: All Corbel Lane Consulting staff\nFrom: Ines Romero, Managing Partner\nDate: 9 July\nRe: Second-quarter results\n\nI am pleased to share our results for the quarter ending June 30. Revenue rose 6 percent compared with the same period last year, driven mainly by our retail practice, which signed four new clients. Our manufacturing practice had a quieter quarter, as two long-term projects came to a planned end in April, but its list of proposals awaiting client decisions is the longest it has been since the firm opened its Kessington office.\n\nOne figure deserves particular attention. Billable hours per consultant fell slightly, even as revenue grew. This is largely because our newest team members spent much of the quarter in training, as we had anticipated. Even so, the partners will be reviewing how projects are staffed to make sure that our senior consultants are not carrying a disproportionate share of client work.\n\nFinally, thank you to everyone who contributed to the Larkmoor Fabrics engagement. The client has already asked us to submit a proposal for a second phase.\n\nA full breakdown of the figures will be posted on the intranet by Friday.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "C",
+          "content": "What is suggested about the manufacturing practice?",
+          "options": [
+            "It recently relocated to the Kessington office.",
+            "It accounted for most of the growth in revenue.",
+            "It may take on more work in the coming months.",
+            "It signed four new clients during the quarter."
+          ],
+          "explanation": "Đoạn 1: mảng sản xuất có quý trầm lắng nhưng danh sách đề xuất đang chờ khách quyết định 'is the longest it has been' → nếu khách chấp thuận, mảng này sẽ có thêm việc (C). (D), (B) là thông tin của mảng bán lẻ (retail); (A) Kessington chỉ là mốc so sánh thời gian.",
+          "tags": [
+            "inference"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "A",
+          "content": "The word \"carrying\" in paragraph 2 is closest in meaning to",
+          "options": [
+            "handling",
+            "displaying",
+            "transporting",
+            "winning"
+          ],
+          "explanation": "'carrying a disproportionate share of client work' = gánh/đảm nhận phần việc quá nhiều → 'handling' (A). (C) 'transporting' là nghĩa đen 'mang vác, vận chuyển' – bẫy nghĩa gốc; (B), (D) không hợp ngữ cảnh.",
+          "tags": [
+            "vocab-in-context"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "D",
+          "content": "Why will the partners review project staffing?",
+          "options": [
+            "Two long-term projects ended earlier than planned.",
+            "New team members asked for more time in training.",
+            "Revenue growth fell short of the firm's expectations.",
+            "Experienced staff may be shouldering too much client work."
+          ],
+          "explanation": "Đoạn 2: 'the partners will be reviewing how projects are staffed to make sure that our senior consultants are not carrying a disproportionate share' → lo ngại nhân viên giàu kinh nghiệm đang gánh quá nhiều việc (D). (A) sai: dự án kết thúc 'planned' (theo kế hoạch); (C) trái bài – doanh thu tăng 6%; (B) không được nhắc.",
+          "tags": [
+            "detail"
+          ]
+        }
+      ]
+    }
+  ]
+}

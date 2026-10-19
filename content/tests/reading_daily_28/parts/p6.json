@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "To: Ingrid Lindgren <ilindgren@starmail.com>\nFrom: Service Department <service@brightwatermotors.com>\nDate: May 14\nSubject: Your upcoming maintenance\n\nDear Ms. Lindgren,\n\nOur records show that your Tavio hatchback ---(131)--- 30,000 miles sometime next month, based on your typical driving patterns. At this mileage, the manufacturer recommends a full inspection of the brake system and replacement of the engine air filter. ---(132)---\n\nTo make scheduling easier, we now accept bookings through the Brightwater Motors mobile app. Appointments can still be made by phone at 555-0142. ---(133)---, only appointments made through the app qualify for the 15 percent labor discount we are offering until June 30.\n\nIf you would like a courtesy vehicle during your appointment, please request one when booking. Courtesy vehicles are assigned on a first-come, first-served ---(134)---.\n\nSincerely,\n\nKenji Shimizu\nService Manager, Brightwater Motors",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "A",
+        "options": [
+          "will reach",
+          "reached",
+          "has reached",
+          "was reaching"
+        ],
+        "explanation": "Câu có mốc 'sometime next month' và là dự đoán ('based on your typical driving patterns') → tương lai 'will reach' (A). (B), (D) là quá khứ; (C) hiện tại hoàn thành mâu thuẫn với 'next month'.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "A",
+        "options": [
+          "Following this schedule also helps keep your powertrain warranty valid.",
+          "These items were replaced during your most recent visit.",
+          "As a result, the inspection fee has been refunded to your account.",
+          "The brake system was redesigned for the latest models."
+        ],
+        "explanation": "Câu trước nêu các hạng mục nhà sản xuất khuyến nghị ở mốc 30,000 dặm; (A) nêu thêm lợi ích của việc làm đúng lịch ('this schedule' chỉ lịch bảo dưỡng vừa nêu) → hợp mạch. (B) mâu thuẫn: nếu vừa thay thì không cần khuyến nghị; (C) e-mail không hề nhắc phí kiểm tra nào; (D) nói về mẫu xe mới, lạc đề.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "A",
+        "options": [
+          "However",
+          "Therefore",
+          "Similarly",
+          "Afterward"
+        ],
+        "explanation": "Câu trước: vẫn đặt lịch qua điện thoại được; câu sau: chỉ lịch đặt qua app mới được giảm 15% → quan hệ tương phản → 'However' (A). (B) chỉ kết quả, (C) chỉ sự tương đồng, (D) chỉ trình tự thời gian – đều không hợp.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "A",
+        "options": [
+          "basis",
+          "base",
+          "basic",
+          "based"
+        ],
+        "explanation": "Cụm cố định 'on a first-come, first-served basis' (ai đến trước được phục vụ trước); sau mạo từ 'a' + tính từ ghép cần danh từ → 'basis' (A). (B) 'base' là danh từ nhưng nghĩa nền móng / căn cứ, không dùng trong cụm này; (C) là tính từ; (D) là phân từ.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 30",
+  "source": "Bami TOEIC",
+  "description": "Đọc hiểu chủ đề nghiên cứu và phát triển sản phẩm, độ khó band 850–990.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "A",
+          "content": "The prototype performed ------- well in early testing, although engineers noticed some overheating during longer sessions.",
+          "options": [
+            "remarkably",
+            "remark",
+            "remarked",
+            "remarkable"
+          ],
+          "explanation": "Bổ nghĩa cho trạng từ 'well' cần trạng từ → 'remarkably' (đáng kể, nổi bật) (A). (D) là tính từ; (B), (C) là danh từ / động từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "C",
+          "content": "Ms. Aoki was recognized for her ------- to the development of the company's new water filtration system.",
+          "options": [
+            "contributing",
+            "contributor",
+            "contribution",
+            "contribute"
+          ],
+          "explanation": "Sau 'her' cần danh từ; 'contribution to' = sự đóng góp cho → (C). (B) là danh từ chỉ người, 'her contributor' sai nghĩa; (D) là động từ; (A) là danh động từ, không đi với 'to the development' theo nghĩa này.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "A",
+          "content": "The design team was ------- by the feedback from the consumer panel and decided to keep the original color options.",
+          "options": [
+            "encouraged",
+            "encouraging",
+            "encourage",
+            "encouragement"
+          ],
+          "explanation": "Sau 'was' và có tác nhân 'by the feedback' → dạng bị động / tính từ -ed chỉ cảm xúc của người: 'encouraged' (được khích lệ) (A). (B) dạng -ing mô tả vật gây cảm xúc, không đi với 'by'; (C) là động từ nguyên mẫu; (D) là danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "C",
+          "content": "The engineering department has ------- a request for additional funding to extend the testing phase by six weeks.",
+          "options": [
+            "permitted",
+            "admitted",
+            "submitted",
+            "committed"
+          ],
+          "explanation": "'submit a request' = nộp đề nghị → (C). (A) 'permit' = cho phép, (B) 'admit' = thừa nhận / cho vào, (D) 'commit' = cam kết – cùng gốc '-mit' nhưng không đi với 'a request'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "B",
+          "content": "The new adhesive is highly ------- to extreme temperatures, making it ideal for outdoor use.",
+          "options": [
+            "durable",
+            "resistant",
+            "persistent",
+            "sturdy"
+          ],
+          "explanation": "Collocation 'resistant to' (chịu được, kháng) → (B). (A) 'durable' và (D) 'sturdy' (bền, chắc) gần nghĩa nhưng không đi với giới từ 'to'; (C) 'persistent' (dai dẳng) sai nghĩa.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "B",
+          "content": "The product launch was moved to October ------- give the team time to fix the issues identified in user testing.",
+          "options": [
+            "because of",
+            "so as to",
+            "in order that",
+            "so that"
+          ],
+          "explanation": "Sau chỗ trống là động từ nguyên mẫu 'give' → 'so as to' (để) (B). (D), (C) cần mệnh đề có chủ ngữ; (A) cần danh từ và chỉ nguyên nhân.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "D",
+          "content": "Dr. Antwi has requested that each participant ------- the questionnaire before handling the device.",
+          "options": [
+            "completes",
+            "will complete",
+            "completed",
+            "complete"
+          ],
+          "explanation": "Sau 'request that' dùng thể giả định: động từ nguyên mẫu không chia → 'complete' (D) dù chủ ngữ 'each participant' số ít. (A), (C), (B) là dạng đã chia thì, không dùng trong cấu trúc này.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "D",
+          "content": "The two research groups agreed to share data with ------- so that no experiment would be repeated unnecessarily.",
+          "options": [
+            "theirs",
+            "themselves",
+            "one",
+            "each other"
+          ],
+          "explanation": "Hai nhóm trao đổi dữ liệu qua lại → đại từ hỗ tương 'each other' (D). (B) đại từ phản thân = chia sẻ với chính mình, vô nghĩa; (C) 'one' chỉ một người không xác định; (A) đại từ sở hữu sai nghĩa.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "MEMO\n\nTo: Product Development Staff\nFrom: Lucas Moreira, Director of Research\nDate: March 12\nSubject: Volunteer testers needed\n\nWe are preparing to begin field trials of the Lumora 2 desk lamp, which features adjustable color temperature and a built-in wireless charger. We are looking for twenty employees to use a lamp at home for three weeks. ---(131)--- will be asked to complete a short online survey at the end of each week.\n\nUnlike our earlier trials, this one ---(132)--- in employees' homes rather than in our laboratory, so that we can see how the lamp performs under ordinary conditions. Volunteers may keep their lamp once the trial ends. ---(133)---\n\nTo sign up, please contact Hana Aoki in the research office by March 20. ---(134)--- more than twenty people volunteer, testers will be chosen at random.",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "A",
+          "options": [
+            "Participants",
+            "Sponsors",
+            "Suppliers",
+            "Applicants"
+          ],
+          "explanation": "Người phải làm khảo sát cuối mỗi tuần là các nhân viên dùng thử đèn tại nhà → 'Participants' (người tham gia) (A). (D) 'Applicants' chỉ người đăng ký – chưa chắc được chọn (đoạn cuối nói có thể chọn ngẫu nhiên); (B) nhà tài trợ, (C) nhà cung cấp không hợp.",
+          "tags": [
+            "vocabulary"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "B",
+          "options": [
+            "has taken place",
+            "will take place",
+            "had taken place",
+            "took place"
+          ],
+          "explanation": "Bản ghi nhớ mở đầu 'We are preparing to begin field trials' → thử nghiệm chưa diễn ra → tương lai 'will take place' (B). (D), (A), (C) là quá khứ / hoàn thành, mâu thuẫn với việc chưa bắt đầu.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "C",
+          "options": [
+            "The lamp has been sold in stores since last month.",
+            "Anyone who missed last week's survey should submit it today.",
+            "We hope this serves as a small thank-you for their help.",
+            "As a result, the laboratory will be closed until March 20."
+          ],
+          "explanation": "Câu trước: tình nguyện viên được giữ lại đèn; (C) dùng 'this' chỉ việc được giữ đèn và coi đó là lời cảm ơn → hợp mạch. (A) mâu thuẫn: đèn còn đang chuẩn bị thử nghiệm; (B) thử nghiệm chưa bắt đầu nên chưa có khảo sát nào; (D) 'As a result' không khớp với câu trước và bài không nói phòng thí nghiệm đóng cửa.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "D",
+          "options": [
+            "Owing to",
+            "In case of",
+            "Even though",
+            "In the event that"
+          ],
+          "explanation": "Sau chỗ trống là mệnh đề điều kiện (nếu có hơn 20 người đăng ký thì chọn ngẫu nhiên) → liên từ 'In the event that' (trong trường hợp) (D). (B), (A) là giới từ, cần danh từ; (C) 'mặc dù' sai logic.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Kestrel Labs Staff Newsletter — Team Spotlight: Audio Products\n\nWhen Kestrel Labs began work on its first pair of noise-canceling headphones two years ago, project lead Grace Keane expected development to take about twelve months. Instead, the Halo One headphones will reach stores this November, nearly a year later than planned.\n\nThe delay was largely the result of a decision made midway through the project. Early prototypes performed well in laboratory tests, but when the team sent fifty pairs to volunteer users, many reported that the headphones felt uncomfortable after an hour of wear. \"The sound quality was where we wanted it, but that wouldn't matter if people took them off after forty minutes,\" Ms. Keane said. Rather than release the product on schedule, the team redesigned the headband and ear cushions from scratch.\n\nThe redesign also gave the team a chance to address another concern raised by testers: the charging case was too large to fit in most bags. The new case is about a third smaller than the original.\n\nKwame Antwi, who heads Kestrel's marketing department, believes the extra time will pay off. Preorders opened on the company's Web site last week and, according to Mr. Antwi, have already surpassed the figure his department had projected for the entire first month.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "D",
+          "content": "What is NOT mentioned as a change made after the volunteer trial?",
+          "options": [
+            "Redesigned ear cushions",
+            "A new headband design",
+            "A more compact charging case",
+            "Improved sound processing"
+          ],
+          "explanation": "Đoạn 2: nhóm 'redesigned the headband and ear cushions from scratch' → (B), (A) có nhắc; đoạn 3: hộp sạc mới 'about a third smaller' → (C) có nhắc. Về âm thanh, bà Keane nói 'The sound quality was where we wanted it' → không cần cải tiến → (D).",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "A",
+          "content": "Why did the team most likely decide to postpone the release?",
+          "options": [
+            "It worried that people would not wear the headphones for long.",
+            "The marketing department wanted a larger charging case.",
+            "Fewer volunteers than the team had expected agreed to test the early prototypes.",
+            "Laboratory tests revealed problems with the sound quality."
+          ],
+          "explanation": "Đoạn 2: người dùng thử thấy 'uncomfortable after an hour of wear' và bà Keane nói chất âm tốt cũng vô ích 'if people took them off after forty minutes' → nhóm lo người dùng không đeo lâu (A). (D) trái với bài ('performed well in laboratory tests'); (B) hộp sạc bị chê quá lớn, không ai muốn lớn hơn; (C) không được nhắc.",
+          "tags": [
+            "inference"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "B",
+          "content": "The phrase \"pay off\" in paragraph 4 is closest in meaning to",
+          "options": [
+            "be repaid in full",
+            "be worthwhile",
+            "be reduced",
+            "be settled"
+          ],
+          "explanation": "'believes the extra time will pay off' – thời gian kéo dài sẽ 'mang lại kết quả xứng đáng', bằng chứng là đơn đặt trước đã vượt dự báo → 'be worthwhile' (B). (A), (D) là nghĩa 'trả hết nợ' của 'pay off', không hợp với chủ ngữ 'the extra time'; (C) không liên quan.",
+          "tags": [
+            "vocab-in-context"
+          ]
+        }
+      ]
+    }
+  ]
+}

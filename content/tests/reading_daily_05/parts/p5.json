@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "B",
+        "content": "All job applicants must include a letter of ------- from a former employer.",
+        "options": [
+          "recommend",
+          "recommendation",
+          "recommended",
+          "recommends"
+        ],
+        "explanation": "Sau giới từ \"of\" cần danh từ; \"a letter of recommendation\" = thư giới thiệu → (B). (A), (D) là động từ, (C) là quá khứ phân từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "D",
+        "content": "Ms. Adeyemi was hired for the position because she is highly ------- in data analysis.",
+        "options": [
+          "skill",
+          "skillfully",
+          "skills",
+          "skilled"
+        ],
+        "explanation": "Sau động từ \"is\" và trạng từ \"highly\" cần tính từ → (D) \"skilled\" (thành thạo). (A), (C) là danh từ, (B) là trạng từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "A",
+        "content": "The human resources team reviewed the résumés ------- before choosing five candidates for interviews.",
+        "options": [
+          "carefully",
+          "careful",
+          "care",
+          "careless"
+        ],
+        "explanation": "Câu đã đủ chủ ngữ – động từ – tân ngữ (\"reviewed the résumés\"), chỗ trống cần trạng từ bổ nghĩa cho động từ → (A) \"carefully\" (cẩn thận). (B), (D) là tính từ, (C) là danh từ/động từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "C",
+        "content": "New employees will ------- a two-day orientation session before starting their regular duties.",
+        "options": [
+          "employ",
+          "assign",
+          "attend",
+          "inform"
+        ],
+        "explanation": "\"Attend an orientation session\" = tham dự buổi định hướng → (C). (A) thuê, (B) giao việc, (D) thông báo cho ai đó – đều không đi với \"session\" ở đây.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "A",
+        "content": "Tamsworth Analytics offers a competitive ------- and generous vacation time to all full-time staff.",
+        "options": [
+          "salary",
+          "applicant",
+          "interview",
+          "deadline"
+        ],
+        "explanation": "Công ty \"offers\" cho nhân viên một thứ đi cùng \"vacation time\" (phúc lợi) → \"a competitive salary\" = mức lương cạnh tranh (A). (B) ứng viên, (C) buổi phỏng vấn, (D) hạn chót không phải thứ công ty cung cấp như phúc lợi.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "B",
+        "content": "Applications for the sales manager position must be received ------- Friday, June 12.",
+        "options": [
+          "since",
+          "by",
+          "among",
+          "about"
+        ],
+        "explanation": "Diễn tả hạn chót (chậm nhất là thứ Sáu) → giới từ (B) \"by\". (A) \"since\" đi với thì hoàn thành; (C) \"among\" chỉ giữa nhiều người/vật; (D) \"about\" không chỉ hạn chót.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "D",
+        "content": "The hiring committee ------- the final candidate for the accounting position next Tuesday.",
+        "options": [
+          "interviewed",
+          "has interviewed",
+          "interviewing",
+          "will interview"
+        ],
+        "explanation": "Trạng từ thời gian \"next Tuesday\" chỉ tương lai → (D) \"will interview\". (A), (B) chỉ quá khứ; (C) thiếu trợ động từ nên không làm động từ chính được.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "C",
+        "content": "Mr. Dubois asked the new interns to introduce ------- at the start of the team meeting.",
+        "options": [
+          "they",
+          "their",
+          "themselves",
+          "theirs"
+        ],
+        "explanation": "Chủ thể của \"introduce\" là \"the new interns\" và tân ngữ chính là họ → dùng đại từ phản thân (C) \"themselves\" (tự giới thiệu). (A) là đại từ chủ ngữ, (B) cần danh từ theo sau, (D) là đại từ sở hữu.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  }
+]

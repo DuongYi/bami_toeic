@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "B",
+        "content": "The third-quarter report attributes the rise in operating expenses ------- to higher freight charges at the Westmoor distribution center.",
+        "options": [
+          "primary",
+          "primarily",
+          "primacy",
+          "prime"
+        ],
+        "explanation": "Câu đã đủ 'attributes the rise … to …'; chỗ trống chen giữa tân ngữ và cụm 'to higher freight charges' cần trạng từ bổ nghĩa: 'primarily' (chủ yếu) → (B). (A), (D) là tính từ, (C) là danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "D",
+        "content": "Consultants from Corbel Lane will conduct a ------- review of the client's distribution network before making any recommendations.",
+        "options": [
+          "comprehend",
+          "comprehension",
+          "comprehensively",
+          "comprehensive"
+        ],
+        "explanation": "Giữa mạo từ 'a' và danh từ 'review' cần tính từ: 'a comprehensive review' (đánh giá toàn diện) → (D). (B) danh từ 'comprehension' (sự hiểu) không làm định ngữ hợp nghĩa; (C) trạng từ; (A) động từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "B",
+        "content": "Revenue from the online division ------- expectations for the second consecutive quarter, prompting the board to raise its annual forecast.",
+        "options": [
+          "overcame",
+          "surpassed",
+          "outgrew",
+          "overtook"
+        ],
+        "explanation": "Collocation 'surpass expectations' (vượt kỳ vọng) → (B). (A) 'overcome' đi với khó khăn/trở ngại; (C) 'outgrow' (lớn vượt khỏi) và (D) 'overtake' (vượt qua đối thủ/xe) không đi với 'expectations'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "C",
+        "content": "Ms. Bernard asked the analysts to ------- their findings into a two-page summary for the client's executive team.",
+        "options": [
+          "abbreviate",
+          "diminish",
+          "condense",
+          "subtract"
+        ],
+        "explanation": "'Condense A into B' = cô đọng nội dung thành bản ngắn hơn → (C). (A) 'abbreviate' dùng cho viết tắt từ/tên; (B) 'diminish' (giảm bớt) không đi với 'into a summary'; (D) 'subtract' (trừ đi) dùng cho con số.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "A",
+        "content": "Quarterly figures will be released to shareholders only ------- they have been reviewed by the external auditors.",
+        "options": [
+          "once",
+          "while",
+          "whereas",
+          "so that"
+        ],
+        "explanation": "'Only once + hiện tại hoàn thành' = chỉ sau khi đã được kiểm toán → (A). (B) 'while' (trong lúc) không hợp với hành động đã hoàn tất 'have been reviewed'; (C) 'whereas' chỉ đối lập; (D) 'so that' chỉ mục đích – đều sai logic.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "D",
+        "content": "The consultants' recommendations, though ------- in the short term, are expected to lower overhead considerably within two years.",
+        "options": [
+          "costs",
+          "cost",
+          "costing",
+          "costly"
+        ],
+        "explanation": "'Though + tính từ' là dạng rút gọn của 'though (they are) costly' → cần tính từ 'costly' (tốn kém) → (D), đối lập với 'lower overhead'. (A), (B) là danh từ/động từ; (C) 'costing' cần tân ngữ ('costing a lot').",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "A",
+        "content": "Mr. Donnelly ------- the client's sales data for nearly a week when he discovered that one region's figures had been entered twice.",
+        "options": [
+          "had been reviewing",
+          "has reviewed",
+          "is reviewing",
+          "will review"
+        ],
+        "explanation": "Hành động kéo dài 'for nearly a week' trước một thời điểm quá khứ ('when he discovered') → quá khứ hoàn thành tiếp diễn 'had been reviewing' (A). (B), (C), (D) là hiện tại/tương lai, không khớp mốc quá khứ của 'discovered'.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "C",
+        "content": "The client's finance team prepared the cost projections, but the revenue estimates were ------- of Corbel Lane's analysts.",
+        "options": [
+          "that",
+          "these",
+          "those",
+          "them"
+        ],
+        "explanation": "Đại từ thay cho danh từ số nhiều đã nhắc ('the revenue estimates') và có cụm 'of…' theo sau → 'those of Corbel Lane's analysts' (của các chuyên viên Corbel Lane) → (C). (A) 'that' chỉ thay danh từ số ít; (B) 'these' không dùng theo cấu trúc này; (D) 'them' là tân ngữ.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  }
+]

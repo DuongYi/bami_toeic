@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "Copperleaf Bistro\nNotice to Customers\n\nStarting June 1, Copperleaf Bistro will be open for lunch on weekends. Weekend lunch will be served from 11:30 A.M. to 2:30 P.M. on Saturdays and Sundays. Our dinner hours will stay the same.\n\nThe weekend lunch menu will include soups, salads, and sandwiches, as well as several of our most popular dinner dishes in smaller portions. Head chef Kenji Nakamura created the new dishes using fresh vegetables from farms in the area.\n\nTo celebrate, every customer who orders lunch on June 1 or June 2 will receive a free dessert. Reservations are recommended but not required. To book a table, call 555-0167 or visit www.copperleafbistro.com.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "C",
+        "content": "What is the notice mainly about?",
+        "options": [
+          "The hiring of a new head chef",
+          "The opening of a second location",
+          "The start of a weekend lunch service",
+          "The launch of a food delivery service"
+        ],
+        "explanation": "Câu hỏi ý chính. Đoạn 1: 'Starting June 1, Copperleaf Bistro will be open for lunch on weekends' → thông báo về việc bắt đầu phục vụ bữa trưa cuối tuần (C). Bài có nhắc bếp trưởng nhưng không nói mới tuyển (A); không có chi nhánh mới (B) hay giao hàng (D).",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "A",
+        "content": "What will customers who order lunch on June 1 or June 2 receive?",
+        "options": [
+          "A dessert at no cost",
+          "A drink at no cost",
+          "A discount on dinner",
+          "A gift card for a later visit"
+        ],
+        "explanation": "Đoạn 3: 'every customer who orders lunch on June 1 or June 2 will receive a free dessert' → món tráng miệng miễn phí (A). (B), (C), (D) không được nhắc trong bài.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "B",
+        "content": "What is suggested about Copperleaf Bistro?",
+        "options": [
+          "It requires reservations for every meal.",
+          "It did not serve lunch on weekends before June.",
+          "It is planning to change its dinner hours next month.",
+          "It grows its own vegetables."
+        ],
+        "explanation": "Câu suy luận. Đoạn 1 nói 'Starting June 1 … will be open for lunch on weekends' → có thể suy ra trước tháng 6 nhà hàng chưa phục vụ bữa trưa cuối tuần (B). (A) trái với 'Reservations are recommended but not required'; (C) trái với 'Our dinner hours will stay the same'; (D) sai vì rau lấy 'from farms in the area'.",
+        "tags": [
+          "inference"
+        ]
+      }
+    ]
+  }
+]

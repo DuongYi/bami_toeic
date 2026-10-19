@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "To: All Residents, Marlowe Court Apartments\nFrom: Leila Saleh, Property Manager\nDate: August 2\nSubject: New maintenance request system\n\nDear Residents,\n\nStarting on September 1, maintenance requests will be submitted through our new online portal instead of by telephone. The portal allows you to describe the problem, upload photos, and track the ---(131)--- of your request at any time.\n\nTo use the portal, visit www.marlowecourt-living.com and create an account with your unit number. ---(132)--- Once you have logged in with it, you will see a button labeled \"New Request.\"\n\nFor emergencies such as water leaks or power outages, please continue to call our 24-hour line at 555-0167. ---(133)---, staff will respond to online requests within two business days.\n\nWe believe the new system will make the process faster and more ---(134)--- for everyone.\n\nSincerely,\nLeila Saleh",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "A",
+        "options": [
+          "progress",
+          "promotion",
+          "proposal",
+          "profit"
+        ],
+        "explanation": "'track the progress of your request' = theo dõi tiến độ xử lý yêu cầu → (A). (B) 'promotion' (khuyến mãi/thăng chức), (C) 'proposal' (đề xuất), (D) 'profit' (lợi nhuận) không hợp với yêu cầu sửa chữa.",
+        "tags": [
+          "vocabulary"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "B",
+        "options": [
+          "Rent payments are due on the first day of each month.",
+          "A temporary password will then be sent to your e-mail address.",
+          "The telephone line remains the best way to report minor issues.",
+          "Our office was recently moved to the second floor of Building B."
+        ],
+        "explanation": "Câu sau 'Once you have logged in with it' cần một danh từ mà 'it' thay thế để đăng nhập → (B) 'mật khẩu tạm thời'. (C) mâu thuẫn với việc chuyển từ điện thoại sang cổng trực tuyến; (A), (D) lạc mạch hướng dẫn đăng ký.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "D",
+        "options": [
+          "Nevertheless",
+          "Similarly",
+          "Consequently",
+          "Otherwise"
+        ],
+        "explanation": "Câu trước nói về trường hợp khẩn cấp (gọi điện); câu sau nói về các trường hợp còn lại (gửi online, phản hồi trong 2 ngày) → (D) 'Otherwise' (trong các trường hợp khác). (A) 'Nevertheless' (tuy nhiên), (B) 'Similarly' (tương tự), (C) 'Consequently' (do đó) không đúng quan hệ ý.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "B",
+        "options": [
+          "convenience",
+          "convenient",
+          "conveniently",
+          "convene"
+        ],
+        "explanation": "'make the process faster and more ------' → cấu trúc make + tân ngữ + tính từ, song song với tính từ 'faster' → (B) 'convenient'. (A) danh từ, (C) trạng từ, (D) động từ 'triệu tập'.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

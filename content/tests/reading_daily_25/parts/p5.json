@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "A",
+        "content": "The revised floor plan has made seasonal vitamins and herbal teas far more ------- accessible to shoppers entering from the parking lot.",
+        "options": [
+          "readily",
+          "ready",
+          "readiness",
+          "readied"
+        ],
+        "explanation": "Chỗ trống đứng giữa 'more' và tính từ 'accessible' → cần trạng từ bổ nghĩa cho tính từ: 'more readily accessible' (dễ tiếp cận hơn) → (A). (B) là tính từ, (C) danh từ, (D) quá khứ phân từ – không bổ nghĩa được cho tính từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "C",
+        "content": "Customers are reminded that refunds on beauty and personal-care items cannot be issued without ------- of purchase.",
+        "options": [
+          "prove",
+          "proven",
+          "proof",
+          "provable"
+        ],
+        "explanation": "Sau giới từ 'without' và trước 'of purchase' cần danh từ; cụm cố định 'proof of purchase' (bằng chứng mua hàng) → (C). (A) là động từ, (B) và (D) là tính từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "C",
+        "content": "The Harlow Street branch has seen a ------- increase in weekend foot traffic since it began opening an hour earlier on Saturdays.",
+        "options": [
+          "considerably",
+          "considerate",
+          "considerable",
+          "consideration"
+        ],
+        "explanation": "Trước danh từ 'increase' cần tính từ. Có hai tính từ: 'considerable' (đáng kể) và 'considerate' (chu đáo, ân cần – dùng cho người) → chỉ 'a considerable increase' hợp nghĩa → (C). (A) là trạng từ, (D) là danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "B",
+        "content": "Shift supervisors must ------- that every refrigerated display case is kept at the correct temperature throughout the day.",
+        "options": [
+          "remind",
+          "ensure",
+          "assure",
+          "inform"
+        ],
+        "explanation": "'Ensure that + mệnh đề' = bảo đảm rằng… → (B). (C) 'assure' cần tân ngữ chỉ người ('assure customers that…'); (A) 'remind' và (D) 'inform' cũng cần tân ngữ chỉ người trước 'that' – thiếu tân ngữ nên sai.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "D",
+        "content": "Under the new supplier agreement, Ofori Natural Goods has agreed to ------- the cost of installing branded display shelves in all twelve stores.",
+        "options": [
+          "exhaust",
+          "occupy",
+          "consume",
+          "absorb"
+        ],
+        "explanation": "Collocation 'absorb the cost' = gánh/chịu toàn bộ chi phí → (D). (A) 'exhaust' (dùng cạn), (C) 'consume' (tiêu thụ), (B) 'occupy' (chiếm chỗ) đều không đi với 'the cost' theo nghĩa nhận chi trả.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "B",
+        "content": "------- the new inventory software has been installed at every location, staff will continue to record stock counts on paper forms.",
+        "options": [
+          "Once",
+          "Until",
+          "Since",
+          "Provided"
+        ],
+        "explanation": "Ý câu: tiếp tục ghi tay trên giấy cho tới khi phần mềm được cài xong → liên từ chỉ thời điểm kết thúc 'Until' (B). (A) 'Once' (một khi đã cài) mâu thuẫn với việc vẫn ghi giấy; (D) 'Provided' (miễn là) và (C) 'Since' (vì/kể từ) tạo nghĩa phi lý.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "D",
+        "content": "By the time the Kingsbridge location reopens next month, its wellness section ------- to nearly twice its original size.",
+        "options": [
+          "will expand",
+          "has expanded",
+          "was expanded",
+          "will have been expanded"
+        ],
+        "explanation": "'By the time + hiện tại đơn (reopens next month)' → hành động hoàn tất trước một mốc tương lai cần tương lai hoàn thành; khu vực được mở rộng (bị động) → 'will have been expanded' (D). (A) tương lai đơn không thể hiện sự hoàn tất trước mốc; (B), (C) sai mốc thời gian.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "B",
+        "content": "Although several stores tested the self-checkout kiosks last spring, only the branch on Delmont Road has kept ------- in operation.",
+        "options": [
+          "it",
+          "them",
+          "itself",
+          "theirs"
+        ],
+        "explanation": "Đại từ tân ngữ thay cho 'the self-checkout kiosks' (số nhiều) sau 'kept … in operation' → 'them' (B). (A) 'it' số ít không khớp; (C) 'itself' chỉ dùng khi tân ngữ trùng chủ ngữ 'the branch'; (D) 'theirs' là đại từ sở hữu.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  }
+]

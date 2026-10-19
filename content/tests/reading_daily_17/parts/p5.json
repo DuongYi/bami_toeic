@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "A",
+        "content": "Residents should use the side entrance ------- the lobby floor is being replaced next week.",
+        "options": [
+          "while",
+          "during",
+          "until",
+          "despite"
+        ],
+        "explanation": "Liên từ / giới từ: sau chỗ trống là mệnh đề ('the lobby floor is being replaced') → cần liên từ; nghĩa 'trong khi sàn sảnh đang được thay' → (A) 'while'. (B) 'during' và (D) 'despite' là giới từ, cần cụm danh từ; (C) 'until' (cho đến khi) không hợp với thì tiếp diễn và sai nghĩa.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "A",
+        "content": "The contractor's initial ------- of the renovation costs was considerably lower than the final invoice.",
+        "options": [
+          "estimate",
+          "estimated",
+          "estimating",
+          "estimable"
+        ],
+        "explanation": "Từ loại: sau sở hữu cách 'The contractor's' và tính từ 'initial', trước 'of' cần danh từ làm chủ ngữ → (A) 'estimate' (bản ước tính). (B), (C) là dạng phân từ; (D) 'estimable' là tính từ (đáng kính trọng).",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "A",
+        "content": "Kestrel Renovations will ------- the cost of any materials that are damaged during delivery to the site.",
+        "options": [
+          "cover",
+          "afford",
+          "spend",
+          "charge"
+        ],
+        "explanation": "Từ vựng: 'cover the cost' = chịu/chi trả chi phí → (A). (B) 'afford' là 'có đủ khả năng chi trả', không dùng để cam kết bồi hoàn; (C) 'spend' đi với tiền/thời gian, không đi với 'the cost'; (D) 'charge' (tính phí) ngược nghĩa.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "A",
+        "content": "Homeowners who prefer to purchase the floor tiles ------- should inform the project manager before work begins.",
+        "options": [
+          "themselves",
+          "their own",
+          "them",
+          "theirs"
+        ],
+        "explanation": "Đại từ: câu đã đủ thành phần ('purchase the floor tiles'), chỗ trống nhấn mạnh 'tự mình mua' → đại từ phản thân (A) 'themselves'. (B) 'their own' cần danh từ theo sau; (C) 'them' và (D) 'theirs' không hợp nghĩa ở vị trí này.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "A",
+        "content": "By the time the electrical inspector arrives on Friday, the crew ------- installing the new wiring.",
+        "options": [
+          "will have finished",
+          "has finished",
+          "had finished",
+          "finishes"
+        ],
+        "explanation": "Thì động từ: 'By the time + hiện tại đơn (arrives) chỉ tương lai' → mệnh đề chính dùng tương lai hoàn thành (A) 'will have finished'. (B) hiện tại hoàn thành, (C) quá khứ hoàn thành, (D) hiện tại đơn sai mốc thời gian.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "A",
+        "content": "Brightwater Builders has earned a ------- for completing projects on time and within budget.",
+        "options": [
+          "reputation",
+          "recognition",
+          "publicity",
+          "celebrity"
+        ],
+        "explanation": "Từ vựng – kết hợp từ: 'earn a reputation for + V-ing' = tạo được tiếng tăm về việc gì → (A). (B) 'recognition' (sự công nhận) không dùng với mạo từ 'a' trong cấu trúc này; (C) 'publicity' (sự quảng bá) và (D) 'celebrity' (người nổi tiếng/sự nổi danh) không hợp nghĩa.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "A",
+        "content": "The renovated community center is ------- larger than the original building, with two additional meeting rooms.",
+        "options": [
+          "considerably",
+          "considerable",
+          "consideration",
+          "considering"
+        ],
+        "explanation": "Từ loại: chỗ trống bổ nghĩa cho tính từ so sánh 'larger' → cần trạng từ (A) 'considerably' (đáng kể). (B) tính từ, (C) danh từ, (D) giới từ/phân từ đều không bổ nghĩa cho tính từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "A",
+        "content": "------- the city approves the building permit, work on the second-floor extension can begin immediately.",
+        "options": [
+          "Once",
+          "Unless",
+          "Whereas",
+          "Despite"
+        ],
+        "explanation": "Liên từ: nghĩa 'ngay khi thành phố duyệt giấy phép, công việc có thể bắt đầu ngay' → (A) 'Once'. (B) 'Unless' (trừ khi) làm câu phi logic; (C) 'Whereas' chỉ đối lập; (D) 'Despite' là giới từ, không đứng trước mệnh đề.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  }
+]

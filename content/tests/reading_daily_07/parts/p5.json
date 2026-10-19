@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "A",
+        "content": "The new packaging machine has made the production line at the Halston plant much more -------.",
+        "options": [
+          "efficient",
+          "efficiently",
+          "efficiency",
+          "efficiencies"
+        ],
+        "explanation": "Sau 'much more' và động từ 'has made the production line' (make + tân ngữ + tính từ) cần tính từ → (A) 'efficient' (hiệu quả). (B) là trạng từ, (C), (D) là danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "C",
+        "content": "Ms. Ramirez gave a clear ------- of the updated safety procedures to the night-shift workers.",
+        "options": [
+          "explain",
+          "explained",
+          "explanation",
+          "explanatory"
+        ],
+        "explanation": "Sau mạo từ 'a' và tính từ 'clear', trước giới từ 'of' cần danh từ → (C) 'explanation' (lời giải thích). (A), (B) là động từ, (D) là tính từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "A",
+        "content": "Brennick Metalworks will ------- production of its older drill model at the end of next month.",
+        "options": [
+          "discontinue",
+          "disagree",
+          "dismiss",
+          "disintegrate"
+        ],
+        "explanation": "Cụm 'discontinue production' = ngừng sản xuất → (A). (B) 'disagree' (không đồng ý) và (D) 'disintegrate' (tan rã) là nội động từ, không đi với tân ngữ; (C) 'dismiss' (sa thải, gạt bỏ) không hợp với 'production'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "A",
+        "content": "All machines on the factory floor receive regular ------- to prevent unexpected breakdowns.",
+        "options": [
+          "maintenance",
+          "accommodation",
+          "appearance",
+          "allowance"
+        ],
+        "explanation": "Máy móc được 'bảo trì' định kỳ để tránh hỏng hóc → (A) 'maintenance'. (B) 'accommodation' (chỗ ở), (C) 'appearance' (vẻ ngoài), (D) 'allowance' (trợ cấp) không hợp nghĩa.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "A",
+        "content": "Work on the assembly line was stopped for two hours ------- a power failure in the east building.",
+        "options": [
+          "because of",
+          "although",
+          "even though",
+          "unless"
+        ],
+        "explanation": "Sau chỗ trống là cụm danh từ 'a power failure' chỉ nguyên nhân → giới từ (A) 'because of' (vì). (B), (C), (D) là liên từ, phải theo sau bởi mệnh đề.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "B",
+        "content": "Mr. Kobayashi ------- the Lakeview plant since it first opened in 2015.",
+        "options": [
+          "manages",
+          "has managed",
+          "is managing",
+          "will be managing"
+        ],
+        "explanation": "'since it first opened in 2015' (từ năm 2015 đến nay) → thì hiện tại hoàn thành (B) 'has managed'. (A) hiện tại đơn, (C) hiện tại tiếp diễn, (D) tương lai không đi với 'since'.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "A",
+        "content": "The engineers repaired the conveyor belt -------, so they did not need to call the supplier.",
+        "options": [
+          "themselves",
+          "them",
+          "their",
+          "they"
+        ],
+        "explanation": "Câu đã đủ chủ ngữ 'The engineers' và tân ngữ 'the conveyor belt'; chỗ trống nhấn mạnh 'tự họ làm' → đại từ phản thân (A) 'themselves'. (B) tân ngữ, (C) tính từ sở hữu cần danh từ theo sau, (D) chủ ngữ.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "B",
+        "content": "The ------- of the storage area will give warehouse workers more room to move pallets safely.",
+        "options": [
+          "expand",
+          "expansion",
+          "expanded",
+          "expansive"
+        ],
+        "explanation": "Sau 'The' và trước 'of' cần danh từ làm chủ ngữ → (B) 'expansion' (việc mở rộng). (A) động từ, (C) động từ quá khứ/phân từ, (D) tính từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

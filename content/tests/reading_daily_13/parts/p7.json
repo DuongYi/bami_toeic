@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "E-mail\n\nFrom: Help Desk, Ridgecombe Publishing\nTo: All Editorial Staff\nDate: Tuesday, May 6\nSubject: Laptop replacement schedule\n\nHello everyone,\n\nAs part of this year's equipment upgrade, every member of the editorial department will receive a new laptop this month. Because only two technicians are available, the replacements will take place in three groups. Staff on the fourth floor will receive their laptops on May 13, staff on the fifth floor on May 15, and those who work mainly from home on May 20.\n\nEach exchange takes about forty minutes. During this time, a technician will transfer your files and settings and show you the main features of the new machine. Please bring your current laptop, its charger, and any accessories that the company issued to you, such as a mouse or headset. If you bought a keyboard with your own money, you may keep it.\n\nIf the date assigned to you is not convenient, please reply to this e-mail by Friday, May 9, and we will try to arrange another time.\n\nDaniel Navarro\nHelp Desk Supervisor",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "What is the purpose of the e-mail?",
+        "options": [
+          "To explain how new laptops will be distributed",
+          "To announce the hiring of additional technicians",
+          "To ask staff to choose a preferred laptop model",
+          "To report a problem with the office network"
+        ],
+        "explanation": "Mục đích e-mail nằm ở đoạn 1: mọi nhân viên sẽ nhận laptop mới và việc thay được chia làm ba nhóm theo ngày ('the replacements will take place in three groups') → giải thích cách phân phát laptop (A). (B) bài chỉ nói 'only two technicians are available', không tuyển thêm; (C), (D) không được nhắc đến.",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "A",
+        "content": "What is suggested about the replacement process?",
+        "options": [
+          "It cannot be done for everyone on the same day.",
+          "It requires employees to buy their own accessories.",
+          "It will be finished before the end of this week.",
+          "It was postponed from an earlier month."
+        ],
+        "explanation": "Đoạn 1: 'Because only two technicians are available, the replacements will take place in three groups' với ba ngày khác nhau → suy ra không thể thay cho mọi người trong cùng một ngày (A). (B) sai – phụ kiện do công ty cấp; (C) sai – lịch kéo dài đến May 20; (D) không có thông tin.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "A",
+        "content": "What are employees NOT asked to bring to their appointment?",
+        "options": [
+          "A keyboard they bought themselves",
+          "The charger for their current laptop",
+          "A headset provided by the company",
+          "The laptop they are now using"
+        ],
+        "explanation": "Câu hỏi NOT. Đoạn 2 yêu cầu mang laptop hiện tại (D), sạc (B) và phụ kiện công ty cấp như tai nghe (C). Riêng bàn phím tự mua thì được giữ lại ('If you bought a keyboard with your own money, you may keep it') → không phải mang (A).",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  }
+]

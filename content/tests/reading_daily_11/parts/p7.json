@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "To: Henrik Nilsson <hnilsson@quillmail.com>\nFrom: Member Services <members@alderpointcu.com>\nDate: September 12\nSubject: Your Goal Saver account\n\nDear Mr. Nilsson,\n\nCongratulations! Your Goal Saver account has reached its first anniversary. Over the past twelve months, your automatic transfers of $150 each month, together with the interest earned, have brought your balance to $1,872.\n\nAs we mentioned when you opened the account, the interest rate for the first year was a special introductory rate of 3.5 percent. Starting October 1, your account will earn our standard rate of 2.75 percent. Members who wish to earn a higher rate may move their savings into a twelve-month Certificate Account, which currently pays 4.1 percent. Please note that funds in a Certificate Account cannot be withdrawn before the end of the term without a penalty.\n\nIf you would like to discuss your options, our advisors are available Monday through Saturday at our Kessler Road branch. You can also book an appointment online at www.alderpointcu.com/advice.\n\nSincerely,\nTeresa Zielinski\nMember Services Manager\nAlderpoint Credit Union",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "B",
+        "content": "Why was the e-mail sent?",
+        "options": [
+          "To ask a member to update his contact details",
+          "To explain that an interest rate will change soon",
+          "To confirm that a monthly transfer was canceled",
+          "To announce the opening of a new branch"
+        ],
+        "explanation": "Đoạn 2: 'Starting October 1, your account will earn our standard rate of 2.75 percent' (thay cho mức ưu đãi 3,5%) → mục đích chính là báo lãi suất sắp thay đổi (B). (A), (C), (D) không được nhắc; chi nhánh Kessler Road chỉ là nơi gặp tư vấn.",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "A",
+        "content": "What is suggested about Mr. Nilsson?",
+        "options": [
+          "He opened his account about one year ago.",
+          "He has already met with an advisor.",
+          "He plans to withdraw his savings soon.",
+          "He currently holds a Certificate Account."
+        ],
+        "explanation": "Đoạn 1: 'Your Goal Saver account has reached its first anniversary' → suy ra ông mở tài khoản khoảng một năm trước (A). (B) bài chỉ mời gặp tư vấn; (C) không có căn cứ; (D) Certificate Account chỉ là lựa chọn được giới thiệu.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "C",
+        "content": "The word \"standard\" in paragraph 2, line 2, is closest in meaning to",
+        "options": [
+          "strict",
+          "excellent",
+          "regular",
+          "flexible"
+        ],
+        "explanation": "'our standard rate' đối lập với 'special introductory rate' → mức lãi suất 'thông thường' → 'regular' (C). (A) nghiêm ngặt, (B) xuất sắc, (D) linh hoạt không hợp ngữ cảnh.",
+        "tags": [
+          "vocab-in-context"
+        ]
+      }
+    ]
+  }
+]

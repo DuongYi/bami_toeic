@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "Now Hiring: Customer Service Representative\n\nQuillon Home Goods is looking for a full-time customer service representative to join the team at our Ridgeway store. The successful candidate ---(131)--- customer questions in person and by phone, process returns, and help maintain store displays.\n\nApplicants should have at least one year of experience in retail. Strong communication skills are also ---(132)---. ---(133)---\n\nWe offer health insurance, paid vacation, and a 20 percent employee discount. ---(134)---, all new employees receive paid training during their first month.\n\nTo apply, please send your résumé to Ms. Anita Mehta at hiring@quillonhome.com.",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "C",
+        "options": [
+          "answered",
+          "has answered",
+          "will answer",
+          "was answering"
+        ],
+        "explanation": "Quảng cáo tuyển dụng mô tả công việc người được tuyển sẽ làm trong tương lai (vị trí chưa có người) → (C) \"will answer\". (A), (B), (D) đều chỉ việc đã xảy ra.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "B",
+        "options": [
+          "require",
+          "required",
+          "requirement",
+          "requiring"
+        ],
+        "explanation": "Sau \"are also\" cần quá khứ phân từ để tạo câu bị động: kỹ năng giao tiếp \"được yêu cầu\" → (B) \"required\". (A) là động từ nguyên thể; (C) là danh từ số ít không có mạo từ, không hợp với chủ ngữ số nhiều; (D) mang nghĩa chủ động.",
+        "tags": [
+          "word-form"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "C",
+        "options": [
+          "Our store will be closed for repairs next week.",
+          "Thank you for shopping at Quillon Home Goods.",
+          "Knowledge of our online ordering system is helpful but not necessary.",
+          "The new product catalog was mailed to all of our regular customers yesterday."
+        ],
+        "explanation": "Đoạn 2 liệt kê yêu cầu với ứng viên (kinh nghiệm bán lẻ, kỹ năng giao tiếp) → câu (C) tiếp tục nói về điều kiện ứng tuyển. (A), (B), (D) nói với khách hàng, không liên quan đến tuyển dụng.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "D",
+        "options": [
+          "However",
+          "Otherwise",
+          "Instead",
+          "In addition"
+        ],
+        "explanation": "Câu trước liệt kê phúc lợi, câu sau nêu thêm một phúc lợi nữa (đào tạo có lương) → từ nối bổ sung (D) \"In addition\". (A) chỉ tương phản, (B) \"nếu không thì\", (C) \"thay vào đó\" đều không hợp.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  }
+]

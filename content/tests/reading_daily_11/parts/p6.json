@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "NOTICE TO ALL CRESTMOOR SAVINGS BANK CUSTOMERS\n\nBeginning on June 1, Crestmoor Savings Bank will replace all existing debit cards with new cards that contain an upgraded security chip. Your new card ---(131)--- to the address on file during the next three weeks.\n\nWhen your card arrives, you must activate it before using it at a store or cash machine. ---(132)--- Your old card will stop working seven days after the new one is activated, so please dispose of it ---(133)---.\n\nYour card number and personal identification number (PIN) will remain the same. However, the expiration date and security code will be different. If you have set up automatic payments with any companies, remember to update this ---(134)--- to avoid missed payments.\n\nFor questions, visit any branch or call our customer service line at 555-0164.",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "B",
+        "options": [
+          "was mailed",
+          "will be mailed",
+          "has been mailed",
+          "is mailing"
+        ],
+        "explanation": "Thông báo nói việc thay thẻ bắt đầu từ 1/6 và thẻ đến 'during the next three weeks' → tương lai, bị động (thẻ được gửi) → 'will be mailed' (B). (A), (C) là quá khứ / hoàn thành; (D) chủ động sai nghĩa (thẻ không tự gửi).",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "A",
+        "options": [
+          "To do so, simply call the number printed on the sticker attached to the card.",
+          "Our branches will be closed on all national holidays this year, including the first Monday of May.",
+          "The new cards were designed by an award-winning local artist.",
+          "In that case, you may request a refund of the annual fee."
+        ],
+        "explanation": "Câu trước yêu cầu phải kích hoạt thẻ → câu chèn hướng dẫn cách kích hoạt 'To do so, simply call the number …' (A); 'To do so' thay cho 'activate it'. (B), (C) lạc mạch; (D) 'In that case' không có tình huống nào để tham chiếu.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "C",
+        "options": [
+          "careful",
+          "care",
+          "carefully",
+          "caring"
+        ],
+        "explanation": "Bổ nghĩa cho cụm động từ 'dispose of it' cần trạng từ → 'carefully' (C). (A), (D) là tính từ, (B) là danh từ/động từ.",
+        "tags": [
+          "word-form"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "D",
+        "options": [
+          "equipment",
+          "location",
+          "schedule",
+          "information"
+        ],
+        "explanation": "Đoạn này nói hạn sử dụng và mã bảo mật thay đổi → khách cần cập nhật 'thông tin' thẻ cho các công ty thu tiền tự động → 'information' (D). (A) thiết bị, (B) địa điểm, (C) lịch – không phải thứ thay đổi trên thẻ.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  }
+]

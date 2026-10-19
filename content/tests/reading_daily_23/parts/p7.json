@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "Article\n\nTwo Regional Carriers to Combine\nBy Mateus Correia\n\nPORTLYN (October 2) — Bayline Air and Northcrest Airways, two carriers that serve smaller cities along the eastern coast, announced on Monday that they intend to merge. The combined airline will operate under the Bayline name and will be based at Bayline's current headquarters in Portlyn.\n\nThe two companies compete on only three routes, and analysts expect few changes to those services. What the merger will change, they say, is the airlines' buying power. \"Together they become one of the largest regional customers for aircraft manufacturers,\" said Omar Farouk, a transportation analyst at Hessel Research. \"That should translate into better terms on the twenty new planes Northcrest had already planned to order.\"\n\nNorthcrest chief executive Grace Quaye, who will serve as president of the combined company, said that frequent flyers will be able to transfer points from Northcrest's rewards program into Bayline's beginning next year. Northcrest's program will be discontinued at that time.\n\nThe deal still requires shareholder approval at both companies. Votes are scheduled for late November.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "B",
+        "content": "What is suggested about Northcrest Airways?",
+        "options": [
+          "Its main office will become the new airline's headquarters.",
+          "Its name will no longer appear on flights after the merger.",
+          "It competes with Bayline on most of its routes.",
+          "It has already taken delivery of twenty aircraft."
+        ],
+        "explanation": "Suy luận 2 bước: đoạn 1 – hãng mới 'will operate under the Bayline name' → tên Northcrest sẽ không còn dùng → (B). (A) trụ sở là của Bayline; (C) trái với 'compete on only three routes' (đoạn 2); (D) 20 máy bay mới chỉ 'planned to order', chưa nhận.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "A",
+        "content": "The word \"terms\" in paragraph 2, line 5, is closest in meaning to",
+        "options": [
+          "conditions",
+          "periods",
+          "words",
+          "limits"
+        ],
+        "explanation": "Từ trong ngữ cảnh: 'better terms on the twenty new planes' = điều kiện (giá cả, thanh toán) tốt hơn khi mua máy bay nhờ sức mua lớn → (A) 'conditions'. (B) 'periods' là nghĩa 'kỳ hạn' – bẫy; (C) 'words' (thuật ngữ) và (D) 'limits' không hợp.",
+        "tags": [
+          "vocab-in-context"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "D",
+        "content": "What is indicated about Bayline's rewards program?",
+        "options": [
+          "It will be discontinued at the start of next year.",
+          "It was redesigned under the direction of Ms. Quaye.",
+          "It must be approved by shareholders in November.",
+          "It will accept points earned with another airline."
+        ],
+        "explanation": "Suy luận/paraphrase xa: đoạn 3 – khách có thể 'transfer points from Northcrest's rewards program into Bayline's' → chương trình của Bayline sẽ nhận điểm tích từ hãng khác → (D). (A) bẫy: chương trình bị ngừng là của Northcrest; (B) không nói bà Quaye thiết kế lại; (C) cổ đông bỏ phiếu cho thương vụ, không phải chương trình.",
+        "tags": [
+          "inference"
+        ]
+      }
+    ]
+  }
+]

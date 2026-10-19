@@ -47,6 +47,8 @@ void main() {
     expect(collectionOf(_t('Nguồn X', 'Đề A', 200)).id, 'other-full');
     expect(collectionOf(_t('Nguồn X', 'Đề B', 20)).shelf, TestShelf.short);
     expect(collectionOf(_t('ETS 2025', 'ETS 2025 – Test 1', 200)).id, 'ets-2025');
+    // Reading mỗi ngày cũng 15 phút nhưng là bộ riêng, không lẫn vào Quick 15.
+    expect(collectionOf(_t('Bami TOEIC', 'Reading mỗi ngày · Ngày 03', 15)).id, 'reading-daily');
   });
 
   test('cột collection gán sẵn được ưu tiên', () {
@@ -55,6 +57,7 @@ void main() {
     expect(collectionOf(withCol('part-6', title: 'Luyện Part 5 · Đề 09')).id, 'part-6');
     expect(collectionOf(withCol('ets-2025')).title, 'ETS 2025');
     expect(collectionOf(withCol('quick-15')).kind, CollectionKind.quick);
+    expect(collectionOf(withCol('reading-daily')).title, 'Reading mỗi ngày');
     final custom = collectionOf(withCol('toeic-speaking'));
     expect(custom.id, 'toeic-speaking');
     expect(custom.kind, CollectionKind.other);

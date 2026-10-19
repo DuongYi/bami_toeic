@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "Text-message chain\n\nRafael Pereira [9:02 A.M.]\nHi Nadia. I just landed in Kessington, but my suitcase didn't come out at baggage claim.\n\nNadia Eriksson [9:04 A.M.]\nOh no. Did you report it at the airline counter?\n\nRafael Pereira [9:06 A.M.]\nYes. They said it's probably still in Brockton because I had so little time to switch planes there. It should arrive on the evening flight.\n\nNadia Eriksson [9:07 A.M.]\nThe meeting with Holloway Interiors is at 1:00. Do you have the fabric samples with you?\n\nRafael Pereira [9:09 A.M.]\nThey're in the suitcase, unfortunately. My laptop is in my backpack, though.\n\nNadia Eriksson [9:11 A.M.]\nOK. I'll ask Mr. Iyer at our Kessington branch to bring a set from their showroom.\n\nRafael Pereira [9:12 A.M.]\nThat would be a huge help. I'll go to the hotel to change first.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "Why did Mr. Pereira's suitcase most likely not arrive with him?",
+        "options": [
+          "His connection in Brockton was very short.",
+          "It was too heavy to be loaded onto the plane.",
+          "He forgot to collect it at his hotel.",
+          "It was damaged during the flight."
+        ],
+        "explanation": "Lúc 9:06: 'it's probably still in Brockton because I had so little time to switch planes there' → thời gian nối chuyến ở Brockton quá ngắn (A). (B), (C), (D) không được nhắc đến.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "A",
+        "content": "At 9:09 A.M., what does Mr. Pereira most likely mean when he writes, \"My laptop is in my backpack, though\"?",
+        "options": [
+          "He can still show his presentation materials.",
+          "He needs someone to help him carry his heavy luggage.",
+          "He plans to work at the hotel all afternoon.",
+          "He will send the samples electronically."
+        ],
+        "explanation": "Mẫu vải nằm trong vali bị thất lạc, 'though' (tuy vậy) cho thấy anh vẫn còn laptop → vẫn có thể trình bày tài liệu cho cuộc họp (A). (B) không liên quan; (C) trái với việc anh sẽ đến cuộc họp lúc 1:00; (D) mẫu vải không gửi điện tử được.",
+        "tags": [
+          "implied-meaning"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "A",
+        "content": "What is suggested about the company that Ms. Eriksson works for?",
+        "options": [
+          "It has an office with product displays in Kessington.",
+          "It plans to use a different airline for all future business trips.",
+          "It will postpone the meeting with Holloway Interiors.",
+          "It ships fabric samples to clients by express mail."
+        ],
+        "explanation": "Lúc 9:11: 'our Kessington branch' và 'bring a set from their showroom' → công ty có chi nhánh ở Kessington với phòng trưng bày sản phẩm (A). Không ai nói đổi hãng bay (B), hoãn họp (C) hay gửi mẫu chuyển phát nhanh (D).",
+        "tags": [
+          "inference"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "LANWICK (14 August) – Hollis Ridge Growers, a cooperative of 30 family farms, announced on Tuesday that it will begin supplying fresh produce directly to schools in the Lanwick district this autumn. Until now, the cooperative ---(131)--- most of its fruit and vegetables to wholesale distributors in the capital.\n\nAccording to cooperative chair Lucia Vargas, the arrangement will benefit both farmers and students. \"Selling directly allows our members to earn more per crate,\" she said. \"---(132)---\"\n\nThe district plans to serve the cooperative's produce in all twelve of its school cafeterias. ---(133)---, deliveries will be limited to four schools during the first term so that the farms can adjust their harvesting schedules.\n\nParents interested in learning more are invited to a ---(134)--- tour of one of the member farms on 6 September. Space is limited, so reservations are required.",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "A",
+        "options": [
+          "has sold",
+          "had sold",
+          "will sell",
+          "is selling"
+        ],
+        "explanation": "'Until now' (cho đến nay) chỉ hành động kéo dài từ quá khứ đến hiện tại → hiện tại hoàn thành 'has sold' (A). (B) quá khứ hoàn thành cần mốc quá khứ; (C) tương lai mâu thuẫn với 'until now'; (D) hiện tại tiếp diễn không diễn tả quá trình kéo dài tới nay.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "A",
+        "options": [
+          "At the same time, children will be eating vegetables picked only a day or two earlier.",
+          "Wholesale prices for fresh vegetables have risen steadily across the region over the past year.",
+          "The district is expected to name a new superintendent next month.",
+          "As a result, several members have decided to leave the cooperative."
+        ],
+        "explanation": "Câu trước: bà Vargas nói thoả thuận có lợi cho 'both farmers and students' và vừa nêu lợi ích cho nông dân → câu tiếp theo nêu lợi ích cho học sinh, nối bằng 'At the same time' (A). (B) không phải lợi ích của học sinh; (C) lạc chủ đề; (D) trái với ý 'benefit'.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "A",
+        "options": [
+          "However",
+          "Therefore",
+          "Similarly",
+          "For instance"
+        ],
+        "explanation": "Câu trước: kế hoạch phục vụ cả 12 trường; câu sau: học kỳ đầu chỉ giao cho 4 trường → hai ý tương phản, cần 'However' (tuy nhiên) (A). (B) 'Therefore' chỉ kết quả; (C) 'Similarly' chỉ sự tương đồng; (D) 'For instance' đưa ví dụ – đều không hợp.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "A",
+        "options": [
+          "complimentary",
+          "mandatory",
+          "previous",
+          "temporary"
+        ],
+        "explanation": "Phụ huynh được 'invited' (mời) tham gia một chuyến tham quan sắp tới (6/9) → 'complimentary tour' (miễn phí) (A). (B) 'mandatory' (bắt buộc) mâu thuẫn với lời mời 'interested… are invited'; (C) 'previous' (trước đó) trái với ngày trong tương lai; (D) 'temporary' (tạm thời) không hợp nghĩa với 'tour'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  }
+]

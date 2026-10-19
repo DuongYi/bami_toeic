@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "To: Members of the Kestrel Hill Museum of Art\nFrom: Rosa Morales, Membership Coordinator\nDate: March 2\nSubject: Members' preview evening\n\nDear Member,\n\nWe are pleased to invite you to a private preview of Light and Harbor: Coastal Paintings 1880–1920, which opens to the public on Saturday, March 21. The preview ---(131)--- on Thursday, March 19, from 6:00 to 8:30 P.M. ---(132)--- Space is limited, so we ask that you reserve your place by calling 555-0137 no later than March 12.\n\nDuring the evening, guest curator Daniel Adebayo will give a short talk about how the exhibition was put together. Many of the works have been ---(133)--- from private collections for the duration of the exhibition and will be returned to their owners in June.\n\nAs always, members may bring one guest free of charge. ---(134)---, additional guests can be admitted for a reduced fee of $10 each.\n\nSincerely,\nRosa Morales",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "B",
+        "options": [
+          "took place",
+          "will take place",
+          "has taken place",
+          "was taking place"
+        ],
+        "explanation": "Thì: e-mail viết ngày 2/3, buổi xem trước diễn ra ngày 19/3 → sự kiện tương lai → (B) 'will take place'. (A), (C), (D) đều chỉ quá khứ.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "A",
+        "options": [
+          "Light refreshments will be served in the atrium throughout the event.",
+          "Thank you to everyone who attended last week's preview.",
+          "The museum will therefore be closed to members that evening.",
+          "However, the paintings were sent back to their owners in January."
+        ],
+        "explanation": "Chèn câu: câu trước nêu giờ của buổi xem trước, câu sau nói về giới hạn chỗ → cần thêm chi tiết về sự kiện sắp tới: (A) phục vụ đồ ăn nhẹ. (B) nói về sự kiện đã qua; (C) mâu thuẫn với lời mời; (D) mâu thuẫn với việc tranh sẽ được trả lại vào tháng 6.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "C",
+        "options": [
+          "acquired",
+          "donated",
+          "borrowed",
+          "sold"
+        ],
+        "explanation": "Từ vựng theo ngữ cảnh: tác phẩm lấy từ bộ sưu tập tư nhân 'trong thời gian triển lãm' và 'sẽ được trả lại cho chủ vào tháng 6' → là mượn: (C) 'borrowed'. (A) 'acquired' (mua lại) và (B) 'donated' (được tặng) là sở hữu vĩnh viễn; (D) 'sold' trái nghĩa.",
+        "tags": [
+          "vocabulary"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "D",
+        "options": [
+          "Otherwise",
+          "Instead",
+          "As a result",
+          "In addition"
+        ],
+        "explanation": "Từ nối: câu trước nói hội viên được dẫn 1 khách miễn phí, câu sau bổ sung khách thêm được giảm giá → thêm thông tin: (D) 'In addition'. (A) 'Otherwise' (nếu không thì), (B) 'Instead' (thay vào đó), (C) 'As a result' (kết quả là) không hợp quan hệ ý.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "C",
+        "content": "The service department's new diagnostic software has made it ------- easier for technicians to identify engine faults.",
+        "options": [
+          "consider",
+          "considerable",
+          "considerably",
+          "consideration"
+        ],
+        "explanation": "Trước tính từ so sánh hơn 'easier' cần trạng từ chỉ mức độ → 'considerably' (đáng kể) (C). (B) là tính từ, (A) là động từ, (D) là danh từ – không bổ nghĩa cho tính từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "D",
+        "content": "Thanks to Ms. Lindgren's careful ------- of the warranty terms, the customer avoided an unnecessary repair charge.",
+        "options": [
+          "interpret",
+          "interpretive",
+          "interpreter",
+          "interpretation"
+        ],
+        "explanation": "Sau sở hữu cách + tính từ 'careful' và trước 'of' cần danh từ chỉ hành động → 'interpretation' (sự diễn giải) (D). (C) cũng là danh từ nhưng chỉ người (thông dịch viên), sai nghĩa; (B) là tính từ; (A) là động từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "A",
+        "content": "Because the replacement part is on back order, the dealership has lent Mr. Achebe a vehicle for the ------- of the repair.",
+        "options": [
+          "duration",
+          "extent",
+          "interval",
+          "span"
+        ],
+        "explanation": "Cụm cố định 'for the duration of' = trong suốt thời gian … → (A). (B) 'extent' chỉ mức độ ('to the extent that'); (C) 'interval' là khoảng cách giữa hai lần; (D) 'span' đi với 'time span / life span', không dùng 'for the span of the repair'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "B",
+        "content": "------- its compact exterior, the Velora sedan offers more cargo space than many larger models.",
+        "options": [
+          "Although",
+          "Despite",
+          "Even so",
+          "Instead of"
+        ],
+        "explanation": "Sau chỗ trống là cụm danh từ 'its compact exterior', hai vế tương phản (nhỏ gọn ↔ nhiều chỗ chứa đồ) → giới từ 'Despite' (B). (A) cần mệnh đề; (C) là trạng từ nối câu; (D) 'thay vì' sai nghĩa.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "C",
+        "content": "By the time its new showroom opens next spring, Gutierrez Auto Group ------- its online booking system to all twelve service locations.",
+        "options": [
+          "has expanded",
+          "expanded",
+          "will have expanded",
+          "will be expanding"
+        ],
+        "explanation": "'By the time + hiện tại đơn' với mốc tương lai 'next spring' → hành động hoàn tất trước mốc đó dùng tương lai hoàn thành 'will have expanded' (C). (A), (B) là hiện tại hoàn thành / quá khứ, không hợp mốc tương lai; (D) tương lai tiếp diễn không diễn tả sự hoàn tất.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "A",
+        "content": "Brightwater Motors will ------- the inspection fee for any customer who purchases a set of four tires this month.",
+        "options": [
+          "waive",
+          "exempt",
+          "excuse",
+          "omit"
+        ],
+        "explanation": "Collocation 'waive a fee' = miễn phí → (A). (B) 'exempt' dùng với người ('exempt someone from a fee'); (C) 'excuse' dùng cho người / lỗi; (D) 'omit' là bỏ sót, lược bỏ (thông tin), không dùng với phí.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "A",
+        "content": "Of the dealership's three service advisors, Mr. Achebe is the one ------- customers most often request by name.",
+        "options": [
+          "whom",
+          "whose",
+          "which",
+          "what"
+        ],
+        "explanation": "Mệnh đề quan hệ bổ nghĩa cho 'the one' (chỉ người) và đóng vai tân ngữ của 'request' → 'whom' (A). (B) cần danh từ theo sau; (C) dùng cho vật; (D) không đứng sau danh từ làm đại từ quan hệ.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "B",
+        "content": "Ms. Shimizu was praised for her ------- approach to resolving complaints about delayed repairs.",
+        "options": [
+          "method",
+          "methodical",
+          "methodically",
+          "methods"
+        ],
+        "explanation": "Giữa tính từ sở hữu 'her' và danh từ 'approach' cần tính từ → 'methodical' (bài bản, có phương pháp) (B). (C) là trạng từ; (A), (D) là danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

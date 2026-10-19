@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "MEMO\n\nTo: All Front-Desk and Sales Staff\nFrom: Rosa Almeida, General Manager\nDate: January 8\nSubject: Revised membership options\n\nBeginning February 1, Peakline Fitness Club will replace its three membership tiers with two simplified plans: Standard and Premium. Current members ---(131)--- to the plan that most closely matches their existing benefits unless they request otherwise.\n\nWe expect this change to generate a large number of questions at the front desk. ---(132)--- These cover the most common concerns, including how monthly fees will be affected.\n\nPlease note that personal training packages purchased before February 1 will be honored ---(133)--- of which plan a member selects.\n\nFinally, thank you for the comments you shared on the draft plans last month. Several of your suggestions were ---(134)--- into the final version.",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "A",
+        "options": [
+          "will be transferred",
+          "have been transferred",
+          "were transferred",
+          "are transferring"
+        ],
+        "explanation": "Memo gửi ngày January 8, thay đổi bắt đầu từ February 1 → việc chuyển gói chưa xảy ra, cần tương lai; hội viên 'được chuyển' → bị động 'will be transferred' (A). (B), (C) diễn tả việc đã xảy ra – mâu thuẫn mốc thời gian; (D) chủ động sai nghĩa.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "A",
+        "options": [
+          "To help you respond, we have prepared a set of printed answers, which are in the staff room.",
+          "Several members have already renewed their annual contracts well ahead of the January deadline.",
+          "The sauna will remain closed for cleaning until the end of the month.",
+          "Please remind members that the parking lot will be repaved next week."
+        ],
+        "explanation": "Câu sau bắt đầu bằng 'These cover the most common concerns' → 'These' phải chỉ một thứ trả lời các thắc mắc; chỉ (A) có 'a set of printed answers' nối tiếp ý 'nhiều câu hỏi ở quầy lễ tân'. (B) 'contracts' không 'cover concerns'; (C), (D) lạc đề với việc đổi gói hội viên.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "A",
+        "options": [
+          "regardless",
+          "notwithstanding",
+          "although",
+          "instead"
+        ],
+        "explanation": "Cụm giới từ 'regardless of' (bất kể) + mệnh đề danh từ 'which plan a member selects' (A). (B) 'notwithstanding' là giới từ đứng một mình, không đi với 'of'; (C) 'although' là liên từ, không đi với 'of'; (D) 'instead of' (thay vì) sai nghĩa.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "A",
+        "options": [
+          "incorporated",
+          "included",
+          "involved",
+          "enclosed"
+        ],
+        "explanation": "Collocation 'be incorporated into' = được đưa vào, lồng ghép vào (bản cuối) (A). (B) 'included' cùng nghĩa gần nhưng đi với 'in', không đi với 'into'; (C) 'involved' (liên quan) và (D) 'enclosed' (gửi kèm) sai nghĩa.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  }
+]

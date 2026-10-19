@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 17",
+  "source": "Bami TOEIC",
+  "description": "Luyện Reading 15 câu chủ đề xây dựng & cải tạo, band 750–850.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "A",
+          "content": "Residents should use the side entrance ------- the lobby floor is being replaced next week.",
+          "options": [
+            "while",
+            "until",
+            "despite",
+            "during"
+          ],
+          "explanation": "Liên từ / giới từ: sau chỗ trống là mệnh đề ('the lobby floor is being replaced') → cần liên từ; nghĩa 'trong khi sàn sảnh đang được thay' → (A) 'while'. (D) 'during' và (C) 'despite' là giới từ, cần cụm danh từ; (B) 'until' (cho đến khi) không hợp với thì tiếp diễn và sai nghĩa.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "C",
+          "content": "The contractor's initial ------- of the renovation costs was considerably lower than the final invoice.",
+          "options": [
+            "estimating",
+            "estimated",
+            "estimate",
+            "estimable"
+          ],
+          "explanation": "Từ loại: sau sở hữu cách 'The contractor's' và tính từ 'initial', trước 'of' cần danh từ làm chủ ngữ → (C) 'estimate' (bản ước tính). (B), (A) là dạng phân từ; (D) 'estimable' là tính từ (đáng kính trọng).",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "D",
+          "content": "Kestrel Renovations will ------- the cost of any materials that are damaged during delivery to the site.",
+          "options": [
+            "spend",
+            "afford",
+            "charge",
+            "cover"
+          ],
+          "explanation": "Từ vựng: 'cover the cost' = chịu/chi trả chi phí → (D). (B) 'afford' là 'có đủ khả năng chi trả', không dùng để cam kết bồi hoàn; (A) 'spend' đi với tiền/thời gian, không đi với 'the cost'; (C) 'charge' (tính phí) ngược nghĩa.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "B",
+          "content": "Homeowners who prefer to purchase the floor tiles ------- should inform the project manager before work begins.",
+          "options": [
+            "them",
+            "themselves",
+            "their own",
+            "theirs"
+          ],
+          "explanation": "Đại từ: câu đã đủ thành phần ('purchase the floor tiles'), chỗ trống nhấn mạnh 'tự mình mua' → đại từ phản thân (B) 'themselves'. (C) 'their own' cần danh từ theo sau; (A) 'them' và (D) 'theirs' không hợp nghĩa ở vị trí này.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "D",
+          "content": "By the time the electrical inspector arrives on Friday, the crew ------- installing the new wiring.",
+          "options": [
+            "finishes",
+            "has finished",
+            "had finished",
+            "will have finished"
+          ],
+          "explanation": "Thì động từ: 'By the time + hiện tại đơn (arrives) chỉ tương lai' → mệnh đề chính dùng tương lai hoàn thành (D) 'will have finished'. (B) hiện tại hoàn thành, (C) quá khứ hoàn thành, (A) hiện tại đơn sai mốc thời gian.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "A",
+          "content": "Brightwater Builders has earned a ------- for completing projects on time and within budget.",
+          "options": [
+            "reputation",
+            "publicity",
+            "celebrity",
+            "recognition"
+          ],
+          "explanation": "Từ vựng – kết hợp từ: 'earn a reputation for + V-ing' = tạo được tiếng tăm về việc gì → (A). (D) 'recognition' (sự công nhận) không dùng với mạo từ 'a' trong cấu trúc này; (B) 'publicity' (sự quảng bá) và (C) 'celebrity' (người nổi tiếng/sự nổi danh) không hợp nghĩa.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "C",
+          "content": "The renovated community center is ------- larger than the original building, with two additional meeting rooms.",
+          "options": [
+            "considerable",
+            "considering",
+            "considerably",
+            "consideration"
+          ],
+          "explanation": "Từ loại: chỗ trống bổ nghĩa cho tính từ so sánh 'larger' → cần trạng từ (C) 'considerably' (đáng kể). (A) tính từ, (D) danh từ, (B) giới từ/phân từ đều không bổ nghĩa cho tính từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "B",
+          "content": "------- the city approves the building permit, work on the second-floor extension can begin immediately.",
+          "options": [
+            "Unless",
+            "Once",
+            "Despite",
+            "Whereas"
+          ],
+          "explanation": "Liên từ: nghĩa 'ngay khi thành phố duyệt giấy phép, công việc có thể bắt đầu ngay' → (B) 'Once'. (A) 'Unless' (trừ khi) làm câu phi logic; (D) 'Whereas' chỉ đối lập; (C) 'Despite' là giới từ, không đứng trước mệnh đề.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "NOTICE TO ALL TENANTS – Alder Court Apartments\n\nPlease be advised that the replacement of the building's windows will begin on Monday, April 7. The work will be carried out by Kestrel Renovations and is expected to take three weeks. Crews will work on one floor at a time, ---(131)--- with the ground floor.\n\nEach unit will require approximately four hours of work. You will receive a written notice at least two days before your unit is scheduled. ---(132)--- If you cannot be home at that time, building staff will be present to let the workers in.\n\nWe understand that the noise may be ---(133)---, especially for those of you who work from home. The community room on the ground floor will therefore remain open from 8:00 A.M. to 6:00 P.M. as a quiet workspace for the ---(134)--- of the project.\n\nQuestions may be directed to the management office at 555-0143.",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "C",
+          "options": [
+            "starts",
+            "having started",
+            "starting",
+            "started"
+          ],
+          "explanation": "Dạng động từ: sau dấu phẩy, mệnh đề chính đã có động từ 'will work' → cần phân từ rút gọn diễn tả cách tiến hành (bắt đầu từ tầng trệt) → (C) 'starting'. (D) 'started' mang nghĩa bị động; (A) 'starts' là động từ chia, tạo hai vị ngữ không có liên từ; (B) 'having started' chỉ việc đã xong trước – sai vì công trình chưa bắt đầu.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "A",
+          "options": [
+            "Please remove any items from your windowsills before that day.",
+            "The new windows were installed ahead of schedule.",
+            "Workers will not need to enter your unit at any point.",
+            "The management office will be closed for the rest of the month."
+          ],
+          "explanation": "Chèn câu: câu trước nói về thông báo trước 2 ngày khi đến lượt căn hộ ('before your unit is scheduled'); câu (A) đưa ra việc cư dân cần làm trước 'that day' (ngày đó) → khớp. (B) trái với việc công trình sắp bắt đầu; (D) trái với dòng cuối mời liên hệ văn phòng; (C) trái với câu sau 'building staff will be present to let the workers in'.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "B",
+          "options": [
+            "occasional",
+            "inconvenient",
+            "unavoidable",
+            "temporary"
+          ],
+          "explanation": "Từ vựng theo ngữ cảnh: cụm 'especially for those of you who work from home' (đặc biệt với người làm việc tại nhà) và giải pháp phòng làm việc yên tĩnh cho thấy tiếng ồn gây phiền → (B) 'inconvenient'. (C) 'unavoidable', (D) 'temporary', (A) 'occasional' không liên quan đến việc 'đặc biệt' ảnh hưởng tới người làm ở nhà.",
+          "tags": [
+            "vocabulary"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "D",
+          "options": [
+            "deadline",
+            "completion",
+            "extension",
+            "duration"
+          ],
+          "explanation": "Từ vựng – kết hợp từ: 'for the duration of the project' = trong suốt thời gian dự án → (D). (C) 'extension' (gia hạn) và (A) 'deadline' (hạn chót) sai nghĩa; (B) 'for the completion of' = để hoàn thành, không chỉ khoảng thời gian phòng mở cửa.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "To: Sofia Holm <sholm@larchmail.com>\nFrom: Tomasz Dudek <tdudek@brightwaterbuilders.com>\nDate: March 3\nSubject: Your kitchen renovation\n\nDear Ms. Holm,\n\nThank you for meeting with me last Thursday to discuss the renovation of your kitchen. As promised, I have attached a detailed quotation based on the measurements we took during my visit. — [1] —\n\nYou mentioned that you would like the work completed before your relatives visit in early May. Our crew is currently available to begin on March 24, which would allow us to finish by April 25. — [2] — However, the custom cabinets you selected must be ordered from the manufacturer at least four weeks in advance, so we would need your decision by March 10 to keep that schedule.\n\nIf you choose the standard cabinets shown in our catalog instead, they can be delivered within a week. — [3] — Please note that the quotation does not include new appliances, as you indicated that you plan to keep your current refrigerator and oven.\n\nI would be glad to answer any questions by phone at 555-0167. — [4] — I look forward to hearing from you.\n\nSincerely,\nTomasz Dudek\nProject Coordinator, Brightwater Builders",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "D",
+          "content": "Why did Mr. Dudek send the e-mail?",
+          "options": [
+            "To arrange an initial visit to a property",
+            "To request payment for a recent delivery",
+            "To report a problem with a finished project",
+            "To follow up on an earlier consultation"
+          ],
+          "explanation": "Mục đích: đoạn 1 'Thank you for meeting with me last Thursday… I have attached a detailed quotation' → gửi báo giá sau buổi gặp trước đó → (D). (C) dự án chưa bắt đầu; (B) không có yêu cầu thanh toán; (A) sai vì ông Dudek đã đến khảo sát ('during my visit').",
+          "tags": [
+            "main-idea"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "A",
+          "content": "What is suggested about Ms. Holm's project if she makes her decision after March 10?",
+          "options": [
+            "The work could still end by April 25 if she selects standard cabinets.",
+            "The crew will need to start work earlier than March 24.",
+            "Her relatives will have to postpone their visit until June.",
+            "The custom cabinets will no longer be offered by the manufacturer."
+          ],
+          "explanation": "Suy luận 2 bước: đoạn 2 – tủ đặt riêng cần đặt trước 4 tuần nên phải quyết trước 10/3 mới kịp lịch; đoạn 3 – tủ tiêu chuẩn 'can be delivered within a week' → nếu quyết sau 10/3 mà chọn tủ tiêu chuẩn thì vẫn có thể xong trước 25/4 → (A). (D), (B) không có căn cứ; (C) suy diễn quá mức, thư không nói khách phải hoãn.",
+          "tags": [
+            "inference"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "C",
+          "content": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?\n\"This would also lower the overall price by approximately 15 percent.\"",
+          "options": [
+            "[1]",
+            "[2]",
+            "[3]",
+            "[4]"
+          ],
+          "explanation": "Chèn câu: câu cần chèn nói 'giá tổng có thể giảm khoảng 15%' – 'This' phải chỉ một lựa chọn rẻ hơn. Vị trí (C) [3] đứng ngay sau câu về tủ tiêu chuẩn ('If you choose the standard cabinets… delivered within a week') → khớp. (A) [1] sau câu về báo giá chưa có lựa chọn nào; (B) [2] sau câu về lịch thi công; (D) [4] sau lời mời gọi điện.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        }
+      ]
+    }
+  ]
+}

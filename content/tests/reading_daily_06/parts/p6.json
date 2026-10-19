@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "To: Marlow Creek residents\nFrom: Teresa Costa, Events Coordinator\nSubject: Community Garden Day\n\nDear neighbors,\n\nWe are pleased to announce that our first Community Garden Day ---(131)--- on Saturday, May 16, from 9:00 A.M. to 1:00 P.M. at the Marlow Creek Community Center. Volunteers will plant flowers and vegetables in the new garden behind the center.\n\nNo gardening experience is ---(132)---. Our staff will show you what to do. Gloves and tools will be provided, but please wear comfortable clothes. ---(133)---\n\n---(134)--- the work is done, everyone is invited to a free lunch in the center's main hall. To sign up, please call 555-0162 by May 10.\n\nTeresa Costa",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "B",
+        "options": [
+          "took place",
+          "will take place",
+          "has taken place",
+          "was taking place"
+        ],
+        "explanation": "Thư thông báo sự kiện sắp diễn ra (đăng ký trước ngày 10/5, \"Volunteers will plant…\") → thì tương lai (B) \"will take place\". (A), (C), (D) chỉ việc đã xảy ra.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "C",
+        "options": [
+          "finished",
+          "located",
+          "needed",
+          "grown"
+        ],
+        "explanation": "\"No gardening experience is needed\" = không cần kinh nghiệm làm vườn, phù hợp câu sau \"Our staff will show you what to do\" → (C). (A) hoàn thành, (B) được đặt ở, (D) được trồng – không hợp với \"experience\".",
+        "tags": [
+          "vocabulary"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "B",
+        "options": [
+          "Parking at the center costs $5 per hour on weekdays.",
+          "Bottles of water and light snacks will also be available.",
+          "Our next board meeting will discuss the center's budget.",
+          "Thank you for coming to last month's concert."
+        ],
+        "explanation": "Câu trước nói những thứ được cung cấp cho tình nguyện viên (\"Gloves and tools will be provided\"); câu (B) với \"also\" bổ sung thêm nước và đồ ăn nhẹ. (A) nói ngày thường, trong khi sự kiện vào thứ Bảy; (C), (D) không liên quan đến ngày làm vườn.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "C",
+        "options": [
+          "Although",
+          "Unless",
+          "After",
+          "Whereas"
+        ],
+        "explanation": "Bữa trưa diễn ra sau khi làm vườn xong → liên từ thời gian (C) \"After\". (A), (D) chỉ tương phản, (B) \"Unless\" (trừ khi) không hợp nghĩa.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  }
+]

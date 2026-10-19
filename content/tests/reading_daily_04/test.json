@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 04",
+  "source": "Bami TOEIC",
+  "description": "Đề Reading 15 câu chủ đề giao thông và đi lại, band 450–600.",
+  "is_free": true,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "D",
+          "content": "Passengers are asked to board the train ------- so that it can leave the station on time.",
+          "options": [
+            "quick",
+            "quicken",
+            "quickness",
+            "quickly"
+          ],
+          "explanation": "Sau cụm động từ \"board the train\" cần trạng từ bổ nghĩa cho hành động lên tàu → (D) \"quickly\" (nhanh chóng). (A) là tính từ, (C) là danh từ, (B) là động từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "C",
+          "content": "The new express bus route has made commuting between Pellbrook and Danford much more -------.",
+          "options": [
+            "conveniently",
+            "convenience",
+            "convenient",
+            "convene"
+          ],
+          "explanation": "Cấu trúc \"make + tân ngữ + tính từ\"; sau \"much more\" cần tính từ → (C) \"convenient\" (thuận tiện). (B) là danh từ, (A) là trạng từ, (D) là động từ (triệu tập).",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "C",
+          "content": "Ms. Ishikawa submitted an ------- for a monthly parking permit at the Harlow Street garage.",
+          "options": [
+            "applied",
+            "applicable",
+            "application",
+            "apply"
+          ],
+          "explanation": "Sau mạo từ \"an\" và trước giới từ \"for\" cần danh từ làm tân ngữ cho \"submitted\" → (C) \"application\" (đơn đăng ký). (D) là động từ, (A) là quá khứ phân từ, (B) là tính từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "A",
+          "content": "Because of track repairs, Corvane Rail will ------- a free shuttle bus between Elm Station and Bayside Station this weekend.",
+          "options": [
+            "provide",
+            "attend",
+            "arrive",
+            "depart"
+          ],
+          "explanation": "Cần động từ mang tân ngữ \"a free shuttle bus\": \"provide a shuttle bus\" = cung cấp xe buýt đưa đón → (A). (C) \"arrive\" và (D) \"depart\" là nội động từ, không đi với tân ngữ trực tiếp; (B) \"attend\" (tham dự) không hợp nghĩa.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "B",
+          "content": "Commuters can check the arrival ------- of each bus on the Larkfield Transit mobile app.",
+          "options": [
+            "lanes",
+            "times",
+            "drivers",
+            "tickets"
+          ],
+          "explanation": "Cụm \"arrival times\" = giờ đến của xe buýt, thông tin thường xem trên ứng dụng → (B). (A) làn đường, (D) vé, (C) tài xế không đi với \"arrival\" theo nghĩa này.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "D",
+          "content": "The downtown ferry terminal is located ------- the Pellbrook Public Library.",
+          "options": [
+            "among",
+            "during",
+            "until",
+            "next to"
+          ],
+          "explanation": "Chỉ vị trí bên cạnh một toà nhà → giới từ nơi chốn (D) \"next to\" (bên cạnh). (B) \"during\" và (C) \"until\" chỉ thời gian; (A) \"among\" (giữa nhiều vật) cần danh từ số nhiều.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "B",
+          "content": "Mr. Novak ------- the 7:15 train to work every morning since he moved to Westgate last year.",
+          "options": [
+            "will take",
+            "has taken",
+            "is taking",
+            "took"
+          ],
+          "explanation": "Mốc \"since he moved ... last year\" diễn tả thói quen bắt đầu trong quá khứ và kéo dài đến hiện tại → thì hiện tại hoàn thành (B) \"has taken\". (A) tương lai, (C) tiếp diễn, (D) quá khứ đơn không đi với \"since\".",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "A",
+          "content": "Drivers who park in the employee lot must display ------- permits on the dashboard.",
+          "options": [
+            "their",
+            "them",
+            "themselves",
+            "they"
+          ],
+          "explanation": "Trước cụm danh từ \"permits\" cần tính từ sở hữu → (A) \"their\" (của họ). (D) là đại từ chủ ngữ, (B) là đại từ tân ngữ, (C) là đại từ phản thân.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "NOTICE TO RIDERS\n\nStarting Monday, March 3, the Larkfield Transit Authority ---(131)--- the schedule for Bus Route 12. During morning and evening rush hours, buses will run every 10 minutes instead of every 20 minutes. ---(132)---\n\nIn addition, the Route 12 stop on Carver Avenue will move one block north, to the corner of Carver Avenue and Linden Street. This change is ---(133)--- because of road construction near the current stop.\n\nUpdated timetables are available at all stations and on our Web site, www.larkfieldtransit.com. ---(134)--- you have any questions, please call our customer service line at 555-0137.",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "D",
+          "options": [
+            "changed",
+            "has changed",
+            "was changing",
+            "will change"
+          ],
+          "explanation": "Thông báo nói về thay đổi bắt đầu từ \"Starting Monday, March 3\" và câu sau dùng \"buses will run\" → sự việc sắp xảy ra, dùng thì tương lai (D) \"will change\". (A), (B), (C) đều diễn tả việc đã xảy ra.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "C",
+          "options": [
+            "Our ticket office will be closed on national holidays.",
+            "The driver was praised for her friendly service last month.",
+            "This will reduce waiting times for people traveling to work.",
+            "Bicycles are not permitted inside the train cars."
+          ],
+          "explanation": "Câu trước nói xe buýt chạy dày hơn (\"every 10 minutes instead of every 20 minutes\"); câu (C) với \"This\" chỉ lại thay đổi đó và nêu lợi ích: giảm thời gian chờ. (D) nói về tàu, (B) và (A) không liên quan đến lịch tuyến 12.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "A",
+          "options": [
+            "necessary",
+            "optional",
+            "careful",
+            "delighted"
+          ],
+          "explanation": "Việc dời trạm \"because of road construction\" (do công trình làm đường) là điều bắt buộc → (A) \"necessary\" (cần thiết). (B) tuỳ chọn trái nghĩa; (D) \"delighted\" và (C) \"careful\" dùng cho người, không cho \"change\".",
+          "tags": [
+            "vocabulary"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "B",
+          "options": [
+            "Unless",
+            "If",
+            "Although",
+            "Because"
+          ],
+          "explanation": "Câu đưa ra điều kiện: nếu bạn có câu hỏi thì hãy gọi tổng đài → liên từ điều kiện (B) \"If\". (C) chỉ tương phản, (A) \"Unless\" (trừ khi) ngược nghĩa, (D) chỉ nguyên nhân.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "E-mail\n\nTo: All staff\nFrom: Daniel Fernandes, Facilities Manager\nDate: April 8\nSubject: New carpool program\n\nDear colleagues,\n\nStarting May 1, Brightwater Logistics will launch a carpool program for employees who drive to our Hensley Road office. Employees who share a ride with at least one coworker will receive a free parking space in the covered section of the lot, close to the main entrance.\n\nTo join, please complete the sign-up form on the company intranet by April 25. You will be asked to list your home neighborhood and usual working hours so that we can match you with coworkers who live nearby.\n\nPlease also note that the city will be repaving the main entrance road to our building during the first two weeks of May. During this time, please use the side entrance on Morley Street.\n\nIf you have any questions, contact me at extension 214.\n\nDaniel Fernandes",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "C",
+          "content": "What is the main purpose of the e-mail?",
+          "options": [
+            "To request feedback on parking fees",
+            "To announce a new office location",
+            "To introduce a ride-sharing program",
+            "To explain changes to work hours"
+          ],
+          "explanation": "Đoạn 1: \"Brightwater Logistics will launch a carpool program\" – chương trình đi chung xe → (C). (B) không chuyển văn phòng; (D) giờ làm chỉ được hỏi để ghép người; (A) không có phí gửi xe.",
+          "tags": [
+            "main-idea"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "B",
+          "content": "What must employees do by April 25 to join?",
+          "options": [
+            "Choose a new work schedule",
+            "Fill out an online form",
+            "Pay for a parking permit",
+            "Meet with Mr. Fernandes"
+          ],
+          "explanation": "Đoạn 2: \"please complete the sign-up form on the company intranet by April 25\" → điền mẫu đăng ký trực tuyến (B). (C) chỗ đỗ là miễn phí; (D) chỉ liên hệ nếu có câu hỏi; (A) chỉ cần ghi giờ làm hiện tại.",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "D",
+          "content": "What is suggested about the main entrance road?",
+          "options": [
+            "It is located on Morley Street.",
+            "It was recently made wider.",
+            "It is used mainly by delivery trucks.",
+            "It will be unavailable for part of May."
+          ],
+          "explanation": "Đoạn 3: thành phố sẽ trải nhựa lại đường vào chính \"during the first two weeks of May\" và nhân viên được yêu cầu dùng lối phụ → suy ra con đường không đi được trong một phần tháng 5 (D). (A) Morley Street là lối phụ; (C), (B) không được nhắc.",
+          "tags": [
+            "inference"
+          ]
+        }
+      ]
+    }
+  ]
+}

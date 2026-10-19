@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "FOR IMMEDIATE RELEASE\nContact: Ayumi Hasegawa, Corporate Communications, 555-0182\n\nSANDHAVEN (June 14) — Corbel Home Goods announced today that it has completed its acquisition of Tilbury Lighting, a family-owned manufacturer of energy-efficient lamps. The agreement, first announced in February, ---(131)--- final approval from regulators only last week.\n\nTilbury's 140 employees will remain at the company's Westgate plant, and its current managing director, Ewan McNamara, will stay on to oversee production. ---(132)--- Corbel's chief executive, Lucia Kaminski, said the purchase will allow the company to offer its own lighting line for the first time rather than ---(133)--- such products from outside suppliers.\n\nTilbury products will continue to be sold under their existing brand name for the time being. ---(134)---, Corbel plans to introduce a combined product catalog next spring.",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "A",
+        "options": [
+          "received",
+          "receives",
+          "will receive",
+          "had been receiving"
+        ],
+        "explanation": "Thì: mốc 'only last week' (tuần trước) và hiện tại thương vụ đã hoàn tất → quá khứ đơn (A) 'received'. (B) hiện tại, (C) tương lai mâu thuẫn với 'has completed'; (D) quá khứ hoàn thành tiếp diễn không hợp hành động một lần.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "C",
+        "options": [
+          "He will report directly to Ms. Kaminski.",
+          "The plant was therefore closed at the end of the month.",
+          "No reductions in staffing are planned at the facility.",
+          "Both of them had previously worked for Corbel."
+        ],
+        "explanation": "Chèn câu: câu trước nói 140 nhân viên ở lại nhà máy Westgate → (C) 'không cắt giảm nhân sự tại cơ sở' tiếp nối hợp lý ('the facility' = Westgate plant). (A) bẫy: bà Kaminski chỉ được giới thiệu đầy đủ ở câu sau ('Corbel's chief executive, Lucia Kaminski') nên không thể gọi tắt trước đó; (B) mâu thuẫn; (D) 'Both of them' không rõ chỉ ai.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "B",
+        "options": [
+          "supplying",
+          "sourcing",
+          "delivering",
+          "providing"
+        ],
+        "explanation": "Từ vựng: cấu trúc 'source + sản phẩm + from + nhà cung cấp' = lấy hàng từ → (B) 'sourcing'. (A) 'supplying', (C) 'delivering', (D) 'providing' mang nghĩa cung cấp đi (ngược chiều) – Corbel là bên mua, không phải bên cung cấp cho 'outside suppliers'.",
+        "tags": [
+          "vocabulary"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "D",
+        "options": [
+          "Similarly",
+          "Consequently",
+          "In other words",
+          "However"
+        ],
+        "explanation": "Từ nối: câu trước nói giữ thương hiệu cũ 'for the time being' (tạm thời), câu sau nói sẽ ra catalog chung vào mùa xuân tới → đối lập giữa hiện tại và kế hoạch sau này → (D) 'However'. (A) tương tự, (B) kết quả, (C) diễn giải lại – không phù hợp quan hệ tương phản.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  }
+]

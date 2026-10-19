@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 13",
+  "source": "Bami TOEIC",
+  "description": "Đọc hiểu chủ đề hỗ trợ IT và thiết bị văn phòng, mức 600–750.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "B",
+          "content": "The new video-conferencing equipment in Room 4B is ------- easy to set up, even for first-time users.",
+          "options": [
+            "surprise",
+            "surprisingly",
+            "surprising",
+            "surprised"
+          ],
+          "explanation": "Chỗ trống đứng trước tính từ 'easy' → cần trạng từ bổ nghĩa cho tính từ → 'surprisingly' (đáng ngạc nhiên là) (B). (C), (D) là tính từ, (A) là danh từ/động từ – không bổ nghĩa được cho tính từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "A",
+          "content": "Mr. Navarro's team is responsible for the ------- of all company laptops and mobile phones.",
+          "options": [
+            "maintenance",
+            "maintainable",
+            "maintained",
+            "maintain"
+          ],
+          "explanation": "Sau mạo từ 'the' và trước giới từ 'of' cần danh từ → 'maintenance' (việc bảo trì) (A). (D) là động từ, (C) là quá khứ phân từ, (B) là tính từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "A",
+          "content": "Staff members are reminded to ------- their passwords every ninety days to keep their accounts secure.",
+          "options": [
+            "update",
+            "inform",
+            "extend",
+            "appoint"
+          ],
+          "explanation": "Cụm 'update their passwords' = cập nhật/đổi mật khẩu định kỳ để bảo mật (A). (B) 'inform' (thông báo) cần tân ngữ là người; (D) 'appoint' (bổ nhiệm) và (C) 'extend' (gia hạn) không hợp nghĩa với 'passwords'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "D",
+          "content": "Ms. Hayashi has been asked to ------- the installation of the new scanners on the third floor.",
+          "options": [
+            "contribute",
+            "consist",
+            "depend",
+            "oversee"
+          ],
+          "explanation": "Cần ngoại động từ nhận tân ngữ 'the installation' với nghĩa 'giám sát' → 'oversee' (D). (B) 'consist' cần 'of', (C) 'depend' cần 'on', (A) 'contribute' (đóng góp) cần 'to' và không hợp nghĩa.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "C",
+          "content": "The help desk will be closed on Friday afternoon ------- the technicians can attend a training session.",
+          "options": [
+            "as well as",
+            "rather than",
+            "so that",
+            "in case of"
+          ],
+          "explanation": "Sau chỗ trống là mệnh đề (S + can + V) chỉ mục đích → liên từ 'so that' (để mà) (C). (D) 'in case of' là giới từ, cần danh từ; (A) 'as well as' và (B) 'rather than' không nối mệnh đề chỉ mục đích.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "D",
+          "content": "By the time the office reopens on Monday, the technicians ------- new cables in every meeting room.",
+          "options": [
+            "had been installed",
+            "have installed",
+            "installing",
+            "will have installed"
+          ],
+          "explanation": "'By the time + hiện tại đơn (reopens)' chỉ mốc tương lai → mệnh đề chính dùng tương lai hoàn thành 'will have installed' (D). (B) hiện tại hoàn thành sai mốc thời gian; (C) thiếu trợ động từ; (A) bị động quá khứ hoàn thành sai thì và sai dạng (technicians là người lắp).",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "B",
+          "content": "Before calling the help desk, employees should try to solve minor printer problems -------.",
+          "options": [
+            "them",
+            "themselves",
+            "theirs",
+            "their"
+          ],
+          "explanation": "Câu đã đủ thành phần; cần đại từ phản thân nhấn mạnh 'tự mình' cho chủ ngữ 'employees' → 'themselves' (B). (A) tân ngữ và (C) đại từ sở hữu không hợp nghĩa; (D) tính từ sở hữu phải đi kèm danh từ.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "C",
+          "content": "The instructions for the new phone system were written in simple language so that they would be ------- to all staff.",
+          "options": [
+            "accessing",
+            "access",
+            "accessible",
+            "accessibly"
+          ],
+          "explanation": "Sau động từ 'be' cần tính từ làm bổ ngữ → 'accessible to' (dễ tiếp cận/dễ hiểu với) (C). (B) danh từ/động từ, (D) trạng từ, (A) V-ing đều không phù hợp sau 'would be ... to all staff'.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "To: All Staff, Corvane Logistics\nFrom: Petra Andersson, Office Technology Coordinator\nDate: March 3\nSubject: New file-storage system\n\nDear colleagues,\n\nStarting on Monday, March 10, all department folders ---(131)--- to a new online storage system. Over the weekend, the help desk team will copy every file from the old shared drive, so you do not need to move anything yourself. ---(132)---\n\nWhen you log in on Monday, you will notice that the folders look slightly different. ---(133)---, the names and contents of your files will remain exactly the same. If you have trouble finding a document, Mr. Chukwu from the help desk will be available in the second-floor lounge all day to offer ---(134)--- assistance.\n\nThank you for your patience during this change.\n\nPetra Andersson",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "A",
+          "options": [
+            "will be moved",
+            "have been moving",
+            "were moved",
+            "moving"
+          ],
+          "explanation": "Mốc 'Starting on Monday, March 10' nằm sau ngày gửi e-mail (March 3) → thì tương lai; chủ ngữ 'folders' bị di chuyển → bị động 'will be moved' (A). (C) quá khứ, (B) chủ động hiện tại hoàn thành tiếp diễn sai mốc thời gian và sai nghĩa, (D) thiếu động từ chính.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "D",
+          "options": [
+            "Thank you for completing the online training session yesterday.",
+            "The new printers were delivered to the second floor last week.",
+            "As a result, the old drive has already been removed from the building.",
+            "However, please close all open files before you leave on Friday."
+          ],
+          "explanation": "Câu trước nói nhân viên không cần tự chuyển file ('you do not need to move anything yourself'); câu chèn dùng 'However' để nêu việc nhân viên vẫn phải làm: đóng mọi file đang mở trước khi về hôm thứ Sáu (D). (B) lạc đề máy in; (A) không hề nhắc đến buổi đào tạo; (C) mâu thuẫn vì việc sao chép còn chưa diễn ra (cuối tuần này).",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "B",
+          "options": [
+            "Therefore",
+            "However",
+            "Similarly",
+            "Otherwise"
+          ],
+          "explanation": "Câu trước: thư mục trông hơi khác; câu sau: tên và nội dung file giữ nguyên → quan hệ tương phản → 'However' (B). (A) chỉ kết quả, (C) chỉ sự tương đồng, (D) 'nếu không thì' – không hợp logic.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "C",
+          "options": [
+            "personally",
+            "personality",
+            "personal",
+            "personalize"
+          ],
+          "explanation": "Trước danh từ 'assistance' cần tính từ → 'personal assistance' (hỗ trợ trực tiếp từng người) (C). (A) trạng từ, (D) động từ, (B) danh từ 'tính cách' – sai từ loại/nghĩa.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "E-mail\n\nFrom: Help Desk, Ridgecombe Publishing\nTo: All Editorial Staff\nDate: Tuesday, May 6\nSubject: Laptop replacement schedule\n\nHello everyone,\n\nAs part of this year's equipment upgrade, every member of the editorial department will receive a new laptop this month. Because only two technicians are available, the replacements will take place in three groups. Staff on the fourth floor will receive their laptops on May 13, staff on the fifth floor on May 15, and those who work mainly from home on May 20.\n\nEach exchange takes about forty minutes. During this time, a technician will transfer your files and settings and show you the main features of the new machine. Please bring your current laptop, its charger, and any accessories that the company issued to you, such as a mouse or headset. If you bought a keyboard with your own money, you may keep it.\n\nIf the date assigned to you is not convenient, please reply to this e-mail by Friday, May 9, and we will try to arrange another time.\n\nDaniel Navarro\nHelp Desk Supervisor",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "B",
+          "content": "What is the purpose of the e-mail?",
+          "options": [
+            "To ask staff to choose a preferred laptop model",
+            "To explain how new laptops will be distributed",
+            "To report a problem with the office network",
+            "To announce the hiring of additional technicians"
+          ],
+          "explanation": "Mục đích e-mail nằm ở đoạn 1: mọi nhân viên sẽ nhận laptop mới và việc thay được chia làm ba nhóm theo ngày ('the replacements will take place in three groups') → giải thích cách phân phát laptop (B). (D) bài chỉ nói 'only two technicians are available', không tuyển thêm; (A), (C) không được nhắc đến.",
+          "tags": [
+            "main-idea"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "A",
+          "content": "What is suggested about the replacement process?",
+          "options": [
+            "It cannot be done for everyone on the same day.",
+            "It requires employees to buy their own accessories.",
+            "It was postponed from an earlier month.",
+            "It will be finished before the end of this week."
+          ],
+          "explanation": "Đoạn 1: 'Because only two technicians are available, the replacements will take place in three groups' với ba ngày khác nhau → suy ra không thể thay cho mọi người trong cùng một ngày (A). (B) sai – phụ kiện do công ty cấp; (D) sai – lịch kéo dài đến May 20; (C) không có thông tin.",
+          "tags": [
+            "inference"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "C",
+          "content": "What are employees NOT asked to bring to their appointment?",
+          "options": [
+            "The charger for their current laptop",
+            "The laptop they are now using",
+            "A keyboard they bought themselves",
+            "A headset provided by the company"
+          ],
+          "explanation": "Câu hỏi NOT. Đoạn 2 yêu cầu mang laptop hiện tại (B), sạc (A) và phụ kiện công ty cấp như tai nghe (D). Riêng bàn phím tự mua thì được giữ lại ('If you bought a keyboard with your own money, you may keep it') → không phải mang (C).",
+          "tags": [
+            "detail"
+          ]
+        }
+      ]
+    }
+  ]
+}

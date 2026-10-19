@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "NOTICE TO ALL TENANTS – Alder Court Apartments\n\nPlease be advised that the replacement of the building's windows will begin on Monday, April 7. The work will be carried out by Kestrel Renovations and is expected to take three weeks. Crews will work on one floor at a time, ---(131)--- with the ground floor.\n\nEach unit will require approximately four hours of work. You will receive a written notice at least two days before your unit is scheduled. ---(132)--- If you cannot be home at that time, building staff will be present to let the workers in.\n\nWe understand that the noise may be ---(133)---, especially for those of you who work from home. The community room on the ground floor will therefore remain open from 8:00 A.M. to 6:00 P.M. as a quiet workspace for the ---(134)--- of the project.\n\nQuestions may be directed to the management office at 555-0143.",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "A",
+        "options": [
+          "starting",
+          "started",
+          "starts",
+          "having started"
+        ],
+        "explanation": "Dạng động từ: sau dấu phẩy, mệnh đề chính đã có động từ 'will work' → cần phân từ rút gọn diễn tả cách tiến hành (bắt đầu từ tầng trệt) → (A) 'starting'. (B) 'started' mang nghĩa bị động; (C) 'starts' là động từ chia, tạo hai vị ngữ không có liên từ; (D) 'having started' chỉ việc đã xong trước – sai vì công trình chưa bắt đầu.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "A",
+        "options": [
+          "Please remove any items from your windowsills before that day.",
+          "The new windows were installed ahead of schedule.",
+          "The management office will be closed for the rest of the month.",
+          "Workers will not need to enter your unit at any point."
+        ],
+        "explanation": "Chèn câu: câu trước nói về thông báo trước 2 ngày khi đến lượt căn hộ ('before your unit is scheduled'); câu (A) đưa ra việc cư dân cần làm trước 'that day' (ngày đó) → khớp. (B) trái với việc công trình sắp bắt đầu; (C) trái với dòng cuối mời liên hệ văn phòng; (D) trái với câu sau 'building staff will be present to let the workers in'.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "A",
+        "options": [
+          "inconvenient",
+          "unavoidable",
+          "temporary",
+          "occasional"
+        ],
+        "explanation": "Từ vựng theo ngữ cảnh: cụm 'especially for those of you who work from home' (đặc biệt với người làm việc tại nhà) và giải pháp phòng làm việc yên tĩnh cho thấy tiếng ồn gây phiền → (A) 'inconvenient'. (B) 'unavoidable', (C) 'temporary', (D) 'occasional' không liên quan đến việc 'đặc biệt' ảnh hưởng tới người làm ở nhà.",
+        "tags": [
+          "vocabulary"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "A",
+        "options": [
+          "duration",
+          "extension",
+          "deadline",
+          "completion"
+        ],
+        "explanation": "Từ vựng – kết hợp từ: 'for the duration of the project' = trong suốt thời gian dự án → (A). (B) 'extension' (gia hạn) và (C) 'deadline' (hạn chót) sai nghĩa; (D) 'for the completion of' = để hoàn thành, không chỉ khoảng thời gian phòng mở cửa.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  }
+]

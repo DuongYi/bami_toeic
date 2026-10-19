@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 19",
+  "source": "Bami TOEIC",
+  "description": "Luyện Reading 15 câu chủ đề logistics và vận chuyển hàng hoá, band 750–850.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "B",
+          "content": "The upgraded tracking system allows customers to monitor the ------- location of their parcels at any moment during transit.",
+          "options": [
+            "precision",
+            "precise",
+            "preciseness",
+            "precisely"
+          ],
+          "explanation": "Chỗ trống đứng giữa mạo từ 'the' và danh từ 'location' → cần tính từ bổ nghĩa cho danh từ: 'precise location' (vị trí chính xác) (B). (D) là trạng từ, (A) và (C) là danh từ, không bổ nghĩa cho danh từ được.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "D",
+          "content": "Freight costs rose ------- during the third quarter as fuel prices climbed across the region.",
+          "options": [
+            "considering",
+            "consideration",
+            "considerable",
+            "considerably"
+          ],
+          "explanation": "Chỗ trống đứng sau nội động từ 'rose' → cần trạng từ chỉ mức độ: 'rose considerably' (tăng đáng kể) (D). (C) là tính từ, không bổ nghĩa cho động từ; (B) là danh từ; (A) là giới từ/V-ing 'xét đến', không hợp nghĩa.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "A",
+          "content": "Shipments that reach the Corvane warehouse after 4:00 P.M. will be ------- on the following business day.",
+          "options": [
+            "processed",
+            "performed",
+            "conducted",
+            "operated"
+          ],
+          "explanation": "Collocation: đơn hàng/lô hàng 'be processed' (được xử lý) (A). (C) 'conduct' đi với survey, meeting; (B) 'perform' đi với task, service; (D) 'operate' đi với máy móc, doanh nghiệp – không dùng cho lô hàng.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "A",
+          "content": "Please allow ------- time for customs clearance when scheduling international shipments.",
+          "options": [
+            "ample",
+            "spacious",
+            "wide",
+            "plentiful"
+          ],
+          "explanation": "Từ cận nghĩa 'nhiều/rộng': 'allow ample time' (dành đủ thời gian) là collocation chuẩn (A). (D) 'plentiful' dùng cho nguồn cung, thực phẩm (plentiful supplies); (B) 'spacious' chỉ không gian rộng; (C) 'wide' chỉ chiều rộng/phạm vi.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "D",
+          "content": "------- renovations at the Delmore warehouse are finished, orders will be shipped from our temporary facility in Brockton.",
+          "options": [
+            "Whereas",
+            "Once",
+            "Despite",
+            "Until"
+          ],
+          "explanation": "Mệnh đề chính nói hàng được gửi từ kho TẠM thời → việc này chỉ kéo dài cho đến khi sửa xong: 'Until' (cho đến khi) (D). (B) 'Once' (một khi đã xong) thì không cần kho tạm nữa – mâu thuẫn; (C) 'Despite' là giới từ, không đi với mệnh đề; (A) 'Whereas' chỉ sự đối lập, không hợp nghĩa.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "C",
+          "content": "The empty pallets were stacked ------- the rear wall of the loading dock to keep the aisles clear for forklifts.",
+          "options": [
+            "across",
+            "upon",
+            "against",
+            "toward"
+          ],
+          "explanation": "'Stack something against the wall' = xếp dựa vào tường (C). (D) 'toward' chỉ hướng di chuyển; (B) 'upon' = trên bề mặt (không thể xếp trên bức tường); (A) 'across' = băng ngang qua, không hợp nghĩa.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "B",
+          "content": "By the time the cargo vessel reaches Port Avalen next week, its crew ------- at sea for nearly a month.",
+          "options": [
+            "is being",
+            "will have been",
+            "had been",
+            "has been"
+          ],
+          "explanation": "'By the time + hiện tại đơn' chỉ mốc tương lai ('next week') → hành động kéo dài đến mốc đó dùng tương lai hoàn thành 'will have been' (B). (D) hiện tại hoàn thành không có mốc tương lai; (C) quá khứ hoàn thành dùng với mốc quá khứ; (A) không diễn tả quá trình kéo dài đến tương lai.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "C",
+          "content": "Drivers who need to change their assigned routes must notify the dispatch office ------- rather than asking a colleague to do so.",
+          "options": [
+            "theirs",
+            "them",
+            "themselves",
+            "their"
+          ],
+          "explanation": "Câu đã đủ thành phần (notify the dispatch office); vế 'rather than asking a colleague' nhấn mạnh chính tài xế phải tự báo → đại từ phản thân dùng để nhấn mạnh 'themselves' (C). (B) tân ngữ không có chỗ đứng; (D) tính từ sở hữu cần danh từ theo sau; (A) đại từ sở hữu không hợp nghĩa.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "To: Ana Teixeira <ateixeira@corvelhome.com>\nFrom: Customer Service <support@brightmarrowfreight.com>\nDate: March 4\nSubject: Order #58217\n\nDear Ms. Teixeira,\n\nThank you for choosing Brightmarrow Freight. We are writing to let you know that your shipment of 40 dining chairs ---(131)--- our Lisbury distribution center yesterday afternoon. Unfortunately, a mechanical problem with one of our delivery trucks means that the final leg of the journey will take longer than originally ---(132)---. Your order is now scheduled to arrive on March 9 rather than March 6. ---(133)---\n\nTo make up for the inconvenience, we have waived the delivery fee on this order. ---(134)---, you may follow the progress of your shipment at any time at www.brightmarrowfreight.com/track.\n\nSincerely,\n\nKenji Inoue\nCustomer Service Team, Brightmarrow Freight",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "A",
+          "options": [
+            "reached",
+            "reaches",
+            "will reach",
+            "is reaching"
+          ],
+          "explanation": "Trạng từ thời gian 'yesterday afternoon' (chiều hôm qua) → hành động đã xảy ra, dùng quá khứ đơn 'reached' (A). (C) tương lai, (D) hiện tại tiếp diễn, (B) hiện tại đơn đều không khớp mốc quá khứ.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "C",
+          "options": [
+            "considered",
+            "regarded",
+            "anticipated",
+            "attended"
+          ],
+          "explanation": "'take longer than originally anticipated' = lâu hơn dự kiến ban đầu (C); ngữ cảnh là ngày giao bị lùi từ 6 sang 9/3. (A) 'considered' và (B) 'regarded' cần bổ ngữ (considered + adj/as…); (D) 'attended' = tham dự, không hợp nghĩa.",
+          "tags": [
+            "vocabulary"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "B",
+          "options": [
+            "Our drivers have now delivered the chairs to your store.",
+            "We apologize for any disruption this may cause to your plans.",
+            "That is why the order was sent to an incorrect delivery address.",
+            "Please confirm the number of chairs you would like to order."
+          ],
+          "explanation": "Câu trước báo hàng bị giao trễ 3 ngày; câu sau 'To make up for the inconvenience' (để bù cho sự bất tiện) → cần lời xin lỗi về sự gián đoạn (B). (A) trái với việc hàng chưa đến; (D) đơn hàng 40 ghế đã đặt rồi; (C) lý do trễ là xe hỏng, không phải sai địa chỉ.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "D",
+          "options": [
+            "Instead",
+            "Even so",
+            "Otherwise",
+            "In the meantime"
+          ],
+          "explanation": "Khách phải chờ đến 9/3; việc theo dõi đơn hàng diễn ra trong lúc chờ → 'In the meantime' (trong lúc chờ đợi) (D). (C) 'Otherwise' (nếu không thì) cần điều kiện; (B) 'Even so' (dù vậy) chỉ sự tương phản, nhưng miễn phí giao hàng và theo dõi đơn không đối lập; (A) 'Instead' (thay vào đó) không có gì bị thay thế.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Mariam Hamdan [9:52 A.M.]\nHi Tomas. The refrigerated container for the Ostrava Market order is still sitting at the port. Customs flagged a missing document.\n\nTomas Lewandowski [9:55 A.M.]\nWhich one? I uploaded the packing list and the commercial invoice on Friday.\n\nMariam Hamdan [9:58 A.M.]\nThe certificate of origin. The agent says that without it, the container can't be released until Thursday at the earliest.\n\nTomas Lewandowski [10:03 A.M.]\nThat's cutting it close. The client's grand opening sale starts first thing Friday morning.\n\nMariam Hamdan [10:06 A.M.]\nI know. Could you ask the supplier in Valencia to e-mail a scanned copy today? The agent said a scan is acceptable for now, as long as the original follows by courier.\n\nTomas Lewandowski [10:09 A.M.]\nI'll call them right away. They usually answer within the hour.\n\nMariam Hamdan [10:12 A.M.]\nGreat. Forward it to me as soon as it comes in, and I'll take it over to the customs office myself.\n\nTomas Lewandowski [10:15 A.M.]\nWill do. I'll also give Ostrava Market a heads-up about a possible delay, just in case.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "A",
+          "content": "What is suggested about the shipment?",
+          "options": [
+            "It requires temperature control.",
+            "It lacks a commercial invoice.",
+            "It was shipped by air from Valencia.",
+            "It was sent to the wrong port."
+          ],
+          "explanation": "Suy luận: lúc 9:52 Ms. Hamdan nói 'The refrigerated container' (container đông lạnh) → hàng cần giữ nhiệt độ (A). (B) là bẫy: Mr. Lewandowski đã tải 'the commercial invoice' lên, giấy thiếu là 'certificate of origin'; (D) không có thông tin sai cảng; (C) hàng nằm ở cảng (đường biển), Valencia chỉ là nơi nhà cung cấp ở.",
+          "tags": [
+            "inference"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "D",
+          "content": "At 10:03 A.M., what does Mr. Lewandowski most likely mean when he writes, \"That's cutting it close\"?",
+          "options": [
+            "He doubts that the supplier will reply in time.",
+            "He feels that the customs rules are being applied too strictly.",
+            "The port is located close to the client's new store.",
+            "A Thursday release would leave little time before an event."
+          ],
+          "explanation": "Hàm ý: ngay trước đó Ms. Hamdan nói container sớm nhất thứ Năm mới được thông quan; ngay sau đó anh nói đợt khai trương bắt đầu sáng thứ Sáu → 'cutting it close' = sát nút, gần như không kịp (D). (B) anh không phàn nàn về hải quan; (C) hiểu sai 'close' theo nghĩa khoảng cách; (A) lúc 10:09 anh lại nói nhà cung cấp 'usually answer within the hour'.",
+          "tags": [
+            "implied-meaning"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "B",
+          "content": "What does Ms. Hamdan offer to do?",
+          "options": [
+            "Contact a supplier in Valencia",
+            "Bring a document to an office in person",
+            "Inform a client about a possible delay",
+            "Send the original certificate to the agent by courier"
+          ],
+          "explanation": "Lúc 10:12 Ms. Hamdan viết 'I'll take it over to the customs office myself' → tự mang giấy tờ đến văn phòng hải quan (B). (A) và (C) là việc Mr. Lewandowski nhận làm (10:09, 10:15); (D) bản gốc gửi chuyển phát là việc của nhà cung cấp.",
+          "tags": [
+            "detail"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "Saffron Table Catering\n\nPlanning a company event? Let Saffron Table take care of the food so that you can focus on your guests. For more than fifteen years, we ---(131)--- delicious meals for business lunches, product launches, and holiday parties throughout the Kessler Valley area.\n\nEvery menu is created by Chef Amira Aziz, who works closely with local farms to obtain the freshest ingredients. ---(132)--- In addition to food, we can ---(133)--- tables, linens, and serving staff for events of any size.\n\nBook before June 30 and receive a 10 percent discount on any package for 50 guests or more. To request a free tasting, call us at 555-0137 or visit www.saffrontablecatering.com. We look forward to making your next event a ---(134)---!",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "A",
+        "options": [
+          "have prepared",
+          "will prepare",
+          "are preparing",
+          "were prepared"
+        ],
+        "explanation": "'For more than fifteen years' diễn tả hành động kéo dài từ quá khứ đến hiện tại → hiện tại hoàn thành 'have prepared' (A). (B) tương lai, (C) hiện tại tiếp diễn không đi với 'for + khoảng thời gian'; (D) bị động sai nghĩa (chủ ngữ 'we' là người nấu).",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "A",
+        "options": [
+          "Vegetarian and gluten-free dishes can be added to any menu upon request.",
+          "Our second restaurant will open in the downtown business district early next spring.",
+          "Unfortunately, she is no longer accepting new clients.",
+          "Please return all rented equipment within two days."
+        ],
+        "explanation": "Câu trước giới thiệu thực đơn của Chef Aziz; câu chèn tiếp tục nói về thực đơn (thêm món chay, không gluten theo yêu cầu) trước khi chuyển sang dịch vụ khác ('In addition to food') (A). (B) lạc sang nhà hàng; (C) mâu thuẫn với mục đích quảng cáo; (D) nhắc đồ thuê trước khi bài giới thiệu dịch vụ cho thuê – sai mạch.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "A",
+        "options": [
+          "provide",
+          "prevent",
+          "persuade",
+          "require"
+        ],
+        "explanation": "'In addition to food, we can provide tables, linens, and serving staff' = ngoài đồ ăn, chúng tôi cung cấp bàn, khăn trải bàn và nhân viên phục vụ (A). (B) 'ngăn chặn', (C) 'thuyết phục', (D) 'yêu cầu' không hợp với một lời quảng cáo dịch vụ.",
+        "tags": [
+          "vocabulary"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "A",
+        "options": [
+          "success",
+          "succeed",
+          "successful",
+          "successfully"
+        ],
+        "explanation": "Sau mạo từ 'a' cuối câu cần danh từ: 'make your next event a success' (làm cho sự kiện thành công) (A). (B) động từ, (C) tính từ thiếu danh từ đi kèm, (D) trạng từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

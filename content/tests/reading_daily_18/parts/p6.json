@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "To: Kwame Mensah-Bonsu <kmbonsu@quaymail.com>\nFrom: Customer Care <care@velmorahome.com>\nDate: August 18\nSubject: Your return request #48213\n\nDear Mr. Mensah-Bonsu,\n\nThank you for contacting Velmora Home Goods about the table lamp you ordered on August 2. We are sorry to hear that it arrived with a cracked base. ---(131)---\n\nBecause the damage occurred during shipping, you will not be charged for the return. Simply pack the lamp in its original box and attach the enclosed label. A courier will collect the package from your address ---(132)--- you have scheduled a pickup online.\n\nOnce the lamp reaches our warehouse, a replacement will be shipped to you at no additional cost. ---(133)---, if you would prefer a refund, please reply to this e-mail and we will credit the full amount to your original method of payment. Refunds typically ---(134)--- on your statement within seven business days.\n\nSincerely,\nAmélie Lefevre\nCustomer Care Team, Velmora Home Goods",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "A",
+        "options": [
+          "Please accept our apologies for the trouble this has caused.",
+          "Unfortunately, this model is no longer in stock.",
+          "Your new lamp was delivered to you on August 15, as you requested.",
+          "As you requested, we have canceled your order."
+        ],
+        "explanation": "Chèn câu: câu trước bày tỏ tiếc về chiếc đèn bị nứt → (A) lời xin lỗi nối tiếp tự nhiên. (B) trái với đoạn 3 'a replacement will be shipped'; (C) trái vì đèn thay thế chỉ được gửi sau khi nhận lại đèn cũ; (D) trái vì khách đang làm thủ tục đổi trả, chưa có yêu cầu huỷ.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "A",
+        "options": [
+          "after",
+          "before",
+          "until",
+          "unless"
+        ],
+        "explanation": "Liên từ theo ngữ cảnh: khách phải đặt lịch lấy hàng trực tuyến trước, sau đó người giao hàng mới đến → (A) 'after you have scheduled'. (B) 'before' đảo trình tự; (C) 'until' (cho đến khi) và (D) 'unless' (trừ khi) làm câu phi logic.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "A",
+        "options": [
+          "Alternatively",
+          "Therefore",
+          "Similarly",
+          "In fact"
+        ],
+        "explanation": "Từ nối: câu trước nêu phương án gửi hàng thay thế, câu này nêu một phương án khác (hoàn tiền) → (A) 'Alternatively' (hoặc là). (B) 'Therefore' (vì vậy) – không có quan hệ nhân quả; (C) 'Similarly' (tương tự) và (D) 'In fact' (thực ra) không diễn tả sự lựa chọn.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "A",
+        "options": [
+          "appear",
+          "appeared",
+          "will have appeared",
+          "are appearing"
+        ],
+        "explanation": "Thì động từ: trạng từ 'typically' (thường thì) diễn tả quy trình lặp lại, sự thật chung → hiện tại đơn (A) 'appear'. (B) quá khứ, (C) tương lai hoàn thành, (D) hiện tại tiếp diễn không hợp với 'typically'.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  }
+]

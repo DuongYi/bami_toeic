@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "C",
+        "content": "Analysts described the acquisition as a ------- sound decision, given the strong cash reserves of both firms.",
+        "options": [
+          "financial",
+          "finance",
+          "financially",
+          "financed"
+        ],
+        "explanation": "Từ loại: trước tính từ 'sound' (vững chắc) cần trạng từ bổ nghĩa → (C) 'financially sound' (vững về tài chính). (A) tính từ, (B) danh từ, (D) phân từ không bổ nghĩa cho tính từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "A",
+        "content": "Shareholders of Brenwick Foods voted overwhelmingly to ------- the proposed merger with Arlo Grocers at Tuesday's meeting.",
+        "options": [
+          "approve",
+          "consent",
+          "agree",
+          "comply"
+        ],
+        "explanation": "Từ vựng cận nghĩa: chỗ trống có tân ngữ trực tiếp 'the proposed merger' → cần ngoại động từ (A) 'approve' (phê duyệt). (B) 'consent to', (C) 'agree to', (D) 'comply with' đều cần giới từ.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "D",
+        "content": "------- the two companies have agreed on a purchase price, the deal still requires the approval of regulators.",
+        "options": [
+          "Once",
+          "Because",
+          "Unless",
+          "Although"
+        ],
+        "explanation": "Liên từ: vế sau có 'still requires' → quan hệ nhượng bộ (dù đã thống nhất giá, vẫn cần cơ quan quản lý duyệt) → (D) 'Although'. (A) 'Once' (một khi) và (B) 'Because' không hợp với 'still'; (C) 'Unless' sai nghĩa.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "B",
+        "content": "Each of the merging banks will keep ------- own branch network until the integration of their systems is complete.",
+        "options": [
+          "their",
+          "its",
+          "it",
+          "theirs"
+        ],
+        "explanation": "Đại từ: chủ ngữ 'Each of the merging banks' là số ít (each) và chỉ vật → tính từ sở hữu (B) 'its' trước 'own branch network'. (A) số nhiều không hợp 'each'; (C) không đứng trước 'own'; (D) là đại từ sở hữu.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "B",
+        "content": "The combined firm expects to realize annual savings of $40 million once its distribution networks are fully -------.",
+        "options": [
+          "attached",
+          "integrated",
+          "assembled",
+          "collected"
+        ],
+        "explanation": "Từ vựng – collocation: 'networks are fully integrated' = mạng lưới được hợp nhất hoàn toàn (sau sáp nhập) → (B). (A) 'attached' (gắn vào), (C) 'assembled' (lắp ráp), (D) 'collected' (thu gom) không đi với 'distribution networks'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "A",
+        "content": "The board has emphasized that any ------- of staff will be handled through voluntary transfers rather than layoffs.",
+        "options": [
+          "relocation",
+          "relocate",
+          "relocated",
+          "relocating"
+        ],
+        "explanation": "Từ loại: sau từ hạn định 'any' và trước 'of staff' cần danh từ → (A) 'relocation' (việc điều chuyển). (B) động từ; (C), (D) là phân từ, không làm chủ ngữ với 'of staff'.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "C",
+        "content": "Ms. Morales, who ------- the acquisition talks since last spring, will become chief operating officer of the merged company.",
+        "options": [
+          "led",
+          "will lead",
+          "has led",
+          "is leading"
+        ],
+        "explanation": "Thì: 'since last spring' (từ mùa xuân năm ngoái đến nay) → hiện tại hoàn thành (C) 'has led'. (A) quá khứ đơn không đi với 'since'; (B) tương lai, (D) hiện tại tiếp diễn không đi với mốc 'since'.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "D",
+        "content": "The terms of the agreement remain ------- to review by the national competition authority.",
+        "options": [
+          "subjects",
+          "subjecting",
+          "subjected",
+          "subject"
+        ],
+        "explanation": "Từ loại: 'remain + tính từ'; cụm cố định 'be/remain subject to + N' (phải chịu, tuỳ thuộc vào) → (D). (A) danh từ/động từ số ít, (B) danh động từ, (C) 'subjected to' mang nghĩa bị bắt chịu đựng (thường với người), không dùng cho điều khoản cần xem xét.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

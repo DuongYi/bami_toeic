@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "Kestrel Labs Staff Newsletter — Team Spotlight: Audio Products\n\nWhen Kestrel Labs began work on its first pair of noise-canceling headphones two years ago, project lead Grace Keane expected development to take about twelve months. Instead, the Halo One headphones will reach stores this November, nearly a year later than planned.\n\nThe delay was largely the result of a decision made midway through the project. Early prototypes performed well in laboratory tests, but when the team sent fifty pairs to volunteer users, many reported that the headphones felt uncomfortable after an hour of wear. \"The sound quality was where we wanted it, but that wouldn't matter if people took them off after forty minutes,\" Ms. Keane said. Rather than release the product on schedule, the team redesigned the headband and ear cushions from scratch.\n\nThe redesign also gave the team a chance to address another concern raised by testers: the charging case was too large to fit in most bags. The new case is about a third smaller than the original.\n\nKwame Antwi, who heads Kestrel's marketing department, believes the extra time will pay off. Preorders opened on the company's Web site last week and, according to Mr. Antwi, have already surpassed the figure his department had projected for the entire first month.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "D",
+        "content": "What is NOT mentioned as a change made after the volunteer trial?",
+        "options": [
+          "A new headband design",
+          "Redesigned ear cushions",
+          "A more compact charging case",
+          "Improved sound processing"
+        ],
+        "explanation": "Đoạn 2: nhóm 'redesigned the headband and ear cushions from scratch' → (A), (B) có nhắc; đoạn 3: hộp sạc mới 'about a third smaller' → (C) có nhắc. Về âm thanh, bà Keane nói 'The sound quality was where we wanted it' → không cần cải tiến → (D).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "A",
+        "content": "Why did the team most likely decide to postpone the release?",
+        "options": [
+          "It worried that people would not wear the headphones for long.",
+          "Laboratory tests revealed problems with the sound quality.",
+          "The marketing department wanted a larger charging case.",
+          "Fewer volunteers than the team had expected agreed to test the early prototypes."
+        ],
+        "explanation": "Đoạn 2: người dùng thử thấy 'uncomfortable after an hour of wear' và bà Keane nói chất âm tốt cũng vô ích 'if people took them off after forty minutes' → nhóm lo người dùng không đeo lâu (A). (B) trái với bài ('performed well in laboratory tests'); (C) hộp sạc bị chê quá lớn, không ai muốn lớn hơn; (D) không được nhắc.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "A",
+        "content": "The phrase \"pay off\" in paragraph 4 is closest in meaning to",
+        "options": [
+          "be worthwhile",
+          "be repaid in full",
+          "be settled",
+          "be reduced"
+        ],
+        "explanation": "'believes the extra time will pay off' – thời gian kéo dài sẽ 'mang lại kết quả xứng đáng', bằng chứng là đơn đặt trước đã vượt dự báo → 'be worthwhile' (A). (B), (C) là nghĩa 'trả hết nợ' của 'pay off', không hợp với chủ ngữ 'the extra time'; (D) không liên quan.",
+        "tags": [
+          "vocab-in-context"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "title": "Reading mỗi ngày · Ngày 12",
+  "source": "Bami TOEIC",
+  "description": "Luyện đọc 15 câu chủ đề giáo dục và hội thảo đào tạo, mức 600–750.",
+  "is_free": false,
+  "blueprint": "quick15",
+  "time_limit_minutes": 15,
+  "collection": "reading-daily"
+}

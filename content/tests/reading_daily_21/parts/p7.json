@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "Web page\n\nMarrowfield Fresh – Wholesale Ordering for Restaurants\n\nAbout Our Service\nSince 2014, Marrowfield Fresh has connected restaurants in the Teller Valley with more than sixty independent growers. Orders placed through our Web site by 8:00 P.M. are picked, packed, and delivered the following morning, seven days a week.\n\nNew This Season\nStarting in April, customers can set up a standing order, which repeats automatically every week. Standing orders may be modified up to 48 hours before the scheduled delivery. Restaurants whose standing orders total more than $500 per week will also receive a 5 percent discount on every invoice.\n\nQuality Promise\nEvery crate is inspected at our Dunmore packing house before it leaves. If any item does not meet your standards, simply photograph it and send the image to quality@marrowfieldfresh.com within 24 hours of delivery. We will credit your account in full, and there is no need to return the product.\n\nQuestions? Contact our account team, led by Grace Sheridan, at 555-0168.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "D",
+        "content": "What is NOT mentioned as a feature of a standing order?",
+        "options": [
+          "It is repeated without being placed again.",
+          "It can be adjusted before delivery.",
+          "It can lead to lower invoice totals.",
+          "It arrives earlier than a regular order."
+        ],
+        "explanation": "Câu NOT: đoạn 2 nêu (A) 'repeats automatically every week', (B) 'may be modified up to 48 hours before the scheduled delivery', (C) đơn trên $500/tuần được 'a 5 percent discount on every invoice'. Không nói đơn định kỳ được giao sớm hơn → (D).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "B",
+        "content": "The word \"standing\" in paragraph 2, line 1, is closest in meaning to",
+        "options": [
+          "upright",
+          "recurring",
+          "respected",
+          "waiting"
+        ],
+        "explanation": "Từ trong ngữ cảnh: 'a standing order, which repeats automatically every week' → đơn hàng lặp lại định kỳ, 'recurring' (B). (A) 'upright' (đứng thẳng) là nghĩa đen; (C) 'respected' ứng với 'standing' danh từ (địa vị); (D) 'waiting' không được câu sau hỗ trợ.",
+        "tags": [
+          "vocab-in-context"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "A",
+        "content": "What is suggested about a customer who is dissatisfied with an item?",
+        "options": [
+          "The customer can keep the item.",
+          "The customer must call Ms. Sheridan.",
+          "The customer will get a replacement the next morning.",
+          "The customer must bring the item to Dunmore."
+        ],
+        "explanation": "Suy luận: đoạn 3 viết 'We will credit your account in full, and there is no need to return the product' → khách không phải trả lại hàng, tức được giữ món đó (A). (B) chỉ cần gửi ảnh qua e-mail, số của Ms. Sheridan dành cho câu hỏi chung; (C) công ty hoàn tiền vào tài khoản, không nói giao hàng thay thế; (D) Dunmore là nơi kiểm hàng trước khi xuất.",
+        "tags": [
+          "inference"
+        ]
+      }
+    ]
+  }
+]

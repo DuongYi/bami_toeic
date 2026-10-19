@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "Kwame Mensah (10:02 A.M.)\nHi Aiko, I'm at Lakeside Mall picking up the new printer for our shop. The store has the model we wanted, but only in gray, not white.\n\nAiko Takeda (10:04 A.M.)\nGray is fine. Is it still on sale?\n\nKwame Mensah (10:05 A.M.)\nYes, it's $40 off until Sunday. The clerk also said they can deliver it tomorrow at no charge.\n\nAiko Takeda (10:07 A.M.)\nGreat. Then you don't need to carry it to the car. Have them send it to the shop. I'll be there all day tomorrow to receive it.\n\nKwame Mensah (10:08 A.M.)\nSounds good. I'll pay now and give them our address.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "B",
+        "content": "According to Mr. Mensah, what will end on Sunday?",
+        "options": [
+          "Free delivery",
+          "A price discount",
+          "A store's opening hours",
+          "A product warranty"
+        ],
+        "explanation": "Lúc 10:05 Mr. Mensah viết: 'it's $40 off until Sunday' → mức giảm giá kết thúc vào Chủ nhật (B). (A) giao hàng miễn phí được nhắc nhưng không gắn với Chủ nhật; (C), (D) không được nhắc.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "C",
+        "content": "At 10:04 A.M., what does Ms. Takeda most likely mean when she writes, \"Gray is fine\"?",
+        "options": [
+          "She wants to go to the mall herself.",
+          "She thinks the printer is too expensive.",
+          "She will accept a different color.",
+          "She prefers a different model."
+        ],
+        "explanation": "Mr. Mensah báo cửa hàng chỉ còn màu xám, không có màu trắng; Ms. Takeda trả lời 'Gray is fine' → bà chấp nhận màu khác (C). (B) sai vì bà hỏi tiếp về giảm giá, không chê đắt; (D) sai vì đây đúng mẫu họ muốn; (A) không có căn cứ.",
+        "tags": [
+          "implied-meaning"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "A",
+        "content": "What is suggested about Ms. Takeda?",
+        "options": [
+          "She plans to work at the shop tomorrow.",
+          "She is employed at Lakeside Mall.",
+          "She wants to pick up the printer herself.",
+          "She has already paid for the printer."
+        ],
+        "explanation": "Câu suy luận. Lúc 10:07 Ms. Takeda viết 'I'll be there all day tomorrow to receive it' (there = the shop) → suy ra ngày mai bà sẽ có mặt làm việc ở cửa hàng (A). (B) sai vì Mr. Mensah mới là người đang ở trung tâm thương mại; (C) trái với 'Have them send it to the shop'; (D) sai vì Mr. Mensah nói 'I'll pay now'.",
+        "tags": [
+          "inference"
+        ]
+      }
+    ]
+  }
+]

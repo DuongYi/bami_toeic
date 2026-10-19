@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 11",
+  "source": "Bami TOEIC",
+  "description": "Luyện đọc 15 câu chủ đề ngân hàng và tài chính cá nhân cơ bản, mức 600–750.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "B",
+          "content": "Crestmoor Savings Bank customers can now transfer funds ------- between accounts using the updated mobile application.",
+          "options": [
+            "secure",
+            "securely",
+            "securest",
+            "security"
+          ],
+          "explanation": "Bổ nghĩa cho động từ 'transfer' cần trạng từ → 'securely' (một cách an toàn) (B). (A), (C) là tính từ, (D) là danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "D",
+          "content": "Account holders who maintain a minimum ------- of $1,000 will not be charged a monthly service fee.",
+          "options": [
+            "estimate",
+            "payment",
+            "receipt",
+            "balance"
+          ],
+          "explanation": "'maintain a minimum balance' = duy trì số dư tối thiểu, collocation ngân hàng (D). (C) biên lai, (B) khoản thanh toán, (A) ước tính – không đi với 'maintain' và nghĩa miễn phí dịch vụ.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "B",
+          "content": "Loan applications submitted ------- noon on Friday will not be reviewed until the following week.",
+          "options": [
+            "since",
+            "after",
+            "until",
+            "among"
+          ],
+          "explanation": "Hồ sơ nộp 'sau' trưa thứ Sáu sẽ được xét vào tuần sau → 'after' (B). (C) until đi với hành động kéo dài, không hợp 'submitted'; (A) since cần thì hoàn thành; (D) among dùng cho nhóm nhiều đối tượng.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "A",
+          "content": "Ms. Rao reminded new customers that the bank will never ask for ------- passwords by e-mail or phone.",
+          "options": [
+            "their",
+            "themselves",
+            "theirs",
+            "them"
+          ],
+          "explanation": "Trước danh từ 'passwords' cần tính từ sở hữu → 'their' (A). (D) tân ngữ, (C) đại từ sở hữu đứng một mình, (B) phản thân – không đứng trước danh từ.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "D",
+          "content": "Mr. Girard ------- his savings into a fixed-term deposit account after speaking with a financial advisor last Tuesday.",
+          "options": [
+            "has been moving",
+            "moves",
+            "will move",
+            "moved"
+          ],
+          "explanation": "Mốc 'last Tuesday' → hành động đã xong trong quá khứ → quá khứ đơn 'moved' (D). (B) hiện tại, (C) tương lai, (A) hiện tại hoàn thành tiếp diễn không đi với thời điểm quá khứ xác định.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "C",
+          "content": "The financial planning seminar helps participants create ------- monthly budgets that they can actually follow.",
+          "options": [
+            "realist",
+            "realism",
+            "realistic",
+            "realistically"
+          ],
+          "explanation": "Trước cụm danh từ 'monthly budgets' cần tính từ → 'realistic' (thực tế) (C). (D) trạng từ; (B), (A) là danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "C",
+          "content": "Customers are advised to review their monthly statements carefully and report any ------- transactions immediately.",
+          "options": [
+            "unavailable",
+            "uninformed",
+            "unauthorized",
+            "unemployed"
+          ],
+          "explanation": "Báo ngay các giao dịch 'không được phép' (giả mạo) → 'unauthorized transactions' (C). (D) thất nghiệp, (A) không có sẵn, (B) thiếu thông tin – không hợp với 'transactions'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "A",
+          "content": "Alderpoint Credit Union has become increasingly ------- among young professionals because of its low fees.",
+          "options": [
+            "popular",
+            "popularity",
+            "popularly",
+            "popularize"
+          ],
+          "explanation": "Sau 'become' (+ trạng từ 'increasingly') cần tính từ làm bổ ngữ → 'popular' (A). (C) trạng từ, (B) danh từ, (D) động từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "NOTICE TO ALL CRESTMOOR SAVINGS BANK CUSTOMERS\n\nBeginning on June 1, Crestmoor Savings Bank will replace all existing debit cards with new cards that contain an upgraded security chip. Your new card ---(131)--- to the address on file during the next three weeks.\n\nWhen your card arrives, you must activate it before using it at a store or cash machine. ---(132)--- Your old card will stop working seven days after the new one is activated, so please dispose of it ---(133)---.\n\nYour card number and personal identification number (PIN) will remain the same. However, the expiration date and security code will be different. If you have set up automatic payments with any companies, remember to update this ---(134)--- to avoid missed payments.\n\nFor questions, visit any branch or call our customer service line at 555-0164.",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "C",
+          "options": [
+            "has been mailed",
+            "is mailing",
+            "will be mailed",
+            "was mailed"
+          ],
+          "explanation": "Thông báo nói việc thay thẻ bắt đầu từ 1/6 và thẻ đến 'during the next three weeks' → tương lai, bị động (thẻ được gửi) → 'will be mailed' (C). (D), (A) là quá khứ / hoàn thành; (B) chủ động sai nghĩa (thẻ không tự gửi).",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "A",
+          "options": [
+            "To do so, simply call the number printed on the sticker attached to the card.",
+            "Our branches will be closed on all national holidays this year, including the first Monday of May.",
+            "In that case, you may request a refund of the annual fee.",
+            "The new cards were designed by an award-winning local artist."
+          ],
+          "explanation": "Câu trước yêu cầu phải kích hoạt thẻ → câu chèn hướng dẫn cách kích hoạt 'To do so, simply call the number …' (A); 'To do so' thay cho 'activate it'. (B), (D) lạc mạch; (C) 'In that case' không có tình huống nào để tham chiếu.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "D",
+          "options": [
+            "caring",
+            "care",
+            "careful",
+            "carefully"
+          ],
+          "explanation": "Bổ nghĩa cho cụm động từ 'dispose of it' cần trạng từ → 'carefully' (D). (C), (A) là tính từ, (B) là danh từ/động từ.",
+          "tags": [
+            "word-form"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "B",
+          "options": [
+            "location",
+            "information",
+            "equipment",
+            "schedule"
+          ],
+          "explanation": "Đoạn này nói hạn sử dụng và mã bảo mật thay đổi → khách cần cập nhật 'thông tin' thẻ cho các công ty thu tiền tự động → 'information' (B). (C) thiết bị, (A) địa điểm, (D) lịch – không phải thứ thay đổi trên thẻ.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "To: Henrik Nilsson <hnilsson@quillmail.com>\nFrom: Member Services <members@alderpointcu.com>\nDate: September 12\nSubject: Your Goal Saver account\n\nDear Mr. Nilsson,\n\nCongratulations! Your Goal Saver account has reached its first anniversary. Over the past twelve months, your automatic transfers of $150 each month, together with the interest earned, have brought your balance to $1,872.\n\nAs we mentioned when you opened the account, the interest rate for the first year was a special introductory rate of 3.5 percent. Starting October 1, your account will earn our standard rate of 2.75 percent. Members who wish to earn a higher rate may move their savings into a twelve-month Certificate Account, which currently pays 4.1 percent. Please note that funds in a Certificate Account cannot be withdrawn before the end of the term without a penalty.\n\nIf you would like to discuss your options, our advisors are available Monday through Saturday at our Kessler Road branch. You can also book an appointment online at www.alderpointcu.com/advice.\n\nSincerely,\nTeresa Zielinski\nMember Services Manager\nAlderpoint Credit Union",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "A",
+          "content": "Why was the e-mail sent?",
+          "options": [
+            "To explain that an interest rate will change soon",
+            "To confirm that a monthly transfer was canceled",
+            "To ask a member to update his contact details",
+            "To announce the opening of a new branch"
+          ],
+          "explanation": "Đoạn 2: 'Starting October 1, your account will earn our standard rate of 2.75 percent' (thay cho mức ưu đãi 3,5%) → mục đích chính là báo lãi suất sắp thay đổi (A). (C), (B), (D) không được nhắc; chi nhánh Kessler Road chỉ là nơi gặp tư vấn.",
+          "tags": [
+            "main-idea"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "B",
+          "content": "What is suggested about Mr. Nilsson?",
+          "options": [
+            "He has already met with an advisor.",
+            "He opened his account about one year ago.",
+            "He plans to withdraw his savings soon.",
+            "He currently holds a Certificate Account."
+          ],
+          "explanation": "Đoạn 1: 'Your Goal Saver account has reached its first anniversary' → suy ra ông mở tài khoản khoảng một năm trước (B). (A) bài chỉ mời gặp tư vấn; (C) không có căn cứ; (D) Certificate Account chỉ là lựa chọn được giới thiệu.",
+          "tags": [
+            "inference"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "D",
+          "content": "The word \"standard\" in paragraph 2, line 2, is closest in meaning to",
+          "options": [
+            "flexible",
+            "excellent",
+            "strict",
+            "regular"
+          ],
+          "explanation": "'our standard rate' đối lập với 'special introductory rate' → mức lãi suất 'thông thường' → 'regular' (D). (C) nghiêm ngặt, (B) xuất sắc, (A) linh hoạt không hợp ngữ cảnh.",
+          "tags": [
+            "vocab-in-context"
+          ]
+        }
+      ]
+    }
+  ]
+}

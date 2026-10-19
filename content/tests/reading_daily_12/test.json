@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 12",
+  "source": "Bami TOEIC",
+  "description": "Luyện đọc 15 câu chủ đề giáo dục và hội thảo đào tạo, mức 600–750.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "C",
+          "content": "The workshop instructor explained the new scheduling software so ------- that even first-time users understood it.",
+          "options": [
+            "clear",
+            "clarify",
+            "clearly",
+            "clarity"
+          ],
+          "explanation": "Cấu trúc 'so + adj/adv + that'; ở đây bổ nghĩa cho động từ 'explained' → trạng từ 'clearly' (C). (A) tính từ không bổ nghĩa động từ; (D) danh từ, (B) động từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "A",
+          "content": "Ms. Kavanagh has been ------- to lead next month's training session on customer communication.",
+          "options": [
+            "selected",
+            "attended",
+            "enrolled",
+            "applied"
+          ],
+          "explanation": "'be selected to + V' = được chọn để làm gì → 'selected' (A). (D) apply to = nộp đơn vào, (C) enroll in = ghi danh học, (B) attend = tham dự – không dùng ở bị động 'be … to lead'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "C",
+          "content": "------- completing the online course, employees will receive a certificate signed by the training director.",
+          "options": [
+            "Despite",
+            "Unless",
+            "Upon",
+            "Whether"
+          ],
+          "explanation": "'Upon + V-ing' = ngay khi/sau khi → hoàn thành khoá học thì nhận chứng chỉ (C). (A) Despite (mặc dù) sai logic; (B) Unless, (D) Whether là liên từ, cần mệnh đề.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "A",
+          "content": "All new employees are required ------- the safety orientation before their first shift.",
+          "options": [
+            "to attend",
+            "attended",
+            "attending",
+            "attend"
+          ],
+          "explanation": "Cấu trúc 'be required to + V nguyên mẫu' → 'to attend' (A). (D), (C), (B) không theo sau 'be required' ở vị trí này.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "D",
+          "content": "Instructors at Talverton Community College may adjust course materials to meet the needs of ------- students.",
+          "options": [
+            "they",
+            "them",
+            "themselves",
+            "their"
+          ],
+          "explanation": "Trước danh từ 'students' cần tính từ sở hữu → 'their' (của các giảng viên) (D). (B) tân ngữ, (C) phản thân, (A) chủ ngữ – không đứng trước danh từ.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "B",
+          "content": "Feedback forms show that the time-management seminar was highly ------- to most attendees.",
+          "options": [
+            "benefited",
+            "beneficial",
+            "beneficially",
+            "benefit"
+          ],
+          "explanation": "Sau 'was highly' cần tính từ, và 'beneficial to sb' = có ích cho ai → (B). (D) danh từ/động từ; (C) trạng từ; (A) 'benefited' không đi với 'to most attendees' ở cấu trúc này.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "D",
+          "content": "Due to strong demand, the institute will ------- its weekend workshop series through the end of the year.",
+          "options": [
+            "occupy",
+            "remind",
+            "exceed",
+            "extend"
+          ],
+          "explanation": "Nhu cầu cao → 'kéo dài' chuỗi hội thảo đến cuối năm → 'extend' (D). (C) vượt quá, (B) nhắc nhở, (A) chiếm giữ – không hợp với 'through the end of the year'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "B",
+          "content": "The training manual provides a detailed ------- of each step in the equipment setup process.",
+          "options": [
+            "describe",
+            "description",
+            "descriptive",
+            "descriptively"
+          ],
+          "explanation": "Sau 'a detailed' (mạo từ + tính từ) cần danh từ → 'description' (B). (A) động từ, (C) tính từ, (D) trạng từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "MEMO\n\nTo: All Customer Service Staff\nFrom: Omar Mansour, Training Coordinator\nDate: April 18\nSubject: Communication skills workshop\n\nI am pleased to announce that Westbrook Learning Institute will hold a two-day workshop for our department on May 6 and 7. The sessions will focus on handling difficult phone calls and writing clear e-mail responses. ---(131)---, the instructor will share tips on using our new customer database more efficiently.\n\nAttendance is required for all team members who joined the company within the past year. Other employees are welcome to participate if their supervisors ---(132)--- the request. ---(133)---\n\nLunch will be provided on both days. Please inform me of any dietary restrictions by April 30 so that I can place an ---(134)--- order with the caterer.",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "D",
+          "options": [
+            "Nevertheless",
+            "Otherwise",
+            "Instead",
+            "In addition"
+          ],
+          "explanation": "Câu trước nêu nội dung chính của hội thảo, câu sau bổ sung thêm một nội dung (mẹo dùng cơ sở dữ liệu) → 'In addition' (D). (C) thay vào đó, (B) nếu không thì, (A) tuy nhiên – không diễn tả quan hệ bổ sung.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "B",
+          "options": [
+            "install",
+            "approve",
+            "deliver",
+            "attend"
+          ],
+          "explanation": "Nhân viên khác được tham gia nếu cấp trên 'chấp thuận' yêu cầu → 'approve the request' (B). (D) tham dự, (C) giao, (A) lắp đặt – không đi với 'the request'.",
+          "tags": [
+            "vocabulary"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "C",
+          "options": [
+            "Supervisors interviewed several candidates for the instructor position.",
+            "The workshop was well received by everyone who attended it last week.",
+            "To do so, they should submit the online registration form by April 25.",
+            "Unfortunately, the caterer will not be able to provide meals that day."
+          ],
+          "explanation": "Câu trước nói nhân viên khác có thể tham gia → câu chèn hướng dẫn cách đăng ký 'To do so, they should submit the online registration form by April 25' (C). (B) sai thời gian (hội thảo diễn ra tháng 5); (D) mâu thuẫn với 'Lunch will be provided'; (A) lạc mạch.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "A",
+          "options": [
+            "accurate",
+            "accuracy",
+            "accurateness",
+            "accurately"
+          ],
+          "explanation": "Giữa mạo từ 'an' và danh từ 'order' cần tính từ → 'accurate' (chính xác) (A). (D) trạng từ; (B), (C) danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Talverton Community College\nContinuing Education Department\n\nSpring Professional Skills Workshops\n\nOur evening workshops help working adults build practical skills in a relaxed, supportive setting. All sessions take place in the Harmon Building, Room 204, from 6:30 to 8:30 P.M.\n\n• Presenting with Confidence – Tuesdays, March 4–25. Instructor: Grace Kavanagh\n• Spreadsheet Basics – Wednesdays, March 5–26. Instructor: Daniel Eze\n• Writing for the Workplace – Thursdays, April 3–24. Instructor: Grace Kavanagh\n\nEach four-week workshop costs $120. Talverton employees and current students pay half price. Class sizes are kept small so that every participant receives individual attention; registration closes once fifteen people have enrolled. Laptops are available for loan during Spreadsheet Basics, but participants are encouraged to bring their own.\n\nTo register, visit www.talvertoncc.edu/ce or stop by the Continuing Education office.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "B",
+          "content": "What is true about all of the workshops?",
+          "options": [
+            "They are led by the same instructor.",
+            "They are held in the same room.",
+            "They require participants to bring laptops.",
+            "They begin in the month of March."
+          ],
+          "explanation": "Đoạn 1: 'All sessions take place in the Harmon Building, Room 204' → cùng một phòng (B). (A) sai vì Spreadsheet Basics do Daniel Eze dạy; (D) sai vì Writing for the Workplace bắt đầu 3/4; (C) sai, laptop có cho mượn và chỉ 'encouraged'.",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "C",
+          "content": "What is suggested about Ms. Kavanagh?",
+          "options": [
+            "She works in the Continuing Education office.",
+            "She is currently a student at the college.",
+            "She will teach on two different weekdays.",
+            "She created the spreadsheet course."
+          ],
+          "explanation": "Danh sách khoá học: Ms. Kavanagh dạy 'Presenting with Confidence – Tuesdays' và 'Writing for the Workplace – Thursdays' → bà dạy vào hai ngày khác nhau trong tuần (C). (B), (A) không có căn cứ; (D) khoá bảng tính do Daniel Eze phụ trách.",
+          "tags": [
+            "inference"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "A",
+          "content": "The word \"closes\" in paragraph 3, line 2, is closest in meaning to",
+          "options": [
+            "ends",
+            "narrows",
+            "locks",
+            "approaches"
+          ],
+          "explanation": "'registration closes once fifteen people have enrolled' = việc đăng ký 'kết thúc' khi đủ 15 người → 'ends' (A). (C) khoá (cửa) là nghĩa vật lý; (D) đến gần, (B) thu hẹp – không hợp ngữ cảnh.",
+          "tags": [
+            "vocab-in-context"
+          ]
+        }
+      ]
+    }
+  ]
+}

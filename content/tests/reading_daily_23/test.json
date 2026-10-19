@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 23",
+  "source": "Bami TOEIC",
+  "description": "Đọc hiểu chủ đề tin kinh doanh và sáp nhập công ty, mức 850–990 điểm.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "C",
+          "content": "Analysts described the acquisition as a ------- sound decision, given the strong cash reserves of both firms.",
+          "options": [
+            "finance",
+            "financial",
+            "financially",
+            "financed"
+          ],
+          "explanation": "Từ loại: trước tính từ 'sound' (vững chắc) cần trạng từ bổ nghĩa → (C) 'financially sound' (vững về tài chính). (B) tính từ, (A) danh từ, (D) phân từ không bổ nghĩa cho tính từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "D",
+          "content": "Shareholders of Brenwick Foods voted overwhelmingly to ------- the proposed merger with Arlo Grocers at Tuesday's meeting.",
+          "options": [
+            "agree",
+            "comply",
+            "consent",
+            "approve"
+          ],
+          "explanation": "Từ vựng cận nghĩa: chỗ trống có tân ngữ trực tiếp 'the proposed merger' → cần ngoại động từ (D) 'approve' (phê duyệt). (C) 'consent to', (A) 'agree to', (B) 'comply with' đều cần giới từ.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "B",
+          "content": "------- the two companies have agreed on a purchase price, the deal still requires the approval of regulators.",
+          "options": [
+            "Once",
+            "Although",
+            "Because",
+            "Unless"
+          ],
+          "explanation": "Liên từ: vế sau có 'still requires' → quan hệ nhượng bộ (dù đã thống nhất giá, vẫn cần cơ quan quản lý duyệt) → (B) 'Although'. (A) 'Once' (một khi) và (C) 'Because' không hợp với 'still'; (D) 'Unless' sai nghĩa.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "B",
+          "content": "Each of the merging banks will keep ------- own branch network until the integration of their systems is complete.",
+          "options": [
+            "theirs",
+            "its",
+            "their",
+            "it"
+          ],
+          "explanation": "Đại từ: chủ ngữ 'Each of the merging banks' là số ít (each) và chỉ vật → tính từ sở hữu (B) 'its' trước 'own branch network'. (C) số nhiều không hợp 'each'; (D) không đứng trước 'own'; (A) là đại từ sở hữu.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "A",
+          "content": "The combined firm expects to realize annual savings of $40 million once its distribution networks are fully -------.",
+          "options": [
+            "integrated",
+            "collected",
+            "assembled",
+            "attached"
+          ],
+          "explanation": "Từ vựng – collocation: 'networks are fully integrated' = mạng lưới được hợp nhất hoàn toàn (sau sáp nhập) → (A). (D) 'attached' (gắn vào), (C) 'assembled' (lắp ráp), (B) 'collected' (thu gom) không đi với 'distribution networks'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "C",
+          "content": "The board has emphasized that any ------- of staff will be handled through voluntary transfers rather than layoffs.",
+          "options": [
+            "relocate",
+            "relocated",
+            "relocation",
+            "relocating"
+          ],
+          "explanation": "Từ loại: sau từ hạn định 'any' và trước 'of staff' cần danh từ → (C) 'relocation' (việc điều chuyển). (A) động từ; (B), (D) là phân từ, không làm chủ ngữ với 'of staff'.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "D",
+          "content": "Ms. Morales, who ------- the acquisition talks since last spring, will become chief operating officer of the merged company.",
+          "options": [
+            "is leading",
+            "will lead",
+            "led",
+            "has led"
+          ],
+          "explanation": "Thì: 'since last spring' (từ mùa xuân năm ngoái đến nay) → hiện tại hoàn thành (D) 'has led'. (C) quá khứ đơn không đi với 'since'; (B) tương lai, (A) hiện tại tiếp diễn không đi với mốc 'since'.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "A",
+          "content": "The terms of the agreement remain ------- to review by the national competition authority.",
+          "options": [
+            "subject",
+            "subjecting",
+            "subjects",
+            "subjected"
+          ],
+          "explanation": "Từ loại: 'remain + tính từ'; cụm cố định 'be/remain subject to + N' (phải chịu, tuỳ thuộc vào) → (A). (C) danh từ/động từ số ít, (B) danh động từ, (D) 'subjected to' mang nghĩa bị bắt chịu đựng (thường với người), không dùng cho điều khoản cần xem xét.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "FOR IMMEDIATE RELEASE\nContact: Ayumi Hasegawa, Corporate Communications, 555-0182\n\nSANDHAVEN (June 14) — Corbel Home Goods announced today that it has completed its acquisition of Tilbury Lighting, a family-owned manufacturer of energy-efficient lamps. The agreement, first announced in February, ---(131)--- final approval from regulators only last week.\n\nTilbury's 140 employees will remain at the company's Westgate plant, and its current managing director, Ewan McNamara, will stay on to oversee production. ---(132)--- Corbel's chief executive, Lucia Kaminski, said the purchase will allow the company to offer its own lighting line for the first time rather than ---(133)--- such products from outside suppliers.\n\nTilbury products will continue to be sold under their existing brand name for the time being. ---(134)---, Corbel plans to introduce a combined product catalog next spring.",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "D",
+          "options": [
+            "will receive",
+            "receives",
+            "had been receiving",
+            "received"
+          ],
+          "explanation": "Thì: mốc 'only last week' (tuần trước) và hiện tại thương vụ đã hoàn tất → quá khứ đơn (D) 'received'. (B) hiện tại, (A) tương lai mâu thuẫn với 'has completed'; (C) quá khứ hoàn thành tiếp diễn không hợp hành động một lần.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "A",
+          "options": [
+            "No reductions in staffing are planned at the facility.",
+            "He will report directly to Ms. Kaminski.",
+            "The plant was therefore closed at the end of the month.",
+            "Both of them had previously worked for Corbel."
+          ],
+          "explanation": "Chèn câu: câu trước nói 140 nhân viên ở lại nhà máy Westgate → (A) 'không cắt giảm nhân sự tại cơ sở' tiếp nối hợp lý ('the facility' = Westgate plant). (B) bẫy: bà Kaminski chỉ được giới thiệu đầy đủ ở câu sau ('Corbel's chief executive, Lucia Kaminski') nên không thể gọi tắt trước đó; (C) mâu thuẫn; (D) 'Both of them' không rõ chỉ ai.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "C",
+          "options": [
+            "providing",
+            "delivering",
+            "sourcing",
+            "supplying"
+          ],
+          "explanation": "Từ vựng: cấu trúc 'source + sản phẩm + from + nhà cung cấp' = lấy hàng từ → (C) 'sourcing'. (D) 'supplying', (B) 'delivering', (A) 'providing' mang nghĩa cung cấp đi (ngược chiều) – Corbel là bên mua, không phải bên cung cấp cho 'outside suppliers'.",
+          "tags": [
+            "vocabulary"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "B",
+          "options": [
+            "Similarly",
+            "However",
+            "In other words",
+            "Consequently"
+          ],
+          "explanation": "Từ nối: câu trước nói giữ thương hiệu cũ 'for the time being' (tạm thời), câu sau nói sẽ ra catalog chung vào mùa xuân tới → đối lập giữa hiện tại và kế hoạch sau này → (B) 'However'. (A) tương tự, (D) kết quả, (C) diễn giải lại – không phù hợp quan hệ tương phản.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Article\n\nTwo Regional Carriers to Combine\nBy Mateus Correia\n\nPORTLYN (October 2) — Bayline Air and Northcrest Airways, two carriers that serve smaller cities along the eastern coast, announced on Monday that they intend to merge. The combined airline will operate under the Bayline name and will be based at Bayline's current headquarters in Portlyn.\n\nThe two companies compete on only three routes, and analysts expect few changes to those services. What the merger will change, they say, is the airlines' buying power. \"Together they become one of the largest regional customers for aircraft manufacturers,\" said Omar Farouk, a transportation analyst at Hessel Research. \"That should translate into better terms on the twenty new planes Northcrest had already planned to order.\"\n\nNorthcrest chief executive Grace Quaye, who will serve as president of the combined company, said that frequent flyers will be able to transfer points from Northcrest's rewards program into Bayline's beginning next year. Northcrest's program will be discontinued at that time.\n\nThe deal still requires shareholder approval at both companies. Votes are scheduled for late November.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "C",
+          "content": "What is suggested about Northcrest Airways?",
+          "options": [
+            "It competes with Bayline on most of its routes.",
+            "It has already taken delivery of twenty aircraft.",
+            "Its name will no longer appear on flights after the merger.",
+            "Its main office will become the new airline's headquarters."
+          ],
+          "explanation": "Suy luận 2 bước: đoạn 1 – hãng mới 'will operate under the Bayline name' → tên Northcrest sẽ không còn dùng → (C). (D) trụ sở là của Bayline; (A) trái với 'compete on only three routes' (đoạn 2); (B) 20 máy bay mới chỉ 'planned to order', chưa nhận.",
+          "tags": [
+            "inference"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "A",
+          "content": "The word \"terms\" in paragraph 2, line 5, is closest in meaning to",
+          "options": [
+            "conditions",
+            "limits",
+            "words",
+            "periods"
+          ],
+          "explanation": "Từ trong ngữ cảnh: 'better terms on the twenty new planes' = điều kiện (giá cả, thanh toán) tốt hơn khi mua máy bay nhờ sức mua lớn → (A) 'conditions'. (D) 'periods' là nghĩa 'kỳ hạn' – bẫy; (C) 'words' (thuật ngữ) và (B) 'limits' không hợp.",
+          "tags": [
+            "vocab-in-context"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "D",
+          "content": "What is indicated about Bayline's rewards program?",
+          "options": [
+            "It was redesigned under the direction of Ms. Quaye.",
+            "It will be discontinued at the start of next year.",
+            "It must be approved by shareholders in November.",
+            "It will accept points earned with another airline."
+          ],
+          "explanation": "Suy luận/paraphrase xa: đoạn 3 – khách có thể 'transfer points from Northcrest's rewards program into Bayline's' → chương trình của Bayline sẽ nhận điểm tích từ hãng khác → (D). (B) bẫy: chương trình bị ngừng là của Northcrest; (A) không nói bà Quaye thiết kế lại; (C) cổ đông bỏ phiếu cho thương vụ, không phải chương trình.",
+          "tags": [
+            "inference"
+          ]
+        }
+      ]
+    }
+  ]
+}

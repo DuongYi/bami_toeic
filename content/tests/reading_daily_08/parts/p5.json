@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "B",
+        "content": "Tenants who renew their leases before June 30 will receive a ------- discount on their monthly rent.",
+        "options": [
+          "substance",
+          "substantial",
+          "substantially",
+          "substantiate"
+        ],
+        "explanation": "Giữa mạo từ 'a' và danh từ 'discount' cần tính từ → (B) 'substantial' (đáng kể). (A) danh từ, (C) trạng từ, (D) động từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "B",
+        "content": "The renovated apartments in the Elmhurst complex are ------- priced compared to similar units downtown.",
+        "options": [
+          "competitive",
+          "competitively",
+          "competition",
+          "compete"
+        ],
+        "explanation": "Chỗ trống bổ nghĩa cho phân từ 'priced' (được định giá) → cần trạng từ (B) 'competitively' (một cách cạnh tranh). (A) tính từ không bổ nghĩa cho phân từ, (C) danh từ, (D) động từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "C",
+        "content": "Ms. Eriksson's careful ------- of the building's energy costs helped the owners reduce their expenses.",
+        "options": [
+          "analyze",
+          "analytical",
+          "analysis",
+          "analyzed"
+        ],
+        "explanation": "Sau sở hữu cách 'Ms. Eriksson's' và tính từ 'careful', trước 'of' cần danh từ làm chủ ngữ → (C) 'analysis' (sự phân tích). (A), (D) động từ, (B) tính từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "A",
+        "content": "The lease agreement ------- that tenants must give sixty days' notice before moving out.",
+        "options": [
+          "specifies",
+          "qualifies",
+          "anticipates",
+          "resembles"
+        ],
+        "explanation": "Hợp đồng 'quy định rõ' rằng người thuê phải báo trước 60 ngày → (A) 'specifies'. (B) 'qualifies' (đủ điều kiện), (C) 'anticipates' (dự đoán), (D) 'resembles' (giống) không hợp nghĩa với chủ ngữ 'lease agreement'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "B",
+        "content": "Rivercrest Properties has hired a contractor to ------- the lobby, which has not been updated in twenty years.",
+        "options": [
+          "relocate",
+          "renovate",
+          "reside",
+          "retain"
+        ],
+        "explanation": "Sảnh 'chưa được cập nhật trong 20 năm' → cần 'cải tạo' → (B) 'renovate'. (A) 'relocate' (di dời) không dùng cho sảnh toà nhà, (C) 'reside' (cư trú) là nội động từ, (D) 'retain' (giữ lại) trái ý câu.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "C",
+        "content": "------- the underground garage is being repaired, residents may park in the lot on Halden Street free of charge.",
+        "options": [
+          "Despite",
+          "During",
+          "While",
+          "Unless"
+        ],
+        "explanation": "Theo sau là mệnh đề đầy đủ 'the underground garage is being repaired' → cần liên từ; nghĩa 'trong khi gara đang sửa' → (C) 'While'. (A) 'Despite' và (B) 'During' là giới từ, cần cụm danh từ; (D) 'Unless' (trừ khi) sai logic.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "D",
+        "content": "By the time the Corwin Tower opens next spring, more than half of its office space ------- to tenants.",
+        "options": [
+          "was leased",
+          "has leased",
+          "is leasing",
+          "will have been leased"
+        ],
+        "explanation": "'By the time + hiện tại đơn (opens next spring)' → hành động hoàn tất trước một mốc tương lai: tương lai hoàn thành; 'office space' được cho thuê nên dùng bị động → (D) 'will have been leased'. (A) quá khứ, (B), (C) chủ động và sai mốc thời gian.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "B",
+        "content": "Tenants are responsible for keeping ------- storage units locked at all times.",
+        "options": [
+          "them",
+          "their",
+          "theirs",
+          "themselves"
+        ],
+        "explanation": "Trước cụm danh từ 'storage units' cần tính từ sở hữu → (B) 'their'. (A) đại từ tân ngữ, (C) đại từ sở hữu đứng một mình, (D) đại từ phản thân.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  }
+]

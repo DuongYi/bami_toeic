@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "To: Kenji Yamada <kyamada@harborlinebakery.com>\nFrom: Lucia Rocha <lrocha@corvaneoutdoor.com>\nDate: March 3\nSubject: Your spring campaign\n\nDear Mr. Yamada,\n\nThank you for choosing Corvane Outdoor Advertising for Harborline Bakery's spring campaign. I am writing to confirm the details we discussed during last week's meeting.\n\nYour three posters ---(131)--- at bus shelters along Delmont Avenue from March 15 to April 30. Our research shows that these shelters are seen by approximately 20,000 commuters each day. ---(132)---\n\nBefore we send the designs to the printer, please review the attached proofs carefully. If you would like any changes, let me know by March 8. ---(133)---, we will not be able to guarantee the March 15 start date.\n\nFinally, we would be happy to ---(134)--- your campaign's results at the end of April. A short report will show how many customers used the promotional code printed on the posters.\n\nBest regards,\nLucia Rocha\nAccount Manager",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "A",
+        "options": [
+          "will be displayed",
+          "were displayed",
+          "have been displayed",
+          "had been displayed"
+        ],
+        "explanation": "E-mail viết ngày 3/3, chiến dịch chạy từ 15/3 → sự việc trong tương lai, bị động (poster được trưng bày) → 'will be displayed' (A). (B), (C), (D) là quá khứ / hoàn thành, mâu thuẫn với mốc thời gian.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "B",
+        "options": [
+          "Unfortunately, the printer has closed for the rest of the season.",
+          "As a result, your message will reach a large number of potential customers.",
+          "Your posters were removed from all of the bus shelters on Main Street earlier this morning.",
+          "Please let us know if you would like to cancel your bakery order."
+        ],
+        "explanation": "Câu trước nói khoảng 20.000 người đi làm nhìn thấy mỗi ngày → câu chèn nêu kết quả 'As a result, your message will reach a large number of potential customers' (B). (A) mâu thuẫn với đoạn sau (vẫn gửi bản in); (C) sai thời gian (chiến dịch chưa bắt đầu); (D) lạc đề.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "C",
+        "options": [
+          "Similarly",
+          "For example",
+          "Otherwise",
+          "Meanwhile"
+        ],
+        "explanation": "Ý: hãy báo thay đổi trước 8/3; 'nếu không' thì không bảo đảm ngày bắt đầu 15/3 → 'Otherwise' (C). (A) tương tự, (B) ví dụ, (D) trong khi đó – không diễn tả điều kiện ngược lại.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "D",
+        "options": [
+          "anticipate",
+          "postpone",
+          "compose",
+          "evaluate"
+        ],
+        "explanation": "Câu sau: bản báo cáo cho biết bao nhiêu khách dùng mã khuyến mãi → công ty sẽ 'đánh giá' kết quả chiến dịch → 'evaluate' (D). (A) dự đoán không hợp với thời điểm cuối chiến dịch; (B) hoãn, (C) soạn – sai nghĩa.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  }
+]

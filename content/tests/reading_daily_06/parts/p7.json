@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "Tovey Heights Summer Music Series\n\nJoin us for free outdoor concerts at Hollis Park every Friday evening in July! Each concert begins at 7:00 P.M. and lasts about two hours.\n\nSchedule\nJuly 3 – The Riverside Brass Band\nJuly 10 – Ama Owusu Jazz Trio\nJuly 17 – Tovey Heights Youth Orchestra\nJuly 24 – The Silver Pines (folk music)\nJuly 31 – The Northgate Players (classic rock)\n\nSeating is on the lawn, so please bring your own chairs or blankets. Food trucks will be parked along Elm Drive, next to the park entrance, starting at 6:00 P.M.\n\nIn case of rain, concerts will be moved to the gymnasium at Tovey Heights High School, two blocks from the park. Updates will be posted on www.toveyheightsevents.com by 3:00 P.M. on the day of each concert.\n\nThe series is sponsored by the Tovey Heights Neighborhood Association.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "C",
+        "content": "Who will perform on July 17?",
+        "options": [
+          "A jazz trio",
+          "A brass band from the riverside area",
+          "A group of young musicians",
+          "A folk music group called The Silver Pines"
+        ],
+        "explanation": "Lịch diễn: \"July 17 – Tovey Heights Youth Orchestra\" → dàn nhạc thiếu niên, tức nhóm nhạc công trẻ (C). (A) diễn 10/7, (B) diễn 3/7, (D) diễn 24/7.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "B",
+        "content": "What are people attending the concerts asked to do?",
+        "options": [
+          "Buy tickets in advance",
+          "Bring something to sit on",
+          "Park their cars on Elm Drive",
+          "Arrive before 6:00 P.M."
+        ],
+        "explanation": "Đoạn 3: \"Seating is on the lawn, so please bring your own chairs or blankets\" → mang ghế hoặc chăn để ngồi (B). (A) hoà nhạc miễn phí; (C) Elm Drive là chỗ xe bán đồ ăn; (D) 6:00 là giờ xe đồ ăn có mặt.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "A",
+        "content": "What is suggested about the concerts?",
+        "options": [
+          "They may be held indoors on some evenings.",
+          "They are mainly for high school students.",
+          "They require a small entry fee.",
+          "They take place on weekend mornings."
+        ],
+        "explanation": "Đoạn 4: \"In case of rain, concerts will be moved to the gymnasium\" → nếu mưa, buổi diễn có thể tổ chức trong nhà (A). (B) trường học chỉ là địa điểm dự phòng; (C) trái với \"free\"; (D) diễn vào tối thứ Sáu.",
+        "tags": [
+          "inference"
+        ]
+      }
+    ]
+  }
+]

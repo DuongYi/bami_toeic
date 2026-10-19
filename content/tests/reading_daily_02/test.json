@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 02",
+  "source": "Bami TOEIC",
+  "description": "Ôn Reading 15 câu chủ đề hành chính văn phòng, mức 450–600.",
+  "is_free": true,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "B",
+          "content": "Please read the new security policy ------- before signing the agreement form.",
+          "options": [
+            "careful",
+            "carefully",
+            "care",
+            "caring"
+          ],
+          "explanation": "Câu đã đủ thành phần (read + the new security policy) → cần trạng từ bổ nghĩa cho động từ 'read': 'carefully' (cẩn thận) (B). (C) là danh từ/động từ, (A), (D) là tính từ – không bổ nghĩa cho động từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "A",
+          "content": "Ms. Patel is ------- for ordering office supplies for the entire department.",
+          "options": [
+            "responsible",
+            "response",
+            "responsibility",
+            "responsibly"
+          ],
+          "explanation": "Sau động từ 'is' và trước giới từ 'for' cần tính từ: cụm 'be responsible for' (chịu trách nhiệm về) (A). (B), (C) là danh từ không hợp nghĩa với chủ ngữ là người; (D) là trạng từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "D",
+          "content": "The printer on the third floor is ------- repair until Thursday.",
+          "options": [
+            "below",
+            "among",
+            "beneath",
+            "under"
+          ],
+          "explanation": "Cụm cố định 'under repair' (đang được sửa chữa) (D). (A) 'below' và (C) 'beneath' chỉ vị trí bên dưới; (B) 'among' (giữa nhiều thứ) – không kết hợp với 'repair'.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "C",
+          "content": "Mr. Moreau will ------- the monthly staff meeting while the director is away on business.",
+          "options": [
+            "talk",
+            "speak",
+            "lead",
+            "arrive"
+          ],
+          "explanation": "Chỗ trống cần ngoại động từ có tân ngữ 'the monthly staff meeting' → 'lead the meeting' (chủ trì cuộc họp) (C). (B) 'speak', (D) 'arrive', (A) 'talk' là nội động từ, cần giới từ (speak at, arrive at, talk about).",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "C",
+          "content": "Employees should keep a ------- of all receipts from business trips.",
+          "options": [
+            "side",
+            "look",
+            "copy",
+            "view"
+          ],
+          "explanation": "'keep a copy of' = giữ bản sao của (giấy tờ) → hợp nghĩa với 'receipts' (hoá đơn) (C). (D) 'view', (A) 'side', (B) 'look' không tạo cụm có nghĩa với 'keep a … of receipts'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "B",
+          "content": "The new filing system ------- next Monday, so all staff should attend the training session on Friday.",
+          "options": [
+            "introducing",
+            "will be introduced",
+            "has introduced",
+            "was introduced"
+          ],
+          "explanation": "Dấu hiệu 'next Monday' → tương lai; hệ thống được đưa vào sử dụng → bị động: 'will be introduced' (B). (D) quá khứ, (C) hiện tại hoàn thành chủ động, (A) V-ing không làm động từ chính.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "A",
+          "content": "Mr. Kowalski prefers to arrange his meeting schedule -------, without help from an assistant.",
+          "options": [
+            "himself",
+            "he",
+            "him",
+            "his"
+          ],
+          "explanation": "Cụm 'without help from an assistant' nhấn mạnh tự mình làm → dùng đại từ phản thân 'himself' (A). (C) tân ngữ, (D) sở hữu, (B) chủ ngữ – không đứng một mình ở vị trí này với nghĩa 'tự mình'.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "D",
+          "content": "------- the copy machine is fixed, staff may use the printer in Room 204.",
+          "options": [
+            "Despite",
+            "Because of",
+            "During",
+            "Until"
+          ],
+          "explanation": "Sau chỗ trống là mệnh đề đầy đủ (the copy machine is fixed) → cần liên từ; nghĩa 'cho đến khi máy được sửa' → 'Until' (D). (C), (A), (B) là giới từ, chỉ đi với danh từ/cụm danh từ.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "MEMO\n\nTo: All Staff\nFrom: Leila Haddad, Office Manager\nDate: March 9\nSubject: New meeting room booking system\n\nBeginning March 16, all meeting rooms ---(131)--- through our new online calendar. Instead of writing your name on the paper sheet outside each room, you will simply choose a room and a time on the company intranet. The system will send you an e-mail ---(132)--- your booking is complete.\n\n---(133)--- This will give other employees a chance to use the room.\n\nA short training video is available on the staff page. If you have any ---(134)---, please contact me at extension 4021.",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "A",
+          "options": [
+            "must be booked",
+            "have been booked",
+            "had booked",
+            "were booked"
+          ],
+          "explanation": "'Beginning March 16' (bắt đầu từ 16/3, sau ngày gửi memo 9/3) → quy định áp dụng trong tương lai; phòng họp 'được đặt' → bị động: 'must be booked' (A). (D), (C) là quá khứ; (B) hiện tại hoàn thành – sai mốc thời gian.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "C",
+          "options": [
+            "whether",
+            "unless",
+            "once",
+            "although"
+          ],
+          "explanation": "Hệ thống gửi e-mail khi việc đặt phòng hoàn tất → 'once' (một khi, ngay khi) (C). (B) 'unless' (trừ khi), (D) 'although' (mặc dù) không hợp nghĩa; (A) 'whether' (liệu) không dùng trong mệnh đề thời gian.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "D",
+          "options": [
+            "Our new branch office opened in another city last year.",
+            "All meeting rooms are cleaned every evening.",
+            "The paper sheets have always worked well for us.",
+            "Please cancel your booking if you no longer need a room."
+          ],
+          "explanation": "Câu sau 'This will give other employees a chance to use the room' → câu chèn phải là hành động giúp người khác có phòng: huỷ đặt phòng khi không cần (D). (C) mâu thuẫn với việc đổi hệ thống; (A) và (B) không liên quan đến việc nhường phòng.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "B",
+          "options": [
+            "questionable",
+            "questions",
+            "questioned",
+            "questioning"
+          ],
+          "explanation": "Sau 'any' trong câu điều kiện cần danh từ → 'questions' (câu hỏi) (B). (C), (D) là dạng động từ; (A) là tính từ (đáng ngờ) – không làm tân ngữ của 'have'.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "From: Ravi Patel <rpatel@northgateconsulting.com>\nTo: Sofia Moreau <smoreau@northgateconsulting.com>\nDate: October 2\nSubject: Supply order\n\nHi Sofia,\n\nI checked the supply closet this morning, and we are almost out of printer paper and blue ink cartridges. We also need more file folders for the three new employees who start next week.\n\nI have attached a list of the items and the amounts we usually order. Could you place the order with Greenmark Office Supply today? Orders made before 3:00 P.M. arrive the next morning.\n\nPlease note that Greenmark has moved its warehouse, so the driver will now come to the back entrance instead of the main lobby. I will let the security desk know.\n\nThanks,\nRavi",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "B",
+          "content": "Why did Mr. Patel write the e-mail?",
+          "options": [
+            "To welcome some new employees",
+            "To ask a coworker to order supplies",
+            "To complain about a late delivery",
+            "To report a problem with the office printer"
+          ],
+          "explanation": "Đoạn 2: 'Could you place the order with Greenmark Office Supply today?' → mục đích là nhờ đồng nghiệp đặt văn phòng phẩm (B). Nhân viên mới (A) chỉ là lý do cần thêm bìa hồ sơ; bài không nói máy in hỏng (D) hay giao hàng trễ (C).",
+          "tags": [
+            "main-idea"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "A",
+          "content": "What is included with the e-mail?",
+          "options": [
+            "A list of needed items",
+            "A training schedule",
+            "A map of a warehouse",
+            "A delivery receipt"
+          ],
+          "explanation": "Đoạn 2: 'I have attached a list of the items and the amounts we usually order' → kèm theo danh sách các món cần đặt (A). (D), (C), (B) không được nhắc là tệp đính kèm.",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "C",
+          "content": "What is suggested about Greenmark Office Supply?",
+          "options": [
+            "It is located next to Mr. Patel's office.",
+            "It charges extra for morning deliveries.",
+            "It used to deliver to the main lobby.",
+            "It has stopped selling ink cartridges."
+          ],
+          "explanation": "Câu suy luận. Đoạn 3: 'the driver will now come to the back entrance instead of the main lobby' → suy ra trước đây Greenmark giao hàng ở sảnh chính (C). (A) không có căn cứ (kho vừa chuyển đi); (D) trái với việc vẫn đặt mực in; (B) không được nhắc.",
+          "tags": [
+            "inference"
+          ]
+        }
+      ]
+    }
+  ]
+}

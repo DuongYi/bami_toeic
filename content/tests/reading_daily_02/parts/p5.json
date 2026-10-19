@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "C",
+        "content": "Please read the new security policy ------- before signing the agreement form.",
+        "options": [
+          "care",
+          "careful",
+          "carefully",
+          "caring"
+        ],
+        "explanation": "Câu đã đủ thành phần (read + the new security policy) → cần trạng từ bổ nghĩa cho động từ 'read': 'carefully' (cẩn thận) (C). (A) là danh từ/động từ, (B), (D) là tính từ – không bổ nghĩa cho động từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "B",
+        "content": "Ms. Patel is ------- for ordering office supplies for the entire department.",
+        "options": [
+          "response",
+          "responsible",
+          "responsibly",
+          "responsibility"
+        ],
+        "explanation": "Sau động từ 'is' và trước giới từ 'for' cần tính từ: cụm 'be responsible for' (chịu trách nhiệm về) (B). (A), (D) là danh từ không hợp nghĩa với chủ ngữ là người; (C) là trạng từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "A",
+        "content": "The printer on the third floor is ------- repair until Thursday.",
+        "options": [
+          "under",
+          "below",
+          "beneath",
+          "among"
+        ],
+        "explanation": "Cụm cố định 'under repair' (đang được sửa chữa) (A). (B) 'below' và (C) 'beneath' chỉ vị trí bên dưới; (D) 'among' (giữa nhiều thứ) – không kết hợp với 'repair'.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "D",
+        "content": "Mr. Moreau will ------- the monthly staff meeting while the director is away on business.",
+        "options": [
+          "speak",
+          "arrive",
+          "talk",
+          "lead"
+        ],
+        "explanation": "Chỗ trống cần ngoại động từ có tân ngữ 'the monthly staff meeting' → 'lead the meeting' (chủ trì cuộc họp) (D). (A) 'speak', (B) 'arrive', (C) 'talk' là nội động từ, cần giới từ (speak at, arrive at, talk about).",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "B",
+        "content": "Employees should keep a ------- of all receipts from business trips.",
+        "options": [
+          "view",
+          "copy",
+          "side",
+          "look"
+        ],
+        "explanation": "'keep a copy of' = giữ bản sao của (giấy tờ) → hợp nghĩa với 'receipts' (hoá đơn) (B). (A) 'view', (C) 'side', (D) 'look' không tạo cụm có nghĩa với 'keep a … of receipts'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "C",
+        "content": "The new filing system ------- next Monday, so all staff should attend the training session on Friday.",
+        "options": [
+          "was introduced",
+          "has introduced",
+          "will be introduced",
+          "introducing"
+        ],
+        "explanation": "Dấu hiệu 'next Monday' → tương lai; hệ thống được đưa vào sử dụng → bị động: 'will be introduced' (C). (A) quá khứ, (B) hiện tại hoàn thành chủ động, (D) V-ing không làm động từ chính.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "A",
+        "content": "Mr. Kowalski prefers to arrange his meeting schedule -------, without help from an assistant.",
+        "options": [
+          "himself",
+          "him",
+          "his",
+          "he"
+        ],
+        "explanation": "Cụm 'without help from an assistant' nhấn mạnh tự mình làm → dùng đại từ phản thân 'himself' (A). (B) tân ngữ, (C) sở hữu, (D) chủ ngữ – không đứng một mình ở vị trí này với nghĩa 'tự mình'.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "D",
+        "content": "------- the copy machine is fixed, staff may use the printer in Room 204.",
+        "options": [
+          "During",
+          "Despite",
+          "Because of",
+          "Until"
+        ],
+        "explanation": "Sau chỗ trống là mệnh đề đầy đủ (the copy machine is fixed) → cần liên từ; nghĩa 'cho đến khi máy được sửa' → 'Until' (D). (A), (B), (C) là giới từ, chỉ đi với danh từ/cụm danh từ.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  }
+]

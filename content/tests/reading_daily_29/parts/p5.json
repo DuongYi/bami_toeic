@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "C",
+        "content": "The city council has postponed its vote on the rezoning plan pending further ------- with neighborhood associations.",
+        "options": [
+          "consult",
+          "consultant",
+          "consultation",
+          "consulted"
+        ],
+        "explanation": "Sau tính từ 'further' và trước 'with' cần danh từ chỉ hoạt động → 'consultation' (sự tham vấn) (C). (B) cũng là danh từ nhưng chỉ người (chuyên gia tư vấn), sai nghĩa và thiếu mạo từ; (A) là động từ; (D) là quá khứ phân từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "B",
+        "content": "Ms. Nair's report offers a ------- assessment of how the new tram line has affected local businesses.",
+        "options": [
+          "balance",
+          "balanced",
+          "balancing",
+          "balances"
+        ],
+        "explanation": "Giữa mạo từ 'a' và danh từ 'assessment' cần tính từ; 'a balanced assessment' = đánh giá khách quan, cân bằng → (B). (C) 'balancing' mang nghĩa chủ động 'đang làm cân bằng', không hợp; (A), (D) là danh từ / động từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "B",
+        "content": "Ridership on the Harbor Line has risen ------- since off-peak fares were reduced.",
+        "options": [
+          "steady",
+          "steadily",
+          "steadiness",
+          "steadied"
+        ],
+        "explanation": "Bổ nghĩa cho động từ 'has risen' cần trạng từ → 'steadily' (đều đặn) (B). (A) là tính từ, (C) là danh từ, (D) là động từ quá khứ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "A",
+        "content": "Under the new zoning code, developers must ------- at least 15 percent of new residential units for low-income households.",
+        "options": [
+          "reserve",
+          "preserve",
+          "conserve",
+          "deserve"
+        ],
+        "explanation": "'reserve something for someone' = dành riêng cho ai → (A). (B) 'preserve' = bảo tồn; (C) 'conserve' = tiết kiệm (năng lượng, tài nguyên); (D) 'deserve' = xứng đáng – gần hình thức nhưng sai nghĩa.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "A",
+        "content": "The traffic study ------- that converting Main Street into a one-way road would ease congestion only slightly.",
+        "options": [
+          "concluded",
+          "persuaded",
+          "convinced",
+          "assured"
+        ],
+        "explanation": "'conclude that + mệnh đề' = đi đến kết luận rằng → (A). (B), (C), (D) đều cần tân ngữ chỉ người trước 'that' (persuade / convince / assure someone that …), nên không đứng trực tiếp trước mệnh đề 'that'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "A",
+        "content": "The Fulton Street bridge will remain open to pedestrians ------- it is closed to vehicles for resurfacing.",
+        "options": [
+          "while",
+          "during",
+          "unless",
+          "so that"
+        ],
+        "explanation": "Sau chỗ trống là mệnh đề; hai việc diễn ra đồng thời (mở cho người đi bộ / đóng với xe cộ) → 'while' (trong khi) (A). (B) 'during' cần danh từ; (C) 'unless' (trừ khi) sai logic; (D) 'so that' chỉ mục đích.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "B",
+        "content": "Since the light-rail extension opened in January, average weekday ridership ------- by nearly 20 percent.",
+        "options": [
+          "grew",
+          "has grown",
+          "will grow",
+          "is growing"
+        ],
+        "explanation": "'Since + mốc quá khứ' → mệnh đề chính dùng hiện tại hoàn thành 'has grown' (B). (A) quá khứ đơn không dùng với 'since' ở mệnh đề chính; (C), (D) không hợp vì mức tăng đã diễn ra từ tháng 1 đến nay.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "A",
+        "content": "After the consulting firm withdrew from the project, Ms. Habib and Mr. Mercier completed the downtown redevelopment proposal -------.",
+        "options": [
+          "themselves",
+          "them",
+          "their",
+          "theirs"
+        ],
+        "explanation": "Đại từ nhấn mạnh 'themselves' cuối câu = tự họ làm, không có ai trợ giúp – hợp với việc công ty tư vấn đã rút lui → (A). (B) tân ngữ không đứng sau một tân ngữ khác; (C) tính từ sở hữu cần danh từ theo sau; (D) đại từ sở hữu sai nghĩa.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  }
+]

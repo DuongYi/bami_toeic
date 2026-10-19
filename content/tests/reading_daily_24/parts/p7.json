@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "E-mail\n\nTo: All staff, Tolland Building\nFrom: Ama Quaye, Facilities Office\nDate: Wednesday, March 11\nSubject: Power shutdown this weekend\n\nDear colleagues,\n\nThe electric utility will be replacing a transformer that serves our block this Saturday, March 14. Power to the entire Tolland Building will be off from 7:00 A.M. until approximately 3:00 P.M. [1]\n\nBecause the building's backup generator supplies only the emergency lighting and the server room, all other equipment will be without power during this time. Please shut down your computer and unplug any personal devices before you leave on Friday. [2] Items in the third-floor kitchen refrigerator should be taken home or thrown away by Friday evening, as the cleaning crew will empty it at 6:00 P.M. [3]\n\nThe gate to the parking garage will be left open on Saturday, since it cannot operate without electricity. [4] Staff who had planned to work in the office that day are asked to make other arrangements.\n\nIf you have any questions, please contact me at extension 214.\n\nAma Quaye\nFacilities Coordinator",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "D",
+        "content": "Why will the power be shut off on Saturday?",
+        "options": [
+          "The backup generator is being tested.",
+          "The server room is being moved to another floor.",
+          "The garage gate is being repaired.",
+          "Work is being done on equipment outside the building."
+        ],
+        "explanation": "Paraphrase: đoạn 1 – 'The electric utility will be replacing a transformer that serves our block' → công ty điện thay thiết bị phục vụ cả khu phố, không nằm trong toà nhà → (D). (A), (B), (C) dùng từ có trong bài (generator, server room, gate) nhưng không phải lý do cắt điện.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "A",
+        "content": "What is suggested about the server room?",
+        "options": [
+          "It will continue to operate during the shutdown.",
+          "It is located next to the third-floor kitchen.",
+          "It will be cleaned on Friday evening.",
+          "It can be reached only through the parking garage."
+        ],
+        "explanation": "Suy luận 2 bước: đoạn 2 – máy phát dự phòng 'supplies only the emergency lighting and the server room' → khi cắt điện, phòng máy chủ vẫn có điện để chạy → (A). (B) bếp tầng 3 không liên quan; (C) đội vệ sinh chỉ dọn tủ lạnh; (D) bài không nói lối vào phòng máy chủ.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "D",
+        "content": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?\n\"A security guard will be stationed there throughout the day, however.\"",
+        "options": [
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
+        ],
+        "explanation": "Chèn câu: 'there' phải chỉ một địa điểm cần bảo vệ và 'however' đối lập với một rủi ro → sau câu cổng bãi đỗ xe để mở (không thể vận hành khi mất điện) là vị trí [4]: cổng mở nhưng có bảo vệ trực ở đó → (D). [3] tuy có nhắc 'kitchen' nhưng bảo vệ trực ở bếp là vô lý; [1], [2] không có địa điểm nào để 'there' thay thế.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      }
+    ]
+  }
+]

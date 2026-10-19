@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "NOTICE TO RIDERS\n\nStarting Monday, March 3, the Larkfield Transit Authority ---(131)--- the schedule for Bus Route 12. During morning and evening rush hours, buses will run every 10 minutes instead of every 20 minutes. ---(132)---\n\nIn addition, the Route 12 stop on Carver Avenue will move one block north, to the corner of Carver Avenue and Linden Street. This change is ---(133)--- because of road construction near the current stop.\n\nUpdated timetables are available at all stations and on our Web site, www.larkfieldtransit.com. ---(134)--- you have any questions, please call our customer service line at 555-0137.",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "B",
+        "options": [
+          "changed",
+          "will change",
+          "has changed",
+          "was changing"
+        ],
+        "explanation": "Thông báo nói về thay đổi bắt đầu từ \"Starting Monday, March 3\" và câu sau dùng \"buses will run\" → sự việc sắp xảy ra, dùng thì tương lai (B) \"will change\". (A), (C), (D) đều diễn tả việc đã xảy ra.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "B",
+        "options": [
+          "Bicycles are not permitted inside the train cars.",
+          "This will reduce waiting times for people traveling to work.",
+          "The driver was praised for her friendly service last month.",
+          "Our ticket office will be closed on national holidays."
+        ],
+        "explanation": "Câu trước nói xe buýt chạy dày hơn (\"every 10 minutes instead of every 20 minutes\"); câu (B) với \"This\" chỉ lại thay đổi đó và nêu lợi ích: giảm thời gian chờ. (A) nói về tàu, (C) và (D) không liên quan đến lịch tuyến 12.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "D",
+        "options": [
+          "optional",
+          "delighted",
+          "careful",
+          "necessary"
+        ],
+        "explanation": "Việc dời trạm \"because of road construction\" (do công trình làm đường) là điều bắt buộc → (D) \"necessary\" (cần thiết). (A) tuỳ chọn trái nghĩa; (B) \"delighted\" và (C) \"careful\" dùng cho người, không cho \"change\".",
+        "tags": [
+          "vocabulary"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "A",
+        "options": [
+          "If",
+          "Although",
+          "Unless",
+          "Because"
+        ],
+        "explanation": "Câu đưa ra điều kiện: nếu bạn có câu hỏi thì hãy gọi tổng đài → liên từ điều kiện (A) \"If\". (B) chỉ tương phản, (C) \"Unless\" (trừ khi) ngược nghĩa, (D) chỉ nguyên nhân.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  }
+]

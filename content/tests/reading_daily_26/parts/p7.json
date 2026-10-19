@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "E-mail\nTo: Regional purchasing managers\nFrom: Arjun Rahman\nDate: 14 May\nSubject: Returnable pallet program\n\nDear colleagues,\n\nAs you know, our Thornfield plant switched from wooden shipping pallets to returnable plastic ones in February. I am pleased to report that the trial has gone better than expected. Fewer goods have been damaged in transit, and the plant's waste disposal bill for April was the lowest it has been in five years.\n\nBefore we extend the program to our other plants, however, I would like your input on one issue. The plastic pallets make financial sense only if customers send them back. At Thornfield, about 85 percent were returned within a month, largely because the plant's own drivers collect the empty pallets when they make their next delivery. Plants that rely mainly on outside carriers may find this harder to arrange.\n\nPlease send me a short summary of how deliveries are handled at your plant, including roughly what share is made by our own drivers, by 28 May. I will present the findings to the operations committee in early June.\n\nRegards,\nArjun Rahman\nSustainability Program Lead",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "What is the main purpose of the e-mail?",
+        "options": [
+          "To gather details before a program is extended",
+          "To announce that a trial will be discontinued",
+          "To ask managers to hire additional drivers",
+          "To explain a recent increase in waste disposal costs"
+        ],
+        "explanation": "Đoạn 2–3: 'Before we extend the program to our other plants… I would like your input' và yêu cầu gửi tóm tắt cách giao hàng → thu thập thông tin trước khi mở rộng chương trình (A). (B) trái bài – thử nghiệm thành công; (D) chi phí xử lý rác giảm chứ không tăng; (C) không được yêu cầu.",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "D",
+        "content": "What is NOT mentioned as an outcome of the trial at Thornfield?",
+        "options": [
+          "Less merchandise was damaged during shipping.",
+          "The plant spent less on waste disposal.",
+          "Most pallets came back within a month.",
+          "Deliveries reached customers more quickly."
+        ],
+        "explanation": "Đoạn 1 nêu 'Fewer goods have been damaged in transit' (A) và hoá đơn xử lý rác thấp nhất 5 năm (B); đoạn 2 nêu 85% pallet được trả lại trong một tháng (C). Không có chỗ nào nói giao hàng nhanh hơn → (D).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "B",
+        "content": "What can be inferred about plants that depend mostly on outside carriers?",
+        "options": [
+          "They have reported more damaged goods than Thornfield.",
+          "They might recover a smaller share of their pallets.",
+          "They already use plastic pallets for some customers.",
+          "They will join the program before the end of May."
+        ],
+        "explanation": "Đoạn 2: tỉ lệ thu hồi cao ở Thornfield là nhờ tài xế của nhà máy tự gom pallet rỗng, và nhà máy dùng hãng vận chuyển ngoài 'may find this harder to arrange' → suy ra họ có thể thu hồi được ít pallet hơn (B). (D) sai: 28/5 là hạn gửi báo cáo, chưa quyết định mở rộng; (A), (C) không có căn cứ.",
+        "tags": [
+          "inference"
+        ]
+      }
+    ]
+  }
+]

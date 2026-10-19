@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "NOTICE TO ALL TENANTS — Harrowgate Commons\nFrom: Building Management\nDate: September 8\n\nElevator Modernization Project\n\nBeginning on Monday, September 22, Elevator 2 in the east lobby will be taken out of service for approximately six weeks while it is upgraded. ---(131)--- The work will include new control panels, quieter motors, and doors that open and close more ---(132)--- than the current ones.\n\nDuring this period, Elevator 1 ---(133)--- the only passenger elevator in operation, so waiting times may be longer than usual during the morning rush. ---(134)---, tenants who are able to use the stairs are encouraged to do so.\n\nWe apologize for any inconvenience. Questions can be directed to Kenji Hasegawa in the management office at 555-0146.",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "B",
+        "options": [
+          "Unfortunately, the repairs took longer than we had expected.",
+          "All work is expected to be finished by early November.",
+          "Elevator 1 will therefore also be closed during this time.",
+          "These were installed by the same company last year."
+        ],
+        "explanation": "Chèn câu: câu trước nói thang 2 ngừng khoảng 6 tuần từ 22/9 → 22/9 + 6 tuần ≈ đầu tháng 11 → (B) nêu thời điểm hoàn tất, khớp mạch. (A) thì quá khứ trong khi công việc chưa bắt đầu; (C) mâu thuẫn với đoạn 2 (thang 1 vẫn hoạt động); (D) 'These' không có danh từ nào đứng trước để thay thế.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "D",
+        "options": [
+          "smooth",
+          "smoother",
+          "smoothness",
+          "smoothly"
+        ],
+        "explanation": "Từ loại: 'open and close more ___ than' bổ nghĩa cho động từ 'open and close' → cần trạng từ (D) 'smoothly'. (A), (B) tính từ không bổ nghĩa cho động từ; (C) danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "C",
+        "options": [
+          "was",
+          "has been",
+          "will be",
+          "had been"
+        ],
+        "explanation": "Thì: thông báo ngày 8/9 nói về thời gian thang 2 ngừng (bắt đầu 22/9) → tương lai: (C) 'will be'. (A), (B), (D) đều chỉ quá khứ – sai mốc thời gian.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "A",
+        "options": [
+          "For this reason",
+          "In contrast",
+          "Otherwise",
+          "Even so"
+        ],
+        "explanation": "Từ nối: câu trước nói thời gian chờ thang có thể lâu hơn → vì vậy khuyến khích đi cầu thang → quan hệ nguyên nhân – kết quả: (A) 'For this reason'. (B) 'In contrast' (ngược lại) và (D) 'Even so' (dù vậy) chỉ tương phản; (C) 'Otherwise' (nếu không thì) sai nghĩa.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  }
+]

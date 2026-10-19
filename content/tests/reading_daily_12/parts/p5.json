@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "B",
+        "content": "The workshop instructor explained the new scheduling software so ------- that even first-time users understood it.",
+        "options": [
+          "clear",
+          "clearly",
+          "clarity",
+          "clarify"
+        ],
+        "explanation": "Cấu trúc 'so + adj/adv + that'; ở đây bổ nghĩa cho động từ 'explained' → trạng từ 'clearly' (B). (A) tính từ không bổ nghĩa động từ; (C) danh từ, (D) động từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "A",
+        "content": "Ms. Kavanagh has been ------- to lead next month's training session on customer communication.",
+        "options": [
+          "selected",
+          "applied",
+          "enrolled",
+          "attended"
+        ],
+        "explanation": "'be selected to + V' = được chọn để làm gì → 'selected' (A). (B) apply to = nộp đơn vào, (C) enroll in = ghi danh học, (D) attend = tham dự – không dùng ở bị động 'be … to lead'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "C",
+        "content": "------- completing the online course, employees will receive a certificate signed by the training director.",
+        "options": [
+          "Unless",
+          "Despite",
+          "Upon",
+          "Whether"
+        ],
+        "explanation": "'Upon + V-ing' = ngay khi/sau khi → hoàn thành khoá học thì nhận chứng chỉ (C). (B) Despite (mặc dù) sai logic; (A) Unless, (D) Whether là liên từ, cần mệnh đề.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "D",
+        "content": "All new employees are required ------- the safety orientation before their first shift.",
+        "options": [
+          "attend",
+          "attending",
+          "attended",
+          "to attend"
+        ],
+        "explanation": "Cấu trúc 'be required to + V nguyên mẫu' → 'to attend' (D). (A), (B), (C) không theo sau 'be required' ở vị trí này.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "A",
+        "content": "Instructors at Talverton Community College may adjust course materials to meet the needs of ------- students.",
+        "options": [
+          "their",
+          "them",
+          "themselves",
+          "they"
+        ],
+        "explanation": "Trước danh từ 'students' cần tính từ sở hữu → 'their' (của các giảng viên) (A). (B) tân ngữ, (C) phản thân, (D) chủ ngữ – không đứng trước danh từ.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "B",
+        "content": "Feedback forms show that the time-management seminar was highly ------- to most attendees.",
+        "options": [
+          "benefit",
+          "beneficial",
+          "beneficially",
+          "benefited"
+        ],
+        "explanation": "Sau 'was highly' cần tính từ, và 'beneficial to sb' = có ích cho ai → (B). (A) danh từ/động từ; (C) trạng từ; (D) 'benefited' không đi với 'to most attendees' ở cấu trúc này.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "C",
+        "content": "Due to strong demand, the institute will ------- its weekend workshop series through the end of the year.",
+        "options": [
+          "exceed",
+          "remind",
+          "extend",
+          "occupy"
+        ],
+        "explanation": "Nhu cầu cao → 'kéo dài' chuỗi hội thảo đến cuối năm → 'extend' (C). (A) vượt quá, (B) nhắc nhở, (D) chiếm giữ – không hợp với 'through the end of the year'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "D",
+        "content": "The training manual provides a detailed ------- of each step in the equipment setup process.",
+        "options": [
+          "describe",
+          "descriptive",
+          "descriptively",
+          "description"
+        ],
+        "explanation": "Sau 'a detailed' (mạo từ + tính từ) cần danh từ → 'description' (D). (A) động từ, (B) tính từ, (C) trạng từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 24",
+  "source": "Bami TOEIC",
+  "description": "Đọc hiểu chủ đề tiện ích và bảo trì toà nhà, mức 850–990 điểm.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "A",
+          "content": "Tenants are reminded that the freight elevator is reserved ------- for deliveries and furniture moves.",
+          "options": [
+            "exclusively",
+            "exclusive",
+            "exclusiveness",
+            "exclusion"
+          ],
+          "explanation": "Từ loại: sau quá khứ phân từ 'reserved' và trước cụm giới từ 'for deliveries' cần trạng từ → (A) 'exclusively' (chỉ dành riêng). (B) tính từ; (D), (C) danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "B",
+          "content": "Water service to the north tower will be ------- interrupted on Saturday morning while plumbers replace a main valve.",
+          "options": [
+            "lately",
+            "briefly",
+            "shortly",
+            "soon"
+          ],
+          "explanation": "Từ vựng cận nghĩa: 'briefly interrupted' = bị gián đoạn trong thời gian ngắn → (B). (C) 'shortly' và (D) 'soon' nghĩa là 'sắp, chẳng bao lâu nữa' (khoảng thời gian trước khi việc xảy ra) – thừa vì đã có 'on Saturday'; (A) 'lately' (gần đây) dùng với hiện tại hoàn thành.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "D",
+          "content": "The heating system will remain in winter mode ------- the outdoor temperature stays above 15 degrees for three consecutive days.",
+          "options": [
+            "since",
+            "whereas",
+            "by",
+            "until"
+          ],
+          "explanation": "Liên từ: vế sau là mệnh đề và nghĩa 'giữ chế độ hiện tại cho đến khi nhiệt độ tăng' → (D) 'until'. (C) 'by' là giới từ, không đi với mệnh đề; (A) 'since' (từ khi / vì) và (B) 'whereas' (trong khi đó – đối lập) sai nghĩa.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "C",
+          "content": "The building engineer asked that anyone noticing a drop in water pressure report it to ------- directly rather than to the front desk.",
+          "options": [
+            "himself",
+            "his",
+            "him",
+            "he"
+          ],
+          "explanation": "Đại từ: sau động từ 'report it to' cần tân ngữ → (C) 'him' (kỹ sư toà nhà). (D) chủ ngữ; (B) sở hữu; (A) phản thân chỉ dùng khi chủ ngữ và tân ngữ là một người – ở đây chủ ngữ của 'report' là 'anyone'.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "C",
+          "content": "Because the generator had not been tested in over a year, the facilities manager ------- a full inspection before the storm season.",
+          "options": [
+            "appointed",
+            "occupied",
+            "scheduled",
+            "reserved"
+          ],
+          "explanation": "Từ vựng: 'schedule an inspection' = lên lịch kiểm tra → (C). (A) 'appointed' dùng cho người (bổ nhiệm); (D) 'reserved' dùng cho chỗ/phòng; (B) 'occupied' (chiếm giữ) không hợp nghĩa.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "B",
+          "content": "The parking garage lights ------- with LED fixtures last month, and electricity costs for the garage have already fallen by 20 percent.",
+          "options": [
+            "are replacing",
+            "were replaced",
+            "will be replaced",
+            "have been replaced"
+          ],
+          "explanation": "Thì + thể: mốc 'last month' → quá khứ đơn; đèn được thay → bị động → (B) 'were replaced'. (D) hiện tại hoàn thành không đi với mốc quá khứ xác định; (C) tương lai mâu thuẫn với 'have already fallen'; (A) chủ động sai nghĩa.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "A",
+          "content": "Maintenance staff must wear protective gloves when handling certain cleaning products, which can be ------- to the skin.",
+          "options": [
+            "irritating",
+            "irritated",
+            "irritation",
+            "irritate"
+          ],
+          "explanation": "Từ loại: sau 'can be' cần tính từ; chủ ngữ 'cleaning products' là tác nhân gây kích ứng → tính từ đuôi -ing (A) 'irritating'. (B) 'irritated' mô tả thứ bị kích ứng; (D) động từ; (C) danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "D",
+          "content": "------- the recent upgrades to the ventilation system, some offices on the fifth floor still feel warm in the afternoon.",
+          "options": [
+            "Although",
+            "Because of",
+            "Even so",
+            "Despite"
+          ],
+          "explanation": "Giới từ: sau chỗ trống là cụm danh từ ('the recent upgrades…') và quan hệ tương phản với 'still feel warm' → (D) 'Despite'. (A) 'Although' cần mệnh đề; (B) 'Because of' sai nghĩa; (C) 'Even so' là trạng từ nối, không đứng trước cụm danh từ.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "NOTICE TO ALL TENANTS — Harrowgate Commons\nFrom: Building Management\nDate: September 8\n\nElevator Modernization Project\n\nBeginning on Monday, September 22, Elevator 2 in the east lobby will be taken out of service for approximately six weeks while it is upgraded. ---(131)--- The work will include new control panels, quieter motors, and doors that open and close more ---(132)--- than the current ones.\n\nDuring this period, Elevator 1 ---(133)--- the only passenger elevator in operation, so waiting times may be longer than usual during the morning rush. ---(134)---, tenants who are able to use the stairs are encouraged to do so.\n\nWe apologize for any inconvenience. Questions can be directed to Kenji Hasegawa in the management office at 555-0146.",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "B",
+          "options": [
+            "Unfortunately, the repairs took longer than we had expected.",
+            "All work is expected to be finished by early November.",
+            "These were installed by the same company last year.",
+            "Elevator 1 will therefore also be closed during this time."
+          ],
+          "explanation": "Chèn câu: câu trước nói thang 2 ngừng khoảng 6 tuần từ 22/9 → 22/9 + 6 tuần ≈ đầu tháng 11 → (B) nêu thời điểm hoàn tất, khớp mạch. (A) thì quá khứ trong khi công việc chưa bắt đầu; (D) mâu thuẫn với đoạn 2 (thang 1 vẫn hoạt động); (C) 'These' không có danh từ nào đứng trước để thay thế.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "A",
+          "options": [
+            "smoothly",
+            "smooth",
+            "smoother",
+            "smoothness"
+          ],
+          "explanation": "Từ loại: 'open and close more ___ than' bổ nghĩa cho động từ 'open and close' → cần trạng từ (A) 'smoothly'. (B), (C) tính từ không bổ nghĩa cho động từ; (D) danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "C",
+          "options": [
+            "had been",
+            "was",
+            "will be",
+            "has been"
+          ],
+          "explanation": "Thì: thông báo ngày 8/9 nói về thời gian thang 2 ngừng (bắt đầu 22/9) → tương lai: (C) 'will be'. (B), (D), (A) đều chỉ quá khứ – sai mốc thời gian.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "D",
+          "options": [
+            "Even so",
+            "In contrast",
+            "Otherwise",
+            "For this reason"
+          ],
+          "explanation": "Từ nối: câu trước nói thời gian chờ thang có thể lâu hơn → vì vậy khuyến khích đi cầu thang → quan hệ nguyên nhân – kết quả: (D) 'For this reason'. (B) 'In contrast' (ngược lại) và (A) 'Even so' (dù vậy) chỉ tương phản; (C) 'Otherwise' (nếu không thì) sai nghĩa.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "E-mail\n\nTo: All staff, Tolland Building\nFrom: Ama Quaye, Facilities Office\nDate: Wednesday, March 11\nSubject: Power shutdown this weekend\n\nDear colleagues,\n\nThe electric utility will be replacing a transformer that serves our block this Saturday, March 14. Power to the entire Tolland Building will be off from 7:00 A.M. until approximately 3:00 P.M. [1]\n\nBecause the building's backup generator supplies only the emergency lighting and the server room, all other equipment will be without power during this time. Please shut down your computer and unplug any personal devices before you leave on Friday. [2] Items in the third-floor kitchen refrigerator should be taken home or thrown away by Friday evening, as the cleaning crew will empty it at 6:00 P.M. [3]\n\nThe gate to the parking garage will be left open on Saturday, since it cannot operate without electricity. [4] Staff who had planned to work in the office that day are asked to make other arrangements.\n\nIf you have any questions, please contact me at extension 214.\n\nAma Quaye\nFacilities Coordinator",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "C",
+          "content": "Why will the power be shut off on Saturday?",
+          "options": [
+            "The backup generator is being tested.",
+            "The server room is being moved to another floor.",
+            "Work is being done on equipment outside the building.",
+            "The garage gate is being repaired."
+          ],
+          "explanation": "Paraphrase: đoạn 1 – 'The electric utility will be replacing a transformer that serves our block' → công ty điện thay thiết bị phục vụ cả khu phố, không nằm trong toà nhà → (C). (A), (B), (D) dùng từ có trong bài (generator, server room, gate) nhưng không phải lý do cắt điện.",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "A",
+          "content": "What is suggested about the server room?",
+          "options": [
+            "It will continue to operate during the shutdown.",
+            "It can be reached only through the parking garage.",
+            "It is located next to the third-floor kitchen.",
+            "It will be cleaned on Friday evening."
+          ],
+          "explanation": "Suy luận 2 bước: đoạn 2 – máy phát dự phòng 'supplies only the emergency lighting and the server room' → khi cắt điện, phòng máy chủ vẫn có điện để chạy → (A). (C) bếp tầng 3 không liên quan; (D) đội vệ sinh chỉ dọn tủ lạnh; (B) bài không nói lối vào phòng máy chủ.",
+          "tags": [
+            "inference"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "D",
+          "content": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?\n\"A security guard will be stationed there throughout the day, however.\"",
+          "options": [
+            "[1]",
+            "[2]",
+            "[3]",
+            "[4]"
+          ],
+          "explanation": "Chèn câu: 'there' phải chỉ một địa điểm cần bảo vệ và 'however' đối lập với một rủi ro → sau câu cổng bãi đỗ xe để mở (không thể vận hành khi mất điện) là vị trí [4]: cổng mở nhưng có bảo vệ trực ở đó → (D). [3] tuy có nhắc 'kitchen' nhưng bảo vệ trực ở bếp là vô lý; [1], [2] không có địa điểm nào để 'there' thay thế.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "To: Helena Uche <huche@pinewaterhome.com>\nFrom: Marco Nowicki <mnowicki@corbellane.com>\nDate: October 8\nSubject: Q3 review\n\nDear Ms. Uche,\n\nThank you for sending the third-quarter figures so promptly. My team has now had a chance to go through them, and I wanted to share a few initial observations before our meeting on October 15.\n\nOverall, sales were in line with your forecast. ---(131)---, the margin on furniture fell for the second quarter in a row, even though unit sales in that category rose. This ---(132)--- that seasonal discounts may be eroding profits more than your team anticipated.\n\nAt the meeting, we will present a detailed breakdown by store and product line. ---(133)--- That way, we can devote most of our time to the areas that matter most to you.\n\nI will send you the full report ---(134)--- Friday so that you have time to review it in advance.\n\nBest regards,\nMarco Nowicki\nCorbel Lane Consulting",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "C",
+        "options": [
+          "Similarly",
+          "Therefore",
+          "However",
+          "For example"
+        ],
+        "explanation": "Câu trước: doanh số nhìn chung đúng dự báo (tích cực); câu sau: biên lợi nhuận đồ nội thất giảm (tiêu cực) → cần từ nối đối lập 'However' (C). (A) 'Similarly' và (D) 'For example' hàm ý cùng chiều; (B) 'Therefore' sai quan hệ nhân quả.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "A",
+        "options": [
+          "suggests",
+          "proposes",
+          "recommends",
+          "advises"
+        ],
+        "explanation": "Chủ ngữ 'This' (hiện tượng biên lợi nhuận giảm dù bán nhiều hơn) 'cho thấy' một khả năng → 'suggests' mang nghĩa 'indicates' (A). (B), (C), (D) đều mang nghĩa 'đề xuất, khuyên' – cần người làm chủ ngữ và không hợp với mệnh đề 'that discounts may be eroding…'.",
+        "tags": [
+          "vocabulary"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "B",
+        "options": [
+          "Our firm has advised retail clients for more than fifteen years.",
+          "In the meantime, please let me know which issues you would like us to prioritize.",
+          "Unfortunately, we were unable to obtain any figures at the store level.",
+          "Furniture remains your top-selling category by total revenue."
+        ],
+        "explanation": "Câu sau 'That way, we can devote most of our time to the areas that matter most to you' → câu chèn phải là việc khách hàng làm để buổi họp tập trung: cho biết vấn đề muốn ưu tiên (B). (C) mâu thuẫn với 'breakdown by store'; (A), (D) không giải thích được 'That way'.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "D",
+        "options": [
+          "until",
+          "since",
+          "within",
+          "by"
+        ],
+        "explanation": "Hạn chót cho hành động tức thời 'send' → 'by Friday' (chậm nhất thứ Sáu) (D). (A) 'until' dùng với hành động kéo dài; (B) 'since' đi với hiện tại hoàn thành; (C) 'within' cần khoảng thời gian ('within two days').",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "Silva's Outdoor Outlet – Grand Reopening!\n\nAfter two months of renovation, Silva's Outdoor Outlet ---(131)--- its doors again on Saturday, April 12. Our store is now twice as large, with more room for camping gear, sports clothing, and bicycles. ---(132)---\n\nTo celebrate, all hiking boots will be sold at half price ---(133)--- the opening weekend. In addition, the first 50 shoppers on Saturday will receive a free water bottle. Members of our rewards program will also earn double points on every ---(134)---.\n\nVisit us at 82 Elm Street or call 555-0183 for more information.",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "D",
+        "options": [
+          "opened",
+          "has opened",
+          "was opening",
+          "will open"
+        ],
+        "explanation": "Quảng cáo mời khách đến dịp khai trương lại sắp diễn ra (các ưu đãi 'will be sold', 'will receive') → dùng tương lai 'will open' (D). (A), (C) quá khứ, (B) hiện tại hoàn thành – không hợp với sự kiện chưa diễn ra.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "A",
+        "options": [
+          "We have also added a repair counter for bicycles and tents.",
+          "The store was closed for only one day.",
+          "Please return your camping gear by Friday.",
+          "The renovation work on the second floor will begin early next month."
+        ],
+        "explanation": "Câu trước giới thiệu cửa hàng mới được mở rộng → câu chèn tiếp tục nêu điểm mới: 'also added a repair counter' (A). (B) mâu thuẫn với 'two months of renovation'; (D) mâu thuẫn vì việc cải tạo đã xong; (C) không liên quan.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "C",
+        "options": [
+          "while",
+          "since",
+          "during",
+          "among"
+        ],
+        "explanation": "Trước cụm danh từ chỉ khoảng thời gian 'the opening weekend' cần giới từ 'during' (trong suốt) (C). (A) 'while' là liên từ, cần mệnh đề; (B) 'since' (kể từ) cần thì hoàn thành; (D) 'among' (giữa) không chỉ thời gian.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "B",
+        "options": [
+          "purchased",
+          "purchase",
+          "purchasing",
+          "purchaser"
+        ],
+        "explanation": "Sau 'every' cần danh từ số ít; nghĩa 'nhân đôi điểm cho mỗi lần mua hàng' → 'purchase' (B). (A), (C) là dạng động từ; (D) 'purchaser' (người mua) không hợp nghĩa 'earn points on every …'.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

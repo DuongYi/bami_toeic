@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 15",
+  "source": "Bami TOEIC",
+  "description": "Đọc hiểu chủ đề kinh doanh câu lạc bộ thể hình, mức 750–850 với paraphrase gián tiếp.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "D",
+          "content": "Membership at Peakline Fitness Club has grown ------- since the club began offering early-morning classes.",
+          "options": [
+            "steadiness",
+            "steady",
+            "steadied",
+            "steadily"
+          ],
+          "explanation": "Sau nội động từ 'has grown' cần trạng từ chỉ cách thức → 'steadily' (đều đặn) (D). (B) tính từ, (A) danh từ, (C) quá khứ phân từ không bổ nghĩa cho động từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "A",
+          "content": "Members who wish to ------- their membership for up to two months while traveling may do so at the front desk.",
+          "options": [
+            "suspend",
+            "delay",
+            "postpone",
+            "interrupt"
+          ],
+          "explanation": "Tạm ngưng tư cách hội viên một thời gian rồi tiếp tục → collocation 'suspend a membership' (A). (C) 'postpone' và (B) 'delay' dùng cho sự kiện/hành động chưa diễn ra (hoãn); (D) 'interrupt' (làm gián đoạn) không đi với 'membership'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "C",
+          "content": "Personal trainers at the club are ------- to update their certifications every two years.",
+          "options": [
+            "necessary",
+            "mandatory",
+            "required",
+            "essential"
+          ],
+          "explanation": "Chủ ngữ là người ('trainers') + 'be ~ to V' với nghĩa bị bắt buộc → 'are required to' (C). (B), (D), (A) cũng mang nghĩa 'bắt buộc/cần thiết' nhưng dùng với chủ ngữ giả 'It is mandatory/essential/necessary for sb to V', không dùng 'sb is mandatory to V'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "A",
+          "content": "------- the pool is being resurfaced, members may use the pool at our Harrowgate branch at no additional charge.",
+          "options": [
+            "While",
+            "Unless",
+            "Whereas",
+            "Provided that"
+          ],
+          "explanation": "Hai vế liên hệ về thời gian: trong khoảng thời gian hồ bơi đang được sửa ('is being resurfaced'), hội viên dùng hồ ở chi nhánh khác → 'While' (trong khi) (A). (C) 'Whereas' chỉ sự đối lập giữa hai sự việc, không chỉ thời gian; (B) 'Unless' (trừ khi) và (D) 'Provided that' (miễn là) sai logic.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "B",
+          "content": "Had the club ------- its new class schedule earlier, more members would have signed up for the spring session.",
+          "options": [
+            "announce",
+            "announced",
+            "been announced",
+            "announcing"
+          ],
+          "explanation": "Câu điều kiện loại 3 đảo ngữ: 'Had + S + V3' (= If the club had announced) → 'announced' (B). (A) nguyên mẫu, (D) V-ing sai cấu trúc; (C) bị động sai vì câu lạc bộ là chủ thể thông báo, tân ngữ 'its new class schedule' đã có.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "B",
+          "content": "Although several trainers applied for the manager position, Mr. Darko was the only one of ------- with experience running a business.",
+          "options": [
+            "themselves",
+            "them",
+            "their",
+            "they"
+          ],
+          "explanation": "Sau giới từ 'of' cần đại từ tân ngữ: 'the only one of them' (người duy nhất trong số họ) (B). (D) đại từ chủ ngữ, (C) tính từ sở hữu cần danh từ đi kèm; (A) phản thân không dùng khi chủ ngữ khác người được nhắc tới.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "C",
+          "content": "The survey results indicate that members are highly ------- of the extended evening hours.",
+          "options": [
+            "appreciate",
+            "appreciatively",
+            "appreciative",
+            "appreciation"
+          ],
+          "explanation": "Sau 'are highly' cần tính từ, và cấu trúc 'be appreciative of' (trân trọng, hài lòng với) (C). (A) động từ, (D) danh từ, (B) trạng từ không đứng sau 'be + highly' làm bổ ngữ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "D",
+          "content": "Peakline's trainers design ------- workout plans tailored to each member's goals.",
+          "options": [
+            "individuality",
+            "individualize",
+            "individually",
+            "individualized"
+          ],
+          "explanation": "Trước cụm danh từ 'workout plans' cần tính từ → 'individualized' (được cá nhân hoá) (D). (C) trạng từ, (B) động từ, (A) danh từ không bổ nghĩa cho danh từ theo sau.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "MEMO\n\nTo: All Front-Desk and Sales Staff\nFrom: Rosa Almeida, General Manager\nDate: January 8\nSubject: Revised membership options\n\nBeginning February 1, Peakline Fitness Club will replace its three membership tiers with two simplified plans: Standard and Premium. Current members ---(131)--- to the plan that most closely matches their existing benefits unless they request otherwise.\n\nWe expect this change to generate a large number of questions at the front desk. ---(132)--- These cover the most common concerns, including how monthly fees will be affected.\n\nPlease note that personal training packages purchased before February 1 will be honored ---(133)--- of which plan a member selects.\n\nFinally, thank you for the comments you shared on the draft plans last month. Several of your suggestions were ---(134)--- into the final version.",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "B",
+          "options": [
+            "are transferring",
+            "will be transferred",
+            "have been transferred",
+            "were transferred"
+          ],
+          "explanation": "Memo gửi ngày January 8, thay đổi bắt đầu từ February 1 → việc chuyển gói chưa xảy ra, cần tương lai; hội viên 'được chuyển' → bị động 'will be transferred' (B). (C), (D) diễn tả việc đã xảy ra – mâu thuẫn mốc thời gian; (A) chủ động sai nghĩa.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "A",
+          "options": [
+            "To help you respond, we have prepared a set of printed answers, which are in the staff room.",
+            "Please remind members that the parking lot will be repaved next week.",
+            "The sauna will remain closed for cleaning until the end of the month.",
+            "Several members have already renewed their annual contracts well ahead of the January deadline."
+          ],
+          "explanation": "Câu sau bắt đầu bằng 'These cover the most common concerns' → 'These' phải chỉ một thứ trả lời các thắc mắc; chỉ (A) có 'a set of printed answers' nối tiếp ý 'nhiều câu hỏi ở quầy lễ tân'. (D) 'contracts' không 'cover concerns'; (C), (B) lạc đề với việc đổi gói hội viên.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "C",
+          "options": [
+            "although",
+            "notwithstanding",
+            "regardless",
+            "instead"
+          ],
+          "explanation": "Cụm giới từ 'regardless of' (bất kể) + mệnh đề danh từ 'which plan a member selects' (C). (B) 'notwithstanding' là giới từ đứng một mình, không đi với 'of'; (A) 'although' là liên từ, không đi với 'of'; (D) 'instead of' (thay vì) sai nghĩa.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "D",
+          "options": [
+            "enclosed",
+            "included",
+            "involved",
+            "incorporated"
+          ],
+          "explanation": "Collocation 'be incorporated into' = được đưa vào, lồng ghép vào (bản cuối) (D). (B) 'included' cùng nghĩa gần nhưng đi với 'in', không đi với 'into'; (C) 'involved' (liên quan) và (A) 'enclosed' (gửi kèm) sai nghĩa.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Local Gym Bets on Early Risers\n\nHARROWGATE (April 14) — When Kwame Darko opened Peakline Fitness Club in a former furniture warehouse on Delmont Street six years ago, he expected most members to come in after work. Instead, the club's busiest hours turned out to be between 5:30 and 7:30 A.M.\n\n\"We were caught off guard at first,\" Mr. Darko said. \"We had scheduled only one trainer for the morning shift, and the line at the front desk sometimes reached the door.\" Within a year, he had rearranged staff schedules and added three early classes.\n\nThat experience shaped his plans for the club's second location, which is set to open in June in the Westbrook Plaza shopping center. Rather than filling a large open floor with machines, the new site will devote nearly half of its space to small studios that members can book for twenty-minute sessions. \"Our members tell us that time, not price, is what keeps them from exercising,\" Mr. Darko explained. \"Short, focused sessions before work are what they're asking for.\"\n\nThe Westbrook location will also stay open around the clock on weekdays, a first for the company. After staffed hours end, members will enter using a code sent to their phones.\n\nEmi Kimura, who manages several properties at Westbrook Plaza, expects the gym to benefit its neighbors as well. \"A café two doors down has already asked to open at 6:00 A.M. instead of 8:00,\" she noted.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "D",
+          "content": "What is suggested about Peakline Fitness Club when it first opened?",
+          "options": [
+            "It charged more than other gyms in the area.",
+            "It offered more classes than it could staff.",
+            "It had difficulty attracting members after work.",
+            "It underestimated demand at a certain time of day."
+          ],
+          "explanation": "Đoạn 1–2: ông Darko tưởng hội viên đến sau giờ làm nhưng giờ đông nhất lại là 5:30–7:30 sáng; khi đó chỉ xếp một huấn luyện viên ca sáng, hàng chờ kéo dài tới cửa ('We were caught off guard') → câu lạc bộ đã đánh giá thấp nhu cầu buổi sáng (D). (C) bài không nói thiếu khách buổi tối; (A) không nhắc giá; (B) ngược lại – thiếu lớp/nhân viên chứ không thừa lớp.",
+          "tags": [
+            "inference"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "B",
+          "content": "What is NOT mentioned as a feature of the Westbrook location?",
+          "options": [
+            "Weekday access at all hours",
+            "Free parking for members",
+            "Entry using a code sent by phone",
+            "Rooms that can be reserved for short workouts"
+          ],
+          "explanation": "Câu hỏi NOT. Đoạn 3: phòng tập nhỏ đặt trước cho buổi 20 phút (D); đoạn 4: mở cửa 24/24 các ngày trong tuần ('around the clock on weekdays') (A) và vào cửa bằng mã gửi qua điện thoại (C). Bãi đỗ xe miễn phí không được nhắc → (B).",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "A",
+          "content": "Why does Ms. Kimura mention a café?",
+          "options": [
+            "To show that the gym may bring more customers to the area",
+            "To explain why the gym's opening date has changed",
+            "To point out that the café is a competitor of the gym",
+            "To suggest a site for the club's next branch"
+          ],
+          "explanation": "Đoạn 5: bà Kimura cho rằng phòng tập sẽ có lợi cho hàng xóm ('benefit its neighbors'), rồi dẫn ví dụ quán cà phê xin mở cửa sớm từ 6:00 → quán dự đoán sẽ có thêm khách từ phòng tập; ví dụ minh hoạ phòng tập kéo thêm khách cho khu vực (A). (D), (B) không có căn cứ; (C) trái nghĩa – quán được lợi chứ không cạnh tranh.",
+          "tags": [
+            "inference"
+          ]
+        }
+      ]
+    }
+  ]
+}

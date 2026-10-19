@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 21",
+  "source": "Bami TOEIC",
+  "description": "Luyện Reading 15 câu chủ đề nông nghiệp và nhà cung cấp thực phẩm, band 750–850.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "B",
+          "content": "Greenhollow Farms has become one of the region's most ------- suppliers of organic vegetables to local restaurants.",
+          "options": [
+            "dependence",
+            "dependable",
+            "depend",
+            "dependably"
+          ],
+          "explanation": "Cấu trúc 'one of the most + tính từ + danh từ số nhiều' → cần tính từ bổ nghĩa cho 'suppliers': 'dependable' (đáng tin cậy) (B). (C) động từ, (D) trạng từ, (A) danh từ – không đứng giữa 'most' và danh từ được.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "A",
+          "content": "Members of the Brenna Valley cooperative agreed to share harvesting equipment in order to reduce their ------- costs.",
+          "options": [
+            "operational",
+            "operationally",
+            "operated",
+            "operate"
+          ],
+          "explanation": "Chỗ trống đứng giữa 'their' và danh từ 'costs' → cần tính từ: 'operational costs' (chi phí vận hành) (A). (D) động từ nguyên mẫu; (B) trạng từ; (C) phân từ 'operated' mang nghĩa bị động 'được vận hành', không bổ nghĩa hợp lý cho 'costs'.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "C",
+          "content": "Because of the unusually dry summer, this year's wheat ------- is expected to fall 15 percent below last year's.",
+          "options": [
+            "profit",
+            "outcome",
+            "yield",
+            "gain"
+          ],
+          "explanation": "Từ cận nghĩa 'kết quả/thu được': trong nông nghiệp 'wheat yield' = sản lượng lúa mì (C), và hạn hán làm sản lượng giảm. (A) 'profit' là lợi nhuận (tiền), không đi với 'wheat'; (B) 'outcome' là kết cục của sự việc; (D) 'gain' là mức tăng/lợi ích – không chỉ lượng thu hoạch.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "B",
+          "content": "Orders for fresh herbs must be placed by noon to ------- for next-day delivery.",
+          "options": [
+            "permit",
+            "qualify",
+            "entitle",
+            "deserve"
+          ],
+          "explanation": "Collocation 'qualify for' (đủ điều kiện để được) (B): đặt trước 12 giờ thì đủ điều kiện giao hôm sau. (D) 'deserve' không đi với 'for' (deserve something); (C) 'entitle' cần tân ngữ (entitle someone to…); (A) 'permit' cần tân ngữ và không đi với 'for' theo nghĩa này.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "A",
+          "content": "Mr. Appiah will inspect the greenhouse irrigation system ------- the new seedlings are moved there.",
+          "options": [
+            "before",
+            "so that",
+            "unless",
+            "whereas"
+          ],
+          "explanation": "Cần liên từ chỉ thời gian hợp logic: kiểm tra hệ thống tưới TRƯỚC KHI chuyển cây con vào (A). (C) 'unless' (trừ khi) – kiểm tra trừ khi chuyển cây thì vô lý; (D) 'whereas' chỉ sự đối lập; (B) 'so that' chỉ mục đích – việc kiểm tra không nhằm làm cho cây được chuyển đi.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "C",
+          "content": "------- its relatively small size, Sunfield Dairy supplies milk to more than forty grocery stores in the province.",
+          "options": [
+            "Owing to",
+            "Because of",
+            "Despite",
+            "Although"
+          ],
+          "explanation": "Theo sau là cụm danh từ 'its relatively small size' và hai vế tương phản (quy mô nhỏ ↔ cung cấp cho hơn 40 cửa hàng) → giới từ nhượng bộ 'Despite' (C). (D) 'Although' cùng nghĩa nhưng là liên từ, cần mệnh đề; (B), (A) chỉ nguyên nhân – trái logic.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "D",
+          "content": "Ms. Chatterjee recommended ------- the strawberries in ventilated crates to keep them fresh during transport.",
+          "options": [
+            "stored",
+            "store",
+            "to store",
+            "storing"
+          ],
+          "explanation": "'recommend + V-ing' (khuyên nên làm gì) khi không có tân ngữ chỉ người → 'storing' (D). (C) 'recommend to do' không đúng cấu trúc chuẩn; (B) nguyên mẫu trần chỉ dùng trong 'recommend that + S + V'; (A) quá khứ phân từ không làm tân ngữ.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "D",
+          "content": "The irrigation grant will cover both Ms. Berg's orchard and ------- of her neighbor, Mr. Sheridan.",
+          "options": [
+            "this",
+            "it",
+            "those",
+            "that"
+          ],
+          "explanation": "Đại từ thay thế để tránh lặp danh từ số ít 'orchard': 'that of her neighbor' = vườn cây của người hàng xóm (D). (C) 'those' thay cho danh từ số nhiều; (A) 'this' không dùng với 'of' theo cấu trúc so sánh/thay thế; (B) 'it' không đi kèm cụm 'of…' để chỉ một vật khác.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "LANWICK (14 August) – Hollis Ridge Growers, a cooperative of 30 family farms, announced on Tuesday that it will begin supplying fresh produce directly to schools in the Lanwick district this autumn. Until now, the cooperative ---(131)--- most of its fruit and vegetables to wholesale distributors in the capital.\n\nAccording to cooperative chair Lucia Vargas, the arrangement will benefit both farmers and students. \"Selling directly allows our members to earn more per crate,\" she said. \"---(132)---\"\n\nThe district plans to serve the cooperative's produce in all twelve of its school cafeterias. ---(133)---, deliveries will be limited to four schools during the first term so that the farms can adjust their harvesting schedules.\n\nParents interested in learning more are invited to a ---(134)--- tour of one of the member farms on 6 September. Space is limited, so reservations are required.",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "D",
+          "options": [
+            "is selling",
+            "had sold",
+            "will sell",
+            "has sold"
+          ],
+          "explanation": "'Until now' (cho đến nay) chỉ hành động kéo dài từ quá khứ đến hiện tại → hiện tại hoàn thành 'has sold' (D). (B) quá khứ hoàn thành cần mốc quá khứ; (C) tương lai mâu thuẫn với 'until now'; (A) hiện tại tiếp diễn không diễn tả quá trình kéo dài tới nay.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "B",
+          "options": [
+            "Wholesale prices for fresh vegetables have risen steadily across the region over the past year.",
+            "At the same time, children will be eating vegetables picked only a day or two earlier.",
+            "As a result, several members have decided to leave the cooperative.",
+            "The district is expected to name a new superintendent next month."
+          ],
+          "explanation": "Câu trước: bà Vargas nói thoả thuận có lợi cho 'both farmers and students' và vừa nêu lợi ích cho nông dân → câu tiếp theo nêu lợi ích cho học sinh, nối bằng 'At the same time' (B). (A) không phải lợi ích của học sinh; (D) lạc chủ đề; (C) trái với ý 'benefit'.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "C",
+          "options": [
+            "Similarly",
+            "Therefore",
+            "However",
+            "For instance"
+          ],
+          "explanation": "Câu trước: kế hoạch phục vụ cả 12 trường; câu sau: học kỳ đầu chỉ giao cho 4 trường → hai ý tương phản, cần 'However' (tuy nhiên) (C). (B) 'Therefore' chỉ kết quả; (A) 'Similarly' chỉ sự tương đồng; (D) 'For instance' đưa ví dụ – đều không hợp.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "A",
+          "options": [
+            "complimentary",
+            "mandatory",
+            "previous",
+            "temporary"
+          ],
+          "explanation": "Phụ huynh được 'invited' (mời) tham gia một chuyến tham quan sắp tới (6/9) → 'complimentary tour' (miễn phí) (A). (B) 'mandatory' (bắt buộc) mâu thuẫn với lời mời 'interested… are invited'; (C) 'previous' (trước đó) trái với ngày trong tương lai; (D) 'temporary' (tạm thời) không hợp nghĩa với 'tour'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Web page\n\nMarrowfield Fresh – Wholesale Ordering for Restaurants\n\nAbout Our Service\nSince 2014, Marrowfield Fresh has connected restaurants in the Teller Valley with more than sixty independent growers. Orders placed through our Web site by 8:00 P.M. are picked, packed, and delivered the following morning, seven days a week.\n\nNew This Season\nStarting in April, customers can set up a standing order, which repeats automatically every week. Standing orders may be modified up to 48 hours before the scheduled delivery. Restaurants whose standing orders total more than $500 per week will also receive a 5 percent discount on every invoice.\n\nQuality Promise\nEvery crate is inspected at our Dunmore packing house before it leaves. If any item does not meet your standards, simply photograph it and send the image to quality@marrowfieldfresh.com within 24 hours of delivery. We will credit your account in full, and there is no need to return the product.\n\nQuestions? Contact our account team, led by Grace Sheridan, at 555-0168.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "A",
+          "content": "What is NOT mentioned as a feature of a standing order?",
+          "options": [
+            "It arrives earlier than a regular order.",
+            "It can lead to lower invoice totals.",
+            "It can be adjusted before delivery.",
+            "It is repeated without being placed again."
+          ],
+          "explanation": "Câu NOT: đoạn 2 nêu (D) 'repeats automatically every week', (C) 'may be modified up to 48 hours before the scheduled delivery', (B) đơn trên $500/tuần được 'a 5 percent discount on every invoice'. Không nói đơn định kỳ được giao sớm hơn → (A).",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "B",
+          "content": "The word \"standing\" in paragraph 2, line 1, is closest in meaning to",
+          "options": [
+            "upright",
+            "recurring",
+            "respected",
+            "waiting"
+          ],
+          "explanation": "Từ trong ngữ cảnh: 'a standing order, which repeats automatically every week' → đơn hàng lặp lại định kỳ, 'recurring' (B). (A) 'upright' (đứng thẳng) là nghĩa đen; (C) 'respected' ứng với 'standing' danh từ (địa vị); (D) 'waiting' không được câu sau hỗ trợ.",
+          "tags": [
+            "vocab-in-context"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "D",
+          "content": "What is suggested about a customer who is dissatisfied with an item?",
+          "options": [
+            "The customer must bring the item to Dunmore.",
+            "The customer must call Ms. Sheridan.",
+            "The customer will get a replacement the next morning.",
+            "The customer can keep the item."
+          ],
+          "explanation": "Suy luận: đoạn 3 viết 'We will credit your account in full, and there is no need to return the product' → khách không phải trả lại hàng, tức được giữ món đó (D). (B) chỉ cần gửi ảnh qua e-mail, số của Ms. Sheridan dành cho câu hỏi chung; (C) công ty hoàn tiền vào tài khoản, không nói giao hàng thay thế; (A) Dunmore là nơi kiểm hàng trước khi xuất.",
+          "tags": [
+            "inference"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "To: Sofia Holm <sholm@larchmail.com>\nFrom: Tomasz Dudek <tdudek@brightwaterbuilders.com>\nDate: March 3\nSubject: Your kitchen renovation\n\nDear Ms. Holm,\n\nThank you for meeting with me last Thursday to discuss the renovation of your kitchen. As promised, I have attached a detailed quotation based on the measurements we took during my visit. — [1] —\n\nYou mentioned that you would like the work completed before your relatives visit in early May. Our crew is currently available to begin on March 24, which would allow us to finish by April 25. — [2] — However, the custom cabinets you selected must be ordered from the manufacturer at least four weeks in advance, so we would need your decision by March 10 to keep that schedule.\n\nIf you choose the standard cabinets shown in our catalog instead, they can be delivered within a week. — [3] — Please note that the quotation does not include new appliances, as you indicated that you plan to keep your current refrigerator and oven.\n\nI would be glad to answer any questions by phone at 555-0167. — [4] — I look forward to hearing from you.\n\nSincerely,\nTomasz Dudek\nProject Coordinator, Brightwater Builders",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "Why did Mr. Dudek send the e-mail?",
+        "options": [
+          "To follow up on an earlier consultation",
+          "To report a problem with a finished project",
+          "To request payment for a recent delivery",
+          "To arrange an initial visit to a property"
+        ],
+        "explanation": "Mục đích: đoạn 1 'Thank you for meeting with me last Thursday… I have attached a detailed quotation' → gửi báo giá sau buổi gặp trước đó → (A). (B) dự án chưa bắt đầu; (C) không có yêu cầu thanh toán; (D) sai vì ông Dudek đã đến khảo sát ('during my visit').",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "A",
+        "content": "What is suggested about Ms. Holm's project if she makes her decision after March 10?",
+        "options": [
+          "The work could still end by April 25 if she selects standard cabinets.",
+          "The custom cabinets will no longer be offered by the manufacturer.",
+          "The crew will need to start work earlier than March 24.",
+          "Her relatives will have to postpone their visit until June."
+        ],
+        "explanation": "Suy luận 2 bước: đoạn 2 – tủ đặt riêng cần đặt trước 4 tuần nên phải quyết trước 10/3 mới kịp lịch; đoạn 3 – tủ tiêu chuẩn 'can be delivered within a week' → nếu quyết sau 10/3 mà chọn tủ tiêu chuẩn thì vẫn có thể xong trước 25/4 → (A). (B), (C) không có căn cứ; (D) suy diễn quá mức, thư không nói khách phải hoãn.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "C",
+        "content": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?\n\"This would also lower the overall price by approximately 15 percent.\"",
+        "options": [
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
+        ],
+        "explanation": "Chèn câu: câu cần chèn nói 'giá tổng có thể giảm khoảng 15%' – 'This' phải chỉ một lựa chọn rẻ hơn. Vị trí (C) [3] đứng ngay sau câu về tủ tiêu chuẩn ('If you choose the standard cabinets… delivered within a week') → khớp. (A) [1] sau câu về báo giá chưa có lựa chọn nào; (B) [2] sau câu về lịch thi công; (D) [4] sau lời mời gọi điện.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      }
+    ]
+  }
+]

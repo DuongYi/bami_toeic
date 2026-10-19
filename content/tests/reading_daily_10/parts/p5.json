@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "B",
+        "content": "The new billboard campaign was ------- more effective than the radio advertisements that Corvane Outdoor ran last spring.",
+        "options": [
+          "considerable",
+          "considerably",
+          "consideration",
+          "considerate"
+        ],
+        "explanation": "Trước cụm so sánh 'more effective' cần trạng từ bổ nghĩa mức độ → 'considerably' (đáng kể) (B). (A), (D) là tính từ, (C) là danh từ – không bổ nghĩa cho tính từ so sánh.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "A",
+        "content": "Ms. Herrera asked the design team to ------- the brochure layout so that the discount code appears on the front cover.",
+        "options": [
+          "revise",
+          "persuade",
+          "attract",
+          "remind"
+        ],
+        "explanation": "Yêu cầu nhóm thiết kế 'chỉnh sửa' bố cục tờ rơi để mã giảm giá nằm ở bìa trước → 'revise' (A). (B) thuyết phục, (D) nhắc nhở cần tân ngữ chỉ người; (C) thu hút không hợp với 'layout'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "C",
+        "content": "Customer interest in the Lumora skincare line rose sharply ------- the launch of the online video series.",
+        "options": [
+          "whereas",
+          "unless",
+          "following",
+          "because"
+        ],
+        "explanation": "Sau chỗ trống là cụm danh từ 'the launch of …' → cần giới từ; 'following' = sau khi (C). (A) whereas, (B) unless, (D) because là liên từ, phải đi với mệnh đề.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "D",
+        "content": "By the end of next month, Pelham Street Agency ------- more than forty television commercials for regional clients.",
+        "options": [
+          "has produced",
+          "produced",
+          "is producing",
+          "will have produced"
+        ],
+        "explanation": "Mốc 'By the end of next month' (trước một thời điểm trong tương lai) → thì tương lai hoàn thành 'will have produced' (D). (A) hiện tại hoàn thành, (B) quá khứ đơn không hợp mốc tương lai; (C) không đi với 'by + thời điểm'.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "A",
+        "content": "Mr. Matsumoto prefers to write the slogans for new campaigns -------, rather than assigning the task to an intern.",
+        "options": [
+          "himself",
+          "his",
+          "him",
+          "he"
+        ],
+        "explanation": "Nhấn mạnh 'tự mình' làm việc, đứng cuối mệnh đề → đại từ phản thân 'himself' (A). (B) tính từ sở hữu cần danh từ theo sau; (C) tân ngữ, (D) chủ ngữ không đứng ở vị trí này.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "B",
+        "content": "The marketing department will conduct a ------- survey to learn why some subscribers cancel their memberships.",
+        "options": [
+          "comprehend",
+          "comprehensive",
+          "comprehensively",
+          "comprehension"
+        ],
+        "explanation": "Giữa mạo từ 'a' và danh từ 'survey' cần tính từ → 'comprehensive' (toàn diện) (B). (A) động từ, (C) trạng từ, (D) danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "C",
+        "content": "The agency's latest print advertisement has received ------- feedback from both clients and focus group participants.",
+        "options": [
+          "eventual",
+          "tentative",
+          "favorable",
+          "probable"
+        ],
+        "explanation": "'favorable feedback' = phản hồi tích cực, collocation tự nhiên (C). (A) cuối cùng, (B) tạm thời, (D) có khả năng xảy ra – không đi với 'feedback' đã nhận được.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "D",
+        "content": "Brightwell Media Group offers ------- pricing for small businesses that advertise on its local radio stations for a full year.",
+        "options": [
+          "compete",
+          "competitively",
+          "competition",
+          "competitive"
+        ],
+        "explanation": "Trước danh từ 'pricing' cần tính từ → 'competitive pricing' (giá cạnh tranh) (D). (A) động từ, (B) trạng từ; (C) danh từ 'competition pricing' không tạo nghĩa đúng.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

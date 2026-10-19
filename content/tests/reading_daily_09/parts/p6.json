@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "To: Mila Asante\nFrom: Customer Care, Bryndale Air\nDate: April 18\nSubject: Change to your itinerary\n\nDear Ms. Asante,\n\nWe are writing to inform you that your flight BX 382 from Corran to Velmont on May 6 has been rescheduled. The flight will now depart at 2:15 P.M. ---(131)--- at 9:40 A.M. as originally planned. This change is the result of an ---(132)--- to our seasonal timetable.\n\nYour seat assignment and baggage allowance remain the same. ---(133)--- Please note, however, that the later arrival time may affect your connecting flight to Esterby.\n\nIf the new schedule is not suitable, you may switch to another flight at no extra cost or request a full refund. Simply visit www.bryndaleair.com/manage and enter your booking code. We apologize for any inconvenience and look forward to ---(134)--- you on board.\n\nSincerely,\nBryndale Air Customer Care",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "B",
+        "options": [
+          "in addition to",
+          "instead of",
+          "because of",
+          "as well as"
+        ],
+        "explanation": "Chuyến bay giờ cất cánh lúc 2:15 P.M. 'thay vì' 9:40 A.M. như kế hoạch ban đầu ('as originally planned') → (B) 'instead of'. (A), (D) 'ngoài ra/cũng như' sai vì không thể bay cả hai giờ; (C) 'because of' sai logic.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "C",
+        "options": [
+          "adjust",
+          "adjustable",
+          "adjustment",
+          "adjusted"
+        ],
+        "explanation": "Sau mạo từ 'an' và trước giới từ 'to' cần danh từ → (C) 'adjustment' (sự điều chỉnh). (A) động từ, (B) tính từ, (D) quá khứ phân từ.",
+        "tags": [
+          "word-form"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "B",
+        "options": [
+          "Our newest aircraft offers more legroom in every row.",
+          "You do not need to take any action to keep them.",
+          "Your refund has already been sent to your credit card.",
+          "This route has been fully booked for several months."
+        ],
+        "explanation": "Câu trước: chỗ ngồi và hành lý giữ nguyên; câu sau mở đầu bằng 'however' cảnh báo chuyến nối chuyến có thể bị ảnh hưởng → cần câu trấn an 'bạn không cần làm gì để giữ chúng' (B), 'them' thay cho seat assignment và baggage allowance. (C) mâu thuẫn vì khách chưa yêu cầu hoàn tiền; (A), (D) lạc mạch.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "B",
+        "options": [
+          "welcome",
+          "welcoming",
+          "welcomed",
+          "be welcomed"
+        ],
+        "explanation": "'look forward to' – 'to' là giới từ, theo sau là V-ing → (B) 'welcoming'. (A), (C), (D) không đúng dạng sau 'look forward to'.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "To: Harborline Weekly subscribers\nFrom: Nadia Castillo, Managing Editor\nSubject: A new look for Harborline Weekly\n\nDear Reader,\n\nBeginning with the May 4 issue, Harborline Weekly will appear in a redesigned format. The changes are based on a reader survey that we ---(131)--- last autumn. Many of you told us that the print was difficult to read and that the arts listings were hard to find.\n\nIn response, we have enlarged the type and moved all event listings to a pull-out section in the center of each issue. ---(132)--- Our local news coverage, ---(133)---, will remain exactly as it is, since it received the highest ratings in the survey.\n\nThe redesign will not affect your subscription price. In addition, subscribers will now be ---(134)--- to free access to our online archive, which contains every issue published since 1998.\n\nThank you for reading,\nNadia Castillo",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "A",
+        "options": [
+          "conducted",
+          "will conduct",
+          "are conducting",
+          "have been conducting"
+        ],
+        "explanation": "Thì động từ: mốc 'last autumn' (mùa thu năm ngoái) là thời điểm đã kết thúc trong quá khứ, và các câu sau dùng quá khứ ('Many of you told us') → quá khứ đơn (A) 'conducted'. (B) tương lai, (C) hiện tại tiếp diễn, (D) hiện tại hoàn thành tiếp diễn không đi với mốc quá khứ xác định.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "A",
+        "options": [
+          "This section can be removed and kept for reference throughout the week.",
+          "Please return your completed survey by the end of the month.",
+          "As a result, the price of a single issue will rise slightly at newsstands across the region.",
+          "We regret that the arts listings will no longer be included."
+        ],
+        "explanation": "Chèn câu: câu trước nói lịch sự kiện được chuyển sang 'a pull-out section' (phần rời có thể kéo ra) → câu (A) 'This section can be removed and kept…' nối tiếp tự nhiên ('This section' = phần rời đó). (B) sai vì khảo sát đã diễn ra; (C) trái với 'will not affect your subscription price'; (D) trái với việc lịch nghệ thuật vẫn được giữ và chuyển chỗ.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "A",
+        "options": [
+          "however",
+          "therefore",
+          "likewise",
+          "instead"
+        ],
+        "explanation": "Từ nối: đoạn trước liệt kê các thay đổi (cỡ chữ, vị trí lịch sự kiện); câu này nói phần tin địa phương 'will remain exactly as it is' (giữ nguyên) → quan hệ tương phản → (A) 'however'. (B) 'therefore' (vì vậy) và (C) 'likewise' (tương tự) sai quan hệ; (D) 'instead' (thay vào đó) hàm ý thay thế một thứ khác.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "A",
+        "options": [
+          "entitled",
+          "eligible",
+          "qualified",
+          "allowed"
+        ],
+        "explanation": "Từ vựng – kết hợp từ: 'be entitled to + danh từ' (được hưởng quyền) → (A) 'entitled to free access'. (B) 'eligible' và (C) 'qualified' đi với 'for'; (D) 'allowed to' phải theo sau là động từ nguyên mẫu, không phải danh từ 'free access'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  }
+]

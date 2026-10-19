@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 08",
+  "source": "Bami TOEIC",
+  "description": "Đọc hiểu chủ đề bất động sản và quản lý toà nhà, band 600–750.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "C",
+          "content": "Tenants who renew their leases before June 30 will receive a ------- discount on their monthly rent.",
+          "options": [
+            "substantially",
+            "substantiate",
+            "substantial",
+            "substance"
+          ],
+          "explanation": "Giữa mạo từ 'a' và danh từ 'discount' cần tính từ → (C) 'substantial' (đáng kể). (D) danh từ, (A) trạng từ, (B) động từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "A",
+          "content": "The renovated apartments in the Elmhurst complex are ------- priced compared to similar units downtown.",
+          "options": [
+            "competitively",
+            "competition",
+            "competitive",
+            "compete"
+          ],
+          "explanation": "Chỗ trống bổ nghĩa cho phân từ 'priced' (được định giá) → cần trạng từ (A) 'competitively' (một cách cạnh tranh). (C) tính từ không bổ nghĩa cho phân từ, (B) danh từ, (D) động từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "D",
+          "content": "Ms. Eriksson's careful ------- of the building's energy costs helped the owners reduce their expenses.",
+          "options": [
+            "analytical",
+            "analyze",
+            "analyzed",
+            "analysis"
+          ],
+          "explanation": "Sau sở hữu cách 'Ms. Eriksson's' và tính từ 'careful', trước 'of' cần danh từ làm chủ ngữ → (D) 'analysis' (sự phân tích). (B), (C) động từ, (A) tính từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "A",
+          "content": "The lease agreement ------- that tenants must give sixty days' notice before moving out.",
+          "options": [
+            "specifies",
+            "qualifies",
+            "anticipates",
+            "resembles"
+          ],
+          "explanation": "Hợp đồng 'quy định rõ' rằng người thuê phải báo trước 60 ngày → (A) 'specifies'. (B) 'qualifies' (đủ điều kiện), (C) 'anticipates' (dự đoán), (D) 'resembles' (giống) không hợp nghĩa với chủ ngữ 'lease agreement'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "C",
+          "content": "Rivercrest Properties has hired a contractor to ------- the lobby, which has not been updated in twenty years.",
+          "options": [
+            "reside",
+            "retain",
+            "renovate",
+            "relocate"
+          ],
+          "explanation": "Sảnh 'chưa được cập nhật trong 20 năm' → cần 'cải tạo' → (C) 'renovate'. (D) 'relocate' (di dời) không dùng cho sảnh toà nhà, (A) 'reside' (cư trú) là nội động từ, (B) 'retain' (giữ lại) trái ý câu.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "D",
+          "content": "------- the underground garage is being repaired, residents may park in the lot on Halden Street free of charge.",
+          "options": [
+            "Unless",
+            "During",
+            "Despite",
+            "While"
+          ],
+          "explanation": "Theo sau là mệnh đề đầy đủ 'the underground garage is being repaired' → cần liên từ; nghĩa 'trong khi gara đang sửa' → (D) 'While'. (C) 'Despite' và (B) 'During' là giới từ, cần cụm danh từ; (A) 'Unless' (trừ khi) sai logic.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "B",
+          "content": "By the time the Corwin Tower opens next spring, more than half of its office space ------- to tenants.",
+          "options": [
+            "has leased",
+            "will have been leased",
+            "was leased",
+            "is leasing"
+          ],
+          "explanation": "'By the time + hiện tại đơn (opens next spring)' → hành động hoàn tất trước một mốc tương lai: tương lai hoàn thành; 'office space' được cho thuê nên dùng bị động → (B) 'will have been leased'. (C) quá khứ, (A), (D) chủ động và sai mốc thời gian.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "B",
+          "content": "Tenants are responsible for keeping ------- storage units locked at all times.",
+          "options": [
+            "themselves",
+            "their",
+            "theirs",
+            "them"
+          ],
+          "explanation": "Trước cụm danh từ 'storage units' cần tính từ sở hữu → (B) 'their'. (D) đại từ tân ngữ, (C) đại từ sở hữu đứng một mình, (A) đại từ phản thân.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "To: All Residents, Marlowe Court Apartments\nFrom: Leila Saleh, Property Manager\nDate: August 2\nSubject: New maintenance request system\n\nDear Residents,\n\nStarting on September 1, maintenance requests will be submitted through our new online portal instead of by telephone. The portal allows you to describe the problem, upload photos, and track the ---(131)--- of your request at any time.\n\nTo use the portal, visit www.marlowecourt-living.com and create an account with your unit number. ---(132)--- Once you have logged in with it, you will see a button labeled \"New Request.\"\n\nFor emergencies such as water leaks or power outages, please continue to call our 24-hour line at 555-0167. ---(133)---, staff will respond to online requests within two business days.\n\nWe believe the new system will make the process faster and more ---(134)--- for everyone.\n\nSincerely,\nLeila Saleh",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "B",
+          "options": [
+            "profit",
+            "progress",
+            "promotion",
+            "proposal"
+          ],
+          "explanation": "'track the progress of your request' = theo dõi tiến độ xử lý yêu cầu → (B). (C) 'promotion' (khuyến mãi/thăng chức), (D) 'proposal' (đề xuất), (A) 'profit' (lợi nhuận) không hợp với yêu cầu sửa chữa.",
+          "tags": [
+            "vocabulary"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "D",
+          "options": [
+            "The telephone line remains the best way to report minor issues.",
+            "Rent payments are due on the first day of each month.",
+            "Our office was recently moved to the second floor of Building B.",
+            "A temporary password will then be sent to your e-mail address."
+          ],
+          "explanation": "Câu sau 'Once you have logged in with it' cần một danh từ mà 'it' thay thế để đăng nhập → (D) 'mật khẩu tạm thời'. (A) mâu thuẫn với việc chuyển từ điện thoại sang cổng trực tuyến; (B), (C) lạc mạch hướng dẫn đăng ký.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "C",
+          "options": [
+            "Nevertheless",
+            "Similarly",
+            "Otherwise",
+            "Consequently"
+          ],
+          "explanation": "Câu trước nói về trường hợp khẩn cấp (gọi điện); câu sau nói về các trường hợp còn lại (gửi online, phản hồi trong 2 ngày) → (C) 'Otherwise' (trong các trường hợp khác). (A) 'Nevertheless' (tuy nhiên), (B) 'Similarly' (tương tự), (D) 'Consequently' (do đó) không đúng quan hệ ý.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "A",
+          "options": [
+            "convenient",
+            "conveniently",
+            "convenience",
+            "convene"
+          ],
+          "explanation": "'make the process faster and more ------' → cấu trúc make + tân ngữ + tính từ, song song với tính từ 'faster' → (A) 'convenient'. (C) danh từ, (B) trạng từ, (D) động từ 'triệu tập'.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Web page\n\nwww.harbridge-realty.com/listings/2215\n\nCommercial Space for Lease – 2215 Corwin Avenue, Fairhaven\n\nLocated in the heart of Fairhaven's business district, this 3,200-square-foot ground-floor unit was previously occupied by a furniture showroom. Large front windows provide excellent visibility to the thousands of shoppers and commuters who pass along Corwin Avenue each day. The space includes a private office, a storage room, and two restrooms. The landlord recently replaced the heating and cooling system, and the floors were refinished in March.\n\nThe unit is available from November 1. The minimum lease term is three years, and the monthly rent of $6,400 includes water and trash collection. Tenants are responsible for electricity and their own Internet service. Parking is available in the public garage across the street.\n\nTo arrange a viewing, contact leasing agent Tomás Pereira at 555-0183 or tpereira@harbridge-realty.com. Viewings are available on weekdays only.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "C",
+          "content": "For what type of business would the space most likely be suitable?",
+          "options": [
+            "A factory that needs a large loading dock",
+            "A firm that needs reserved parking for staff",
+            "A shop that depends on customers walking by",
+            "A restaurant that needs a full kitchen"
+          ],
+          "explanation": "Đoạn 1: cửa kính lớn 'provide excellent visibility to the thousands of shoppers and commuters who pass along Corwin Avenue' và trước đây là showroom → phù hợp cửa hàng cần khách vãng lai (C). Bài không nhắc khu bốc dỡ (A), chỗ đỗ xe riêng (C – chỉ có gara công cộng) hay bếp (D).",
+          "tags": [
+            "inference"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "A",
+          "content": "What is NOT mentioned as a feature of the space?",
+          "options": [
+            "Private parking for tenants",
+            "A new heating and cooling system",
+            "A room for storage",
+            "Floors that were recently refinished"
+          ],
+          "explanation": "Đoạn 1 nêu 'a storage room' (C), 'recently replaced the heating and cooling system' (B), 'floors were refinished in March' (D). Đoạn 2 chỉ nói 'Parking is available in the public garage across the street' – gara công cộng, không phải chỗ đỗ riêng → (A).",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "D",
+          "content": "The word \"term\" in paragraph 2, line 1, is closest in meaning to",
+          "options": [
+            "expression",
+            "relationship",
+            "payment",
+            "period"
+          ],
+          "explanation": "'The minimum lease term is three years' = thời hạn thuê tối thiểu là 3 năm → 'term' nghĩa là khoảng thời gian (D) 'period'. (A) 'expression' là nghĩa 'thuật ngữ', không hợp ngữ cảnh; (B), (C) sai nghĩa.",
+          "tags": [
+            "vocab-in-context"
+          ]
+        }
+      ]
+    }
+  ]
+}

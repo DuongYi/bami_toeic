@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "Mariam Hamdan [9:52 A.M.]\nHi Tomas. The refrigerated container for the Ostrava Market order is still sitting at the port. Customs flagged a missing document.\n\nTomas Lewandowski [9:55 A.M.]\nWhich one? I uploaded the packing list and the commercial invoice on Friday.\n\nMariam Hamdan [9:58 A.M.]\nThe certificate of origin. The agent says that without it, the container can't be released until Thursday at the earliest.\n\nTomas Lewandowski [10:03 A.M.]\nThat's cutting it close. The client's grand opening sale starts first thing Friday morning.\n\nMariam Hamdan [10:06 A.M.]\nI know. Could you ask the supplier in Valencia to e-mail a scanned copy today? The agent said a scan is acceptable for now, as long as the original follows by courier.\n\nTomas Lewandowski [10:09 A.M.]\nI'll call them right away. They usually answer within the hour.\n\nMariam Hamdan [10:12 A.M.]\nGreat. Forward it to me as soon as it comes in, and I'll take it over to the customs office myself.\n\nTomas Lewandowski [10:15 A.M.]\nWill do. I'll also give Ostrava Market a heads-up about a possible delay, just in case.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "What is suggested about the shipment?",
+        "options": [
+          "It requires temperature control.",
+          "It lacks a commercial invoice.",
+          "It was sent to the wrong port.",
+          "It was shipped by air from Valencia."
+        ],
+        "explanation": "Suy luận: lúc 9:52 Ms. Hamdan nói 'The refrigerated container' (container đông lạnh) → hàng cần giữ nhiệt độ (A). (B) là bẫy: Mr. Lewandowski đã tải 'the commercial invoice' lên, giấy thiếu là 'certificate of origin'; (C) không có thông tin sai cảng; (D) hàng nằm ở cảng (đường biển), Valencia chỉ là nơi nhà cung cấp ở.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "A",
+        "content": "At 10:03 A.M., what does Mr. Lewandowski most likely mean when he writes, \"That's cutting it close\"?",
+        "options": [
+          "A Thursday release would leave little time before an event.",
+          "He feels that the customs rules are being applied too strictly.",
+          "The port is located close to the client's new store.",
+          "He doubts that the supplier will reply in time."
+        ],
+        "explanation": "Hàm ý: ngay trước đó Ms. Hamdan nói container sớm nhất thứ Năm mới được thông quan; ngay sau đó anh nói đợt khai trương bắt đầu sáng thứ Sáu → 'cutting it close' = sát nút, gần như không kịp (A). (B) anh không phàn nàn về hải quan; (C) hiểu sai 'close' theo nghĩa khoảng cách; (D) lúc 10:09 anh lại nói nhà cung cấp 'usually answer within the hour'.",
+        "tags": [
+          "implied-meaning"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "A",
+        "content": "What does Ms. Hamdan offer to do?",
+        "options": [
+          "Bring a document to an office in person",
+          "Contact a supplier in Valencia",
+          "Inform a client about a possible delay",
+          "Send the original certificate to the agent by courier"
+        ],
+        "explanation": "Lúc 10:12 Ms. Hamdan viết 'I'll take it over to the customs office myself' → tự mang giấy tờ đến văn phòng hải quan (A). (B) và (C) là việc Mr. Lewandowski nhận làm (10:09, 10:15); (D) bản gốc gửi chuyển phát là việc của nhà cung cấp.",
+        "tags": [
+          "detail"
+        ]
+      }
+    ]
+  }
+]

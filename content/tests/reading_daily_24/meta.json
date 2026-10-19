@@ -1,0 +1,9 @@
+{
+  "title": "Reading mỗi ngày · Ngày 24",
+  "source": "Bami TOEIC",
+  "description": "Đọc hiểu chủ đề tiện ích và bảo trì toà nhà, mức 850–990 điểm.",
+  "is_free": false,
+  "blueprint": "quick15",
+  "time_limit_minutes": 15,
+  "collection": "reading-daily"
+}

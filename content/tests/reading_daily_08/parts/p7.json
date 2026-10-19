@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "Web page\n\nwww.harbridge-realty.com/listings/2215\n\nCommercial Space for Lease – 2215 Corwin Avenue, Fairhaven\n\nLocated in the heart of Fairhaven's business district, this 3,200-square-foot ground-floor unit was previously occupied by a furniture showroom. Large front windows provide excellent visibility to the thousands of shoppers and commuters who pass along Corwin Avenue each day. The space includes a private office, a storage room, and two restrooms. The landlord recently replaced the heating and cooling system, and the floors were refinished in March.\n\nThe unit is available from November 1. The minimum lease term is three years, and the monthly rent of $6,400 includes water and trash collection. Tenants are responsible for electricity and their own Internet service. Parking is available in the public garage across the street.\n\nTo arrange a viewing, contact leasing agent Tomás Pereira at 555-0183 or tpereira@harbridge-realty.com. Viewings are available on weekdays only.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "For what type of business would the space most likely be suitable?",
+        "options": [
+          "A shop that depends on customers walking by",
+          "A factory that needs a large loading dock",
+          "A firm that needs reserved parking for staff",
+          "A restaurant that needs a full kitchen"
+        ],
+        "explanation": "Đoạn 1: cửa kính lớn 'provide excellent visibility to the thousands of shoppers and commuters who pass along Corwin Avenue' và trước đây là showroom → phù hợp cửa hàng cần khách vãng lai (A). Bài không nhắc khu bốc dỡ (B), chỗ đỗ xe riêng (C – chỉ có gara công cộng) hay bếp (D).",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "C",
+        "content": "What is NOT mentioned as a feature of the space?",
+        "options": [
+          "A room for storage",
+          "A new heating and cooling system",
+          "Private parking for tenants",
+          "Floors that were recently refinished"
+        ],
+        "explanation": "Đoạn 1 nêu 'a storage room' (A), 'recently replaced the heating and cooling system' (B), 'floors were refinished in March' (D). Đoạn 2 chỉ nói 'Parking is available in the public garage across the street' – gara công cộng, không phải chỗ đỗ riêng → (C).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "B",
+        "content": "The word \"term\" in paragraph 2, line 1, is closest in meaning to",
+        "options": [
+          "expression",
+          "period",
+          "relationship",
+          "payment"
+        ],
+        "explanation": "'The minimum lease term is three years' = thời hạn thuê tối thiểu là 3 năm → 'term' nghĩa là khoảng thời gian (B) 'period'. (A) 'expression' là nghĩa 'thuật ngữ', không hợp ngữ cảnh; (C), (D) sai nghĩa.",
+        "tags": [
+          "vocab-in-context"
+        ]
+      }
+    ]
+  }
+]

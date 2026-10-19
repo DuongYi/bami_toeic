@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 16",
+  "source": "Bami TOEIC",
+  "description": "Luyện Reading 15 câu chủ đề xuất bản & truyền thông, band 750–850.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "A",
+          "content": "The circulation of Harborline Weekly has ------- steadily since the magazine launched a digital edition last spring.",
+          "options": [
+            "grown",
+            "enlarged",
+            "raised",
+            "lifted"
+          ],
+          "explanation": "Từ vựng – nội động từ: chỗ trống không có tân ngữ theo sau nên cần động từ nội động 'grow' (tăng lên) → (A) 'grown'. (C) 'raised', (D) 'lifted' là ngoại động từ, cần tân ngữ; (B) 'enlarged' (phóng to) không đi với 'circulation' (số lượng phát hành).",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "D",
+          "content": "The editorial team at Larkspur Press reviewed the final manuscript ------- before sending it to the printer.",
+          "options": [
+            "thorough",
+            "thoroughness",
+            "more thorough",
+            "thoroughly"
+          ],
+          "explanation": "Từ loại: câu đã đủ chủ ngữ – động từ – tân ngữ ('reviewed the final manuscript'), chỗ trống bổ nghĩa cho động từ 'reviewed' → cần trạng từ (D) 'thoroughly' (kỹ lưỡng). (A), (C) là tính từ; (B) là danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "C",
+          "content": "------- a two-week delay at the printing plant, the first shipment of the novel reached bookstores on schedule.",
+          "options": [
+            "Even so",
+            "Whereas",
+            "Despite",
+            "Although"
+          ],
+          "explanation": "Giới từ / liên từ: sau chỗ trống là cụm danh từ ('a two-week delay…'), không phải mệnh đề → cần giới từ chỉ nhượng bộ (C) 'Despite' (mặc dù). (D) 'Although' và (B) 'Whereas' là liên từ cần mệnh đề; (A) 'Even so' là trạng từ nối, không đứng trước cụm danh từ.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "B",
+          "content": "Contributors who want ------- photographs credited should include the photographer's name in the caption file.",
+          "options": [
+            "them",
+            "their",
+            "themselves",
+            "theirs"
+          ],
+          "explanation": "Đại từ: chỗ trống đứng trước danh từ 'photographs' → cần tính từ sở hữu (B) 'their'. (A) 'them' là tân ngữ, (D) 'theirs' là đại từ sở hữu (đứng một mình), (C) 'themselves' là đại từ phản thân – đều không đứng trước danh từ.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "D",
+          "content": "Over the past two years, Quillmark Media's interview podcast has become increasingly ------- among young professionals.",
+          "options": [
+            "influenced",
+            "influence",
+            "influentially",
+            "influential"
+          ],
+          "explanation": "Từ loại: sau động từ nối 'has become' (+ trạng từ 'increasingly') cần tính từ làm bổ ngữ → (D) 'influential' (có sức ảnh hưởng). (B) là danh từ/động từ, (C) là trạng từ; (A) 'influenced' (bị ảnh hưởng) sai nghĩa vì podcast tác động đến người nghe, không phải bị tác động.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "B",
+          "content": "The revised cover design ------- to the author for final approval by the end of this week.",
+          "options": [
+            "has sent",
+            "will be sent",
+            "sending",
+            "will send"
+          ],
+          "explanation": "Dạng động từ: chủ ngữ 'the revised cover design' (thiết kế bìa) không tự gửi được → cần bị động; mốc 'by the end of this week' chỉ tương lai → (B) 'will be sent'. (D), (A) là chủ động; (C) 'sending' không làm vị ngữ được.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "A",
+          "content": "All freelance writers are expected to ------- with the house style guide, which is updated every quarter.",
+          "options": [
+            "comply",
+            "follow",
+            "obey",
+            "observe"
+          ],
+          "explanation": "Từ vựng – kết hợp từ: chỉ 'comply' đi với giới từ 'with' (comply with = tuân thủ) → (A). (D) 'observe', (B) 'follow', (C) 'obey' cùng nghĩa 'tuân theo' nhưng là ngoại động từ, đi thẳng với tân ngữ, không cần 'with'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "C",
+          "content": "The editor agreed to extend the deadline ------- the author could deliver the remaining chapters by June 10.",
+          "options": [
+            "whereas",
+            "as though",
+            "provided that",
+            "rather than"
+          ],
+          "explanation": "Liên từ: vế sau là điều kiện để gia hạn → (C) 'provided that' (với điều kiện là). (A) 'whereas' (trong khi – đối lập), (B) 'as though' (như thể), (D) 'rather than' (thay vì) không hợp nghĩa.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "To: Harborline Weekly subscribers\nFrom: Nadia Castillo, Managing Editor\nSubject: A new look for Harborline Weekly\n\nDear Reader,\n\nBeginning with the May 4 issue, Harborline Weekly will appear in a redesigned format. The changes are based on a reader survey that we ---(131)--- last autumn. Many of you told us that the print was difficult to read and that the arts listings were hard to find.\n\nIn response, we have enlarged the type and moved all event listings to a pull-out section in the center of each issue. ---(132)--- Our local news coverage, ---(133)---, will remain exactly as it is, since it received the highest ratings in the survey.\n\nThe redesign will not affect your subscription price. In addition, subscribers will now be ---(134)--- to free access to our online archive, which contains every issue published since 1998.\n\nThank you for reading,\nNadia Castillo",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "B",
+          "options": [
+            "have been conducting",
+            "conducted",
+            "are conducting",
+            "will conduct"
+          ],
+          "explanation": "Thì động từ: mốc 'last autumn' (mùa thu năm ngoái) là thời điểm đã kết thúc trong quá khứ, và các câu sau dùng quá khứ ('Many of you told us') → quá khứ đơn (B) 'conducted'. (D) tương lai, (C) hiện tại tiếp diễn, (A) hiện tại hoàn thành tiếp diễn không đi với mốc quá khứ xác định.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "C",
+          "options": [
+            "As a result, the price of a single issue will rise slightly at newsstands across the region.",
+            "We regret that the arts listings will no longer be included.",
+            "This section can be removed and kept for reference throughout the week.",
+            "Please return your completed survey by the end of the month."
+          ],
+          "explanation": "Chèn câu: câu trước nói lịch sự kiện được chuyển sang 'a pull-out section' (phần rời có thể kéo ra) → câu (C) 'This section can be removed and kept…' nối tiếp tự nhiên ('This section' = phần rời đó). (D) sai vì khảo sát đã diễn ra; (A) trái với 'will not affect your subscription price'; (B) trái với việc lịch nghệ thuật vẫn được giữ và chuyển chỗ.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "A",
+          "options": [
+            "however",
+            "therefore",
+            "likewise",
+            "instead"
+          ],
+          "explanation": "Từ nối: đoạn trước liệt kê các thay đổi (cỡ chữ, vị trí lịch sự kiện); câu này nói phần tin địa phương 'will remain exactly as it is' (giữ nguyên) → quan hệ tương phản → (A) 'however'. (B) 'therefore' (vì vậy) và (C) 'likewise' (tương tự) sai quan hệ; (D) 'instead' (thay vào đó) hàm ý thay thế một thứ khác.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "D",
+          "options": [
+            "qualified",
+            "allowed",
+            "eligible",
+            "entitled"
+          ],
+          "explanation": "Từ vựng – kết hợp từ: 'be entitled to + danh từ' (được hưởng quyền) → (D) 'entitled to free access'. (C) 'eligible' và (A) 'qualified' đi với 'for'; (B) 'allowed to' phải theo sau là động từ nguyên mẫu, không phải danh từ 'free access'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Fernhill Books Expands into Audio\n\nBRAYTON (June 12) — Fernhill Books, an independent publisher known primarily for its regional travel guides, announced on Tuesday that it will begin releasing audio versions of its titles this fall. The first six audiobooks, including the best-selling Walking the Coastal Path, will be available in September through the company's Web site and selected online retailers.\n\nAccording to publisher Daniel Mori, the decision followed several years of requests from readers who wanted to listen to the guides while driving or hiking. \"Our printed guides will always be at the heart of what we do,\" Mr. Mori said. \"But many of our readers are on the move, and we want to reach them wherever they are.\"\n\nRather than hire professional narrators for every title, Fernhill will invite several of its authors to record their own books. Mr. Mori explained that the authors' firsthand knowledge of the routes they describe gives the recordings a personal quality that listeners are likely to appreciate. Recording will take place at Tinmouth Sound, a studio in downtown Brayton that the company has contracted for the project.\n\nFernhill plans to add audio versions of its older titles gradually, starting with those that have sold the most copies. The company does not expect to raise the prices of its print editions as a result of the expansion.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "D",
+          "content": "What is suggested about Fernhill Books' audiobooks?",
+          "options": [
+            "They will cost the same amount as the printed editions.",
+            "They will cover the company's entire catalog by September.",
+            "They will be sold only in bookstores at first.",
+            "Some of them will be narrated by the people who wrote the books."
+          ],
+          "explanation": "Suy luận: đoạn 3 'Rather than hire professional narrators for every title, Fernhill will invite several of its authors to record their own books' → một số sách nói do chính tác giả đọc → (D). (A) bài chỉ nói giá sách in không tăng, không so sánh giá; (C) trái với 'through the company's Web site and selected online retailers'; (B) sai vì tháng 9 chỉ có 'the first six audiobooks'.",
+          "tags": [
+            "inference"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "B",
+          "content": "What is NOT stated about Fernhill Books?",
+          "options": [
+            "It is mainly recognized for its travel publications.",
+            "It intends to publish fewer printed guides in the future.",
+            "It has arranged to use an outside recording facility.",
+            "It will choose which older titles to convert based on sales."
+          ],
+          "explanation": "Câu NOT: (A) đúng – 'known primarily for its regional travel guides' (đoạn 1); (C) đúng – 'Tinmouth Sound, a studio… that the company has contracted' (đoạn 3); (D) đúng – 'starting with those that have sold the most copies' (đoạn 4). Bài không hề nói sẽ giảm sách in, ngược lại 'Our printed guides will always be at the heart of what we do' → (B).",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "C",
+          "content": "The word \"quality\" in paragraph 3, line 3, is closest in meaning to",
+          "options": [
+            "grade",
+            "standard",
+            "character",
+            "value"
+          ],
+          "explanation": "Từ trong ngữ cảnh: 'gives the recordings a personal quality' = mang lại cho bản ghi một nét riêng, đặc tính cá nhân → 'quality' ở đây nghĩa là đặc điểm, tính chất → (C) 'character'. (B) 'standard' và (A) 'grade' là nghĩa 'chất lượng/mức độ tốt' – bẫy nghĩa thường gặp của 'quality'; (D) 'value' (giá trị) không hợp.",
+          "tags": [
+            "vocab-in-context"
+          ]
+        }
+      ]
+    }
+  ]
+}

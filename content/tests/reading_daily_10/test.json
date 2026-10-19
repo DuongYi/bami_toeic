@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 10",
+  "source": "Bami TOEIC",
+  "description": "Luyện đọc 15 câu chủ đề marketing và quảng cáo, mức 600–750.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "C",
+          "content": "The new billboard campaign was ------- more effective than the radio advertisements that Corvane Outdoor ran last spring.",
+          "options": [
+            "consideration",
+            "considerable",
+            "considerably",
+            "considerate"
+          ],
+          "explanation": "Trước cụm so sánh 'more effective' cần trạng từ bổ nghĩa mức độ → 'considerably' (đáng kể) (C). (B), (D) là tính từ, (A) là danh từ – không bổ nghĩa cho tính từ so sánh.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "A",
+          "content": "Ms. Herrera asked the design team to ------- the brochure layout so that the discount code appears on the front cover.",
+          "options": [
+            "revise",
+            "attract",
+            "remind",
+            "persuade"
+          ],
+          "explanation": "Yêu cầu nhóm thiết kế 'chỉnh sửa' bố cục tờ rơi để mã giảm giá nằm ở bìa trước → 'revise' (A). (D) thuyết phục, (C) nhắc nhở cần tân ngữ chỉ người; (B) thu hút không hợp với 'layout'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "B",
+          "content": "Customer interest in the Lumora skincare line rose sharply ------- the launch of the online video series.",
+          "options": [
+            "unless",
+            "following",
+            "whereas",
+            "because"
+          ],
+          "explanation": "Sau chỗ trống là cụm danh từ 'the launch of …' → cần giới từ; 'following' = sau khi (B). (C) whereas, (A) unless, (D) because là liên từ, phải đi với mệnh đề.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "D",
+          "content": "By the end of next month, Pelham Street Agency ------- more than forty television commercials for regional clients.",
+          "options": [
+            "is producing",
+            "produced",
+            "has produced",
+            "will have produced"
+          ],
+          "explanation": "Mốc 'By the end of next month' (trước một thời điểm trong tương lai) → thì tương lai hoàn thành 'will have produced' (D). (C) hiện tại hoàn thành, (B) quá khứ đơn không hợp mốc tương lai; (A) không đi với 'by + thời điểm'.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "C",
+          "content": "Mr. Matsumoto prefers to write the slogans for new campaigns -------, rather than assigning the task to an intern.",
+          "options": [
+            "him",
+            "he",
+            "himself",
+            "his"
+          ],
+          "explanation": "Nhấn mạnh 'tự mình' làm việc, đứng cuối mệnh đề → đại từ phản thân 'himself' (C). (D) tính từ sở hữu cần danh từ theo sau; (A) tân ngữ, (B) chủ ngữ không đứng ở vị trí này.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "A",
+          "content": "The marketing department will conduct a ------- survey to learn why some subscribers cancel their memberships.",
+          "options": [
+            "comprehensive",
+            "comprehensively",
+            "comprehend",
+            "comprehension"
+          ],
+          "explanation": "Giữa mạo từ 'a' và danh từ 'survey' cần tính từ → 'comprehensive' (toàn diện) (A). (C) động từ, (B) trạng từ, (D) danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "B",
+          "content": "The agency's latest print advertisement has received ------- feedback from both clients and focus group participants.",
+          "options": [
+            "tentative",
+            "favorable",
+            "probable",
+            "eventual"
+          ],
+          "explanation": "'favorable feedback' = phản hồi tích cực, collocation tự nhiên (B). (D) cuối cùng, (A) tạm thời, (C) có khả năng xảy ra – không đi với 'feedback' đã nhận được.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "D",
+          "content": "Brightwell Media Group offers ------- pricing for small businesses that advertise on its local radio stations for a full year.",
+          "options": [
+            "competitively",
+            "compete",
+            "competition",
+            "competitive"
+          ],
+          "explanation": "Trước danh từ 'pricing' cần tính từ → 'competitive pricing' (giá cạnh tranh) (D). (B) động từ, (A) trạng từ; (C) danh từ 'competition pricing' không tạo nghĩa đúng.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "To: Kenji Yamada <kyamada@harborlinebakery.com>\nFrom: Lucia Rocha <lrocha@corvaneoutdoor.com>\nDate: March 3\nSubject: Your spring campaign\n\nDear Mr. Yamada,\n\nThank you for choosing Corvane Outdoor Advertising for Harborline Bakery's spring campaign. I am writing to confirm the details we discussed during last week's meeting.\n\nYour three posters ---(131)--- at bus shelters along Delmont Avenue from March 15 to April 30. Our research shows that these shelters are seen by approximately 20,000 commuters each day. ---(132)---\n\nBefore we send the designs to the printer, please review the attached proofs carefully. If you would like any changes, let me know by March 8. ---(133)---, we will not be able to guarantee the March 15 start date.\n\nFinally, we would be happy to ---(134)--- your campaign's results at the end of April. A short report will show how many customers used the promotional code printed on the posters.\n\nBest regards,\nLucia Rocha\nAccount Manager",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "B",
+          "options": [
+            "had been displayed",
+            "will be displayed",
+            "were displayed",
+            "have been displayed"
+          ],
+          "explanation": "E-mail viết ngày 3/3, chiến dịch chạy từ 15/3 → sự việc trong tương lai, bị động (poster được trưng bày) → 'will be displayed' (B). (C), (D), (A) là quá khứ / hoàn thành, mâu thuẫn với mốc thời gian.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "A",
+          "options": [
+            "As a result, your message will reach a large number of potential customers.",
+            "Your posters were removed from all of the bus shelters on Main Street earlier this morning.",
+            "Please let us know if you would like to cancel your bakery order.",
+            "Unfortunately, the printer has closed for the rest of the season."
+          ],
+          "explanation": "Câu trước nói khoảng 20.000 người đi làm nhìn thấy mỗi ngày → câu chèn nêu kết quả 'As a result, your message will reach a large number of potential customers' (A). (D) mâu thuẫn với đoạn sau (vẫn gửi bản in); (B) sai thời gian (chiến dịch chưa bắt đầu); (C) lạc đề.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "D",
+          "options": [
+            "Meanwhile",
+            "For example",
+            "Similarly",
+            "Otherwise"
+          ],
+          "explanation": "Ý: hãy báo thay đổi trước 8/3; 'nếu không' thì không bảo đảm ngày bắt đầu 15/3 → 'Otherwise' (D). (C) tương tự, (B) ví dụ, (A) trong khi đó – không diễn tả điều kiện ngược lại.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "C",
+          "options": [
+            "anticipate",
+            "postpone",
+            "evaluate",
+            "compose"
+          ],
+          "explanation": "Câu sau: bản báo cáo cho biết bao nhiêu khách dùng mã khuyến mãi → công ty sẽ 'đánh giá' kết quả chiến dịch → 'evaluate' (C). (A) dự đoán không hợp với thời điểm cuối chiến dịch; (B) hoãn, (D) soạn – sai nghĩa.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Pelham Street Agency\nwww.pelhamstreetagency.com/starter\n\nSocial Media Starter Package\n\nIs your business new to online advertising? Our Starter Package is designed for shops, cafés, and service providers with fewer than 25 employees. For a flat fee of $450 per month, our team will create twelve original posts, schedule them on two social media platforms of your choice, and respond to customer comments during business hours.\n\nEvery client is paired with a dedicated coordinator who meets with the owner once a month to review results and adjust the content plan. Clients who sign a six-month agreement receive one professional photo shoot at no additional charge.\n\n\"Before working with Pelham Street, we posted only when we had time, and few people noticed,\" says Amara Boateng, owner of Boateng Florals. \"Now our weekend orders have nearly doubled.\"\n\nTo schedule a free consultation, call 555-0137 or complete the form on this page. Please note that the Starter Package does not include paid advertisements; these can be added for an extra fee.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "D",
+          "content": "For whom is the Starter Package most likely intended?",
+          "options": [
+            "Marketing students looking for internships",
+            "Photographers who want to sell their work",
+            "Large companies with offices in several cities",
+            "Small businesses with limited online experience"
+          ],
+          "explanation": "Đoạn 1: 'Is your business new to online advertising? … designed for shops, cafés, and service providers with fewer than 25 employees' → doanh nghiệp nhỏ, ít kinh nghiệm quảng cáo online (D). (C) trái với 'fewer than 25 employees'; (A), (B) không được nhắc.",
+          "tags": [
+            "main-idea"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "B",
+          "content": "What is suggested about Boateng Florals?",
+          "options": [
+            "It received a free photo shoot from the agency recently.",
+            "Its sales have grown since it hired the agency.",
+            "It has signed a six-month agreement.",
+            "It posts on more than two platforms."
+          ],
+          "explanation": "Đoạn 3, bà Boateng: 'Before working with Pelham Street … Now our weekend orders have nearly doubled' → doanh số tăng từ khi dùng dịch vụ (B). (C), (A) chỉ là ưu đãi chung cho khách ký 6 tháng, bài không nói Boateng Florals đã ký; (D) không có căn cứ.",
+          "tags": [
+            "inference"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "A",
+          "content": "What is NOT included in the monthly fee?",
+          "options": [
+            "Paid advertisements",
+            "Twelve original posts",
+            "Responses to customer comments",
+            "Meetings with a coordinator"
+          ],
+          "explanation": "Đoạn cuối: 'the Starter Package does not include paid advertisements; these can be added for an extra fee' → (A). (C), (B) nằm trong đoạn 1 ('create twelve original posts … respond to customer comments'); (D) ở đoạn 2 ('meets with the owner once a month').",
+          "tags": [
+            "detail"
+          ]
+        }
+      ]
+    }
+  ]
+}

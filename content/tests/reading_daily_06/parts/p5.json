@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "B",
+        "content": "The annual Hollis Park food festival was ------- popular with local families last weekend.",
+        "options": [
+          "extreme",
+          "extremely",
+          "extremes",
+          "extremity"
+        ],
+        "explanation": "Trước tính từ \"popular\" cần trạng từ chỉ mức độ → (B) \"extremely\" (cực kỳ). (A) là tính từ, (C), (D) là danh từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "C",
+        "content": "Volunteers are needed to help with the ------- of tables and chairs before the concert.",
+        "options": [
+          "arrange",
+          "arranged",
+          "arrangement",
+          "arranges"
+        ],
+        "explanation": "Sau mạo từ \"the\" và trước \"of\" cần danh từ → (C) \"arrangement\" (việc sắp xếp). (A), (D) là động từ, (B) là quá khứ phân từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "D",
+        "content": "Tickets for the charity dinner can be ------- at the front desk of the Marlow Creek Community Center.",
+        "options": [
+          "spent",
+          "earned",
+          "paid",
+          "purchased"
+        ],
+        "explanation": "Vé thì được \"mua\": \"tickets can be purchased\" → (D). (A) \"spent\" dùng cho tiền/thời gian, (B) \"earned\" là kiếm được, (C) \"paid\" đi với tiền hoặc hoá đơn, không đi với \"tickets\".",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "A",
+        "content": "The library book sale will ------- money to buy new books for the children's section.",
+        "options": [
+          "raise",
+          "rise",
+          "grow",
+          "lift"
+        ],
+        "explanation": "Cụm cố định \"raise money\" = gây quỹ → (A). (B) \"rise\" là nội động từ, không có tân ngữ; (C) \"grow\" và (D) \"lift\" không đi với \"money\" theo nghĩa gây quỹ.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "B",
+        "content": "The Tovey Heights parade will begin at 10:00 A.M. and continue ------- noon.",
+        "options": [
+          "since",
+          "until",
+          "during",
+          "between"
+        ],
+        "explanation": "Diễn tả kéo dài đến một mốc thời gian → (B) \"until\" (cho đến). (A) \"since\" đi với thì hoàn thành; (C) \"during\" cần một khoảng thời gian; (D) \"between\" cần \"... and ...\".",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "A",
+        "content": "------- it rains on Saturday, the craft fair will be moved inside the community center.",
+        "options": [
+          "If",
+          "Although",
+          "So",
+          "Unless"
+        ],
+        "explanation": "Câu điều kiện: nếu trời mưa thì hội chợ chuyển vào trong → (A) \"If\". (B) chỉ tương phản; (C) \"So\" không đứng đầu mệnh đề phụ; (D) \"Unless\" (trừ khi) làm câu trái nghĩa.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "D",
+        "content": "Last year, more than 500 people ------- the Tovey Heights summer picnic.",
+        "options": [
+          "attend",
+          "will attend",
+          "attending",
+          "attended"
+        ],
+        "explanation": "Mốc \"Last year\" chỉ quá khứ → thì quá khứ đơn (D) \"attended\". (A) hiện tại, (B) tương lai, (C) thiếu trợ động từ.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "B",
+        "content": "Ms. Gallagher thanked all of the volunteers for ------- hard work at the spring cleanup event.",
+        "options": [
+          "them",
+          "their",
+          "theirs",
+          "themselves"
+        ],
+        "explanation": "Trước cụm danh từ \"hard work\" cần tính từ sở hữu → (B) \"their\". (A) là đại từ tân ngữ, (C) là đại từ sở hữu không đứng trước danh từ, (D) là đại từ phản thân.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  }
+]

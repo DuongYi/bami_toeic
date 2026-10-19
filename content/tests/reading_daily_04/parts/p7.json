@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "E-mail\n\nTo: All staff\nFrom: Daniel Fernandes, Facilities Manager\nDate: April 8\nSubject: New carpool program\n\nDear colleagues,\n\nStarting May 1, Brightwater Logistics will launch a carpool program for employees who drive to our Hensley Road office. Employees who share a ride with at least one coworker will receive a free parking space in the covered section of the lot, close to the main entrance.\n\nTo join, please complete the sign-up form on the company intranet by April 25. You will be asked to list your home neighborhood and usual working hours so that we can match you with coworkers who live nearby.\n\nPlease also note that the city will be repaving the main entrance road to our building during the first two weeks of May. During this time, please use the side entrance on Morley Street.\n\nIf you have any questions, contact me at extension 214.\n\nDaniel Fernandes",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "B",
+        "content": "What is the main purpose of the e-mail?",
+        "options": [
+          "To announce a new office location",
+          "To introduce a ride-sharing program",
+          "To explain changes to work hours",
+          "To request feedback on parking fees"
+        ],
+        "explanation": "Đoạn 1: \"Brightwater Logistics will launch a carpool program\" – chương trình đi chung xe → (B). (A) không chuyển văn phòng; (C) giờ làm chỉ được hỏi để ghép người; (D) không có phí gửi xe.",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "C",
+        "content": "What must employees do by April 25 to join?",
+        "options": [
+          "Pay for a parking permit",
+          "Meet with Mr. Fernandes",
+          "Fill out an online form",
+          "Choose a new work schedule"
+        ],
+        "explanation": "Đoạn 2: \"please complete the sign-up form on the company intranet by April 25\" → điền mẫu đăng ký trực tuyến (C). (A) chỗ đỗ là miễn phí; (B) chỉ liên hệ nếu có câu hỏi; (D) chỉ cần ghi giờ làm hiện tại.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "D",
+        "content": "What is suggested about the main entrance road?",
+        "options": [
+          "It is located on Morley Street.",
+          "It is used mainly by delivery trucks.",
+          "It was recently made wider.",
+          "It will be unavailable for part of May."
+        ],
+        "explanation": "Đoạn 3: thành phố sẽ trải nhựa lại đường vào chính \"during the first two weeks of May\" và nhân viên được yêu cầu dùng lối phụ → suy ra con đường không đi được trong một phần tháng 5 (D). (A) Morley Street là lối phụ; (B), (C) không được nhắc.",
+        "tags": [
+          "inference"
+        ]
+      }
+    ]
+  }
+]

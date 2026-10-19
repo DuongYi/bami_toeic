@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "NOTICE TO RIDERS\nMetro Valley Transit Authority\n\nBeginning Monday, September 8, Route 14 buses will no longer stop at Corliss Avenue. The stop is being permanently removed ---(131)--- a protected bicycle lane that will run along this section of Granger Street.\n\nRiders who currently board at Corliss Avenue may use the stops at Penn Street or Dalton Square, each about a four-minute walk away. ---(132)---\n\nTo help riders adjust, Route 14 buses will run every eight minutes instead of every twelve during weekday rush hours. This schedule ---(133)--- through December 31, after which the Transit Authority will review ridership data on the route. Feedback from riders will also ---(134)--- that review. Comments can be submitted at www.metrovalleytransit.com/feedback or by calling 555-0167.",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "A",
+        "options": [
+          "to make way for",
+          "in exchange for",
+          "on behalf of",
+          "at the expense of"
+        ],
+        "explanation": "Trạm bị dỡ bỏ để dành chỗ cho làn xe đạp sắp xây ('will run') → 'to make way for' (nhường chỗ cho) (A). (B) 'đổi lấy', (C) 'thay mặt cho', (D) 'gây thiệt hại cho' (ngược chiều nghĩa) đều không hợp.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "A",
+        "options": [
+          "Both are equipped with covered shelters and real-time arrival displays.",
+          "The bicycle lane was completed ahead of schedule last spring.",
+          "Buses will therefore stop at Corliss Avenue more often.",
+          "Each of them will also be closed for repairs during this same period."
+        ],
+        "explanation": "Câu trước giới thiệu hai trạm thay thế; (A) dùng 'Both' chỉ hai trạm đó và mô tả tiện ích → hợp mạch. (B) mâu thuẫn vì làn xe đạp 'will run' (chưa xây); (C) trái với việc ngừng dừng ở Corliss Avenue; (D) vô lý vì hai trạm đang được đề xuất thay thế.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "A",
+        "options": [
+          "will continue",
+          "has continued",
+          "continued",
+          "had continued"
+        ],
+        "explanation": "Lịch mới chỉ bắt đầu từ 8/9 và kéo dài đến 31/12, sau đó 'will review' → hành động ở tương lai 'will continue' (A). (B), (C), (D) là các thì hoàn thành / quá khứ, mâu thuẫn với việc lịch chưa bắt đầu.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "A",
+        "options": [
+          "inform",
+          "notify",
+          "advise",
+          "instruct"
+        ],
+        "explanation": "'inform a review / decision' = cung cấp cơ sở, góp phần định hướng việc xem xét → (A). (B) 'notify', (C) 'advise', (D) 'instruct' đều cần tân ngữ chỉ người (notify / advise / instruct someone), không đi với 'that review'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  }
+]

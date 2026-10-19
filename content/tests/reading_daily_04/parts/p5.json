@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "B",
+        "content": "Passengers are asked to board the train ------- so that it can leave the station on time.",
+        "options": [
+          "quick",
+          "quickly",
+          "quickness",
+          "quicken"
+        ],
+        "explanation": "Sau cụm động từ \"board the train\" cần trạng từ bổ nghĩa cho hành động lên tàu → (B) \"quickly\" (nhanh chóng). (A) là tính từ, (C) là danh từ, (D) là động từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "C",
+        "content": "The new express bus route has made commuting between Pellbrook and Danford much more -------.",
+        "options": [
+          "convenience",
+          "conveniently",
+          "convenient",
+          "convene"
+        ],
+        "explanation": "Cấu trúc \"make + tân ngữ + tính từ\"; sau \"much more\" cần tính từ → (C) \"convenient\" (thuận tiện). (A) là danh từ, (B) là trạng từ, (D) là động từ (triệu tập).",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "D",
+        "content": "Ms. Ishikawa submitted an ------- for a monthly parking permit at the Harlow Street garage.",
+        "options": [
+          "apply",
+          "applied",
+          "applicable",
+          "application"
+        ],
+        "explanation": "Sau mạo từ \"an\" và trước giới từ \"for\" cần danh từ làm tân ngữ cho \"submitted\" → (D) \"application\" (đơn đăng ký). (A) là động từ, (B) là quá khứ phân từ, (C) là tính từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "A",
+        "content": "Because of track repairs, Corvane Rail will ------- a free shuttle bus between Elm Station and Bayside Station this weekend.",
+        "options": [
+          "provide",
+          "arrive",
+          "depart",
+          "attend"
+        ],
+        "explanation": "Cần động từ mang tân ngữ \"a free shuttle bus\": \"provide a shuttle bus\" = cung cấp xe buýt đưa đón → (A). (B) \"arrive\" và (C) \"depart\" là nội động từ, không đi với tân ngữ trực tiếp; (D) \"attend\" (tham dự) không hợp nghĩa.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "B",
+        "content": "Commuters can check the arrival ------- of each bus on the Larkfield Transit mobile app.",
+        "options": [
+          "lanes",
+          "times",
+          "tickets",
+          "drivers"
+        ],
+        "explanation": "Cụm \"arrival times\" = giờ đến của xe buýt, thông tin thường xem trên ứng dụng → (B). (A) làn đường, (C) vé, (D) tài xế không đi với \"arrival\" theo nghĩa này.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "C",
+        "content": "The downtown ferry terminal is located ------- the Pellbrook Public Library.",
+        "options": [
+          "during",
+          "until",
+          "next to",
+          "among"
+        ],
+        "explanation": "Chỉ vị trí bên cạnh một toà nhà → giới từ nơi chốn (C) \"next to\" (bên cạnh). (A) \"during\" và (B) \"until\" chỉ thời gian; (D) \"among\" (giữa nhiều vật) cần danh từ số nhiều.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "A",
+        "content": "Mr. Novak ------- the 7:15 train to work every morning since he moved to Westgate last year.",
+        "options": [
+          "has taken",
+          "will take",
+          "is taking",
+          "took"
+        ],
+        "explanation": "Mốc \"since he moved ... last year\" diễn tả thói quen bắt đầu trong quá khứ và kéo dài đến hiện tại → thì hiện tại hoàn thành (A) \"has taken\". (B) tương lai, (C) tiếp diễn, (D) quá khứ đơn không đi với \"since\".",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "D",
+        "content": "Drivers who park in the employee lot must display ------- permits on the dashboard.",
+        "options": [
+          "they",
+          "them",
+          "themselves",
+          "their"
+        ],
+        "explanation": "Trước cụm danh từ \"permits\" cần tính từ sở hữu → (D) \"their\" (của họ). (A) là đại từ chủ ngữ, (B) là đại từ tân ngữ, (C) là đại từ phản thân.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  }
+]

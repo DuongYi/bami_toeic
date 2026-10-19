@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "NOTICE TO ALL ATTENDEES OF THE NORTHGATE REGIONAL SALES SUMMIT\n\nBecause of a scheduling conflict, Thursday afternoon's workshops will take place in the Harborview Ballroom on the second floor ---(131)--- in Lakeside Hall, as stated in the printed program. ---(132)--- Signs will also be posted near the elevators to direct participants to the new location.\n\nPlease note that seating in the ballroom is limited to 120 people. Attendees are therefore encouraged to arrive ---(133)--- to be sure of getting a seat. Those unable to find space may watch a live stream of the sessions in the business center on the ground floor.\n\nCoffee and light refreshments will be served in the ballroom foyer during the afternoon break. ---(134)---, attendees who have registered for the evening reception should keep their wristbands, as these will be required for entry. Questions may be directed to the event desk in the main lobby or by calling 555-0142.",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "A",
+        "options": [
+          "rather than",
+          "as well as",
+          "in addition to",
+          "along with"
+        ],
+        "explanation": "Thông báo nói có xung đột lịch nên hội thảo chuyển sang Harborview Ballroom, KHÔNG còn ở Lakeside Hall như chương trình in → 'rather than' (thay vì) (A). (B), (C), (D) đều mang nghĩa 'cũng như/thêm vào', ngụ ý tổ chức ở cả hai nơi – trái với việc đổi địa điểm.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "A",
+        "options": [
+          "An updated version of the program is available at the registration desk.",
+          "Lakeside Hall was recently renovated so that it can accommodate larger groups.",
+          "Thank you for completing your registration for the summit online.",
+          "Workshop leaders will be chosen by a vote of the attendees."
+        ],
+        "explanation": "Câu trước nhắc chương trình in đã sai; câu sau 'Signs will ALSO be posted' → câu chèn phải là một biện pháp thông báo khác: chương trình cập nhật có ở bàn đăng ký (A). (B) không giải thích vì sao phải chuyển phòng và không nối được với 'also'; (C) lời cảm ơn lạc mạch; (D) không liên quan đến việc đổi địa điểm.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "A",
+        "options": [
+          "early",
+          "lately",
+          "recently",
+          "nearly"
+        ],
+        "explanation": "Ngữ cảnh: chỗ ngồi giới hạn 120 người → nên 'arrive early' (đến sớm) để chắc có chỗ (A). (B) 'lately' và (C) 'recently' = gần đây, dùng cho quá khứ; (D) 'nearly' = gần như, không bổ nghĩa cho 'arrive' theo cách này.",
+        "tags": [
+          "vocabulary"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "A",
+        "options": [
+          "In addition",
+          "Nevertheless",
+          "As a result",
+          "For example"
+        ],
+        "explanation": "Câu trước nêu thông tin về giờ giải lao; câu này bổ sung một lưu ý khác (giữ vòng tay cho tiệc tối) → 'In addition' (ngoài ra) (A). (B) 'Nevertheless' cần ý đối lập; (C) 'As a result' cần quan hệ nhân quả – cà phê không dẫn tới việc giữ vòng tay; (D) 'For example' cần ví dụ minh hoạ cho câu trước.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  }
+]

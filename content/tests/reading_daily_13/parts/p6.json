@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "To: All Staff, Corvane Logistics\nFrom: Petra Andersson, Office Technology Coordinator\nDate: March 3\nSubject: New file-storage system\n\nDear colleagues,\n\nStarting on Monday, March 10, all department folders ---(131)--- to a new online storage system. Over the weekend, the help desk team will copy every file from the old shared drive, so you do not need to move anything yourself. ---(132)---\n\nWhen you log in on Monday, you will notice that the folders look slightly different. ---(133)---, the names and contents of your files will remain exactly the same. If you have trouble finding a document, Mr. Chukwu from the help desk will be available in the second-floor lounge all day to offer ---(134)--- assistance.\n\nThank you for your patience during this change.\n\nPetra Andersson",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "A",
+        "options": [
+          "will be moved",
+          "were moved",
+          "have been moving",
+          "moving"
+        ],
+        "explanation": "Mốc 'Starting on Monday, March 10' nằm sau ngày gửi e-mail (March 3) → thì tương lai; chủ ngữ 'folders' bị di chuyển → bị động 'will be moved' (A). (B) quá khứ, (C) chủ động hiện tại hoàn thành tiếp diễn sai mốc thời gian và sai nghĩa, (D) thiếu động từ chính.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "A",
+        "options": [
+          "However, please close all open files before you leave on Friday.",
+          "The new printers were delivered to the second floor last week.",
+          "Thank you for completing the online training session yesterday.",
+          "As a result, the old drive has already been removed from the building."
+        ],
+        "explanation": "Câu trước nói nhân viên không cần tự chuyển file ('you do not need to move anything yourself'); câu chèn dùng 'However' để nêu việc nhân viên vẫn phải làm: đóng mọi file đang mở trước khi về hôm thứ Sáu (A). (B) lạc đề máy in; (C) không hề nhắc đến buổi đào tạo; (D) mâu thuẫn vì việc sao chép còn chưa diễn ra (cuối tuần này).",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "A",
+        "options": [
+          "However",
+          "Therefore",
+          "Similarly",
+          "Otherwise"
+        ],
+        "explanation": "Câu trước: thư mục trông hơi khác; câu sau: tên và nội dung file giữ nguyên → quan hệ tương phản → 'However' (A). (B) chỉ kết quả, (C) chỉ sự tương đồng, (D) 'nếu không thì' – không hợp logic.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "A",
+        "options": [
+          "personal",
+          "personally",
+          "personalize",
+          "personality"
+        ],
+        "explanation": "Trước danh từ 'assistance' cần tính từ → 'personal assistance' (hỗ trợ trực tiếp từng người) (A). (B) trạng từ, (C) động từ, (D) danh từ 'tính cách' – sai từ loại/nghĩa.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

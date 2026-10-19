@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 26",
+  "source": "Bami TOEIC",
+  "description": "Ôn Reading chủ đề chương trình phát triển bền vững của doanh nghiệp, band 850–990.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "B",
+          "content": "The company's shuttle-and-bicycle commuting program has proved ------- popular among employees who live along the Eastline rail corridor.",
+          "options": [
+            "surprise",
+            "surprisingly",
+            "surprised",
+            "surprising"
+          ],
+          "explanation": "Chỗ trống đứng trước tính từ 'popular' và bổ nghĩa cho nó → cần trạng từ: 'surprisingly popular' (phổ biến đến bất ngờ) → (B). (C), (D) là tính từ/phân từ, (A) là danh từ/động từ – không bổ nghĩa cho tính từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "C",
+          "content": "Participation in the office composting initiative is entirely -------, although department heads are encouraged to set an example.",
+          "options": [
+            "volunteer",
+            "voluntarily",
+            "voluntary",
+            "volunteered"
+          ],
+          "explanation": "Sau 'is entirely' cần tính từ làm vị ngữ: 'voluntary' (tự nguyện) → (C). (A) 'volunteer' là danh từ/động từ chỉ người tình nguyện, (B) là trạng từ, (D) là động từ quá khứ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "C",
+          "content": "Readers praised this year's sustainability report for the ------- with which it described both the program's successes and its shortcomings.",
+          "options": [
+            "frankly",
+            "franker",
+            "frankness",
+            "frank"
+          ],
+          "explanation": "Sau mạo từ 'the' và trước mệnh đề quan hệ 'with which…' cần danh từ: 'the frankness with which…' (sự thẳng thắn) → (C). (D), (B) là tính từ, (A) là trạng từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "A",
+          "content": "Suppliers that cannot ------- with the new recycled-packaging standards by June will be given an additional three months to adjust.",
+          "options": [
+            "comply",
+            "satisfy",
+            "adhere",
+            "follow"
+          ],
+          "explanation": "Collocation 'comply with + quy định/tiêu chuẩn' (tuân thủ) → (A). (C) 'adhere' đi với 'to'; (D) 'follow' và (B) 'satisfy' là ngoại động từ, nhận tân ngữ trực tiếp, không đi với 'with'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "B",
+          "content": "Over the past year, the Thornfield plant has ------- single-use plastic wrap in favor of returnable shipping crates.",
+          "options": [
+            "laid off",
+            "phased out",
+            "called off",
+            "turned down"
+          ],
+          "explanation": "'Phase out' = loại bỏ dần (một vật liệu, quy trình) – hợp với 'single-use plastic wrap … in favor of returnable crates' → (B). (D) 'turn down' (từ chối lời mời/đề nghị), (C) 'call off' (huỷ sự kiện), (A) 'lay off' (cho nhân viên nghỉ việc) sai đối tượng.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "A",
+          "content": "------- the lower upfront cost of conventional lighting, the facilities team recommended LED fixtures because of their longer lifespan.",
+          "options": [
+            "Notwithstanding",
+            "On account of",
+            "In addition to",
+            "Rather than"
+          ],
+          "explanation": "Hai vế tương phản: đèn thường rẻ hơn lúc đầu nhưng nhóm vẫn chọn LED → giới từ nhượng bộ 'Notwithstanding' (bất chấp) (A). (B) 'On account of' (vì) tạo nghĩa ngược; (D) 'Rather than' và (C) 'In addition to' không diễn đạt sự đối lập với lý do chọn LED.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "D",
+          "content": "If the pilot food-waste program at the Eastline office ------- successful, it will be extended to all regional branches next spring.",
+          "options": [
+            "had proven",
+            "proved",
+            "will prove",
+            "proves"
+          ],
+          "explanation": "Câu điều kiện loại 1: mệnh đề chính 'it will be extended' → mệnh đề 'If' dùng hiện tại đơn: 'proves' (D). (C) không dùng 'will' trong mệnh đề If chỉ điều kiện; (B), (A) thuộc câu điều kiện loại 2, 3.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "D",
+          "content": "Rather than hiring an outside consultant, Ms. Nowicki and Mr. Uche designed the bicycle-sharing scheme -------.",
+          "options": [
+            "their",
+            "them",
+            "theirs",
+            "themselves"
+          ],
+          "explanation": "Đại từ phản thân dùng nhấn mạnh 'tự họ làm' ở cuối câu, đối lập với việc thuê tư vấn bên ngoài → 'themselves' (D). (B) 'them' là tân ngữ nhưng động từ 'designed' đã có tân ngữ; (A) cần danh từ theo sau; (C) 'theirs' làm câu thành 'thiết kế của họ' – sai nghĩa.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "Verdalis Launches Green Office Challenge\n\nStarting next month, every Verdalis Packaging office will take part in the Green Office Challenge, a friendly competition to cut paper and electricity use. Each office's monthly consumption ---(131)--- against its own average for the same month last year, so that locations of very different sizes can compete fairly.\n\nThe idea came from staff at the Eastline office, who ran a similar contest on their own initiative last autumn. ---(132)--- Encouraged by this result, the sustainability committee decided to expand the program company-wide.\n\nPrizes will be modest: each quarter, the winning office will choose a local environmental group to receive a donation in its name. ---(133)---, the committee hopes the challenge will encourage habits that last well beyond the contest itself.\n\nQuestions about the challenge may be directed to Grace Ofori, who ---(134)--- the committee's day-to-day activities.",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "A",
+          "options": [
+            "will be measured",
+            "is measuring",
+            "has measured",
+            "measured"
+          ],
+          "explanation": "Cuộc thi bắt đầu 'next month' → hành động ở tương lai; mức tiêu thụ được đo (bị động) → 'will be measured' (A). (C), (B) chủ động – 'consumption' không tự đo; (D) quá khứ sai mốc thời gian.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "C",
+          "options": [
+            "Participants will be notified of the results by e-mail next week.",
+            "However, few employees were aware that the contest had taken place.",
+            "Within three months, its printing costs had fallen by almost 40 percent.",
+            "The Eastline office is located on the third floor of the Bayview Tower."
+          ],
+          "explanation": "Câu sau mở đầu 'Encouraged by this result' → câu chèn phải nêu một kết quả tích cực của cuộc thi ở văn phòng Eastline: chi phí in giảm gần 40% (C). (B) mang nghĩa tiêu cực, mâu thuẫn với 'encouraged'; (A) nói về tương lai, không phải kết quả đã có; (D) chỉ là địa chỉ, không phải 'result'.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "B",
+          "options": [
+            "In contrast",
+            "More importantly",
+            "As a result",
+            "For instance"
+          ],
+          "explanation": "Câu trước nói phần thưởng chỉ khiêm tốn; câu sau nêu mục tiêu lớn hơn – hình thành thói quen lâu dài → 'More importantly' (quan trọng hơn) (B). (C) 'As a result' sai quan hệ nhân quả; (D) 'For instance' không phải ví dụ; (A) 'In contrast' không có sự đối lập trực tiếp.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "D",
+          "options": [
+            "overlooks",
+            "overtakes",
+            "oversteps",
+            "oversees"
+          ],
+          "explanation": "Người được liên hệ khi có thắc mắc là người 'giám sát, phụ trách' hoạt động hằng ngày của uỷ ban → 'oversees' (D). (A) 'overlooks' (bỏ sót / nhìn ra) là bẫy cận hình; (B) 'overtakes' (vượt qua), (C) 'oversteps' (vượt quá giới hạn) sai nghĩa.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "E-mail\nTo: Regional purchasing managers\nFrom: Arjun Rahman\nDate: 14 May\nSubject: Returnable pallet program\n\nDear colleagues,\n\nAs you know, our Thornfield plant switched from wooden shipping pallets to returnable plastic ones in February. I am pleased to report that the trial has gone better than expected. Fewer goods have been damaged in transit, and the plant's waste disposal bill for April was the lowest it has been in five years.\n\nBefore we extend the program to our other plants, however, I would like your input on one issue. The plastic pallets make financial sense only if customers send them back. At Thornfield, about 85 percent were returned within a month, largely because the plant's own drivers collect the empty pallets when they make their next delivery. Plants that rely mainly on outside carriers may find this harder to arrange.\n\nPlease send me a short summary of how deliveries are handled at your plant, including roughly what share is made by our own drivers, by 28 May. I will present the findings to the operations committee in early June.\n\nRegards,\nArjun Rahman\nSustainability Program Lead",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "B",
+          "content": "What is the main purpose of the e-mail?",
+          "options": [
+            "To announce that a trial will be discontinued",
+            "To gather details before a program is extended",
+            "To explain a recent increase in waste disposal costs",
+            "To ask managers to hire additional drivers"
+          ],
+          "explanation": "Đoạn 2–3: 'Before we extend the program to our other plants… I would like your input' và yêu cầu gửi tóm tắt cách giao hàng → thu thập thông tin trước khi mở rộng chương trình (B). (A) trái bài – thử nghiệm thành công; (C) chi phí xử lý rác giảm chứ không tăng; (D) không được yêu cầu.",
+          "tags": [
+            "main-idea"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "A",
+          "content": "What is NOT mentioned as an outcome of the trial at Thornfield?",
+          "options": [
+            "Deliveries reached customers more quickly.",
+            "Most pallets came back within a month.",
+            "Less merchandise was damaged during shipping.",
+            "The plant spent less on waste disposal."
+          ],
+          "explanation": "Đoạn 1 nêu 'Fewer goods have been damaged in transit' (C) và hoá đơn xử lý rác thấp nhất 5 năm (D); đoạn 2 nêu 85% pallet được trả lại trong một tháng (B). Không có chỗ nào nói giao hàng nhanh hơn → (A).",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "D",
+          "content": "What can be inferred about plants that depend mostly on outside carriers?",
+          "options": [
+            "They will join the program before the end of May.",
+            "They have reported more damaged goods than Thornfield.",
+            "They already use plastic pallets for some customers.",
+            "They might recover a smaller share of their pallets."
+          ],
+          "explanation": "Đoạn 2: tỉ lệ thu hồi cao ở Thornfield là nhờ tài xế của nhà máy tự gom pallet rỗng, và nhà máy dùng hãng vận chuyển ngoài 'may find this harder to arrange' → suy ra họ có thể thu hồi được ít pallet hơn (D). (A) sai: 28/5 là hạn gửi báo cáo, chưa quyết định mở rộng; (B), (C) không có căn cứ.",
+          "tags": [
+            "inference"
+          ]
+        }
+      ]
+    }
+  ]
+}

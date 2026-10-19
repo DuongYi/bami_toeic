@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "B",
+        "content": "The company's shuttle-and-bicycle commuting program has proved ------- popular among employees who live along the Eastline rail corridor.",
+        "options": [
+          "surprise",
+          "surprisingly",
+          "surprised",
+          "surprising"
+        ],
+        "explanation": "Chỗ trống đứng trước tính từ 'popular' và bổ nghĩa cho nó → cần trạng từ: 'surprisingly popular' (phổ biến đến bất ngờ) → (B). (C), (D) là tính từ/phân từ, (A) là danh từ/động từ – không bổ nghĩa cho tính từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "C",
+        "content": "Participation in the office composting initiative is entirely -------, although department heads are encouraged to set an example.",
+        "options": [
+          "volunteer",
+          "voluntarily",
+          "voluntary",
+          "volunteered"
+        ],
+        "explanation": "Sau 'is entirely' cần tính từ làm vị ngữ: 'voluntary' (tự nguyện) → (C). (A) 'volunteer' là danh từ/động từ chỉ người tình nguyện, (B) là trạng từ, (D) là động từ quá khứ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "D",
+        "content": "Readers praised this year's sustainability report for the ------- with which it described both the program's successes and its shortcomings.",
+        "options": [
+          "frank",
+          "frankly",
+          "franker",
+          "frankness"
+        ],
+        "explanation": "Sau mạo từ 'the' và trước mệnh đề quan hệ 'with which…' cần danh từ: 'the frankness with which…' (sự thẳng thắn) → (D). (A), (C) là tính từ, (B) là trạng từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "C",
+        "content": "Suppliers that cannot ------- with the new recycled-packaging standards by June will be given an additional three months to adjust.",
+        "options": [
+          "adhere",
+          "follow",
+          "comply",
+          "satisfy"
+        ],
+        "explanation": "Collocation 'comply with + quy định/tiêu chuẩn' (tuân thủ) → (C). (A) 'adhere' đi với 'to'; (B) 'follow' và (D) 'satisfy' là ngoại động từ, nhận tân ngữ trực tiếp, không đi với 'with'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "A",
+        "content": "Over the past year, the Thornfield plant has ------- single-use plastic wrap in favor of returnable shipping crates.",
+        "options": [
+          "phased out",
+          "turned down",
+          "called off",
+          "laid off"
+        ],
+        "explanation": "'Phase out' = loại bỏ dần (một vật liệu, quy trình) – hợp với 'single-use plastic wrap … in favor of returnable crates' → (A). (B) 'turn down' (từ chối lời mời/đề nghị), (C) 'call off' (huỷ sự kiện), (D) 'lay off' (cho nhân viên nghỉ việc) sai đối tượng.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "B",
+        "content": "------- the lower upfront cost of conventional lighting, the facilities team recommended LED fixtures because of their longer lifespan.",
+        "options": [
+          "On account of",
+          "Notwithstanding",
+          "Rather than",
+          "In addition to"
+        ],
+        "explanation": "Hai vế tương phản: đèn thường rẻ hơn lúc đầu nhưng nhóm vẫn chọn LED → giới từ nhượng bộ 'Notwithstanding' (bất chấp) (B). (A) 'On account of' (vì) tạo nghĩa ngược; (C) 'Rather than' và (D) 'In addition to' không diễn đạt sự đối lập với lý do chọn LED.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "B",
+        "content": "If the pilot food-waste program at the Eastline office ------- successful, it will be extended to all regional branches next spring.",
+        "options": [
+          "will prove",
+          "proves",
+          "proved",
+          "had proven"
+        ],
+        "explanation": "Câu điều kiện loại 1: mệnh đề chính 'it will be extended' → mệnh đề 'If' dùng hiện tại đơn: 'proves' (B). (A) không dùng 'will' trong mệnh đề If chỉ điều kiện; (C), (D) thuộc câu điều kiện loại 2, 3.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "C",
+        "content": "Rather than hiring an outside consultant, Ms. Nowicki and Mr. Uche designed the bicycle-sharing scheme -------.",
+        "options": [
+          "them",
+          "their",
+          "themselves",
+          "theirs"
+        ],
+        "explanation": "Đại từ phản thân dùng nhấn mạnh 'tự họ làm' ở cuối câu, đối lập với việc thuê tư vấn bên ngoài → 'themselves' (C). (A) 'them' là tân ngữ nhưng động từ 'designed' đã có tân ngữ; (B) cần danh từ theo sau; (D) 'theirs' làm câu thành 'thiết kế của họ' – sai nghĩa.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "Paulo Ribeiro [9:02 A.M.]\nThe driver from Clearbrook Distribution just called. Our summer travel kits won't arrive until Thursday instead of today.\n\nAiko Kondo [9:04 A.M.]\nThat's a problem. The front-window display is supposed to go up tomorrow morning, and the flyers we mailed out last week feature the kits on the cover.\n\nDaniel Romero [9:05 A.M.]\nIs there anything left from last season's order in the back room?\n\nAiko Kondo [9:07 A.M.]\nAbout two cases. Not enough to fill the window, but enough to stock the stand by the registers.\n\nPaulo Ribeiro [9:09 A.M.]\nWhat if we put the insulated water bottles in the window for now? They came in on Monday, and they're part of the same summer promotion.\n\nDaniel Romero [9:10 A.M.]\nI can live with that. Aiko, could you ask the print shop whether they can add a line to the in-store signs saying the full kit selection arrives Thursday?\n\nAiko Kondo [9:12 A.M.]\nWill do. I'll also give the Delmont Road store a call, since they're using the same flyer.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "What is suggested about the summer travel kits?",
+        "options": [
+          "A small number are already in the store.",
+          "They are shipped by a new supplier this year.",
+          "They will be placed in the window tomorrow.",
+          "They are excluded from the current promotion."
+        ],
+        "explanation": "Lúc 9:05 ông Romero hỏi còn hàng mùa trước trong kho không, bà Kondo đáp 'About two cases' – đủ cho kệ cạnh quầy thu ngân → cửa hàng đã có sẵn một ít bộ travel kit (A). (C) sai: cửa sổ sẽ trưng bình nước thay thế; (D) sai: bình nước 'part of the same summer promotion' nghĩa là kit cũng thuộc chương trình; (B) không được nhắc.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "C",
+        "content": "At 9:10 A.M., what does Mr. Romero most likely mean when he writes, \"I can live with that\"?",
+        "options": [
+          "He is willing to work an additional shift on Thursday.",
+          "He thinks the flyers should be reprinted before Thursday.",
+          "He accepts a temporary change to the window display.",
+          "He prefers to delay the display until the kits arrive."
+        ],
+        "explanation": "Ngay trước đó ông Ribeiro đề xuất 'put the insulated water bottles in the window for now'; ông Romero đáp 'I can live with that' rồi giao việc sửa biển hiệu → ông chấp nhận thay đổi tạm thời cho phần trưng bày cửa sổ (C). (D) trái ý; (B) ông chỉ nhờ thêm dòng trên biển trong cửa hàng, không in lại tờ rơi; (A) không liên quan.",
+        "tags": [
+          "implied-meaning"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "B",
+        "content": "What is indicated about the Delmont Road store?",
+        "options": [
+          "It received the travel kits earlier in the week.",
+          "It is advertising the same products as Mr. Ribeiro's store.",
+          "It has extra cases of travel kits it could send over.",
+          "It plans to put up its window display on Thursday."
+        ],
+        "explanation": "Bà Kondo viết sẽ gọi cho cửa hàng Delmont Road 'since they're using the same flyer' – tờ rơi có kit ở trang bìa → cửa hàng đó quảng cáo cùng sản phẩm (B). (A) 'came in on Monday' là bình nước của cửa hàng này; (C), (D) không có trong bài.",
+        "tags": [
+          "inference"
+        ]
+      }
+    ]
+  }
+]

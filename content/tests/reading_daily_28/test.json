@@ -1,0 +1,284 @@
+{
+  "title": "Reading mỗi ngày · Ngày 28",
+  "source": "Bami TOEIC",
+  "description": "Đọc hiểu chủ đề đại lý ô tô và bảo dưỡng xe, độ khó band 850–990.",
+  "is_free": false,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "A",
+          "content": "The service department's new diagnostic software has made it ------- easier for technicians to identify engine faults.",
+          "options": [
+            "considerably",
+            "considerable",
+            "consider",
+            "consideration"
+          ],
+          "explanation": "Trước tính từ so sánh hơn 'easier' cần trạng từ chỉ mức độ → 'considerably' (đáng kể) (A). (B) là tính từ, (C) là động từ, (D) là danh từ – không bổ nghĩa cho tính từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "D",
+          "content": "Thanks to Ms. Lindgren's careful ------- of the warranty terms, the customer avoided an unnecessary repair charge.",
+          "options": [
+            "interpretive",
+            "interpreter",
+            "interpret",
+            "interpretation"
+          ],
+          "explanation": "Sau sở hữu cách + tính từ 'careful' và trước 'of' cần danh từ chỉ hành động → 'interpretation' (sự diễn giải) (D). (B) cũng là danh từ nhưng chỉ người (thông dịch viên), sai nghĩa; (A) là tính từ; (C) là động từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "B",
+          "content": "Because the replacement part is on back order, the dealership has lent Mr. Achebe a vehicle for the ------- of the repair.",
+          "options": [
+            "extent",
+            "duration",
+            "interval",
+            "span"
+          ],
+          "explanation": "Cụm cố định 'for the duration of' = trong suốt thời gian … → (B). (A) 'extent' chỉ mức độ ('to the extent that'); (C) 'interval' là khoảng cách giữa hai lần; (D) 'span' đi với 'time span / life span', không dùng 'for the span of the repair'.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "B",
+          "content": "------- its compact exterior, the Velora sedan offers more cargo space than many larger models.",
+          "options": [
+            "Instead of",
+            "Despite",
+            "Even so",
+            "Although"
+          ],
+          "explanation": "Sau chỗ trống là cụm danh từ 'its compact exterior', hai vế tương phản (nhỏ gọn ↔ nhiều chỗ chứa đồ) → giới từ 'Despite' (B). (D) cần mệnh đề; (C) là trạng từ nối câu; (A) 'thay vì' sai nghĩa.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "A",
+          "content": "By the time its new showroom opens next spring, Gutierrez Auto Group ------- its online booking system to all twelve service locations.",
+          "options": [
+            "will have expanded",
+            "expanded",
+            "will be expanding",
+            "has expanded"
+          ],
+          "explanation": "'By the time + hiện tại đơn' với mốc tương lai 'next spring' → hành động hoàn tất trước mốc đó dùng tương lai hoàn thành 'will have expanded' (A). (D), (B) là hiện tại hoàn thành / quá khứ, không hợp mốc tương lai; (C) tương lai tiếp diễn không diễn tả sự hoàn tất.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "C",
+          "content": "Brightwater Motors will ------- the inspection fee for any customer who purchases a set of four tires this month.",
+          "options": [
+            "excuse",
+            "exempt",
+            "waive",
+            "omit"
+          ],
+          "explanation": "Collocation 'waive a fee' = miễn phí → (C). (B) 'exempt' dùng với người ('exempt someone from a fee'); (A) 'excuse' dùng cho người / lỗi; (D) 'omit' là bỏ sót, lược bỏ (thông tin), không dùng với phí.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "D",
+          "content": "Of the dealership's three service advisors, Mr. Achebe is the one ------- customers most often request by name.",
+          "options": [
+            "whose",
+            "what",
+            "which",
+            "whom"
+          ],
+          "explanation": "Mệnh đề quan hệ bổ nghĩa cho 'the one' (chỉ người) và đóng vai tân ngữ của 'request' → 'whom' (D). (A) cần danh từ theo sau; (C) dùng cho vật; (B) không đứng sau danh từ làm đại từ quan hệ.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "C",
+          "content": "Ms. Shimizu was praised for her ------- approach to resolving complaints about delayed repairs.",
+          "options": [
+            "methods",
+            "method",
+            "methodical",
+            "methodically"
+          ],
+          "explanation": "Giữa tính từ sở hữu 'her' và danh từ 'approach' cần tính từ → 'methodical' (bài bản, có phương pháp) (C). (D) là trạng từ; (B), (A) là danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "To: Ingrid Lindgren <ilindgren@starmail.com>\nFrom: Service Department <service@brightwatermotors.com>\nDate: May 14\nSubject: Your upcoming maintenance\n\nDear Ms. Lindgren,\n\nOur records show that your Tavio hatchback ---(131)--- 30,000 miles sometime next month, based on your typical driving patterns. At this mileage, the manufacturer recommends a full inspection of the brake system and replacement of the engine air filter. ---(132)---\n\nTo make scheduling easier, we now accept bookings through the Brightwater Motors mobile app. Appointments can still be made by phone at 555-0142. ---(133)---, only appointments made through the app qualify for the 15 percent labor discount we are offering until June 30.\n\nIf you would like a courtesy vehicle during your appointment, please request one when booking. Courtesy vehicles are assigned on a first-come, first-served ---(134)---.\n\nSincerely,\n\nKenji Shimizu\nService Manager, Brightwater Motors",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "D",
+          "options": [
+            "was reaching",
+            "reached",
+            "has reached",
+            "will reach"
+          ],
+          "explanation": "Câu có mốc 'sometime next month' và là dự đoán ('based on your typical driving patterns') → tương lai 'will reach' (D). (B), (A) là quá khứ; (C) hiện tại hoàn thành mâu thuẫn với 'next month'.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "A",
+          "options": [
+            "Following this schedule also helps keep your powertrain warranty valid.",
+            "These items were replaced during your most recent visit.",
+            "As a result, the inspection fee has been refunded to your account.",
+            "The brake system was redesigned for the latest models."
+          ],
+          "explanation": "Câu trước nêu các hạng mục nhà sản xuất khuyến nghị ở mốc 30,000 dặm; (A) nêu thêm lợi ích của việc làm đúng lịch ('this schedule' chỉ lịch bảo dưỡng vừa nêu) → hợp mạch. (B) mâu thuẫn: nếu vừa thay thì không cần khuyến nghị; (C) e-mail không hề nhắc phí kiểm tra nào; (D) nói về mẫu xe mới, lạc đề.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "C",
+          "options": [
+            "Similarly",
+            "Therefore",
+            "However",
+            "Afterward"
+          ],
+          "explanation": "Câu trước: vẫn đặt lịch qua điện thoại được; câu sau: chỉ lịch đặt qua app mới được giảm 15% → quan hệ tương phản → 'However' (C). (B) chỉ kết quả, (A) chỉ sự tương đồng, (D) chỉ trình tự thời gian – đều không hợp.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "B",
+          "options": [
+            "based",
+            "basis",
+            "base",
+            "basic"
+          ],
+          "explanation": "Cụm cố định 'on a first-come, first-served basis' (ai đến trước được phục vụ trước); sau mạo từ 'a' + tính từ ghép cần danh từ → 'basis' (B). (C) 'base' là danh từ nhưng nghĩa nền móng / căn cứ, không dùng trong cụm này; (D) là tính từ; (A) là phân từ.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Corvane Auto to Open Second Service Center\n\nFAIRMONT (April 22) — Corvane Auto, which has sold vehicles on Delmar Avenue for more than two decades, will open a second service center on Route 9 in August. The new facility will be devoted entirely to maintenance and repairs; no vehicles will be sold on site. [1]\n\nAccording to general manager Tomás Gutierrez, the decision followed a steady rise in complaints about wait times. \"Customers were routinely being told that the earliest available appointment was ten days away,\" he said. \"That is not the kind of experience we want associated with our name.\" [2]\n\nThe Route 9 center will have fourteen service bays, twice the number at the Delmar Avenue location, and four of them will be equipped to handle electric vehicles. At present, Corvane sends electric models to a partner shop in Linwood for battery work. [3] Once the new center opens, that arrangement will end.\n\nMr. Gutierrez added that the Delmar Avenue location will keep its usual hours. However, its service department will gradually shift its focus to quick jobs such as oil changes and tire rotations. [4] Hiring for the new center, including six technicians and two service advisors, is already under way.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "A",
+          "content": "Why did Corvane Auto decide to open the new facility?",
+          "options": [
+            "To shorten the wait for service appointments",
+            "To replace a partner shop that has closed",
+            "To comply with new rules for electric vehicles",
+            "To increase the number of vehicles it sells"
+          ],
+          "explanation": "Đoạn 2: quyết định xuất phát từ 'a steady rise in complaints about wait times', khách phải chờ 'ten days' mới có lịch → mục đích là rút ngắn thời gian chờ (A). (D) sai vì cơ sở mới 'no vehicles will be sold on site'; (B) xưởng đối tác không đóng cửa – chỉ là thỏa thuận sẽ chấm dứt; (C) bài không nhắc quy định nào.",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "B",
+          "content": "How many service bays does the Delmar Avenue location most likely have?",
+          "options": [
+            "4",
+            "7",
+            "10",
+            "14"
+          ],
+          "explanation": "Đoạn 3: Route 9 có 'fourteen service bays, twice the number at the Delmar Avenue location' → Delmar có 14 ÷ 2 = 7 khoang (B). (A) là số khoang dành cho xe điện ở Route 9; (D) là số khoang của Route 9.",
+          "tags": [
+            "inference"
+          ],
+          "fixed_order": true
+        },
+        {
+          "number": 149,
+          "answer": "D",
+          "content": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"This means that more complex repairs will increasingly be handled on Route 9.\"",
+          "options": [
+            "[1]",
+            "[2]",
+            "[3]",
+            "[4]"
+          ],
+          "explanation": "Câu chèn nêu hệ quả của việc Delmar 'shift its focus to quick jobs such as oil changes and tire rotations' → việc sửa chữa phức tạp chuyển sang Route 9, nên đặt ở [4] (D). Đặt ở [3] sẽ cắt đứt liên kết giữa 'a partner shop in Linwood' và 'that arrangement'; ở [1], [2] bài chưa nói gì về việc phân chia công việc giữa hai cơ sở.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 101,
+        "answer": "C",
+        "content": "Skyvale Airways has become ------- popular among business travelers since it added free onboard Wi-Fi.",
+        "options": [
+          "increase",
+          "increasing",
+          "increasingly",
+          "increased"
+        ],
+        "explanation": "Chỗ trống bổ nghĩa cho tính từ 'popular' → cần trạng từ (C) 'increasingly' (ngày càng). (A) động từ/danh từ, (B), (D) là phân từ/tính từ không bổ nghĩa cho tính từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 102,
+        "answer": "B",
+        "content": "All carry-on bags must fit ------- in the overhead bins or under the seat in front of you.",
+        "options": [
+          "secure",
+          "securely",
+          "security",
+          "secured"
+        ],
+        "explanation": "Chỗ trống bổ nghĩa cho động từ 'fit' → cần trạng từ (B) 'securely' (chắc chắn, gọn gàng). (A) tính từ/động từ, (C) danh từ, (D) quá khứ phân từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 103,
+        "answer": "C",
+        "content": "Passengers may ------- their unused travel vouchers for a full refund within thirty days of issue.",
+        "options": [
+          "remind",
+          "resolve",
+          "redeem",
+          "relieve"
+        ],
+        "explanation": "'redeem a voucher' = quy đổi phiếu (lấy tiền/hàng) → (C). (A) 'remind' (nhắc nhở), (B) 'resolve' (giải quyết), (D) 'relieve' (làm giảm bớt) không đi với 'voucher'.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 104,
+        "answer": "A",
+        "content": "The tour package includes round-trip airfare, four nights' -------, and a guided walk through the old town.",
+        "options": [
+          "accommodation",
+          "occupation",
+          "documentation",
+          "destination"
+        ],
+        "explanation": "'four nights' accommodation' = chỗ ở 4 đêm → (A). (B) 'occupation' (nghề nghiệp), (C) 'documentation' (giấy tờ, tài liệu), (D) 'destination' (điểm đến) không đi với 'four nights''.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 105,
+        "answer": "B",
+        "content": "Flight attendants will begin serving beverages ------- the aircraft reaches its cruising altitude.",
+        "options": [
+          "unless",
+          "once",
+          "whereas",
+          "so that"
+        ],
+        "explanation": "Cần liên từ thời gian 'ngay khi' máy bay đạt độ cao bay bằng → (B) 'once'. (A) 'unless' (trừ khi), (C) 'whereas' (trong khi đó – đối lập), (D) 'so that' (để mà) không hợp logic.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 106,
+        "answer": "D",
+        "content": "Ms. Doherty's missing suitcase was delivered to her hotel ------- midnight, two hours after she checked in.",
+        "options": [
+          "since",
+          "among",
+          "along",
+          "by"
+        ],
+        "explanation": "'by midnight' = trước/không muộn hơn nửa đêm, dùng được với quá khứ đơn → (D). (A) 'since' cần thì hoàn thành và nghĩa 'từ khi'; (B) 'among' (giữa nhiều thứ), (C) 'along' (dọc theo) không đi với mốc giờ.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 107,
+        "answer": "A",
+        "content": "If the connecting flight had departed on time, Mr. Wisniewski ------- the opening session of the conference.",
+        "options": [
+          "would have attended",
+          "will attend",
+          "will have been attending",
+          "attends"
+        ],
+        "explanation": "Mệnh đề 'If + had departed' là câu điều kiện loại 3 (giả định trái quá khứ) → mệnh đề chính 'would have + V3' → (A). (B), (C), (D) không phù hợp cấu trúc điều kiện loại 3.",
+        "tags": [
+          "verb-form"
+        ]
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "questions": [
+      {
+        "number": 108,
+        "answer": "C",
+        "content": "Mr. Laurent prefers to book his business trips -------, rather than going through the company's travel agent.",
+        "options": [
+          "he",
+          "him",
+          "himself",
+          "his"
+        ],
+        "explanation": "Câu đã có chủ ngữ 'Mr. Laurent' và tân ngữ 'his business trips'; chỗ trống nhấn mạnh 'tự mình' đặt → đại từ phản thân (C) 'himself'. (A) chủ ngữ, (B) tân ngữ, (D) tính từ/đại từ sở hữu.",
+        "tags": [
+          "pronoun"
+        ]
+      }
+    ]
+  }
+]

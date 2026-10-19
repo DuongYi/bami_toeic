@@ -1,0 +1,283 @@
+{
+  "title": "Reading mỗi ngày · Ngày 06",
+  "source": "Bami TOEIC",
+  "description": "Đề Reading 15 câu chủ đề sự kiện cộng đồng, band 450–600.",
+  "is_free": true,
+  "time_limit_minutes": 15,
+  "collection": "reading-daily",
+  "groups": [
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 101,
+          "answer": "C",
+          "content": "The annual Hollis Park food festival was ------- popular with local families last weekend.",
+          "options": [
+            "extremes",
+            "extreme",
+            "extremely",
+            "extremity"
+          ],
+          "explanation": "Trước tính từ \"popular\" cần trạng từ chỉ mức độ → (C) \"extremely\" (cực kỳ). (B) là tính từ, (A), (D) là danh từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 102,
+          "answer": "A",
+          "content": "Volunteers are needed to help with the ------- of tables and chairs before the concert.",
+          "options": [
+            "arrangement",
+            "arranges",
+            "arranged",
+            "arrange"
+          ],
+          "explanation": "Sau mạo từ \"the\" và trước \"of\" cần danh từ → (A) \"arrangement\" (việc sắp xếp). (D), (B) là động từ, (C) là quá khứ phân từ.",
+          "tags": [
+            "word-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 103,
+          "answer": "D",
+          "content": "Tickets for the charity dinner can be ------- at the front desk of the Marlow Creek Community Center.",
+          "options": [
+            "spent",
+            "paid",
+            "earned",
+            "purchased"
+          ],
+          "explanation": "Vé thì được \"mua\": \"tickets can be purchased\" → (D). (A) \"spent\" dùng cho tiền/thời gian, (C) \"earned\" là kiếm được, (B) \"paid\" đi với tiền hoặc hoá đơn, không đi với \"tickets\".",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 104,
+          "answer": "A",
+          "content": "The library book sale will ------- money to buy new books for the children's section.",
+          "options": [
+            "raise",
+            "grow",
+            "rise",
+            "lift"
+          ],
+          "explanation": "Cụm cố định \"raise money\" = gây quỹ → (A). (C) \"rise\" là nội động từ, không có tân ngữ; (B) \"grow\" và (D) \"lift\" không đi với \"money\" theo nghĩa gây quỹ.",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 105,
+          "answer": "C",
+          "content": "The Tovey Heights parade will begin at 10:00 A.M. and continue ------- noon.",
+          "options": [
+            "since",
+            "during",
+            "until",
+            "between"
+          ],
+          "explanation": "Diễn tả kéo dài đến một mốc thời gian → (C) \"until\" (cho đến). (A) \"since\" đi với thì hoàn thành; (B) \"during\" cần một khoảng thời gian; (D) \"between\" cần \"... and ...\".",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 106,
+          "answer": "D",
+          "content": "------- it rains on Saturday, the craft fair will be moved inside the community center.",
+          "options": [
+            "So",
+            "Although",
+            "Unless",
+            "If"
+          ],
+          "explanation": "Câu điều kiện: nếu trời mưa thì hội chợ chuyển vào trong → (D) \"If\". (B) chỉ tương phản; (A) \"So\" không đứng đầu mệnh đề phụ; (C) \"Unless\" (trừ khi) làm câu trái nghĩa.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 107,
+          "answer": "B",
+          "content": "Last year, more than 500 people ------- the Tovey Heights summer picnic.",
+          "options": [
+            "will attend",
+            "attended",
+            "attending",
+            "attend"
+          ],
+          "explanation": "Mốc \"Last year\" chỉ quá khứ → thì quá khứ đơn (B) \"attended\". (D) hiện tại, (A) tương lai, (C) thiếu trợ động từ.",
+          "tags": [
+            "verb-form"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "questions": [
+        {
+          "number": 108,
+          "answer": "B",
+          "content": "Ms. Gallagher thanked all of the volunteers for ------- hard work at the spring cleanup event.",
+          "options": [
+            "them",
+            "their",
+            "theirs",
+            "themselves"
+          ],
+          "explanation": "Trước cụm danh từ \"hard work\" cần tính từ sở hữu → (B) \"their\". (A) là đại từ tân ngữ, (C) là đại từ sở hữu không đứng trước danh từ, (D) là đại từ phản thân.",
+          "tags": [
+            "pronoun"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "passage": "To: Marlow Creek residents\nFrom: Teresa Costa, Events Coordinator\nSubject: Community Garden Day\n\nDear neighbors,\n\nWe are pleased to announce that our first Community Garden Day ---(131)--- on Saturday, May 16, from 9:00 A.M. to 1:00 P.M. at the Marlow Creek Community Center. Volunteers will plant flowers and vegetables in the new garden behind the center.\n\nNo gardening experience is ---(132)---. Our staff will show you what to do. Gloves and tools will be provided, but please wear comfortable clothes. ---(133)---\n\n---(134)--- the work is done, everyone is invited to a free lunch in the center's main hall. To sign up, please call 555-0162 by May 10.\n\nTeresa Costa",
+      "questions": [
+        {
+          "number": 131,
+          "answer": "D",
+          "options": [
+            "was taking place",
+            "has taken place",
+            "took place",
+            "will take place"
+          ],
+          "explanation": "Thư thông báo sự kiện sắp diễn ra (đăng ký trước ngày 10/5, \"Volunteers will plant…\") → thì tương lai (D) \"will take place\". (C), (B), (A) chỉ việc đã xảy ra.",
+          "tags": [
+            "verb-form"
+          ]
+        },
+        {
+          "number": 132,
+          "answer": "B",
+          "options": [
+            "grown",
+            "needed",
+            "finished",
+            "located"
+          ],
+          "explanation": "\"No gardening experience is needed\" = không cần kinh nghiệm làm vườn, phù hợp câu sau \"Our staff will show you what to do\" → (B). (C) hoàn thành, (D) được đặt ở, (A) được trồng – không hợp với \"experience\".",
+          "tags": [
+            "vocabulary"
+          ]
+        },
+        {
+          "number": 133,
+          "answer": "C",
+          "options": [
+            "Thank you for coming to last month's concert.",
+            "Parking at the center costs $5 per hour on weekdays.",
+            "Bottles of water and light snacks will also be available.",
+            "Our next board meeting will discuss the center's budget."
+          ],
+          "explanation": "Câu trước nói những thứ được cung cấp cho tình nguyện viên (\"Gloves and tools will be provided\"); câu (C) với \"also\" bổ sung thêm nước và đồ ăn nhẹ. (B) nói ngày thường, trong khi sự kiện vào thứ Bảy; (D), (A) không liên quan đến ngày làm vườn.",
+          "tags": [
+            "sentence-insertion"
+          ]
+        },
+        {
+          "number": 134,
+          "answer": "A",
+          "options": [
+            "After",
+            "Whereas",
+            "Unless",
+            "Although"
+          ],
+          "explanation": "Bữa trưa diễn ra sau khi làm vườn xong → liên từ thời gian (A) \"After\". (D), (B) chỉ tương phản, (C) \"Unless\" (trừ khi) không hợp nghĩa.",
+          "tags": [
+            "preposition-conjunction"
+          ]
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "passage": "Tovey Heights Summer Music Series\n\nJoin us for free outdoor concerts at Hollis Park every Friday evening in July! Each concert begins at 7:00 P.M. and lasts about two hours.\n\nSchedule\nJuly 3 – The Riverside Brass Band\nJuly 10 – Ama Owusu Jazz Trio\nJuly 17 – Tovey Heights Youth Orchestra\nJuly 24 – The Silver Pines (folk music)\nJuly 31 – The Northgate Players (classic rock)\n\nSeating is on the lawn, so please bring your own chairs or blankets. Food trucks will be parked along Elm Drive, next to the park entrance, starting at 6:00 P.M.\n\nIn case of rain, concerts will be moved to the gymnasium at Tovey Heights High School, two blocks from the park. Updates will be posted on www.toveyheightsevents.com by 3:00 P.M. on the day of each concert.\n\nThe series is sponsored by the Tovey Heights Neighborhood Association.",
+      "questions": [
+        {
+          "number": 147,
+          "answer": "B",
+          "content": "Who will perform on July 17?",
+          "options": [
+            "A folk music group called The Silver Pines",
+            "A group of young musicians",
+            "A jazz trio",
+            "A brass band from the riverside area"
+          ],
+          "explanation": "Lịch diễn: \"July 17 – Tovey Heights Youth Orchestra\" → dàn nhạc thiếu niên, tức nhóm nhạc công trẻ (B). (C) diễn 10/7, (D) diễn 3/7, (A) diễn 24/7.",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 148,
+          "answer": "A",
+          "content": "What are people attending the concerts asked to do?",
+          "options": [
+            "Bring something to sit on",
+            "Buy tickets in advance",
+            "Arrive before 6:00 P.M.",
+            "Park their cars on Elm Drive"
+          ],
+          "explanation": "Đoạn 3: \"Seating is on the lawn, so please bring your own chairs or blankets\" → mang ghế hoặc chăn để ngồi (A). (B) hoà nhạc miễn phí; (D) Elm Drive là chỗ xe bán đồ ăn; (C) 6:00 là giờ xe đồ ăn có mặt.",
+          "tags": [
+            "detail"
+          ]
+        },
+        {
+          "number": 149,
+          "answer": "D",
+          "content": "What is suggested about the concerts?",
+          "options": [
+            "They take place on weekend mornings.",
+            "They require a small entry fee.",
+            "They are mainly for high school students.",
+            "They may be held indoors on some evenings."
+          ],
+          "explanation": "Đoạn 4: \"In case of rain, concerts will be moved to the gymnasium\" → nếu mưa, buổi diễn có thể tổ chức trong nhà (D). (C) trường học chỉ là địa điểm dự phòng; (B) trái với \"free\"; (A) diễn vào tối thứ Sáu.",
+          "tags": [
+            "inference"
+          ]
+        }
+      ]
+    }
+  ]
+}

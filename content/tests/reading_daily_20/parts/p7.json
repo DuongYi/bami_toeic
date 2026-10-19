@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "E-mail\n\nTo: All Field Consultants\nFrom: Daniel Rousseau, Travel Coordinator\nDate: 12 May\nSubject: Changes to booking procedures\n\nDear colleagues,\n\nBeginning 1 June, all hotel and flight reservations for client visits must be made through the new Tripwell portal rather than by contacting the travel office. The portal lists only hotels with which Ferrandine Consulting has negotiated corporate rates, so you will no longer have to compare prices yourselves.\n\nIf you need to stay at a property that is not listed (for example, because it is closer to a client's site), you may still do so, provided that your department manager approves the request in advance. Note that the nightly rate must not exceed the limit shown in the portal for that city.\n\nMeal allowances remain unchanged. However, receipts for taxis and airport trains must now be uploaded within ten days of your return; paper copies will no longer be accepted.\n\nA short training session on the portal will be held on 26 May at 3:00 P.M. Those who cannot attend will find a recording on the intranet the following day.\n\nBest regards,\nDaniel Rousseau",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "What is implied about Ferrandine consultants before June 1?",
+        "options": [
+          "They were responsible for comparing hotel rates.",
+          "They needed approval for every trip they took.",
+          "They received a larger allowance for meals.",
+          "They were required to stay at hotels near client sites."
+        ],
+        "explanation": "Suy luận: đoạn 1 viết 'you will no longer have to compare prices yourselves' → trước đây nhân viên tự so sánh giá khách sạn (A). (B) chỉ khách sạn ngoài danh sách mới cần duyệt, và đó là quy định mới; (C) 'Meal allowances remain unchanged' – không lớn hơn; (D) ở gần khách hàng chỉ là ví dụ cho trường hợp ngoại lệ.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "D",
+        "content": "What is NOT mentioned as a requirement of the new procedures?",
+        "options": [
+          "Obtaining prior approval to book an unlisted hotel",
+          "Keeping hotel costs within a set amount",
+          "Submitting transportation receipts electronically",
+          "Selecting the lowest-priced flight available"
+        ],
+        "explanation": "Câu NOT: (A) có ở đoạn 2 'your department manager approves the request in advance'; (B) 'the nightly rate must not exceed the limit'; (C) đoạn 3 'receipts… must now be uploaded… paper copies will no longer be accepted'. Thư không hề yêu cầu chọn chuyến bay rẻ nhất → (D).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "C",
+        "content": "The word \"property\" in paragraph 2, line 1, is closest in meaning to",
+        "options": [
+          "possession",
+          "quality",
+          "accommodation",
+          "land"
+        ],
+        "explanation": "Từ trong ngữ cảnh: 'stay at a property that is not listed' – nơi để ở qua đêm, tức khách sạn/cơ sở lưu trú → 'accommodation' (C). (A) 'possession' (tài sản sở hữu) và (D) 'land' (đất đai) là nghĩa thông thường của 'property' nhưng không hợp với 'stay at'; (B) 'quality' (đặc tính) là nghĩa khác của 'property'.",
+        "tags": [
+          "vocab-in-context"
+        ]
+      }
+    ]
+  }
+]

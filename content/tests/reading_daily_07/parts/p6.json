@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "NOTICE TO ALL PRODUCTION STAFF\n\nFrom: Plant Management, Brennick Metalworks\nDate: March 3\n\nThe main assembly line at our Halston plant ---(131)--- on Saturday, March 9, for its yearly safety inspection. During this time, a team from Delmont Safety Services will check every machine on the floor. ---(132)---\n\nStaff who normally work on the line on Saturdays will not operate any machines that day. ---(133)---, they will help with cleaning and organizing the storage rooms. They will still receive their regular pay. Please report to Room 4 at 8:00 A.M. to receive your tasks.\n\nIf you have any questions, please contact Ms. Nwosu in the operations office at 555-0142. Thank you for your ---(134)---.",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "C",
+        "options": [
+          "was shut down",
+          "has been shutting down",
+          "will be shut down",
+          "shutting down"
+        ],
+        "explanation": "Thông báo đề ngày 3/3, nói về việc sẽ xảy ra vào thứ Bảy 9/3 → cần thì tương lai; dây chuyền 'bị' dừng nên dùng bị động → (C) 'will be shut down'. (A) quá khứ, (B) hiện tại hoàn thành tiếp diễn chủ động, (D) V-ing không làm động từ chính được.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "B",
+        "options": [
+          "Our new line will produce twice as many parts.",
+          "The inspection is expected to take the whole day.",
+          "Thank you for attending last week's training session.",
+          "The parts were shipped to the customer yesterday."
+        ],
+        "explanation": "Câu trước nói đội kiểm tra sẽ kiểm tra mọi máy; câu sau nói nhân viên sẽ không vận hành máy cả ngày hôm đó → (B) 'việc kiểm tra dự kiến kéo dài cả ngày' nối mạch hợp lý. (A), (C), (D) lạc chủ đề kiểm tra an toàn.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "C",
+        "options": [
+          "Similarly",
+          "For example",
+          "Instead",
+          "In addition"
+        ],
+        "explanation": "Câu trước: nhân viên sẽ không vận hành máy; câu sau: họ sẽ dọn dẹp kho → làm việc khác thay thế → (C) 'Instead' (thay vào đó). (A) 'Similarly' (tương tự), (B) 'For example' (ví dụ), (D) 'In addition' (thêm vào đó) không thể hiện quan hệ thay thế.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "D",
+        "options": [
+          "cooperate",
+          "cooperative",
+          "cooperatively",
+          "cooperation"
+        ],
+        "explanation": "Sau tính từ sở hữu 'your' cần danh từ → (D) 'cooperation' (sự hợp tác). 'Thank you for your cooperation' là cách kết thúc thông báo quen thuộc. (A) động từ, (B) tính từ, (C) trạng từ.",
+        "tags": [
+          "word-form"
+        ]
+      }
+    ]
+  }
+]

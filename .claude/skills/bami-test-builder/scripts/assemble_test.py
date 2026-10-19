@@ -27,7 +27,7 @@ def main():
             groups += chunk
     if not groups:
         sys.exit(f'Không có nhóm nào trong {d}/parts')
-    keys = ('title', 'source', 'description', 'is_free', 'time_limit_minutes', 'score_table')
+    keys = ('title', 'source', 'description', 'is_free', 'time_limit_minutes', 'score_table', 'collection')
     out = {k: v for k, v in meta.items() if k in keys}
     out['groups'] = groups
     if (d / 'test.json').exists():

@@ -73,6 +73,7 @@ TestCollection? _byId(String id) {
 
 // Tiêu đề / nguồn mẫu để dựng lại bộ đề cố định từ khoá (giữ một nơi định nghĩa trong _derive).
 const _sampleTitle = {
+  'reading-daily': 'Reading mỗi ngày',
   'listening': 'Luyện nghe',
   'part-5': 'Luyện Part 5',
   'part-6': 'Luyện Part 6',
@@ -103,6 +104,16 @@ TestCollection _derive(TestSummary t) {
       shelf: TestShelf.full,
       kind: CollectionKind.extreme,
       order: 20000,
+    );
+  }
+  if (title.startsWith('Reading mỗi ngày')) {
+    return const TestCollection(
+      id: 'reading-daily',
+      title: 'Reading mỗi ngày',
+      subtitle: '15 câu Part 5–7, khó dần theo tuần',
+      shelf: TestShelf.short,
+      kind: CollectionKind.quick,
+      order: 0,
     );
   }
   if (source.contains('Quick') || t.timeLimitMinutes == 15) {

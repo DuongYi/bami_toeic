@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "From: Priya Nair, Senior Planner, Ashford City Planning Department\nTo: Members of the Transportation Committee\nDate: May 9\nSubject: Survey results – Kellerman park-and-ride\n\nDear Committee Members,\n\nAs requested at last month's meeting, our department surveyed commuters at the Kellerman park-and-ride lot over two weeks in April. A total of 612 people responded.\n\nThe results largely support the proposal to add a second level to the parking structure. Nearly 70 percent of respondents said they had been unable to find a space at least once in the past month, and most of those people reported arriving after 8:15 A.M. Interestingly, only a small share said they would be willing to pay a daily fee for a guaranteed space.\n\nRespondents were less enthusiastic about the plan to reduce the number of morning express buses to the city center from six to four. Several noted that the buses are already crowded by the second stop. Given the projected increase in parking capacity, I would recommend that the committee postpone any reduction until ridership can be measured again after the expansion.\n\nA full report, including the survey questions and a breakdown of responses by arrival time, will be distributed before the June 3 meeting. Please let me know if you would like me to present the findings in person.\n\nPriya Nair",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "What is the purpose of the e-mail?",
+        "options": [
+          "To report the results of a study the committee asked for",
+          "To propose that commuters be charged a daily fee for parking spaces",
+          "To announce that a parking structure has been expanded",
+          "To request funding for additional morning express buses to the city center"
+        ],
+        "explanation": "Đoạn 1: 'As requested at last month's meeting, our department surveyed commuters…' và toàn bộ e-mail trình bày kết quả khảo sát → (A). (B) sai: chỉ ít người sẵn sàng trả phí; (C) việc thêm tầng mới chỉ là đề xuất; (D) e-mail bàn về đề xuất giảm chuyến, không xin thêm kinh phí.",
+        "tags": [
+          "main-idea"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "A",
+        "content": "Why does Ms. Nair recommend delaying the reduction in express buses?",
+        "options": [
+          "She expects a larger lot to bring more riders onto the buses.",
+          "Most respondents said they would gladly pay higher bus fares for faster trips.",
+          "The survey did not ask commuters about bus service.",
+          "The express buses often fall behind their schedule."
+        ],
+        "explanation": "Đoạn 3: xe buýt đã 'already crowded by the second stop' và bà viện dẫn 'the projected increase in parking capacity' → bãi đỗ lớn hơn sẽ đưa thêm người lên xe buýt vốn đã đông, nên cần đo lại sau khi mở rộng (suy luận 2 bước) → (A). (B) bài chỉ nói ít người muốn trả phí đỗ xe, không nói về giá vé; (C) trái với bài vì người trả lời có góp ý về xe buýt; (D) không được nhắc.",
+        "tags": [
+          "inference"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "A",
+        "content": "The word \"share\" in paragraph 2 is closest in meaning to",
+        "options": [
+          "proportion",
+          "contribution",
+          "distribution",
+          "announcement"
+        ],
+        "explanation": "'only a small share said they would be willing to pay…' – 'share' ở đây là 'phần, tỉ lệ' (trong số người trả lời) → 'proportion' (A). (B) 'sự đóng góp' và (C) 'sự phân phối' là nghĩa khác gần với động từ 'share'; (D) không liên quan.",
+        "tags": [
+          "vocab-in-context"
+        ]
+      }
+    ]
+  }
+]

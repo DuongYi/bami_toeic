@@ -1,0 +1,64 @@
+[
+  {
+    "part": 6,
+    "passage": "Verdalis Launches Green Office Challenge\n\nStarting next month, every Verdalis Packaging office will take part in the Green Office Challenge, a friendly competition to cut paper and electricity use. Each office's monthly consumption ---(131)--- against its own average for the same month last year, so that locations of very different sizes can compete fairly.\n\nThe idea came from staff at the Eastline office, who ran a similar contest on their own initiative last autumn. ---(132)--- Encouraged by this result, the sustainability committee decided to expand the program company-wide.\n\nPrizes will be modest: each quarter, the winning office will choose a local environmental group to receive a donation in its name. ---(133)---, the committee hopes the challenge will encourage habits that last well beyond the contest itself.\n\nQuestions about the challenge may be directed to Grace Ofori, who ---(134)--- the committee's day-to-day activities.",
+    "questions": [
+      {
+        "number": 131,
+        "answer": "A",
+        "options": [
+          "will be measured",
+          "measured",
+          "has measured",
+          "is measuring"
+        ],
+        "explanation": "Cuộc thi bắt đầu 'next month' → hành động ở tương lai; mức tiêu thụ được đo (bị động) → 'will be measured' (A). (C), (D) chủ động – 'consumption' không tự đo; (B) quá khứ sai mốc thời gian.",
+        "tags": [
+          "verb-form"
+        ]
+      },
+      {
+        "number": 132,
+        "answer": "B",
+        "options": [
+          "The Eastline office is located on the third floor of the Bayview Tower.",
+          "Within three months, its printing costs had fallen by almost 40 percent.",
+          "However, few employees were aware that the contest had taken place.",
+          "Participants will be notified of the results by e-mail next week."
+        ],
+        "explanation": "Câu sau mở đầu 'Encouraged by this result' → câu chèn phải nêu một kết quả tích cực của cuộc thi ở văn phòng Eastline: chi phí in giảm gần 40% (B). (C) mang nghĩa tiêu cực, mâu thuẫn với 'encouraged'; (D) nói về tương lai, không phải kết quả đã có; (A) chỉ là địa chỉ, không phải 'result'.",
+        "tags": [
+          "sentence-insertion"
+        ]
+      },
+      {
+        "number": 133,
+        "answer": "D",
+        "options": [
+          "In contrast",
+          "For instance",
+          "As a result",
+          "More importantly"
+        ],
+        "explanation": "Câu trước nói phần thưởng chỉ khiêm tốn; câu sau nêu mục tiêu lớn hơn – hình thành thói quen lâu dài → 'More importantly' (quan trọng hơn) (D). (C) 'As a result' sai quan hệ nhân quả; (B) 'For instance' không phải ví dụ; (A) 'In contrast' không có sự đối lập trực tiếp.",
+        "tags": [
+          "preposition-conjunction"
+        ]
+      },
+      {
+        "number": 134,
+        "answer": "C",
+        "options": [
+          "overlooks",
+          "overtakes",
+          "oversees",
+          "oversteps"
+        ],
+        "explanation": "Người được liên hệ khi có thắc mắc là người 'giám sát, phụ trách' hoạt động hằng ngày của uỷ ban → 'oversees' (C). (A) 'overlooks' (bỏ sót / nhìn ra) là bẫy cận hình; (B) 'overtakes' (vượt qua), (D) 'oversteps' (vượt quá giới hạn) sai nghĩa.",
+        "tags": [
+          "vocabulary"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "title": "Reading mỗi ngày · Ngày 01",
+  "source": "Bami TOEIC",
+  "description": "Ôn Reading 15 câu chủ đề nhà hàng – khách sạn, mức 450–600.",
+  "is_free": true,
+  "blueprint": "quick15",
+  "time_limit_minutes": 15,
+  "collection": "reading-daily"
+}

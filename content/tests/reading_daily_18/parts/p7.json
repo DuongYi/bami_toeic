@@ -1,0 +1,53 @@
+[
+  {
+    "part": 7,
+    "passage": "Pinecrest Outfitters – Returns and Exchanges\nUpdated July 1\n\nWe want you to be happy with every purchase. Unused items in their original packaging may be returned within 45 days of delivery for a full refund. Items that show signs of use may still be exchanged for store credit within the same period, provided they are in good condition.\n\nTo start a return, log in to your account at www.pinecrestoutfitters.com and select the order in question. You may either drop the item off at any Pinecrest store or mail it back using a prepaid label. A shipping fee of $6.50 will be deducted from refunds for mailed returns, unless the item was defective or sent to you in error.\n\nPlease note that the following cannot be returned: gift cards, personalized items, and camping fuel. Sale items marked \"final\" may be exchanged for a different size but not refunded.\n\nRefunds are issued to the original form of payment. Members of our Trailhead Rewards program will also have any points earned on the purchase removed from their balance once the return is processed.\n\nQuestions? Our customer care team can be reached at 555-0129, Monday through Saturday.",
+    "questions": [
+      {
+        "number": 147,
+        "answer": "A",
+        "content": "What is indicated about items that have been used?",
+        "options": [
+          "They can be traded for credit if they are undamaged.",
+          "They can be refunded in full within 45 days.",
+          "They must be brought to a Pinecrest store in person to be returned.",
+          "They are not accepted under any conditions."
+        ],
+        "explanation": "Chi tiết (paraphrase): đoạn 1 'Items that show signs of use may still be exchanged for store credit… provided they are in good condition' → đồ đã dùng đổi lấy tín dụng cửa hàng nếu còn tốt → (A). (B) hoàn tiền đầy đủ chỉ áp dụng cho đồ 'Unused'; (C) không có quy định này; (D) trái với bài.",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 148,
+        "answer": "D",
+        "content": "Which item is NOT listed as something that cannot be returned?",
+        "options": [
+          "A gift card for an outdoor store",
+          "A jacket printed with the buyer's initials",
+          "A container of camping fuel",
+          "A pair of boots shipped in the wrong color"
+        ],
+        "explanation": "Câu NOT: đoạn 3 liệt kê đồ không được trả 'gift cards, personalized items, and camping fuel' → (A), (C) có trong danh sách; (B) áo in chữ cái tên người mua = 'personalized item'. Đôi ủng giao nhầm màu là hàng 'sent to you in error' (đoạn 2) – vẫn trả được, còn được miễn phí gửi → (D).",
+        "tags": [
+          "detail"
+        ]
+      },
+      {
+        "number": 149,
+        "answer": "A",
+        "content": "What is suggested about customers who return an item by mail?",
+        "options": [
+          "They may avoid a fee if they received a faulty product.",
+          "They must visit a store before sending the package.",
+          "They will receive store credit instead of money.",
+          "They will keep any reward points from the purchase."
+        ],
+        "explanation": "Suy luận: đoạn 2 'A shipping fee of $6.50 will be deducted… unless the item was defective' → nếu hàng lỗi ('faulty' = 'defective') thì không bị trừ phí → (A). (B) khách chọn gửi bưu điện hoặc mang đến cửa hàng, không phải cả hai; (C) trái với 'Refunds are issued to the original form of payment'; (D) trái với đoạn 4, điểm thưởng bị trừ khi trả hàng.",
+        "tags": [
+          "inference"
+        ]
+      }
+    ]
+  }
+]
