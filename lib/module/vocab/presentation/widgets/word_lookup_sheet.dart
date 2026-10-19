@@ -1,18 +1,27 @@
 import 'package:flutter/material.dart';
 
+import '../../../../helper/word_match.dart';
 import '../../../dictionary/presentation/controllers/dictionary_controller.dart';
 import '../../../dictionary/presentation/widgets/dictionary_sheet.dart';
+import '../../../dictionary/presentation/widgets/lookup_origin.dart';
 import '../../../dictionary/presentation/widgets/translation_view.dart';
 
 /// Menu bôi đen chữ có thêm nút "Tra từ" (≤ 4 từ), "Dịch" (≥ 2 từ) và "Highlight"
-/// (dùng cho SelectableText trong đề).
+/// (dùng cho SelectableText trong đề). Có [testId]/[sourceLabel]: lưu từ sẽ kèm câu chứa từ đó
+/// làm câu ví dụ và ghi nguồn.
 EditableTextContextMenuBuilder lookupContextMenu(
   BuildContext pageContext, {
   bool Function(String text)? isHighlighted,
   void Function(String text)? onToggleHighlight,
+  String? testId,
+  String? sourceLabel,
 }) => (context, state) {
   final value = state.textEditingValue;
   final selected = value.selection.textInside(value.text).trim();
+  final sentence = ContextSentence.around(value.text, value.selection.start, value.selection.end);
+  final origin = sentence == null
+      ? null
+      : LookupOrigin(sentence: sentence, testId: testId, label: sourceLabel);
   final isHl = isHighlighted?.call(selected) ?? false;
   final words = wordCount(selected);
   return AdaptiveTextSelectionToolbar.buttonItems(
@@ -24,7 +33,7 @@ EditableTextContextMenuBuilder lookupContextMenu(
           onPressed: () {
             ContextMenuController.removeAny();
             state.hideToolbar();
-            showWordLookup(pageContext, selected);
+            showWordLookup(pageContext, selected, origin: origin);
           },
         ),
       if (words >= 2)
@@ -51,5 +60,5 @@ EditableTextContextMenuBuilder lookupContextMenu(
 };
 
 /// Tra [text] trong từ điển (kèm từ khớp trong kho ETS) bằng sheet, không rời màn đang học.
-Future<void> showWordLookup(BuildContext context, String text) =>
-    showDictionarySheet(context, word: text);
+Future<void> showWordLookup(BuildContext context, String text, {LookupOrigin? origin}) =>
+    showDictionarySheet(context, word: text, origin: origin);

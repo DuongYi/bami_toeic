@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="widget_surface">#FFFFFFFF</color>
+    <color name="widget_on_surface">#FF1A1C22</color>
+    <color name="widget_on_surface_variant">#FF5A5F6E</color>
+    <color name="widget_primary">#FF1E5EFF</color>
+    <color name="widget_flame">#FFF57C00</color>
+
+    <string name="widget_title">Bami TOEIC</string>
+    <string name="widget_description">Chuỗi ngày học, nhiệm vụ hôm nay và số thẻ từ cần ôn</string>
+    <string name="widget_signed_out">Đăng nhập để theo dõi chuỗi ngày học</string>
+    <string name="widget_streak">%1$d ngày</string>
+    <string name="widget_done_today">Hôm nay đã học, giữ vững nhé!</string>
+    <string name="widget_keep_streak">Học hôm nay để giữ chuỗi</string>
+    <string name="widget_start_today">Bắt đầu chuỗi mới hôm nay</string>
+    <string name="widget_missions">Nhiệm vụ %1$d/%2$d</string>
+    <string name="widget_due">%1$d thẻ từ cần ôn</string>
+</resources>

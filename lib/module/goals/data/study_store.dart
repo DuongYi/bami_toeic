@@ -5,6 +5,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../../core/home_widget/home_widget_service.dart';
 import '../../../core/notifications/reminder_service.dart';
 import '../../auth/presentation/controllers/auth_controller.dart';
 import '../../test/data/in_progress_store.dart';
@@ -114,6 +115,7 @@ class StudyStore {
     try {
       await _ref.read(reminderServiceProvider).schedule(null);
     } catch (_) {}
+    await _ref.read(homeWidgetServiceProvider).clear();
   }
 
   // Khoá cũ (trước khi tách theo user) – chuyển sang user đầu tiên đăng nhập.

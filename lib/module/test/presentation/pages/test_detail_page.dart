@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -306,8 +307,8 @@ class _DetailBodyState extends ConsumerState<_DetailBody> {
                 ),
                 Gaps.v8,
               ],
-              Gaps.v16,
-              _OfflineTile(testId: s.id),
+              // Web không tải đề về máy được.
+              if (!kIsWeb) ...[Gaps.v16, _OfflineTile(testId: s.id)],
             ],
           ),
         ),

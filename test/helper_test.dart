@@ -95,6 +95,30 @@ void main() {
     test('không khớp', () => expect(find('xyz'), isEmpty));
   });
 
+  group('ContextSentence', () {
+    const text = 'M: Please send the invoices by Friday. W: Sure, I will do it today!';
+    test('lấy câu chứa đoạn bôi đen, bỏ nhãn người nói', () {
+      final i = text.indexOf('invoices');
+      expect(
+        ContextSentence.around(text, i, i + 'invoices'.length),
+        'Please send the invoices by Friday.',
+      );
+      final j = text.indexOf('today');
+      expect(ContextSentence.around(text, j, j + 5), 'Sure, I will do it today!');
+    });
+    test('xuống dòng là ranh giới câu', () {
+      const t = '(A) At the front desk\n(B) Next Monday';
+      final i = t.indexOf('Monday');
+      expect(ContextSentence.around(t, i, i + 6), 'Next Monday');
+    });
+    test('contains khớp cả dạng biến đổi và cụm từ', () {
+      expect(ContextSentence.contains('Please send the invoices.', 'invoice'), isTrue);
+      expect(ContextSentence.contains('We shipped it.', 'ship'), isTrue);
+      expect(ContextSentence.contains('Fill out the form.', 'fill out'), isTrue);
+      expect(ContextSentence.contains('Please send the invoices.', 'budget'), isFalse);
+    });
+  });
+
   group('Dictation', () {
     test('bỏ nhãn đầu dòng', () {
       expect(Dictation.lines('Where is it?\n(A) At the hotel.\nW: Hi.'), [

@@ -25,6 +25,86 @@ class Mission {
   bool get isDone => done >= target;
 }
 
+enum ChallengeKind { days, questions, words }
+
+/// Thử thách tuần (thứ Hai → Chủ nhật, giờ máy): học đủ ngày, đủ câu, đủ thẻ.
+/// Chỉ tiêu = 5 ngày theo mục tiêu mỗi ngày → còn 2 ngày nghỉ mà vẫn hoàn thành.
+class WeeklyChallenge {
+  const WeeklyChallenge({required this.weekStart, required this.goals, required this.daysLeft});
+
+  /// Thứ Hai đầu tuần (00:00 giờ máy).
+  final DateTime weekStart;
+  final List<ChallengeGoal> goals;
+
+  /// Số ngày còn lại trong tuần, tính cả hôm nay (1 = Chủ nhật).
+  final int daysLeft;
+
+  static const activeDaysTarget = 5;
+
+  int get goalsDone => goals.where((g) => g.isDone).length;
+  bool get isCompleted => goals.isNotEmpty && goalsDone == goals.length;
+}
+
+class ChallengeGoal {
+  const ChallengeGoal({
+    required this.kind,
+    required this.title,
+    required this.done,
+    required this.target,
+  });
+
+  final ChallengeKind kind;
+  final String title;
+  final int done;
+  final int target;
+
+  bool get isDone => done >= target;
+  double get ratio => target == 0 ? 1 : (done / target).clamp(0.0, 1.0);
+}
+
+/// [questionsByDay]: số câu theo lịch sử bài làm (bù khi log trên máy thiếu, vd. đổi máy).
+WeeklyChallenge computeWeeklyChallenge({
+  required Map<String, DayLog> log,
+  required Set<String> activeDays,
+  required Map<String, int> questionsByDay,
+  required GoalSettings goals,
+  required DateTime now,
+}) {
+  final today = DateTime(now.year, now.month, now.day);
+  final start = today.subtract(Duration(days: today.weekday - DateTime.monday));
+  final days = [
+    for (var i = 0; i < 7; i++) dayKey(DateTime(start.year, start.month, start.day + i)),
+  ];
+  var active = 0, questions = 0, words = 0;
+  for (final d in days) {
+    if (activeDays.contains(d)) active++;
+    final l = log[d] ?? const DayLog();
+    final q = questionsByDay[d] ?? 0;
+    questions += l.questions > q ? l.questions : q;
+    words += l.words;
+  }
+  const n = WeeklyChallenge.activeDaysTarget;
+  return WeeklyChallenge(
+    weekStart: start,
+    daysLeft: DateTime.sunday - today.weekday + 1,
+    goals: [
+      ChallengeGoal(kind: ChallengeKind.days, title: 'Học $n/7 ngày', done: active, target: n),
+      ChallengeGoal(
+        kind: ChallengeKind.questions,
+        title: 'Làm ${goals.dailyQuestions * n} câu',
+        done: questions,
+        target: goals.dailyQuestions * n,
+      ),
+      ChallengeGoal(
+        kind: ChallengeKind.words,
+        title: 'Ôn ${goals.dailyWords * n} thẻ từ',
+        done: words,
+        target: goals.dailyWords * n,
+      ),
+    ],
+  );
+}
+
 /// Điểm dự đoán: trung bình ≤ 3 full test gần nhất, hoặc ước tính từ tỉ lệ đúng theo Part.
 class ScorePrediction {
   const ScorePrediction({
@@ -50,7 +130,10 @@ class StudyProgress {
     required this.goals,
     required this.missions,
     required this.prediction,
+    required this.weekly,
   });
+
+  final WeeklyChallenge weekly;
 
   final int streak;
   final bool activeToday;
@@ -130,9 +213,12 @@ Future<StudyProgress> studyProgress(Ref ref) async {
       if (e.value.isActive) e.key,
     for (final a in attempts) dayKey(a.finishedAt.toLocal()),
   };
-  final attemptsToday = attempts
-      .where((a) => dayKey(a.finishedAt.toLocal()) == todayKey)
-      .fold(0, (s, a) => s + a.totalQuestions);
+  final questionsByDay = <String, int>{};
+  for (final a in attempts) {
+    final d = dayKey(a.finishedAt.toLocal());
+    questionsByDay[d] = (questionsByDay[d] ?? 0) + a.totalQuestions;
+  }
+  final attemptsToday = questionsByDay[todayKey] ?? 0;
 
   return StudyProgress(
     streak: computeStreak(active, now),
@@ -140,6 +226,13 @@ Future<StudyProgress> studyProgress(Ref ref) async {
     today: today,
     goals: goals,
     prediction: predictScore(attempts, stats),
+    weekly: computeWeeklyChallenge(
+      log: log,
+      activeDays: active,
+      questionsByDay: questionsByDay,
+      goals: goals,
+      now: now,
+    ),
     missions: [
       Mission(
         kind: MissionKind.questions,

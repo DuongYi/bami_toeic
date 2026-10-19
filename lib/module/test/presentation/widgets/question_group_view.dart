@@ -243,7 +243,20 @@ class _QuestionGroupViewState extends State<QuestionGroupView> {
       context,
       isHighlighted: (text) => _isHighlighted(target, text),
       onToggleHighlight: (text) => _toggleHighlight(target, text),
+      testId: widget.group.testId,
+      sourceLabel: _sourceLabel(target),
     );
+  }
+
+  /// Vị trí đoạn đang bôi đen, vd. "Part 7 · câu 147–150" hoặc "Part 5 · câu 101".
+  String _sourceLabel(String target) {
+    final g = widget.group;
+    final qs = target.startsWith('q_')
+        ? g.questions.where((q) => 'q_${q.id}' == target).toList()
+        : g.questions;
+    if (qs.isEmpty) return 'Part ${g.part}';
+    final first = qs.first.number, last = qs.last.number;
+    return 'Part ${g.part} · câu ${first == last ? '$first' : '$first–$last'}';
   }
 
   @override

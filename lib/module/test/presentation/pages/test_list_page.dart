@@ -67,6 +67,8 @@ class _TestListPageState extends ConsumerState<TestListPage> {
                   Gaps.v16,
                   const _DailyMission(),
                   Gaps.v16,
+                  const _WeeklyChallengeCard(),
+                  Gaps.v16,
                   const _QuickActions(),
                   Gaps.v16,
                   if (plan != null && !plan.isPro) ...[
@@ -404,6 +406,69 @@ class _DailyMission extends ConsumerWidget {
               MissionKind.mistakes => context.push(Routes.mistakes),
               MissionKind.dictations => context.push(Routes.listening),
             },
+    );
+  }
+}
+
+/// Thử thách tuần: học 5/7 ngày, đủ câu và thẻ theo mục tiêu mỗi ngày. Chạm → chỉnh mục tiêu.
+class _WeeklyChallengeCard extends ConsumerWidget {
+  const _WeeklyChallengeCard();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final w = ref.watch(studyProgressProvider).value?.weekly;
+    if (w == null || w.goals.isEmpty) return const SizedBox.shrink();
+    final done = w.isCompleted;
+    return AppCard(
+      onTap: () => showGoalSheet(context),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
+            children: [
+              IconBadge(
+                icon: Icons.emoji_events_outlined,
+                tone: done ? AppTone.success : AppTone.warning,
+              ),
+              Gaps.h12,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Thử thách tuần', style: context.textStyles.titleMedium),
+                    Text(
+                      'Từ thứ Hai ${Fmt.date(w.weekStart)}',
+                      style: context.textStyles.bodySmall?.copyWith(
+                        color: context.colors.onSurfaceVariant,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              if (done)
+                const StatusBadge(
+                  label: 'Hoàn thành',
+                  tone: AppTone.success,
+                  icon: Icons.check_circle_rounded,
+                )
+              else
+                StatusBadge(
+                  label: w.daysLeft == 1 ? 'Ngày cuối' : 'Còn ${w.daysLeft} ngày',
+                  icon: Icons.schedule_rounded,
+                ),
+            ],
+          ),
+          for (final g in w.goals) ...[
+            Gaps.v12,
+            LabeledProgress(
+              label: g.title,
+              value: g.ratio,
+              trailing: '${g.done.clamp(0, g.target)}/${g.target}',
+              tone: g.isDone ? AppTone.success : AppTone.info,
+            ),
+          ],
+        ],
+      ),
     );
   }
 }

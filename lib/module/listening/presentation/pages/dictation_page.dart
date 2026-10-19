@@ -11,7 +11,9 @@ import '../../../../helper/format.dart';
 import '../../../goals/data/study_store.dart';
 import '../../../test/data/models/test_models.dart';
 import '../../../vocab/presentation/widgets/word_lookup_sheet.dart';
+import '../../../../core/speech/speech_service.dart';
 import '../controllers/dictation_providers.dart';
+import '../widgets/shadowing_panel.dart';
 
 /// Chép chính tả từng đoạn audio: nghe → gõ → kiểm tra → xem transcript & nói theo (Shadowing).
 class DictationPage extends ConsumerWidget {
@@ -1001,7 +1003,7 @@ class _DictationSessionState extends ConsumerState<_DictationSession> {
                       style: context.textStyles.titleSmall?.copyWith(fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      'Nghe lại ở 0.75x và đọc nhại theo ngữ điệu để khắc sâu phản xạ.',
+                      'Nghe lại ở 0.75x, rồi nói theo từng câu để máy chấm phát âm.',
                       style: context.textStyles.bodySmall?.copyWith(
                         color: context.colors.onSurfaceVariant,
                       ),
@@ -1015,14 +1017,32 @@ class _DictationSessionState extends ConsumerState<_DictationSession> {
           SelectableText(
             transcript,
             style: context.textStyles.bodyLarge,
-            contextMenuBuilder: lookupContextMenu(context),
+            contextMenuBuilder: lookupContextMenu(
+              context,
+              testId: clip.testId,
+              sourceLabel: 'Part ${clip.part} · câu ${clip.questions.first.number}',
+            ),
           ),
           Gaps.v12,
           OutlinedButton.icon(
             icon: const Icon(Icons.slow_motion_video_rounded, size: AppSizes.iconSm),
-            label: const Text('Bật Shadowing ở 0.75x'),
+            label: const Text('Nghe lại cả đoạn ở 0.75x'),
             onPressed: _startShadowing,
           ),
+          if (SpeechService.supported) ...[
+            Gaps.v12,
+            const Divider(),
+            Gaps.v12,
+            const SectionHeader(
+              title: 'Nói theo từng câu',
+              subtitle: 'Bấm Nói theo, đọc to câu, máy chấm từng từ.',
+            ),
+            ShadowingPanel(
+              key: ValueKey(clip.id),
+              transcript: transcript,
+              onBeforeSpeak: () => _player.pause(),
+            ),
+          ],
         ],
       ),
     );

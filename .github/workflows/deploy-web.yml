@@ -1,0 +1,60 @@
+# Build bản web (Flutter) và đăng lên GitHub Pages mỗi khi push lên main.
+# Cần 2 repository secret: SUPABASE_URL, SUPABASE_KEY (khoá publishable, giống env.json).
+name: Deploy web
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.47.2
+          channel: stable
+          cache: true
+
+      - run: flutter pub get
+
+      - name: Tạo env.json từ secrets
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+        run: |
+          test -n "$SUPABASE_URL" && test -n "$SUPABASE_KEY" || { echo "Thiếu secret SUPABASE_URL / SUPABASE_KEY"; exit 1; }
+          jq -n --arg url "$SUPABASE_URL" --arg key "$SUPABASE_KEY" \
+            '{SUPABASE_URL: $url, SUPABASE_KEY: $key}' > env.json
+
+      # Trang dự án nằm ở /<tên repo>/ nên base-href phải khớp.
+      - run: >
+          flutter build web --release --no-wasm-dry-run
+          --dart-define-from-file=env.json
+          --base-href "/${{ github.event.repository.name }}/"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

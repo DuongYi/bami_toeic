@@ -89,10 +89,11 @@ abstract class VocabItem with _$VocabItem {
   static final _testRe = RegExp(r'Test (\d+)');
   static final _questionRe = RegExp(r'câu (\d+)');
 
-  /// Số đề ETS chứa từ này (Test N), null nếu không rõ.
+  /// Số đề ETS chứa từ này (Test N), null nếu không rõ. Từ riêng (lưu khi tra trong đề)
+  /// có nguồn tự do, không xếp vào bộ từ của đề ETS.
   int? get sourceTest => switch (source) {
-    final s? => int.tryParse(_testRe.firstMatch(s)?.group(1) ?? ''),
-    null => null,
+    final s? when isShared => int.tryParse(_testRe.firstMatch(s)?.group(1) ?? ''),
+    _ => null,
   };
 
   /// Số câu đầu tiên trong đề có từ này – dùng để học theo thứ tự xuất hiện.

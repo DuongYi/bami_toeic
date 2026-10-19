@@ -166,7 +166,7 @@ class SettingsPage extends ConsumerWidget {
     final autoPlay = ref.watch(autoPlayAudioProvider);
     final lbProfile = ref.watch(myLeaderboardProfileProvider).value;
     final biometric = ref.watch(biometricLoginProvider).value;
-    final storage = ref.watch(storageUsageProvider).value;
+    final storage = kIsWeb ? null : ref.watch(storageUsageProvider).value;
 
     return Scaffold(
       appBar: AppBar(
@@ -223,7 +223,9 @@ class SettingsPage extends ConsumerWidget {
               ),
               AppListGroup(
                 children: [
-                  SwitchListTile(
+                  // Web không có thông báo cục bộ.
+                  if (ReminderService.supported)
+                    SwitchListTile(
                     secondary: const IconBadge(
                       icon: Icons.notifications_active_outlined,
                       tone: AppTone.info,
@@ -237,7 +239,7 @@ class SettingsPage extends ConsumerWidget {
                     value: hasReminder,
                     onChanged: (on) => _toggleReminder(context, ref, on, goals),
                   ),
-                  if (hasReminder && reminderTime != null)
+                  if (ReminderService.supported && hasReminder && reminderTime != null)
                     ListTile(
                       leading: const IconBadge(
                         icon: Icons.access_time_rounded,
@@ -404,7 +406,8 @@ class SettingsPage extends ConsumerWidget {
               ),
               Gaps.v16,
 
-              // 6. DỮ LIỆU & BỘ NHỚ
+              // 6. DỮ LIỆU & BỘ NHỚ (web không lưu file trên máy)
+              if (!kIsWeb) ...[
               const SectionHeader(
                 title: 'Dữ liệu & bộ nhớ',
               ),
@@ -445,6 +448,7 @@ class SettingsPage extends ConsumerWidget {
               ),
               Gaps.v16,
 
+              ],
               // 7. THÔNG TIN ỨNG DỤNG
               const SectionHeader(
                 title: 'Thông tin ứng dụng',

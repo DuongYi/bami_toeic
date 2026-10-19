@@ -1,16 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../core/design_system/design_system.dart';
+import '../../core/home_widget/home_widget_service.dart';
+import '../../core/notifications/reminder_service.dart';
+import '../goals/presentation/controllers/habit_sync.dart';
 
 /// Khung 4 tab. Thanh tab nổi kiểu iOS 26 (kính mờ); nội dung cuộn chạy bên dưới thanh.
-class HomeShell extends StatelessWidget {
+/// Theo dõi tình hình học để cập nhật nhắc học và widget màn hình chính.
+class HomeShell extends ConsumerWidget {
   const HomeShell({super.key, required this.shell});
 
   final StatefulNavigationShell shell;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    ref.listen(habitStatusProvider, (_, next) {
+      if (next.value case final s?) {
+        ref.read(reminderServiceProvider).updateStatus(s);
+        ref.read(homeWidgetServiceProvider).update(s);
+      }
+    });
     return Scaffold(
       extendBody: true,
       body: shell,

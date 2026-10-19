@@ -109,7 +109,9 @@ class _WordDetailSheetState extends ConsumerState<WordDetailSheet> {
                         ? 'Test $t'
                         : 'Test $t · câu ${v.sourceQuestion}',
                     icon: Icons.quiz_outlined,
-                  ),
+                  )
+                else if (v.source case final s? when !v.isShared && s.isNotEmpty)
+                  StatusBadge(label: s, icon: Icons.quiz_outlined),
               ],
             ),
             Gaps.v16,

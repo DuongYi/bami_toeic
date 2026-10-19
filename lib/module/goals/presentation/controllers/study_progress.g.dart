@@ -46,4 +46,4 @@ final class StudyProgressProvider
   }
 }
 
-String _$studyProgressHash() => r'7955d7ad7f832846929e7238f2775926ca236cec';
+String _$studyProgressHash() => r'de12842879ec88a0677a5ea60e9b8932acad06c6';

@@ -35,17 +35,21 @@ class AppProgressBar extends StatelessWidget {
 }
 
 /// Dòng "nhãn ……… 12/20" + thanh tiến độ bên dưới.
+/// [tone] null = màu theo tỉ lệ đúng ([AppTone.fromRatio]); tiến độ chỉ tiêu (chưa xong ≠ sai)
+/// nên truyền tone cố định.
 class LabeledProgress extends StatelessWidget {
   const LabeledProgress({
     super.key,
     required this.label,
     required this.value,
     required this.trailing,
+    this.tone,
   });
 
   final String label;
   final double value;
   final String trailing;
+  final AppTone? tone;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +63,7 @@ class LabeledProgress extends StatelessWidget {
           ],
         ),
         Gaps.v4,
-        AppProgressBar(value: value, semanticLabel: label),
+        AppProgressBar(value: value, tone: tone, semanticLabel: label),
       ],
     );
   }

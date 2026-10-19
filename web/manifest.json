@@ -1,12 +1,12 @@
 {
-    "name": "bami_toeic",
-    "short_name": "bami_toeic",
+    "name": "Bami TOEIC",
+    "short_name": "Bami TOEIC",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#000000",
-    "theme_color": "#000000",
-    "description": "A new Flutter project.",
-    "orientation": "portrait-primary",
+    "background_color": "#FFFFFF",
+    "theme_color": "#1E5EFF",
+    "description": "Luyện đề TOEIC, từ vựng SRS, chép chính tả và shadowing.",
+    "orientation": "any",
     "prefer_related_applications": false,
     "icons": [
         {

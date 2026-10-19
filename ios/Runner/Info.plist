@@ -8,6 +8,10 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>Dùng Face ID để đăng nhập Bami TOEIC nhanh, không cần nhập mật khẩu.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Dùng micro khi luyện nói theo (Shadowing) để chấm phát âm của bạn.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Chuyển giọng bạn nói thành chữ để so với transcript khi luyện Shadowing.</string>
 	<key>CFBundleDisplayName</key>
 	<string>Bami Toeic</string>
 	<key>CFBundleExecutable</key>

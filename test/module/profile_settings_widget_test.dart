@@ -48,6 +48,7 @@ Widget _buildWrapper({
             ),
             missions: const [],
             prediction: null,
+            weekly: WeeklyChallenge(weekStart: DateTime(2026, 10, 19), goals: const [], daysLeft: 7),
           ),
         ),
       ),

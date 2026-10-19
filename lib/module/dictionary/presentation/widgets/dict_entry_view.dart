@@ -9,6 +9,7 @@ import '../../../../core/tts/tts_service.dart';
 import '../../../../helper/word_match.dart';
 import '../../../../routes/app_router.dart';
 import '../../../plan/presentation/controllers/plan_controller.dart';
+import '../../../test/presentation/controllers/test_providers.dart';
 import '../../../vocab/data/models/vocab_models.dart';
 import '../../../vocab/data/vocab_decks.dart';
 import '../../../vocab/presentation/controllers/vocab_controller.dart';
@@ -16,6 +17,7 @@ import '../../../vocab/presentation/pages/vocab_form_sheet.dart';
 import '../../../vocab/presentation/widgets/word_detail_sheet.dart';
 import '../../data/models/dict_models.dart';
 import '../controllers/dictionary_controller.dart';
+import 'lookup_origin.dart';
 import 'translation_view.dart';
 
 /// Tên tiếng Việt của loại từ (mã trong dict_entries và partOfSpeech của API Anh–Anh).
@@ -261,6 +263,7 @@ VocabInput _inputOf(DictLookup lookup, DictSense s) => VocabInput(
 Future<void> _saveToNotebook(BuildContext context, WidgetRef ref, VocabInput input) async {
   final messenger = ScaffoldMessenger.of(context);
   final router = GoRouter.of(context);
+  input = _withOrigin(ref, input, LookupOriginScope.maybeOf(context));
   try {
     await ref.read(vocabListProvider.notifier).saveOwn(input);
     showAppSnackBarOn(
@@ -273,6 +276,27 @@ Future<void> _saveToNotebook(BuildContext context, WidgetRef ref, VocabInput inp
   } catch (e) {
     showAppSnackBarOn(messenger, AppException.from(e).message, tone: AppTone.danger);
   }
+}
+
+/// Tra từ trong đề → câu ví dụ là câu chứa từ đó, nguồn "Tên đề · Part 7 · câu 147".
+/// Bỏ qua khi người học đã chuyển sang tra từ khác không có trong câu.
+VocabInput _withOrigin(WidgetRef ref, VocabInput input, LookupOrigin? origin) {
+  if (origin == null || !ContextSentence.contains(origin.sentence, input.word)) return input;
+  final title = switch (origin.testId) {
+    final id? => ref.read(testListProvider).value?.where((t) => t.id == id).firstOrNull?.title,
+    null => null,
+  };
+  final source = [?title, ?origin.label].join(' · ');
+  return VocabInput(
+    word: input.word,
+    ipa: input.ipa,
+    pos: input.pos,
+    meaning: input.meaning,
+    example: origin.sentence,
+    topic: input.topic,
+    source: source.isEmpty ? input.source : source,
+    userId: input.userId,
+  );
 }
 
 Future<void> _removeFromNotebook(BuildContext context, WidgetRef ref, VocabItem item) async {

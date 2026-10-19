@@ -65,3 +65,42 @@ abstract final class WordMatch {
     return [...exact, ...phrase];
   }
 }
+
+/// Câu chứa đoạn bôi đen trong đề – làm câu ví dụ khi lưu từ vào sổ.
+abstract final class ContextSentence {
+  static final _end = RegExp(r'[.!?\n]');
+  static final _label = RegExp(r'^\s*(\([A-D]\)|[MW]\d?:|[A-Z][a-z]*\s?\d?:)\s*');
+
+  /// Tối đa bấy nhiêu ký tự: câu dài hơn thì không dùng làm ví dụ.
+  static const maxLength = 240;
+
+  /// Câu bao quanh đoạn [start, end) của [text]; null nếu không tách được câu gọn.
+  static String? around(String text, int start, int end) {
+    if (start < 0 || end > text.length || start >= end) return null;
+    var from = start;
+    while (from > 0 && !_end.hasMatch(text[from - 1])) {
+      from--;
+    }
+    var to = end;
+    while (to < text.length && !_end.hasMatch(text[to])) {
+      to++;
+    }
+    if (to < text.length && text[to] != '\n') to++; // giữ dấu chấm câu
+    final s = text
+        .substring(from, to)
+        .replaceFirst(_label, '')
+        .trim()
+        .replaceAll(RegExp(r'\s+'), ' ');
+    if (s.isEmpty || s.length > maxLength) return null;
+    return s;
+  }
+
+  /// [sentence] có chứa [word] (kể cả dạng biến đổi: "invoices" ↔ "invoice").
+  static bool contains(String sentence, String word) {
+    final w = WordMatch.normalize(word);
+    if (w.isEmpty) return false;
+    final s = WordMatch.normalize(sentence);
+    if (w.contains(' ')) return s.contains(w);
+    return s.split(RegExp(r"[^a-z0-9']+")).any((t) => t == w || WordMatch.stems(t).contains(w));
+  }
+}
