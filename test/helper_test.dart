@@ -175,4 +175,32 @@ void main() {
     expect(Fmt.bytes((12.3 * 1024 * 1024).round()), '12,3 MB');
     expect(Fmt.bytes((1.2 * 1024 * 1024 * 1024).round()), '1,2 GB');
   });
+
+  group('Stamina', () {
+    TimedAnswer a(int n, bool ok, {bool skipped = false}) => TimedAnswer(
+      questionId: 'q$n',
+      part: n <= 130 ? 5 : 7,
+      number: n,
+      ms: null,
+      correct: ok,
+      skipped: skipped,
+    );
+
+    test('đề ngắn hoặc chỉ có Listening thì không đánh giá', () {
+      expect(Stamina.of([for (var n = 101; n <= 115; n++) a(n, true)]), isNull);
+    });
+
+    test('tụt ở nửa sau → cảnh báo, đếm câu bỏ trống', () {
+      final s = Stamina.of([
+        for (var n = 101; n <= 150; n++) a(n, n % 10 != 0), // 45/50
+        for (var n = 151; n <= 200; n++) a(n, n < 180, skipped: n >= 195), // 29/50
+      ])!;
+      expect(s.first.from, 101);
+      expect(s.last.to, 200);
+      expect(s.first.correct, 45);
+      expect(s.last.correct, 29);
+      expect(s.last.skipped, 6);
+      expect(s.dropped, isTrue);
+    });
+  });
 }

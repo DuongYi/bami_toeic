@@ -3,6 +3,9 @@
 import 'dart:math';
 
 import 'package:bami_toeic/main.dart';
+import 'package:bami_toeic/module/arena/data/models/arena_models.dart';
+import 'package:bami_toeic/module/arena/presentation/controllers/contest_controller.dart';
+import 'package:bami_toeic/module/arena/presentation/controllers/duel_controller.dart';
 import 'package:bami_toeic/module/auth/presentation/controllers/auth_controller.dart';
 import 'package:bami_toeic/module/dictionary/data/dictionary_repository.dart';
 import 'package:bami_toeic/module/dictionary/data/translate_repository.dart';
@@ -47,6 +50,13 @@ Future<ProviderContainer> _boot(
         goalSettingsProvider.overrideWith((ref) async => const GoalSettings(targetScore: 800)),
         leaderboardRepositoryProvider.overrideWithValue(FakeLeaderboardRepository()),
         planRepositoryProvider.overrideWithValue(FakePlanRepository()),
+        // Không có kỳ thi → thẻ không đếm ngược (ảnh chụp ổn định theo giờ chạy test).
+        contestOverviewProvider.overrideWith(
+          (ref) async => ContestOverview(serverNow: DateTime(2026, 10, 19)),
+        ),
+        duelStatsProvider.overrideWith(
+          (ref) async => const DuelStats(wins: 3, losses: 1, leftToday: 2),
+        ),
         sessionRandomProvider.overrideWithValue(Random(1)),
       ],
       child: const BamiToeicApp(),

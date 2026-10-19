@@ -66,7 +66,7 @@ class _ResultBodyState extends State<_ResultBody> {
     );
   }
 
-  PacingReport? _pacing() => Pacing.of([
+  List<TimedAnswer> _timed() => [
     for (final q in widget.data.questions)
       TimedAnswer(
         questionId: q.id,
@@ -74,8 +74,9 @@ class _ResultBodyState extends State<_ResultBody> {
         number: q.number,
         ms: widget.data.timeSpentMs[q.id],
         correct: _isCorrect(q),
+        skipped: widget.data.answers[q.id] == null,
       ),
-  ]);
+  ];
 
   /// Mở phần xem lại ở nhóm chứa câu [questionId].
   void _openReviewAt(String questionId) {
@@ -95,6 +96,7 @@ class _ResultBodyState extends State<_ResultBody> {
   Widget build(BuildContext context) {
     final a = widget.data.attempt;
     final questions = widget.data.questions;
+    final timed = _timed();
 
     final byPart = <int, (int, int)>{};
     for (final q in questions) {
@@ -287,7 +289,15 @@ class _ResultBodyState extends State<_ResultBody> {
                   ],
                 ),
               ),
-              if (_pacing() case final pacing?) ...[
+              if (Stamina.of(timed) case final stamina?) ...[
+                Gaps.v24,
+                const SectionHeader(
+                  title: 'Sức bền',
+                  subtitle: 'Phần Reading · nửa đầu so với nửa sau',
+                ),
+                _StaminaCard(stamina: stamina),
+              ],
+              if (Pacing.of(timed) case final pacing?) ...[
                 Gaps.v24,
                 const SectionHeader(
                   title: 'Nhịp làm bài',
@@ -342,6 +352,50 @@ class _ResultBodyState extends State<_ResultBody> {
       tone: tone,
       semanticLabel: 'Câu ${q.number}, $status',
       onTap: onTap,
+    );
+  }
+}
+
+/// Tỉ lệ đúng nửa đầu / nửa sau phần Reading và lời khuyên khi tụt ở cuối bài.
+class _StaminaCard extends StatelessWidget {
+  const _StaminaCard({required this.stamina});
+
+  final Stamina stamina;
+
+  @override
+  Widget build(BuildContext context) {
+    final s = stamina;
+    Widget row(String label, StaminaHalf h) => LabeledProgress(
+      label: '$label · câu ${h.from}–${h.to}',
+      value: h.ratio,
+      trailing: '${h.correct}/${h.total}',
+    );
+    final pts = (s.drop * 100).round();
+    return AppCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          row('Nửa đầu', s.first),
+          Gaps.v12,
+          row('Nửa sau', s.last),
+          Gaps.v12,
+          if (s.dropped)
+            AppBanner(
+              tone: AppTone.warning,
+              message: [
+                'Nửa sau đúng ít hơn $pts điểm %: dấu hiệu mệt hoặc thiếu giờ.',
+                if (s.last.skipped > 0) 'Bạn bỏ trống ${s.last.skipped} câu ở nửa sau.',
+                'Hãy luyện đề full liền mạch 75 phút và giữ nhịp Part 5 dưới 25 giây/câu '
+                    'để dồn giờ cho Part 7.',
+              ].join(' '),
+            )
+          else
+            AppBanner(
+              tone: AppTone.success,
+              message: 'Giữ phong độ tốt đến cuối bài – độ chính xác không tụt ở nửa sau.',
+            ),
+        ],
+      ),
     );
   }
 }

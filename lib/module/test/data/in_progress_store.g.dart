@@ -28,6 +28,12 @@ _TakingSnapshot _$TakingSnapshotFromJson(
   flagged:
       (json['flagged'] as List<dynamic>?)?.map((e) => e as String).toList() ??
       const <String>[],
+  eliminated:
+      (json['eliminated'] as Map<String, dynamic>?)?.map(
+        (k, e) =>
+            MapEntry(k, (e as List<dynamic>).map((e) => e as String).toList()),
+      ) ??
+      const <String, List<String>>{},
   totalQuestions: (json['total_questions'] as num).toInt(),
   savedAt: DateTime.parse(json['saved_at'] as String),
 );
@@ -43,6 +49,7 @@ Map<String, dynamic> _$TakingSnapshotToJson(_TakingSnapshot instance) =>
       'answers': instance.answers,
       'revealed': instance.revealed,
       'flagged': instance.flagged,
+      'eliminated': instance.eliminated,
       'total_questions': instance.totalQuestions,
       'saved_at': instance.savedAt.toIso8601String(),
     };

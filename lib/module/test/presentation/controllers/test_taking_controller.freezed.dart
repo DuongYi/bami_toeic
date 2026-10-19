@@ -18,7 +18,8 @@ mixin _$TakingState {
  String get mode; List<int> get parts; List<QuestionGroup> get groups; DateTime get startedAt;/// Thi thử: thời gian còn lại. Luyện tập: thời gian đã làm.
  Duration get clock; Map<String, String> get answers;/// Câu đã hiện đáp án (chế độ luyện tập)
  Set<String> get revealed;/// Câu đánh dấu để xem lại trước khi nộp
- Set<String> get flagged;/// Thời gian làm từng câu (ms): tính từ lúc vào nhóm câu / lần chọn trước tới lúc chọn.
+ Set<String> get flagged;/// Phương án đã gạch (loại) của từng câu, như gạch trên giấy khi thi.
+ Map<String, Set<String>> get eliminated;/// Thời gian làm từng câu (ms): tính từ lúc vào nhóm câu / lần chọn trước tới lúc chọn.
  Map<String, int> get timeSpentMs; int get index; bool get submitting; bool get isMistakeSession;/// Khôi phục từ bài làm dở
  bool get resumed; Attempt? get submitted;/// Kết quả phiên sổ câu sai: (đúng, tổng)
  (int, int,)? get mistakeResult; Object? get submitError;
@@ -33,20 +34,20 @@ $TakingStateCopyWith<TakingState> get copyWith => _$TakingStateCopyWithImpl<Taki
 @override
 bool operator ==(Object other) {
   final _this = this as TakingState;
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is TakingState&&(identical(other.mode, _this.mode) || other.mode == _this.mode)&&const DeepCollectionEquality().equals(other.parts, _this.parts)&&const DeepCollectionEquality().equals(other.groups, _this.groups)&&(identical(other.startedAt, _this.startedAt) || other.startedAt == _this.startedAt)&&(identical(other.clock, _this.clock) || other.clock == _this.clock)&&const DeepCollectionEquality().equals(other.answers, _this.answers)&&const DeepCollectionEquality().equals(other.revealed, _this.revealed)&&const DeepCollectionEquality().equals(other.flagged, _this.flagged)&&const DeepCollectionEquality().equals(other.timeSpentMs, _this.timeSpentMs)&&(identical(other.index, _this.index) || other.index == _this.index)&&(identical(other.submitting, _this.submitting) || other.submitting == _this.submitting)&&(identical(other.isMistakeSession, _this.isMistakeSession) || other.isMistakeSession == _this.isMistakeSession)&&(identical(other.resumed, _this.resumed) || other.resumed == _this.resumed)&&(identical(other.submitted, _this.submitted) || other.submitted == _this.submitted)&&(identical(other.mistakeResult, _this.mistakeResult) || other.mistakeResult == _this.mistakeResult)&&const DeepCollectionEquality().equals(other.submitError, _this.submitError));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is TakingState&&(identical(other.mode, _this.mode) || other.mode == _this.mode)&&const DeepCollectionEquality().equals(other.parts, _this.parts)&&const DeepCollectionEquality().equals(other.groups, _this.groups)&&(identical(other.startedAt, _this.startedAt) || other.startedAt == _this.startedAt)&&(identical(other.clock, _this.clock) || other.clock == _this.clock)&&const DeepCollectionEquality().equals(other.answers, _this.answers)&&const DeepCollectionEquality().equals(other.revealed, _this.revealed)&&const DeepCollectionEquality().equals(other.flagged, _this.flagged)&&const DeepCollectionEquality().equals(other.eliminated, _this.eliminated)&&const DeepCollectionEquality().equals(other.timeSpentMs, _this.timeSpentMs)&&(identical(other.index, _this.index) || other.index == _this.index)&&(identical(other.submitting, _this.submitting) || other.submitting == _this.submitting)&&(identical(other.isMistakeSession, _this.isMistakeSession) || other.isMistakeSession == _this.isMistakeSession)&&(identical(other.resumed, _this.resumed) || other.resumed == _this.resumed)&&(identical(other.submitted, _this.submitted) || other.submitted == _this.submitted)&&(identical(other.mistakeResult, _this.mistakeResult) || other.mistakeResult == _this.mistakeResult)&&const DeepCollectionEquality().equals(other.submitError, _this.submitError));
 }
 
 
 @override
 int get hashCode {
   final _this = this as TakingState;
-  return Object.hash(runtimeType,_this.mode,const DeepCollectionEquality().hash(_this.parts),const DeepCollectionEquality().hash(_this.groups),_this.startedAt,_this.clock,const DeepCollectionEquality().hash(_this.answers),const DeepCollectionEquality().hash(_this.revealed),const DeepCollectionEquality().hash(_this.flagged),const DeepCollectionEquality().hash(_this.timeSpentMs),_this.index,_this.submitting,_this.isMistakeSession,_this.resumed,_this.submitted,_this.mistakeResult,const DeepCollectionEquality().hash(_this.submitError));
+  return Object.hash(runtimeType,_this.mode,const DeepCollectionEquality().hash(_this.parts),const DeepCollectionEquality().hash(_this.groups),_this.startedAt,_this.clock,const DeepCollectionEquality().hash(_this.answers),const DeepCollectionEquality().hash(_this.revealed),const DeepCollectionEquality().hash(_this.flagged),const DeepCollectionEquality().hash(_this.eliminated),const DeepCollectionEquality().hash(_this.timeSpentMs),_this.index,_this.submitting,_this.isMistakeSession,_this.resumed,_this.submitted,_this.mistakeResult,const DeepCollectionEquality().hash(_this.submitError));
 }
 
 @override
 String toString() {
   final _this = this as TakingState;
-  return 'TakingState(mode: ${_this.mode}, parts: ${_this.parts}, groups: ${_this.groups}, startedAt: ${_this.startedAt}, clock: ${_this.clock}, answers: ${_this.answers}, revealed: ${_this.revealed}, flagged: ${_this.flagged}, timeSpentMs: ${_this.timeSpentMs}, index: ${_this.index}, submitting: ${_this.submitting}, isMistakeSession: ${_this.isMistakeSession}, resumed: ${_this.resumed}, submitted: ${_this.submitted}, mistakeResult: ${_this.mistakeResult}, submitError: ${_this.submitError})';
+  return 'TakingState(mode: ${_this.mode}, parts: ${_this.parts}, groups: ${_this.groups}, startedAt: ${_this.startedAt}, clock: ${_this.clock}, answers: ${_this.answers}, revealed: ${_this.revealed}, flagged: ${_this.flagged}, eliminated: ${_this.eliminated}, timeSpentMs: ${_this.timeSpentMs}, index: ${_this.index}, submitting: ${_this.submitting}, isMistakeSession: ${_this.isMistakeSession}, resumed: ${_this.resumed}, submitted: ${_this.submitted}, mistakeResult: ${_this.mistakeResult}, submitError: ${_this.submitError})';
 }
 
 
@@ -57,7 +58,7 @@ abstract mixin class $TakingStateCopyWith<$Res>  {
   factory $TakingStateCopyWith(TakingState value, $Res Function(TakingState) _then) = _$TakingStateCopyWithImpl;
 @useResult
 $Res call({
- String mode, List<int> parts, List<QuestionGroup> groups, DateTime startedAt, Duration clock, Map<String, String> answers, Set<String> revealed, Set<String> flagged, Map<String, int> timeSpentMs, int index, bool submitting, bool isMistakeSession, bool resumed, Attempt? submitted, (int, int,)? mistakeResult, Object? submitError
+ String mode, List<int> parts, List<QuestionGroup> groups, DateTime startedAt, Duration clock, Map<String, String> answers, Set<String> revealed, Set<String> flagged, Map<String, Set<String>> eliminated, Map<String, int> timeSpentMs, int index, bool submitting, bool isMistakeSession, bool resumed, Attempt? submitted, (int, int,)? mistakeResult, Object? submitError
 });
 
 
@@ -74,7 +75,7 @@ class _$TakingStateCopyWithImpl<$Res>
 
 /// Create a copy of TakingState
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? mode = null,Object? parts = null,Object? groups = null,Object? startedAt = null,Object? clock = null,Object? answers = null,Object? revealed = null,Object? flagged = null,Object? timeSpentMs = null,Object? index = null,Object? submitting = null,Object? isMistakeSession = null,Object? resumed = null,Object? submitted = freezed,Object? mistakeResult = freezed,Object? submitError = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? mode = null,Object? parts = null,Object? groups = null,Object? startedAt = null,Object? clock = null,Object? answers = null,Object? revealed = null,Object? flagged = null,Object? eliminated = null,Object? timeSpentMs = null,Object? index = null,Object? submitting = null,Object? isMistakeSession = null,Object? resumed = null,Object? submitted = freezed,Object? mistakeResult = freezed,Object? submitError = freezed,}) {
   return _then(TakingState(
 mode: null == mode ? _self.mode : mode // ignore: cast_nullable_to_non_nullable
 as String,parts: null == parts ? _self.parts : parts // ignore: cast_nullable_to_non_nullable
@@ -84,7 +85,8 @@ as DateTime,clock: null == clock ? _self.clock : clock // ignore: cast_nullable_
 as Duration,answers: null == answers ? _self.answers : answers // ignore: cast_nullable_to_non_nullable
 as Map<String, String>,revealed: null == revealed ? _self.revealed : revealed // ignore: cast_nullable_to_non_nullable
 as Set<String>,flagged: null == flagged ? _self.flagged : flagged // ignore: cast_nullable_to_non_nullable
-as Set<String>,timeSpentMs: null == timeSpentMs ? _self.timeSpentMs : timeSpentMs // ignore: cast_nullable_to_non_nullable
+as Set<String>,eliminated: null == eliminated ? _self.eliminated : eliminated // ignore: cast_nullable_to_non_nullable
+as Map<String, Set<String>>,timeSpentMs: null == timeSpentMs ? _self.timeSpentMs : timeSpentMs // ignore: cast_nullable_to_non_nullable
 as Map<String, int>,index: null == index ? _self.index : index // ignore: cast_nullable_to_non_nullable
 as int,submitting: null == submitting ? _self.submitting : submitting // ignore: cast_nullable_to_non_nullable
 as bool,isMistakeSession: null == isMistakeSession ? _self.isMistakeSession : isMistakeSession // ignore: cast_nullable_to_non_nullable
@@ -188,10 +190,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String mode,  List<int> parts,  List<QuestionGroup> groups,  DateTime startedAt,  Duration clock,  Map<String, String> answers,  Set<String> revealed,  Set<String> flagged,  Map<String, int> timeSpentMs,  int index,  bool submitting,  bool isMistakeSession,  bool resumed,  Attempt? submitted,  (int, int,)? mistakeResult,  Object? submitError)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String mode,  List<int> parts,  List<QuestionGroup> groups,  DateTime startedAt,  Duration clock,  Map<String, String> answers,  Set<String> revealed,  Set<String> flagged,  Map<String, Set<String>> eliminated,  Map<String, int> timeSpentMs,  int index,  bool submitting,  bool isMistakeSession,  bool resumed,  Attempt? submitted,  (int, int,)? mistakeResult,  Object? submitError)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _TakingState() when $default != null:
-return $default(_that.mode,_that.parts,_that.groups,_that.startedAt,_that.clock,_that.answers,_that.revealed,_that.flagged,_that.timeSpentMs,_that.index,_that.submitting,_that.isMistakeSession,_that.resumed,_that.submitted,_that.mistakeResult,_that.submitError);case _:
+return $default(_that.mode,_that.parts,_that.groups,_that.startedAt,_that.clock,_that.answers,_that.revealed,_that.flagged,_that.eliminated,_that.timeSpentMs,_that.index,_that.submitting,_that.isMistakeSession,_that.resumed,_that.submitted,_that.mistakeResult,_that.submitError);case _:
   return orElse();
 
 }
@@ -209,10 +211,10 @@ return $default(_that.mode,_that.parts,_that.groups,_that.startedAt,_that.clock,
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String mode,  List<int> parts,  List<QuestionGroup> groups,  DateTime startedAt,  Duration clock,  Map<String, String> answers,  Set<String> revealed,  Set<String> flagged,  Map<String, int> timeSpentMs,  int index,  bool submitting,  bool isMistakeSession,  bool resumed,  Attempt? submitted,  (int, int,)? mistakeResult,  Object? submitError)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String mode,  List<int> parts,  List<QuestionGroup> groups,  DateTime startedAt,  Duration clock,  Map<String, String> answers,  Set<String> revealed,  Set<String> flagged,  Map<String, Set<String>> eliminated,  Map<String, int> timeSpentMs,  int index,  bool submitting,  bool isMistakeSession,  bool resumed,  Attempt? submitted,  (int, int,)? mistakeResult,  Object? submitError)  $default,) {final _that = this;
 switch (_that) {
 case _TakingState():
-return $default(_that.mode,_that.parts,_that.groups,_that.startedAt,_that.clock,_that.answers,_that.revealed,_that.flagged,_that.timeSpentMs,_that.index,_that.submitting,_that.isMistakeSession,_that.resumed,_that.submitted,_that.mistakeResult,_that.submitError);case _:
+return $default(_that.mode,_that.parts,_that.groups,_that.startedAt,_that.clock,_that.answers,_that.revealed,_that.flagged,_that.eliminated,_that.timeSpentMs,_that.index,_that.submitting,_that.isMistakeSession,_that.resumed,_that.submitted,_that.mistakeResult,_that.submitError);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -229,10 +231,10 @@ return $default(_that.mode,_that.parts,_that.groups,_that.startedAt,_that.clock,
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String mode,  List<int> parts,  List<QuestionGroup> groups,  DateTime startedAt,  Duration clock,  Map<String, String> answers,  Set<String> revealed,  Set<String> flagged,  Map<String, int> timeSpentMs,  int index,  bool submitting,  bool isMistakeSession,  bool resumed,  Attempt? submitted,  (int, int,)? mistakeResult,  Object? submitError)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String mode,  List<int> parts,  List<QuestionGroup> groups,  DateTime startedAt,  Duration clock,  Map<String, String> answers,  Set<String> revealed,  Set<String> flagged,  Map<String, Set<String>> eliminated,  Map<String, int> timeSpentMs,  int index,  bool submitting,  bool isMistakeSession,  bool resumed,  Attempt? submitted,  (int, int,)? mistakeResult,  Object? submitError)?  $default,) {final _that = this;
 switch (_that) {
 case _TakingState() when $default != null:
-return $default(_that.mode,_that.parts,_that.groups,_that.startedAt,_that.clock,_that.answers,_that.revealed,_that.flagged,_that.timeSpentMs,_that.index,_that.submitting,_that.isMistakeSession,_that.resumed,_that.submitted,_that.mistakeResult,_that.submitError);case _:
+return $default(_that.mode,_that.parts,_that.groups,_that.startedAt,_that.clock,_that.answers,_that.revealed,_that.flagged,_that.eliminated,_that.timeSpentMs,_that.index,_that.submitting,_that.isMistakeSession,_that.resumed,_that.submitted,_that.mistakeResult,_that.submitError);case _:
   return null;
 
 }
@@ -244,7 +246,7 @@ return $default(_that.mode,_that.parts,_that.groups,_that.startedAt,_that.clock,
 
 
 class _TakingState extends TakingState {
-  const _TakingState({required this.mode, required  List<int> parts, required  List<QuestionGroup> groups, required this.startedAt, required this.clock,  Map<String, String> answers = const <String, String>{},  Set<String> revealed = const <String>{},  Set<String> flagged = const <String>{},  Map<String, int> timeSpentMs = const <String, int>{}, this.index = 0, this.submitting = false, this.isMistakeSession = false, this.resumed = false, this.submitted, this.mistakeResult, this.submitError}): _parts = parts,_groups = groups,_answers = answers,_revealed = revealed,_flagged = flagged,_timeSpentMs = timeSpentMs,super._();
+  const _TakingState({required this.mode, required  List<int> parts, required  List<QuestionGroup> groups, required this.startedAt, required this.clock,  Map<String, String> answers = const <String, String>{},  Set<String> revealed = const <String>{},  Set<String> flagged = const <String>{},  Map<String, Set<String>> eliminated = const <String, Set<String>>{},  Map<String, int> timeSpentMs = const <String, int>{}, this.index = 0, this.submitting = false, this.isMistakeSession = false, this.resumed = false, this.submitted, this.mistakeResult, this.submitError}): _parts = parts,_groups = groups,_answers = answers,_revealed = revealed,_flagged = flagged,_eliminated = eliminated,_timeSpentMs = timeSpentMs,super._();
   
 
 @override final  String mode;
@@ -290,6 +292,15 @@ class _TakingState extends TakingState {
   return EqualUnmodifiableSetView(_flagged);
 }
 
+/// Phương án đã gạch (loại) của từng câu, như gạch trên giấy khi thi.
+ final  Map<String, Set<String>> _eliminated;
+/// Phương án đã gạch (loại) của từng câu, như gạch trên giấy khi thi.
+@override@JsonKey() Map<String, Set<String>> get eliminated {
+  if (_eliminated is EqualUnmodifiableMapView) return _eliminated;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableMapView(_eliminated);
+}
+
 /// Thời gian làm từng câu (ms): tính từ lúc vào nhóm câu / lần chọn trước tới lúc chọn.
  final  Map<String, int> _timeSpentMs;
 /// Thời gian làm từng câu (ms): tính từ lúc vào nhóm câu / lần chọn trước tới lúc chọn.
@@ -319,18 +330,18 @@ _$TakingStateCopyWith<_TakingState> get copyWith => __$TakingStateCopyWithImpl<_
 
 @override
 bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _TakingState&&(identical(other.mode, mode) || other.mode == mode)&&const DeepCollectionEquality().equals(other.parts, _parts)&&const DeepCollectionEquality().equals(other.groups, _groups)&&(identical(other.startedAt, startedAt) || other.startedAt == startedAt)&&(identical(other.clock, clock) || other.clock == clock)&&const DeepCollectionEquality().equals(other.answers, _answers)&&const DeepCollectionEquality().equals(other.revealed, _revealed)&&const DeepCollectionEquality().equals(other.flagged, _flagged)&&const DeepCollectionEquality().equals(other.timeSpentMs, _timeSpentMs)&&(identical(other.index, index) || other.index == index)&&(identical(other.submitting, submitting) || other.submitting == submitting)&&(identical(other.isMistakeSession, isMistakeSession) || other.isMistakeSession == isMistakeSession)&&(identical(other.resumed, resumed) || other.resumed == resumed)&&(identical(other.submitted, submitted) || other.submitted == submitted)&&(identical(other.mistakeResult, mistakeResult) || other.mistakeResult == mistakeResult)&&const DeepCollectionEquality().equals(other.submitError, submitError));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _TakingState&&(identical(other.mode, mode) || other.mode == mode)&&const DeepCollectionEquality().equals(other.parts, _parts)&&const DeepCollectionEquality().equals(other.groups, _groups)&&(identical(other.startedAt, startedAt) || other.startedAt == startedAt)&&(identical(other.clock, clock) || other.clock == clock)&&const DeepCollectionEquality().equals(other.answers, _answers)&&const DeepCollectionEquality().equals(other.revealed, _revealed)&&const DeepCollectionEquality().equals(other.flagged, _flagged)&&const DeepCollectionEquality().equals(other.eliminated, _eliminated)&&const DeepCollectionEquality().equals(other.timeSpentMs, _timeSpentMs)&&(identical(other.index, index) || other.index == index)&&(identical(other.submitting, submitting) || other.submitting == submitting)&&(identical(other.isMistakeSession, isMistakeSession) || other.isMistakeSession == isMistakeSession)&&(identical(other.resumed, resumed) || other.resumed == resumed)&&(identical(other.submitted, submitted) || other.submitted == submitted)&&(identical(other.mistakeResult, mistakeResult) || other.mistakeResult == mistakeResult)&&const DeepCollectionEquality().equals(other.submitError, submitError));
 }
 
 
 @override
 int get hashCode {
-    return Object.hash(runtimeType,mode,const DeepCollectionEquality().hash(_parts),const DeepCollectionEquality().hash(_groups),startedAt,clock,const DeepCollectionEquality().hash(_answers),const DeepCollectionEquality().hash(_revealed),const DeepCollectionEquality().hash(_flagged),const DeepCollectionEquality().hash(_timeSpentMs),index,submitting,isMistakeSession,resumed,submitted,mistakeResult,const DeepCollectionEquality().hash(submitError));
+    return Object.hash(runtimeType,mode,const DeepCollectionEquality().hash(_parts),const DeepCollectionEquality().hash(_groups),startedAt,clock,const DeepCollectionEquality().hash(_answers),const DeepCollectionEquality().hash(_revealed),const DeepCollectionEquality().hash(_flagged),const DeepCollectionEquality().hash(_eliminated),const DeepCollectionEquality().hash(_timeSpentMs),index,submitting,isMistakeSession,resumed,submitted,mistakeResult,const DeepCollectionEquality().hash(submitError));
 }
 
 @override
 String toString() {
-    return 'TakingState(mode: $mode, parts: $parts, groups: $groups, startedAt: $startedAt, clock: $clock, answers: $answers, revealed: $revealed, flagged: $flagged, timeSpentMs: $timeSpentMs, index: $index, submitting: $submitting, isMistakeSession: $isMistakeSession, resumed: $resumed, submitted: $submitted, mistakeResult: $mistakeResult, submitError: $submitError)';
+    return 'TakingState(mode: $mode, parts: $parts, groups: $groups, startedAt: $startedAt, clock: $clock, answers: $answers, revealed: $revealed, flagged: $flagged, eliminated: $eliminated, timeSpentMs: $timeSpentMs, index: $index, submitting: $submitting, isMistakeSession: $isMistakeSession, resumed: $resumed, submitted: $submitted, mistakeResult: $mistakeResult, submitError: $submitError)';
 }
 
 
@@ -341,7 +352,7 @@ abstract mixin class _$TakingStateCopyWith<$Res> implements $TakingStateCopyWith
   factory _$TakingStateCopyWith(_TakingState value, $Res Function(_TakingState) _then) = __$TakingStateCopyWithImpl;
 @override @useResult
 $Res call({
- String mode, List<int> parts, List<QuestionGroup> groups, DateTime startedAt, Duration clock, Map<String, String> answers, Set<String> revealed, Set<String> flagged, Map<String, int> timeSpentMs, int index, bool submitting, bool isMistakeSession, bool resumed, Attempt? submitted, (int, int,)? mistakeResult, Object? submitError
+ String mode, List<int> parts, List<QuestionGroup> groups, DateTime startedAt, Duration clock, Map<String, String> answers, Set<String> revealed, Set<String> flagged, Map<String, Set<String>> eliminated, Map<String, int> timeSpentMs, int index, bool submitting, bool isMistakeSession, bool resumed, Attempt? submitted, (int, int,)? mistakeResult, Object? submitError
 });
 
 
@@ -358,7 +369,7 @@ class __$TakingStateCopyWithImpl<$Res>
 
 /// Create a copy of TakingState
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? mode = null,Object? parts = null,Object? groups = null,Object? startedAt = null,Object? clock = null,Object? answers = null,Object? revealed = null,Object? flagged = null,Object? timeSpentMs = null,Object? index = null,Object? submitting = null,Object? isMistakeSession = null,Object? resumed = null,Object? submitted = freezed,Object? mistakeResult = freezed,Object? submitError = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? mode = null,Object? parts = null,Object? groups = null,Object? startedAt = null,Object? clock = null,Object? answers = null,Object? revealed = null,Object? flagged = null,Object? eliminated = null,Object? timeSpentMs = null,Object? index = null,Object? submitting = null,Object? isMistakeSession = null,Object? resumed = null,Object? submitted = freezed,Object? mistakeResult = freezed,Object? submitError = freezed,}) {
   return _then(_TakingState(
 mode: null == mode ? _self.mode : mode // ignore: cast_nullable_to_non_nullable
 as String,parts: null == parts ? _self._parts : parts // ignore: cast_nullable_to_non_nullable
@@ -368,7 +379,8 @@ as DateTime,clock: null == clock ? _self.clock : clock // ignore: cast_nullable_
 as Duration,answers: null == answers ? _self._answers : answers // ignore: cast_nullable_to_non_nullable
 as Map<String, String>,revealed: null == revealed ? _self._revealed : revealed // ignore: cast_nullable_to_non_nullable
 as Set<String>,flagged: null == flagged ? _self._flagged : flagged // ignore: cast_nullable_to_non_nullable
-as Set<String>,timeSpentMs: null == timeSpentMs ? _self._timeSpentMs : timeSpentMs // ignore: cast_nullable_to_non_nullable
+as Set<String>,eliminated: null == eliminated ? _self._eliminated : eliminated // ignore: cast_nullable_to_non_nullable
+as Map<String, Set<String>>,timeSpentMs: null == timeSpentMs ? _self._timeSpentMs : timeSpentMs // ignore: cast_nullable_to_non_nullable
 as Map<String, int>,index: null == index ? _self.index : index // ignore: cast_nullable_to_non_nullable
 as int,submitting: null == submitting ? _self.submitting : submitting // ignore: cast_nullable_to_non_nullable
 as bool,isMistakeSession: null == isMistakeSession ? _self.isMistakeSession : isMistakeSession // ignore: cast_nullable_to_non_nullable

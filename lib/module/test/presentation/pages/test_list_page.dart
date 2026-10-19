@@ -5,6 +5,9 @@ import 'package:go_router/go_router.dart';
 import '../../../../core/design_system/design_system.dart';
 import '../../../../helper/format.dart';
 import '../../../../routes/app_router.dart';
+import '../../../arena/presentation/controllers/contest_controller.dart';
+import '../../../arena/presentation/controllers/duel_controller.dart';
+import '../../../arena/presentation/widgets/arena_widgets.dart';
 import '../../../auth/presentation/controllers/auth_controller.dart';
 import '../../../dictionary/presentation/widgets/dictionary_sheet.dart';
 import '../../../goals/presentation/controllers/study_progress.dart';
@@ -36,7 +39,9 @@ class _TestListPageState extends ConsumerState<TestListPage> {
       ..invalidate(mistakesProvider)
       ..invalidate(inProgressAllProvider)
       ..invalidate(vocabListProvider)
-      ..invalidate(myPlanProvider);
+      ..invalidate(myPlanProvider)
+      ..invalidate(contestOverviewProvider)
+      ..invalidate(duelStatsProvider);
     return ref.refresh(testListProvider.future);
   }
 
@@ -593,6 +598,8 @@ class _QuickActions extends ConsumerWidget {
             ],
           ),
         ),
+        Gaps.v12,
+        const ArenaShortcuts(),
       ],
     );
   }

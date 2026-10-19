@@ -27,6 +27,9 @@ abstract class TakingSnapshot with _$TakingSnapshot {
     @Default(<String, String>{}) Map<String, String> answers,
     @Default(<String>[]) List<String> revealed,
     @Default(<String>[]) List<String> flagged,
+
+    /// Phương án đã gạch (loại) của từng câu.
+    @Default(<String, List<String>>{}) Map<String, List<String>> eliminated,
     required int totalQuestions,
     required DateTime savedAt,
   }) = _TakingSnapshot;

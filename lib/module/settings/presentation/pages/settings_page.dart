@@ -163,6 +163,7 @@ class SettingsPage extends ConsumerWidget {
     final themeMode = ref.watch(appThemeModeProvider);
     final selectedFont = ref.watch(appFontFamilyProvider);
     final ttsSpeed = ref.watch(ttsSpeedProvider);
+    final ttsAccent = ref.watch(ttsAccentProvider);
     final autoPlay = ref.watch(autoPlayAudioProvider);
     final lbProfile = ref.watch(myLeaderboardProfileProvider).value;
     final biometric = ref.watch(biometricLoginProvider).value;
@@ -335,6 +336,38 @@ class SettingsPage extends ConsumerWidget {
                           ref.read(ttsSpeedProvider.notifier).setSpeed(val.first);
                         },
                       ),
+                    ),
+                  ),
+                  ListTile(
+                    leading: const IconBadge(icon: Icons.public_rounded, tone: AppTone.info),
+                    title: const Text('Giọng đọc'),
+                    subtitle: Text(
+                      ttsAccent == TtsAccent.mixed
+                          ? 'Đổi giọng Mỹ, Anh, Úc, Canada mỗi lần đọc – như đề thi thật'
+                          : 'Giọng ${ttsAccent.label}. Máy chưa cài giọng này thì đọc giọng Mỹ',
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(
+                      AppSpacing.s16,
+                      0,
+                      AppSpacing.s16,
+                      AppSpacing.s12,
+                    ),
+                    child: Wrap(
+                      spacing: AppSpacing.s8,
+                      runSpacing: AppSpacing.s8,
+                      children: [
+                        for (final accent in TtsAccent.values)
+                          ChoiceChip(
+                            label: Text(accent.label),
+                            selected: ttsAccent == accent,
+                            onSelected: (_) async {
+                              await ref.read(ttsAccentProvider.notifier).set(accent);
+                              await ref.read(ttsServiceProvider).speak('Welcome to Bami TOEIC');
+                            },
+                          ),
+                      ],
                     ),
                   ),
                   SwitchListTile(

@@ -3,6 +3,11 @@ import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../core/design_system/gallery/ds_gallery_page.dart';
+import '../module/arena/presentation/pages/contest_page.dart';
+import '../module/arena/presentation/pages/contest_review_page.dart';
+import '../module/arena/presentation/pages/contest_taking_page.dart';
+import '../module/arena/presentation/pages/duel_lobby_page.dart';
+import '../module/arena/presentation/pages/duel_match_page.dart';
 import '../module/auth/presentation/controllers/auth_controller.dart';
 import '../module/auth/presentation/pages/forgot_password_page.dart';
 import '../module/auth/presentation/pages/login_page.dart';
@@ -52,6 +57,11 @@ abstract final class Routes {
   static const profile = '/profile';
   static const settings = '/settings';
   static const theory = '/theory';
+  static const contest = '/arena/contest';
+  static const duelLobby = '/arena/duel';
+  static String contestTake(String id) => '/arena/contest/$id/take';
+  static String contestReview(String id) => '/arena/contest/$id/review';
+  static String duel(String id) => '/arena/duel/$id';
 
   static String theoryDetail(String id) => '/theory/$id';
 
@@ -173,6 +183,30 @@ GoRouter router(Ref ref) {
           GoRoute(
             path: ':topicId',
             builder: (_, s) => TheoryDetailPage(topicId: s.pathParameters['topicId']!),
+          ),
+        ],
+      ),
+      GoRoute(
+        path: Routes.contest,
+        builder: (_, _) => const ContestPage(),
+        routes: [
+          GoRoute(
+            path: ':id/take',
+            builder: (_, s) => ContestTakingPage(contestId: s.pathParameters['id']!),
+          ),
+          GoRoute(
+            path: ':id/review',
+            builder: (_, s) => ContestReviewPage(contestId: s.pathParameters['id']!),
+          ),
+        ],
+      ),
+      GoRoute(
+        path: Routes.duelLobby,
+        builder: (_, _) => const DuelLobbyPage(),
+        routes: [
+          GoRoute(
+            path: ':id',
+            builder: (_, s) => DuelMatchPage(duelId: s.pathParameters['id']!),
           ),
         ],
       ),

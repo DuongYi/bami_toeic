@@ -6,6 +6,9 @@ import '../../../../core/design_system/design_system.dart';
 import '../../../../core/network/app_exception.dart';
 import '../../../../helper/format.dart';
 import '../../../../routes/app_router.dart';
+import '../../../arena/presentation/controllers/contest_controller.dart';
+import '../../../arena/presentation/controllers/duel_controller.dart';
+import '../../../arena/presentation/widgets/arena_widgets.dart';
 import '../../data/models/leaderboard_models.dart';
 import '../../data/realm.dart';
 import '../../../plan/presentation/widgets/header_badges.dart';
@@ -24,7 +27,10 @@ class _LeaderboardPageState extends ConsumerState<LeaderboardPage> {
   LeaderboardBoard _board = LeaderboardBoard.score;
 
   Future<void> _refresh() {
-    ref.invalidate(myLeaderboardProfileProvider);
+    ref
+      ..invalidate(myLeaderboardProfileProvider)
+      ..invalidate(contestOverviewProvider)
+      ..invalidate(duelStatsProvider);
     return ref.refresh(leaderboardProvider(_board).future);
   }
 
@@ -49,6 +55,8 @@ class _LeaderboardPageState extends ConsumerState<LeaderboardPage> {
               onPressed: () => showLeaderboardProfileSheet(context),
             ),
           ),
+          const ArenaShortcuts(),
+          Gaps.v16,
           SegmentedButton<LeaderboardBoard>(
             segments: const [
               ButtonSegment(value: LeaderboardBoard.score, label: Text('Cảnh giới')),

@@ -32,6 +32,62 @@ abstract final class Pacing {
   }
 }
 
+/// Sức bền phần Reading: so tỉ lệ đúng nửa đầu với nửa sau (theo số câu). Đề thật 100 câu đọc
+/// trong 75 phút – tụt mạnh ở nửa sau là dấu hiệu mệt hoặc hết giờ.
+class Stamina {
+  const Stamina({required this.first, required this.last});
+
+  /// Đề có ít nhất bấy nhiêu câu Reading mới đánh giá (đề ngắn chưa đủ dài để mệt).
+  static const minQuestions = 40;
+
+  /// Tụt từ mức này (tỉ lệ đúng) trở lên thì cảnh báo.
+  static const dropWarning = 0.1;
+
+  final StaminaHalf first;
+  final StaminaHalf last;
+
+  /// > 0 = nửa sau kém hơn nửa đầu.
+  double get drop => first.ratio - last.ratio;
+  bool get dropped => drop >= dropWarning;
+
+  static Stamina? of(List<TimedAnswer> answers) {
+    final reading = answers.where((a) => Pacing.targetSeconds.containsKey(a.part)).toList()
+      ..sort((a, b) => a.number.compareTo(b.number));
+    if (reading.length < minQuestions) return null;
+    final half = reading.length ~/ 2;
+    return Stamina(
+      first: StaminaHalf.of(reading.sublist(0, half)),
+      last: StaminaHalf.of(reading.sublist(half)),
+    );
+  }
+}
+
+class StaminaHalf {
+  const StaminaHalf({
+    required this.from,
+    required this.to,
+    required this.correct,
+    required this.total,
+    required this.skipped,
+  });
+
+  factory StaminaHalf.of(List<TimedAnswer> list) => StaminaHalf(
+    from: list.first.number,
+    to: list.last.number,
+    correct: list.where((a) => a.correct).length,
+    total: list.length,
+    skipped: list.where((a) => a.skipped).length,
+  );
+
+  final int from;
+  final int to;
+  final int correct;
+  final int total;
+  final int skipped;
+
+  double get ratio => total == 0 ? 0 : correct / total;
+}
+
 class TimedAnswer {
   const TimedAnswer({
     required this.questionId,
@@ -39,6 +95,7 @@ class TimedAnswer {
     required this.number,
     required this.ms,
     required this.correct,
+    this.skipped = false,
   });
 
   final String questionId;
@@ -46,6 +103,7 @@ class TimedAnswer {
   final int number;
   final int? ms;
   final bool correct;
+  final bool skipped;
 }
 
 class PartPace {

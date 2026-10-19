@@ -294,10 +294,10 @@ class _GroupPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final (group, allGroups, answers, revealed, flagged) = ref.watch(
+    final (group, allGroups, answers, revealed, flagged, eliminated) = ref.watch(
       provider.select((s) {
         final v = s.value!;
-        return (v.groups[groupIndex], v.groups, v.answers, v.revealed, v.flagged);
+        return (v.groups[groupIndex], v.groups, v.answers, v.revealed, v.flagged, v.eliminated);
       }),
     );
     return QuestionGroupView(
@@ -310,6 +310,8 @@ class _GroupPage extends ConsumerWidget {
       isRevealed: (q) => revealed.contains(q.id),
       isFlagged: (q) => flagged.contains(q.id),
       onToggleFlag: ref.read(provider.notifier).toggleFlag,
+      isEliminated: (q, letter) => eliminated[q.id]?.contains(letter) ?? false,
+      onToggleEliminated: ref.read(provider.notifier).toggleEliminated,
       showTranscript: !isExam,
       // Thi thử: audio phát liền mạch ở ExamListeningBar
       showAudio: !isExam,

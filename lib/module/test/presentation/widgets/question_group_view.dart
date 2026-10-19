@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 
 import '../../../../core/design_system/design_system.dart';
 import '../../../../core/media/media_image.dart';
@@ -156,14 +157,20 @@ class QuestionGroupView extends StatefulWidget {
     this.showAudio = true,
     this.isFlagged,
     this.onToggleFlag,
+    this.isEliminated,
+    this.onToggleEliminated,
     this.contextMenuBuilder,
     this.allGroups,
     this.currentGroupIndex,
     this.onJumpToGroup,
+    this.canSave = true,
   });
 
   final QuestionGroup group;
   final Map<String, String?> answers;
+
+  /// false với câu không có trong ngân hàng (đề Thi Chủ nhật đánh số tạm) → ẩn nút lưu câu.
+  final bool canSave;
 
   /// null = chỉ xem (chế độ xem lại)
   final void Function(Question q, String letter)? onSelect;
@@ -179,6 +186,10 @@ class QuestionGroupView extends StatefulWidget {
   /// Đánh dấu câu (null = không hiện nút cờ, vd. màn xem lại)
   final bool Function(Question q)? isFlagged;
   final void Function(Question q)? onToggleFlag;
+
+  /// Gạch phương án đã loại (null = không hiện nút gạch, vd. màn xem lại).
+  final bool Function(Question q, String letter)? isEliminated;
+  final void Function(Question q, String letter)? onToggleEliminated;
 
   /// Menu khi bôi đen chữ (vd. thêm "Tra từ"); null = menu mặc định kèm Tra từ + Highlight.
   final EditableTextContextMenuBuilder? contextMenuBuilder;
@@ -380,10 +391,12 @@ class _QuestionGroupViewState extends State<QuestionGroupView> {
                   revealed: widget.isRevealed?.call(q) ?? false,
                   flagged: widget.isFlagged?.call(q) ?? false,
                   onToggleFlag: widget.onToggleFlag,
+                  isEliminated: widget.isEliminated,
+                  onToggleEliminated: widget.onToggleEliminated,
                   contextMenuBuilder: _buildContextMenu(context, 'q_${q.id}'),
                   highlights: _getHighlightsFor('q_${q.id}'),
                   highlightStyle: highlightStyle,
-                  group: group,
+                  group: widget.canSave ? group : null,
                 ),
             ],
           ),
@@ -406,6 +419,9 @@ class _QuestionGroupViewState extends State<QuestionGroupView> {
             isRevealed: widget.isRevealed,
             isFlagged: widget.isFlagged,
             onToggleFlag: widget.onToggleFlag,
+            isEliminated: widget.isEliminated,
+            onToggleEliminated: widget.onToggleEliminated,
+            canSave: widget.canSave,
           ),
         ),
       ],
@@ -486,10 +502,12 @@ class _QuestionGroupViewState extends State<QuestionGroupView> {
             revealed: widget.isRevealed?.call(q) ?? false,
             flagged: widget.isFlagged?.call(q) ?? false,
             onToggleFlag: widget.onToggleFlag,
+            isEliminated: widget.isEliminated,
+            onToggleEliminated: widget.onToggleEliminated,
             contextMenuBuilder: _buildContextMenu(context, 'q_${q.id}'),
             highlights: _getHighlightsFor('q_${q.id}'),
             highlightStyle: highlightStyle,
-            group: group,
+            group: widget.canSave ? group : null,
           ),
       ],
     );
@@ -544,10 +562,14 @@ class _AnswerSheetColumn extends StatefulWidget {
     required this.isRevealed,
     required this.isFlagged,
     required this.onToggleFlag,
+    this.isEliminated,
+    this.onToggleEliminated,
+    this.canSave = true,
   });
 
   final QuestionGroup group;
   final List<QuestionGroup>? allGroups;
+  final bool canSave;
   final int? currentGroupIndex;
   final ValueChanged<int>? onJumpToGroup;
   final Map<String, String?> answers;
@@ -555,6 +577,8 @@ class _AnswerSheetColumn extends StatefulWidget {
   final bool Function(Question q)? isRevealed;
   final bool Function(Question q)? isFlagged;
   final void Function(Question q)? onToggleFlag;
+  final bool Function(Question q, String letter)? isEliminated;
+  final void Function(Question q, String letter)? onToggleEliminated;
 
   @override
   State<_AnswerSheetColumn> createState() => _AnswerSheetColumnState();
@@ -697,7 +721,8 @@ class _AnswerSheetColumnState extends State<_AnswerSheetColumn> {
                     ),
                   ],
                   const Spacer(),
-                  SaveQuestionButton(question: q, group: widget.group, compact: true),
+                  if (widget.canSave)
+                    SaveQuestionButton(question: q, group: widget.group, compact: true),
                   if (widget.onToggleFlag != null)
                     IconButton(
                       tooltip: isFlg ? 'Bỏ cờ câu ${q.number}' : 'Đánh dấu cờ',
@@ -731,6 +756,10 @@ class _AnswerSheetColumnState extends State<_AnswerSheetColumn> {
                     onTap: widget.onSelect == null || isRev
                         ? null
                         : () => widget.onSelect!(q, letter),
+                    eliminated: !isRev && (widget.isEliminated?.call(q, letter) ?? false),
+                    onEliminate: widget.onToggleEliminated == null || isRev
+                        ? null
+                        : () => widget.onToggleEliminated!(q, letter),
                     contextMenuBuilder: lookupContextMenu(context),
                   ),
                 ),
@@ -928,6 +957,8 @@ class _QuestionTile extends StatelessWidget {
     required this.revealed,
     this.flagged = false,
     this.onToggleFlag,
+    this.isEliminated,
+    this.onToggleEliminated,
     this.contextMenuBuilder,
     this.highlights = const {},
     this.highlightStyle,
@@ -942,6 +973,8 @@ class _QuestionTile extends StatelessWidget {
   final bool revealed;
   final bool flagged;
   final void Function(Question q)? onToggleFlag;
+  final bool Function(Question q, String letter)? isEliminated;
+  final void Function(Question q, String letter)? onToggleEliminated;
   final EditableTextContextMenuBuilder? contextMenuBuilder;
   final Set<String> highlights;
   final TextStyle? highlightStyle;
@@ -1015,6 +1048,10 @@ class _QuestionTile extends StatelessWidget {
                             ? AppTone.danger
                             : null,
                 onTap: onSelect == null || revealed ? null : () => onSelect!(q, letter),
+                eliminated: !revealed && (isEliminated?.call(q, letter) ?? false),
+                onEliminate: onToggleEliminated == null || revealed
+                    ? null
+                    : () => onToggleEliminated!(q, letter),
                 contextMenuBuilder: lookupContextMenu(context),
               ),
             ),
@@ -1066,6 +1103,7 @@ class _Explanation extends StatelessWidget {
 
 /// Một lựa chọn A/B/C/D. [result]: success = đáp án đúng, danger = bạn chọn sai.
 /// Có [contextMenuBuilder]: chạm vẫn chọn đáp án, nhấn giữ để bôi đen chữ → "Tra từ".
+/// Có [onEliminate]: nút gạch phương án đã loại; [eliminated] = đang bị gạch.
 class AnswerOption extends StatelessWidget {
   const AnswerOption({
     super.key,
@@ -1075,6 +1113,8 @@ class AnswerOption extends StatelessWidget {
     required this.result,
     required this.onTap,
     this.contextMenuBuilder,
+    this.eliminated = false,
+    this.onEliminate,
   });
 
   final String letter;
@@ -1083,15 +1123,24 @@ class AnswerOption extends StatelessWidget {
   final AppTone? result;
   final VoidCallback? onTap;
   final EditableTextContextMenuBuilder? contextMenuBuilder;
+  final bool eliminated;
+  final VoidCallback? onEliminate;
 
   @override
   Widget build(BuildContext context) {
     final cs = context.colors;
     final tone = result?.colorsOf(context);
+    final crossed = eliminated && !selected && tone == null;
     final emphasized = selected || tone != null;
     final border = tone?.main ?? (selected ? cs.primary : cs.outlineVariant);
     final fill = tone?.container ?? (selected ? cs.primaryContainer : context.surfaces.raised);
-    final onFill = tone?.onContainer ?? (selected ? cs.onPrimaryContainer : cs.onSurface);
+    final onFill = tone?.onContainer ??
+        (selected ? cs.onPrimaryContainer : crossed ? cs.onSurfaceVariant : cs.onSurface);
+    final textStyle = TextStyle(
+      color: onFill,
+      decoration: crossed ? TextDecoration.lineThrough : null,
+      decorationColor: onFill,
+    );
 
     final resultLabel = switch (result) {
       AppTone.success => ', đáp án đúng',
@@ -1102,8 +1151,15 @@ class AnswerOption extends StatelessWidget {
     return Semantics(
       button: onTap != null,
       selected: selected,
-      label: 'Đáp án $letter${text.isEmpty ? '' : ': $text'}$resultLabel',
+      label: 'Đáp án $letter${text.isEmpty ? '' : ': $text'}$resultLabel${crossed ? ', đã gạch' : ''}',
       excludeSemantics: true,
+      // Nút gạch nằm trong vùng bị gộp nhãn → đưa thành thao tác riêng cho trình đọc màn hình.
+      customSemanticsActions: onEliminate == null
+          ? null
+          : {
+              CustomSemanticsAction(label: crossed ? 'Bỏ gạch $letter' : 'Gạch phương án $letter'):
+                  onEliminate!,
+            },
       child: Material(
         color: fill,
         shape: RoundedRectangleBorder(
@@ -1125,21 +1181,48 @@ class AnswerOption extends StatelessWidget {
                   CircleAvatar(
                     radius: AppSizes.avatarSm / 2,
                     backgroundColor: emphasized ? border : cs.surfaceContainerHighest,
-                    foregroundColor: emphasized ? tone?.onMain ?? cs.onPrimary : cs.onSurface,
-                    child: Text(letter, style: const TextStyle(fontWeight: FontWeight.bold)),
+                    foregroundColor: emphasized
+                        ? tone?.onMain ?? cs.onPrimary
+                        : crossed
+                            ? cs.onSurfaceVariant
+                            : cs.onSurface,
+                    child: Text(
+                      letter,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        decoration: crossed ? TextDecoration.lineThrough : null,
+                      ),
+                    ),
                   ),
                   Gaps.h12,
                   Expanded(
                     child: contextMenuBuilder == null
-                        ? Text(text, style: TextStyle(color: onFill))
+                        ? Text(text, style: textStyle)
                         : SelectableText(
                             text,
-                            style: TextStyle(color: onFill),
+                            style: textStyle,
                             onTap: onTap,
                             contextMenuBuilder: contextMenuBuilder,
                           ),
                   ),
                   if (result != null) Icon(result!.icon, color: tone!.main),
+                  if (onEliminate != null)
+                    IconButton(
+                      tooltip: crossed ? 'Bỏ gạch $letter' : 'Gạch phương án $letter',
+                      visualDensity: VisualDensity.compact,
+                      isSelected: crossed,
+                      icon: Icon(
+                        Icons.strikethrough_s_rounded,
+                        size: AppSizes.iconSm,
+                        color: cs.onSurfaceVariant,
+                      ),
+                      selectedIcon: Icon(
+                        Icons.undo_rounded,
+                        size: AppSizes.iconSm,
+                        color: cs.onSurfaceVariant,
+                      ),
+                      onPressed: onEliminate,
+                    ),
                 ],
               ),
             ),

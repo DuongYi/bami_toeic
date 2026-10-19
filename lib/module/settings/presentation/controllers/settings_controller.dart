@@ -66,6 +66,52 @@ final ttsSpeedProvider = NotifierProvider<TtsSpeedNotifier, double>(
   TtsSpeedNotifier.new,
 );
 
+/// Giọng đọc tiếng Anh. Đề TOEIC thật trộn giọng Mỹ, Anh, Úc, Canada → [mixed] đổi giọng mỗi lần đọc.
+enum TtsAccent {
+  us('en-US', 'Mỹ'),
+  gb('en-GB', 'Anh'),
+  au('en-AU', 'Úc'),
+  ca('en-CA', 'Canada'),
+  mixed(null, 'Trộn như đề thi');
+
+  const TtsAccent(this.locale, this.label);
+
+  /// null = xoay vòng các giọng còn lại.
+  final String? locale;
+  final String label;
+
+  static List<String> get rotation => [
+    for (final a in values) ?a.locale,
+  ];
+}
+
+class TtsAccentNotifier extends Notifier<TtsAccent> {
+  static const _key = 'settings_tts_accent';
+
+  @override
+  TtsAccent build() {
+    _load();
+    return TtsAccent.us;
+  }
+
+  Future<void> _load() async {
+    final prefs = await ref.read(sharedPreferencesProvider.future);
+    final name = prefs.getString(_key);
+    final saved = TtsAccent.values.where((a) => a.name == name).firstOrNull;
+    if (saved != null) state = saved;
+  }
+
+  Future<void> set(TtsAccent accent) async {
+    state = accent;
+    final prefs = await ref.read(sharedPreferencesProvider.future);
+    await prefs.setString(_key, accent.name);
+  }
+}
+
+final ttsAccentProvider = NotifierProvider<TtsAccentNotifier, TtsAccent>(
+  TtsAccentNotifier.new,
+);
+
 /// Tự động phát âm khi lật thẻ từ vựng flashcard.
 class AutoPlayAudioNotifier extends Notifier<bool> {
   static const _key = 'settings_auto_play_audio';

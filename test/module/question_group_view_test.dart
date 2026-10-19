@@ -381,4 +381,55 @@ void main() {
       expect(find.text('In room 5.'), findsOneWidget);
     });
   });
+
+  group('Gạch phương án', () {
+    const q = Question(
+      id: 'x1',
+      part: 5,
+      number: 101,
+      content: 'The report was ------- reviewed.',
+      options: ['careful', 'carefully', 'care', 'cared'],
+      answer: 'B',
+    );
+    final group = QuestionGroup(id: 'g5', part: 5, orderNo: 1, questions: const [q]);
+
+    testWidgets('bấm nút gạch → gọi callback; phương án đã gạch có gạch ngang', (tester) async {
+      final crossed = <String>{'C'};
+      String? toggled;
+      await tester.pumpWidget(
+        _wrap(
+          QuestionGroupView(
+            group: group,
+            answers: const {},
+            onSelect: (_, _) {},
+            isEliminated: (_, l) => crossed.contains(l),
+            onToggleEliminated: (_, l) => toggled = l,
+          ),
+        ),
+      );
+      await tester.pump();
+      await tester.tap(find.byTooltip('Gạch phương án A'));
+      expect(toggled, 'A');
+      expect(find.byTooltip('Bỏ gạch C'), findsOneWidget);
+      final text = tester.widget<SelectableText>(find.widgetWithText(SelectableText, 'care'));
+      expect(text.style?.decoration, TextDecoration.lineThrough);
+    });
+
+    testWidgets('đã xem đáp án → không còn nút gạch', (tester) async {
+      await tester.pumpWidget(
+        _wrap(
+          QuestionGroupView(
+            group: group,
+            answers: const {'x1': 'B'},
+            isRevealed: (_) => true,
+            isEliminated: (_, _) => true,
+            onToggleEliminated: (_, _) {},
+          ),
+        ),
+      );
+      await tester.pump();
+      expect(find.byTooltip('Gạch phương án A'), findsNothing);
+      expect(find.byTooltip('Bỏ gạch A'), findsNothing);
+    });
+  });
 }

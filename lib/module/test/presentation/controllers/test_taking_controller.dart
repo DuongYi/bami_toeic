@@ -38,6 +38,9 @@ abstract class TakingState with _$TakingState {
     /// Câu đánh dấu để xem lại trước khi nộp
     @Default(<String>{}) Set<String> flagged,
 
+    /// Phương án đã gạch (loại) của từng câu, như gạch trên giấy khi thi.
+    @Default(<String, Set<String>>{}) Map<String, Set<String>> eliminated,
+
     /// Thời gian làm từng câu (ms): tính từ lúc vào nhóm câu / lần chọn trước tới lúc chọn.
     @Default(<String, int>{}) Map<String, int> timeSpentMs,
     @Default(0) int index,
@@ -133,6 +136,10 @@ class TestTaking extends _$TestTaking {
           },
           revealed: snap.revealed.where(ids.contains).toSet(),
           flagged: snap.flagged.where(ids.contains).toSet(),
+          eliminated: {
+            for (final e in snap.eliminated.entries)
+              if (ids.contains(e.key) && e.value.isNotEmpty) e.key: e.value.toSet(),
+          },
           resumed: true,
         );
       }
@@ -217,7 +224,7 @@ class TestTaking extends _$TestTaking {
     final s = state.value;
     if (_isMistakes || s == null || s.isDone) return;
     _ticksSinceSave = 0;
-    if (s.answers.isEmpty && s.flagged.isEmpty) return; // chưa làm gì thì không lưu
+    if (s.answers.isEmpty && s.flagged.isEmpty && s.eliminated.isEmpty) return; // chưa làm gì thì không lưu
     await ref
         .read(inProgressStoreProvider)
         .save(
@@ -231,6 +238,7 @@ class TestTaking extends _$TestTaking {
             answers: s.answers,
             revealed: s.revealed.toList(),
             flagged: s.flagged.toList(),
+            eliminated: {for (final e in s.eliminated.entries) e.key: e.value.toList()},
             totalQuestions: s.totalQuestions,
             savedAt: DateTime.now().toUtc(),
           ),
@@ -257,8 +265,13 @@ class TestTaking extends _$TestTaking {
     _update((s) {
       if (s.revealed.contains(q.id)) return s;
       final ms = spent > _maxSpent ? 0 : spent.inMilliseconds;
+      final crossed = s.eliminated[q.id];
       return s.copyWith(
         answers: {...s.answers, q.id: letter},
+        // Chọn lại phương án đã gạch thì bỏ gạch.
+        eliminated: crossed != null && crossed.contains(letter)
+            ? {...s.eliminated, q.id: {...crossed}..remove(letter)}
+            : s.eliminated,
         revealed: s.isExam ? s.revealed : {...s.revealed, q.id},
         timeSpentMs: {...s.timeSpentMs, q.id: (s.timeSpentMs[q.id] ?? 0) + ms},
       );
@@ -271,6 +284,18 @@ class TestTaking extends _$TestTaking {
     ),
     persist: true,
   );
+
+  /// Gạch / bỏ gạch phương án [letter]; gạch đúng phương án đang chọn thì bỏ chọn.
+  void toggleEliminated(Question q, String letter) => _update((s) {
+    if (s.revealed.contains(q.id)) return s;
+    final crossed = {...?s.eliminated[q.id]};
+    final adding = crossed.add(letter);
+    if (!adding) crossed.remove(letter);
+    final answers = adding && s.answers[q.id] == letter
+        ? ({...s.answers}..remove(q.id))
+        : s.answers;
+    return s.copyWith(eliminated: {...s.eliminated, q.id: crossed}, answers: answers);
+  }, persist: true);
 
   void setIndex(int index) {
     _mark = DateTime.now();
