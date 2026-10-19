@@ -168,6 +168,7 @@ class TestRepository {
     required DateTime startedAt,
     required List<Question> questions,
     required Map<String, String> answers,
+    Map<String, int> timeSpentMs = const {},
     String source = 'test',
   }) async {
     var listening = 0, reading = 0;
@@ -196,6 +197,7 @@ class TestRepository {
           questionId: q.id,
           chosen: answers[q.id],
           isCorrect: answers[q.id] == q.answer,
+          timeSpentMs: timeSpentMs[q.id],
         ),
     ]);
     return attempt;
@@ -211,6 +213,7 @@ class TestRepository {
       _api.getAttemptAnswers(attemptId: Pg.eq(attemptId)),
     ).wait;
     final answered = {for (final a in answers) a.questionId: a.chosen};
+    final spent = {for (final a in answers) a.questionId: ?a.timeSpentMs};
     var groups = detail.groups.where((g) => attempt.parts.contains(g.part)).toList();
     if (attempt.isMistakeReview) {
       // Lượt luyện sổ câu sai chỉ gồm vài câu lẻ → chỉ hiện đúng các câu đã luyện.
@@ -220,7 +223,7 @@ class TestRepository {
             g.copyWith(questions: [...g.questions.where((q) => answered.containsKey(q.id))]),
       ];
     }
-    return AttemptResult(attempt: attempt, groups: groups, answers: answered);
+    return AttemptResult(attempt: attempt, groups: groups, answers: answered, timeSpentMs: spent);
   }
 
   Future<void> deleteAttempt(String id) => _api.deleteAttempt(id: Pg.eq(id));
@@ -241,25 +244,70 @@ class TestRepository {
 
   Future<List<TagStat>> fetchTagStats() => _api.getTagStats();
 
-  /// Sổ câu sai: câu sai hoặc bỏ trống ở lần trả lời gần nhất.
-  Future<List<LatestAnswer>> fetchMistakes() => _api.getLatestAnswers(isCorrect: Pg.eq(false));
+  /// Sổ câu sai: câu từng sai, chưa thuộc (đúng ở ≥ 3 ngày khác nhau), kèm hạn ôn.
+  Future<List<QuestionReview>> fetchMistakes() => _api.getQuestionReviews();
 
-  /// Nhóm câu chứa các câu sai, mỗi nhóm CHỈ giữ lại câu sai (đoạn văn/audio giữ nguyên).
-  Future<List<QuestionGroup>> fetchMistakeGroups(List<LatestAnswer> mistakes) async {
-    final wrongIds = {for (final m in mistakes) m.questionId};
-    final groupIds = {for (final m in mistakes) m.groupId}.toList();
+  // ---------- Câu đã lưu ----------
+
+  Future<List<SavedQuestion>> fetchSaved() => _api.getSavedQuestions();
+
+  Future<void> saveQuestion(String questionId) =>
+      _api.saveQuestion({'question_id': questionId});
+
+  Future<void> unsaveQuestion(String questionId) =>
+      _api.unsaveQuestion(questionId: Pg.eq(questionId));
+
+  // ---------- Bài luyện hằng ngày ----------
+
+  /// Câu CHƯA làm thuộc các dạng [tags], tối đa [limit] câu, trải đều các dạng.
+  Future<List<QuestionStub>> fetchNewQuestions(List<String> tags, {required int limit}) async {
+    if (tags.isEmpty || limit <= 0) return const [];
+    final candidates = await _api.getQuestionsByTags(tags: 'ov.{${tags.join(',')}}');
+    final answered = <String>{};
+    for (var i = 0; i < candidates.length; i += 80) {
+      final chunk = candidates.sublist(i, (i + 80).clamp(0, candidates.length));
+      final rows = await _api.getAnsweredAmong(ids: 'in.(${chunk.map((c) => c.id).join(',')})');
+      answered.addAll(rows.map((r) => r.questionId));
+    }
+    final byTag = {
+      for (final t in tags)
+        t: candidates.where((c) => c.tags.contains(t) && !answered.contains(c.id)).toList(),
+    };
+    final out = <QuestionStub>[];
+    final picked = <String>{};
+    // Lần lượt lấy 1 câu mỗi dạng để không dồn hết vào 1 dạng.
+    for (var round = 0; out.length < limit; round++) {
+      var added = false;
+      for (final list in byTag.values) {
+        if (round < list.length && out.length < limit && picked.add(list[round].id)) {
+          out.add(list[round]);
+          added = true;
+        }
+      }
+      if (!added && byTag.values.every((l) => round >= l.length)) break;
+    }
+    return out;
+  }
+
+  /// Nhóm câu chứa các câu cần luyện, mỗi nhóm CHỈ giữ các câu đó (đoạn văn/audio giữ nguyên).
+  Future<List<QuestionGroup>> fetchGroupsFor(List<QuestionRef> refs) async {
+    final wanted = {for (final r in refs) r.questionId};
+    final groupIds = {for (final r in refs) r.groupId}.toList();
     final groups = <QuestionGroup>[];
     for (var i = 0; i < groupIds.length; i += 40) {
       // chia lô để URL `id=in.(…)` không quá dài
       final chunk = groupIds.sublist(i, (i + 40).clamp(0, groupIds.length));
       groups.addAll(await _api.getGroupsByIds(ids: 'in.(${chunk.join(',')})'));
     }
-    final firstNumber = {for (final m in mistakes) m.groupId: m.number};
+    final firstNumber = <String, int>{};
+    for (final r in refs) {
+      firstNumber.update(r.groupId, (n) => n < r.number ? n : r.number, ifAbsent: () => r.number);
+    }
     return _withSignedMedia(
       [
         for (final g in groups)
           g.copyWith(
-            questions: [...g.questions.where((q) => wrongIds.contains(q.id))]
+            questions: [...g.questions.where((q) => wanted.contains(q.id))]
               ..sort((a, b) => a.number.compareTo(b.number)),
           ),
       ]..sort((a, b) {
@@ -276,6 +324,7 @@ class TestRepository {
     required DateTime startedAt,
     required List<QuestionGroup> groups,
     required Map<String, String> answers,
+    Map<String, int> timeSpentMs = const {},
   }) async {
     final byTest = <String, List<Question>>{};
     for (final g in groups) {
@@ -291,6 +340,7 @@ class TestRepository {
         startedAt: startedAt,
         questions: qs,
         answers: answers,
+        timeSpentMs: timeSpentMs,
         source: 'mistakes',
       );
       total += qs.length;

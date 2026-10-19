@@ -9,15 +9,18 @@ import '../../data/question_tags.dart';
 import '../controllers/test_providers.dart';
 import '../widgets/question_group_view.dart';
 
-/// Sổ câu sai: các câu sai/bỏ trống ở lần làm gần nhất, gom theo Part và dạng câu.
-/// Làm đúng khi luyện lại → câu tự ra khỏi sổ.
+/// Sổ câu sai: câu từng sai, gom theo Part và dạng câu, ôn theo lịch (1 → 3 → 7 → 21 ngày).
+/// Làm đúng ở 3 ngày khác nhau → câu ra khỏi sổ. Kèm danh sách câu đã lưu.
 class MistakesPage extends ConsumerWidget {
   const MistakesPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final mistakes = ref.watch(mistakesProvider);
+    final saved = ref.watch(savedQuestionsProvider).value ?? const <SavedQuestion>[];
+    final now = DateTime.now();
     final count = mistakes.value?.length ?? 0;
+    final due = mistakes.value?.where((m) => m.isDue(now)).length ?? 0;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Sổ câu sai'),
@@ -30,38 +33,50 @@ class MistakesPage extends ConsumerWidget {
         ],
       ),
       body: RefreshIndicator(
-        onRefresh: () => ref.refresh(mistakesProvider.future),
+        onRefresh: () {
+          ref.invalidate(savedQuestionsProvider);
+          return ref.refresh(mistakesProvider.future);
+        },
         child: AsyncView(
           value: mistakes,
           loading: (_) => const MistakesSkeleton(),
           onRetry: () => ref.invalidate(mistakesProvider),
-          data: (list) => list.isEmpty
+          data: (list) => list.isEmpty && saved.isEmpty
               ? const ScrollableFill(
                   child: AppEmptyView(
                     icon: Icons.verified_rounded,
-                    message: 'Sổ câu sai đang trống.\nCâu làm sai trong các đề sẽ hiện ở đây.',
+                    message:
+                        'Sổ câu sai đang trống.\nCâu làm sai trong các đề sẽ hiện ở đây, '
+                        'kèm lịch ôn lại để nhớ lâu.',
                   ),
                 )
-              : _MistakesBody(mistakes: list),
+              : _MistakesBody(mistakes: list, saved: saved),
         ),
       ),
       bottomNavigationBar: count == 0
           ? null
           : AppBottomBar(
-              child: AppPrimaryButton(
-                icon: Icons.replay_rounded,
-                label: 'Luyện lại tất cả · $count câu',
-                onPressed: () => context.push(Routes.takeMistakes()),
-              ),
+              child: due > 0
+                  ? AppPrimaryButton(
+                      icon: Icons.event_repeat_rounded,
+                      label: 'Ôn $due câu đến hạn',
+                      onPressed: () => context.push(Routes.takeMistakes(filter: 'due')),
+                    )
+                  : AppPrimaryButton(
+                      icon: Icons.replay_rounded,
+                      label: 'Luyện lại tất cả · $count câu',
+                      onPressed: () => context.push(Routes.takeMistakes()),
+                    ),
             ),
     );
   }
 }
 
 class _MistakesBody extends StatelessWidget {
-  const _MistakesBody({required this.mistakes});
+  const _MistakesBody({required this.mistakes, required this.saved});
 
-  final List<LatestAnswer> mistakes;
+  final List<QuestionReview> mistakes;
+  final List<SavedQuestion> saved;
 
   @override
   Widget build(BuildContext context) {
@@ -75,7 +90,9 @@ class _MistakesBody extends StatelessWidget {
     }
     final parts = byPart.keys.toList()..sort();
     final tags = byTag.entries.toList()..sort((a, b) => b.value.compareTo(a.value));
-    final skipped = mistakes.where((m) => m.chosen == null).length;
+    final now = DateTime.now();
+    final due = mistakes.where((m) => m.isDue(now)).length;
+    final reviewing = mistakes.where((m) => m.streak > 0).length;
     final fg = AppHeroCard.foreground(context);
 
     return ListView(
@@ -85,17 +102,14 @@ class _MistakesBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Câu cần ôn lại', style: context.textStyles.labelLarge?.copyWith(color: fg)),
+              Text('Đến hạn ôn hôm nay', style: context.textStyles.labelLarge?.copyWith(color: fg)),
               Gaps.v4,
-              Text(
-                '${mistakes.length}',
-                style: context.textStyles.displaySmall?.copyWith(color: fg),
-              ),
+              Text('$due', style: context.textStyles.displaySmall?.copyWith(color: fg)),
               Gaps.v8,
               Text(
                 [
-                  '${mistakes.length - skipped} câu chọn sai',
-                  if (skipped > 0) '$skipped câu bỏ trống',
+                  '${mistakes.length} câu trong sổ',
+                  if (reviewing > 0) '$reviewing câu đang nhớ dần',
                 ].join(' · '),
                 style: context.textStyles.bodySmall?.copyWith(color: fg),
               ),
@@ -115,7 +129,8 @@ class _MistakesBody extends StatelessWidget {
               Gaps.h12,
               Expanded(
                 child: Text(
-                  'Luyện lại sổ câu sai thường xuyên giúp tăng ngay 50–100 điểm bằng cách triệt tiêu các bẫy đề thi lặp lại.',
+                  'Câu sai quay lại sau 1 ngày; làm đúng thì giãn ra 3 → 7 → 21 ngày. '
+                  'Đúng ở 3 ngày khác nhau là đã thuộc, câu tự ra khỏi sổ.',
                   style: context.textStyles.bodySmall,
                 ),
               ),
@@ -161,36 +176,53 @@ class _MistakesBody extends StatelessWidget {
             ],
           ),
         ),
-        Gaps.v16,
-        const SectionHeader(title: 'Theo Part'),
-        AppListGroup(
-          dividerIndent: AppSpacing.s16 + AppSizes.badgeMd + AppSpacing.s16,
-          children: [
-            for (final p in parts)
+        if (saved.isNotEmpty) ...[
+          Gaps.v16,
+          const SectionHeader(title: 'Câu đã lưu'),
+          AppListGroup(
+            children: [
               _FilterTile(
-                icon: p <= 4 ? Icons.headphones_rounded : Icons.chrome_reader_mode_outlined,
-                title: partNames[p] ?? 'Part $p',
-                count: byPart[p]!,
-                filter: 'part:$p',
+                icon: Icons.bookmark_rounded,
+                tone: AppTone.success,
+                title: 'Luyện các câu đã lưu',
+                count: saved.length,
+                filter: 'saved',
               ),
-          ],
-        ),
-        if (tags.isNotEmpty) ...[
-          Gaps.v24,
-          const SectionHeader(title: 'Theo dạng câu', subtitle: 'Nhiều câu sai nhất ở trên'),
+            ],
+          ),
+        ],
+        if (mistakes.isNotEmpty) ...[
+          Gaps.v16,
+          const SectionHeader(title: 'Theo Part'),
           AppListGroup(
             dividerIndent: AppSpacing.s16 + AppSizes.badgeMd + AppSpacing.s16,
             children: [
-              for (final e in tags)
+              for (final p in parts)
                 _FilterTile(
-                  icon: Icons.label_outline_rounded,
-                  tone: AppTone.warning,
-                  title: tagLabel(e.key),
-                  count: e.value,
-                  filter: 'tag:${e.key}',
+                  icon: p <= 4 ? Icons.headphones_rounded : Icons.chrome_reader_mode_outlined,
+                  title: partNames[p] ?? 'Part $p',
+                  count: byPart[p]!,
+                  filter: 'part:$p',
                 ),
             ],
           ),
+          if (tags.isNotEmpty) ...[
+            Gaps.v24,
+            const SectionHeader(title: 'Theo dạng câu', subtitle: 'Nhiều câu sai nhất ở trên'),
+            AppListGroup(
+              dividerIndent: AppSpacing.s16 + AppSizes.badgeMd + AppSpacing.s16,
+              children: [
+                for (final e in tags)
+                  _FilterTile(
+                    icon: Icons.label_outline_rounded,
+                    tone: AppTone.warning,
+                    title: tagLabel(e.key),
+                    count: e.value,
+                    filter: 'tag:${e.key}',
+                  ),
+              ],
+            ),
+          ],
         ],
       ],
     );

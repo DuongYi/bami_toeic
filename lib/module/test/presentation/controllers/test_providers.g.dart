@@ -288,24 +288,24 @@ abstract class _$Attempts extends $AsyncNotifier<List<Attempt>> {
   }
 }
 
-/// Sổ câu sai: câu sai/bỏ trống ở lần trả lời gần nhất.
+/// Sổ câu sai: câu từng sai, chưa thuộc, kèm hạn ôn (sớm nhất trước).
 
 @ProviderFor(mistakes)
 final mistakesProvider = MistakesProvider._();
 
-/// Sổ câu sai: câu sai/bỏ trống ở lần trả lời gần nhất.
+/// Sổ câu sai: câu từng sai, chưa thuộc, kèm hạn ôn (sớm nhất trước).
 
 final class MistakesProvider
     extends
         $FunctionalProvider<
-          AsyncValue<List<LatestAnswer>>,
-          List<LatestAnswer>,
-          FutureOr<List<LatestAnswer>>
+          AsyncValue<List<QuestionReview>>,
+          List<QuestionReview>,
+          FutureOr<List<QuestionReview>>
         >
     with
-        $FutureModifier<List<LatestAnswer>>,
-        $FutureProvider<List<LatestAnswer>> {
-  /// Sổ câu sai: câu sai/bỏ trống ở lần trả lời gần nhất.
+        $FutureModifier<List<QuestionReview>>,
+        $FutureProvider<List<QuestionReview>> {
+  /// Sổ câu sai: câu từng sai, chưa thuộc, kèm hạn ôn (sớm nhất trước).
   MistakesProvider._()
     : super(
         from: null,
@@ -322,17 +322,109 @@ final class MistakesProvider
 
   @$internal
   @override
-  $FutureProviderElement<List<LatestAnswer>> $createElement(
+  $FutureProviderElement<List<QuestionReview>> $createElement(
     $ProviderPointer pointer,
   ) => $FutureProviderElement(pointer);
 
   @override
-  FutureOr<List<LatestAnswer>> create(Ref ref) {
+  FutureOr<List<QuestionReview>> create(Ref ref) {
     return mistakes(ref);
   }
 }
 
-String _$mistakesHash() => r'63dd4e000d91753c4fa354a5f55e409db2ab925d';
+String _$mistakesHash() => r'e17c7da458b968354e1c48ab5c71d2778419b169';
+
+/// Câu hỏi đã lưu. Lưu / bỏ lưu cập nhật ngay, lỗi mạng thì hoàn tác.
+
+@ProviderFor(SavedQuestions)
+final savedQuestionsProvider = SavedQuestionsProvider._();
+
+/// Câu hỏi đã lưu. Lưu / bỏ lưu cập nhật ngay, lỗi mạng thì hoàn tác.
+final class SavedQuestionsProvider
+    extends $AsyncNotifierProvider<SavedQuestions, List<SavedQuestion>> {
+  /// Câu hỏi đã lưu. Lưu / bỏ lưu cập nhật ngay, lỗi mạng thì hoàn tác.
+  SavedQuestionsProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'savedQuestionsProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$savedQuestionsHash();
+
+  @$internal
+  @override
+  SavedQuestions create() => SavedQuestions();
+}
+
+String _$savedQuestionsHash() => r'03ffa9dc2d249f496d0e7082f94a55779c71a472';
+
+/// Câu hỏi đã lưu. Lưu / bỏ lưu cập nhật ngay, lỗi mạng thì hoàn tác.
+
+abstract class _$SavedQuestions extends $AsyncNotifier<List<SavedQuestion>> {
+  FutureOr<List<SavedQuestion>> build();
+  @$mustCallSuper
+  @override
+  WhenComplete runBuild() {
+    final ref =
+        this.ref as $Ref<AsyncValue<List<SavedQuestion>>, List<SavedQuestion>>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<AsyncValue<List<SavedQuestion>>, List<SavedQuestion>>,
+              AsyncValue<List<SavedQuestion>>,
+              Object?,
+              Object?
+            >;
+    return element.handleCreate(ref, build);
+  }
+}
+
+@ProviderFor(dailyPractice)
+final dailyPracticeProvider = DailyPracticeProvider._();
+
+final class DailyPracticeProvider
+    extends
+        $FunctionalProvider<
+          AsyncValue<DailyPracticePlan>,
+          DailyPracticePlan,
+          FutureOr<DailyPracticePlan>
+        >
+    with
+        $FutureModifier<DailyPracticePlan>,
+        $FutureProvider<DailyPracticePlan> {
+  DailyPracticeProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'dailyPracticeProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$dailyPracticeHash();
+
+  @$internal
+  @override
+  $FutureProviderElement<DailyPracticePlan> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
+
+  @override
+  FutureOr<DailyPracticePlan> create(Ref ref) {
+    return dailyPractice(ref);
+  }
+}
+
+String _$dailyPracticeHash() => r'7009a6d8ab6ed659504327e5fc79e7548994f8ce';
 
 @ProviderFor(tagStats)
 final tagStatsProvider = TagStatsProvider._();

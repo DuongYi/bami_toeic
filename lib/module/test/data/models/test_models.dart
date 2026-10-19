@@ -132,7 +132,13 @@ ScoreTable? _readScoreTable(Object? v) => v is Map ? ScoreTable.tryParse(v['scor
 
 @freezed
 abstract class AttemptAnswer with _$AttemptAnswer {
-  const factory AttemptAnswer({required String questionId, String? chosen}) = _AttemptAnswer;
+  const factory AttemptAnswer({
+    required String questionId,
+    String? chosen,
+
+    /// Thời gian làm câu (ms); null = bài làm cũ, chưa ghi.
+    int? timeSpentMs,
+  }) = _AttemptAnswer;
 
   factory AttemptAnswer.fromJson(Map<String, dynamic> json) => _$AttemptAnswerFromJson(json);
 }
@@ -148,23 +154,76 @@ abstract class PartStat with _$PartStat {
   double get accuracy => total == 0 ? 0 : correct / total;
 }
 
-/// Lần trả lời gần nhất của 1 câu (view `latest_answers`) – nguồn của sổ câu sai.
+/// 1 câu từng làm sai và lịch ôn của nó (view `question_reviews`, tính từ lịch sử làm bài).
 @freezed
-abstract class LatestAnswer with _$LatestAnswer {
-  const factory LatestAnswer({
+abstract class QuestionReview with _$QuestionReview {
+  const QuestionReview._();
+
+  const factory QuestionReview({
     required String questionId,
     required String groupId,
     required String testId,
     required int part,
     required int number,
+    @Default(<String>[]) List<String> tags,
+
+    /// Đáp án ở lần làm gần nhất (null = bỏ trống).
     String? chosen,
+
+    /// Lần làm gần nhất đúng hay sai.
     required bool isCorrect,
     required DateTime finishedAt,
-    @Default(<String>[]) List<String> tags,
-  }) = _LatestAnswer;
 
-  factory LatestAnswer.fromJson(Map<String, dynamic> json) => _$LatestAnswerFromJson(json);
+    /// Số ngày làm đúng (khác ngày làm sai) kể từ lần sai gần nhất.
+    @Default(0) int streak,
+    required DateTime dueAt,
+    @Default(false) bool mastered,
+  }) = _QuestionReview;
+
+  factory QuestionReview.fromJson(Map<String, dynamic> json) => _$QuestionReviewFromJson(json);
+
+  bool isDue(DateTime now) => !mastered && !dueAt.isAfter(now);
 }
+
+/// Câu hỏi người học đã lưu (view `saved_question_info`).
+@freezed
+abstract class SavedQuestion with _$SavedQuestion {
+  const factory SavedQuestion({
+    required String questionId,
+    required String groupId,
+    required String testId,
+    required int part,
+    required int number,
+    @Default(<String>[]) List<String> tags,
+    required DateTime createdAt,
+  }) = _SavedQuestion;
+
+  factory SavedQuestion.fromJson(Map<String, dynamic> json) => _$SavedQuestionFromJson(json);
+}
+
+/// Thông tin tối thiểu của 1 câu (chọn câu mới cho bài luyện hằng ngày).
+@freezed
+abstract class QuestionStub with _$QuestionStub {
+  const factory QuestionStub({
+    required String id,
+    required String groupId,
+    required int part,
+    required int number,
+    @Default(<String>[]) List<String> tags,
+  }) = _QuestionStub;
+
+  factory QuestionStub.fromJson(Map<String, dynamic> json) => _$QuestionStubFromJson(json);
+}
+
+@freezed
+abstract class AnsweredStub with _$AnsweredStub {
+  const factory AnsweredStub({required String questionId}) = _AnsweredStub;
+
+  factory AnsweredStub.fromJson(Map<String, dynamic> json) => _$AnsweredStubFromJson(json);
+}
+
+/// Câu lấy ra để luyện: đủ thông tin để nạp nhóm câu và sắp thứ tự.
+typedef QuestionRef = ({String questionId, String groupId, int part, int number});
 
 @freezed
 abstract class TagStat with _$TagStat {
@@ -225,12 +284,16 @@ class AttemptAnswerInsert {
     required this.questionId,
     required this.chosen,
     required this.isCorrect,
+    this.timeSpentMs,
   });
 
   final String attemptId;
   final String questionId;
   final String? chosen;
   final bool isCorrect;
+
+  @JsonKey(includeIfNull: false)
+  final int? timeSpentMs;
 
   Map<String, dynamic> toJson() => _$AttemptAnswerInsertToJson(this);
 }
@@ -263,6 +326,9 @@ abstract class AttemptResult with _$AttemptResult {
 
     /// question_id → đáp án đã chọn (null = bỏ trống)
     required Map<String, String?> answers,
+
+    /// question_id → thời gian làm (ms); trống với bài làm cũ.
+    @Default(<String, int>{}) Map<String, int> timeSpentMs,
   }) = _AttemptResult;
 
   List<Question> get questions => [for (final g in groups) ...g.questions];

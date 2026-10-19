@@ -19,7 +19,7 @@ class TestTakingPage extends ConsumerStatefulWidget {
   final String testId;
   final String mode;
 
-  /// Dạng "1,2,5"; với phiên sổ câu sai là bộ lọc ("all" | "part:5" | "tag:word-form")
+  /// Dạng "1,2,5"; với phiên luyện lại là bộ lọc (xem [kMistakesSession])
   final String parts;
 
   @override
@@ -148,7 +148,7 @@ class _TestTakingPageState extends ConsumerState<TestTakingPage> {
         context.pop();
         showAppSnackBarOn(
           messenger,
-          'Đúng $correct/$total câu · $correct câu đã ra khỏi sổ câu sai',
+          'Đúng $correct/$total câu. Câu đúng giãn lịch ôn, câu sai sẽ quay lại vào ngày mai.',
           tone: correct == total ? AppTone.success : AppTone.info,
         );
       }
@@ -192,7 +192,12 @@ class _TestTakingPageState extends ConsumerState<TestTakingPage> {
     if (groups.isEmpty) {
       return Scaffold(
         appBar: AppBar(),
-        body: const AppEmptyView(icon: Icons.inbox_outlined, message: 'Không có câu hỏi.'),
+        body: AppEmptyView(
+          icon: Icons.inbox_outlined,
+          message: _isMistakes
+              ? 'Chưa có câu nào để luyện lúc này.\nLàm thêm đề để có câu ôn và gợi ý dạng câu yếu.'
+              : 'Không có câu hỏi.',
+        ),
       );
     }
     final isExam = widget.mode == 'exam';

@@ -194,6 +194,7 @@ class FakeTestRepository implements TestRepository {
     attempt: _attempts.last,
     groups: _groups,
     answers: const {'q101': 'A', 'q102': 'C', 'q147': 'B', 'q148': null},
+    timeSpentMs: const {'q101': 18000, 'q102': 52000, 'q147': 95000, 'q148': 140000},
   );
 
   @override
@@ -218,6 +219,7 @@ class FakeTestRepository implements TestRepository {
     required DateTime startedAt,
     required List<Question> questions,
     required Map<String, String> answers,
+    Map<String, int> timeSpentMs = const {},
     String source = 'test',
   }) async => _attempts.first;
 
@@ -230,8 +232,8 @@ class FakeTestRepository implements TestRepository {
   ];
 
   @override
-  Future<List<LatestAnswer>> fetchMistakes() async => [
-    LatestAnswer(
+  Future<List<QuestionReview>> fetchMistakes() async => [
+    QuestionReview(
       questionId: 'q102',
       groupId: 'g2',
       testId: 't1',
@@ -240,19 +242,44 @@ class FakeTestRepository implements TestRepository {
       chosen: 'C',
       isCorrect: false,
       finishedAt: DateTime(2026, 10, 1),
+      dueAt: DateTime(2026, 10, 2),
       tags: const ['word-form'],
     ),
-    LatestAnswer(
+    QuestionReview(
       questionId: 'q148',
       groupId: 'g3',
       testId: 't1',
       part: 7,
       number: 148,
-      isCorrect: false,
+      isCorrect: true,
+      streak: 1,
       finishedAt: DateTime(2026, 10, 1),
+      dueAt: DateTime(2099, 1, 1),
       tags: const ['inference'],
     ),
   ];
+
+  @override
+  Future<List<SavedQuestion>> fetchSaved() async => [
+    SavedQuestion(
+      questionId: 'q147',
+      groupId: 'g3',
+      testId: 't1',
+      part: 7,
+      number: 147,
+      createdAt: DateTime(2026, 10, 1),
+    ),
+  ];
+
+  @override
+  Future<void> saveQuestion(String questionId) async {}
+
+  @override
+  Future<void> unsaveQuestion(String questionId) async {}
+
+  @override
+  Future<List<QuestionStub>> fetchNewQuestions(List<String> tags, {required int limit}) async =>
+      const [];
 
   @override
   Future<OfflineEntry> downloadTest(
@@ -279,9 +306,7 @@ class FakeTestRepository implements TestRepository {
   Future<void> deleteInProgress(String testId) async {}
 
   @override
-  Future<List<QuestionGroup>> fetchMistakeGroups(
-    List<LatestAnswer> mistakes,
-  ) async => _groups;
+  Future<List<QuestionGroup>> fetchGroupsFor(List<QuestionRef> refs) async => _groups;
 
   @override
   Future<(int, int)> submitMistakePractice({
@@ -289,6 +314,7 @@ class FakeTestRepository implements TestRepository {
     required DateTime startedAt,
     required List<QuestionGroup> groups,
     required Map<String, String> answers,
+    Map<String, int> timeSpentMs = const {},
   }) async => (1, 2);
 }
 

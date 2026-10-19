@@ -1,5 +1,7 @@
 # Build bản web (Flutter) và đăng lên GitHub Pages mỗi khi push lên main.
-# Cần 2 repository secret: SUPABASE_URL, SUPABASE_KEY (khoá publishable, giống env.json).
+# Cấu hình Supabase: lấy từ repository secret SUPABASE_URL / SUPABASE_KEY nếu có,
+# không thì dùng env.public.json trong repo (chỉ chứa URL + khoá publishable, vốn công khai
+# trong bản web; dữ liệu được bảo vệ bằng RLS).
 name: Deploy web
 
 on:
@@ -20,7 +22,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - uses: subosito/flutter-action@v2
         with:
@@ -30,14 +32,25 @@ jobs:
 
       - run: flutter pub get
 
-      - name: Tạo env.json từ secrets
+      - name: Tạo env.json (secrets hoặc env.public.json)
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         run: |
-          test -n "$SUPABASE_URL" && test -n "$SUPABASE_KEY" || { echo "Thiếu secret SUPABASE_URL / SUPABASE_KEY"; exit 1; }
-          jq -n --arg url "$SUPABASE_URL" --arg key "$SUPABASE_KEY" \
-            '{SUPABASE_URL: $url, SUPABASE_KEY: $key}' > env.json
+          if [ -n "$SUPABASE_URL" ] && [ -n "$SUPABASE_KEY" ]; then
+            jq -n --arg url "$SUPABASE_URL" --arg key "$SUPABASE_KEY" \
+              '{SUPABASE_URL: $url, SUPABASE_KEY: $key}' > env.json
+            echo "Dùng cấu hình từ repository secrets"
+          else
+            cp env.public.json env.json
+            echo "Không có secrets → dùng env.public.json"
+          fi
+          # Chặn nhầm khoá bí mật (service_role / sb_secret_) vào bản web công khai.
+          key=$(jq -r .SUPABASE_KEY env.json)
+          case "$key" in
+            sb_publishable_*) ;;
+            *) echo "SUPABASE_KEY phải là khoá publishable (sb_publishable_…)"; exit 1 ;;
+          esac
 
       # Trang dự án nằm ở /<tên repo>/ nên base-href phải khớp.
       - run: >
@@ -45,7 +58,7 @@ jobs:
           --dart-define-from-file=env.json
           --base-href "/${{ github.event.repository.name }}/"
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: build/web
 

@@ -25,6 +25,7 @@ Map<String, dynamic> _$AttemptAnswerInsertToJson(
   'question_id': instance.questionId,
   'chosen': instance.chosen,
   'is_correct': instance.isCorrect,
+  'time_spent_ms': ?instance.timeSpentMs,
 };
 
 Map<String, dynamic> _$InProgressUpsertToJson(InProgressUpsert instance) =>
@@ -148,12 +149,14 @@ _AttemptAnswer _$AttemptAnswerFromJson(Map<String, dynamic> json) =>
     _AttemptAnswer(
       questionId: json['question_id'] as String,
       chosen: json['chosen'] as String?,
+      timeSpentMs: (json['time_spent_ms'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$AttemptAnswerToJson(_AttemptAnswer instance) =>
     <String, dynamic>{
       'question_id': instance.questionId,
       'chosen': instance.chosen,
+      'time_spent_ms': instance.timeSpentMs,
     };
 
 _PartStat _$PartStatFromJson(Map<String, dynamic> json) => _PartStat(
@@ -168,33 +171,89 @@ Map<String, dynamic> _$PartStatToJson(_PartStat instance) => <String, dynamic>{
   'correct': instance.correct,
 };
 
-_LatestAnswer _$LatestAnswerFromJson(Map<String, dynamic> json) =>
-    _LatestAnswer(
+_QuestionReview _$QuestionReviewFromJson(Map<String, dynamic> json) =>
+    _QuestionReview(
       questionId: json['question_id'] as String,
       groupId: json['group_id'] as String,
       testId: json['test_id'] as String,
       part: (json['part'] as num).toInt(),
       number: (json['number'] as num).toInt(),
-      chosen: json['chosen'] as String?,
-      isCorrect: json['is_correct'] as bool,
-      finishedAt: DateTime.parse(json['finished_at'] as String),
       tags:
           (json['tags'] as List<dynamic>?)?.map((e) => e as String).toList() ??
           const <String>[],
+      chosen: json['chosen'] as String?,
+      isCorrect: json['is_correct'] as bool,
+      finishedAt: DateTime.parse(json['finished_at'] as String),
+      streak: (json['streak'] as num?)?.toInt() ?? 0,
+      dueAt: DateTime.parse(json['due_at'] as String),
+      mastered: json['mastered'] as bool? ?? false,
     );
 
-Map<String, dynamic> _$LatestAnswerToJson(_LatestAnswer instance) =>
+Map<String, dynamic> _$QuestionReviewToJson(_QuestionReview instance) =>
     <String, dynamic>{
       'question_id': instance.questionId,
       'group_id': instance.groupId,
       'test_id': instance.testId,
       'part': instance.part,
       'number': instance.number,
+      'tags': instance.tags,
       'chosen': instance.chosen,
       'is_correct': instance.isCorrect,
       'finished_at': instance.finishedAt.toIso8601String(),
+      'streak': instance.streak,
+      'due_at': instance.dueAt.toIso8601String(),
+      'mastered': instance.mastered,
+    };
+
+_SavedQuestion _$SavedQuestionFromJson(Map<String, dynamic> json) =>
+    _SavedQuestion(
+      questionId: json['question_id'] as String,
+      groupId: json['group_id'] as String,
+      testId: json['test_id'] as String,
+      part: (json['part'] as num).toInt(),
+      number: (json['number'] as num).toInt(),
+      tags:
+          (json['tags'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+          const <String>[],
+      createdAt: DateTime.parse(json['created_at'] as String),
+    );
+
+Map<String, dynamic> _$SavedQuestionToJson(_SavedQuestion instance) =>
+    <String, dynamic>{
+      'question_id': instance.questionId,
+      'group_id': instance.groupId,
+      'test_id': instance.testId,
+      'part': instance.part,
+      'number': instance.number,
+      'tags': instance.tags,
+      'created_at': instance.createdAt.toIso8601String(),
+    };
+
+_QuestionStub _$QuestionStubFromJson(Map<String, dynamic> json) =>
+    _QuestionStub(
+      id: json['id'] as String,
+      groupId: json['group_id'] as String,
+      part: (json['part'] as num).toInt(),
+      number: (json['number'] as num).toInt(),
+      tags:
+          (json['tags'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+          const <String>[],
+    );
+
+Map<String, dynamic> _$QuestionStubToJson(_QuestionStub instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'group_id': instance.groupId,
+      'part': instance.part,
+      'number': instance.number,
       'tags': instance.tags,
     };
+
+_AnsweredStub _$AnsweredStubFromJson(Map<String, dynamic> json) =>
+    _AnsweredStub(questionId: json['question_id'] as String);
+
+Map<String, dynamic> _$AnsweredStubToJson(_AnsweredStub instance) =>
+    <String, dynamic>{'question_id': instance.questionId};
 
 _TagStat _$TagStatFromJson(Map<String, dynamic> json) => _TagStat(
   tag: json['tag'] as String,

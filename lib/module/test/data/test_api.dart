@@ -56,7 +56,7 @@ abstract class TestApi {
   @GET('/rest/v1/attempt_answers')
   Future<List<AttemptAnswer>> getAttemptAnswers({
     @Query('attempt_id') required String attemptId,
-    @Query('select') String select = 'question_id,chosen',
+    @Query('select') String select = 'question_id,chosen,time_spent_ms',
   });
 
   @DELETE('/rest/v1/attempts')
@@ -65,18 +65,49 @@ abstract class TestApi {
   @GET('/rest/v1/part_stats')
   Future<List<PartStat>> getPartStats({@Query('order') String order = 'part'});
 
-  /// Lần trả lời gần nhất của mỗi câu; lọc `is_correct=eq.false` để lấy sổ câu sai.
-  @GET('/rest/v1/latest_answers')
-  Future<List<LatestAnswer>> getLatestAnswers({
-    @Query('is_correct') String? isCorrect,
-    @Query('order') String order = 'finished_at.desc',
-  });
-
   /// Nhóm câu theo danh sách id: `id=in.(a,b,c)`.
   @GET('/rest/v1/question_groups')
   Future<List<QuestionGroup>> getGroupsByIds({
     @Query('id') required String ids,
     @Query('select') String select = '*,questions(*)',
+  });
+
+  /// Câu từng sai còn trong sổ (chưa thuộc), hạn ôn sớm nhất trước.
+  @GET('/rest/v1/question_reviews')
+  Future<List<QuestionReview>> getQuestionReviews({
+    @Query('mastered') String mastered = 'eq.false',
+    @Query('order') String order = 'due_at.asc',
+  });
+
+  @GET('/rest/v1/saved_question_info')
+  Future<List<SavedQuestion>> getSavedQuestions({
+    @Query('order') String order = 'created_at.desc',
+  });
+
+  @POST('/rest/v1/saved_questions')
+  @Headers({'Prefer': Pg.upsert})
+  Future<void> saveQuestion(
+    @Body() Map<String, dynamic> body, {
+    @Query('on_conflict') String onConflict = 'user_id,question_id',
+  });
+
+  @DELETE('/rest/v1/saved_questions')
+  Future<void> unsaveQuestion({@Query('question_id') required String questionId});
+
+  /// Câu thuộc các dạng cho trước (`tags=ov.{a,b}`); RLS chỉ trả câu của đề người học mở được.
+  @GET('/rest/v1/questions')
+  Future<List<QuestionStub>> getQuestionsByTags({
+    @Query('tags') required String tags,
+    @Query('select') String select = 'id,group_id,part,number,tags',
+    @Query('order') String order = 'test_id,number',
+    @Query('limit') int limit = 400,
+  });
+
+  /// Câu nào trong danh sách đã từng làm: `question_id=in.(…)`.
+  @GET('/rest/v1/latest_answers')
+  Future<List<AnsweredStub>> getAnsweredAmong({
+    @Query('question_id') required String ids,
+    @Query('select') String select = 'question_id',
   });
 
   @GET('/rest/v1/tag_stats')

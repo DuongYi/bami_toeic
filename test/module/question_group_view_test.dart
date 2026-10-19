@@ -1,16 +1,26 @@
 import 'package:bami_toeic/core/design_system/design_system.dart';
 import 'package:bami_toeic/module/test/data/models/test_models.dart';
+import 'package:bami_toeic/module/test/presentation/controllers/test_providers.dart';
 import 'package:bami_toeic/module/test/presentation/widgets/question_group_view.dart';
 import 'package:bami_toeic/module/vocab/presentation/widgets/word_lookup_sheet.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+class _NoSaved extends SavedQuestions {
+  @override
+  Future<List<SavedQuestion>> build() async => const [];
+}
+
 Widget _wrap(Widget child, {Size size = const Size(390, 844)}) {
-  return MaterialApp(
-    theme: AppTheme.light(),
-    home: MediaQuery(
-      data: MediaQueryData(size: size),
-      child: Scaffold(body: child),
+  return ProviderScope(
+    overrides: [savedQuestionsProvider.overrideWith(_NoSaved.new)],
+    child: MaterialApp(
+      theme: AppTheme.light(),
+      home: MediaQuery(
+        data: MediaQueryData(size: size),
+        child: Scaffold(body: child),
+      ),
     ),
   );
 }

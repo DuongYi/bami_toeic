@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../../../core/design_system/design_system.dart';
 import '../../../../helper/format.dart';
+import '../../../../helper/pacing.dart';
 import '../../../../helper/score.dart';
 import '../../../../routes/app_router.dart';
 import '../../../leaderboard/data/realm.dart';
@@ -63,6 +64,23 @@ class _ResultBodyState extends State<_ResultBody> {
         ),
       ),
     );
+  }
+
+  PacingReport? _pacing() => Pacing.of([
+    for (final q in widget.data.questions)
+      TimedAnswer(
+        questionId: q.id,
+        part: q.part,
+        number: q.number,
+        ms: widget.data.timeSpentMs[q.id],
+        correct: _isCorrect(q),
+      ),
+  ]);
+
+  /// Mở phần xem lại ở nhóm chứa câu [questionId].
+  void _openReviewAt(String questionId) {
+    final i = widget.data.groups.indexWhere((g) => g.questions.any((q) => q.id == questionId));
+    if (i >= 0) _openReview(i);
   }
 
   static (String, String) _verdict(double ratio) => ratio >= 0.85
@@ -269,6 +287,14 @@ class _ResultBodyState extends State<_ResultBody> {
                   ],
                 ),
               ),
+              if (_pacing() case final pacing?) ...[
+                Gaps.v24,
+                const SectionHeader(
+                  title: 'Nhịp làm bài',
+                  subtitle: 'Phần Reading · thời gian trung bình mỗi câu',
+                ),
+                _PacingCard(report: pacing, onOpen: _openReviewAt),
+              ],
               Gaps.v24,
               SectionHeader(
                 title: 'Đáp án',
@@ -316,6 +342,98 @@ class _ResultBodyState extends State<_ResultBody> {
       tone: tone,
       semanticLabel: 'Câu ${q.number}, $status',
       onTap: onTap,
+    );
+  }
+}
+
+/// Nhịp từng Part so với chuẩn + các câu tốn thời gian nhất (chạm để xem lại).
+class _PacingCard extends StatelessWidget {
+  const _PacingCard({required this.report, required this.onOpen});
+
+  final PacingReport report;
+  final ValueChanged<String> onOpen;
+
+  static (AppTone, String) _status(double ratio) => ratio <= 1.0
+      ? (AppTone.success, 'Đúng nhịp')
+      : ratio <= 1.3
+      ? (AppTone.warning, 'Hơi chậm')
+      : (AppTone.danger, 'Chậm');
+
+  static String _sec(double s) => s >= 60 ? Fmt.clock(Duration(seconds: s.round())) : '${s.round()} giây';
+
+  @override
+  Widget build(BuildContext context) {
+    final muted = context.textStyles.bodySmall?.copyWith(color: context.colors.onSurfaceVariant);
+    final p7 = report.parts.where((p) => p.part == 7).firstOrNull;
+    return AppCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          for (final (i, p) in report.parts.indexed) ...[
+            if (i > 0) Gaps.v12,
+            Row(
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(partNames[p.part] ?? 'Part ${p.part}'),
+                      Text(
+                        '${_sec(p.avgSeconds)}/câu · chuẩn ${p.targetSeconds} giây · ${p.count} câu',
+                        style: muted,
+                      ),
+                    ],
+                  ),
+                ),
+                switch (_status(p.ratio)) {
+                  (final tone, final label) => StatusBadge(label: label, tone: tone, icon: tone.icon),
+                },
+              ],
+            ),
+          ],
+          if (report.slow.isNotEmpty) ...[
+            Gaps.v16,
+            const Divider(),
+            Gaps.v12,
+            Text('Câu tốn thời gian nhất', style: context.textStyles.titleSmall),
+            Gaps.v4,
+            Text(
+              report.slowWrongCount > 0
+                  ? '${report.slowWrongCount} câu làm quá lâu mà vẫn sai. Lần sau gặp câu khó, '
+                        'hãy đoán nhanh và đánh dấu để quay lại.'
+                  : 'Các câu làm lâu đều đúng, nhưng vẫn nên luyện để nhanh hơn.',
+              style: muted,
+            ),
+            Gaps.v8,
+            Wrap(
+              spacing: AppSpacing.s8,
+              runSpacing: AppSpacing.s8,
+              children: [
+                for (final a in report.slow)
+                  ActionChip(
+                    avatar: Icon(
+                      a.correct ? AppTone.success.icon : AppTone.danger.icon,
+                      size: AppSizes.iconSm,
+                      color: (a.correct ? AppTone.success : AppTone.danger).colorsOf(context).main,
+                    ),
+                    label: Text('Câu ${a.number} · ${Fmt.clock(Duration(seconds: a.ms! ~/ 1000))}'),
+                    tooltip: a.correct ? 'Đúng' : 'Sai',
+                    onPressed: () => onOpen(a.questionId),
+                  ),
+              ],
+            ),
+          ],
+          if (p7 != null && p7.ratio > 1.3) ...[
+            Gaps.v12,
+            AppBanner(
+              tone: AppTone.info,
+              message:
+                  'Part 7 đang chậm: đọc câu hỏi trước, gạch từ khoá rồi mới dò trong đoạn văn; '
+                  'câu hỏi chi tiết làm trước, câu suy luận làm sau.',
+            ),
+          ],
+        ],
+      ),
     );
   }
 }

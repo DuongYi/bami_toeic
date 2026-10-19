@@ -254,7 +254,7 @@ class _TestApi implements TestApi {
   @override
   Future<List<AttemptAnswer>> getAttemptAnswers({
     required String attemptId,
-    String select = 'question_id,chosen',
+    String select = 'question_id,chosen,time_spent_ms',
   }) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -335,42 +335,6 @@ class _TestApi implements TestApi {
   }
 
   @override
-  Future<List<LatestAnswer>> getLatestAnswers({
-    String? isCorrect,
-    String order = 'finished_at.desc',
-  }) async {
-    final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'is_correct': isCorrect,
-      r'order': order,
-    };
-    queryParameters.removeWhere((k, v) => v == null);
-    final _headers = <String, dynamic>{};
-    const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<List<LatestAnswer>>(
-      Options(method: 'GET', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/rest/v1/latest_answers',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
-    final _result = await _dio.fetch<List<dynamic>>(_options);
-    late List<LatestAnswer> _value;
-    try {
-      _value = _result.data!
-          .map((dynamic i) => LatestAnswer.fromJson(i as Map<String, dynamic>))
-          .toList();
-    } on Object catch (e, s) {
-      errorLogger?.logError(e, s, _options, response: _result);
-      rethrow;
-    }
-    return _value;
-  }
-
-  @override
   Future<List<QuestionGroup>> getGroupsByIds({
     required String ids,
     String select = '*,questions(*)',
@@ -394,6 +358,193 @@ class _TestApi implements TestApi {
     try {
       _value = _result.data!
           .map((dynamic i) => QuestionGroup.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options, response: _result);
+      rethrow;
+    }
+    return _value;
+  }
+
+  @override
+  Future<List<QuestionReview>> getQuestionReviews({
+    String mastered = 'eq.false',
+    String order = 'due_at.asc',
+  }) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'mastered': mastered,
+      r'order': order,
+    };
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<List<QuestionReview>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/rest/v1/question_reviews',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<QuestionReview> _value;
+    try {
+      _value = _result.data!
+          .map(
+            (dynamic i) => QuestionReview.fromJson(i as Map<String, dynamic>),
+          )
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options, response: _result);
+      rethrow;
+    }
+    return _value;
+  }
+
+  @override
+  Future<List<SavedQuestion>> getSavedQuestions({
+    String order = 'created_at.desc',
+  }) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{r'order': order};
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<List<SavedQuestion>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/rest/v1/saved_question_info',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<SavedQuestion> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => SavedQuestion.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options, response: _result);
+      rethrow;
+    }
+    return _value;
+  }
+
+  @override
+  Future<void> saveQuestion(
+    Map<String, dynamic> body, {
+    String onConflict = 'user_id,question_id',
+  }) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{r'on_conflict': onConflict};
+    final _headers = <String, dynamic>{
+      r'Prefer': 'resolution=merge-duplicates,return=minimal',
+    };
+    _headers.removeWhere((k, v) => v == null);
+    final _data = <String, dynamic>{};
+    _data.addAll(body);
+    final _options = _setStreamType<void>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/rest/v1/saved_questions',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    await _dio.fetch<void>(_options);
+  }
+
+  @override
+  Future<void> unsaveQuestion({required String questionId}) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{r'question_id': questionId};
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<void>(
+      Options(method: 'DELETE', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/rest/v1/saved_questions',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    await _dio.fetch<void>(_options);
+  }
+
+  @override
+  Future<List<QuestionStub>> getQuestionsByTags({
+    required String tags,
+    String select = 'id,group_id,part,number,tags',
+    String order = 'test_id,number',
+    int limit = 400,
+  }) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'tags': tags,
+      r'select': select,
+      r'order': order,
+      r'limit': limit,
+    };
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<List<QuestionStub>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/rest/v1/questions',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<QuestionStub> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => QuestionStub.fromJson(i as Map<String, dynamic>))
+          .toList();
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options, response: _result);
+      rethrow;
+    }
+    return _value;
+  }
+
+  @override
+  Future<List<AnsweredStub>> getAnsweredAmong({
+    required String ids,
+    String select = 'question_id',
+  }) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'question_id': ids,
+      r'select': select,
+    };
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<List<AnsweredStub>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/rest/v1/latest_answers',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<AnsweredStub> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) => AnsweredStub.fromJson(i as Map<String, dynamic>))
           .toList();
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options, response: _result);

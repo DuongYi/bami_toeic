@@ -5,6 +5,7 @@ import '../../../../core/media/media_image.dart';
 import '../../../vocab/presentation/widgets/word_lookup_sheet.dart';
 import '../../data/models/test_models.dart';
 import 'audio_bar.dart';
+import 'save_question_button.dart';
 
 const partNames = {
   1: 'Part 1 · Mô tả tranh',
@@ -382,6 +383,7 @@ class _QuestionGroupViewState extends State<QuestionGroupView> {
                   contextMenuBuilder: _buildContextMenu(context, 'q_${q.id}'),
                   highlights: _getHighlightsFor('q_${q.id}'),
                   highlightStyle: highlightStyle,
+                  group: group,
                 ),
             ],
           ),
@@ -487,6 +489,7 @@ class _QuestionGroupViewState extends State<QuestionGroupView> {
             contextMenuBuilder: _buildContextMenu(context, 'q_${q.id}'),
             highlights: _getHighlightsFor('q_${q.id}'),
             highlightStyle: highlightStyle,
+            group: group,
           ),
       ],
     );
@@ -694,6 +697,7 @@ class _AnswerSheetColumnState extends State<_AnswerSheetColumn> {
                     ),
                   ],
                   const Spacer(),
+                  SaveQuestionButton(question: q, group: widget.group, compact: true),
                   if (widget.onToggleFlag != null)
                     IconButton(
                       tooltip: isFlg ? 'Bỏ cờ câu ${q.number}' : 'Đánh dấu cờ',
@@ -927,8 +931,11 @@ class _QuestionTile extends StatelessWidget {
     this.contextMenuBuilder,
     this.highlights = const {},
     this.highlightStyle,
+    this.group,
   });
 
+  /// Nhóm chứa câu – cần để lưu câu (null = ẩn nút lưu).
+  final QuestionGroup? group;
   final Question question;
   final String? chosen;
   final void Function(Question q, String letter)? onSelect;
@@ -978,6 +985,7 @@ class _QuestionTile extends StatelessWidget {
                   ),
                 ),
               ),
+              if (group != null) SaveQuestionButton(question: q, group: group!),
               if (onToggleFlag != null)
                 IconButton(
                   tooltip: flagged ? 'Bỏ đánh dấu câu ${q.number}' : 'Đánh dấu câu ${q.number}',

@@ -15,6 +15,7 @@ import '../../../plan/presentation/widgets/pro_sheet.dart';
 import '../../../vocab/presentation/controllers/vocab_controller.dart';
 import '../../data/in_progress_store.dart';
 import '../../data/models/test_models.dart';
+import '../../data/question_tags.dart';
 import '../../data/test_catalog.dart';
 import '../controllers/test_providers.dart';
 import '../widgets/test_collection_card.dart';
@@ -67,6 +68,7 @@ class _TestListPageState extends ConsumerState<TestListPage> {
                   Gaps.v16,
                   const _DailyMission(),
                   Gaps.v16,
+                  const _DailyPracticeCard(),
                   const _WeeklyChallengeCard(),
                   Gaps.v16,
                   const _QuickActions(),
@@ -410,6 +412,49 @@ class _DailyMission extends ConsumerWidget {
   }
 }
 
+/// Bài luyện hôm nay: câu sai đến hạn ôn + câu mới thuộc dạng yếu nhất (tối đa 15 câu).
+class _DailyPracticeCard extends ConsumerWidget {
+  const _DailyPracticeCard();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final plan = ref.watch(dailyPracticeProvider).value;
+    if (plan == null || plan.isEmpty) return const SizedBox.shrink();
+    final parts = [
+      if (plan.reviewCount > 0) '${plan.reviewCount} câu ôn đến hạn',
+      if (plan.weakTags.isNotEmpty) 'câu mới dạng ${plan.weakTags.map(tagLabel).join(', ')}',
+    ];
+    return Padding(
+      padding: const EdgeInsets.only(bottom: AppSpacing.s16),
+      child: AppCard(
+        onTap: () => context.push(Routes.takeMistakes(filter: 'daily')),
+        child: Row(
+          children: [
+            const IconBadge(icon: Icons.bolt_rounded, tone: AppTone.info),
+            Gaps.h12,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Bài luyện hôm nay', style: context.textStyles.titleMedium),
+                  Gaps.v4,
+                  Text(
+                    'Tối đa ${DailyPracticePlan.size} câu: ${parts.join(' + ')}',
+                    style: context.textStyles.bodySmall?.copyWith(
+                      color: context.colors.onSurfaceVariant,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Icon(Icons.chevron_right_rounded, color: context.colors.onSurfaceVariant),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 /// Thử thách tuần: học 5/7 ngày, đủ câu và thẻ theo mục tiêu mỗi ngày. Chạm → chỉnh mục tiêu.
 class _WeeklyChallengeCard extends ConsumerWidget {
   const _WeeklyChallengeCard();
@@ -507,11 +552,14 @@ class _QuickActions extends ConsumerWidget {
                   icon: Icons.assignment_late_outlined,
                   tone: AppTone.danger,
                   title: 'Sổ câu sai',
-                  subtitle: mistakes == null
-                      ? 'Ôn câu làm sai'
-                      : mistakes.isEmpty
-                      ? 'Chưa có câu sai'
-                      : '${mistakes.length} câu cần ôn',
+                  subtitle: switch (mistakes) {
+                    null => 'Ôn câu làm sai',
+                    [] => 'Chưa có câu sai',
+                    final m => switch (m.where((r) => r.isDue(DateTime.now())).length) {
+                      0 => '${m.length} câu, chưa đến hạn',
+                      final due => '$due câu đến hạn ôn',
+                    },
+                  },
                   onTap: () => context.push(Routes.mistakes),
                 ),
               ),

@@ -1,4 +1,5 @@
 import 'package:bami_toeic/helper/format.dart';
+import 'package:bami_toeic/helper/pacing.dart';
 import 'package:bami_toeic/helper/dictation.dart';
 import 'package:bami_toeic/helper/score.dart';
 import 'package:bami_toeic/helper/srs.dart';
@@ -93,6 +94,35 @@ void main() {
     });
 
     test('không khớp', () => expect(find('xyz'), isEmpty));
+  });
+
+  group('Pacing', () {
+    TimedAnswer a(int part, int n, int? sec, {bool ok = true}) => TimedAnswer(
+      questionId: 'q$n',
+      part: part,
+      number: n,
+      ms: sec == null ? null : sec * 1000,
+      correct: ok,
+    );
+
+    test('trung bình theo Part, bỏ Listening, câu chậm sắp lâu nhất trước', () {
+      final r = Pacing.of([
+        a(2, 10, 300),
+        a(5, 101, 20),
+        a(5, 102, 60, ok: false),
+        a(7, 147, 150, ok: false),
+        a(7, 148, 90),
+      ])!;
+      expect([for (final p in r.parts) p.part], [5, 7]);
+      expect(r.parts.first.avgSeconds, 40);
+      expect(r.parts.last.ratio, 2);
+      expect([for (final s in r.slow) s.number], [147, 102]);
+      expect(r.slowWrongCount, 2);
+    });
+
+    test('ghi được dưới nửa số câu Reading → không báo cáo', () {
+      expect(Pacing.of([a(5, 101, 20), a(5, 102, null), a(5, 103, null)]), isNull);
+    });
   });
 
   group('ContextSentence', () {

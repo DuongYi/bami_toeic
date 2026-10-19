@@ -13,7 +13,9 @@ import 'test_providers.dart';
 part 'test_taking_controller.freezed.dart';
 part 'test_taking_controller.g.dart';
 
-/// testId đặc biệt cho phiên luyện sổ câu sai; `parts` khi đó là bộ lọc: "all" | "part:5" | "tag:word-form".
+/// testId đặc biệt cho phiên luyện lại; `parts` khi đó là bộ lọc:
+/// "all" (cả sổ câu sai) | "due" (câu đến hạn ôn) | "part:5" | "tag:word-form"
+/// | "saved" (câu đã lưu) | "daily" (bài luyện hằng ngày: câu đến hạn + câu mới dạng yếu).
 const kMistakesSession = 'mistakes';
 
 @freezed
@@ -35,6 +37,9 @@ abstract class TakingState with _$TakingState {
 
     /// Câu đánh dấu để xem lại trước khi nộp
     @Default(<String>{}) Set<String> flagged,
+
+    /// Thời gian làm từng câu (ms): tính từ lúc vào nhóm câu / lần chọn trước tới lúc chọn.
+    @Default(<String, int>{}) Map<String, int> timeSpentMs,
     @Default(0) int index,
     @Default(false) bool submitting,
     @Default(false) bool isMistakeSession,
@@ -90,13 +95,7 @@ class TestTaking extends _$TestTaking {
     int? limitMinutes;
     var testTotal = 0;
     if (_isMistakes) {
-      final all = await repo.fetchMistakes();
-      final filtered = switch (parts.split(':')) {
-        ['part', final p] => all.where((m) => m.part == int.parse(p)).toList(),
-        ['tag', final t] => all.where((m) => m.tags.contains(t)).toList(),
-        _ => all,
-      };
-      groups = await repo.fetchMistakeGroups(filtered);
+      groups = await repo.fetchGroupsFor(await _reviewRefs(repo, parts));
       partList = ({for (final g in groups) g.part}.toList()..sort());
     } else {
       partList = parts.split(',').map(int.parse).toList();
@@ -140,8 +139,50 @@ class TestTaking extends _$TestTaking {
     }
 
     _timer = Timer.periodic(const Duration(seconds: 1), (_) => _tick());
+    _mark = DateTime.now();
     return initial;
   }
+
+  /// Các câu của phiên luyện lại theo bộ lọc (xem [kMistakesSession]).
+  Future<List<QuestionRef>> _reviewRefs(TestRepository repo, String filter) async {
+    QuestionRef ref0(String id, String groupId, int part, int number) =>
+        (questionId: id, groupId: groupId, part: part, number: number);
+    if (filter == 'saved') {
+      return [
+        for (final s in await repo.fetchSaved()) ref0(s.questionId, s.groupId, s.part, s.number),
+      ];
+    }
+    if (filter == 'daily') {
+      final plan = await ref.read(dailyPracticeProvider.future);
+      final reviews = plan.due.take(DailyPracticePlan.maxReviews).toList();
+      final fresh = await repo.fetchNewQuestions(
+        plan.weakTags,
+        limit: DailyPracticePlan.size - reviews.length,
+      );
+      return [
+        for (final r in reviews) ref0(r.questionId, r.groupId, r.part, r.number),
+        for (final q in fresh) ref0(q.id, q.groupId, q.part, q.number),
+      ];
+    }
+    final now = DateTime.now();
+    final all = await repo.fetchMistakes();
+    return [
+      for (final m in all)
+        if (switch (filter.split(':')) {
+          ['part', final p] => m.part == int.parse(p),
+          ['tag', final t] => m.tags.contains(t),
+          ['due'] => m.isDue(now),
+          _ => true,
+        })
+          ref0(m.questionId, m.groupId, m.part, m.number),
+    ];
+  }
+
+  /// Mốc bắt đầu tính giờ cho câu tiếp theo (vào nhóm câu mới / vừa chọn đáp án).
+  DateTime _mark = DateTime.now();
+
+  /// Bỏ qua khoảng quá dài (để máy đó, ra ngoài) để không làm lệch báo cáo nhịp làm bài.
+  static const _maxSpent = Duration(minutes: 10);
 
   void _update(TakingState Function(TakingState s) f, {bool persist = false}) {
     final s = state.value;
@@ -210,11 +251,16 @@ class TestTaking extends _$TestTaking {
       final store = ref.read(studyStoreProvider)..record(StudyEvent.questions);
       if (_isMistakes) store.record(StudyEvent.mistakes);
     }
+    final now = DateTime.now();
+    final spent = now.difference(_mark);
+    _mark = now;
     _update((s) {
       if (s.revealed.contains(q.id)) return s;
+      final ms = spent > _maxSpent ? 0 : spent.inMilliseconds;
       return s.copyWith(
         answers: {...s.answers, q.id: letter},
         revealed: s.isExam ? s.revealed : {...s.revealed, q.id},
+        timeSpentMs: {...s.timeSpentMs, q.id: (s.timeSpentMs[q.id] ?? 0) + ms},
       );
     }, persist: true);
   }
@@ -226,7 +272,10 @@ class TestTaking extends _$TestTaking {
     persist: true,
   );
 
-  void setIndex(int index) => _update((s) => s.copyWith(index: index), persist: true);
+  void setIndex(int index) {
+    _mark = DateTime.now();
+    _update((s) => s.copyWith(index: index), persist: true);
+  }
 
   Future<void> submit() async {
     final s = state.value;
@@ -240,6 +289,7 @@ class TestTaking extends _$TestTaking {
           startedAt: s.startedAt,
           groups: s.groups,
           answers: s.answers,
+          timeSpentMs: s.timeSpentMs,
         );
         _afterSubmit();
         if (ref.mounted) _update((s) => s.copyWith(submitting: false, mistakeResult: result));
@@ -251,6 +301,7 @@ class TestTaking extends _$TestTaking {
           startedAt: s.startedAt,
           questions: s.questions,
           answers: s.answers,
+          timeSpentMs: s.timeSpentMs,
         );
         await ref.read(inProgressStoreProvider).clear(testId);
         _afterSubmit();
@@ -270,6 +321,7 @@ class TestTaking extends _$TestTaking {
       ..invalidate(partStatsProvider)
       ..invalidate(tagStatsProvider)
       ..invalidate(mistakesProvider)
+      ..invalidate(dailyPracticeProvider)
       ..invalidate(inProgressProvider(testId))
       ..invalidate(inProgressAllProvider);
   }
